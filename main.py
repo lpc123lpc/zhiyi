@@ -1,5 +1,6 @@
 from flask import Flask
 from controller import map
+import os
 
 
 app = Flask(__name__)
@@ -31,6 +32,7 @@ def getCountryMapInfection(country):
 
 
 if __name__ == '__main__':
+    os.system("python database/static/createTable.py")
     app.debug = True
     app.run()
 
