@@ -26,5 +26,7 @@ hs_err_pid*
 
 __pycache__
 
+/controller/__pycache__
+
 /target/
 venv/
