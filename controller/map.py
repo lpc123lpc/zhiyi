@@ -7,7 +7,7 @@ def getWorldMapInfection():
 
 
 def getCountryMapVaccine(country):
-    return 'get %s Vaccined here' % country
+    return 'get %s Vaccine here' % country
 
 
 def getCountryMapInfection(country):
