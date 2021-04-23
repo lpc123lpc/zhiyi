@@ -17,12 +17,14 @@
 *.zip
 *.tar.gz
 *.rar
-
+*.pyc
 
 
 hs_err_pid*
 .idea
 .DS_Store
+
+__pycache__
 
 /target/
 venv/
