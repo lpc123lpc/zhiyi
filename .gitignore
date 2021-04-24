@@ -30,3 +30,6 @@ __pycache__
 
 /target/
 venv/
+/web/frontend/node_modules
+/web/frontend/static/json
+/web/frontend/src/components/WorldMapVaccine.vue
