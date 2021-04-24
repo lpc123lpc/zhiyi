@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import jsonify
 from controller import map
 import os
 
@@ -13,22 +14,22 @@ def index():
 
 @app.route('/worldMapVaccine', methods=["GET"])
 def getWorldMapVaccine():
-    return map.getWorldMapVaccine()
+    return map.getMapVaccine('world')
 
 
 @app.route('/worldMapInfection', methods=["GET"])
 def getWorldMapInfection():
-    return map.getWorldMapInfection()
+    return map.getMapInfection('world')
 
 
 @app.route('/CountryMapVaccine/<country>', methods=["GET"])
 def getCountryMapVaccine(country):
-    return map.getCountryMapVaccine(country)
+    return map.getMapVaccine(country)
 
 
 @app.route('/CountryMapInfection/<country>', methods=["GET"])
 def getCountryMapInfection(country):
-    return map.getCountryMapInfection(country)
+    return map.getMapInfection(country)
 
 
 if __name__ == '__main__':
