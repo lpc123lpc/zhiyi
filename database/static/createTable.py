@@ -10,21 +10,17 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
-class VacMessage(db.Model):
-    __tablename__ = 'vacMessages'
-    #
-    time = db.Column(db.DATE)
-    areaName = db.Column(db.VARCHAR(200), primary_key=True)
+class BaseModelVac(db.Model):
+    __abstract__ = True
+    areaName = db.Column(db.String(200), primary_key=True)
     totalNum = db.Column(db.Integer)
     addNum = db.Column(db.Integer)
     vacRate = db.Column(db.FLOAT)
 
 
-class InfMessage(db.Model):
-    __tablename__ = 'infMessages'
-
-    time = db.Column(db.DATE)
-    areaName = db.Column(db.VARCHAR(200), primary_key=True)
+class BaseModelInf(db.Model):
+    __abstract__ = True
+    areaName = db.Column(db.String(200), primary_key=True)
     currentNum = db.Column(db.Integer)
     totalNum = db.Column(db.Integer)
     addNum = db.Column(db.Integer)
@@ -34,12 +30,42 @@ class InfMessage(db.Model):
     infRate = db.Column(db.FLOAT)
 
 
+class VacMessage(BaseModelVac):
+    __tablename__ = 'hisVacMessages'
+    time = db.Column(db.String(20), primary_key=True)
+
+
+class NowVacMessage(BaseModelVac):
+    __tablename__ = 'nowVacMessages'
+
+
+class InfMessage(BaseModelInf):
+    __tablename__ = 'hisInfMessages'
+    time = db.Column(db.String(20), primary_key=True)
+
+
+class NowInfMessage(BaseModelInf):
+    __tablename__ = 'nowInfMessages'
+
+
+class ChinaInfMessage(BaseModelInf):
+    __tablename__ = 'chinaInfMessages'
+    time = db.Column(db.String(20), primary_key=True)
+
+
 class Advice(db.Model):
     __tablename__ = 'advices'
 
     id = db.Column(db.Integer, primary_key=True)
-    time = db.Column(db.DATE)
+    time = db.Column(db.String(20))
     text = db.Column(db.String(800))
+
+
+class Area(db.Model):
+    __tablename__ = 'areas'
+
+    parentArea = db.Column(db.String(100), primary_key=True)
+    childArea = db.Column(db.String(100), primary_key=True)
 
 
 db.drop_all()
