@@ -1,5 +1,4 @@
-from database.static.createTable import InfMessage, VacMessage, Advice, db
-
+from database.static.createTable import InfMessage, VacMessage, NowInfMessage, NowVacMessage, db
 
 '''description:get infection information
     name:"world"(世界)/国家姓名/地区姓名
@@ -69,7 +68,15 @@ description:save vaccination information
 
 
 def saveVacMessage(messages):
-    return None
+    rate = None
+    for i in messages:
+        message = messages[i]
+        x = NowVacMessage(time=message.time,
+                          areaName=message.areaName,
+                          totalNum=message.totalNum,
+                          addNum=message.addNum,
+                          vacRate=rate)
+        db.session.add(x)
 
 
 '''
