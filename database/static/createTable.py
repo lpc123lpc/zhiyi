@@ -37,6 +37,7 @@ class VacMessage(BaseModelVac):
 
 class NowVacMessage(BaseModelVac):
     __tablename__ = 'nowVacMessages'
+    time = db.Column(db.String(20), primary_key=True)
 
 
 class InfMessage(BaseModelInf):
@@ -46,6 +47,7 @@ class InfMessage(BaseModelInf):
 
 class NowInfMessage(BaseModelInf):
     __tablename__ = 'nowInfMessages'
+    time = db.Column(db.String(20), primary_key=True)
 
 
 class ChinaInfMessage(BaseModelInf):
@@ -66,6 +68,7 @@ class Area(db.Model):
 
     parentArea = db.Column(db.String(100), primary_key=True)
     childArea = db.Column(db.String(100), primary_key=True)
+    number = db.Column(db.BIGINT)
 
 
 db.drop_all()
