@@ -3,6 +3,9 @@ from flask import template_rendered
 from controller import map, table
 import os
 
+
+
+
 app = Flask(__name__)
 
 
@@ -52,7 +55,7 @@ def getCountryVaccine(country):
 
 
 if __name__ == '__main__':
-    #os.chdir("D:\\partner code\\alpha\\covid-19")   #注意这里请改成自己电脑上该文件夹的绝对路径 通用方法目前仍在查找 by:zzy
-    #os.system("python database\\static\\createTable.py")
+    os.chdir("/Users/liuqian/PycharmProjects/covid-19")   #注意这里请改成自己电脑上该文件夹的绝对路径 通用方法目前仍在查找 by:zzy
+    os.system("python database\\static\\createTable.py")
     app.debug = True
     app.run()
