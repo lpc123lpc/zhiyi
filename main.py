@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import template_rendered
 from controller import map, table
 import os
 

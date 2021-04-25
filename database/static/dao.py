@@ -1,5 +1,6 @@
 from database.static.createTable import InfMessage, VacMessage, Advice, db
 
+
 '''description:get infection information
     name:"world"(世界)/国家姓名/地区姓名
     time:日期，格式为“XXXX-XX-XX”
