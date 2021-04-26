@@ -1,32 +1,38 @@
 from flask import jsonify
 from database.static import dao
 import datetime
+from testcode.lq import testData
+
+todayVacData = testData.vacdata[1]
+yesVacData = testData.vacdata[0]
+todayInfData = testData.infdata[1]
+yesInfData = testData.infdata[0]
 
 
 def getVaccinationSidebar(country):
     today = datetime.date.today()
     yesterday = today - datetime.timedelta(days=1)
-    todayData = dao.getVacMessage(country, today)
-    yesData = dao.getVacMessage(country, yesterday)
+    '''todayVacData = dao.getVacMessage(country, today)
+    yesVacData = dao.getVacMessage(country, yesterday)'''
     return jsonify({
         "vaccined": {
-            {
-                "date": today,
-                "value": getattr(todayData, 'totalNum')
+            "today": {
+                "date": today.strftime("%Y-%m-%d"),
+                "value": getattr(todayVacData, 'totalNum')
             },
-            {
-                "date": yesterday,
-                "value": getattr(yesData, 'totalNum')
+            "yesterday": {
+                "date": yesterday.strftime("%Y-%m-%d"),
+                "value": getattr(yesVacData, 'totalNum')
             }
         },
         "coverage": {
-            {
-                "date": today,
-                "value": getattr(todayData, 'vacRate')
+            "today": {
+                "date": today.strftime("%Y-%m-%d"),
+                "value": getattr(todayVacData, 'vacRate')
             },
-            {
-                "date": yesterday,
-                "value": getattr(yesData, 'vacRate')
+            "yesterday": {
+                "date": yesterday.strftime("%Y-%m-%d"),
+                "value": getattr(yesVacData, 'vacRate')
             }
         }
     })
@@ -35,37 +41,37 @@ def getVaccinationSidebar(country):
 def getInfectionSidebar(country):
     today = datetime.date.today()
     yesterday = today - datetime.timedelta(days=1)
-    todayData = dao.getInfMessage(country, today)
-    yesData = dao.getInfMessage(country, yesterday)
+    '''todayInfData = dao.getInfMessage(country, today)
+    yesInfData = dao.getInfMessage(country, yesterday)'''
     return jsonify({
         "confirmed": {
-            {
-                "date": today,
-                "value": getattr(todayData, 'totalNum')
+            "today": {
+                "date": today.strftime("%Y-%m-%d"),
+                "value": getattr(todayInfData, 'totalNum')
             },
-            {
-                "date": yesterday,
-                "value": getattr(yesData, 'totalNum')
+            "yesterday": {
+                "date": yesterday.strftime("%Y-%m-%d"),
+                "value": getattr(yesInfData, 'totalNum')
             }
         },
         "death": {
-            {
-                "date": today,
-                "value": getattr(todayData, 'totalDead')
+            "today": {
+                "date": today.strftime("%Y-%m-%d"),
+                "value": getattr(todayInfData, 'totalDead')
             },
-            {
-                "date": yesterday,
-                "value": getattr(yesData, 'totalDead')
+            "yesterday": {
+                "date": yesterday.strftime("%Y-%m-%d"),
+                "value": getattr(yesInfData, 'totalDead')
             }
         },
         "cured": {
-            {
-                "date": today,
-                "value": getattr(todayData, 'cured')
+            "today": {
+                "date": today.strftime("%Y-%m-%d"),
+                "value": getattr(todayInfData, 'cured')
             },
-            {
-                "date": yesterday,
-                "value": getattr(yesData, 'cured')
+            "yesterday": {
+                "date": yesterday.strftime("%Y-%m-%d"),
+                "value": getattr(yesInfData, 'cured')
             }
         }
     })
@@ -74,38 +80,38 @@ def getInfectionSidebar(country):
 def getOtherSidebar():
     today = datetime.date.today()
     yesterday = today - datetime.timedelta(days=1)
-    todayInfData = dao.getInfMessage('world', today)
+    '''todayInfData = dao.getInfMessage('world', today)
     yesInfData = dao.getInfMessage('world', yesterday)
     todayVacData = dao.getVacMessage('world', today)
-    yesVacData = dao.getVacMessage('world', yesterday)
+    yesVacData = dao.getVacMessage('world', yesterday)'''
     return jsonify({
         "vaccined": {
-            {
-                "date": today,
+            "today": {
+                "date": today.strftime("%Y-%m-%d"),
                 "value": getattr(todayVacData, 'totalNum')
             },
-            {
-                "date": yesterday,
+            "yesterday": {
+                "date": yesterday.strftime("%Y-%m-%d"),
                 "value": getattr(yesVacData, 'totalNum')
             }
         },
         "confirmed": {
-            {
-                "date": today,
+            "today": {
+                "date": today.strftime("%Y-%m-%d"),
                 "value": getattr(todayInfData, 'totalNum')
             },
-            {
-                "date": yesterday,
+            "yesterday": {
+                "date": yesterday.strftime("%Y-%m-%d"),
                 "value": getattr(yesInfData, 'totalNum')
             }
         },
         "cured": {
-            {
-                "date": today,
+            "today": {
+                "date": today.strftime("%Y-%m-%d"),
                 "value": getattr(todayInfData, 'cured')
             },
-            {
-                "date": yesterday,
+            "yesterday": {
+                "date": yesterday.strftime("%Y-%m-%d"),
                 "value": getattr(yesInfData, 'cured')
             }
         }

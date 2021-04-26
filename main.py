@@ -31,9 +31,9 @@ def getCountryMapInfection(country):
     return map.getMapInfection(country)
 
 
-@app.route('/wordData', methods=["GET"])
+@app.route('/worldData', methods=["GET"])
 def getWordData():
-    return table.getWordData()
+    return table.getWorldData()
 
 
 @app.route('/countryData/<country>', methods=["GET"])
