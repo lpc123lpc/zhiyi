@@ -1,6 +1,7 @@
 from database.static import createTable
 import datetime
 
+
 vacdata = []
 for i in range(0, 10):
     vacdata.append(createTable.VacMessage(areaName="a" + str(i),
