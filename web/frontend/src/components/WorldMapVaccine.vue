@@ -4,6 +4,7 @@
 
 <script>
   import echarts from 'echarts'
+  import 'echarts/theme/sakura'
 
   export default {
     name: 'WorldMapVaccine',
@@ -11,16 +12,14 @@
       'worldMapVaccineData'
     ],
     mounted() {
-      this.worldMapVaccineData = {'vaccined': [{'name': "中国", 'value': 1000}], 'coverage': [{'name': "China", 'value': 0.1}]}
       this.drawWorldMapVaccine()
     }, 
     methods: {
        drawWorldMapVaccine() {
-        //  console.log(this.worldMapVaccineData.vaccined)
-        //  console.log(this.worldMapVaccineData.coverage)
-        var json = require('../static/json/map/world/geojson/world.json')
+        // console.log(this.worldMapVaccineData)
+        var json = require('../../static/json/map/world/geojson/world.json')
         echarts.registerMap('world', json)
-        var worldMapVaccine = echarts.init(document.getElementById('worldMapVaccine'));
+        var worldMapVaccine = echarts.init(document.getElementById('worldMapVaccine'), 'sakura');
         var worldMapVaccine_Option = {
           title: {
               text: '新冠疫苗接种全球分布图',
@@ -32,7 +31,11 @@
           },
           tooltip: {
               formatter: function (params) {
-                return params.seriesName + '：' + params.value
+                var value = params.value
+                if (params.seriesName === '覆盖率') {
+                  value = parseFloat(value) * 100 + '%'
+                }
+                return params.seriesName + '：' + value
               }
           },
           grid: {
@@ -42,6 +45,7 @@
             top: '10%',
             containLabel: true
           },
+          color: ['#0099FF', '#7ae997'],
           legend: {
             data: ['已接种', '覆盖率'],
             left: '2%',
@@ -51,26 +55,50 @@
             selectedMode: 'single',
             textStyle: {
                 color: '#000',
-                fontSize: 18
+                fontSize: 14
             }
           },
-          visualMap: {
-            show: true,
-            left: '2%',
-            bottom: '20%',
+          visualMap: [{
+            seriesIndex: 0,
+            // show: true,
+            left: '1%',
+            bottom: '10%',
+            calculable: true,   
+            realtime: true,
             textStyle: {
-                fontSize: 18,
+                fontSize: 12,
             },
-            splitList: [{start: 0, end: 0},
-                {start: 1, end: 99},
-                {start: 100, end: 999},
-                {start: 1000, end: 9999},
-                {start: 10000, end: 99999},
-                {start: 100000, end: 999999},
-                {start: 1000000}],
-            color: ['#30161D', '#70161D', '#CB2A2F', '#E55A4E',
-                      '#F59E83', '#FDEBCF', '#DCE2EB']
-          },
+            min: 0,
+            max: 5000000,
+            maxOpen: true, 
+            text: ['接种人数'],
+            realtime: false,
+            calculable: true,
+            inRange: {
+                color: ['#99CCFF', '#66CCFF', '#0099FF', '#0066CC', '#0033FF']
+            }
+          },{
+            seriesIndex: 1,
+            show: true,
+            left: '10%',
+            bottom: '10%',
+            calculable: true,   
+            calculable: true,   
+            realtime: true,
+            precision: 3,
+            text: ['覆盖率'],
+            textStyle: {
+              // fontStyle: 'italic',
+              fontSize: 12,
+            },
+            min: 0,
+            max: 1,
+            realtime: true,
+            calculable: true,
+            inRange: {
+                color: ['#d6f6cf', '#acff9a', '#a6f6a3', '#7ae997', '#44d544', '#298518']
+            }
+          }],
           series: [{
             name: '已接种',
             type: 'map',
@@ -79,50 +107,42 @@
             zoom: 1.2,
             top: '15%',
             left: 'center',
+            showLegendSymbol: false,
             label: {
-              normal: {
-                  show: false,
-                  fontSize: 5,
-              },
               emphasis: {
                   show: true,
                   fontSize: 14,
               }
             },
             nameMap: this.getNameMap(),
-            data: []
+            data: this.worldMapVaccineData.vaccined
           },{
             name: '覆盖率',
             type: 'map',
             mapType: 'world',
             zoom: 1.2,
-            roam: false,
+            roam: true,
+            showLegendSymbol: false,
             label: {
-              normal: {
-                  show: false,
-                  fontSize: 14,
-              },
               emphasis: {
-                  show: false,
+                  show: true,
                   fontSize: 14,
               }
             },
-            data: []
+            data: this.worldMapVaccineData.coverage
           }]
         }
-        worldMapVaccine_Option.series[0].data = this.worldMapVaccineData.vaccined
-        worldMapVaccine_Option.series[1].data = this.worldMapVaccineData.coverage
         worldMapVaccine.setOption(worldMapVaccine_Option)
-        console.log(worldMapVaccine_Option)
+        // console.log(worldMapVaccine_Option)
       },
       getNameMap() {
-        var json = require('../static/json/map/world/world-mapping.json')
+        var json = require('../../static/json/map/world/world-mapping.json')
         var nameMap = {}
         for (let i in json) {
-          console.log(i)
+          // console.log(i)
           nameMap[i] = json[i].cn
         }
-        console.log(nameMap)
+        // console.log(nameMap)
         return nameMap
       }
     }
