@@ -1,7 +1,6 @@
 from flask import jsonify
 from database.static import dao
 import datetime
-import json
 
 
 def getVaccinationSidebar(country):
@@ -71,3 +70,43 @@ def getInfectionSidebar(country):
         }
     })
 
+
+def getOtherSidebar():
+    today = datetime.date.today()
+    yesterday = today - datetime.timedelta(days=1)
+    todayInfData = dao.getInfMessage('world', today)
+    yesInfData = dao.getInfMessage('world', yesterday)
+    todayVacData = dao.getVacMessage('world', today)
+    yesVacData = dao.getVacMessage('world', yesterday)
+    return jsonify({
+        "vaccined": {
+            {
+                "date": today,
+                "value": getattr(todayVacData, 'totalNum')
+            },
+            {
+                "date": yesterday,
+                "value": getattr(yesVacData, 'totalNum')
+            }
+        },
+        "confirmed": {
+            {
+                "date": today,
+                "value": getattr(todayInfData, 'totalNum')
+            },
+            {
+                "date": yesterday,
+                "value": getattr(yesInfData, 'totalNum')
+            }
+        },
+        "cured": {
+            {
+                "date": today,
+                "value": getattr(todayInfData, 'cured')
+            },
+            {
+                "date": yesterday,
+                "value": getattr(yesInfData, 'cured')
+            }
+        }
+    })
