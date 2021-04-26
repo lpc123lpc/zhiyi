@@ -31,9 +31,11 @@
           },
           tooltip: {
               formatter: function (params) {
-                var value = params.value
+                var value = parseFloat(params.value)
                 if (params.seriesName === '覆盖率') {
-                  value = parseFloat(value) * 100 + '%'
+                  value =  value * 100 + '%'
+                } else {
+                    value = value + '万'
                 }
                 return params.seriesName + '：' + value
               }
@@ -69,9 +71,9 @@
                 fontSize: 12,
             },
             min: 0,
-            max: 5000000,
+            max: 150000,
             maxOpen: true, 
-            text: ['接种人数'],
+            text: ['接种人数/万'],
             realtime: false,
             calculable: true,
             inRange: {
@@ -147,8 +149,6 @@
       }
     }
   }
-
-  
 </script>
 
 <style>
