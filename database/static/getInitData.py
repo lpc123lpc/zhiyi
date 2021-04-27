@@ -1,0 +1,1 @@
+from database.static.createTable import *
