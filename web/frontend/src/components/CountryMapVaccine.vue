@@ -1,5 +1,5 @@
 <template>
-  <div id="worldMapVaccine"></div>
+  <div id="map"></div>
 </template>
 
 <script>
@@ -7,22 +7,41 @@
   import 'echarts/theme/sakura'
 
   export default {
-    name: 'WorldMapVaccine',
+    name: 'CountryMapVaccine',
     props: [
-      'worldMapVaccineData'
+      'country',
+      'countryMapVaccineData'
     ],
+    data() {
+        return {
+            countryFileName: '',
+            countryEgName: ''
+        }
+    },
     mounted() {
-      this.drawWorldMapVaccine()
+    //   console.log(this.country)
+    //   console.log(this.countryMapVaccineData)
+      this.drawCountryMapVaccine()
     }, 
     methods: {
-       drawWorldMapVaccine() {
-        // console.log(this.worldMapVaccineData)
-        var json = require('../../static/json/map/world/geojson/world.json')
-        echarts.registerMap('world', json)
-        var worldMapVaccine = echarts.init(document.getElementById('worldMapVaccine'), 'sakura');
-        var worldMapVaccine_Option = {
+       drawCountryMapVaccine() {
+        this.getCountryName() 
+        // console.log(this.countryEgName)
+        if (this.countryFileName === '') {
+            console.log("Name error!")
+            return
+        }
+        var json = require('../../static/json/map/world/geojson/' + this.countryFileName + '.json')
+        if (json === null) {
+            console.log('Load json error!')
+            return
+        }
+        // console.log(json)
+        echarts.registerMap(this.countryEgName, json)
+        var countryMapVaccine = echarts.init(document.getElementById('map'), 'sakura');
+        var countryMapVaccine_Option = {
           title: {
-              text: '新冠疫苗接种全球分布图',
+              text: '新冠疫苗接种' + this.country + '分布图',
               left: 'center',
               textStyle: {
                   color: '#000',
@@ -32,10 +51,12 @@
           tooltip: {
               formatter: function (params) {
                 var value = parseFloat(params.value)
-                if (params.seriesName === '覆盖率') {
-                  value =  value * 100 + '%'
-                } else {
-                    value = value + '万'
+                if (!isNaN(params.value)) {
+                    if (params.seriesName === '覆盖率') {
+                        value =  value * 100 + '%'
+                    } else {
+                        value = value + '万'
+                    }
                 }
                 return params.seriesName + '：' + value
               }
@@ -107,8 +128,8 @@
           series: [{
             name: '已接种',
             type: 'map',
+            mapType: this.countryEgName,
             roam: true,
-            mapType: 'world',
             zoom: 1.2,
             top: '15%',
             left: 'center',
@@ -119,12 +140,11 @@
                   fontSize: 14,
               }
             },
-            nameMap: this.getNameMap(),
-            data: this.worldMapVaccineData.vaccined
+            data: this.countryMapVaccineData.vaccined
           },{
             name: '覆盖率',
             type: 'map',
-            mapType: 'world',
+            mapType: this.countryEgName,
             zoom: 1.2,
             roam: true,
             showLegendSymbol: false,
@@ -134,39 +154,44 @@
                   fontSize: 14,
               }
             },
-            data: this.worldMapVaccineData.coverage
+            data: this.countryMapVaccineData.coverage
           }]
         }
-        worldMapVaccine.setOption(worldMapVaccine_Option)
-        worldMapVaccine.on('legendselectchanged', function(params) {
-            worldMapVaccine_Option.legend.selected = params.selected
+        // countryMapVaccine_Option.visualMap[0].show = countryMapVaccine_Option.legend.selected.已接种? true: false
+        // countryMapVaccine_Option.visualMap[1].show = countryMapVaccine_Option.legend.selected.已接种? false: true
+        countryMapVaccine.setOption(countryMapVaccine_Option)
+        countryMapVaccine.on('legendselectchanged', function(params) {
+            countryMapVaccine_Option.legend.selected = params.selected
             var keys = Object.keys(params.selected)
             for (let i = 0; i < keys.length; i++) {
-                if (params.selected[keys[i]]) worldMapVaccine_Option.visualMap[i].show = true
-                else worldMapVaccine_Option.visualMap[i].show = false
+                if (params.selected[keys[i]]) countryMapVaccine_Option.visualMap[i].show = true
+                else countryMapVaccine_Option.visualMap[i].show = false
             }
-            this.setOption(worldMapVaccine_Option)
+            // console.log(countryMapVaccine_Option.visualMap)
+            this.setOption(countryMapVaccine_Option)
         })
       },
-      getNameMap() {
+      getCountryName() {
         var json = require('../../static/json/map/world/world-mapping.json')
-        var nameMap = {}
         for (let i in json) {
-          // console.log(i)
-          nameMap[i] = json[i].cn
+            // console.log(i)
+            if (json[i].cn == this.country) {
+                this.countryEgName = i
+                if (this.countryEgName == 'China') this.countryEgName = 'china'
+                this.countryFileName = json[i].mapFileName
+                return
+            }
         }
-        // console.log(nameMap)
-        return nameMap
       }
     }
   }
 </script>
 
 <style>
-  #worldMapVaccine {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    margin-top: 30px;
-  }
+#map {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin-top: 30px;
+}
 </style>
