@@ -28,7 +28,7 @@
     }, 
     methods: {
       drawCountryMapVaccine() {
-        console.log(this.countryEgName)
+        // console.log(this.countryEgName)
         if (this.countryFileName === '') {
             console.log("Name error!")
             return
