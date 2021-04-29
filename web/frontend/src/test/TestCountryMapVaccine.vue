@@ -12,10 +12,13 @@ export default {
   },
   data() {
     return {
-      country: '中国',
+      country: '',
       data: {vaccined: [{name: '北京', value: 48}, {name: '上海', value: 300}, {name: '浙江', value: 4000.3},  {name: '山东', value: 5010.3}], 
             coverage: [{name: '北京', value: 0.730}]}
     }
+  },
+  created() {
+    this.country = this.$route.params.country
   }
 }
 </script>

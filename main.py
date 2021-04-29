@@ -1,9 +1,11 @@
 from flask import Flask
-from flask import template_rendered
+from flask_cors import CORS
 from controller import map, table, sidebar
 import os
 
+
 app = Flask(__name__)
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 @app.route('/')
