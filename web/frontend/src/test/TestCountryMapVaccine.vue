@@ -19,7 +19,6 @@ export default {
   },
   created() {
     this.country = this.$route.params.country
-    // console.log(this.country)
   }
 }
 </script>
