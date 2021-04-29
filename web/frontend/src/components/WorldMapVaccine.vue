@@ -5,12 +5,14 @@
 <script>
   import echarts from 'echarts'
   import 'echarts/theme/sakura'
+  import { mixin } from '../mixins'
 
   export default {
     name: 'WorldMapVaccine',
     props: [
       'worldMapVaccineData'
     ],
+    mixins: [mixin],
     mounted() {
       this.drawWorldMapVaccine()
     }, 
@@ -32,10 +34,12 @@
           tooltip: {
               formatter: function (params) {
                 var value = parseFloat(params.value)
-                if (params.seriesName === '覆盖率') {
-                  value =  value * 100 + '%'
-                } else {
-                    value = value + '万'
+                if (!isNaN(params.value)) {
+                    if (params.seriesName === '覆盖率') {
+                        value =  value * 100 + '%'
+                    } else {
+                        value = value + '万'
+                    }
                 }
                 return params.seriesName + '：' + value
               }
@@ -119,7 +123,7 @@
                   fontSize: 14,
               }
             },
-            nameMap: this.getNameMap(),
+            nameMap: this.getWorldNameMap(),
             data: this.worldMapVaccineData.vaccined
           },{
             name: '覆盖率',
