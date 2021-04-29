@@ -141,6 +141,11 @@
                 }]
             }
             worldMapInfection.setOption(worldMapInfection_Option)
+            const that = this
+            worldMapInfection.on('click', function (param) {
+                // console.log(param.name)
+                that.$router.push({path: `/InfectDetail/${param.name}`})
+            })
         },
     }
 }

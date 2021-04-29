@@ -6,8 +6,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'TestCountryMapInfection',
-      component: resolve => require(['../test/TestCountryMapInfection.vue'], resolve)
+      name: 'Home',
+      component: resolve => require(['../pages/Home.vue'], resolve)
     },
     {
       path: '/Home',
@@ -20,7 +20,7 @@ export default new Router({
       component: resolve => require(['../pages/VaccineHome'], resolve)
     },
     {
-      path: '/VaccineDetail',
+      path: '/VaccineDetail/:country',
       name: 'VaccineDetail',
       component: resolve => require(['../pages/VaccineDetail'], resolve)
     }
@@ -31,7 +31,7 @@ export default new Router({
       component: resolve => require(['../pages/InfectHome'], resolve)
     },
     {
-      path: '/InfectDetail',
+      path: '/InfectDetail/:country',
       name: 'InfectDetail',
       component: resolve => require(['../pages/InfectDetail'], resolve)
     },
