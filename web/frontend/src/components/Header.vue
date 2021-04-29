@@ -9,6 +9,7 @@
     router
     :default-active = "path">
 
+    <el-menu-item index="/Home" class="nav-menu-item" >国家列表</el-menu-item>
     <el-menu-item index="/VaccineHome" class="nav-menu-item" >疫苗接种</el-menu-item>
     <!--<el-submenu index="2">
       <template slot="title">我的工作台</template>

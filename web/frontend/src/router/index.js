@@ -7,12 +7,12 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: resolve => require(['../components/countryData.vue'], resolve)
+      component: resolve => require(['../pages/Home.vue'], resolve)
     },
     {
       path: '/Home',
       name: 'Home',
-      component: resolve => require(['../components/countryData.vue'], resolve)
+      component: resolve => require(['../pages/Home.vue'], resolve)
     },
     {
       path: '/VaccineHome',
