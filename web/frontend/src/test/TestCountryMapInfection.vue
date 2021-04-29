@@ -12,13 +12,17 @@ export default {
   },
   data() {
     return {
-      country: '加拿大',
+      country: '',
       data: {nowConfirm: [{name: 'Alberta', value: 48}, {name: 'Northwest Territories', value: 300}, {name: 'Quebec', value: 4000.3},  {name: '山东', value: 5010.3}], 
             totalConfirm: [{name: 'Alberta', value: 12}], 
             cured: [{name: 'Alberta', value: 32}],
             dead: [{name: 'Alberta', value: 100}]
         }
     }
+  },
+  created() {
+    this.country = this.$route.params.country
+    // console.log(this.country)
   }
 }
 </script>
