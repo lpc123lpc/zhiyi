@@ -5,6 +5,7 @@
 <script>
   import echarts from 'echarts'
   import 'echarts/theme/sakura'
+  import { mixin } from '../mixins'
 
   export default {
     name: 'CountryMapVaccine',
@@ -12,6 +13,7 @@
       'country',
       'countryMapVaccineData'
     ],
+    mixins: [mixin],
     data() {
         return {
             countryFileName: '',
@@ -21,12 +23,12 @@
     mounted() {
     //   console.log(this.country)
     //   console.log(this.countryMapVaccineData)
+      [this.countryFileName, this.countryEgName] = this.getCountryName()
       this.drawCountryMapVaccine()
     }, 
     methods: {
-       drawCountryMapVaccine() {
-        this.getCountryName() 
-        // console.log(this.countryEgName)
+      drawCountryMapVaccine() {
+        console.log(this.countryEgName)
         if (this.countryFileName === '') {
             console.log("Name error!")
             return
@@ -171,27 +173,15 @@
             this.setOption(countryMapVaccine_Option)
         })
       },
-      getCountryName() {
-        var json = require('../../static/json/map/world/world-mapping.json')
-        for (let i in json) {
-            // console.log(i)
-            if (json[i].cn == this.country) {
-                this.countryEgName = i
-                if (this.countryEgName == 'China') this.countryEgName = 'china'
-                this.countryFileName = json[i].mapFileName
-                return
-            }
-        }
-      }
     }
   }
 </script>
 
 <style>
-#map {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  margin-top: 30px;
-}
+  #map {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-top: 30px;
+  }
 </style>

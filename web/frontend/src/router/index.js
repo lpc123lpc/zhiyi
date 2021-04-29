@@ -6,8 +6,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'TestWorldMapInfection',
-      component: resolve => require(['../test/TestWorldMapInfection.vue'], resolve)
+      name: 'TestCountryMapInfection',
+      component: resolve => require(['../test/TestCountryMapInfection.vue'], resolve)
     },
     {
       path: '/Home',
