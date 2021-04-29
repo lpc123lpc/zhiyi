@@ -1,57 +1,81 @@
-from database.static.createTable import *
-from spider import *
+import datetime
 
-today = ""
+from database.static.table import *
+from spider.spider import *
+
+today = datetime.date.today().strftime("%Y-%m-%d")
 
 
 '''
 description:get infection information
-name:"world"(世界)/国家姓名/地区姓名
+name:"global"(世界)/国家姓名/地区姓名
 time:日期，格式为“XXXX-XX-XX”
 return:返回该区域的感染信息
 '''
 
 
-def getInfMessage(name, time):
-    InfMessage.infmessage = None
-    return InfMessage.infmessage
+def getInfMessage(name, t):
+    message = ChinaInfMessage.query.filter_by(areaName=name, time=t).first()
+    if message is None:
+        global today
+        if t == today:
+            message = NowInfMessage.query.filter_by(areaName=name).first()
+        else:
+            message = InfMessage.query.filter_by(areaName=name, time=t).first()
+    return message
 
 
 '''
 description:get infection information
-param:name:"world"(世界)/国家姓名
+param:name:"global"(世界)/国家姓名
 time:日期，格式为“XXXX-XX-XX”
-return:返回该区域所包含的国家/地区的感染信息
+return:返回该区域所包含的国家/地区的感染信息（下一级）
 '''
 
 
-def getInfMessageInclude(name, time):
-    InfMessage.infmessages = []
-    return InfMessage.infmessages
+def getInfMessageInclude(name, t):
+    book = Area.query.filter_by(areaName=name).all()
+    if book is None:
+        return None
+    else:
+        message = ChinaInfMessage.query.filter_by(areaName=name, time=t).first()
+        if message is None:
+            global today
+            if t == today:
+                message = None
+            else:
+                message = None
+
+        return message
 
 
 '''
 description:get infection information
-name:"world"(世界)/国家姓名/地区姓名
+name:"global"(世界)/国家姓名/地区姓名
 time:日期，格式为“XXXX-XX-XX”
 return:返回该区域的接种信息
 '''
 
 
-def getVacMessage(name, time):
-    VacMessage.vacmessage = None
-    return VacMessage.vacmessage
+def getVacMessage(name, t):
+    message = None
+    global today
+    if today == t:
+        message = NowVacMessage.query.filter_by(areaName=name).first()
+    else:
+        message = VacMessage.query.filter_by(areaName=name, time=t).first()
+    return message
 
 
 '''
 description:get infection information
 name:"world"(世界)/国家姓名
 time:日期，格式为“XXXX-XX-XX”
-return:返回该区域所包含的国家/地区的接种信息
+return:返回该区域所包含的国家/地区的接种信息（下一级）
 '''
 
 
-def getVacMessageInclude(name, time):
+def getVacMessageInclude(name, t):
     VacMessage.vacmessages = []
     return VacMessage.vacmessages
 
@@ -67,25 +91,6 @@ def saveInfMessage(messages):
 
 
 '''
-description:save vaccination information
-对接爬虫
-'''
-
-
-def saveVacMessage(messages):
-    for i in messages:
-        message = messages[i]
-        total = Area.query.filter_by(childArea=message.areaName)
-        rate = float(message.totalNum/total)
-        x = NowVacMessage(time=message.time,
-                          areaName=message.areaName,
-                          totalNum=message.totalNum,
-                          addNum=message.addNum,
-                          vacRate=rate)
-        db.session.add(x)
-
-
-'''
 description:save advice
 对接前端
 '''
@@ -98,6 +103,7 @@ def saveAdvice(message, time):
 每日更新中国疫情信息
 '''
 def updateChinaInf():
+    clearTable('chinaInfMessages')
     data = getJsonData(nowDomesticDataUrl)
     global today
     today = data['lastUpdateTime'][:10]     #XXXX-XX-XX
@@ -112,15 +118,16 @@ def updateChinaInf():
             if errorName(city['name']) == 1:
                 add(changeType(city, "ChinaInfMessage"))
 
-    print("ok")
+    #print("ok")
     #print(len(province))
 
 
 
 '''
-每日更新全国疫情信息
+每日更新全球疫情信息
 '''
 def updateGlobalInf():
+    clearTable('nowInfMessages')
     globalInf = getJsonData(nowGlobalDataUrl)
     x = NowInfMessage(time=today,
                       areaName="global",
@@ -129,8 +136,7 @@ def updateGlobalInf():
                       addNum=globalInf['confirmAdd'],
                       cured=globalInf['heal'],
                       totalDead=globalInf['dead'],
-                      addDead=globalInf['deadAdd'],
-                      infRate=round(float(0), 5)
+                      addDead=globalInf['deadAdd']
                       )
     add(x)
     foreignInf = getJsonData(nowForeignCouDataUrl)
@@ -163,9 +169,7 @@ def errorName(name):
 def changeType(area, toType):
     if toType == "ChinaInfMessage":
         name = area['name']
-        #total = Area.query(Area.number).filter_by(childArea=name)
         confirm = area['total']['nowConfirm']
-        #rate = round(float(total/confirm), 5)
         x = ChinaInfMessage(time=today,
                             areaName=name,
                             currentNum=confirm,
@@ -173,8 +177,7 @@ def changeType(area, toType):
                             addNum=area['today']['confirm'],
                             cured=area['total']['heal'],
                             totalDead=area['total']['dead'],
-                            addDead=0,
-                            infRate=round(float(0), 5))
+                            addDead=0)
         return x
     elif toType == "NowInfMessage":
         name = area['name']
@@ -185,8 +188,7 @@ def changeType(area, toType):
                           addNum=area['confirmAdd'],
                           cured=area['heal'],
                           totalDead=area['dead'],
-                          addDead=area['deadCompare'],
-                          infRate=round(float(0), 5))
+                          addDead=area['deadCompare'])
         return x
 
 #test()

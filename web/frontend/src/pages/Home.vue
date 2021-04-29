@@ -1,7 +1,16 @@
 <!-- 首页 -->
 <template>
-    <div>
-        <wbc-nav></wbc-nav>
+    <el-container>
+        <el-header>
+          <wbc-nav></wbc-nav>
+        </el-header>
+        <el-container>
+          <el-aside width="600px">
+            <vaccine-sidebar v-bind:vaccine_header_title="'疫苗接种'"></vaccine-sidebar>
+            <infect-sidebar v-bind:infect_header_title="'感染情况'"></infect-sidebar>
+          </el-aside>
+          <el-main>Main</el-main>
+        </el-container>
         <!--<div class="container">
             <el-row  :gutter="30">
                 <el-col :sm="24" :md="16" style="transition:all .5s ease-out;margin-bottom:30px;">
@@ -13,11 +22,13 @@
             </el-row>
         </div>
         <wbc-footer></wbc-footer>-->
-    </div>
+    </el-container>
 </template>
 
 <script>
 import header from '../components/Header.vue'
+import vaccineSidebar from '../components/VaccineSidebar.vue'
+import infectSidebar from '../components/InfectSidebar.vue'
 // import footer from '../components/footer.vue'
 // import temSharelist from '../components/temSharelist.vue'
 // import temRightlist from '../components/temRightlist.vue'
@@ -25,14 +36,17 @@ export default {
   name: 'Home',
   data () { // 选项 / 数据
     return {
-
+      vaccine_header_title: '',
+      infect_header_title: ''
     }
   },
   methods: { // 事件处理器
 
   },
   components: { // 定义组件
-    'wbc-nav': header
+    'wbc-nav': header,
+    'vaccine-sidebar': vaccineSidebar,
+    'infect-sidebar': infectSidebar
     // 'wbc-sharelist': temSharelist,
     // 'wbc-rightlist': temRightlist,
     // 'wbc-footer': footer

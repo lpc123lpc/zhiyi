@@ -1,1 +1,1 @@
-from database.static.createTable import *
+from database.static.table import *
