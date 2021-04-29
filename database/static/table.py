@@ -29,7 +29,6 @@ class BaseModelInf(db.Model):
     cured = db.Column(db.Integer)
     totalDead = db.Column(db.Integer)
     addDead = db.Column(db.Integer)
-    infRate = db.Column(db.FLOAT)
 
 
 class VacMessage(BaseModelVac):
@@ -73,5 +72,4 @@ class Area(db.Model):
     number = db.Column(db.BIGINT)
 
 
-db.drop_all()
-db.create_all()
+
