@@ -1,5 +1,8 @@
 <template>
-  <div id="countryMapInfection"><country-map-infection :countryMapInfectionData="data" :country="country"></country-map-infection></div>
+  <div>
+    <el-button @click="back()">返回</el-button>
+    <div id="countryMapInfection"><country-map-infection :countryMapInfectionData="data" :country="country" v-if="refresh"></country-map-infection></div>
+  </div>
 </template>
 
 <script>
@@ -17,12 +20,21 @@ export default {
             totalConfirm: [{name: 'Alberta', value: 12}], 
             cured: [{name: 'Alberta', value: 32}],
             dead: [{name: 'Alberta', value: 100}]
-        }
+        },
+      refresh: true
     }
   },
   created() {
     this.country = this.$route.params.country
     // console.log(this.country)
+  },
+  methods: {
+    back() {
+      this.refresh = false
+      this.$nextTick(() => {
+        this.refresh = true;
+      });
+    }
   }
 }
 </script>

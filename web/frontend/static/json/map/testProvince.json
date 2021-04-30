@@ -1,0 +1,24 @@
+{
+	"nowConfirm": [
+		{
+			"name": "武汉市",
+			"value": 5
+		},
+		{
+			"name": "咸宁市",
+			"value": 1
+		}
+	],
+	"totalConfirm": [
+		{
+			"name": "武汉市",
+			"value": 50000
+		},
+		{
+			"name": "咸宁市",
+			"value": 800
+		}
+	],
+	"cured": [],
+	"dead":	[]
+}
