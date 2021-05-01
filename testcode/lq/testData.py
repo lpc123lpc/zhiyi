@@ -19,7 +19,6 @@ for i in range(0, 10):
                                     cured=i,
                                     totalDead=i,
                                     addDead=i,
-                                    infRate=round(i * 0.1, 3),
                                     time=datetime.date.today()))
 
 halfYearVacData = []
@@ -55,7 +54,6 @@ for i in range(0, 180):
                                             cured=i,
                                             totalDead=i,
                                             addDead=i,
-                                            infRate=round(i * 0.1, 3),
                                             time=datetime.date.today()))
     halfYearInfData1.append(table.InfMessage(areaName="b" + str(i),
                                              currentNum=i * 2,
@@ -64,7 +62,6 @@ for i in range(0, 180):
                                              cured=i * 2,
                                              totalDead=i * 2,
                                              addDead=i * 2,
-                                             infRate=round(i * 0.002, 3),
                                              time=datetime.date.today()))
     halfYearInfData2.append(table.InfMessage(areaName="c" + str(i),
                                              currentNum=i * 3,
@@ -73,7 +70,6 @@ for i in range(0, 180):
                                              cured=i * 3,
                                              totalDead=i * 3,
                                              addDead=i * 3,
-                                             infRate=round(i * 0.003, 3),
                                              time=datetime.date.today()))
 includeInf = [halfYearInfData, halfYearInfData1, halfYearInfData2]
 infdatainclude = []
@@ -85,5 +81,4 @@ for i in range(0, 3):
                                            cured=i,
                                            totalDead=i,
                                            addDead=i,
-                                           infRate=round(i * 0.1, 3),
                                            time=datetime.date.today()))

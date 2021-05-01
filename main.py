@@ -44,42 +44,42 @@ def getWorldMapVaccineDataMsgCountry(country):
 
 
 @app.route('/vaccineHomeHeadbar/vaccineSum', methods=["GET"])
-def getVaccineSum():
+def getVaccineSumHeadbar():
     return sidebar.getVaccinationTotalSidebar('global')
 
 
 @app.route('/vaccineHomeHeadbar/vaccineSumAdd', methods=["GET"])
-def getVaccineSumAdd():
+def getVaccineSumAddHeadbar():
     return sidebar.getVaccinationTotalAddSidebar('global')
 
 
 @app.route('/vaccineHomeHeadbar/vaccineCover', methods=["GET"])
-def getVaccineCover():
+def getVaccineCoverHeadbar():
     return sidebar.getVaccinationCovSidebar('global')
 
 
 @app.route('/vaccineHomeHeadbar/vaccineCoverAdd', methods=["GET"])
-def getVaccineCoverAdd():
+def getVaccineCoverAddHeadbar():
     return sidebar.getVaccinationCovAddSidebar('global')
 
 
 @app.route('/vaccineDetailSidebar/vaccineSum/<country>', methods=["GET"])
-def getVaccineSum(country):
+def getVaccineSumHeadbarSon(country):
     return sidebar.getVaccinationTotalSidebar(country)
 
 
 @app.route('/vaccineDetailSidebar/vaccineSumAdd/<country>', methods=["GET"])
-def getVaccineSumAdd(country):
+def getVaccineSumAddHeadbarSon(country):
     return sidebar.getVaccinationTotalAddSidebar(country)
 
 
 @app.route('/vaccineDetailSidebar/vaccineCover/<country>', methods=["GET"])
-def getVaccineCover(country):
+def getVaccineCoverHeadbarSon(country):
     return sidebar.getVaccinationCovSidebar(country)
 
 
 @app.route('/vaccineDetailSidebar/vaccineCoverAdd/<country>', methods=["GET"])
-def getVaccineCoverAdd(country):
+def getVaccineCoverAddHeadbarSon(country):
     return sidebar.getVaccinationCovAddSidebar(country)
 
 
@@ -94,92 +94,92 @@ def getWorldMapInfectionDataMsgCountry(country):
 
 
 @app.route('/infectHomeHeadbar/infectSum', methods=["GET"])
-def getInfectionSum():
+def getInfectionSumHeadbar():
     return sidebar.getInfectionTotalSidebar('global')
 
 
 @app.route('/infectHomeHeadbar/infectSumAdd', methods=["GET"])
-def getInfectionSumAdd():
+def getInfectionSumAddHeadbar():
     return sidebar.getInfectionTotalAddSidebar('global')
 
 
 @app.route('/infectHomeHeadbar/infectDeath', methods=["GET"])
-def getInfectionDead():
+def getInfectionDeadHeadbar():
     return sidebar.getInfectionDeadSidebar('global')
 
 
 @app.route('/infectHomeHeadbar/infectDeathAdd', methods=["GET"])
-def getInfectionDeadAdd():
+def getInfectionDeadAddHeadbar():
     return sidebar.getInfectionDeadAddSidebar('global')
 
 
 @app.route('/infectHomeHeadbar/infectCure', methods=["GET"])
-def getInfectionCure():
+def getInfectionCureHeadbar():
     return sidebar.getInfectionCureSidebar('global')
 
 
 @app.route('/infectHomeHeadbar/infectCureAdd', methods=["GET"])
-def getInfectionCureAdd():
+def getInfectionCureAddHeadbar():
     return sidebar.getInfectionCureAddSidebar('global')
 
 
 @app.route('/infectDetailSidebar/infectSum/<country>', methods=["GET"])
-def getInfectionSumCountry(country):
+def getInfectionSumCountryHeadbarSon(country):
     return sidebar.getInfectionTotalSidebar(country)
 
 
 @app.route('/infectDetailSidebar/infectSumAdd/<country>', methods=["GET"])
-def getInfectionSumAddCountry(country):
+def getInfectionSumAddCountryHeadbarSon(country):
     return sidebar.getInfectionTotalAddSidebar(country)
 
 
 @app.route('/infectDetailSidebar/infectDeath/<country>', methods=["GET"])
-def getInfectionDeadCountry(country):
+def getInfectionDeadCountryHeadbarSon(country):
     return sidebar.getInfectionDeadSidebar(country)
 
 
 @app.route('/infectDetailSidebar/infectDeathAdd/<country>', methods=["GET"])
-def getInfectionDeadAddCountry(country):
+def getInfectionDeadAddCountryHeadbarSon(country):
     return sidebar.getInfectionDeadAddSidebar(country)
 
 
 @app.route('/infectDetailSidebar/infectCure/<country>', methods=["GET"])
-def getInfectionCureCountry(country):
+def getInfectionCureCountryHeadbarSon(country):
     return sidebar.getInfectionCureSidebar(country)
 
 
 @app.route('/infectDetailSidebar/infectCureAdd/<country>', methods=["GET"])
-def getInfectionCureAddCountry(country):
+def getInfectionCureAddCountryHeadbarSon(country):
     return sidebar.getInfectionCureAddSidebar(country)
 
 
 @app.route('/vaccineSidebar/vaccineSum', methods=["GET"])
-def getVaccineSumSidebar():
+def getVaccineSumMain():
     return sidebar.getVaccinationTotalSidebar('global')
 
 
 @app.route('/vaccineSidebar/vaccineSumAdd', methods=["GET"])
-def getVaccineSumAddSidebar():
+def getVaccineSumAddMain():
     return sidebar.getVaccinationTotalAddSidebar('global')
 
 
 @app.route('/infectSidebar/infectSum', methods=["GET"])
-def getInfectionSumSidebar():
+def getInfectionSumMain():
     return sidebar.getInfectionTotalSidebar('global')
 
 
 @app.route('/infectSidebar/infectSumAdd', methods=["GET"])
-def getInfectionSumAddSideBar():
+def getInfectionSumAddMain():
     return sidebar.getInfectionTotalAddSidebar('global')
 
 
 @app.route('/infectSidebar/infectCure', methods=["GET"])
-def getInfectionCureSiadebar():
+def getInfectionCureMain():
     return sidebar.getInfectionCureSidebar('global')
 
 
 @app.route('/infectSidebar/infectCureAdd', methods=["GET"])
-def getInfectionCureAddSidebar():
+def getInfectionCureAddMain():
     return sidebar.getInfectionCureAddSidebar('global')
 
 
