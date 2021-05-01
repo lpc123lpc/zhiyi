@@ -51,12 +51,20 @@ export default {
     },
     onRouteChanged () {
       let that = this
-      if (that.$route.path === '/VaccineDetail') {
-        that.path = '/VaccineHome'
-      } else if (that.$route.path === '/InfectDetail') {
-        that.path = '/InfectHome'
+      var posVaccine = that.$route.path.search('/VaccineDetail')
+      if (posVaccine === -1) {
+        var posInfect = that.$route.path.search('/InfectDetail')
+        if (posInfect === -1) {
+          if (that.$route.path === '/') {
+            that.path = '/Home'
+          } else {
+            that.path = that.$route.path
+          }
+        } else {
+          that.path = '/InfectHome'
+        }
       } else {
-        that.path = that.$route.path
+        that.path = '/VaccineHome'
       }
     }
   },
