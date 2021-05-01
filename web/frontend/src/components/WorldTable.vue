@@ -1,6 +1,9 @@
 <template>
     <div id = 'WorldTable'>
-      <el-table :data="items" border highlight-current-row>
+      <el-table :data="items" highlight-current-row>
+        <el-table-column type="expand">
+          <country_data></country_data>
+        </el-table-column>
         <el-table-column
           prop="name"
           label="国家">
@@ -45,9 +48,13 @@
 </template>
 
 <script>
+import CountryData from './countryData'
+import TestComp from './testComp'
 export default {
-
   name: 'WorldTable',
+  components: {
+    'test_data': TestComp,
+    'country_data': CountryData},
   data: function () {
     return {
       items: []

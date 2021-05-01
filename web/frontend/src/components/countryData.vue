@@ -1,6 +1,5 @@
 <template>
-    <div id="countryDataCharts" style="width: auto;height:600px;"></div>
-
+  <div ref="countryDataCharts" style="width: 100%;height:600px"></div>
 </template>
 
 <script>
@@ -8,21 +7,17 @@ import echarts from 'echarts'
 export default {
   name: 'countryData',
   mounted () {
+    this.chart = echarts.init(this.$refs.countryDataCharts)
     this.drawCountryData()
   },
   methods: {
     drawCountryData () {
-      var myChart = echarts.init(document.getElementById('countryDataCharts'))
-
+      var that = this
       fetch('../static/json/charts/testData').then(function (response) {
         response.json().then(function (data) {
-          myChart.setOption({
+          that.chart.setOption({
             title: {
-              text: data.name + '总体数据',
-              textStyle: {
-                color: '#333',
-                fontStyle: 'italic'
-              }
+              text: data.name + '总体数据'
             },
             tooltip: {
               trigger: 'axis'
@@ -61,7 +56,7 @@ export default {
               type: 'line',
               data: data.deceased
             }]
-          })
+          }, true)
         })
       }).catch(function (err) {
         alert(err.toString())
