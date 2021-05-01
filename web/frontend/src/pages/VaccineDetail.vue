@@ -5,9 +5,13 @@
     </el-header>
     <el-container>
       <el-aside width="600px">
-        <vaccine-detail-sidebar v-bind:vaccine_header_title="'疫苗接种'"></vaccine-detail-sidebar>
+        <vaccine-detail-sidebar v-bind:country="countryMsg"></vaccine-detail-sidebar>
       </el-aside>
-      <el-main>Main</el-main>
+      <el-main>
+        <div style="align: center; margin-top: 175px">
+          <vaccine-detail-country-map v-bind:country="countryMsg" v-bind:countryMapVaccineData="countryMapVaccineDataMsg"></vaccine-detail-country-map>
+        </div>
+      </el-main>
     </el-container>
   </el-container>
 </template>
@@ -15,11 +19,37 @@
 <script>
 import header from '../components/Header.vue'
 import vaccineDetailSidebar from '../components/VaccineDetailSidebar.vue'
+import vaccineDetailCountryMap from '../components/CountryMapVaccine.vue'
 export default {
   name: 'VaccineDetail',
   components: { // 定义组件
     'wbc-nav': header,
-    'vaccine-detail-sidebar': vaccineDetailSidebar
+    'vaccine-detail-sidebar': vaccineDetailSidebar,
+    'vaccine-detail-country-map': vaccineDetailCountryMap
+  },
+  data () { // 选项 / 数据
+    return {
+      countryMsg: '',
+      countryMapVaccineDataMsg: ''
+    }
+  },
+  methods: { // 事件处理器
+    getCountryMsg () {
+      var that = this
+      that.countryMsg = this.this.$route.params.country
+    },
+    getCountryMapVaccineDataMsg () {
+      var that = this
+      fetch('/vaccineDetail/countryMapVaccineDataMsg').then(function (response) {
+        response.json().then((data) => {
+          that.countryMapVaccineDataMsg = data
+        })
+      })
+    }
+  },
+  mounted () {
+    this.countryMsg = this.getCountryMsg()
+    this.countryMapVaccineDataMsg = this.getCountryMapVaccineDataMsg()
   }
 }
 </script>

@@ -13,13 +13,13 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      XX
+      {{vaccine_sum_add}}
     </div>
     <div class="today-item">
       累计接种
     </div>
     <div class="today-item">
-      XX
+      {{vaccine_sum}}
     </div>
   </el-card>
 </template>
@@ -31,6 +31,34 @@ export default {
     vaccine_header_title: {
       type: String,
       default: ''
+    }
+  },
+  data: function () {
+    return {
+      vaccine_sum: '',
+      vaccine_sum_add: ''
+    }
+  },
+  mounted () {
+    this.vaccine_sum = this.getVaccineSum()
+    this.vaccine_sum_add = this.getVaccineSumAdd()
+  },
+  methods: {
+    getVaccineSum () {
+      var that = this
+      fetch('/vaccineHomeHeadbar/vaccineSum').then(function (response) {
+        response.json().then((data) => {
+          that.vaccine_sum = data
+        })
+      })
+    },
+    getVaccineSumAdd () {
+      var that = this
+      fetch('/vaccineHomeHeadbar/vaccineSumAdd').then(function (response) {
+        response.json().then((data) => {
+          that.vaccine_sum_add = data
+        })
+      })
     }
   }
 }

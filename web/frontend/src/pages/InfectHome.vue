@@ -7,8 +7,8 @@
       <div style="align: center;">
         <home-info></home-info>
       </div>
-      <div style="align: center;">
-        <el-button type="info" @click="infect_info">详情页面</el-button>
+      <div style="align: center; margin-top: 175px">
+        <infect-home-world-map v-bind:worldMapInfectionData="worldMapInfectionDataMsg"></infect-home-world-map>
       </div>
     </el-main>
     <!--<div class="container">
@@ -28,16 +28,31 @@
 <script>
 import header from '../components/Header.vue'
 import infectHomeHeadbar from '../components/InfectHomeHeadbar.vue'
+import infectHomeWorldMap from '../components/WorldMapInfection.vue'
 export default {
   name: 'InfectHome',
   components: { // 定义组件
     'wbc-nav': header,
-    'home-info': infectHomeHeadbar
+    'home-info': infectHomeHeadbar,
+    'infect-home-world-map': infectHomeWorldMap
   },
-  methods: {
-    infect_info () {
-      this.$router.replace('/InfectDetail')
+  data () { // 选项 / 数据
+    return {
+      worldMapInfectionDataMsg: ''
     }
+  },
+  methods: { // 事件处理器
+    getWorldMapInfectionDataMsg () {
+      var that = this
+      fetch('/infectHome/worldMapInfectionDataMsg').then(function (response) {
+        response.json().then((data) => {
+          that.worldMapInfectionDataMsg = data
+        })
+      })
+    }
+  },
+  mounted () {
+    this.worldMapInfectionDataMsg = this.getWorldMapInfectionDataMsg()
   }
 }
 </script>

@@ -7,8 +7,8 @@
       <div style="align: center;">
         <home-info></home-info>
       </div>
-      <div style="align: center;">
-        <el-button type="info" @click="infect_info">详情页面</el-button>
+      <div style="align: center; margin-top: 175px">
+        <vaccine-home-world-map v-bind:worldMapVaccineData="worldMapVaccineDataMsg"></vaccine-home-world-map>
       </div>
     </el-main>
     <!--<div class="container">
@@ -28,23 +28,34 @@
 <script>
 import header from '../components/Header.vue'
 import vaccineHomeHeadbar from '../components/VaccineHomeHeadbar.vue'
+import vaccineHomeWorldMap from '../components/WorldMapInfection.vue'
 export default {
   name: 'VaccineHome',
   data () { // 选项 / 数据
     return {
+      worldMapVaccineDataMsg: ''
     }
   },
   methods: { // 事件处理器
-    infect_info () {
-      this.$router.replace('/VaccineDetail')
+    getWorldMapVaccineDataMsg () {
+      var that = this
+      fetch('/vaccineHome/worldMapVaccineDataMsg').then(function (response) {
+        response.json().then((data) => {
+          that.worldMapVaccineDataMsg = data
+        })
+      })
     }
   },
   components: { // 定义组件
     'wbc-nav': header,
-    'home-info': vaccineHomeHeadbar
+    'home-info': vaccineHomeHeadbar,
+    'vaccine-home-world-map': vaccineHomeWorldMap
   },
   created () { // 生命周期函数
 
+  },
+  mounted () {
+    this.worldMapVaccineDataMsg = this.getWorldMapVaccineDataMsg()
   }
 }
 </script>

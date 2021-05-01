@@ -1,19 +1,87 @@
 <template>
   <el-card class="box-card" shadow="always">
     <el-row>
-      <el-col :span="6"><div class="infect-sum">累计确诊XX</div></el-col>
-      <el-col :span="2"><div class="infect-sum-add">+XX</div></el-col>
-      <el-col :span="4"><div class="infect-sum">累计死亡XX</div></el-col>
-      <el-col :span="4"><div class="infect-sum-add">+XX</div></el-col>
-      <el-col :span="2"><div class="infect-sum">累计治愈XX</div></el-col>
-      <el-col :span="6"><div class="infect-sum-add">+XX</div></el-col>
+      <el-col :span="6"><div class="infect-sum">累计确诊{{infect_sum}}</div></el-col>
+      <el-col :span="2"><div class="infect-sum-add">+{{infect_sum_add}}</div></el-col>
+      <el-col :span="4"><div class="infect-sum">累计死亡{{infect_death}}</div></el-col>
+      <el-col :span="4"><div class="infect-sum-add">+{{infect_death_add}}</div></el-col>
+      <el-col :span="2"><div class="infect-sum">累计治愈{{infect_cure}}</div></el-col>
+      <el-col :span="6"><div class="infect-sum-add">+{{infect_cure_add}}</div></el-col>
     </el-row>
   </el-card>
 </template>
 
 <script>
 export default {
-  name: 'InfectHomeHeadbar'
+  name: 'InfectHomeHeadbar',
+  data: function () {
+    return {
+      infect_sum: '',
+      infect_sum_add: '',
+      infect_death: '',
+      infect_death_add: '',
+      infect_cure: '',
+      infect_cure_add: ''
+    }
+  },
+  mounted () {
+    this.infect_sum = this.getInfectSum()
+    this.infect_sum_add = this.getInfectSumAdd()
+    this.infect_death = this.getInfectDeath()
+    this.infect_death_add = this.getInfectDeathAdd()
+    this.infect_cure = this.getInfectCure()
+    this.infect_cure_add = this.getInfectCureAdd()
+  },
+  methods: {
+    getInfectSum () {
+      var that = this
+      fetch('/infectHomeHeadbar/infectSum').then(function (response) {
+        response.json().then((data) => {
+          that.infect_sum = data
+        })
+      })
+    },
+    getInfectSumAdd () {
+      var that = this
+      fetch('/infectHomeHeadbar/infectSumAdd').then(function (response) {
+        response.json().then((data) => {
+          that.infect_sum_add = data
+        })
+      })
+    },
+    getInfectDeath () {
+      var that = this
+      fetch('/infectHomeHeadbar/infectDeath').then(function (response) {
+        response.json().then((data) => {
+          that.infect_death = data
+        })
+      })
+    },
+    getInfectDeathAdd () {
+      var that = this
+      fetch('/infectHomeHeadbar/infectDeathAdd').then(function (response) {
+        response.json().then((data) => {
+          that.infect_death_add = data
+        })
+      })
+    },
+    getInfectCure () {
+      var that = this
+      fetch('/infectHomeHeadbar/infectCure').then(function (response) {
+        response.json().then((data) => {
+          that.infect_cure = data
+        })
+      })
+    },
+    getInfectCureAdd () {
+      var that = this
+      fetch('/infectHomeHeadbar/infectCureAdd').then(function (response) {
+        response.json().then((data) => {
+          that.infect_cure_add = data
+        })
+      })
+    }
+  }
 }
 </script>
 

@@ -1,17 +1,65 @@
 <template>
   <el-card class="box-card" shadow="always">
     <el-row>
-      <el-col :span="8"><div class="vaccine-sum">累计接种XX</div></el-col>
-      <el-col :span="4"><div class="vaccine-sum-add">+XX</div></el-col>
-      <el-col :span="4"><div class="vaccine-sum">覆盖率XX</div></el-col>
-      <el-col :span="8"><div class="vaccine-sum-add">+XX</div></el-col>
+      <el-col :span="8"><div class="vaccine-sum">累计接种{{vaccine_sum}}</div></el-col>
+      <el-col :span="4"><div class="vaccine-sum-add">+{{vaccine_sum_add}}</div></el-col>
+      <el-col :span="4"><div class="vaccine-sum">覆盖率{{vaccine_cover}}</div></el-col>
+      <el-col :span="8"><div class="vaccine-sum-add">+{{vaccine_cover_add}}</div></el-col>
     </el-row>
   </el-card>
 </template>
 
 <script>
 export default {
-  name: 'VaccineHomeHeadbar'
+  name: 'VaccineHomeHeadbar',
+  data: function () {
+    return {
+      vaccine_sum: '',
+      vaccine_sum_add: '',
+      vaccine_cover: '',
+      vaccine_cover_add: ''
+    }
+  },
+  mounted () {
+    this.vaccine_sum = this.getVaccineSum()
+    this.vaccine_sum_add = this.getVaccineSumAdd()
+    this.vaccine_cover = this.getVaccineCover()
+    this.vaccine_cover_add = this.getVaccineCoverAdd()
+  },
+  methods: {
+    getVaccineSum () {
+      var that = this
+      fetch('/vaccineHomeHeadbar/vaccineSum').then(function (response) {
+        response.json().then((data) => {
+          that.vaccine_sum = data
+        })
+      })
+    },
+    getVaccineSumAdd () {
+      var that = this
+      fetch('/vaccineHomeHeadbar/vaccineSumAdd').then(function (response) {
+        response.json().then((data) => {
+          that.vaccine_sum_add = data
+        })
+      })
+    },
+    getVaccineCover () {
+      var that = this
+      fetch('/vaccineHomeHeadbar/vaccineCover').then(function (response) {
+        response.json().then((data) => {
+          that.vaccine_cover = data
+        })
+      })
+    },
+    getVaccineCoverAdd () {
+      var that = this
+      fetch('/vaccineHomeHeadbar/vaccineCoverAdd').then(function (response) {
+        response.json().then((data) => {
+          that.vaccine_cover_add = data
+        })
+      })
+    }
+  }
 }
 </script>
 

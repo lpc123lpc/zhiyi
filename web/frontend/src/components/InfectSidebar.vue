@@ -13,26 +13,26 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      XX
+      {{infect_sum_add}}
     </div>
     <div class="today-item">
       现有确诊
     </div>
     <div class="today-item">
-      XX
+      {{infect_sum}}
     </div>
     <el-divider></el-divider>
     <div class="yersterday-item">
       较昨日
     </div>
     <div class="yersterday-item">
-      XX
+      {{infect_cure_add}}
     </div>
     <div class="today-item">
       累计治愈
     </div>
     <div class="today-item">
-      XX
+      {{infect_cure}}
     </div>
   </el-card>
 </template>
@@ -44,6 +44,54 @@ export default {
     infect_header_title: {
       type: String,
       default: ''
+    }
+  },
+  data: function () {
+    return {
+      infect_sum: '',
+      infect_sum_add: '',
+      infect_cure: '',
+      infect_cure_add: ''
+    }
+  },
+  mounted () {
+    this.infect_sum = this.getInfectSum()
+    this.infect_sum_add = this.getInfectSumAdd()
+    this.infect_cure = this.getInfectCure()
+    this.infect_cure_add = this.getInfectCureAdd()
+  },
+  methods: {
+    getInfectSum () {
+      var that = this
+      fetch('/infectHomeHeadbar/infectSum').then(function (response) {
+        response.json().then((data) => {
+          that.infect_sum = data
+        })
+      })
+    },
+    getInfectSumAdd () {
+      var that = this
+      fetch('/infectHomeHeadbar/infectSumAdd').then(function (response) {
+        response.json().then((data) => {
+          that.infect_sum_add = data
+        })
+      })
+    },
+    getInfectCure () {
+      var that = this
+      fetch('/infectHomeHeadbar/infectCure').then(function (response) {
+        response.json().then((data) => {
+          that.infect_cure = data
+        })
+      })
+    },
+    getInfectCureAdd () {
+      var that = this
+      fetch('/infectHomeHeadbar/infectCureAdd').then(function (response) {
+        response.json().then((data) => {
+          that.infect_cure_add = data
+        })
+      })
     }
   }
 }
