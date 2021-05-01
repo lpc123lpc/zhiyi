@@ -75,7 +75,7 @@ export default {
   methods: {
     getInfectSum () {
       var that = this
-      fetch('/infectHomeHeadbar/infectSum/' + this.country).then(function (response) {
+      fetch('/infectDetailSidebar/infectSum/' + this.country).then(function (response) {
         response.json().then((data) => {
           that.infect_sum = data
         })
@@ -83,7 +83,7 @@ export default {
     },
     getInfectSumAdd () {
       var that = this
-      fetch('/infectHomeHeadbar/infectSumAdd/' + this.country).then(function (response) {
+      fetch('/infectDetailSidebar/infectSumAdd/' + this.country).then(function (response) {
         response.json().then((data) => {
           that.infect_sum_add = data
         })
@@ -91,7 +91,7 @@ export default {
     },
     getInfectDeath () {
       var that = this
-      fetch('/infectHomeHeadbar/infectDeath/' + this.country).then(function (response) {
+      fetch('/infectDetailSidebar/infectDeath/' + this.country).then(function (response) {
         response.json().then((data) => {
           that.infect_death = data
         })
@@ -99,7 +99,7 @@ export default {
     },
     getInfectDeathAdd () {
       var that = this
-      fetch('/infectHomeHeadbar/infectDeathAdd/' + this.country).then(function (response) {
+      fetch('/infectDetailSidebar/infectDeathAdd/' + this.country).then(function (response) {
         response.json().then((data) => {
           that.infect_death_add = data
         })
@@ -107,7 +107,7 @@ export default {
     },
     getInfectCure () {
       var that = this
-      fetch('/infectHomeHeadbar/infectCure/' + this.country).then(function (response) {
+      fetch('/infectDetailSidebar/infectCure/' + this.country).then(function (response) {
         response.json().then((data) => {
           that.infect_cure = data
         })
@@ -115,7 +115,7 @@ export default {
     },
     getInfectCureAdd () {
       var that = this
-      fetch('/infectHomeHeadbar/infectCureAdd/' + this.country).then(function (response) {
+      fetch('/infectDetailSidebar/infectCureAdd/' + this.country).then(function (response) {
         response.json().then((data) => {
           that.infect_cure_add = data
         })

@@ -36,11 +36,11 @@ export default {
   methods: { // 事件处理器
     getCountryMsg () {
       var that = this
-      that.countryMsg = this.this.$route.params.country
+      that.countryMsg = this.$route.params.country
     },
     getCountryMapVaccineDataMsg () {
       var that = this
-      fetch('/vaccineDetail/countryMapVaccineDataMsg').then(function (response) {
+      fetch('/vaccineDetail/countryMapVaccineDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
           that.countryMapVaccineDataMsg = data
         })
