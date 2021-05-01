@@ -17,17 +17,29 @@ export default {
         response.json().then(function (data) {
           that.chart.setOption({
             title: {
-              text: data.name + '总体数据'
+              text: data.name + '总体数据',
+              textStyle: {
+                fontSize: '40'
+              },
+              left: '10%'
             },
             tooltip: {
               trigger: 'axis'
             },
             legend: {
+              left: '50%',
               data: ['接种人数', '确诊人数', '治愈人数', '死亡人数']
             },
             xAxis: [{
               name: '日期',
               type: 'category',
+              nameTextStyle: {
+                fontSize: '14',
+                fontWeight: 'bold'
+              },
+              axisTick: {
+                alignWithLabel: 'true'
+              },
               data: data.time
             }],
             yAxis: [{
