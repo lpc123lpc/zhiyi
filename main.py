@@ -13,33 +13,13 @@ def index():
     return '欢迎来到知疫'
 
 
-@app.route('/worldMapVaccine', methods=["GET"])
-def getWorldMapVaccine():
-    return map.getMapVaccine('world')
-
-
-@app.route('/worldMapInfection', methods=["GET"])
-def getWorldMapInfection():
-    return map.getMapInfection('world')
-
-
-@app.route('/CountryMapVaccine/<country>', methods=["GET"])
-def getCountryMapVaccine(country):
-    return map.getMapVaccine(country)
-
-
-@app.route('/CountryMapInfection/<country>', methods=["GET"])
-def getCountryMapInfection(country):
-    return map.getMapInfection(country)
-
-
 @app.route('/worldData', methods=["GET"])
 def getWordData():
     return table.getWorldData()
 
 
 @app.route('/countryData/<country>', methods=["GET"])
-def getcountryData(country):
+def getCountryData(country):
     return table.getCountryData(country)
 
 
@@ -55,12 +35,12 @@ def getCountryVaccine(country):
 
 @app.route('/vaccineHome/worldMapVaccineDataMsg', methods=["GET"])
 def getWorldMapVaccineDataMsg():
-    return sidebar.getVaccinationMain('global')
+    return map.getMapVaccine('global')
 
 
 @app.route('/vaccineDetail/countryMapVaccineDataMsg/<country>', methods=["GET"])
 def getWorldMapVaccineDataMsgCountry(country):
-    return sidebar.getVaccinationMain(country)
+    return map.getMapVaccine(country)
 
 
 @app.route('/vaccineHomeHeadbar/vaccineSum', methods=["GET"])
@@ -105,12 +85,12 @@ def getVaccineCoverAdd(country):
 
 @app.route('/infectHome/worldMapInfectionDataMsg', methods=["GET"])
 def getWorldMapInfectionDataMsg():
-    return sidebar.getInfectionMain('global')
+    return map.getMapInfection('world')
 
 
 @app.route('/infectDetail/countryMapInfectionDataMsg/<country>', methods=["GET"])
 def getWorldMapInfectionDataMsgCountry(country):
-    return sidebar.getInfectionMain(country)
+    return map.getMapInfection(country)
 
 
 @app.route('/infectHomeHeadbar/infectSum', methods=["GET"])
