@@ -10,32 +10,32 @@
         </el-table-column>
         <el-table-column
           prop="confirmed"
-          label="累计确诊人数"
+          label="累计确诊"
           sortable>
         </el-table-column>
         <el-table-column
           prop="newConfirmed"
-          label="新增确诊人数"
+          label="新增确诊"
           sortable>
         </el-table-column>
         <el-table-column
           prop="cured"
-          label="累计治愈人数"
+          label="累计治愈"
           sortable>
         </el-table-column>
         <el-table-column
           prop="deceased"
-          label="累计死亡人数"
+          label="累计死亡"
           sortable>
         </el-table-column>
         <el-table-column
           prop="vaccined"
-          label="累计接种人数"
+          label="累计接种"
           sortable>
         </el-table-column>
         <el-table-column
           prop="newVaccined"
-          label="新增接种人数"
+          label="新增接种"
           sortable>
         </el-table-column>
         <el-table-column
@@ -49,11 +49,9 @@
 
 <script>
 import CountryData from './countryData'
-import TestComp from './testComp'
 export default {
   name: 'WorldTable',
   components: {
-    'test_data': TestComp,
     'country_data': CountryData},
   data: function () {
     return {
