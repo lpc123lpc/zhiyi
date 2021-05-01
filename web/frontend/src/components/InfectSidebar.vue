@@ -63,7 +63,7 @@ export default {
   methods: {
     getInfectSum () {
       var that = this
-      fetch('/infectSidebar/infectSum').then(function (response) {
+      fetch('http://127.0.0.1:5000/infectSidebar/infectSum').then(function (response) {
         response.json().then((data) => {
           that.infect_sum = data
         })
@@ -71,7 +71,7 @@ export default {
     },
     getInfectSumAdd () {
       var that = this
-      fetch('/infectSidebar/infectSumAdd').then(function (response) {
+      fetch('http://127.0.0.1:5000/infectSidebar/infectSumAdd').then(function (response) {
         response.json().then((data) => {
           that.infect_sum_add = data
         })
@@ -79,7 +79,7 @@ export default {
     },
     getInfectCure () {
       var that = this
-      fetch('/infectSidebar/infectCure').then(function (response) {
+      fetch('http://127.0.0.1:5000/infectSidebar/infectCure').then(function (response) {
         response.json().then((data) => {
           that.infect_cure = data
         })
@@ -87,7 +87,7 @@ export default {
     },
     getInfectCureAdd () {
       var that = this
-      fetch('/infectSidebar/infectCureAdd').then(function (response) {
+      fetch('http://127.0.0.1:5000/infectSidebar/infectCureAdd').then(function (response) {
         response.json().then((data) => {
           that.infect_cure_add = data
         })

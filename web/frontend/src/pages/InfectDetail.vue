@@ -40,7 +40,7 @@ export default {
     },
     getCountryInfectionDataMsg () {
       var that = this
-      fetch('/infectDetail/countryMapInfectionDataMsg/' + this.$route.params.country).then(function (response) {
+      fetch('http://127.0.0.1:5000/infectDetail/countryMapInfectionDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
           that.countryMapInfectionDataMsg = data
         })

@@ -44,7 +44,7 @@ export default {
   methods: { // 事件处理器
     getWorldMapInfectionDataMsg () {
       var that = this
-      fetch('/infectHome/worldMapInfectionDataMsg').then(function (response) {
+      fetch('http://127.0.0.1:5000/infectHome/worldMapInfectionDataMsg').then(function (response) {
         response.json().then((data) => {
           that.worldMapInfectionDataMsg = data
         })

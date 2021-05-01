@@ -13,6 +13,9 @@
             <div style="align: center; margin-top: 50px">
               <world-table></world-table>
             </div>
+            <div style="align: center; margin-top: 50px">
+              <line-chart></line-chart>
+            </div>
           </el-main>
         </el-container>
         <!--<div class="container">
@@ -34,6 +37,7 @@ import header from '../components/Header.vue'
 import vaccineSidebar from '../components/VaccineSidebar.vue'
 import infectSidebar from '../components/InfectSidebar.vue'
 import worldTable from '../components/WorldTable.vue'
+import lineChart from '../components/CountryVaccine'
 // import footer from '../components/footer.vue'
 // import temSharelist from '../components/temSharelist.vue'
 // import temRightlist from '../components/temRightlist.vue'
@@ -51,6 +55,7 @@ export default {
     'vaccine-sidebar': vaccineSidebar,
     'infect-sidebar': infectSidebar,
     'world-table': worldTable,
+    'line-chart': lineChart
     // 'wbc-sharelist': temSharelist,
     // 'wbc-rightlist': temRightlist,
     // 'wbc-footer': footer

@@ -29,7 +29,7 @@ export default {
   methods: {
     getVaccineSum () {
       var that = this
-      fetch('/vaccineHomeHeadbar/vaccineSum').then(function (response) {
+      fetch('http://127.0.0.1:5000/vaccineHomeHeadbar/vaccineSum').then(function (response) {
         response.json().then((data) => {
           that.vaccine_sum = data
         })
@@ -37,7 +37,7 @@ export default {
     },
     getVaccineSumAdd () {
       var that = this
-      fetch('/vaccineHomeHeadbar/vaccineSumAdd').then(function (response) {
+      fetch('http://127.0.0.1:5000/vaccineHomeHeadbar/vaccineSumAdd').then(function (response) {
         response.json().then((data) => {
           that.vaccine_sum_add = data
         })
@@ -45,7 +45,7 @@ export default {
     },
     getVaccineCover () {
       var that = this
-      fetch('/vaccineHomeHeadbar/vaccineCover').then(function (response) {
+      fetch('http://127.0.0.1:5000/vaccineHomeHeadbar/vaccineCover').then(function (response) {
         response.json().then((data) => {
           that.vaccine_cover = data
         })
@@ -53,7 +53,7 @@ export default {
     },
     getVaccineCoverAdd () {
       var that = this
-      fetch('/vaccineHomeHeadbar/vaccineCoverAdd').then(function (response) {
+      fetch('http://127.0.0.1:5000/vaccineHomeHeadbar/vaccineCoverAdd').then(function (response) {
         response.json().then((data) => {
           that.vaccine_cover_add = data
         })

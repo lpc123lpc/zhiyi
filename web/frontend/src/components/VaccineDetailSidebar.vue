@@ -58,7 +58,7 @@ export default {
   methods: {
     getVaccineSum () {
       var that = this
-      fetch('/vaccineDetailSidebar/vaccineSum/' + this.country).then(function (response) {
+      fetch('http://127.0.0.1:5000/vaccineDetailSidebar/vaccineSum/' + this.country).then(function (response) {
         response.json().then((data) => {
           that.vaccine_sum = data
         })
@@ -66,7 +66,7 @@ export default {
     },
     getVaccineSumAdd () {
       var that = this
-      fetch('/vaccineDetailSidebar/vaccineSumAdd/' + this.country).then(function (response) {
+      fetch('http://127.0.0.1:5000/vaccineDetailSidebar/vaccineSumAdd/' + this.country).then(function (response) {
         response.json().then((data) => {
           that.vaccine_sum_add = data
         })
@@ -74,7 +74,7 @@ export default {
     },
     getVaccineCover () {
       var that = this
-      fetch('/vaccineDetailSidebar/vaccineCover/' + this.country).then(function (response) {
+      fetch('http://127.0.0.1:5000/vaccineDetailSidebar/vaccineCover/' + this.country).then(function (response) {
         response.json().then((data) => {
           that.vaccine_cover = data
         })
@@ -82,7 +82,7 @@ export default {
     },
     getVaccineCoverAdd () {
       var that = this
-      fetch('/vaccineDetailSidebar/vaccineCoverAdd/' + this.country).then(function (response) {
+      fetch('http://127.0.0.1:5000/vaccineDetailSidebar/vaccineCoverAdd/' + this.country).then(function (response) {
         response.json().then((data) => {
           that.vaccine_cover_add = data
         })

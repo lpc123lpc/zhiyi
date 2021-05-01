@@ -46,7 +46,7 @@ export default {
   methods: {
     getVaccineSum () {
       var that = this
-      fetch('/vaccineSidebar/vaccineSum').then(function (response) {
+      fetch('http://127.0.0.1:5000/vaccineSidebar/vaccineSum').then(function (response) {
         response.json().then((data) => {
           that.vaccine_sum = data
         })
@@ -54,7 +54,7 @@ export default {
     },
     getVaccineSumAdd () {
       var that = this
-      fetch('/vaccineSidebar/vaccineSumAdd').then(function (response) {
+      fetch('http://127.0.0.1:5000/vaccineSidebar/vaccineSumAdd').then(function (response) {
         response.json().then((data) => {
           that.vaccine_sum_add = data
         })

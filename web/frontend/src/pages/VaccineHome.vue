@@ -39,7 +39,7 @@ export default {
   methods: { // 事件处理器
     getWorldMapVaccineDataMsg () {
       var that = this
-      fetch('/vaccineHome/worldMapVaccineDataMsg').then(function (response) {
+      fetch('http://127.0.0.1:5000/vaccineHome/worldMapVaccineDataMsg').then(function (response) {
         response.json().then((data) => {
           that.worldMapVaccineDataMsg = data
         })

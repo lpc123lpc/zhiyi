@@ -35,7 +35,7 @@ export default {
   methods: {
     getInfectSum () {
       var that = this
-      fetch('/infectHomeHeadbar/infectSum').then(function (response) {
+      fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectSum').then(function (response) {
         response.json().then((data) => {
           that.infect_sum = data
         })
@@ -43,7 +43,7 @@ export default {
     },
     getInfectSumAdd () {
       var that = this
-      fetch('/infectHomeHeadbar/infectSumAdd').then(function (response) {
+      fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectSumAdd').then(function (response) {
         response.json().then((data) => {
           that.infect_sum_add = data
         })
@@ -51,7 +51,7 @@ export default {
     },
     getInfectDeath () {
       var that = this
-      fetch('/infectHomeHeadbar/infectDeath').then(function (response) {
+      fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectDeath').then(function (response) {
         response.json().then((data) => {
           that.infect_death = data
         })
@@ -59,7 +59,7 @@ export default {
     },
     getInfectDeathAdd () {
       var that = this
-      fetch('/infectHomeHeadbar/infectDeathAdd').then(function (response) {
+      fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectDeathAdd').then(function (response) {
         response.json().then((data) => {
           that.infect_death_add = data
         })
@@ -67,7 +67,7 @@ export default {
     },
     getInfectCure () {
       var that = this
-      fetch('/infectHomeHeadbar/infectCure').then(function (response) {
+      fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectCure').then(function (response) {
         response.json().then((data) => {
           that.infect_cure = data
         })
@@ -75,7 +75,7 @@ export default {
     },
     getInfectCureAdd () {
       var that = this
-      fetch('/infectHomeHeadbar/infectCureAdd').then(function (response) {
+      fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectCureAdd').then(function (response) {
         response.json().then((data) => {
           that.infect_cure_add = data
         })
