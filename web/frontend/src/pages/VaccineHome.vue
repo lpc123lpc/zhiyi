@@ -28,7 +28,7 @@
 <script>
 import header from '../components/Header.vue'
 import vaccineHomeHeadbar from '../components/VaccineHomeHeadbar.vue'
-import vaccineHomeWorldMap from '../components/WorldMapInfection.vue'
+import vaccineHomeWorldMap from '../components/WorldMapVaccine.vue'
 export default {
   name: 'VaccineHome',
   data () { // 选项 / 数据
