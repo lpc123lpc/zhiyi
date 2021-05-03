@@ -29,10 +29,26 @@ name: "FeedBackInput",
       };
     },
     methods: {
+      postFeedBack() {
+        var formData=JSON.stringify(this.ruleForm)
+        fetch('http://127.0.0.1:5000/feedback',{
+　　      method: 'POST',
+　　      body : formData,
+　　      headers:{
+　　　　      'Content-Type' : 'application/json'
+　　      }
+        }).then(res=>{
+          return res.json()
+        }).then(res=>{
+          console.log(res)
+        })
+      },
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            alert('submit!');
+            this.postFeedBack()
+            alert('提交成功，感谢您的意见！')
+            this.resetForm(formName)
           } else {
             console.log('error submit!!');
             return false;

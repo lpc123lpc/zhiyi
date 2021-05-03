@@ -22,13 +22,13 @@ export default new Router({
     {
       path: '/VaccineDetail/:country',
       name: 'VaccineDetail',
-      component: resolve => require(['../pages/VaccineDetail'], resolve)
+      component: resolve => require(['../pages/Home'], resolve)
     }
     ,
     {
       path: '/InfectHome',
       name: 'InfectHome',
-      component: resolve => require(['../pages/InfectHome'], resolve)
+      component: resolve => require(['../pages/Home'], resolve)
     },
     {
       path: '/InfectDetail/:country',
