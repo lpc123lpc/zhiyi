@@ -7,12 +7,12 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: resolve => require(['../components/FeedBackInput'], resolve)
+      component: resolve => require(['../pages/Home'], resolve)
     },
     {
       path: '/Home',
       name: 'Home',
-      component: resolve => require(['../components/FeedBackInput'], resolve)
+      component: resolve => require(['../pages/Home'], resolve)
     },
     {
       path: '/VaccineHome',
