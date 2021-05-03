@@ -6,8 +6,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: resolve => require(['../components/FeedBackInput'], resolve)
+      name: 'TestWorldMapInfection',
+      component: resolve => require(['../test/TestWorldMapInfection'], resolve)
+    },
+    ,
+    {
+      path: '/TestInfectDetail/:country',
+      name: 'TestCountryMapInfection',
+      component: resolve => require(['../test/TestCountryMapInfection'], resolve)
     },
     {
       path: '/Home',

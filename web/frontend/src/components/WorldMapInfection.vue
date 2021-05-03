@@ -89,10 +89,10 @@
                     left: 'center',
                     showLegendSymbol: false,
                     label: {
-                    emphasis: {
-                        show: true,
-                        fontSize: 14,
-                    }
+                        emphasis: {
+                            show: true,
+                            fontSize: 14,
+                        }
                     },
                     nameMap: this.getWorldNameMap(),
                     data: this.worldMapInfectionData.nowConfirm
@@ -104,10 +104,10 @@
                     roam: true,
                     showLegendSymbol: false,
                     label: {
-                    emphasis: {
-                        show: true,
-                        fontSize: 14,
-                    }
+                        emphasis: {
+                            show: true,
+                            fontSize: 14,
+                        }
                     },
                     data: this.worldMapInfectionData.totalConfirm
                 },{
@@ -118,10 +118,10 @@
                     roam: true,
                     showLegendSymbol: false,
                     label: {
-                    emphasis: {
-                        show: true,
-                        fontSize: 14,
-                    }
+                        emphasis: {
+                            show: true,
+                            fontSize: 14,
+                        }
                     },
                     data: this.worldMapInfectionData.cured
                 },{
@@ -132,10 +132,10 @@
                     roam: true,
                     showLegendSymbol: false,
                     label: {
-                    emphasis: {
-                        show: true,
-                        fontSize: 14,
-                    }
+                        emphasis: {
+                            show: true,
+                            fontSize: 14,
+                        }
                     },
                     data: this.worldMapInfectionData.dead
                 }]

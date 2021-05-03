@@ -33,3 +33,4 @@ __pycache__
 /target/
 venv/
 /web/frontend/node_modules
+/web/frontend/static/json/map/china-province/mapType

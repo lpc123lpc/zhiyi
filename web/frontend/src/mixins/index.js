@@ -26,6 +26,10 @@ export const mixin = {
     getChinaProvinceFileName(province) {
       var json = require('../../static/json/map/china-province/china-province-mapping.json')
       return json[province]
+    },
+    getProvinceNameMap(province) {
+      var json = require('../../static/json/map/china-province/city-map.json')
+      return json[province]
     }
   }
 }

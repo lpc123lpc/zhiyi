@@ -79,12 +79,12 @@
                     textStyle: {
                         fontSize: 12,
                     },
-                    splitList: [{start: 0, end: 0},
-                                {start: 1, end: 9},
-                                {start: 10, end: 99},
-                                {start: 100, end: 999},
-                                {start: 1000, end: 9999},
-                                {start: 10000}],
+                    splitList: [{start: 0, end: 100},
+                                {start: 100, end: 499},
+                                {start: 500, end: 1999},
+                                {start: 2000, end: 9999},
+                                {start: 10000, end: 99999},
+                                {start: 100000}],
                     color: ['#70161D', '#CB2A2F', '#E55A4E', '#F59E83', '#FDEBCF', '#DCE2EB'],
             
                 },
@@ -98,10 +98,10 @@
                     left: 'center',
                     showLegendSymbol: false,
                     label: {
-                    emphasis: {
-                        show: true,
-                        fontSize: 14,
-                    }
+                        emphasis: {
+                            show: true,
+                            fontSize: 14,
+                        }
                     },
                     data: this.countryMapInfectionData.nowConfirm
                 },{
@@ -112,10 +112,10 @@
                     roam: true,
                     showLegendSymbol: false,
                     label: {
-                    emphasis: {
-                        show: true,
-                        fontSize: 14,
-                    }
+                        emphasis: {
+                            show: true,
+                            fontSize: 14,
+                        }
                     },
                     data: this.countryMapInfectionData.totalConfirm
                 },{
@@ -126,10 +126,10 @@
                     roam: true,
                     showLegendSymbol: false,
                     label: {
-                    emphasis: {
-                        show: true,
-                        fontSize: 14,
-                    }
+                        emphasis: {
+                            show: true,
+                            fontSize: 14,
+                        }
                     },
                     data: this.countryMapInfectionData.cured
                 },{
@@ -140,10 +140,10 @@
                     roam: true,
                     showLegendSymbol: false,
                     label: {
-                    emphasis: {
-                        show: true,
-                        fontSize: 14,
-                    }
+                        emphasis: {
+                            show: true,
+                            fontSize: 14,
+                        }
                     },
                     data: this.countryMapInfectionData.dead
                 }]
@@ -228,11 +228,12 @@
                     left: 'center',
                     showLegendSymbol: false,
                     label: {
-                    emphasis: {
-                        show: true,
-                        fontSize: 14,
-                    }
+                        emphasis: {
+                            show: true,
+                            fontSize: 14,
+                        }
                     },
+                    nameMap: this.getProvinceNameMap(province),
                     data: []
                 },{
                     name: '累计确诊',
@@ -242,10 +243,10 @@
                     roam: true,
                     showLegendSymbol: false,
                     label: {
-                    emphasis: {
-                        show: true,
-                        fontSize: 14,
-                    }
+                        emphasis: {
+                            show: true,
+                            fontSize: 14,
+                        }
                     },
                     data: []
                 },{
@@ -256,10 +257,10 @@
                     roam: true,
                     showLegendSymbol: false,
                     label: {
-                    emphasis: {
-                        show: true,
-                        fontSize: 14,
-                    }
+                        emphasis: {
+                            show: true,
+                            fontSize: 14,
+                        }
                     },
                     data: []
                 },{
@@ -270,10 +271,10 @@
                     roam: true,
                     showLegendSymbol: false,
                     label: {
-                    emphasis: {
-                        show: true,
-                        fontSize: 14,
-                    }
+                        emphasis: {
+                            show: true,
+                            fontSize: 14,
+                        }
                     },
                     data: []
                 }]
