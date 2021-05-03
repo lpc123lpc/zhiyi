@@ -55,7 +55,7 @@
                 var value = parseFloat(params.value)
                 if (!isNaN(params.value)) {
                     if (params.seriesName === '覆盖率') {
-                        value =  value * 100 + '%'
+                        value =  value + '/百人'
                     } else {
                         value = value + '万'
                     }
@@ -120,7 +120,7 @@
               fontSize: 12,
             },
             min: 0,
-            max: 1,
+            max: 1000,
             realtime: true,
             calculable: true,
             inRange: {
