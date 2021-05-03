@@ -21,7 +21,6 @@ def getWordData():
 
 @app.route('/countryData/<country>', methods=["GET"])
 def getCountryData(country):
-    print(1)
     return table.getCountryData(country)
 
 
@@ -32,7 +31,6 @@ def getCountryInfection(country):
 
 @app.route('/countryVaccine/<country>', methods=["GET"])
 def getCountryVaccine(country):
-    print(1)
     return table.getCountryInfection(country)
 
 
