@@ -1,6 +1,6 @@
 <template>
     <div id = 'WorldTable'>
-      <el-table :data="items" highlight-current-row>
+      <el-table :data="items" highlight-current-row height="600">
         <el-table-column type="expand">
           <country_data></country_data>
         </el-table-column>
