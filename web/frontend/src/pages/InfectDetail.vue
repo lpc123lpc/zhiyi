@@ -4,8 +4,8 @@
       <wbc-nav></wbc-nav>
     </el-header>
     <el-container>
-      <el-aside width="400px">
-        <infect-detail-sidebar v-bind:country="'疫苗接种'"></infect-detail-sidebar>
+      <el-aside width="450px">
+        <infect-detail-sidebar v-bind:country="countryMsg"></infect-detail-sidebar>
       </el-aside>
       <el-main>
         <div style="align: center; margin-top: 20px">

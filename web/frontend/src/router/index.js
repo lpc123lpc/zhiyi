@@ -38,7 +38,7 @@ export default new Router({
     {
       path: '/InfectProvinceDetail/:province',
       name: 'InfectProvinceDetail',
-      component: resolve => require(['../test/TestProvinceMap'], resolve)
+      component: resolve => require(['../pages/InfectProvinceDetail'], resolve)
     },
     {
       path: '/Feedback',

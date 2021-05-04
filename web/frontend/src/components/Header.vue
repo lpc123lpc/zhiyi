@@ -46,10 +46,10 @@ export default {
       activeIndex: '1',
       input: '',
       path: '',
-      dataSource: ['国内：腾讯新闻', 
-                  '国外：ourwolrdindata，各国的感染数据（country level）',
-                  '      疫苗的历史数据和每日接种（country level）',
-                  '      JHU ，补充了各国的state/province，以及“灯塔国”\n' + 
+      dataSource: ['国内：腾讯新闻',
+        '国外：ourwolrdindata，各国的感染数据（country level）',
+        '      疫苗的历史数据和每日接种（country level）',
+        '      JHU ，补充了各国的state/province，以及“灯塔国”\n' +
                   '      的主要城市的感染数据']
     }
   },
@@ -75,7 +75,7 @@ export default {
         that.path = '/VaccineHome'
       }
     },
-    showDtaSource() {
+    showDtaSource () {
       const data = []
       const h = this.$createElement
       for (let i in this.dataSource) {
@@ -99,7 +99,7 @@ export default {
 .icon {
   width: 20px;
   height: 20px;
-  margin-top: 18px;
+  margin-top: 20px;
   fill: #56aafdc4;
   overflow: hidden;
 }
