@@ -1,5 +1,5 @@
 <template>
-    <div id="countryVaccine" style="width: auto;height:600px;"></div>
+    <div id="countryVaccine" style="width: 100%;height:600px;"></div>
 </template>
 
 <script>

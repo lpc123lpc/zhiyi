@@ -59,7 +59,7 @@ export default {
     }
   },
   mounted () {
-    this.items = this.getWorldData()
+    this.getWorldData()
   },
   methods: {
     getWorldData () {
