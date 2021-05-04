@@ -186,8 +186,42 @@ def getInfectionCureMain():
 
 @app.route('/infectSidebar/infectCureAdd', methods=["GET"])
 def getInfectionCureAddMain():
-    print(1)
     return sidebar.getInfectionCureAddSidebar('global')
+
+
+@app.route('/infectDetail/provinceMapInfectionDataMsg/<province>', methods=["GET"])
+def getInfectionProvince(province):
+    return map.getMapInfection(province)
+
+
+@app.route('/infectDetailProvinceSidebar/infectSum/<province>', methods=["GET"])
+def getInfectionSumProvince(province):
+    return sidebar.getInfectionTotalSidebar(province)
+
+
+@app.route('/infectDetailProvinceSidebar/infectProvinceSumAdd/<province>', methods=["GET"])
+def getInfectionSumAddProvince(province):
+    return sidebar.getInfectionTotalAddSidebar(province)
+
+
+@app.route('/infectDetailProvinceSidebar/infectProvinceDeath/<province>', methods=["GET"])
+def getInfectionDeathProvince(province):
+    return sidebar.getInfectionDeadSidebar(province)
+
+
+@app.route('/infectDetailProvinceSidebar/infectProvinceDeathAdd/<province>', methods=["GET"])
+def getInfectionDeathAddProvince(province):
+    return sidebar.getInfectionDeadAddSidebar(province)
+
+
+@app.route('/infectDetailProvinceSidebar/infectProvinceCure/<province>', methods=["GET"])
+def getInfectionCureProvince(province):
+    return sidebar.getInfectionCureSidebar(province)
+
+
+@app.route('/infectDetailProvinceSidebar/infectProvinceCureAdd/<province>', methods=["GET"])
+def getInfectionCureAddProvince(province):
+    return sidebar.getInfectionAddCureSidebar(province)
 
 
 post_data = []
