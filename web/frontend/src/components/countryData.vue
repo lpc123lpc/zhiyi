@@ -1,5 +1,5 @@
 <template>
-  <div ref="countryDataCharts" style="width: 100%;height:600px"></div>
+  <div ref="countryDataCharts" style="width: 100%;height:500px"></div>
 </template>
 
 <script>
@@ -19,10 +19,12 @@ export default {
             title: {
               text: data.name + '总体数据',
               textStyle: {
-                fontSize: '40'
+                fontSize: '20',
+                color: '#696969'
               },
               left: '10%'
             },
+            backgroundColor: '',
             tooltip: {
               trigger: 'axis'
             },
