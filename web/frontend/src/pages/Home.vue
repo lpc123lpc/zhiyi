@@ -5,7 +5,7 @@
           <wbc-nav></wbc-nav>
         </el-header>
         <el-container>
-          <el-aside width="600px">
+          <el-aside width="400px">
             <vaccine-sidebar v-bind:vaccine_header_title="'疫苗接种'"></vaccine-sidebar>
             <infect-sidebar v-bind:infect_header_title="'感染情况'"></infect-sidebar>
           </el-aside>

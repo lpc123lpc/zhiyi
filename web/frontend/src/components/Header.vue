@@ -27,6 +27,9 @@
     <el-menu-item index="3" class="nav-menu-item">出行建议</el-menu-item>
     <el-menu-item index="4" class="nav-menu-item">新闻资讯</el-menu-item>
     <el-menu-item index="/Feedback" class="nav-menu-item">反馈&建议</el-menu-item>
+    <svg class="icon" aria-hidden="true" @click="showDtaSource()">
+      <use xlink:href="#icon-question"></use>
+    </svg>
     <el-container index="6" class="input-container">
       <el-input placeholder="请输入内容" v-model="input" class="input-with-select">
         <el-button slot="append" icon="el-icon-search"></el-button>
@@ -42,7 +45,12 @@ export default {
     return {
       activeIndex: '1',
       input: '',
-      path: ''
+      path: '',
+      dataSource: ['国内：腾讯新闻', 
+                  '国外：ourwolrdindata，各国的感染数据（country level）',
+                  '      疫苗的历史数据和每日接种（country level）',
+                  '      JHU ，补充了各国的state/province，以及“灯塔国”\n' + 
+                  '      的主要城市的感染数据']
     }
   },
   methods: {
@@ -66,6 +74,16 @@ export default {
       } else {
         that.path = '/VaccineHome'
       }
+    },
+    showDtaSource() {
+      const data = []
+      const h = this.$createElement
+      for (let i in this.dataSource) {
+        data.push(h('p', null, this.dataSource[i]))
+      }
+      this.$alert(h('pre', null, data), '数据来源', {
+        // customClass: 'message-alert'
+      })
     }
   },
   watch: {
@@ -78,6 +96,13 @@ export default {
 </script>
 
 <style scoped>
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 18px;
+  fill: #56aafdc4;
+  overflow: hidden;
+}
 .input-container {
   /*position: absolute;*/
   width: 300px;
@@ -100,4 +125,8 @@ export default {
   background-color: #ffffff !important;
   color: #409eff !important;
 }
+/* .message-alert {
+  word-break: break-all !important;
+  white-space: pre;
+} */
 </style>
