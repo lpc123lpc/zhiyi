@@ -1,5 +1,5 @@
 <template>
-    <div id="countryMapInfection"></div>
+    <div id="provinceMapInfection"></div>
 </template>
 
 <script>
@@ -8,47 +8,36 @@
   import { mixin } from '../mixins'
 
   export default {
-    name: 'CountryMapInfection',
+    name: 'ProvinceMapInfection',
     props: [
-      'country',
-      'countryMapInfectionData'
+      'province',
+      'provinceMapInfectionData'
     ],
     mixins: [mixin],
-    data() {
-        return {
-            countryFileName: '',
-            countryEgName: ''
-        }
-    },
     watch: {
-        country() {
-            [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
-            this.drawCountryMapInfection()
+        province() {
+            // console.log(this.province)
+            this.drawProvinceMapInfection()
         }
     },
     mounted() {
-        [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
-        this.drawCountryMapInfection()
+        this.drawProvinceMapInfection()
     }, 
     methods: {
-       drawCountryMapInfection() {
-            // console.log(this.countryFileName)
-            if (this.countryFileName === '') {
-                console.log("Name error!")
-                return
-            }
-            // console.log(this.countryMapInfectionData)
-            var json = require('../../static/json/map/world/geojson/' + this.countryFileName + '.json')
+       drawProvinceMapInfection() {
+            var provinceFileName = this.getChinaProvinceFileName(this.province)
+            // console.log(provinceFileName)
+            var json = require('../../static/json/map/china-province/geojson/' + provinceFileName + '.json')
             if (json === null) {
                 console.log('Load json error!')
                 return
             }
             // console.log(json)
-            echarts.registerMap(this.countryEgName, json)
-            var countryMapInfection = echarts.init(document.getElementById('countryMapInfection'), 'sakura')
-            var countryMapInfection_Option = {
+            echarts.registerMap(this.province, json)
+            var provinceMapInfection = echarts.init(document.getElementById('provinceMapInfection'), 'sakura');
+            var provinceMapInfection_Option = {
                 title: {
-                    text: '新冠疫苗感染' + this.country + '分布图',
+                    text: '新冠疫苗感染中国' + this.province + '分布图',
                     left: 'center',
                     textStyle: {
                         color: '#000',
@@ -86,12 +75,12 @@
                     textStyle: {
                         fontSize: 12,
                     },
-                    splitList: [{start: 0, end: 100},
-                                {start: 100, end: 499},
-                                {start: 500, end: 1999},
-                                {start: 2000, end: 9999},
-                                {start: 10000, end: 99999},
-                                {start: 100000}],
+                    splitList: [{start: 0, end: 0},
+                                {start: 1, end: 9},
+                                {start: 10, end: 99},
+                                {start: 100, end: 999},
+                                {start: 1000, end: 9999},
+                                {start: 10000}],
                     color: ['#70161D', '#CB2A2F', '#E55A4E', '#F59E83', '#FDEBCF', '#DCE2EB'],
             
                 },
@@ -99,7 +88,7 @@
                     name: '当前确诊',
                     type: 'map',
                     roam: true,
-                    mapType: this.countryEgName,
+                    mapType: this.province,
                     zoom: 1.2,
                     top: '15%',
                     left: 'center',
@@ -110,11 +99,12 @@
                             fontSize: 14,
                         }
                     },
-                    data: this.countryMapInfectionData.nowConfirm
+                    nameMap: this.getProvinceNameMap(this.province),
+                    data: this.provinceMapInfectionData.nowConfirm
                 },{
                     name: '累计确诊',
                     type: 'map',
-                    mapType: this.countryEgName,
+                    mapType: this.province,
                     zoom: 1.2,
                     roam: true,
                     showLegendSymbol: false,
@@ -124,11 +114,11 @@
                             fontSize: 14,
                         }
                     },
-                    data: this.countryMapInfectionData.totalConfirm
+                    data: this.provinceMapInfectionData.totalConfirm
                 },{
                     name: '累计治愈',
                     type: 'map',
-                    mapType: this.countryEgName,
+                    mapType: this.province,
                     zoom: 1.2,
                     roam: true,
                     showLegendSymbol: false,
@@ -138,11 +128,11 @@
                             fontSize: 14,
                         }
                     },
-                    data: this.countryMapInfectionData.cured
+                    data: this.provinceMapInfectionData.cured
                 },{
                     name: '累计死亡',
                     type: 'map',
-                    mapType: this.countryEgName,
+                    mapType: this.province,
                     zoom: 1.2,
                     roam: true,
                     showLegendSymbol: false,
@@ -152,24 +142,17 @@
                             fontSize: 14,
                         }
                     },
-                    data: this.countryMapInfectionData.dead
+                    data: this.provinceMapInfectionData.dead
                 }]
             }
-            countryMapInfection.setOption(countryMapInfection_Option)
-            if (this.country == '中国') {
-                const that = this
-                countryMapInfection.on('click', function (param) {
-                    // console.log(param.name)
-                    that.$router.push({path: `/InfectProvinceDetail/${param.name}`})
-                })
-            }
-        },
+            provinceMapInfection.setOption(provinceMapInfection_Option)
+        }
     }
 }
 </script>
 
 <style>
-    #countryMapInfection {
+    #provinceMapInfection {
         position: relative;
         /* margin-left: 5%; */
         height: 600px;

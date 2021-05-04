@@ -1,7 +1,6 @@
 <template>
   <div>
-    <el-button @click="back()">返回</el-button>
-    <div id="countryMapInfection"><country-map-infection :countryMapInfectionData="data" :country="country" v-if="refresh"></country-map-infection></div>
+    <div id="countryMapInfection"><country-map-infection :countryMapInfectionData="data" :country="country"></country-map-infection></div>
   </div>
 </template>
 
@@ -27,14 +26,6 @@ export default {
   created() {
     this.country = this.$route.params.country
     // console.log(this.country)
-  },
-  methods: {
-    back() {
-      this.refresh = false
-      this.$nextTick(() => {
-        this.refresh = true;
-      });
-    }
   }
 }
 </script>

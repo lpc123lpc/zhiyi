@@ -4,12 +4,12 @@
       <wbc-nav></wbc-nav>
     </el-header>
     <el-container>
-      <el-aside width="600px">
+      <el-aside width="400px">
         <infect-detail-sidebar v-bind:country="'疫苗接种'"></infect-detail-sidebar>
       </el-aside>
       <el-main>
-        <div style="align: center; margin-top: 175px">
-          <infect-detail-country-map v-bind:country="countryMsg" v-bind:countryMapVaccineData="countryMapInfectionDataMsg"></infect-detail-country-map>
+        <div style="align: center; margin-top: 20px">
+          <infect-detail-country-map v-bind:country="countryMsg" v-bind:countryMapInfectionData="countryMapInfectionDataMsg"></infect-detail-country-map>
         </div>
       </el-main>
     </el-container>
@@ -35,8 +35,7 @@ export default {
   },
   methods: { // 事件处理器
     getCountryMsg () {
-      var that = this
-      that.countryMsg = this.$route.params.country
+      this.countryMsg = this.$route.params.country
     },
     getCountryInfectionDataMsg () {
       var that = this
@@ -48,8 +47,8 @@ export default {
     }
   },
   mounted () {
-    this.countryMsg = this.getCountryMsg()
-    this.countryMapInfectionDataMsg = this.getCountryInfectionDataMsg()
+    this.getCountryMsg()
+    this.getCountryInfectionDataMsg()
   }
 }
 </script>

@@ -23,7 +23,7 @@
     mounted() {
     //   console.log(this.country)
     //   console.log(this.countryMapVaccineData)
-      [this.countryFileName, this.countryEgName] = this.getCountryName()
+      [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
       this.drawCountryMapVaccine()
     }, 
     methods: {
