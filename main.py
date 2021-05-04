@@ -34,6 +34,11 @@ def getCountryVaccine(country):
     return table.getCountryInfection(country)
 
 
+@app.route('/provinceInfection/country/<province>', methods=["GET"])
+def getCountryData(province):
+    return table.getProvinceInfection(province)
+
+
 @app.route('/vaccineHome/worldMapVaccineDataMsg', methods=["GET"])
 def getWorldMapVaccineDataMsg():
     return map.getMapVaccine('global')
