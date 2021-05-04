@@ -11,12 +11,12 @@ export const mixin = {
         return nameMap
     },
     // return [fileName, englishName]
-    getCountryName() {
+    getCountryName(country) {
       var json = require('../../static/json/map/world/world-mapping.json')
       var engName
       for (let i in json) {
           // console.log(i)
-          if (json[i].cn == this.country) {
+          if (json[i].cn == country) {
               engName = i
               if (i == 'China') engName = 'china'
               return [json[i].mapFileName, engName]

@@ -36,6 +36,11 @@ export default new Router({
       component: resolve => require(['../pages/InfectDetail'], resolve)
     },
     {
+      path: '/InfectProvinceDetail/:province',
+      name: 'InfectProvinceDetail',
+      component: resolve => require(['../pages/InfectProvinceDetail'], resolve)
+    },
+    {
       path: '/Feedback',
       name: 'Feedback',
       component: resolve => require(['../pages/Feedback'], resolve)

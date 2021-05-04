@@ -96,3 +96,22 @@ def getCountryVaccine(country):
         k = k + 1
         all_data.append({"name": position, "time": times, "vaccined": vaccined, "coverage": covrtage})
     return json.dumps(all_data)
+
+
+def getProvinceInfection(province):
+    time = datetime.date.today() - datetime.timedelta(days=179)
+    times, confirmed, deceased, cure = [], [], [], [], []
+    for i in range(0, 180):
+        infData = dao.getinfMessage(province, time.strftime("%Y-%m-%d"))
+        confirmed.append(getattr(infData, 'totalNum'))
+        deceased.append(getattr(infData, 'totalDead'))
+        cure.append(getattr(infData, 'cured'))
+        times.append(time.strftime("%Y-%m-%d"))
+        time = time + datetime.timedelta(days=1)
+    return jsonify({
+        "name": province,
+        "time": times,
+        "confirmed": confirmed,
+        "deceased": deceased,
+        "cured": cure
+    })
