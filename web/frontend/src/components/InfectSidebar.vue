@@ -55,10 +55,10 @@ export default {
     }
   },
   mounted () {
-    this.infect_sum = this.getInfectSum()
-    this.infect_sum_add = this.getInfectSumAdd()
-    this.infect_cure = this.getInfectCure()
-    this.infect_cure_add = this.getInfectCureAdd()
+    this.getInfectSum()
+    this.getInfectSumAdd()
+    this.getInfectCure()
+    this.getInfectCureAdd()
   },
   methods: {
     getInfectSum () {

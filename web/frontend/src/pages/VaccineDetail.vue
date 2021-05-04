@@ -8,7 +8,7 @@
         <vaccine-detail-sidebar v-bind:country="countryMsg"></vaccine-detail-sidebar>
       </el-aside>
       <el-main>
-        <div style="align: center; margin-top: 175px">
+        <div style="align: center; margin-top: 20px">
           <vaccine-detail-country-map v-bind:country="countryMsg" v-bind:countryMapVaccineData="countryMapVaccineDataMsg"></vaccine-detail-country-map>
         </div>
       </el-main>
@@ -48,8 +48,8 @@ export default {
     }
   },
   mounted () {
-    this.countryMsg = this.getCountryMsg()
-    this.countryMapVaccineDataMsg = this.getCountryMapVaccineDataMsg()
+    this.getCountryMsg()
+    this.getCountryMapVaccineDataMsg()
   }
 }
 </script>

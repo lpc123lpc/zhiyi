@@ -13,9 +13,9 @@
             <div style="align: center; margin-top: 50px">
               <world-table></world-table>
             </div>
-            <div style="align: center; margin-top: 50px">
+            <!--<div style="align: center; margin-top: 50px">
               <line-chart></line-chart>
-            </div>
+            </div>-->
           </el-main>
         </el-container>
         <!--<div class="container">

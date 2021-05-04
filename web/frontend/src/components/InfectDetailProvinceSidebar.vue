@@ -65,12 +65,12 @@ export default {
     }
   },
   mounted () {
-    this.infect_province_sum = this.getInfectSum()
-    this.infect_province_sum_add = this.getInfectSumAdd()
-    this.infect_province_death = this.getInfectDeath()
-    this.infect_province_death_add = this.getInfectDeathAdd()
-    this.infect_province_cure = this.getInfectCure()
-    this.infect_province_cure_add = this.getInfectCureAdd()
+    this.getInfectProvinceSum()
+    this.getInfectProvinceSumAdd()
+    this.getInfectProvinceDeath()
+    this.getInfectProvinceDeathAdd()
+    this.getInfectProvinceCure()
+    this.getInfectProvinceCureAdd()
   },
   methods: {
     getInfectProvinceSum () {

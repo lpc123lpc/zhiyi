@@ -52,7 +52,7 @@ export default {
     }
   },
   mounted () {
-    this.worldMapInfectionDataMsg = this.getWorldMapInfectionDataMsg()
+    this.getWorldMapInfectionDataMsg()
   }
 }
 </script>

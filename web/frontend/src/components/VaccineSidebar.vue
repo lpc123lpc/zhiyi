@@ -40,8 +40,8 @@ export default {
     }
   },
   mounted () {
-    this.vaccine_sum = this.getVaccineSum()
-    this.vaccine_sum_add = this.getVaccineSumAdd()
+    this.getVaccineSum()
+    this.getVaccineSumAdd()
   },
   methods: {
     getVaccineSum () {

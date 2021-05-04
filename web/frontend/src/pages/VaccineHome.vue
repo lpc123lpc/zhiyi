@@ -55,7 +55,7 @@ export default {
 
   },
   mounted () {
-    this.worldMapVaccineDataMsg = this.getWorldMapVaccineDataMsg()
+    this.getWorldMapVaccineDataMsg()
   }
 }
 </script>

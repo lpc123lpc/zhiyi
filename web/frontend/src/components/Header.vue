@@ -9,6 +9,9 @@
     router
     :default-active = "path">
 
+    <el-menu-item index="/Home" class="image-menu-item">
+      <el-image fit="contain" src='../../static/image/111.png' class="image-item"></el-image>
+    </el-menu-item>
     <el-menu-item index="/Home" class="nav-menu-item" >国家列表</el-menu-item>
     <el-menu-item index="/VaccineHome" class="nav-menu-item" >疫苗接种</el-menu-item>
     <!--<el-submenu index="2">
@@ -63,10 +66,15 @@ export default {
       if (posVaccine === -1) {
         var posInfect = that.$route.path.search('/InfectDetail')
         if (posInfect === -1) {
-          if (that.$route.path === '/') {
-            that.path = '/Home'
+          var posProvinceInfect = that.$route.path.search('/InfectProvinceDetail')
+          if (posProvinceInfect === -1) {
+            if (that.$route.path === '/') {
+              that.path = '/Home'
+            } else {
+              that.path = that.$route.path
+            }
           } else {
-            that.path = that.$route.path
+            that.path = '/InfectHome'
           }
         } else {
           that.path = '/InfectHome'
@@ -124,6 +132,22 @@ export default {
 .nav-menu-item:hover {
   background-color: #ffffff !important;
   color: #409eff !important;
+}
+.image-item {
+  height: 50px;
+  margin-top: -10px;
+}
+.image-menu-item {
+  width: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.image-menu-item:hover {
+  background-color: #ffffff !important;
+  color: #ffffff !important;
+}
+.image-menu-item:focus {
+  background-color: white;
 }
 /* .message-alert {
   word-break: break-all !important;

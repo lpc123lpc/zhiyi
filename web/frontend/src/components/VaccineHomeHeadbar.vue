@@ -21,10 +21,10 @@ export default {
     }
   },
   mounted () {
-    this.vaccine_sum = this.getVaccineSum()
-    this.vaccine_sum_add = this.getVaccineSumAdd()
-    this.vaccine_cover = this.getVaccineCover()
-    this.vaccine_cover_add = this.getVaccineCoverAdd()
+    this.getVaccineSum()
+    this.getVaccineSumAdd()
+    this.getVaccineCover()
+    this.getVaccineCoverAdd()
   },
   methods: {
     getVaccineSum () {

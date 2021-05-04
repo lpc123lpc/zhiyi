@@ -35,7 +35,8 @@ export default {
   },
   methods: { // 事件处理器
     getProvinceMsg () {
-      this.provinceMsg = this.$route.params.province
+      var that = this
+      that.provinceMsg = this.$route.params.province
     },
     getProvinceInfectionDataMsg () {
       var that = this

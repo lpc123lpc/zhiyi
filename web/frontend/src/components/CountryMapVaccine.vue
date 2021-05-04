@@ -20,12 +20,18 @@
             countryEgName: ''
         }
     },
+    watch: {
+        country() {
+            [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
+            this.drawCountryMapVaccine()
+        }
+    },
     mounted() {
     //   console.log(this.country)
     //   console.log(this.countryMapVaccineData)
       [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
       this.drawCountryMapVaccine()
-    }, 
+    },
     methods: {
       drawCountryMapVaccine() {
         // console.log(this.countryEgName)
@@ -89,14 +95,14 @@
             showLabel: false,
             left: '5%',
             bottom: '1%',
-            calculable: true,   
+            calculable: true,
             realtime: true,
             textStyle: {
                 fontSize: 12,
             },
             min: 0,
             max: 5000,
-            maxOpen: true, 
+            maxOpen: true,
             // text: ['接种人数/万'],
             textGap: 20,
             realtime: true,
@@ -110,7 +116,7 @@
             show: false,
             left: '5%',
             bottom: '1%',
-            calculable: true,   
+            calculable: true,
             realtime: true,
             precision: 3,
             // text: ['覆盖率'],
