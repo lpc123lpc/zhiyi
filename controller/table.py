@@ -57,15 +57,15 @@ def getCountryInfection(country):
     time = datetime.date.today() - datetime.timedelta(days=179)
     times, confirmed, deceased, cured = [], [], [], []
     all_data = []
-    data = dao.getInfMessageInclude(country, time.strftime("%Y-%m-%d"))
-    '''data = testData.infdatainclude'''
+    '''data = dao.getInfMessageInclude(country, time.strftime("%Y-%m-%d"))'''
+    data = testData.infdatainclude
     k = 0
     for i in data:
         position = getattr(i, 'areaName')
         time = datetime.date.today() - datetime.timedelta(days=179)
         for j in range(0, 180):
-            infData = dao.getInfMessage(position, time)
-            '''infData = (testData.includeInf[k])[j]'''
+            '''infData = dao.getInfMessage(position, time)'''
+            infData = (testData.includeInf[k])[j]
             times.append(time.strftime("%Y-%m-%d"))
             confirmed.append(getattr(infData, 'totalNum'))
             deceased.append(getattr(infData, 'totalDead'))

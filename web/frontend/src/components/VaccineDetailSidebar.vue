@@ -123,7 +123,7 @@ export default {
 }
 
 .box-card {
-  width: 480px;
+  width: 320px;
   margin-left: 50px;
   margin-top: 50px;
   border-radius: 20px;

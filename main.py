@@ -1,8 +1,9 @@
-from flask import Flask
+import json
+
+from flask import Flask, request
 from flask_cors import CORS
 from controller import map, table, sidebar
 import os
-
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
@@ -180,11 +181,27 @@ def getInfectionCureMain():
 
 @app.route('/infectSidebar/infectCureAdd', methods=["GET"])
 def getInfectionCureAddMain():
+    print(1)
     return sidebar.getInfectionCureAddSidebar('global')
+
+
+post_data = []
+
+
+@app.route('/feedback', methods=["GET", "POST"])
+def getFeedBack():
+    print(1)
+    if request.method == "POST":
+        post_data.append(request.get_json())
+        print(2)
+    if request.method == "GET":
+        print(1)
+        return json.dumps(post_data)
 
 
 if __name__ == '__main__':
     os.chdir("/Users/liuqian/PycharmProjects/covid-19")  # 注意这里请改成自己电脑上该文件夹的绝对路径 通用方法目前仍在查找 by:zzy
     os.system("python database\\static\\initCreate.py")
+    app.config['JSON_AS_ASCII'] = False
     app.debug = True
     app.run()
