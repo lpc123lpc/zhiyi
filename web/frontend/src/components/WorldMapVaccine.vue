@@ -93,7 +93,6 @@
             bottom: '1%',
             calculable: true,   
             realtime: true,
-            precision: 3,
             // text: ['覆盖率'],
             textGap: 20,
             textStyle: {
@@ -101,7 +100,7 @@
               fontSize: 12,
             },
             min: 0,
-            max: 10000,
+            max: 100,
             realtime: true,
             calculable: true,
             inRange: {

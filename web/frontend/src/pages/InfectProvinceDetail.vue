@@ -8,6 +8,9 @@
         <infect-detail-province-sidebar v-bind:province="provinceMsg"></infect-detail-province-sidebar>
       </el-aside>
       <el-main>
+        <div style="margin-left: 950px; position: absolute">
+          <el-button type="primary" plain @click="back()">返回</el-button>
+        </div>
         <div style="align: center; margin-top: 20px">
           <infect-detail-province-map v-bind:province="provinceMsg" v-bind:provinceMapInfectionData="provinceMapInfectionDataMsg"></infect-detail-province-map>
         </div>
@@ -45,6 +48,9 @@ export default {
           that.provinceMapInfectionDataMsg = data
         })
       })
+    },
+    back() {
+      this.$router.go(-1)
     }
   },
   mounted () {
