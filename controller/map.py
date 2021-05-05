@@ -10,6 +10,8 @@ infdata = testData.infdata'''
 def getMapVaccine(country):
     data = dao.getNowVacMessageInclude(country)
     vaccined, coverage = [], []
+    if data is None:
+        return jsonify({})
     for i in data:
         vaccined.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum')})
         coverage.append({"name": getattr(i, 'areaName'), "vacRate": getattr(i, 'vacRate')})
@@ -22,6 +24,8 @@ def getMapVaccine(country):
 def getMapInfection(country):
     data = dao.getNowInfMessageInclude(country)
     nowConfirm, totalConfirm, cured, dead = [], [], [], []
+    if data is None:
+        return jsonify({})
     for i in data:
         nowConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'currentNum')})
         totalConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum')})

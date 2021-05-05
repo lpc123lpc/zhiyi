@@ -10,7 +10,6 @@ worldVacData = testData.vacdata'''
 
 
 def getWorldData():
-    time = datetime.date.today()
     worldInfData = dao.getNowInfMessageInclude('global')
     worldVacData = dao.getNowVacMessageInclude('global')
     all_data = []
@@ -32,6 +31,8 @@ def getWorldData():
 def getCountryInfData(country):
     infData = dao.getHisInfMessage(country)
     times, confirmed, deceased, cure = [], [], [], []
+    if infData is None:
+        return jsonify({})
     for i in infData:
         times.append(getattr(i, 'time'))
         confirmed.append(getattr(i, 'totalNum'))
@@ -49,6 +50,8 @@ def getCountryInfData(country):
 def getCountryVacData(country):
     vacData = dao.getHisVacMessage(country)
     times, vaccined = [], []
+    if vacData is None:
+        return jsonify({})
     for i in vacData:
         times.append(getattr(i, 'time'))
         vaccined.append(getattr(vacData, 'totalNum'))
@@ -62,6 +65,8 @@ def getCountryVacData(country):
 def getCountryInfection(country):
     all_data = []
     data = dao.getHisInfMessageInclude(country)
+    if data is None:
+        return jsonify({})
     for i in data:
         position = getattr(i[0], 'areaName')
         confirmed, deceased, cured, times = [], [], [], []
@@ -76,7 +81,9 @@ def getCountryInfection(country):
 
 def getCountryVaccine(country):
     all_data = []
-    data = dao.getVacMessageInclude(country, time.strftime("%Y-%m-%d"))
+    data = dao.getHisVacMessageInclude(country)
+    if data is None:
+        return jsonify({})
     for i in data:
         position = getattr(i[0], 'areaName')
         times, vaccined, covrtage = [], [], []
@@ -91,6 +98,8 @@ def getCountryVaccine(country):
 def getProvinceInfection(province):
     times, confirmed, deceased, cure = [], [], [], [], []
     infData = dao.getHisInfMessage(province)
+    if infData is None:
+        return jsonify({})
     for i in infData:
         confirmed.append(getattr(i, 'totalNum'))
         deceased.append(getattr(i, 'totalDead'))
