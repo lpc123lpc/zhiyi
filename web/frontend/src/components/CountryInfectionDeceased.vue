@@ -1,5 +1,5 @@
 <template>
-    <div ref="deceasedChart" style="width: 800px;height: 600px"></div>
+    <div ref="deceasedChart" style="width: 1000px;height: 600px"></div>
 </template>
 
 <script>
@@ -24,26 +24,35 @@ export default {
       var chart = echarts.init(this.$refs.deceasedChart)
       chart.setOption({
         title: {
-          text: '死亡人数',
+          text: '死亡人数折线图',
+          left: 'center',
           textStyle: {
-            fontSize: '20',
-            color: '#696969'
-          },
-          left: '10%'
+            fontSize: '22',
+            color: '#000',
+            fontWeight: 'normal'
+          }
         },
         tooltip: {
           trigger: 'axis'
         },
         legend: {
-          left: '50%',
-          data: this.names
+          left: '10%',
+          top: '5%',
+          data: this.names,
+          textStyle: {
+            color: '#000',
+            fontSize: 18
+          }
+        },
+        grid: {
+          top: '15%',
+          containLabel: true
         },
         xAxis: [{
           name: '日期',
           type: 'category',
           nameTextStyle: {
             fontSize: '14',
-            fontWeight: 'bold'
           },
           axisTick: {
             alignWithLabel: 'true'
