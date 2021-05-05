@@ -9,7 +9,7 @@
             <infect-sidebar v-bind:infect_header_title="'感染情况'"></infect-sidebar>
           </el-aside>
           <el-main>
-            <div style="margin-left: 350px; margin-top: 150px">
+            <div style="margin-left: 100px; margin-top: 150px">
               <feed-back></feed-back>
             </div>
           </el-main>

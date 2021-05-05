@@ -8,8 +8,7 @@ infdata = testData.infdata'''
 
 
 def getMapVaccine(country):
-    time = datetime.date.today()
-    data = dao.getVacMessageInclude(country, time.strftime("%Y-%m-%d"))
+    data = dao.getNowVacMessageInclude(country)
     vaccined, coverage = [], []
     for i in data:
         vaccined.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum')})
@@ -21,8 +20,7 @@ def getMapVaccine(country):
 
 
 def getMapInfection(country):
-    time = datetime.date.today()
-    data = dao.getInfMessageInclude(country, time.strftime("%Y-%m-%d"))
+    data = dao.getNowInfMessageInclude(country)
     nowConfirm, totalConfirm, cured, dead = [], [], [], []
     for i in data:
         nowConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'currentNum')})

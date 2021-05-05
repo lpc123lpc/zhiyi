@@ -11,8 +11,8 @@ worldVacData = testData.vacdata'''
 
 def getWorldData():
     time = datetime.date.today()
-    worldInfData = dao.getVacMessageInclude('world', time.strftime("%Y-%m-%d"))
-    worldVacData = dao.getInfMessageInclude('world', time.strftime("%Y-%m-%d"))
+    worldInfData = dao.getNowInfMessageInclude('global')
+    worldVacData = dao.getNowVacMessageInclude('global')
     all_data = []
     for i in worldInfData:
         for j in worldVacData:
@@ -29,85 +29,73 @@ def getWorldData():
     return json.dumps(all_data)
 
 
-def getCountryData(country):
-    time = datetime.date.today() - datetime.timedelta(days=179)
-    times, vaccined, confirmed, deceased, cure = [], [], [], [], []
-    for i in range(0, 180):
-        infData = dao.getInfMessage(country, time.strftime("%Y-%m-%d"))
-        vacData = dao.getVacMessage(country, time.strftime("%Y-%m-%d"))
-        '''infData = testData.halfYearInfData[i]
-        vacData = testData.halfYearVacData[i]'''
-        times.append(time.strftime("%Y-%m-%d"))
-        vaccined.append(getattr(vacData, 'totalNum'))
-        confirmed.append(getattr(infData, 'totalNum'))
-        deceased.append(getattr(infData, 'totalDead'))
-        cure.append(getattr(infData, 'cured'))
-        time = time + datetime.timedelta(days=1)
+def getCountryInfData(country):
+    infData = dao.getHisInfMessage(country)
+    times, confirmed, deceased, cure = [], [], [], []
+    for i in infData:
+        times.append(getattr(i, 'time'))
+        confirmed.append(getattr(i, 'totalNum'))
+        deceased.append(getattr(i, 'totalDead'))
+        cure.append(getattr(i, 'cured'))
     return jsonify({
         "name": country,
         "time": times,
-        "vaccined": vaccined,
         "confirmed": confirmed,
         "deceased": deceased,
         "cured": cure
     })
 
 
+def getCountryVacData(country):
+    vacData = dao.getHisVacMessage(country)
+    times, vaccined = [], []
+    for i in vacData:
+        times.append(getattr(i, 'time'))
+        vaccined.append(getattr(vacData, 'totalNum'))
+    return jsonify({
+        "name": country,
+        "time": times,
+        "vaccined": vaccined
+    })
+
+
 def getCountryInfection(country):
-    time = datetime.date.today() - datetime.timedelta(days=179)
-    times, confirmed, deceased, cured = [], [], [], []
     all_data = []
-    '''data = dao.getInfMessageInclude(country, time.strftime("%Y-%m-%d"))'''
-    data = testData.infdatainclude
-    k = 0
+    data = dao.getHisInfMessageInclude(country)
     for i in data:
-        position = getattr(i, 'areaName')
-        time = datetime.date.today() - datetime.timedelta(days=179)
-        for j in range(0, 180):
-            '''infData = dao.getInfMessage(position, time)'''
-            infData = (testData.includeInf[k])[j]
-            times.append(time.strftime("%Y-%m-%d"))
-            confirmed.append(getattr(infData, 'totalNum'))
-            deceased.append(getattr(infData, 'totalDead'))
-            cured.append(getattr(infData, 'cured'))
-            time = time + datetime.timedelta(days=1)
-        k = k + 1
+        position = getattr(i[0], 'areaName')
+        confirmed, deceased, cured, times = [], [], [], []
+        for j in i:
+            times.append(getattr(j, 'time'))
+            cured.append(getattr(j, 'cured'))
+            confirmed.append(getattr(j, 'totalNum'))
+            deceased.append(getattr(j, 'totalDead'))
         all_data.append({"name": position, "time": times, "confirmed": confirmed, "deceased": deceased, "cured": cured})
     return json.dumps(all_data)
 
 
 def getCountryVaccine(country):
-    time = datetime.date.today() - datetime.timedelta(days=179)
-    times, vaccined, covrtage = [], [], []
     all_data = []
     data = dao.getVacMessageInclude(country, time.strftime("%Y-%m-%d"))
-    '''data = testData.vacdatainclude'''
-    k = 0
     for i in data:
-        position = getattr(i, 'areaName')
-        time = datetime.date.today() - datetime.timedelta(days=179)
-        for j in range(0, 180):
-            vacData = dao.getVacMessage(position, time)
-            '''vacData = (testData.includeVac[k])[j]'''
-            times.append(time)
-            vaccined.append(getattr(vacData, 'totalNum'))
-            covrtage.append(getattr(vacData, 'vacRate'))
-            time = datetime.date.today() + datetime.timedelta(days=1)
-        k = k + 1
+        position = getattr(i[0], 'areaName')
+        times, vaccined, covrtage = [], [], []
+        for j in i:
+            times.append(getattr(j, 'time'))
+            vaccined.append(getattr(j, 'totalNum'))
+            covrtage.append(getattr(j, 'vacRate'))
         all_data.append({"name": position, "time": times, "vaccined": vaccined, "coverage": covrtage})
     return json.dumps(all_data)
 
 
 def getProvinceInfection(province):
-    time = datetime.date.today() - datetime.timedelta(days=179)
     times, confirmed, deceased, cure = [], [], [], [], []
-    for i in range(0, 180):
-        infData = dao.getinfMessage(province, time.strftime("%Y-%m-%d"))
-        confirmed.append(getattr(infData, 'totalNum'))
-        deceased.append(getattr(infData, 'totalDead'))
-        cure.append(getattr(infData, 'cured'))
-        times.append(time.strftime("%Y-%m-%d"))
-        time = time + datetime.timedelta(days=1)
+    infData = dao.getHisInfMessage(province)
+    for i in infData:
+        confirmed.append(getattr(i, 'totalNum'))
+        deceased.append(getattr(i, 'totalDead'))
+        cure.append(getattr(i, 'cured'))
+        times.append(getattr(i, 'time'))
     return jsonify({
         "name": province,
         "time": times,
