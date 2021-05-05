@@ -8,9 +8,7 @@ name:"global"(世界)/国家姓名/地区姓名
 return:返回该区域的实时感染信息
 '''
 def getNowInfMessage(name):
-    message = ChinaInfMessage.query.filter_by(areaName=name).first()
-    message = NowInfMessage.query.filter_by(areaName=name).first()
-
+    message = db.session.query(NowInfMessage).filter_by(NowInfMessage.areaName == name).first()
     return message
 
 
@@ -20,14 +18,10 @@ param:name:"global"(世界)/国家姓名
 return:返回该区域所包含的国家/地区的实时感染信息（下一级）
 '''
 def getNowInfMessageInclude(name):
-    book = Area.query.filter_by(areaName=name).all()
-    if book is None:
-        return None
-    else:
-        isChina = ChinaInfMessage.query.filter_by(areaName=name).first()
-        message = None
-
-        return message
+    messages = db.session.query(NowInfMessage)\
+        .filter_by(Area.parentArea == name)\
+        .filter_by(Area.childArea == NowInfMessage.areaName).all()
+    return messages
 
 
 '''
@@ -36,7 +30,20 @@ param:name:"global"(世界)/国家姓名
 return:返回该区域的历史感染信息
 '''
 def getHisInfMessage(name):
+    isChina = db.session.query(ChinaInfMessage.time).filter_by(ChinaInfMessage.areaName == name).first()
     messages = None
+    if isChina is None:
+        messages = db.session.query(InfMessage) \
+            .filter_by(InfMessage.areaName == name) \
+            .order_by(InfMessage.time.desc()).limit(180).all()
+        if messages is not None:
+            messages.reverse()
+    else:
+        messages = db.session.query(InfMessage) \
+            .filter_by(InfMessage.areaName == name) \
+            .order_by(InfMessage.time.desc()).limit(180).all()
+        if messages is not None:
+            messages.reverse()
     return messages
 
 
@@ -46,8 +53,29 @@ param:name:"global"(世界)/国家姓名
 return:返回该区域所包含的国家/地区的历史感染信息（下一级）
 '''
 def getHisInfMessageInclude(name):
-    messages = None
-    return messages
+    areas = db.session.query(Area.childArea).filter_by(Area.parentArea == name).all()
+    messages = []
+    if areas is None:
+        return None
+    else:
+        isChina = db.session.query(ChinaInfMessage.time).filter_by(ChinaInfMessage.areaName == areas[0]).first()
+        if isChina is None:
+            for area in areas:
+                message = db.session.query(InfMessage)\
+                    .filter_by(InfMessage.areaName == area)\
+                    .order_by(InfMessage.time.desc()).limit(180).all()
+                if message is not None:
+                    message.reverse()
+                    messages.append(message)
+        else:
+            for area in areas:
+                message = db.session.query(ChinaInfMessage)\
+                    .filter_by(ChinaInfMessage.areaName == area)\
+                    .order_by(ChinaInfMessage.time.desc()).limit(180).all()
+                if message is not None:
+                    message.reverse()
+                    messages.append(message)
+        return messages
 
 
 '''
@@ -56,7 +84,7 @@ name:"global"(世界)/国家姓名/地区姓名
 return:返回该区域的实时接种信息
 '''
 def getNowVacMessage(name):
-    message = None
+    message = db.session.query(NowVacMessage).filter_by(NowVacMessage.areaName == name).first()
     return message
 
 
@@ -66,8 +94,10 @@ name:"world"(世界)/国家姓名
 return:返回该区域所包含的国家/地区的实时接种信息（下一级）
 '''
 def getNowVacMessageInclude(name):
-    VacMessage.vacmessages = []
-    return VacMessage.vacmessages
+    message = db.session.query(NowVacMessage)\
+        .filter_by(Area.parentArea == name)\
+        .filter_by(Area.childArea == NowVacMessage.areaName).all()
+    return message
 
 
 '''
@@ -76,7 +106,11 @@ name:"global"(世界)/国家姓名/地区姓名
 return:返回该区域的历史接种信息
 '''
 def getHisVacMessage(name):
-    message = None
+    message = db.session.query(VacMessage)\
+        .filter_by(VacMessage.areaName == name)\
+        .order_by(VacMessage.time.desc()).limit(180).all()
+    if message is not None:
+        message.reverse()
     return message
 
 
@@ -86,8 +120,19 @@ name:"world"(世界)/国家姓名
 return:返回该区域所包含的国家/地区的历史接种信息（下一级）
 '''
 def getHisVacMessageInclude(name):
-    VacMessage.vacmessages = []
-    return VacMessage.vacmessages
+    messages = []
+    areas = db.session.query(Area.childArea).filter_by(Area.parentArea == name).all()
+    if areas is None:
+        return None
+    else:
+        for area in areas:
+            message = getHisVacMessage(area)
+            if message is not None:
+                messages.append(message)
+        if len(messages) == 0:
+            return None
+        else:
+            return messages
 
 
 '''

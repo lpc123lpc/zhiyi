@@ -68,7 +68,6 @@ class Area(db.Model):
 
     parentArea = db.Column(db.String(100), primary_key=True)
     childArea = db.Column(db.String(100), primary_key=True)
-    number = db.Column(db.BIGINT)
 
 
 

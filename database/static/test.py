@@ -7,8 +7,6 @@ data=getJsonData(hisGlobalDataUrl)
 saveToJsonFile(data, "his.json")
 """
 
-"""message = getInfMessage('美国', '2021-04-29')
-print(message)"""
 
 def getCSV():
    dictReader = getCSVDictReader(nowWorldVaccDataurl)
