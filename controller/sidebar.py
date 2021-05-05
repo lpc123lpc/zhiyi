@@ -10,6 +10,8 @@ yesInfData = testData.infdata[0]'''
 
 def getVaccinationTotalSidebar(country):
     todayVacData = dao.getNowVacMessage(country)
+    if todayVacData is None:
+        return jsonify({})
     return jsonify({
         "value": getattr(todayVacData, 'totalNum')
     })
@@ -17,6 +19,8 @@ def getVaccinationTotalSidebar(country):
 
 def getVaccinationTotalAddSidebar(country):
     todayVacData = dao.getNowVacMessage(country)
+    if todayVacData is None:
+        return jsonify({})
     return jsonify({
         "value": getattr(todayVacData, 'addNum')
     })
@@ -24,6 +28,8 @@ def getVaccinationTotalAddSidebar(country):
 
 def getVaccinationCovSidebar(country):
     todayVacData = dao.getNowVacMessage(country)
+    if todayVacData is None:
+        return jsonify({})
     return jsonify({
         "value": getattr(todayVacData, 'vacRate')
     })
@@ -31,6 +37,8 @@ def getVaccinationCovSidebar(country):
 
 def getInfectionTotalSidebar(country):
     todayInfData = dao.getNowInfMessage(country)
+    if todayInfData is None:
+        return jsonify({})
     return jsonify({
         "value": getattr(todayInfData, 'totalNum')
     })
@@ -38,6 +46,8 @@ def getInfectionTotalSidebar(country):
 
 def getInfectionTotalAddSidebar(country):
     todayInfData = dao.getNowInfMessage(country)
+    if todayInfData is None:
+        return jsonify({})
     return jsonify({
         "value": getattr(todayInfData, 'addNum')
     })
@@ -45,6 +55,8 @@ def getInfectionTotalAddSidebar(country):
 
 def getInfectionDeadSidebar(country):
     todayInfData = dao.getNowInfMessage(country)
+    if todayInfData is None:
+        return jsonify({})
     return jsonify({
         "value": getattr(todayInfData, 'totalDead')
     })
@@ -52,6 +64,8 @@ def getInfectionDeadSidebar(country):
 
 def getInfectionDeadAddSidebar(country):
     todayInfData = dao.getNowInfMessage(country)
+    if todayInfData is None:
+        return jsonify({})
     return jsonify({
         "value": getattr(todayInfData, 'addDead')
     })
@@ -59,6 +73,8 @@ def getInfectionDeadAddSidebar(country):
 
 def getInfectionCureSidebar(country):
     todayInfData = dao.getNowInfMessage(country)
+    if todayInfData is None:
+        return jsonify({})
     return jsonify({
         "value": getattr(todayInfData, 'cured')
     })
