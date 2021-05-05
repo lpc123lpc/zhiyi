@@ -24,9 +24,10 @@ export default {
       var chart = echarts.init(this.$refs.deceasedChart)
       chart.setOption({
         title: {
-          text: '已故人数',
+          text: '死亡人数',
           textStyle: {
-            fontSize: '40'
+            fontSize: '20',
+            color: '#696969'
           },
           left: '10%'
         },

@@ -22,12 +22,12 @@
       {{infect_sum}}
     </div>
     <el-divider></el-divider>
-    <div class="yersterday-item">
+    <!--<div class="yersterday-item">
       较昨日
     </div>
     <div class="yersterday-item">
       {{infect_cure_add}}
-    </div>
+    </div>-->
     <div class="today-item">
       累计治愈
     </div>
@@ -58,7 +58,7 @@ export default {
     this.getInfectSum()
     this.getInfectSumAdd()
     this.getInfectCure()
-    this.getInfectCureAdd()
+    // this.getInfectCureAdd()
   },
   methods: {
     getInfectSum () {

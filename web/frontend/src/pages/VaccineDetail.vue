@@ -11,6 +11,9 @@
         <div style="align: center; margin-top: 20px">
           <vaccine-detail-country-map v-bind:country="countryMsg" v-bind:countryMapVaccineData="countryMapVaccineDataMsg"></vaccine-detail-country-map>
         </div>
+        <div style="align: center; margin-top: 50px">
+          <line-chart-vaccine></line-chart-vaccine>
+        </div>
       </el-main>
     </el-container>
   </el-container>
@@ -20,12 +23,14 @@
 import header from '../components/Header.vue'
 import vaccineDetailSidebar from '../components/VaccineDetailSidebar.vue'
 import vaccineDetailCountryMap from '../components/CountryMapVaccine.vue'
+import lineChartVaccine from '../components/CountryVaccine.vue'
 export default {
   name: 'VaccineDetail',
   components: { // 定义组件
     'wbc-nav': header,
     'vaccine-detail-sidebar': vaccineDetailSidebar,
-    'vaccine-detail-country-map': vaccineDetailCountryMap
+    'vaccine-detail-country-map': vaccineDetailCountryMap,
+    'line-chart-vaccine': lineChartVaccine
   },
   data () { // 选项 / 数据
     return {

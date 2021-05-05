@@ -26,7 +26,8 @@ export default {
         title: {
           text: '治愈人数',
           textStyle: {
-            fontSize: '40'
+            fontSize: '20',
+            color: '#696969'
           },
           left: '10%'
         },

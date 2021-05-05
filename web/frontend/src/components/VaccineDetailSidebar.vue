@@ -22,12 +22,12 @@
       {{vaccine_sum}}
     </div>
     <el-divider></el-divider>
-    <div class="yersterday-item">
+    <!--<div class="yersterday-item">
       较昨日
     </div>
     <div class="yersterday-item">
       {{vaccine_cover_add}}
-    </div>
+    </div>-->
     <div class="today-item">
       覆盖率
     </div>
@@ -53,7 +53,7 @@ export default {
     this.getVaccineSum()
     this.getVaccineSumAdd()
     this.getVaccineCover()
-    this.getVaccineCoverAdd()
+    // this.getVaccineCoverAdd()
   },
   methods: {
     getVaccineSum () {

@@ -14,6 +14,9 @@
         <div style="align: center; margin-top: 20px">
           <infect-detail-province-map v-bind:province="provinceMsg" v-bind:provinceMapInfectionData="provinceMapInfectionDataMsg"></infect-detail-province-map>
         </div>
+        <div style="align: center; margin-top: 50px">
+          <line-chart-infect-province></line-chart-infect-province>
+        </div>
       </el-main>
     </el-container>
   </el-container>
@@ -23,12 +26,14 @@
 import header from '../components/Header.vue'
 import infectDetailProvinceSidebar from '../components/InfectDetailProvinceSidebar.vue'
 import infectDetailProvinceMap from '../components/ProvinceMapInfection.vue'
+import lineChartInfectProvince from '../components/ProvinceInfection.vue'
 export default {
   name: 'InfectProvinceDetail',
   components: { // 定义组件
     'wbc-nav': header,
     'infect-detail-province-sidebar': infectDetailProvinceSidebar,
-    'infect-detail-province-map': infectDetailProvinceMap
+    'infect-detail-province-map': infectDetailProvinceMap,
+    'line-chart-infect-province': lineChartInfectProvince
   },
   data () { // 选项 / 数据
     return {
