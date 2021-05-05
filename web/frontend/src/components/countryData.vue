@@ -19,10 +19,11 @@ export default {
             title: {
               text: data.name + '总体数据',
               textStyle: {
-                fontSize: '20',
-                color: '#696969'
+                fontSize: '22',
+                color: '#000',
+                fontWeight: 'normal'
               },
-              left: '10%'
+              left: '20%'
             },
             backgroundColor: '',
             tooltip: {
@@ -30,14 +31,19 @@ export default {
             },
             legend: {
               left: '50%',
-              data: ['接种人数', '确诊人数', '治愈人数', '死亡人数']
+              top: '5%',
+              data: ['接种人数', '确诊人数', '治愈人数', '死亡人数'],
+              textStyle: {
+                color: '#000',
+                fontSize: 14
+              }
             },
             xAxis: [{
               name: '日期',
               type: 'category',
               nameTextStyle: {
                 fontSize: '14',
-                fontWeight: 'bold'
+                color: '#000'
               },
               axisTick: {
                 alignWithLabel: 'true'
@@ -45,10 +51,19 @@ export default {
               data: data.time
             }],
             yAxis: [{
+              name: '人数',
+              nameTextStyle: {
+                fontSize: '14',
+                color: '#000'
+              },
               type: 'value'
             }],
             dataZoom: {
               type: 'inside'
+            },
+            grid: {
+              top: '15%',
+              containLabel: true
             },
             series: [{
               name: '接种人数',
