@@ -47,6 +47,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/vaccineDetail/countryMapVaccineDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
+          that.judgeDataExist(data)
           that.countryMapVaccineDataMsg = data
         })
       })

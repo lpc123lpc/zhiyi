@@ -30,6 +30,17 @@ export const mixin = {
     getProvinceNameMap(province) {
       var json = require('../../static/json/map/china-province/city-map.json')
       return json[province]
+    },
+    judgeDataExist(data) {
+      if (JSON.stringify(data) == '{}') {
+        this.$confirm('对不起，暂未收录该地区数据', '提示', {
+          confirmButtonText: '返回',
+          showCancelButton: false
+          // type: 'warning'
+        }).then(() => {
+          this.$router.go(-1)
+        })
+      }
     }
   }
 }

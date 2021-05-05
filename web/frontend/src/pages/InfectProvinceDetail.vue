@@ -50,6 +50,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/infectDetail/provinceMapInfectionDataMsg/' + this.$route.params.province).then(function (response) {
         response.json().then((data) => {
+          that.judgeDataExist(data)
           that.provinceMapInfectionDataMsg = data
         })
       })

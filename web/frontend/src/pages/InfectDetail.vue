@@ -24,6 +24,8 @@ import header from '../components/Header.vue'
 import infectDetailSidebar from '../components/InfectDetailSidebar.vue'
 import infectDetailCountryMap from '../components/CountryMapInfection.vue'
 import lineChartInfect from '../components/CountryInfection.vue'
+import { mixin } from '../mixins'
+
 export default {
   name: 'InfectDetail',
   components: { // 定义组件
@@ -32,6 +34,7 @@ export default {
     'infect-detail-country-map': infectDetailCountryMap,
     'line-chart-infect': lineChartInfect
   },
+  mixins: [mixin],
   data () { // 选项 / 数据
     return {
       countryMsg: '',
@@ -47,6 +50,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/infectDetail/countryMapInfectionDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
+          that.judgeDataExist(data)
           that.countryMapInfectionDataMsg = data
         })
       })
