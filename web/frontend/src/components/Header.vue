@@ -30,7 +30,7 @@
     <el-menu-item index="3" class="nav-menu-item">出行建议</el-menu-item>
     <el-menu-item index="4" class="nav-menu-item">新闻资讯</el-menu-item>
     <el-menu-item index="/Feedback" class="nav-menu-item">反馈&建议</el-menu-item>
-    <svg class="icon" aria-hidden="true" @click="showDtaSource()">
+    <svg class="icon" aria-hidden="true" @click="showDataSource()">
       <use xlink:href="#icon-question"></use>
     </svg>
     <el-container index="6" class="input-container">
@@ -50,9 +50,9 @@ export default {
       input: '',
       path: '',
       dataSource: ['国内：腾讯新闻',
-        '国外：ourwolrdindata，各国的感染数据（country level）',
-        '      疫苗的历史数据和每日接种（country level）',
-        '      JHU ，补充了各国的state/province，以及“灯塔国”\n' +
+                  '国外：ourwolrdindata，各国的感染数据（country level）',
+                  '      疫苗的历史数据和每日接种（country level）',
+                  '      JHU ，补充了各国的state/province，以及“灯塔国”\n' +
                   '      的主要城市的感染数据']
     }
   },
@@ -83,7 +83,7 @@ export default {
         that.path = '/VaccineHome'
       }
     },
-    showDtaSource () {
+    showDataSource () {
       const data = []
       const h = this.$createElement
       for (let i in this.dataSource) {
@@ -110,6 +110,7 @@ export default {
   margin-top: 20px;
   fill: #56aafdc4;
   overflow: hidden;
+  outline: none
 }
 .input-container {
   /*position: absolute;*/
@@ -122,7 +123,7 @@ export default {
   padding-right: 20px;
 }
 .nav-menu-item {
-  width: 150px;
+  width: 130px;
   margin-left: 10px;
   margin-right: 10px;
   text-align: center;
