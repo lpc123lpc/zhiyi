@@ -60,7 +60,6 @@ class Advice(db.Model):
     __tablename__ = 'advices'
 
     id = db.Column(db.Integer, primary_key=True)
-    time = db.Column(db.String(20))
     text = db.Column(db.String(800))
 
 

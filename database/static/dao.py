@@ -1,102 +1,103 @@
-import datetime
-
 from database.static.table import *
 from spider.spider import *
-
-today = datetime.date.today().strftime("%Y-%m-%d")
 
 
 '''
 description:get infection information
 name:"global"(世界)/国家姓名/地区姓名
-time:日期，格式为“XXXX-XX-XX”
-return:返回该区域的感染信息
+return:返回该区域的实时感染信息
 '''
+def getNowInfMessage(name):
+    message = ChinaInfMessage.query.filter_by(areaName=name).first()
+    message = NowInfMessage.query.filter_by(areaName=name).first()
 
-
-def getInfMessage(name, t):
-    message = ChinaInfMessage.query.filter_by(areaName=name, time=t).first()
-    if message is None:
-        global today
-        if t == today:
-            message = NowInfMessage.query.filter_by(areaName=name).first()
-        else:
-            message = InfMessage.query.filter_by(areaName=name, time=t).first()
     return message
 
 
 '''
 description:get infection information
 param:name:"global"(世界)/国家姓名
-time:日期，格式为“XXXX-XX-XX”
-return:返回该区域所包含的国家/地区的感染信息（下一级）
+return:返回该区域所包含的国家/地区的实时感染信息（下一级）
 '''
-
-
-def getInfMessageInclude(name, t):
+def getNowInfMessageInclude(name):
     book = Area.query.filter_by(areaName=name).all()
     if book is None:
         return None
     else:
-        message = ChinaInfMessage.query.filter_by(areaName=name, time=t).first()
-        if message is None:
-            global today
-            if t == today:
-                message = None
-            else:
-                message = None
+        isChina = ChinaInfMessage.query.filter_by(areaName=name).first()
+        message = None
 
         return message
 
 
 '''
 description:get infection information
-name:"global"(世界)/国家姓名/地区姓名
-time:日期，格式为“XXXX-XX-XX”
-return:返回该区域的接种信息
+param:name:"global"(世界)/国家姓名
+return:返回该区域的历史感染信息
 '''
+def getHisInfMessage(name):
+    messages = None
+    return messages
 
 
-def getVacMessage(name, t):
+'''
+description:get infection information
+param:name:"global"(世界)/国家姓名
+return:返回该区域所包含的国家/地区的历史感染信息（下一级）
+'''
+def getHisInfMessageInclude(name):
+    messages = None
+    return messages
+
+
+'''
+description:get infection information
+name:"global"(世界)/国家姓名/地区姓名
+return:返回该区域的实时接种信息
+'''
+def getNowVacMessage(name):
     message = None
-    global today
-    if today == t:
-        message = NowVacMessage.query.filter_by(areaName=name).first()
-    else:
-        message = VacMessage.query.filter_by(areaName=name, time=t).first()
     return message
 
 
 '''
 description:get infection information
 name:"world"(世界)/国家姓名
-time:日期，格式为“XXXX-XX-XX”
-return:返回该区域所包含的国家/地区的接种信息（下一级）
+return:返回该区域所包含的国家/地区的实时接种信息（下一级）
 '''
-
-
-def getVacMessageInclude(name, t):
+def getNowVacMessageInclude(name):
     VacMessage.vacmessages = []
     return VacMessage.vacmessages
 
 
 '''
-description:save infection information
-对接爬虫
+description:get infection information
+name:"global"(世界)/国家姓名/地区姓名
+return:返回该区域的历史接种信息
 '''
+def getHisVacMessage(name):
+    message = None
+    return message
 
 
-def saveInfMessage(messages):
-    return None
+'''
+description:get infection information
+name:"world"(世界)/国家姓名
+return:返回该区域所包含的国家/地区的历史接种信息（下一级）
+'''
+def getHisVacMessageInclude(name):
+    VacMessage.vacmessages = []
+    return VacMessage.vacmessages
 
 
 '''
 description:save advice
+message:建议内容
 对接前端
 '''
-
-
-def saveAdvice(message, time):
+def saveAdvice(message):
+    advice = Advice(text=message)
+    add(advice)
     return None
 
 '''
@@ -104,7 +105,7 @@ def saveAdvice(message, time):
 '''
 def updateChinaInf():
     clearTable('chinaInfMessages')
-    data = getJsonData(nowDomesticDataUrl)
+    data = getJsonData(nowDomesticCovidDataUrl)
     global today
     today = data['lastUpdateTime'][:10]     #XXXX-XX-XX
     errorAreaName = "地区待确认"
@@ -128,7 +129,7 @@ def updateChinaInf():
 '''
 def updateGlobalInf():
     clearTable('nowInfMessages')
-    globalInf = getJsonData(nowGlobalDataUrl)
+    globalInf = getJsonData(nowGlobalCovidDataUrl)
     x = NowInfMessage(time=today,
                       areaName="global",
                       currentNum=globalInf['nowConfirm'],
@@ -139,13 +140,13 @@ def updateGlobalInf():
                       addDead=globalInf['deadAdd']
                       )
     add(x)
-    foreignInf = getJsonData(nowForeignCouDataUrl)
+    foreignInf = getJsonData(nowForeignCovidDataUrl)
     for message in foreignInf:
         add(changeType(message, "NowInfMessage"))
 
 #得到Json文件
 def getJson():
-    data = getJsonData(nowDomesticDataUrl)
+    data = getJsonData(nowDomesticCovidDataUrl)
     saveToJsonFile(data, "china.json")
 
 #清除表单
@@ -191,7 +192,3 @@ def changeType(area, toType):
                           addDead=area['deadCompare'])
         return x
 
-#test()
-#clearTable("ChinaInfMessages")
-#updateChinaInf()
-#updateGlobalInf()

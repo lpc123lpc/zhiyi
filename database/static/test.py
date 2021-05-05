@@ -7,5 +7,20 @@ data=getJsonData(hisGlobalDataUrl)
 saveToJsonFile(data, "his.json")
 """
 
-message = getInfMessage('美国', '2021-04-29')
-print(message)
+"""message = getInfMessage('美国', '2021-04-29')
+print(message)"""
+
+def getCSV():
+   dictReader = getCSVDictReader(nowWorldVaccDataurl)
+   print(dictReader.fieldnames)
+   for row in dictReader:
+      print(row)
+      break
+
+def SaveAdviceTest():
+   saveAdvice("sbzzy", "2021-04-30")
+   print("sace1 ok")
+   saveAdvice("sbzzy2", "2021-04-30")
+   print("save2 ok")
+
+SaveAdviceTest()
