@@ -239,6 +239,28 @@ class Spider:
 			# 返回（yesterday url，today url），需要用getCSVDictReader处理存储，判断是否存在该url
 			# 若不存在该url，返回的dictReader.fieldnames为 ['404: Not Found']
 			return cls.getUpdateCovidUrls()
+		elif idx==8:
+			#感染-海外国家-历史-数据
+			# 返回 dict 类型，可用saveToJson存储到json文件进行查看
+			countriesUrlsMapPath = "./countriesUrlsMap.json"
+			#countriesDataMapPath = "./countriesDataMap.json"
+			headers = {
+				'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+			}
+			with open(countriesUrlsMapPath, mode='r', encoding='utf-8') as f:
+				data = json.load(f)
+
+			for item in data.keys():
+				url = data[item]
+				r = requests.post(url, headers=headers)
+				data_list = json.loads(r.text)
+				data_list = data_list['data']
+				data[item] = data_list
+			return data
+			# time.sleep(10)
+			#with open(countriesDataMapPath, mode='w', encoding='utf-8') as f:
+			#	json.dump(data, f)
+		# wit
 		else:
 			return None
 		"""
