@@ -18,6 +18,11 @@ def getArea():
                     city['name'] += '市'
                 cArea = Area(parentArea=province['name'], childArea=city['name'])
                 add(cArea)
+    globalCountryData = Spider.getData(3)
+    add(Area(parentArea='global', childArea='中国'))
+    for country in globalCountryData:
+        area = Area(parentArea='global', childArea=country['name'])
+        add(area)
 
 
 def getHisVac():
@@ -55,43 +60,65 @@ def getChinaHisInf():
     provinceName = db.session.query(Area).filter(Area.parentArea == "中国")
     for name in provinceName:
         cityName = db.session.query(Area).filter(Area.parentArea == name.childArea)
-        province = provinces[name.childArea]
-        provinceData = province['self']
-        for date in provinceData:
-            t = str(date['year']) + "-" + date['date'][:2] + "-" + date['date'][3:5]
-            x = ChinaInfMessage(time=t,
-                                areaName=date['province'],
-                                currentNum=date['confirm'],
-                                totalNum=date['confirm'] - date['heal'],
-                                addNum=date['newConfirm'],
-                                cured=date['heal'],
-                                totalDead=date['dead'],
-                                addDead=date['newDead'])
-            add(x)
+        try:
+            province = provinces[name.childArea]
+            provinceData = province['self']
+            for date in provinceData:
+                t = str(date['year']) + "-" + date['date'][:2] + "-" + date['date'][3:5]
+                x = ChinaInfMessage(time=t,
+                                    areaName=date['province'],
+                                    currentNum=date['confirm'],
+                                    totalNum=date['confirm'] - date['heal'],
+                                    addNum=date['newConfirm'],
+                                    cured=date['heal'],
+                                    totalDead=date['dead'],
+                                    addDead=date['newDead'])
+                add(x)
 
-        for city in cityName:
-            city = city.childArea
-            if city == "吉林市":
-                city = "吉林"
-            if city in province:
-                cityData = province[city]
-                for date in cityData:
-                    t = date['y'] + "-" + date['date'][:2] + "-" + date['date'][3:5]
-                    name = date['city'] if date['city'] != "吉林" else "吉林市"
-                    x = ChinaInfMessage(time=t,
-                                        areaName=date['city'],
-                                        currentNum=date['confirm'],
-                                        totalNum=date['confirm'] - date['heal'],
-                                        addNum=int(date['confirm_add'] if date['confirm_add'] != '' else 0),
-                                        cured=date['heal'],
-                                        totalDead=date['dead'],
-                                        addDead=0)
-                    add(x)
+            for city in cityName:
+                try:
+                    city = city.childArea
+                    if city == "吉林市":
+                        city = "吉林"
+                    if city in province:
+                        cityData = province[city]
+                        for date in cityData:
+                            t = date['y'] + "-" + date['date'][:2] + "-" + date['date'][3:5]
+                            name = date['city'] if date['city'] != "吉林" else "吉林市"
+                            x = ChinaInfMessage(time=t,
+                                                areaName=date['city'],
+                                                currentNum=date['confirm'],
+                                                totalNum=date['confirm'] - date['heal'],
+                                                addNum=int(date['confirm_add'] if date['confirm_add'] != '' else 0),
+                                                cured=date['heal'],
+                                                totalDead=date['dead'],
+                                                addDead=0)
+                            add(x)
+                except Exception as e:
+                    print(e)
+        except Exception as e:
+            print (e)
 
 
 
 def getGlobalHisIvf():
-    return None
+    countryData = Spider.getData(8)
+    countries = db.session.query(Area).filter(Area.parentArea == 'global').filter(Area.childArea != '中国').all()
+    for countryName in countries:
+        name = countryName.childArea
+        hisMessages = countryData[name]
+        for m in hisMessages:
+            t = m['y'] + "-" + m['date'][:2] + "-" + m['date'][3:5]
+            x = InfMessage(time=t,
+                           areaName=name,
+                           currentNum=m['confirm'] - m['heal'],
+                           totalNum=m['confirm'],
+                           addNum=m['confirm_add'],
+                           cured=m['heal'],
+                           totalDead=m['dead'],
+                           addDead=0)
+            add(x)
+
 
 def Init():
     getArea()

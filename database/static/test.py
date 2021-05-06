@@ -26,8 +26,11 @@ def getTodayInf():
       print(a)
 
 def getChinaHisInfTest():
-   data = Spider.getData(5)
-   Spider.saveToJsonFile(data, 'provincePath.json')
+   getChinaHisInf()
 
+def getCountryHisTest():
+   data = Spider.getData(8)
+   Spider.saveToJsonFile(data, 'country.json')
 
-getChinaHisInfTest()
+#getChinaHisInfTest()
+getGlobalHisIvf()
