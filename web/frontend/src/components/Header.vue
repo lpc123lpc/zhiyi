@@ -27,17 +27,17 @@
       </el-submenu>
     </el-submenu>-->
     <el-menu-item index="/InfectHome" class="nav-menu-item">感染情况</el-menu-item>
-    <el-menu-item index="3" class="nav-menu-item">出行建议</el-menu-item>
-    <el-menu-item index="4" class="nav-menu-item">新闻资讯</el-menu-item>
+    <!--<el-menu-item index="3" class="nav-menu-item">出行建议</el-menu-item>
+    <el-menu-item index="4" class="nav-menu-item">新闻资讯</el-menu-item>-->
     <el-menu-item index="/Feedback" class="nav-menu-item">反馈&建议</el-menu-item>
     <svg class="icon" aria-hidden="true" @click="showDataSource()">
       <use xlink:href="#icon-question"></use>
     </svg>
-    <el-container index="6" class="input-container">
+    <!--<el-container index="6" class="input-container">
       <el-input placeholder="请输入内容" v-model="input" class="input-with-select">
         <el-button slot="append" icon="el-icon-search"></el-button>
       </el-input>
-    </el-container>
+    </el-container>-->
   </el-menu>
 </template>
 
