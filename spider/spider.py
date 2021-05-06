@@ -49,11 +49,14 @@ class Spider:
 	def getHisWorldCovidUrls(cls):
 
 		prefix = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
+		USPrefix="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/"
 		# 网页url
 		url = 'https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports'
+		USUrl='https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports_us'
+
 		r = requests.get(url, headers=cls.headers)
 		data = r.text
-		print(type(data))
+		#print(type(data))
 		# print(data)
 		reg = r'(?<=href=\"/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_daily_reports/).*\.csv(?=\">)'
 		list = re.findall(reg, data)
@@ -62,27 +65,43 @@ class Spider:
 		for i in list:
 			i = prefix + i
 			urls.append(i)
+
+		r = requests.get(USUrl, headers=cls.headers)
+		data = r.text
+		#print(type(data))
+		# print(data)
+		reg = r'(?<=href=\"/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_daily_reports_us/).*\.csv(?=\">)'
+		list = re.findall(reg, data)
+		# print(type(list))
+		USUrls = []
+		for i in list:
+			i = USPrefix + i
+			USUrls.append(i)
 		# print(urls)
 		# print(len(urls))
-		return urls
+		return urls,USUrls
 
 	# 感染-各国(包括中国)、主要国家的各行政区-实时-数据
 	"""
-	返回假设数据源更新的条件下**昨天**和**当前日期**对应csv文件的url
+	返回假设数据源更新的条件下**昨天**和**当前日期**对应csv文件的url,**昨天**和**当前日期**美国对应csv文件的url
 	@:return yesterdayUrl, todayUrl
 	"""
 
 	@classmethod
 	def getUpdateCovidUrls(cls):
 		urlPrefix = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
+		USUrlPrefix="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/"
 		curTime = time.strftime("%m-%d-%Y", time.localtime())
 		todayUrl = urlPrefix + curTime + ".csv"
+		USTodayUrl= USUrlPrefix+curTime+".csv"
 
 		today = datetime.date.today()
 		oneday = datetime.timedelta(days=1)
 		yesterday = (today - oneday).strftime('%m-%d-%Y')
 		yesterdayUrl = urlPrefix + yesterday + ".csv"
-		return yesterdayUrl, todayUrl
+		USYesterdayUrl=USUrlPrefix+yesterday+".csv"
+
+		return yesterdayUrl, todayUrl, USYesterdayUrl,USTodayUrl
 
 	# 国内省市的历史数据
 	"""
@@ -316,7 +335,10 @@ if __name__=='__main__':
 	#schedule.every(1).minutes.do(job_func=Spider.job)
 	#while True:
 	#	schedule.run_pending()
-	yes,tod=Spider.getData(7)
+	"""yes,tod=Spider.getData(7)
 	print(yes,tod)
 	todayCsv=Spider.getCSVDictReader(tod)
-	print(todayCsv.fieldnames)
+	print(todayCsv.fieldnames)"""
+	list1,list2=Spider.getHisWorldCovidUrls()
+	print(list1)
+	print(list2)
