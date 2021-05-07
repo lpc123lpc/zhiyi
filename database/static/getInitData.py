@@ -24,6 +24,8 @@ def getArea():
     globalCountryData = Spider.getData(3)
     add(Area(parentArea='global', childArea='中国'))
     for country in globalCountryData:
+        if country['name'] == '日本本土':
+            country['name'] = '日本'
         area = Area(parentArea='global', childArea=country['name'])
         add(area)
 
@@ -136,7 +138,10 @@ def getGlobalCountryHisInf():
     countries = db.session.query(Area).filter(Area.parentArea == 'global').filter(Area.childArea != '中国').all()
     for countryName in countries:
         name = countryName.childArea
-        hisMessages = countryData[name]
+        if name == '日本':
+            hisMessages = countryData['日本本土']
+        else:
+            hisMessages = countryData[name]
         for m in hisMessages:
             t = m['y'] + "-" + m['date'][:2] + "-" + m['date'][3:5]
             x = InfMessage(time=t,
@@ -158,29 +163,26 @@ def getGlobalProvinceHisInf():
         for url in foreignCityUrls:
             date = Spider.getCSVDictReader(url)
             for province in date:
-                countryName = province['Country_Region']
-                if countryName in worldMapping:
-                    countryName = worldMapping[province['Country_Region']]['cn']
-                provinceName = province['Province_State']
-                cityName = province['Admin2']
-                if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
-                    Last_Update = province['Last_Update']
-                    t = Last_Update[0:4]
-                    if Last_Update[6] == '/' and Last_Update[8] == ' ':
-                        t = t + '-0' + Last_Update[5] + '-0' + Last_Update[7]
-                    elif Last_Update[6] == '/' and Last_Update[9] == ' ':
-                        t = t + '-0' + Last_Update[5] + '-' + Last_Update[7:9]
-                    elif Last_Update[7] == '/' and Last_Update[10] == ' ':
-                        t = t + '-' + Last_Update[5:7] + '-' + Last_Update[8:10]
-                    x = InfMessage(time=t,
-                                   areaName=provinceName,
-                                   currentNum=0 if province['Active'] == '' else int(province['Active']),
-                                   totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed']),
-                                   addNum=0,
-                                   cured=0 if province['Recovered'] == '' else int(province['Recovered']),
-                                   totalDead=0 if province['Deaths'] == '' else int(province['Deaths']),
-                                   addDead=0)
-                    add(x)
+                try:
+                    countryName = province['Country_Region']
+                    if countryName in worldMapping:
+                        countryName = worldMapping[province['Country_Region']]['cn']
+                    provinceName = province['Province_State']
+                    cityName = province['Admin2']
+                    if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
+                        Last_Update = province['Last_Update']
+                        t = Last_Update[:10]
+                        x = InfMessage(time=t,
+                                       areaName=provinceName,
+                                       currentNum=0 if province['Active'] == '' else int(province['Active']),
+                                       totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed']),
+                                       addNum=0,
+                                       cured=0 if province['Recovered'] == '' else int(province['Recovered']),
+                                       totalDead=0 if province['Deaths'] == '' else int(province['Deaths']),
+                                       addDead=0)
+                        add(x)
+                except Exception as e:
+                    print(e)
 
         for url in USUrls:
             date = Spider.getCSVDictReader(url)
@@ -205,5 +207,3 @@ def Init():
     getGlobalCountryHisInf()
     getGlobalProvinceHisInf()       #github
 
-
-getGlobalProvinceHisInf()

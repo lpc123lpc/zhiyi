@@ -211,13 +211,8 @@ def updateForeignProvinceInf():
             cityName = province['Admin2']
             if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
                 Last_Update = province['Last_Update']
-                t = Last_Update[0:4]
-                if Last_Update[6] == '/' and Last_Update[8] == ' ':
-                    t = t + '-0' + Last_Update[5] + '-0' + Last_Update[7]
-                elif Last_Update[6] == '/' and Last_Update[9] == ' ':
-                    t = t + '-0' + Last_Update[5] + '-' + Last_Update[7:9]
-                elif Last_Update[7] == '/' and Last_Update[10] == ' ':
-                    t = t + '-' + Last_Update[5:7] + '-' + Last_Update[8:10]
+                t = Last_Update[:10]
+
                 x = NowInfMessage(time=t,
                                    areaName=provinceName,
                                    currentNum=0 if province['Active'] == '' else int(province['Active']),
@@ -343,8 +338,10 @@ def addMessage(area, toType, today):
         add(y)
     elif toType == "NowInfMessage":
         name = area['name']
+        if name == '日本本土':
+            name = '日本'
         x = NowInfMessage(time=today,
-                          areaName=area['name'],
+                          areaName=name,
                           currentNum=area['nowConfirm'],
                           totalNum=area['confirm'],
                           addNum=area['confirmAdd'],
