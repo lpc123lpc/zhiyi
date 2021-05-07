@@ -1,6 +1,8 @@
 from database.static.table import *
-from spider.spider import *
+#from spider.spider import *
 from database.static.dao import *
+from spider.spider import Spider
+
 
 def getArea():
     clearTable('areas')
@@ -129,6 +131,7 @@ def getChinaHisInf():
 
 
 def getGlobalCountryHisInf():
+    #clearTable('hisInfMessages')
     countryData = Spider.getData(8)
     countries = db.session.query(Area).filter(Area.parentArea == 'global').filter(Area.childArea != '中国').all()
     for countryName in countries:
@@ -173,7 +176,7 @@ def getGlobalProvinceHisInf():
                                    totalNum=int(province['Confirmed']),
                                    addNum=0,
                                    cured=int(province['Recovered']),
-                                   totalDead=int(province['Dead']),
+                                   totalDead=int(province['Deaths']),
                                    addDead=0)
                     add(x)
 
@@ -182,24 +185,22 @@ def getGlobalProvinceHisInf():
             for province in date:
                 t = province['Last_Update'][:10]
                 x = InfMessage(time=t,
-                               areaName=provinceName,
-                               currentNum=int(float(province['Active'])),
-                               totalNum=int(float(province['Confirmed'])),
-                               addNum=0,
-                               cured=int(float(province['Recovered'])),
-                               totalDead=int(float(province['Dead'])),
-                               addDead=0)
+                       areaName=provinceName,
+                       currentNum=int(province['Active'].split('.')[0]),
+                       totalNum=int(province['Confirmed'].split('.')[0]),
+                       addNum=0,
+                       cured=int(province['Recovered'].split('.')[0]),
+                       totalDead=int(province['Deaths'].split('.')[0]),
+                       addDead=0)
                 add(x)
 
 
 
 def Init():
-    getArea()
+    getArea()       #github
     getHisVac()
     getChinaHisInf()
     getGlobalCountryHisInf()
-    getGlobalProvinceHisInf()
+    getGlobalProvinceHisInf()       #github
 
 
-
-getArea()
