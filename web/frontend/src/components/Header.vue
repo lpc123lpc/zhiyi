@@ -1,44 +1,46 @@
 <template>
-  <el-menu
-    class="el-menu-demo"
-    mode="horizontal"
-    @select="handleSelect"
-    background-color="#ffffff"
-    text-color="#8cc4ff"
-    active-text-color="#409eff"
-    router
-    :default-active = "path">
-
-    <el-menu-item index="/Home" class="image-menu-item">
+  <div>
+    <div index="/Home" class="image-menu-item" @click="goHome()">
       <el-image fit="contain" src='../../static/image/111.png' class="image-item"></el-image>
-    </el-menu-item>
-    <el-menu-item index="/Home" class="nav-menu-item" >国家列表</el-menu-item>
-    <el-menu-item index="/VaccineHome" class="nav-menu-item" >疫苗接种</el-menu-item>
-    <!--<el-submenu index="2">
-      <template slot="title">我的工作台</template>
-      <el-menu-item index="2-1">选项1</el-menu-item>
-      <el-menu-item index="2-2">选项2</el-menu-item>
-      <el-menu-item index="2-3">选项3</el-menu-item>
-      <el-submenu index="2-4">
-        <template slot="title">选项4</template>
-        <el-menu-item index="2-4-1">选项1</el-menu-item>
-        <el-menu-item index="2-4-2">选项2</el-menu-item>
-        <el-menu-item index="2-4-3">选项3</el-menu-item>
-      </el-submenu>
-    </el-submenu>-->
-    <el-menu-item index="/InfectHome" class="nav-menu-item">感染情况</el-menu-item>
-    <!--<el-menu-item index="3" class="nav-menu-item">出行建议</el-menu-item>
-    <el-menu-item index="4" class="nav-menu-item">新闻资讯</el-menu-item>-->
-    <el-menu-item index="/Feedback" class="nav-menu-item">反馈&建议</el-menu-item>
-    <svg class="icon" aria-hidden="true" @click="showDataSource()">
-      <use xlink:href="#icon-question"></use>
-    </svg>
-    <!--<el-container index="6" class="input-container">
-      <el-input placeholder="请输入内容" v-model="input" class="input-with-select">
-        <el-button slot="append" icon="el-icon-search"></el-button>
-      </el-input>
-    </el-container>-->
-  </el-menu>
+    </div>
+    <el-menu
+      class="el-menu-demo"
+      mode="horizontal"
+      @select="handleSelect"
+      background-color="#ffffff"
+      text-color="#8cc4ff"
+      active-text-color="#409eff"
+      router
+      :default-active = "path">
+
+      <el-menu-item index="/Home" class="nav-menu-item" >国家列表</el-menu-item>
+      <el-menu-item index="/VaccineHome" class="nav-menu-item" >疫苗接种</el-menu-item>
+      <!--<el-submenu index="2">
+        <template slot="title">我的工作台</template>
+        <el-menu-item index="2-1">选项1</el-menu-item>
+        <el-menu-item index="2-2">选项2</el-menu-item>
+        <el-menu-item index="2-3">选项3</el-menu-item>
+        <el-submenu index="2-4">
+          <template slot="title">选项4</template>
+          <el-menu-item index="2-4-1">选项1</el-menu-item>
+          <el-menu-item index="2-4-2">选项2</el-menu-item>
+          <el-menu-item index="2-4-3">选项3</el-menu-item>
+        </el-submenu>
+      </el-submenu>-->
+      <el-menu-item index="/InfectHome" class="nav-menu-item">感染情况</el-menu-item>
+      <!--<el-menu-item index="3" class="nav-menu-item">出行建议</el-menu-item>
+      <el-menu-item index="4" class="nav-menu-item">新闻资讯</el-menu-item>-->
+      <el-menu-item index="/Feedback" class="nav-menu-item">反馈&建议</el-menu-item>
+      <svg class="icon" aria-hidden="true" @click="showDataSource()">
+        <use xlink:href="#icon-question"></use>
+      </svg>
+      <!--<el-container index="6" class="input-container">
+        <el-input placeholder="请输入内容" v-model="input" class="input-with-select">
+          <el-button slot="append" icon="el-icon-search"></el-button>
+        </el-input>
+      </el-container>-->
+    </el-menu>
+  </div>
 </template>
 
 <script>
@@ -51,12 +53,16 @@ export default {
       path: '',
       dataSource: ['国内：腾讯新闻',
         '国外：ourwolrdindata，各国的感染数据（country level）',
-        '      疫苗的历史数据和每日接种（country level）',
-        '      JHU ，补充了各国的state/province，以及“灯塔国”\n' +
-                  '      的主要城市的感染数据']
+        '      疫苗的历史数据和每日接种数据（country level）',
+        '      JHU，补充了各国的state/province数据，以及美国\n' +
+            '      主要城市的感染数据',  
+        '每日凌晨3:00进行数据更新，届时带来不便，敬请谅解']
     }
   },
   methods: {
+    goHome() {
+      this.$router.push({path: `/Home`})
+    },
     handleSelect (key, keyPath) {
       console.log(key, keyPath)
     },
@@ -120,6 +126,7 @@ export default {
 }
 .el-menu-demo {
   height: 60px;
+  margin-left: 170px;
   padding-right: 20px;
 }
 .nav-menu-item {
@@ -135,12 +142,13 @@ export default {
   color: #409eff !important;
 }
 .image-item {
-  height: 50px;
-  margin-top: -10px;
+  height: 70px;
+  margin-top: -8px;
 }
 .image-menu-item {
+  position: absolute;
   width: 150px;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-right: 10px;
 }
 .image-menu-item:hover {
