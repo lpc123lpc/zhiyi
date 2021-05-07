@@ -33,4 +33,4 @@ def getCountryHisTest():
    Spider.saveToJsonFile(data, 'country.json')
 
 
-updateInf()
+updateForeignProvinceInf()

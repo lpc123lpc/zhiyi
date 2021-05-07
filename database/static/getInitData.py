@@ -158,7 +158,9 @@ def getGlobalProvinceHisInf():
         for url in foreignCityUrls:
             date = Spider.getCSVDictReader(url)
             for province in date:
-                countryName = province['Country_Region'] if province['Country_Region'] in worldMapping else worldMapping[province['Country_Region']]['cn']
+                countryName = province['Country_Region']
+                if countryName in worldMapping:
+                    countryName = worldMapping[province['Country_Region']]['cn']
                 provinceName = province['Province_State']
                 cityName = province['Admin2']
                 if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
@@ -172,11 +174,11 @@ def getGlobalProvinceHisInf():
                         t = t + '-' + Last_Update[5:7] + '-' + Last_Update[8:10]
                     x = InfMessage(time=t,
                                    areaName=provinceName,
-                                   currentNum=int(province['Active']),
-                                   totalNum=int(province['Confirmed']),
+                                   currentNum=0 if province['Active'] == '' else int(province['Active']),
+                                   totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed']),
                                    addNum=0,
-                                   cured=int(province['Recovered']),
-                                   totalDead=int(province['Deaths']),
+                                   cured=0 if province['Recovered'] == '' else int(province['Recovered']),
+                                   totalDead=0 if province['Deaths'] == '' else int(province['Deaths']),
                                    addDead=0)
                     add(x)
 
@@ -186,11 +188,11 @@ def getGlobalProvinceHisInf():
                 t = province['Last_Update'][:10]
                 x = InfMessage(time=t,
                        areaName=provinceName,
-                       currentNum=int(province['Active'].split('.')[0]),
-                       totalNum=int(province['Confirmed'].split('.')[0]),
+                       currentNum= 0 if province['Active'] == '' else int(province['Active'].split('.')[0]),
+                       totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
                        addNum=0,
-                       cured=int(province['Recovered'].split('.')[0]),
-                       totalDead=int(province['Deaths'].split('.')[0]),
+                       cured=0 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
+                       totalDead=0 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
                        addDead=0)
                 add(x)
 
@@ -204,3 +206,4 @@ def Init():
     getGlobalProvinceHisInf()       #github
 
 
+getGlobalProvinceHisInf()
