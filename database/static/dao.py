@@ -205,7 +205,7 @@ def updateForeignProvinceInf():
         globalProvinces = Spider.getCSVDictReader(y)
         for province in globalProvinces:
             countryName = province['Country_Region'] if province['Country_Region'] in worldMapping else worldMapping[
-                province['Country_Region']]
+                province['Country_Region']]['cn']
             provinceName = province['Province_State']
             cityName = province['Admin2']
             if countryName != 'US' and cityName == '' and provinceName != 'Unknown':

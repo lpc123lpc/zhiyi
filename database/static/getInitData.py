@@ -31,15 +31,16 @@ def getArea():
         worldMapping = json.load(f)
         globalProvinces = Spider.getCSVDictReader(yUrl)
         for province in globalProvinces:
+            #print(province['Province_State'])
             if province['Country_Region'] != 'US' and province['Province_State'] != '' and province['Admin2'] == '' and province['Province_State'] != 'Unknown':
                 parent = ''
                 if province['Country_Region'] in worldMapping:
-                    parent = worldMapping[province['Country_Region']]
+                    parent = worldMapping[province['Country_Region']]['cn']
                 else:
                     parent = province['Country_Region']
                 child = province['Province_State']
                 area = Area(parentArea=parent, childArea=child)
-                print(child)
+                #print(parent)
                 add(area)
 
         usProvinces = Spider.getCSVDictReader(yUSUrl)
@@ -154,7 +155,7 @@ def getGlobalProvinceHisInf():
         for url in foreignCityUrls:
             date = Spider.getCSVDictReader(url)
             for province in date:
-                countryName = province['Country_Region'] if province['Country_Region'] in worldMapping else worldMapping[province['Country_Region']]
+                countryName = province['Country_Region'] if province['Country_Region'] in worldMapping else worldMapping[province['Country_Region']]['cn']
                 provinceName = province['Province_State']
                 cityName = province['Admin2']
                 if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
