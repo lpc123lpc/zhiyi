@@ -1,13 +1,14 @@
-import json
-from flask import Flask, request
+from flask import request
 from flask_cors import CORS
-from controller import map, table, sidebar
-from database.static import dao
+from controller import map, tables, sidebar
+from database.static import dao, table
+from database.static.getInitData import *
 import os
 
-app = Flask(__name__)
+app = table.app
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
+'''Init()'''
 
 @app.route('/')
 def index():
@@ -16,32 +17,32 @@ def index():
 
 @app.route('/worldData', methods=["GET"])
 def getWordData():
-    return table.getWorldData()
+    return tables.getWorldData()
 
 
 @app.route('/countryInfData/<country>', methods=["GET"])
 def getCountryInfData(country):
-    return table.getCountryInfData(country)
+    return tables.getCountryInfData(country)
 
 
 @app.route('/countryVacData/<country>', methods=["GET"])
 def getCountryVacData(country):
-    return table.getCountryVacData(country)
+    return tables.getCountryVacData(country)
 
 
 @app.route('/countryInfection/<country>', methods=["GET"])
 def getCountryInfection(country):
-    return table.getCountryInfection(country)
+    return tables.getCountryInfection(country)
 
 
 @app.route('/countryVaccine/<country>', methods=["GET"])
 def getCountryVaccine(country):
-    return table.getCountryInfection(country)
+    return tables.getCountryInfection(country)
 
 
 @app.route('/provinceInfection/country/<province>', methods=["GET"])
 def getCountryData(province):
-    return table.getProvinceInfection(province)
+    return tables.getProvinceInfection(province)
 
 
 @app.route('/vaccineHome/worldMapVaccineDataMsg', methods=["GET"])

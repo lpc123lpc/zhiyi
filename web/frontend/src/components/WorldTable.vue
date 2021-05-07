@@ -64,7 +64,7 @@ export default {
   methods: {
     getWorldData () {
       var that = this
-      fetch('../static/json/charts/testWorld').then(function (response) {
+      fetch('http://127.0.0.1:5000/worldData').then(function (response) {
         response.json().then((data) => {
           that.items = data
         })
