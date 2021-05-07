@@ -18,11 +18,37 @@ def getArea():
                     city['name'] += '市'
                 cArea = Area(parentArea=province['name'], childArea=city['name'])
                 add(cArea)
+
     globalCountryData = Spider.getData(3)
     add(Area(parentArea='global', childArea='中国'))
     for country in globalCountryData:
         area = Area(parentArea='global', childArea=country['name'])
         add(area)
+
+    yUrl, tUrl, yUSUrl, dUSUrl = Spider.getData(7)
+    worldMappingPath = './world-mapping.json'
+    with open(worldMappingPath, mode='r', encoding='utf-8') as f:
+        worldMapping = json.load(f)
+        globalProvinces = Spider.getCSVDictReader(yUrl)
+        for province in globalProvinces:
+            if province['Country_Region'] != 'US' and province['Province_State'] != '' and province['Admin2'] == '' and province['Province_State'] != 'Unknown':
+                parent = ''
+                if province['Country_Region'] in worldMapping:
+                    parent = worldMapping[province['Country_Region']]
+                else:
+                    parent = province['Country_Region']
+                child = province['Province_State']
+                area = Area(parentArea=parent, childArea=child)
+                print(child)
+                add(area)
+
+        usProvinces = Spider.getCSVDictReader(yUSUrl)
+        for province in usProvinces:
+            parent = '美国'
+            child = province['Province_State']
+            area = Area(parentArea=parent, childArea=child)
+            add(area)
+
 
 
 def getHisVac():
@@ -101,7 +127,7 @@ def getChinaHisInf():
 
 
 
-def getGlobalHisIvf():
+def getGlobalCountryHisInf():
     countryData = Spider.getData(8)
     countries = db.session.query(Area).filter(Area.parentArea == 'global').filter(Area.childArea != '中国').all()
     for countryName in countries:
@@ -120,11 +146,59 @@ def getGlobalHisIvf():
             add(x)
 
 
+def getGlobalProvinceHisInf():
+    foreignCityUrls, USUrls = Spider.getData(6)
+    worldMappingPath = './world-mapping.json'
+    with open(worldMappingPath, mode='r', encoding='utf-8') as f:
+        worldMapping = json.load(f)
+        for url in foreignCityUrls:
+            date = Spider.getCSVDictReader(url)
+            for province in date:
+                countryName = province['Country_Region'] if province['Country_Region'] in worldMapping else worldMapping[province['Country_Region']]
+                provinceName = province['Province_State']
+                cityName = province['Admin2']
+                if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
+                    Last_Update = province['Last_Update']
+                    t = Last_Update[0:4]
+                    if Last_Update[6] == '/' and Last_Update[8] == ' ':
+                        t = t + '-0' + Last_Update[5] + '-0' + Last_Update[7]
+                    elif Last_Update[6] == '/' and Last_Update[9] == ' ':
+                        t = t + '-0' + Last_Update[5] + '-' + Last_Update[7:9]
+                    elif Last_Update[7] == '/' and Last_Update[10] == ' ':
+                        t = t + '-' + Last_Update[5:7] + '-' + Last_Update[8:10]
+                    x = InfMessage(time=t,
+                                   areaName=provinceName,
+                                   currentNum=int(province['Active']),
+                                   totalNum=int(province['Confirmed']),
+                                   addNum=0,
+                                   cured=int(province['Recovered']),
+                                   totalDead=int(province['Dead']),
+                                   addDead=0)
+                    add(x)
+
+        for url in USUrls:
+            date = Spider.getCSVDictReader(url)
+            for province in date:
+                t = province['Last_Update'][:10]
+                x = InfMessage(time=t,
+                               areaName=provinceName,
+                               currentNum=int(float(province['Active'])),
+                               totalNum=int(float(province['Confirmed'])),
+                               addNum=0,
+                               cured=int(float(province['Recovered'])),
+                               totalDead=int(float(province['Dead'])),
+                               addDead=0)
+                add(x)
+
+
+
 def Init():
     getArea()
     getHisVac()
     getChinaHisInf()
-    getGlobalHisIvf()
+    getGlobalCountryHisInf()
+    getGlobalProvinceHisInf()
 
 
-#Init()
+
+getArea()

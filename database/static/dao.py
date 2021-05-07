@@ -197,10 +197,73 @@ def updateGlobalInf():
     print('global ok')
 
 
+def updateForeignProvinceInf():
+    y, t, uy, ut = Spider.getData(7)
+    worldMappingPath = './world-mapping.json'
+    with open(worldMappingPath, mode='r', encoding='utf-8') as f:
+        worldMapping = json.load(f)
+        globalProvinces = Spider.getCSVDictReader(y)
+        for province in globalProvinces:
+            countryName = province['Country_Region'] if province['Country_Region'] in worldMapping else worldMapping[
+                province['Country_Region']]
+            provinceName = province['Province_State']
+            cityName = province['Admin2']
+            if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
+                Last_Update = province['Last_Update']
+                t = Last_Update[0:4]
+                if Last_Update[6] == '/' and Last_Update[8] == ' ':
+                    t = t + '-0' + Last_Update[5] + '-0' + Last_Update[7]
+                elif Last_Update[6] == '/' and Last_Update[9] == ' ':
+                    t = t + '-0' + Last_Update[5] + '-' + Last_Update[7:9]
+                elif Last_Update[7] == '/' and Last_Update[10] == ' ':
+                    t = t + '-' + Last_Update[5:7] + '-' + Last_Update[8:10]
+                x = NowInfMessage(time=t,
+                               areaName=provinceName,
+                               currentNum=int(province['Active']),
+                               totalNum=int(province['Confirmed']),
+                               addNum=0,
+                               cured=int(province['Recovered']),
+                               totalDead=int(province['Dead']),
+                               addDead=0)
+                add(x)
+                y = InfMessage(time=t,
+                                   areaName=provinceName,
+                                   currentNum=int(province['Active']),
+                                   totalNum=int(province['Confirmed']),
+                                   addNum=0,
+                                   cured=int(province['Recovered']),
+                                   totalDead=int(province['Dead']),
+                                   addDead=0)
+                add(y)
+
+    usProvinces = Spider.getCSVDictReader(uy)
+    for province in usProvinces:
+        t = province['Last_Update'][:10]
+        x = NowInfMessage(time=t,
+                       areaName=provinceName,
+                       currentNum=int(float(province['Active'])),
+                       totalNum=int(float(province['Confirmed'])),
+                       addNum=0,
+                       cured=int(float(province['Recovered'])),
+                       totalDead=int(float(province['Dead'])),
+                       addDead=0)
+        add(x)
+        y = InfMessage(time=t,
+                       areaName=provinceName,
+                       currentNum=int(float(province['Active'])),
+                       totalNum=int(float(province['Confirmed'])),
+                       addNum=0,
+                       cured=int(float(province['Recovered'])),
+                       totalDead=int(float(province['Dead'])),
+                       addDead=0)
+        add(y)
+
+
 def updateInf():
     clearTable('nowInfMessages')
     updateChinaInf()
     updateGlobalInf()
+    updateForeignProvinceInf()
 
 
 '''
