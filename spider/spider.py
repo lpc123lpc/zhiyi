@@ -298,17 +298,19 @@ class Spider:
 		# 爬取、存入 nowGlobalCovidDataUrl，# 感染-全球-实时-数据
 		# 爬取、存入 nowForeignCovidDataUrl，# 感染-海外国家-实时-数据
 		# 爬取、存入 nowDomesticCovidDataUrl，#  感染-中国、各省、市-实时-数据
-		pass
+		clearTable('nowInfMessages')
+		updateChinaInf()
+		updateGlobalInf()
 
 	@classmethod
 	def updateOWID(cls):
 		# 爬取、存入 worldVaccDataurl，疫苗-ALL-ALL-数据 的实时数据
-		pass
+		updateVac()
 
 	@classmethod
 	def updateJHU(cls):
+		updateForeignProvinceInf()
 		# 爬取、存入 感染-各国(包括中国)、主要国家的各行政区-实时-数据（判断是否存在）
-		pass
 
 	@classmethod
 	def crawlAndStoreHistory(cls):
@@ -317,6 +319,7 @@ class Spider:
 		# 爬取、存入  感染-国内各省、市-历史-数据
 		# 爬取、存入  感染-各国(包括中国)、主要国家的各行政区-历史-数据
 		# 爬取、存入  worldVaccDataurl，疫苗-ALL-ALL-数据中的历史数据
+		Init()
 		cls.timelyJob()
 
 	@classmethod
@@ -326,19 +329,16 @@ class Spider:
 		cls.updateJHU()
 
 	@classmethod
-	def job(cls):
+	def jobTest(cls):
 		print("the job is excuted in")
 		print(time.localtime)
 		time.sleep(3)
 
 if __name__=='__main__':
-	#schedule.every(1).minutes.do(job_func=Spider.job)
-	#while True:
-	#	schedule.run_pending()
+	schedule.every(1).minutes.do(job_func=Spider.timelyJob())
+	while True:
+		schedule.run_pending()
 	"""yes,tod=Spider.getData(7)
 	print(yes,tod)
 	todayCsv=Spider.getCSVDictReader(tod)
 	print(todayCsv.fieldnames)"""
-	list1,list2=Spider.getHisWorldCovidUrls()
-	print(list1)
-	print(list2)
