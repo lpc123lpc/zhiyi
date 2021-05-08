@@ -60,7 +60,9 @@
                 },
                 tooltip: {
                     formatter: function (params) {
-                        return params.seriesName + '：' + params.value
+                        var value = parseInt(params.value)
+                        if (value < 0) value = NaN
+                        return params.seriesName + '：' + value
                     }
                 },
                 grid: {

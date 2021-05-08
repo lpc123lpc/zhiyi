@@ -38,10 +38,14 @@
                 },
                 tooltip: {
                     formatter: function (params) {
-                        if (!isNaN(params.value)) {
-                            return params.seriesName + '：' + params.value + '万'
+                      var value = parseInt(params.value)
+                      if (!isNaN(params.value)) {
+                        if (value < 0) value = NaN
+                        else {
+                          value = params.value + '万'
                         }
-                        return params.seriesName + '：' + params.value
+                      }
+                      return params.seriesName + '：' + value
                     }
                 },
                 grid: {
