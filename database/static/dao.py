@@ -39,7 +39,7 @@ return:返回该区域的历史感染信息
 
 
 def getHisInfMessage(name):
-    isChina = db.session.query(ChinaInfMessage.time).filter(ChinaInfMessage.areaName == name).first()
+    isChina = db.session.query(ChinaInfMessage).filter(ChinaInfMessage.areaName == name).first()
     messages = None
     if isChina is None:
         messages = db.session.query(InfMessage) \
@@ -69,7 +69,9 @@ def getHisInfMessageInclude(name):
     if areas is None:
         return None
     else:
-        isChina = db.session.query(ChinaInfMessage.time).filter(ChinaInfMessage.areaName == areas[0]).first()
+        a = areas[0]
+        isChina = db.session.query(ChinaInfMessage).filter(ChinaInfMessage.areaName == a.childArea).first()
+        print(isChina)
         if isChina is None:
             for area in areas:
                 message = db.session.query(InfMessage) \

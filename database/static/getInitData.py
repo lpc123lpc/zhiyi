@@ -36,7 +36,7 @@ def getArea():
         globalProvinces = Spider.getCSVDictReader(yUrl)
         for province in globalProvinces:
             #print(province['Province_State'])
-            if province['Country_Region'] != 'US' and province['Province_State'] != '' and province['Admin2'] == '' and province['Province_State'] != 'Unknown':
+            if province['Country_Region'] != 'US' and province['Province_State'] != '' and province['Admin2'] == '' and province['Country_Region'] and province['Province_State'] != 'Unknown':
                 parent = ''
                 if province['Country_Region'] in worldMapping:
                     parent = worldMapping[province['Country_Region']]['cn']

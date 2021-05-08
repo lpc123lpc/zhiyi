@@ -67,11 +67,9 @@ def getCountryVacData(country):
 def getCountryInfection(country):
     all_data = []
     data = dao.getHisInfMessageInclude(country)
-    print(data)
     if data is None:
         return jsonify({})
     for i in data:
-        '''position = getattr(i[0], 'areaName')'''
         position = ''
         confirmed, deceased, cured, times = [], [], [], []
         for j in i:

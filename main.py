@@ -12,6 +12,7 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 '''Init() 
 updateInf()
 updateVac()'''
+getArea()
 
 
 @app.route('/')

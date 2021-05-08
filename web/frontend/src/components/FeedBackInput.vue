@@ -72,7 +72,7 @@ export default {
           	  // 倒计时完，可点击
              vm.isDisabled = false
               // 更新按钮文字内容
-              vm.content = '获取短信验证码'
+              vm.content = '提交'
               // 清空定时器!!!
               clearInterval(vm.timer)
               vm.timer = null
