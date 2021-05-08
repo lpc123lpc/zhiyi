@@ -42,13 +42,16 @@ export default {
       isShow: 'confirmed'
     }
   },
+  props: {
+    country: String
+  },
   mounted () {
     this.getData()
   },
   methods: {
     getData () {
       var that = this
-      fetch('../static/json/charts/testInfection').then(function (response) {
+      fetch('http://127.0.0.1:5000/countryInfData/' + this.country).then(function (response) {
         response.json().then(data => {
           that.times = data[0].time
           for (var i = 0; i < data.length; i++) {

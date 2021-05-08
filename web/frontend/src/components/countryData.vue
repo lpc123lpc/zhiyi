@@ -10,6 +10,9 @@ export default {
     this.chart = echarts.init(this.$refs.countryDataCharts)
     this.drawCountryData()
   },
+  props: {
+    country: String
+  },
   methods: {
     drawCountryData () {
       var that = this
