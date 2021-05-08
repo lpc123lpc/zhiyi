@@ -6,7 +6,7 @@
       <el-col :span="4"><div class="infect-sum">累计死亡{{infect_death}}</div></el-col>
       <el-col :span="4"><div class="infect-sum-add">+{{infect_death_add}}</div></el-col>
       <el-col :span="2"><div class="infect-sum">累计治愈{{infect_cure}}</div></el-col>
-      <el-col :span="6"><div class="infect-sum-add">+{{infect_cure_add}}</div></el-col>
+      <!--<el-col :span="6"><div class="infect-sum-add">+{{infect_cure_add}}</div></el-col>-->
     </el-row>
   </el-card>
 </template>
@@ -30,14 +30,14 @@ export default {
     this.getInfectDeath()
     this.getInfectDeathAdd()
     this.getInfectCure()
-    this.getInfectCureAdd()
+    // this.getInfectCureAdd()
   },
   methods: {
     getInfectSum () {
       var that = this
       fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectSum').then(function (response) {
         response.json().then((data) => {
-          that.infect_sum = data
+          that.infect_sum = data.value
         })
       })
     },
@@ -45,7 +45,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectSumAdd').then(function (response) {
         response.json().then((data) => {
-          that.infect_sum_add = data
+          that.infect_sum_add = data.value
         })
       })
     },
@@ -53,7 +53,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectDeath').then(function (response) {
         response.json().then((data) => {
-          that.infect_death = data
+          that.infect_death = data.value
         })
       })
     },
@@ -61,7 +61,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectDeathAdd').then(function (response) {
         response.json().then((data) => {
-          that.infect_death_add = data
+          that.infect_death_add = data.value
         })
       })
     },
@@ -69,7 +69,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectCure').then(function (response) {
         response.json().then((data) => {
-          that.infect_cure = data
+          that.infect_cure = data.value
         })
       })
     },
@@ -77,7 +77,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectCureAdd').then(function (response) {
         response.json().then((data) => {
-          that.infect_cure_add = data
+          that.infect_cure_add = data.value
         })
       })
     }

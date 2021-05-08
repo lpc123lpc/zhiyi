@@ -4,7 +4,7 @@
       <el-col :span="8"><div class="vaccine-sum">累计接种{{vaccine_sum}}</div></el-col>
       <el-col :span="4"><div class="vaccine-sum-add">+{{vaccine_sum_add}}</div></el-col>
       <el-col :span="4"><div class="vaccine-sum">覆盖率{{vaccine_cover}}</div></el-col>
-      <el-col :span="8"><div class="vaccine-sum-add">+{{vaccine_cover_add}}</div></el-col>
+      <!--<el-col :span="8"><div class="vaccine-sum-add">+{{vaccine_cover_add}}</div></el-col>-->
     </el-row>
   </el-card>
 </template>
@@ -24,14 +24,14 @@ export default {
     this.getVaccineSum()
     this.getVaccineSumAdd()
     this.getVaccineCover()
-    this.getVaccineCoverAdd()
+    // this.getVaccineCoverAdd()
   },
   methods: {
     getVaccineSum () {
       var that = this
       fetch('http://127.0.0.1:5000/vaccineHomeHeadbar/vaccineSum').then(function (response) {
         response.json().then((data) => {
-          that.vaccine_sum = data
+          that.vaccine_sum = data.value
         })
       })
     },
@@ -39,7 +39,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/vaccineHomeHeadbar/vaccineSumAdd').then(function (response) {
         response.json().then((data) => {
-          that.vaccine_sum_add = data
+          that.vaccine_sum_add = data.value
         })
       })
     },
@@ -47,7 +47,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/vaccineHomeHeadbar/vaccineCover').then(function (response) {
         response.json().then((data) => {
-          that.vaccine_cover = data
+          that.vaccine_cover = data.value
         })
       })
     },
@@ -55,7 +55,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/vaccineHomeHeadbar/vaccineCoverAdd').then(function (response) {
         response.json().then((data) => {
-          that.vaccine_cover_add = data
+          that.vaccine_cover_add = data.value
         })
       })
     }
