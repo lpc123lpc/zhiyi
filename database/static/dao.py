@@ -304,7 +304,7 @@ def updateVac():
                 totalNum = 0 if v1['total_vaccinations'] == '' else int(v1['total_vaccinations'])
                 addNum = 0 if v1['daily_vaccinations_raw'] == '' else int(v1['daily_vaccinations_raw'])
                 vacRate = 0 if v1['total_vaccinations_per_hundred'] == '' else float(v1['total_vaccinations_per_hundred'])
-                NowVacMessage.query.filter_by(areaName=name) \
+                NowVacMessage.query.filter_by(areaName=lastName) \
                     .update({'time': v1['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
                 db.session.commit()
             lastName = name
