@@ -12,8 +12,12 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 '''Init()'''
 '''updateInf()
 updateVac()'''
+<<<<<<< Updated upstream
 getArea()
 getChinaHisInf()
+=======
+#getArea()
+>>>>>>> Stashed changes
 
 
 @app.route('/')

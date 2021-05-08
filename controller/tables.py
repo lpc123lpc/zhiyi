@@ -61,7 +61,7 @@ def getCountryVacData(country):
         return jsonify({})
     for i in vacData:
         times.append(getattr(i, 'time'))
-        vaccined.append(getattr(vacData, 'totalNum'))
+        vaccined.append(getattr(i, 'totalNum'))
     return jsonify({
         "name": country,
         "time": times,
