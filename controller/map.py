@@ -13,7 +13,7 @@ def getMapVaccine(country):
     if data is None:
         return jsonify({})
     for i in data:
-        vaccined.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum')})
+        vaccined.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum') / 10000.0})
         coverage.append({"name": getattr(i, 'areaName'), "vacRate": getattr(i, 'vacRate')})
     return jsonify({
         "vaccined": vaccined,
@@ -27,10 +27,10 @@ def getMapInfection(country):
     if data is None:
         return jsonify({})
     for i in data:
-        nowConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'currentNum')})
-        totalConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum')})
-        cured.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'cured')})
-        dead.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalDead')})
+        nowConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'currentNum') / 10000.0})
+        totalConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum') / 10000.0})
+        cured.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'cured') / 10000.0})
+        dead.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalDead') / 10000.0})
     return jsonify({
         "nowConfirm": nowConfirm,
         "totalConfirm": totalConfirm,
