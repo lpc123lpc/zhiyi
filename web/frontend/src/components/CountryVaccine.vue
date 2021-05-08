@@ -6,6 +6,9 @@
 import echarts from 'echarts'
 export default {
   name: 'CountryVaccine',
+  props: {
+    country: String
+  },
   mounted () {
     this.CountryVaccine()
   },
@@ -14,7 +17,7 @@ export default {
       var myChart = echarts.init(document.getElementById('countryVaccine'))
       var series = []
       var names = []
-      fetch('../static/json/charts/testVaccine').then(function (response) {
+      fetch('http://127.0.0.1:5000/countryVaccine/' + this.country).then(function (response) {
         response.json().then(function (data) {
           for (var i = 0; i < data.length; i++) {
             series.push(

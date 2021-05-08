@@ -27,7 +27,7 @@ import header from '../components/Header.vue'
 import infectDetailProvinceSidebar from '../components/InfectDetailProvinceSidebar.vue'
 import infectDetailProvinceMap from '../components/ProvinceMapInfection.vue'
 import lineChartInfectProvince from '../components/ProvinceInfection.vue'
-import {mixin} from "../mixins"
+import {mixin} from '../mixins'
 
 export default {
   name: 'InfectProvinceDetail',
@@ -58,11 +58,11 @@ export default {
         })
       })
     },
-    back() {
+    back () {
       this.$router.go(-1)
     }
   },
-  mounted () {
+  created () {
     this.getProvinceMsg()
     this.getProvinceInfectionDataMsg()
   }

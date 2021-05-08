@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div index="/Home" class="image-menu-item" @click="goHome()">
+    <div class="image-menu-item" @click="goHome()">
       <el-image fit="contain" src='../../static/image/111.png' class="image-item"></el-image>
     </div>
     <el-menu
@@ -55,7 +55,7 @@ export default {
         '国外：ourwolrdindata，各国的感染数据（country level）',
         '      疫苗的历史数据和每日接种数据（country level）',
         '      JHU，补充了各国的state/province数据，以及美国\n' +
-            '      主要城市的感染数据',  
+            '      主要城市的感染数据',
         '每日凌晨3:00进行数据更新，届时带来不便，敬请谅解']
     }
   },
@@ -150,13 +150,6 @@ export default {
   width: 150px;
   margin-left: 5px;
   margin-right: 10px;
-}
-.image-menu-item:hover {
-  background-color: #ffffff !important;
-  color: #ffffff !important;
-}
-.image-menu-item:focus {
-  background-color: white;
 }
 /* .message-alert {
   word-break: break-all !important;

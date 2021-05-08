@@ -41,7 +41,7 @@ def getCountryInfection(country):
 
 @app.route('/countryVaccine/<country>', methods=["GET"])
 def getCountryVaccine(country):
-    return tables.getCountryInfection(country)
+    return tables.getCountryVaccine(country)
 
 
 @app.route('/provinceInfection/country/<province>', methods=["GET"])

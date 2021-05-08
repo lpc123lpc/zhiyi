@@ -52,10 +52,10 @@ export default {
     'vaccine-home-world-map': vaccineHomeWorldMap
   },
   created () { // 生命周期函数
-
+    this.getWorldMapVaccineDataMsg()
   },
   mounted () {
-    this.getWorldMapVaccineDataMsg()
+
   }
 }
 </script>

@@ -2,7 +2,9 @@
     <div id = 'WorldTable'>
       <el-table :data="items" highlight-current-row height="600">
         <el-table-column type="expand">
-          <country_data></country_data>
+          <template slot-scope="props">
+            <country_data v-bind:country="props.row.name"></country_data>
+          </template>
         </el-table-column>
         <el-table-column
           prop="name"
