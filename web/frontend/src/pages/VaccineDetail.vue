@@ -24,6 +24,8 @@ import header from '../components/Header.vue'
 import vaccineDetailSidebar from '../components/VaccineDetailSidebar.vue'
 import vaccineDetailCountryMap from '../components/CountryMapVaccine.vue'
 import lineChartVaccine from '../components/CountryVaccine.vue'
+import {mixin} from "../mixins";
+
 export default {
   name: 'VaccineDetail',
   components: { // 定义组件
@@ -38,6 +40,7 @@ export default {
       countryMapVaccineDataMsg: ''
     }
   },
+  mixins: [mixin],
   methods: { // 事件处理器
     getCountryMsg () {
       var that = this
@@ -48,6 +51,7 @@ export default {
       fetch('http://127.0.0.1:5000/vaccineDetail/countryMapVaccineDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
           that.judgeDataExist(data)
+          // console.log(data)
           that.countryMapVaccineDataMsg = data
         })
       })

@@ -1,11 +1,18 @@
 <template>
-    <el-container>
-      <el-header>
-        <el-button round type="warning" @click="change('confirmed')">确诊人数</el-button>
-        <el-button round type="danger" @click="change('deceased')">死亡人数</el-button>
-        <el-button round type="success" @click="change('cured')">治愈人数</el-button>
-      </el-header>
-      <el-main>
+    <div>
+      <el-row type="flex">
+        <el-col span="4" offset="4">
+          <el-button type="warning" style="align-content: center" @click="change('confirmed')">确诊人数</el-button>
+        </el-col>
+        <el-col span="4" offset="2">
+          <el-button type="danger" style="text-align: center" @click="change('deceased')">死亡人数</el-button>
+        </el-col>
+        <el-col span="4" offset="2">
+          <el-button type="success" style="text-align: center" @click="change('cured')">治愈人数</el-button>
+        </el-col>
+      </el-row>
+      <el-row>
+      <el-main style="text-align:center">
         <country-infection-confirmed v-show="isShow==='confirmed'" v-bind:names="names"
                                    v-bind:times="times" v-bind:confirmed="confirmed"></country-infection-confirmed>
       <country-infection-deceased v-show="isShow==='deceased'" v-bind:names="names"
@@ -13,7 +20,8 @@
       <country-infection-cured v-show="isShow==='cured'" v-bind:names="names"
       v-bind:times="times" v-bind:cured="cured"></country-infection-cured>
       </el-main>
-    </el-container>
+        </el-row>
+    </div>
 </template>
 
 <script>

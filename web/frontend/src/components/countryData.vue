@@ -31,7 +31,6 @@ export default {
             },
             legend: {
               left: '50%',
-              top: '5%',
               data: ['接种人数', '确诊人数', '治愈人数', '死亡人数'],
               textStyle: {
                 color: '#000',
@@ -51,7 +50,6 @@ export default {
               data: data.time
             }],
             yAxis: [{
-              name: '人数',
               nameTextStyle: {
                 fontSize: '14',
                 color: '#000'
@@ -62,7 +60,6 @@ export default {
               type: 'inside'
             },
             grid: {
-              top: '15%',
               containLabel: true
             },
             series: [{

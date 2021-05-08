@@ -15,7 +15,12 @@
     mixins: [mixin],
     mounted() {
       this.drawWorldMapVaccine()
-    }, 
+    },
+    watch: {
+      worldMapVaccineData() {
+          this.drawWorldMapVaccine()
+      }
+    },
     methods: {
        drawWorldMapVaccine() {
         // console.log(this.worldMapVaccineData)
@@ -70,14 +75,14 @@
             showLabel: false,
             left: '5%',
             bottom: '1%',
-            calculable: true,   
+            calculable: true,
             realtime: true,
             textStyle: {
                 fontSize: 12,
             },
             min: 0,
             max: 5000,
-            maxOpen: true, 
+            maxOpen: true,
             // text: ['接种人数/万'],
             textGap: 20,
             realtime: true,
@@ -91,7 +96,7 @@
             show: false,
             left: '5%',
             bottom: '1%',
-            calculable: true,   
+            calculable: true,
             realtime: true,
             // text: ['覆盖率'],
             textGap: 20,

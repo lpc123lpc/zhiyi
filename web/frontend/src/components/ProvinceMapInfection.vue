@@ -18,11 +18,14 @@
         province() {
             // console.log(this.province)
             this.drawProvinceMapInfection()
+        },
+        provinceMapInfectionData() {
+            this.drawProvinceMapInfection()
         }
     },
     mounted() {
         this.drawProvinceMapInfection()
-    }, 
+    },
     methods: {
        drawProvinceMapInfection() {
             var provinceFileName = this.getChinaProvinceFileName(this.province)
@@ -61,7 +64,7 @@
                     left: '2%',
                     orient: 'vertical',
                     top: '10%',
-                    selected: {'当前确诊': true, '累计确诊': false, '累计治愈': false, '累计死亡': false},
+                    selected: {'当前确诊': false, '累计确诊': true, '累计治愈': false, '累计死亡': false},
                     selectedMode: 'single',
                     textStyle: {
                         color: '#000',
@@ -82,7 +85,7 @@
                                 {start: 1000, end: 9999},
                                 {start: 10000}],
                     color: ['#70161D', '#CB2A2F', '#E55A4E', '#F59E83', '#FDEBCF', '#DCE2EB'],
-            
+
                 },
                 series: [{
                     name: '当前确诊',

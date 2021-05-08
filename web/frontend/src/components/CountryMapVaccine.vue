@@ -24,6 +24,9 @@
         country() {
             [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
             this.drawCountryMapVaccine()
+        },
+        countryMapVaccineData9() {
+            this.drawCountryMapVaccine()
         }
     },
     mounted() {
