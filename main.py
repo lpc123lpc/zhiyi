@@ -3,14 +3,15 @@ from flask_cors import CORS
 from controller import map, tables, sidebar
 from database.static import dao, table
 from database.static.getInitData import *
-from database.static.dao import updateInf
+from database.static.dao import updateInf, updateVac
 import os
 
 app = table.app
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 # 初始化数据库，第一次执行完后就可以注释掉
 '''Init() 
-updateInf()'''
+updateInf()
+updateVac()'''
 
 @app.route('/')
 def index():

@@ -39,7 +39,7 @@
           sortable>
         </el-table-column>
         <el-table-column
-          prop="vaccined_coverage"
+          prop="vaccine_coverage"
           label="接种率"
           sortable>
         </el-table-column>
