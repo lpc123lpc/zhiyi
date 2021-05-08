@@ -75,7 +75,7 @@
                     left: '2%',
                     orient: 'vertical',
                     top: '10%',
-                    selected: {'当前确诊': true, '累计确诊': false, '累计治愈': false, '累计死亡': false},
+                    selected: {'当前确诊': false, '累计确诊': true, '累计治愈': false, '累计死亡': false},
                     selectedMode: 'single',
                     textStyle: {
                         color: '#000',
