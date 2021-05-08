@@ -23,6 +23,13 @@ hs_err_pid*
 .idea
 .DS_Store
 
+countriesMap.json
+countriesDataMap.json
+countriesUrlsMap.json
+provinceCityData.json
+provinceCityMap.json
+provinceCityUrlsMap.json
+world-mapping.json
 
 package-lock.json
 package.json

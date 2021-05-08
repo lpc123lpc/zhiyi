@@ -11,6 +11,7 @@ yesInfData = testData.infdata[0]'''
 def getVaccinationTotalSidebar(country):
     todayVacData = dao.getNowVacMessage(country)
     if todayVacData is None:
+        print(1)
         return jsonify({})
     return jsonify({
         "value": getattr(todayVacData, 'totalNum')
