@@ -1,16 +1,10 @@
 <template>
     <div>
-      <el-row type="flex">
-        <el-col span="4" offset="4">
-          <el-button type="warning" style="align-content: center" @click="change('confirmed')">确诊人数</el-button>
-        </el-col>
-        <el-col span="4" offset="2">
-          <el-button type="danger" style="text-align: center" @click="change('deceased')">死亡人数</el-button>
-        </el-col>
-        <el-col span="4" offset="2">
-          <el-button type="success" style="text-align: center" @click="change('cured')">治愈人数</el-button>
-        </el-col>
-      </el-row>
+      <div style="width: 100%">
+        <el-button type="warning" style="margin-left: 20%" @click="change('confirmed')">确诊人数</el-button>
+        <el-button type="danger"  style="margin-left: 14%" @click="change('deceased')">死亡人数</el-button>
+        <el-button type="success" style="margin-left: 15%" @click="change('cured')">治愈人数</el-button>
+      </div>
       <el-row>
       <el-main style="text-align:center">
         <country-infection-confirmed v-show="isShow==='confirmed'" v-bind:names="names"
@@ -42,9 +36,6 @@ export default {
       isShow: 'confirmed'
     }
   },
-  props: {
-    country: String
-  },
   mounted () {
     this.getData()
   },
@@ -73,6 +64,8 @@ export default {
             }))
           }
         })
+      }).catch(function (err) {
+        alert(err.toString)
       })
     },
     change (x) {
