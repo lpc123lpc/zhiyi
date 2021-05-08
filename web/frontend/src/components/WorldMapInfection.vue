@@ -13,9 +13,14 @@
       'worldMapInfectionData'
     ],
     mixins: [mixin],
+    watch: {
+      worldMapInfectionData () {
+        this.drawWorldMapInfection()
+      }
+    },
     mounted() {
       this.drawWorldMapInfection()
-    }, 
+    },
     methods: {
        drawWorldMapInfection() {
             // console.log(this.worldMapInfectionData)
@@ -63,14 +68,14 @@
                     showLabel: false,
                     left: '5%',
                     bottom: '1%',
-                    calculable: true,   
+                    calculable: true,
                     realtime: true,
                     textStyle: {
                         fontSize: 12,
                     },
                     min: 0,
                     max: 5000,
-                    maxOpen: true, 
+                    maxOpen: true,
                     textGap: 20,
                     realtime: true,
                     calculable: true,

@@ -24,12 +24,15 @@
         country() {
             [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
             this.drawCountryMapInfection()
+        },
+        countryMapInfectionData() {
+            this.drawCountryMapInfection()
         }
     },
     mounted() {
         [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
         this.drawCountryMapInfection()
-    }, 
+    },
     methods: {
        drawCountryMapInfection() {
             // console.log(this.countryFileName)
@@ -93,7 +96,7 @@
                                 {start: 10000, end: 99999},
                                 {start: 100000}],
                     color: ['#70161D', '#CB2A2F', '#E55A4E', '#F59E83', '#FDEBCF', '#DCE2EB'],
-            
+
                 },
                 series: [{
                     name: '当前确诊',
