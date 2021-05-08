@@ -64,7 +64,7 @@ export default {
       infect_province_cure_add: ''
     }
   },
-  mounted () {
+  created () {
     this.getInfectProvinceSum()
     this.getInfectProvinceSumAdd()
     this.getInfectProvinceDeath()

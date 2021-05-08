@@ -64,7 +64,7 @@ export default {
       infect_cure_add: ''
     }
   },
-  mounted () {
+  created () {
     this.getInfectSum()
     this.getInfectSumAdd()
     this.getInfectDeath()

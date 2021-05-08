@@ -20,7 +20,7 @@ export default {
       vaccine_cover_add: ''
     }
   },
-  mounted () {
+  created () {
     this.getVaccineSum()
     this.getVaccineSumAdd()
     this.getVaccineCover()

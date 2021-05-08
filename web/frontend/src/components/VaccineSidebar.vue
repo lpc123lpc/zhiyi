@@ -39,7 +39,7 @@ export default {
       vaccine_sum_add: ''
     }
   },
-  mounted () {
+  created () {
     this.getVaccineSum()
     this.getVaccineSumAdd()
   },
