@@ -57,6 +57,7 @@ def getArea():
 
 
 def getHisVac():
+    clearTable('hisVacMessages')
     vacMessage = Spider.getData(0)
     worldMappingPath = './world-mapping.json'
     with open(worldMappingPath, mode='r', encoding='utf-8') as f:
