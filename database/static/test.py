@@ -32,5 +32,3 @@ def getCountryHisTest():
    data = Spider.getData(8)
    Spider.saveToJsonFile(data, 'country.json')
 
-clearTable('nowInfMessages')
-updateForeignProvinceInf()

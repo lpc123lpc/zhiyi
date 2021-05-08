@@ -296,14 +296,14 @@ def updateVac():
         worldMapping = json.load(f)
         v1 = None
         for v in vacMessage:
-            if worldMapping.has_key(v['location']):
-                name = 'global' if v['location'] == 'World' else worldMapping[v['location']]['cn']
+            if v['location'] in worldMapping:
+                name = worldMapping[v['location']]['cn']
             else:
-                name = v['location']
+                name = 'global' if v['location'] == 'World' else v['location']
             if name != lastName and i != 0:
                 totalNum = 0 if v1['total_vaccinations'] == '' else int(v1['total_vaccinations'])
                 addNum = 0 if v1['daily_vaccinations_raw'] == '' else int(v1['daily_vaccinations_raw'])
-                vacRate = 0 if v1['total_vaccinations_per_hundred'] == '' else int(v1['total_vaccinations_per_hundred'])
+                vacRate = 0 if v1['total_vaccinations_per_hundred'] == '' else float(v1['total_vaccinations_per_hundred'])
                 NowVacMessage.query.filter_by(areaName=name) \
                     .update({'time': v1['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
                 db.session.commit()
@@ -312,7 +312,7 @@ def updateVac():
             i += 1
         totalNum = 0 if v['total_vaccinations'] == '' else int(v['total_vaccinations'])
         addNum = 0 if v['daily_vaccinations_raw'] == '' else int(v['daily_vaccinations_raw'])
-        vacRate = 0 if v['total_vaccinations_per_hundred'] == '' else int(v['total_vaccinations_per_hundred'])
+        vacRate = 0 if v['total_vaccinations_per_hundred'] == '' else float(v['total_vaccinations_per_hundred'])
         NowVacMessage.query.filter_by(areaName=name) \
             .update({'time': v['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
         db.session.commit()
@@ -365,6 +365,7 @@ def addMessage(area, toType, today):
         name = area['name']
         if name == '日本本土':
             name = '日本'
+        print(area['confirmAdd'])
         x = NowInfMessage(time=today,
                           areaName=name,
                           currentNum=area['nowConfirm'],
