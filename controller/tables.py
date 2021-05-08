@@ -15,7 +15,7 @@ def getWorldData():
     print(worldVacData)
 
     all_data = []
-    '''for i in worldInfData:
+    for i in worldInfData:
         for j in worldVacData:
             if getattr(i, 'areaName') == getattr(j, 'areaName'):
                 all_data.append({"name": getattr(i, 'areaName'),
@@ -26,8 +26,8 @@ def getWorldData():
                                  "vaccined": getattr(j, 'totalNum'),
                                  "newVaccined": getattr(j, 'addNum'),
                                  "vaccine_coverage": getattr(j, 'vacRate')})
-                break'''
-    for j in worldVacData:
+                break
+    '''for j in worldVacData:
         all_data.append({"name": getattr(j, 'areaName'),
                              "confirmed": 0,
                              "newConfirmed": 0,
@@ -35,7 +35,7 @@ def getWorldData():
                              "deceased": 0,
                              "vaccined": getattr(j, 'totalNum'),
                              "newVaccined": getattr(j, 'addNum'),
-                             "vaccine_coverage": getattr(j, 'vacRate')})
+                             "vaccine_coverage": getattr(j, 'vacRate')})'''
     return json.dumps(all_data)
 
 

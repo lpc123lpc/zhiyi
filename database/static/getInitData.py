@@ -211,8 +211,12 @@ def getGlobalProvinceHisInf():
 
 def Init():
     getArea()       #github
+    print(1)
     getHisVac()
+    print(2)
     getChinaHisInf()
+    print(3)
     getGlobalCountryHisInf()
+    print(4)
     getGlobalProvinceHisInf()       #github
 
