@@ -157,46 +157,55 @@ def getGlobalCountryHisInf():
 
 def getGlobalProvinceHisInf():
     foreignCityUrls, USUrls = Spider.getData(6)
-    worldMappingPath = './world-mapping.json'
-    with open(worldMappingPath, mode='r', encoding='utf-8') as f:
-        worldMapping = json.load(f)
-        for url in foreignCityUrls:
-            date = Spider.getCSVDictReader(url)
-            for province in date:
-                try:
-                    countryName = province['Country_Region']
-                    if countryName in worldMapping:
-                        countryName = worldMapping[province['Country_Region']]['cn']
-                    provinceName = province['Province_State']
-                    cityName = province['Admin2']
-                    if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
-                        Last_Update = province['Last_Update']
-                        t = Last_Update[:10]
-                        x = InfMessage(time=t,
-                                       areaName=provinceName,
-                                       currentNum=0 if province['Active'] == '' else int(province['Active']),
-                                       totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed']),
-                                       addNum=0,
-                                       cured=0 if province['Recovered'] == '' else int(province['Recovered']),
-                                       totalDead=0 if province['Deaths'] == '' else int(province['Deaths']),
-                                       addDead=0)
-                        add(x)
-                except Exception as e:
-                    print(e)
+    for url in foreignCityUrls:
+        date = Spider.getCSVDictReader(url)
+        china = ChinaInfMessage(time='', areaName='中国', currentNum=0, totalNum=0, addNum=0, cured=0, totalDead=0, addDead=0)
+        for province in date:
+            try:
+                countryName = province['Country_Region']
+                provinceName = province['Province_State']
+                cityName = province['Admin2']
+                if countryName != 'US' and countryName != 'China' and countryName != 'Taiwan*' and cityName == '' and provinceName != 'Unknown':
+                    Last_Update = province['Last_Update']
+                    t = Last_Update[:10]
+                    x = InfMessage(time=t,
+                                   areaName=provinceName,
+                                   currentNum=0 if province['Active'] == '' else int(province['Active']),
+                                   totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed']),
+                                   addNum=0,
+                                   cured=0 if province['Recovered'] == '' else int(province['Recovered']),
+                                   totalDead=0 if province['Deaths'] == '' else int(province['Deaths']),
+                                   addDead=0)
+                    add(x)
+                if countryName == 'China' or countryName == 'Taiwan*':
+                    china.time = province['Last_Update'][:10]
+                    currentNum =0 if province['Active'] == '' else int(province['Active'])
+                    china.currentNum += currentNum
+                    totalNum = 0 if province['Confirmed'] == '' else int(province['Confirmed'])
+                    china.totalNum += totalNum
+                    cured = 0 if province['Recovered'] == '' else int(province['Recovered'])
+                    china.cured += cured
+                    totalDead = 0 if province['Deaths'] == '' else int(province['Deaths'])
+                    china.totalDead += totalDead
+            except Exception as e:
+                print(e)
 
-        for url in USUrls:
-            date = Spider.getCSVDictReader(url)
-            for province in date:
-                t = province['Last_Update'][:10]
-                x = InfMessage(time=t,
-                       areaName=provinceName,
-                       currentNum= 0 if province['Active'] == '' else int(province['Active'].split('.')[0]),
-                       totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
-                       addNum=0,
-                       cured=0 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
-                       totalDead=0 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
-                       addDead=0)
-                add(x)
+        add(china)
+
+    for url in USUrls:
+        date = Spider.getCSVDictReader(url)
+        for province in date:
+            t = province['Last_Update'][:10]
+            x = InfMessage(time=t,
+                           areaName=province['Province_State'],
+                           currentNum=0 if province['Active'] == '' else int(province['Active'].split('.')[0]),
+                           totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
+                           addNum=0,
+                           cured=0 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
+                           totalDead=0 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
+                           addDead=0)
+            add(x)
+
 
 
 
