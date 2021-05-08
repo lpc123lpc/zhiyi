@@ -13,6 +13,7 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 updateInf()
 updateVac()'''
 
+
 @app.route('/')
 def index():
     return '欢迎来到知疫'
@@ -126,7 +127,6 @@ def getInfectionDeadAddHeadbar():
 @app.route('/infectHomeHeadbar/infectCure', methods=["GET"])
 def getInfectionCureHeadbar():
     return sidebar.getInfectionCureSidebar('global')
-
 
 
 @app.route('/infectDetailSidebar/infectSum/<country>', methods=["GET"])

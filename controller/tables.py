@@ -26,17 +26,7 @@ def getWorldData():
                                  "vaccined": getattr(j, 'totalNum'),
                                  "newVaccined": getattr(j, 'addNum'),
                                  "vaccine_coverage": getattr(j, 'vacRate')})
-                print(getattr(j, 'vacRate'))
                 break
-    '''for j in worldInfData:
-        all_data.append({"name": getattr(j, 'areaName'),
-                             "confirmed": getattr(j, 'totalNum'),
-                                 "newConfirmed": getattr(j, 'addNum'),
-                                 "cured": getattr(j, 'cured'),
-                                 "deceased": getattr(j, 'totalDead'),
-                                 "vaccined": 0,
-                                 "newVaccined": 0,
-                                 "vaccine_coverage": 0})'''
     return json.dumps(all_data)
 
 
