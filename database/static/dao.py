@@ -164,8 +164,8 @@ message:建议内容
 '''
 
 
-def saveAdvice(message):
-    advice = Advice(text=message)
+def saveAdvice(message, t):
+    advice = Advice(text=message, time=t)
     add(advice)
     return None
 
