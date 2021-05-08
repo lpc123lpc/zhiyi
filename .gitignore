@@ -41,3 +41,4 @@ __pycache__
 venv/
 /web/frontend/node_modules
 /web/frontend/static/json/map/china-province/mapType
+/database/static/table.py

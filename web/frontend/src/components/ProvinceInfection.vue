@@ -6,7 +6,7 @@
 import echarts from 'echarts'
 export default {
   name: 'ProvinceInfection',
-  mouted () {
+  mounted () {
     this.drawProvinceInfection()
   },
   methods: {
