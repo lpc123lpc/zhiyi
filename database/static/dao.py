@@ -64,13 +64,7 @@ return:返回该区域所包含的国家/地区的历史感染信息（下一级
 
 
 def getHisInfMessageInclude(name):
-<<<<<<< HEAD
     areas = db.session.query(Area).filter(Area.parentArea == name).all()
-=======
-    print(name)
-    areas = db.session.query(Area.childArea).filter(Area.parentArea == name).all()
-    print(areas)
->>>>>>> 11952e6221f91bb68591bd401d6c9776f63ff58d
     messages = []
     if areas is None:
         return None
@@ -78,11 +72,9 @@ def getHisInfMessageInclude(name):
         isChina = db.session.query(ChinaInfMessage.time).filter(ChinaInfMessage.areaName == areas[0]).first()
         if isChina is None:
             for area in areas:
-                print(area == 'Alabama')
                 message = db.session.query(InfMessage) \
                     .filter(InfMessage.areaName == area.childArea) \
                     .order_by(InfMessage.time.desc()).limit(180).all()
-                print(message)
                 if message is not None:
                     message.reverse()
                     messages.append(message)
@@ -91,7 +83,6 @@ def getHisInfMessageInclude(name):
                 message = db.session.query(ChinaInfMessage) \
                     .filter(ChinaInfMessage.areaName == area.childArea) \
                     .order_by(ChinaInfMessage.time.desc()).limit(180).all()
-                print(message)
                 if area == "吉林市":
                     for m in message:
                         m.areaName = "吉林"

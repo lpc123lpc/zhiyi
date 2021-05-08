@@ -99,8 +99,8 @@ def getChinaHisInf():
                 t = str(date['year']) + "-" + date['date'][:2] + "-" + date['date'][3:5]
                 x = ChinaInfMessage(time=t,
                                     areaName=date['province'],
-                                    currentNum=date['confirm'],
-                                    totalNum=date['confirm'] - date['heal'],
+                                    currentNum=date['confirm'] - date['heal'],
+                                    totalNum=date['confirm'],
                                     addNum=date['newConfirm'],
                                     cured=date['heal'],
                                     totalDead=date['dead'],
@@ -119,8 +119,8 @@ def getChinaHisInf():
                             name = date['city'] if date['city'] != "吉林" else "吉林市"
                             x = ChinaInfMessage(time=t,
                                                 areaName=date['city'],
-                                                currentNum=date['confirm'],
-                                                totalNum=date['confirm'] - date['heal'],
+                                                currentNum=date['confirm'] - date['heal'],
+                                                totalNum=date['confirm'],
                                                 addNum=int(date['confirm_add'] if date['confirm_add'] != '' else -1),
                                                 cured=date['heal'],
                                                 totalDead=date['dead'],
