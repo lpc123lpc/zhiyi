@@ -6,9 +6,6 @@
 import echarts from 'echarts'
 export default {
   name: 'CountryVaccine',
-  props: {
-    country: String
-  },
   mounted () {
     this.CountryVaccine()
   },
@@ -17,7 +14,7 @@ export default {
       var myChart = echarts.init(document.getElementById('countryVaccine'))
       var series = []
       var names = []
-      fetch('http://127.0.0.1:5000/countryVaccine/' + this.country).then(function (response) {
+      fetch('http://127.0.0.1:5000/countryVaccine/' + this.$route.params.country).then(function (response) {
         response.json().then(function (data) {
           for (var i = 0; i < data.length; i++) {
             series.push(
@@ -59,7 +56,7 @@ export default {
               name: '日期',
               type: 'category',
               nameTextStyle: {
-                fontSize: '14',
+                fontSize: '14'
               },
               axisTick: {
                 alignWithLabel: 'true'
