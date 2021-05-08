@@ -10,12 +10,12 @@ worldVacData = testData.vacdata'''
 
 
 def getWorldData():
-    worldVacData = dao.getNowVacMessageInclude('global')
-    '''worldInfData = dao.getNowInfMessageInclude('global')'''
-    print(worldVacData)
+    '''worldVacData = dao.getNowVacMessageInclude('global')'''
+    worldInfData = dao.getNowInfMessageInclude('global')
+
 
     all_data = []
-    for i in worldInfData:
+    '''for i in worldInfData:
         for j in worldVacData:
             if getattr(i, 'areaName') == getattr(j, 'areaName'):
                 all_data.append({"name": getattr(i, 'areaName'),
@@ -26,16 +26,16 @@ def getWorldData():
                                  "vaccined": getattr(j, 'totalNum'),
                                  "newVaccined": getattr(j, 'addNum'),
                                  "vaccine_coverage": getattr(j, 'vacRate')})
-                break
-    '''for j in worldVacData:
+                break'''
+    for j in worldInfData:
         all_data.append({"name": getattr(j, 'areaName'),
-                             "confirmed": 0,
-                             "newConfirmed": 0,
-                             "cured": 0,
-                             "deceased": 0,
-                             "vaccined": getattr(j, 'totalNum'),
-                             "newVaccined": getattr(j, 'addNum'),
-                             "vaccine_coverage": getattr(j, 'vacRate')})'''
+                             "confirmed": getattr(j, 'totalNum'),
+                                 "newConfirmed": getattr(j, 'addNum'),
+                                 "cured": getattr(j, 'cured'),
+                                 "deceased": getattr(j, 'totalDead'),
+                                 "vaccined": 0,
+                                 "newVaccined": 0,
+                                 "vaccine_coverage": 0})
     return json.dumps(all_data)
 
 
