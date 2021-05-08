@@ -234,43 +234,44 @@ def updateForeignProvinceInf():
 
                 x = NowInfMessage(time=t,
                                   areaName=provinceName,
-                                  currentNum=0 if province['Active'] == '' else int(province['Active']),
-                                  totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed']),
-                                  addNum=0,
-                                  cured=0 if province['Recovered'] == '' else int(province['Recovered']),
-                                  totalDead=0 if province['Deaths'] == '' else int(province['Deaths']),
-                                  addDead=0)
+                                  currentNum=-1 if province['Active'] == '' else int(province['Active']),
+                                  totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed']),
+                                  addNum=-1,
+                                  cured=-1 if province['Recovered'] == '' else int(province['Recovered']),
+                                  totalDead=-1 if province['Deaths'] == '' else int(province['Deaths']),
+                                  addDead=-1)
                 add(x)
                 y = InfMessage(time=t,
                                areaName=provinceName,
-                               currentNum=0 if province['Active'] == '' else int(province['Active']),
+                               currentNum=-1 if province['Active'] == '' else int(province['Active']),
                                totalNum=int(province['Confirmed']),
-                               addNum=0,
+                               addNum=-1,
                                cured=int(province['Recovered']),
                                totalDead=int(province['Deaths']),
-                               addDead=0)
+                               addDead=-1)
                 add(y)
 
     usProvinces = Spider.getCSVDictReader(uy)
+    print(uy)
     for province in usProvinces:
         t = province['Last_Update'][:10]
         x = NowInfMessage(time=t,
-                          areaName=provinceName,
-                          currentNum=0 if province['Active'] == '' else int(province['Active'].split('.')[0]),
-                          totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
-                          addNum=0,
-                          cured=0 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
-                          totalDead=0 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
-                          addDead=0)
+                          areaName=province['Province_State'],
+                          currentNum=-1 if province['Active'] == '' else int(province['Active'].split('.')[0]),
+                          totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
+                          addNum=-1,
+                          cured=-1 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
+                          totalDead=-1 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
+                          addDead=-1)
         add(x)
         y = InfMessage(time=t,
-                       areaName=provinceName,
-                       currentNum=0 if province['Active'] == '' else int(province['Active'].split('.')[0]),
-                       totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
-                       addNum=0,
-                       cured=0 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
-                       totalDead=0 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
-                       addDead=0)
+                       areaName=province['Province_State'],
+                       currentNum=-1 if province['Active'] == '' else int(province['Active'].split('.')[0]),
+                       totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
+                       addNum=-1,
+                       cured=-1 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
+                       totalDead=-1 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
+                       addDead=-1)
         add(y)
 
 
@@ -300,18 +301,18 @@ def updateVac():
             else:
                 name = 'global' if v['location'] == 'World' else v['location']
             if name != lastName and i != 0:
-                totalNum = 0 if v1['total_vaccinations'] == '' else int(v1['total_vaccinations'])
-                addNum = 0 if v1['daily_vaccinations_raw'] == '' else int(v1['daily_vaccinations_raw'])
-                vacRate = 0 if v1['total_vaccinations_per_hundred'] == '' else float(v1['total_vaccinations_per_hundred'])
+                totalNum = -1 if v1['total_vaccinations'] == '' else int(v1['total_vaccinations'])
+                addNum = -1 if v1['daily_vaccinations_raw'] == '' else int(v1['daily_vaccinations_raw'])
+                vacRate = -1 if v1['total_vaccinations_per_hundred'] == '' else float(v1['total_vaccinations_per_hundred'])
                 NowVacMessage.query.filter_by(areaName=lastName) \
                     .update({'time': v1['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
                 db.session.commit()
             lastName = name
             v1 = v
             i += 1
-        totalNum = 0 if v['total_vaccinations'] == '' else int(v['total_vaccinations'])
-        addNum = 0 if v['daily_vaccinations_raw'] == '' else int(v['daily_vaccinations_raw'])
-        vacRate = 0 if v['total_vaccinations_per_hundred'] == '' else float(v['total_vaccinations_per_hundred'])
+        totalNum = -1 if v['total_vaccinations'] == '' else int(v['total_vaccinations'])
+        addNum = -1 if v['daily_vaccinations_raw'] == '' else int(v['daily_vaccinations_raw'])
+        vacRate = -1 if v['total_vaccinations_per_hundred'] == '' else float(v['total_vaccinations_per_hundred'])
         NowVacMessage.query.filter_by(areaName=name) \
             .update({'time': v['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
         db.session.commit()

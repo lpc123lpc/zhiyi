@@ -69,9 +69,9 @@ def getHisVac():
                 name = worldMapping[v['location']]['cn']
             else:
                 name = 'global' if v['location'] == 'World' else v['location']
-            totalNum = 0 if v['total_vaccinations'] == '' else int(v['total_vaccinations'])
-            addNum = 0 if v['daily_vaccinations_raw'] == '' else int(v['daily_vaccinations_raw'])
-            vacRate = 0 if v['total_vaccinations_per_hundred'] == '' else float(v['total_vaccinations_per_hundred'])
+            totalNum = -1 if v['total_vaccinations'] == '' else int(v['total_vaccinations'])
+            addNum = -1 if v['daily_vaccinations_raw'] == '' else int(v['daily_vaccinations_raw'])
+            vacRate = -1 if v['total_vaccinations_per_hundred'] == '' else float(v['total_vaccinations_per_hundred'])
             vac = VacMessage(time=v['date'], areaName=name, totalNum=totalNum, addNum=addNum, vacRate=vacRate)
             add(vac)
             if name != lastname and i != 0:
@@ -120,10 +120,10 @@ def getChinaHisInf():
                                                 areaName=date['city'],
                                                 currentNum=date['confirm'],
                                                 totalNum=date['confirm'] - date['heal'],
-                                                addNum=int(date['confirm_add'] if date['confirm_add'] != '' else 0),
+                                                addNum=int(date['confirm_add'] if date['confirm_add'] != '' else -1),
                                                 cured=date['heal'],
                                                 totalDead=date['dead'],
-                                                addDead=0)
+                                                addDead=-1)
                             add(x)
                 except Exception as e:
                     print(e)
@@ -151,7 +151,7 @@ def getGlobalCountryHisInf():
                            addNum=m['confirm_add'],
                            cured=m['heal'],
                            totalDead=m['dead'],
-                           addDead=0)
+                           addDead=-1)
             add(x)
 
 
@@ -170,22 +170,22 @@ def getGlobalProvinceHisInf():
                     t = Last_Update[:10]
                     x = InfMessage(time=t,
                                    areaName=provinceName,
-                                   currentNum=0 if province['Active'] == '' else int(province['Active']),
-                                   totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed']),
-                                   addNum=0,
-                                   cured=0 if province['Recovered'] == '' else int(province['Recovered']),
-                                   totalDead=0 if province['Deaths'] == '' else int(province['Deaths']),
-                                   addDead=0)
+                                   currentNum=-1 if province['Active'] == '' else int(province['Active']),
+                                   totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed']),
+                                   addNum=-1,
+                                   cured=-1 if province['Recovered'] == '' else int(province['Recovered']),
+                                   totalDead=-1 if province['Deaths'] == '' else int(province['Deaths']),
+                                   addDead=-1)
                     add(x)
                 if countryName == 'China' or countryName == 'Taiwan*':
                     china.time = province['Last_Update'][:10]
-                    currentNum =0 if province['Active'] == '' else int(province['Active'])
+                    currentNum =-1 if province['Active'] == '' else int(province['Active'])
                     china.currentNum += currentNum
-                    totalNum = 0 if province['Confirmed'] == '' else int(province['Confirmed'])
+                    totalNum = -1 if province['Confirmed'] == '' else int(province['Confirmed'])
                     china.totalNum += totalNum
-                    cured = 0 if province['Recovered'] == '' else int(province['Recovered'])
+                    cured = -1 if province['Recovered'] == '' else int(province['Recovered'])
                     china.cured += cured
-                    totalDead = 0 if province['Deaths'] == '' else int(province['Deaths'])
+                    totalDead = -1 if province['Deaths'] == '' else int(province['Deaths'])
                     china.totalDead += totalDead
             except Exception as e:
                 print(e)
@@ -198,12 +198,12 @@ def getGlobalProvinceHisInf():
             t = province['Last_Update'][:10]
             x = InfMessage(time=t,
                            areaName=province['Province_State'],
-                           currentNum=0 if province['Active'] == '' else int(province['Active'].split('.')[0]),
-                           totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
-                           addNum=0,
-                           cured=0 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
-                           totalDead=0 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
-                           addDead=0)
+                           currentNum=-1 if province['Active'] == '' else int(province['Active'].split('.')[0]),
+                           totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
+                           addNum=-1,
+                           cured=-1 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
+                           totalDead=-1 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
+                           addDead=-1)
             add(x)
 
 
