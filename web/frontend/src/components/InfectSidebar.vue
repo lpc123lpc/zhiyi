@@ -13,7 +13,7 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      {{infect_sum_add}}
+      +{{infect_sum_add}}
     </div>
     <div class="today-item">
       现有确诊
@@ -54,7 +54,7 @@ export default {
       infect_cure_add: ''
     }
   },
-  mounted () {
+  created () {
     this.getInfectSum()
     this.getInfectSumAdd()
     this.getInfectCure()
@@ -65,7 +65,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/infectSidebar/infectSum').then(function (response) {
         response.json().then((data) => {
-          that.infect_sum = data
+          that.infect_sum = data.value
         })
       })
     },
@@ -73,7 +73,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/infectSidebar/infectSumAdd').then(function (response) {
         response.json().then((data) => {
-          that.infect_sum_add = data
+          that.infect_sum_add = data.value
         })
       })
     },
@@ -81,7 +81,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/infectSidebar/infectCure').then(function (response) {
         response.json().then((data) => {
-          that.infect_cure = data
+          that.infect_cure = data.value
         })
       })
     },
@@ -89,7 +89,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/infectSidebar/infectCureAdd').then(function (response) {
         response.json().then((data) => {
-          that.infect_cure_add = data
+          that.infect_cure_add = data.value
         })
       })
     }

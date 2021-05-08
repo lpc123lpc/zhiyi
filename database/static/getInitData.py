@@ -36,7 +36,7 @@ def getArea():
         globalProvinces = Spider.getCSVDictReader(yUrl)
         for province in globalProvinces:
             #print(province['Province_State'])
-            if province['Country_Region'] != 'US' and province['Province_State'] != '' and province['Admin2'] == '' and province['Province_State'] != 'Unknown':
+            if province['Country_Region'] != 'US' and province['Province_State'] != '' and province['Admin2'] == '' and province['Country_Region'] and province['Province_State'] != 'Unknown':
                 parent = ''
                 if province['Country_Region'] in worldMapping:
                     parent = worldMapping[province['Country_Region']]['cn']
@@ -57,6 +57,7 @@ def getArea():
 
 
 def getHisVac():
+    clearTable('hisVacMessages')
     vacMessage = Spider.getData(0)
     worldMappingPath = './world-mapping.json'
     with open(worldMappingPath, mode='r', encoding='utf-8') as f:
@@ -98,8 +99,8 @@ def getChinaHisInf():
                 t = str(date['year']) + "-" + date['date'][:2] + "-" + date['date'][3:5]
                 x = ChinaInfMessage(time=t,
                                     areaName=date['province'],
-                                    currentNum=date['confirm'],
-                                    totalNum=date['confirm'] - date['heal'],
+                                    currentNum=date['confirm'] - date['heal'],
+                                    totalNum=date['confirm'],
                                     addNum=date['newConfirm'],
                                     cured=date['heal'],
                                     totalDead=date['dead'],
@@ -118,8 +119,8 @@ def getChinaHisInf():
                             name = date['city'] if date['city'] != "吉林" else "吉林市"
                             x = ChinaInfMessage(time=t,
                                                 areaName=date['city'],
-                                                currentNum=date['confirm'],
-                                                totalNum=date['confirm'] - date['heal'],
+                                                currentNum=date['confirm'] - date['heal'],
+                                                totalNum=date['confirm'],
                                                 addNum=int(date['confirm_add'] if date['confirm_add'] != '' else -1),
                                                 cured=date['heal'],
                                                 totalDead=date['dead'],

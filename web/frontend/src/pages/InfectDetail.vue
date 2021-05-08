@@ -56,7 +56,7 @@ export default {
       })
     }
   },
-  mounted () {
+  created () {
     this.getCountryMsg()
     this.getCountryInfectionDataMsg()
   }

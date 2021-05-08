@@ -70,9 +70,10 @@ def getCountryInfection(country):
     if data is None:
         return jsonify({})
     for i in data:
-        position = getattr(i[0], 'areaName')
+        position = ''
         confirmed, deceased, cured, times = [], [], [], []
         for j in i:
+            position = getattr(i[0], 'areaName')
             times.append(getattr(j, 'time'))
             cured.append(getattr(j, 'cured'))
             confirmed.append(getattr(j, 'totalNum'))
@@ -98,7 +99,7 @@ def getCountryVaccine(country):
 
 
 def getProvinceInfection(province):
-    times, confirmed, deceased, cure = [], [], [], [], []
+    times, confirmed, deceased, cure = [], [], [], []
     infData = dao.getHisInfMessage(province)
     if infData is None:
         return jsonify({})

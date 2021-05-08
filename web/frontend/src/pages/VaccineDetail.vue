@@ -24,7 +24,7 @@ import header from '../components/Header.vue'
 import vaccineDetailSidebar from '../components/VaccineDetailSidebar.vue'
 import vaccineDetailCountryMap from '../components/CountryMapVaccine.vue'
 import lineChartVaccine from '../components/CountryVaccine.vue'
-import {mixin} from "../mixins";
+import {mixin} from '../mixins';
 
 export default {
   name: 'VaccineDetail',
@@ -57,7 +57,7 @@ export default {
       })
     }
   },
-  mounted () {
+  created () {
     this.getCountryMsg()
     this.getCountryMapVaccineDataMsg()
   }

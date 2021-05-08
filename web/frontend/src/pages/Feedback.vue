@@ -38,7 +38,7 @@ export default {
       feedBackInput.style.setProperty('margin-left', elMain.offsetWidth / 2 - 350 + 'px')
     }
   },
-  mounted () {
+  created () {
     this.set_left()
   }
 }

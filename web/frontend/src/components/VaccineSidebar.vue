@@ -13,7 +13,7 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      {{vaccine_sum_add}}
+      +{{vaccine_sum_add}}
     </div>
     <div class="today-item">
       累计接种
@@ -39,7 +39,7 @@ export default {
       vaccine_sum_add: ''
     }
   },
-  mounted () {
+  created () {
     this.getVaccineSum()
     this.getVaccineSumAdd()
   },
@@ -48,7 +48,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/vaccineSidebar/vaccineSum').then(function (response) {
         response.json().then((data) => {
-          that.vaccine_sum = data
+          that.vaccine_sum = data.value
         })
       })
     },
@@ -56,7 +56,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/vaccineSidebar/vaccineSumAdd').then(function (response) {
         response.json().then((data) => {
-          that.vaccine_sum_add = data
+          that.vaccine_sum_add = data.value
         })
       })
     }
