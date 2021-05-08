@@ -12,7 +12,7 @@ export default {
   methods: {
     drawProvinceInfection () {
       var mychart = echarts.init(this.$refs.ProvinceInfection)
-      fetch('').then(function (response) {
+      fetch('http://127.0.0.1:5000/provinceInfection/country/' + this.$route.params.province).then(function (response) {
         response.json().then(function (data) {
           mychart.setOption({
             title: {
