@@ -13,7 +13,7 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      {{vaccine_sum_add}}
+      +{{vaccine_sum_add}}
     </div>
     <div class="today-item">
       累计接种

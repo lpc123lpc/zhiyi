@@ -13,7 +13,7 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      {{infect_sum_add}}
+      +{{infect_sum_add}}
     </div>
     <div class="today-item">
       累计确诊
@@ -26,7 +26,7 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      {{infect_death_add}}
+      +{{infect_death_add}}
     </div>
     <div class="today-item">
       累计死亡

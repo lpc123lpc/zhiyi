@@ -13,7 +13,7 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      {{infect_sum_add}}
+      +{{infect_sum_add}}
     </div>
     <div class="today-item">
       现有确诊
