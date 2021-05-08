@@ -27,6 +27,8 @@ import header from '../components/Header.vue'
 import infectDetailProvinceSidebar from '../components/InfectDetailProvinceSidebar.vue'
 import infectDetailProvinceMap from '../components/ProvinceMapInfection.vue'
 import lineChartInfectProvince from '../components/ProvinceInfection.vue'
+import {mixin} from "../mixins"
+
 export default {
   name: 'InfectProvinceDetail',
   components: { // 定义组件
@@ -41,6 +43,7 @@ export default {
       provinceMapInfectionDataMsg: ''
     }
   },
+  mixins: [mixin],
   methods: { // 事件处理器
     getProvinceMsg () {
       var that = this
