@@ -1,6 +1,6 @@
 <template>
     <div>
-      <el-row type="flex">
+      <el-row type="flex" style="text-align:center">
         <el-col span="4" offset="4">
           <el-button type="warning" style="align-content: center" @click="change('confirmed')">确诊人数</el-button>
         </el-col>

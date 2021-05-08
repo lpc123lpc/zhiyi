@@ -9,23 +9,28 @@ from testcode.lq import testData
 worldVacData = testData.vacdata'''
 
 
+def dealWithNone(i):
+    if i == -1:
+        return None
+    else:
+        return i
+
+
 def getWorldData():
     worldVacData = dao.getNowVacMessageInclude('global')
     worldInfData = dao.getNowInfMessageInclude('global')
-
-
     all_data = []
     for i in worldInfData:
         for j in worldVacData:
             if getattr(i, 'areaName') == getattr(j, 'areaName'):
                 all_data.append({"name": getattr(i, 'areaName'),
-                                 "confirmed": getattr(i, 'totalNum'),
-                                 "newConfirmed": getattr(i, 'addNum'),
-                                 "cured": getattr(i, 'cured'),
-                                 "deceased": getattr(i, 'totalDead'),
-                                 "vaccined": getattr(j, 'totalNum'),
-                                 "newVaccined": getattr(j, 'addNum'),
-                                 "vaccine_coverage": getattr(j, 'vacRate')})
+                                 "confirmed": dealWithNone(getattr(i, 'totalNum')),
+                                 "newConfirmed": dealWithNone(getattr(i, 'addNum')),
+                                 "cured": dealWithNone(getattr(i, 'cured')),
+                                 "deceased": dealWithNone(getattr(i, 'totalDead')),
+                                 "vaccined": dealWithNone(getattr(j, 'totalNum')),
+                                 "newVaccined": dealWithNone(getattr(j, 'addNum')),
+                                 "vaccine_coverage": dealWithNone(getattr(j, 'vacRate'))})
                 break
     return json.dumps(all_data)
 

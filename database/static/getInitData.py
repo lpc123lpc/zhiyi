@@ -30,13 +30,14 @@ def getArea():
         add(area)
 
     yUrl, tUrl, yUSUrl, dUSUrl = Spider.getData(7)
+    glolist, uslist = Spider.getData(6)
     worldMappingPath = './world-mapping.json'
     with open(worldMappingPath, mode='r', encoding='utf-8') as f:
         worldMapping = json.load(f)
         globalProvinces = Spider.getCSVDictReader(yUrl)
         for province in globalProvinces:
             #print(province['Province_State'])
-            if province['Country_Region'] != 'US' and province['Province_State'] != '' and province['Admin2'] == '' and province['Country_Region'] and province['Province_State'] != 'Unknown':
+            if province['Country_Region'] != 'US' and province['Province_State'] != '' and province['Admin2'] == '' and province['Country_Region'] != 'China' and province['Province_State'] != 'Unknown':
                 parent = ''
                 if province['Country_Region'] in worldMapping:
                     parent = worldMapping[province['Country_Region']]['cn']
@@ -47,7 +48,8 @@ def getArea():
                 #print(parent)
                 add(area)
 
-        usProvinces = Spider.getCSVDictReader(yUSUrl)
+        usProvinces = Spider.getCSVDictReader(uslist[5])
+        print(yUSUrl)
         for province in usProvinces:
             parent = '美国'
             child = province['Province_State']
@@ -99,7 +101,7 @@ def getChinaHisInf():
                 t = str(date['year']) + "-" + date['date'][:2] + "-" + date['date'][3:5]
                 x = ChinaInfMessage(time=t,
                                     areaName=date['province'],
-                                    currentNum=date['confirm'] - date['heal'],
+                                    currentNum=0 if (date['confirm'] - date['heal'] - date['dead']) < 0 else date['confirm'] - date['heal'] - date['dead'] ,
                                     totalNum=date['confirm'],
                                     addNum=date['newConfirm'],
                                     cured=date['heal'],
@@ -119,7 +121,7 @@ def getChinaHisInf():
                             name = date['city'] if date['city'] != "吉林" else "吉林市"
                             x = ChinaInfMessage(time=t,
                                                 areaName=date['city'],
-                                                currentNum=date['confirm'] - date['heal'],
+                                                currentNum=0 if (date['confirm'] - date['heal'] - date['dead']) < 0 else date['confirm'] - date['heal'] - date['dead'],
                                                 totalNum=date['confirm'],
                                                 addNum=int(date['confirm_add'] if date['confirm_add'] != '' else -1),
                                                 cured=date['heal'],
