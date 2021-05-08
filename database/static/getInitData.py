@@ -1,7 +1,7 @@
 from database.static.table import *
 #from spider.spider import *
 from database.static.dao import *
-from spider.spider import Spider
+from spider.covidSpider import Spider
 
 
 def getArea():

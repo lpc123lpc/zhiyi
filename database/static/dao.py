@@ -1,5 +1,5 @@
 from database.static.table import *
-from spider.spider import *
+from spider.covidSpider import *
 
 '''
 description:get infection information
