@@ -2,7 +2,7 @@ import json
 import requests
 import pandas as pd
 import time
-import datetime
+
 from io import StringIO
 import csv
 import re
@@ -292,28 +292,43 @@ class Spider:
 		1.可用saveToJson存储到json文件本地查看
 		2.内存中是python的dict类型，可以当成字典进行操作
 		"""
-
+	@classmethod
+	def importDataBasePackages(cls):
+		from database.static.dao import updateChinaInf
+		from database.static.dao import updateGlobalInf
+		from database.static.dao import updateVac
+		from database.static.dao import clearTable
+		from database.static.dao import updateForeignProvinceInf
+		from database.static.getInitData import Init
+		pass
 	@classmethod
 	def updateTencentNews(cls):
 		# 爬取、存入 nowGlobalCovidDataUrl，# 感染-全球-实时-数据
 		# 爬取、存入 nowForeignCovidDataUrl，# 感染-海外国家-实时-数据
 		# 爬取、存入 nowDomesticCovidDataUrl，#  感染-中国、各省、市-实时-数据
+		#cls.importDataBasePackages()
 		clearTable('nowInfMessages')
 		updateChinaInf()
 		updateGlobalInf()
+		pass
 
 	@classmethod
 	def updateOWID(cls):
 		# 爬取、存入 worldVaccDataurl，疫苗-ALL-ALL-数据 的实时数据
+		#cls.importDataBasePackages()
 		updateVac()
+		pass
 
 	@classmethod
 	def updateJHU(cls):
+		#cls.importDataBasePackages()
 		updateForeignProvinceInf()
 		# 爬取、存入 感染-各国(包括中国)、主要国家的各行政区-实时-数据（判断是否存在）
+		pass
 
 	@classmethod
 	def crawlAndStoreHistory(cls):
+		cls.importDataBasePackages()
 		cls.gerUrlsMap()
 		# 爬取、存入  感染-全球-历史-数据
 		# 爬取、存入  感染-国内各省、市-历史-数据
@@ -324,18 +339,33 @@ class Spider:
 
 	@classmethod
 	def timelyJob(cls):
+		#cls.importDataBasePackages()
 		cls.updateTencentNews()
 		cls.updateOWID()
 		cls.updateJHU()
 
+
+
 	@classmethod
 	def jobTest(cls):
+		import numpy
+		print(datetime.datetime.now())
 		print("the job is excuted in")
+		print()
 		print(time.localtime)
 		time.sleep(3)
+		print(datetime.datetime.now())
+		print(numpy.array("100"))
 
 if __name__=='__main__':
-	schedule.every(1).minutes.do(job_func=Spider.timelyJob())
+	#Spider.importDataBasePackages()
+	from database.static.dao import updateChinaInf
+	from database.static.dao import updateGlobalInf
+	from database.static.dao import updateVac
+	from database.static.dao import clearTable
+	from database.static.dao import updateForeignProvinceInf
+	from database.static.getInitData import Init
+	schedule.every(1).minutes.do(job_func=Spider.timelyJob)
 	while True:
 		schedule.run_pending()
 	"""yes,tod=Spider.getData(7)
