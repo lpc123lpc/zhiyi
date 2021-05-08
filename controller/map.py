@@ -17,7 +17,7 @@ def getMapVaccine(country):
         return jsonify({})
     for i in data:
         vaccined.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum') / a})
-        coverage.append({"name": getattr(i, 'areaName'), "vacRate": getattr(i, 'vacRate')})
+        coverage.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'vacRate')})
     return jsonify({
         "vaccined": vaccined,
         "coverage": coverage
