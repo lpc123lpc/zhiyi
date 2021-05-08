@@ -10,7 +10,7 @@ return:返回该区域的实时感染信息
 
 def getNowInfMessage(name):
     message = db.session.query(NowInfMessage).filter(NowInfMessage.areaName == name).first()
-    return message
+    return message if message != [] else None
 
 
 '''
@@ -28,7 +28,7 @@ def getNowInfMessageInclude(name):
         for message in messages:
             if message.areaName == "吉林市":
                 message.areaName = "吉林"
-    return messages
+    return messages if messages != [] else None
 
 
 '''
@@ -53,7 +53,7 @@ def getHisInfMessage(name):
             .order_by(ChinaInfMessage.time.desc()).limit(180).all()
         if messages is not None:
             messages.reverse()
-    return messages
+    return messages if messages != [] else None
 
 
 '''
@@ -89,7 +89,7 @@ def getHisInfMessageInclude(name):
                 if message is not None:
                     message.reverse()
                     messages.append(message)
-        return messages
+        return messages if messages != [] else None
 
 
 '''
@@ -101,7 +101,7 @@ return:返回该区域的实时接种信息
 
 def getNowVacMessage(name):
     message = db.session.query(NowVacMessage).filter(NowVacMessage.areaName == name).first()
-    return message
+    return message if message != [] else None
 
 
 '''
@@ -115,7 +115,7 @@ def getNowVacMessageInclude(name):
     message = db.session.query(NowVacMessage) \
         .filter(Area.parentArea == name) \
         .filter(Area.childArea == NowVacMessage.areaName).all()
-    return message
+    return message if message != [] else None
 
 
 '''
@@ -131,7 +131,7 @@ def getHisVacMessage(name):
         .order_by(VacMessage.time.desc()).limit(180).all()
     if message is not None:
         message.reverse()
-    return message
+    return message if message != [] else None
 
 
 '''
@@ -154,7 +154,7 @@ def getHisVacMessageInclude(name):
         if len(messages) == 0:
             return None
         else:
-            return messages
+            return messages if messages != [] else None
 
 
 '''
@@ -167,7 +167,6 @@ message:建议内容
 def saveAdvice(message, t):
     advice = Advice(text=message, time=t)
     add(advice)
-    return None
 
 
 '''
