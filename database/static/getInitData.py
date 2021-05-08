@@ -66,11 +66,11 @@ def getHisVac():
         v1 = VacMessage()
         for v in vacMessage:
             if v['location'] in worldMapping:
-                name = 'global' if v['location'] == 'World' else worldMapping[v['location']]['cn']
+                name = worldMapping[v['location']]['cn']
             else:
-                name = v['location']
+                name = 'global' if v['location'] == 'World' else v['location']
             totalNum = 0 if v['total_vaccinations'] == '' else int(v['total_vaccinations'])
-            addNum = 0 if v['daily_vaccinations_raw'] == '' else (v['daily_vaccinations_raw'])
+            addNum = 0 if v['daily_vaccinations_raw'] == '' else int(v['daily_vaccinations_raw'])
             vacRate = 0 if v['total_vaccinations_per_hundred'] == '' else float(v['total_vaccinations_per_hundred'])
             vac = VacMessage(time=v['date'], areaName=name, totalNum=totalNum, addNum=addNum, vacRate=vacRate)
             add(vac)
