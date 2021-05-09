@@ -29,7 +29,7 @@
             var worldMapInfection = echarts.init(document.getElementById('worldMapInfection'), 'sakura');
             var worldMapInfection_Option = {
                 title: {
-                    text: '新冠疫苗感染全球分布图',
+                    text: '新冠疫情感染情况全球分布图',
                     left: 'center',
                     textStyle: {
                         color: '#000',

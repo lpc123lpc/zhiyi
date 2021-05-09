@@ -51,7 +51,7 @@
             var countryMapInfection = echarts.init(document.getElementById('countryMapInfection'), 'sakura')
             var countryMapInfection_Option = {
                 title: {
-                    text: '新冠疫苗感染' + this.country + '分布图',
+                    text: '新冠疫情感染情况' + this.country + '分布图',
                     left: 'center',
                     textStyle: {
                         color: '#000',

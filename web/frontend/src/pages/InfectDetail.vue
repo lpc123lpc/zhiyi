@@ -1,5 +1,6 @@
 <template>
-  <el-container>
+  <div>
+    <el-container>
     <el-header>
       <wbc-nav></wbc-nav>
     </el-header>
@@ -11,12 +12,14 @@
         <div style="align: center; margin-top: 20px">
           <infect-detail-country-map v-bind:country="countryMsg" v-bind:countryMapInfectionData="countryMapInfectionDataMsg"></infect-detail-country-map>
         </div>
-        <div style="align: center; margin-top: 50px">
-          <line-chart-infect></line-chart-infect>
-        </div>
       </el-main>
     </el-container>
   </el-container>
+  <div style="margin-top: 50px; text-align: center">
+        <line-chart-infect></line-chart-infect>
+  </div>
+  </div>
+
 </template>
 
 <script>

@@ -63,11 +63,11 @@
           },
           color: ['#0099FF', '#7ae997'],
           legend: {
-            data: ['已接种', '覆盖率'],
+            data: ['已接种', '每百人接种剂量'],
             left: '2%',
             orient: 'horizontal',
             top: '2%',
-            selected: {'已接种': true, '覆盖率': false},
+            selected: {'已接种': true, '每百人接种剂量': false},
             selectedMode: 'single',
             textStyle: {
                 color: '#000',
