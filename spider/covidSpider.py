@@ -368,11 +368,9 @@ if __name__=='__main__':
 	from database.static.dao import clearTable
 	from database.static.dao import updateForeignProvinceInf
 	from database.static.getInitData import Init
-<<<<<<< HEAD:spider/spider.py
+
 	schedule.every().day.at("09:00").do(job_func=Spider.timelyJob)
-=======
-	schedule.every().day.at("9:00").do(job_func=Spider.timelyJob)
->>>>>>> 0c30827ad118029159866b66e1e55f6ec4517781:spider/covidSpider.py
+
 	while True:
 		schedule.run_pending()
 	"""yes,tod=Spider.getData(7)
