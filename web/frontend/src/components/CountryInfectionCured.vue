@@ -39,9 +39,10 @@ export default {
           orient: 'vertical',
           right: '50%',
           data: this.names,
+          itemGap: 15,
           textStyle: {
             color: '#000',
-            fontSize: 18
+            fontSize: 15
           },
           selectedMode: 'single'
         },

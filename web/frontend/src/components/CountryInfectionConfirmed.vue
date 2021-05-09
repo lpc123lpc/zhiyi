@@ -37,12 +37,12 @@ export default {
         },
         legend: {
           orient: 'vertical',
-          itemGap: 10,
+          itemGap: 15,
           right: '55%',
           data: this.names,
           textStyle: {
             color: '#000',
-            fontSize: 18
+            fontSize: 15
           },
           selectedMode: 'single'
         },
