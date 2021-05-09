@@ -93,7 +93,7 @@ def getCountryInfection(country):
                 last_confirmed = getattr(j, 'totalNum')
             else:
                 confirmed.append(last_confirmed)
-            if getattr(j, 'totalDead') != -1 and getattr(j, 'totalDead') > last_confirmed:
+            if getattr(j, 'totalDead') != -1 and getattr(j, 'totalDead') > last_deceased:
                 deceased.append(getattr(j, 'totalDead'))
                 last_deceased = getattr(j, 'totalDead')
             else:

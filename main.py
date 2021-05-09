@@ -1,4 +1,4 @@
-from flask import request
+from flask import request, jsonify
 from flask_cors import CORS
 from controller import map, tables, sidebar
 from database.static import dao, table
@@ -12,12 +12,13 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 '''clearTable('chinaInfMessages')
 clearTable('hisInfMessages')
 getGlobalProvinceHisInf()'''
-'''Init()
-updateInf()
+'''Init()'''
+'''updateInf()
 updateVac()'''
 '''getArea()
 getChinaHisInf()'''
 '''getGlobalCountryHisInf()'''
+
 
 @app.route('/')
 def index():
@@ -209,19 +210,15 @@ def getInfectionCureProvince(province):
     return sidebar.getInfectionCureSidebar(province)
 
 
-post_data = []
-
-
 @app.route('/feedback', methods=["GET", "POST"])
 def getFeedBack():
     if request.method == "POST":
         data = request.get_json()
         now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         for key in data:
-            post_data.append(data[key])
             dao.saveAdvice(data[key], now_time)
     if request.method == "GET":
-        return json.dumps(post_data)
+        return jsonify({})
 
 
 if __name__ == '__main__':
