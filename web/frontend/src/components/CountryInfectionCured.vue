@@ -1,5 +1,5 @@
 <template>
-    <div ref="curedChart" style="width: 1000px;height: 600px"></div>
+    <div ref="curedChart" style="width: 1490px;height: 600px"></div>
 </template>
 
 <script>
@@ -46,7 +46,7 @@ export default {
           selectedMode: 'single'
         },
         grid: {
-          left: '20%',
+          left: '50%',
           containLabel: true
         },
         xAxis: [{

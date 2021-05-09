@@ -137,7 +137,7 @@
             nameMap: this.getWorldNameMap(),
             data: this.worldMapVaccineData.vaccined
           },{
-            name: '覆盖率',
+            name: '每百人接种剂量',
             type: 'map',
             mapType: 'world',
             zoom: 1.2,
