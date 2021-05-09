@@ -1,4 +1,4 @@
-from spider.spider import *
+from spider.covidSpider import *
 from database.static.table import *
 from database.static.dao import *
 from database.static.getInitData import *

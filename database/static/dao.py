@@ -1,5 +1,5 @@
 from database.static.table import *
-from spider.spider import *
+from spider.covidSpider import *
 
 '''
 description:get infection information
@@ -233,7 +233,7 @@ def updateForeignProvinceInf():
             if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
                 Last_Update = province['Last_Update']
                 t = Last_Update[:10]
-
+                t = tChangeType(t)
                 x = NowInfMessage(time=t,
                                   areaName=provinceName,
                                   currentNum=-1 if province['Active'] == '' else int(province['Active']),
@@ -257,6 +257,7 @@ def updateForeignProvinceInf():
     print(uy)
     for province in usProvinces:
         t = province['Last_Update'][:10]
+        t = tChangeType(t)
         x = NowInfMessage(time=t,
                           areaName=province['Province_State'],
                           currentNum=-1 if province['Active'] == '' else int(province['Active'].split('.')[0]),
@@ -306,18 +307,20 @@ def updateVac():
                 totalNum = -1 if v1['total_vaccinations'] == '' else int(v1['total_vaccinations'])
                 addNum = -1 if v1['daily_vaccinations_raw'] == '' else int(v1['daily_vaccinations_raw'])
                 vacRate = -1 if v1['total_vaccinations_per_hundred'] == '' else float(v1['total_vaccinations_per_hundred'])
-                NowVacMessage.query.filter_by(areaName=lastName) \
-                    .update({'time': v1['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
-                db.session.commit()
+                if totalNum != -1:
+                    NowVacMessage.query.filter_by(areaName=lastName) \
+                        .update({'time': v1['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
+                    db.session.commit()
             lastName = name
             v1 = v
             i += 1
         totalNum = -1 if v['total_vaccinations'] == '' else int(v['total_vaccinations'])
         addNum = -1 if v['daily_vaccinations_raw'] == '' else int(v['daily_vaccinations_raw'])
         vacRate = -1 if v['total_vaccinations_per_hundred'] == '' else float(v['total_vaccinations_per_hundred'])
-        NowVacMessage.query.filter_by(areaName=name) \
-            .update({'time': v['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
-        db.session.commit()
+        if totalNum > 0:
+            NowVacMessage.query.filter_by(areaName=lastName) \
+                .update({'time': v1['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
+            db.session.commit()
 
 
 # 清除表单
@@ -377,3 +380,14 @@ def addMessage(area, toType, today):
                           totalDead=area['dead'],
                           addDead=area['deadCompare'])
         add(x)
+
+def tChangeType(t):
+    if t[1] == '/' and t[3] == '/':
+        t = '20' + t[4:6] + '-0' + t[0] + '-0' + t[2]
+    elif t[1] == '/' and t[4] == '/':
+        t = '20' + t[5:7] + '-0' + t[0] + '-' + t[2:4]
+    elif t[2] == '/' and t[4] == '/':
+        t = '20' + t[5:7] + '-' + t[:2] + '-0' + t[3]
+    elif t[2] == '/' and t[5] == '/':
+        t = '20' + t[6:8] + '-' + t[:2] + '-' + t[3:5]
+    return t

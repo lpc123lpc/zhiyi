@@ -36,23 +36,24 @@ export default {
           trigger: 'axis'
         },
         legend: {
-          left: '10%',
-          top: '5%',
+          orient: 'vertical',
+          left: '0%',
           data: this.names,
           textStyle: {
             color: '#000',
             fontSize: 18
-          }
+          },
+          selectedMode: 'single'
         },
         grid: {
-          top: '15%',
+          left: '20%',
           containLabel: true
         },
         xAxis: [{
           name: '日期',
           type: 'category',
           nameTextStyle: {
-            fontSize: '14',
+            fontSize: '14'
           },
           axisTick: {
             alignWithLabel: 'true'

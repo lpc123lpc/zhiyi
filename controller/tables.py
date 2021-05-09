@@ -9,23 +9,28 @@ from testcode.lq import testData
 worldVacData = testData.vacdata'''
 
 
+def dealWithNone(i):
+    if i == -1:
+        return None
+    else:
+        return i
+
+
 def getWorldData():
     worldVacData = dao.getNowVacMessageInclude('global')
     worldInfData = dao.getNowInfMessageInclude('global')
-
-
     all_data = []
     for i in worldInfData:
         for j in worldVacData:
             if getattr(i, 'areaName') == getattr(j, 'areaName'):
                 all_data.append({"name": getattr(i, 'areaName'),
-                                 "confirmed": getattr(i, 'totalNum'),
-                                 "newConfirmed": getattr(i, 'addNum'),
-                                 "cured": getattr(i, 'cured'),
-                                 "deceased": getattr(i, 'totalDead'),
-                                 "vaccined": getattr(j, 'totalNum'),
-                                 "newVaccined": getattr(j, 'addNum'),
-                                 "vaccine_coverage": getattr(j, 'vacRate')})
+                                 "confirmed": dealWithNone(getattr(i, 'totalNum')),
+                                 "newConfirmed": dealWithNone(getattr(i, 'addNum')),
+                                 "cured": dealWithNone(getattr(i, 'cured')),
+                                 "deceased": dealWithNone(getattr(i, 'totalDead')),
+                                 "vaccined": dealWithNone(getattr(j, 'totalNum')),
+                                 "newVaccined": dealWithNone(getattr(j, 'addNum')),
+                                 "vaccine_coverage": dealWithNone(getattr(j, 'vacRate'))})
                 break
     return json.dumps(all_data)
 
@@ -36,10 +41,11 @@ def getCountryInfData(country):
     if infData is None:
         return jsonify({})
     for i in infData:
-        times.append(getattr(i, 'time'))
-        confirmed.append(getattr(i, 'totalNum'))
-        deceased.append(getattr(i, 'totalDead'))
-        cure.append(getattr(i, 'cured'))
+        if getattr(i, 'totalNum') != -1:
+            times.append(getattr(i, 'time'))
+            confirmed.append(getattr(i, 'totalNum'))
+            deceased.append(getattr(i, 'totalDead'))
+            cure.append(getattr(i, 'cured'))
     return jsonify({
         "name": country,
         "time": times,
@@ -55,8 +61,9 @@ def getCountryVacData(country):
     if vacData is None:
         return jsonify({})
     for i in vacData:
-        times.append(getattr(i, 'time'))
-        vaccined.append(getattr(vacData, 'totalNum'))
+        if getattr(i, 'totalNum') != -1:
+            times.append(getattr(i, 'time'))
+            vaccined.append(getattr(i, 'totalNum'))
     return jsonify({
         "name": country,
         "time": times,

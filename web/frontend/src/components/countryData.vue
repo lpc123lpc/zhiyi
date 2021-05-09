@@ -1,13 +1,9 @@
 <template>
   <div style="width: 100%;height:500px">
-    <el-row type="flex">
-      <el-col span="4" offset="4">
-        <el-button type="warning" @click="change('inf')">感染数据</el-button>
-      </el-col>
-      <el-col span="4" offset="2">
-        <el-button type="danger"  @click="change('vac')">接种数据</el-button>
-      </el-col>
-    </el-row>
+    <div>
+      <el-button type="danger" style="margin-left: 35%" @click="change('inf')">感染数据</el-button>
+      <el-button type="success" style="margin-left: 10%" @click="change('vac')">接种数据</el-button>
+    </div>
     <el-row>
       <el-main style="text-align:center">
         <CountryDataInf v-show="isShow==='inf'" v-bind:country="country"></CountryDataInf>
@@ -29,14 +25,12 @@ export default {
     }
   },
   mounted () {
-    this.drawCountryData()
   },
   props: {
     country: String
   },
   methods: {
     change (x) {
-      alert(this.$route.params.country)
       this.isShow = x
     }
   }

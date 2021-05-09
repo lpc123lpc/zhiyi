@@ -1,7 +1,7 @@
 from database.static.table import *
 #from spider.spider import *
 from database.static.dao import *
-from spider.spider import Spider
+from spider.covidSpider import Spider
 
 
 def getArea():
@@ -30,13 +30,14 @@ def getArea():
         add(area)
 
     yUrl, tUrl, yUSUrl, dUSUrl = Spider.getData(7)
+    glolist, uslist = Spider.getData(6)
     worldMappingPath = './world-mapping.json'
     with open(worldMappingPath, mode='r', encoding='utf-8') as f:
         worldMapping = json.load(f)
         globalProvinces = Spider.getCSVDictReader(yUrl)
         for province in globalProvinces:
             #print(province['Province_State'])
-            if province['Country_Region'] != 'US' and province['Province_State'] != '' and province['Admin2'] == '' and province['Country_Region'] and province['Province_State'] != 'Unknown':
+            if province['Country_Region'] != 'US' and province['Province_State'] != '' and province['Admin2'] == '' and province['Country_Region'] != 'China' and province['Province_State'] != 'Unknown':
                 parent = ''
                 if province['Country_Region'] in worldMapping:
                     parent = worldMapping[province['Country_Region']]['cn']
@@ -47,7 +48,8 @@ def getArea():
                 #print(parent)
                 add(area)
 
-        usProvinces = Spider.getCSVDictReader(yUSUrl)
+        usProvinces = Spider.getCSVDictReader(uslist[5])
+        print(yUSUrl)
         for province in usProvinces:
             parent = '美国'
             child = province['Province_State']
@@ -74,8 +76,9 @@ def getHisVac():
             addNum = -1 if v['daily_vaccinations_raw'] == '' else int(v['daily_vaccinations_raw'])
             vacRate = -1 if v['total_vaccinations_per_hundred'] == '' else float(v['total_vaccinations_per_hundred'])
             vac = VacMessage(time=v['date'], areaName=name, totalNum=totalNum, addNum=addNum, vacRate=vacRate)
-            add(vac)
-            if name != lastname and i != 0:
+            if totalNum > 0:
+                add(vac)
+            if name != lastname and i != 0 and v1.totalNum > 0:
                 nowVac = NowVacMessage(time=v1.time, areaName=v1.areaName, totalNum=v1.totalNum, addNum=v1.addNum, vacRate=v1.vacRate)
                 add(nowVac)
             lastname = name
@@ -99,7 +102,7 @@ def getChinaHisInf():
                 t = str(date['year']) + "-" + date['date'][:2] + "-" + date['date'][3:5]
                 x = ChinaInfMessage(time=t,
                                     areaName=date['province'],
-                                    currentNum=date['confirm'] - date['heal'],
+                                    currentNum=0 if (date['confirm'] - date['heal'] - date['dead']) < 0 else date['confirm'] - date['heal'] - date['dead'] ,
                                     totalNum=date['confirm'],
                                     addNum=date['newConfirm'],
                                     cured=date['heal'],
@@ -119,7 +122,7 @@ def getChinaHisInf():
                             name = date['city'] if date['city'] != "吉林" else "吉林市"
                             x = ChinaInfMessage(time=t,
                                                 areaName=date['city'],
-                                                currentNum=date['confirm'] - date['heal'],
+                                                currentNum=0 if (date['confirm'] - date['heal'] - date['dead']) < 0 else date['confirm'] - date['heal'] - date['dead'],
                                                 totalNum=date['confirm'],
                                                 addNum=int(date['confirm_add'] if date['confirm_add'] != '' else -1),
                                                 cured=date['heal'],
@@ -169,6 +172,7 @@ def getGlobalProvinceHisInf():
                 if countryName != 'US' and countryName != 'China' and countryName != 'Taiwan*' and cityName == '' and provinceName != 'Unknown':
                     Last_Update = province['Last_Update']
                     t = Last_Update[:10]
+                    t = tChangeType(t)
                     x = InfMessage(time=t,
                                    areaName=provinceName,
                                    currentNum=-1 if province['Active'] == '' else int(province['Active']),
@@ -197,6 +201,7 @@ def getGlobalProvinceHisInf():
         date = Spider.getCSVDictReader(url)
         for province in date:
             t = province['Last_Update'][:10]
+            t = tChangeType(t)
             x = InfMessage(time=t,
                            areaName=province['Province_State'],
                            currentNum=-1 if province['Active'] == '' else int(province['Active'].split('.')[0]),
@@ -221,3 +226,5 @@ def Init():
     print(4)
     getGlobalProvinceHisInf()       #github
 
+'''clearTable('nowVacMessages')
+getHisVac()'''
