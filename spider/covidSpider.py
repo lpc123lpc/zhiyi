@@ -328,6 +328,7 @@ class Spider:
 
 	@classmethod
 	def crawlAndStoreHistory(cls):
+		print(time.strftime('%Y-%m-%d,%H:%M:%S', time.localtime(time.time())))
 		cls.importDataBasePackages()
 		cls.gerUrlsMap()
 		# 爬取、存入  感染-全球-历史-数据
@@ -336,14 +337,16 @@ class Spider:
 		# 爬取、存入  worldVaccDataurl，疫苗-ALL-ALL-数据中的历史数据
 		Init()
 		cls.timelyJob()
+		print(time.strftime('%Y-%m-%d,%H:%M:%S', time.localtime(time.time())))
 
 	@classmethod
 	def timelyJob(cls):
 		#cls.importDataBasePackages()
+		print(time.strftime('%Y-%m-%d,%H:%M:%S', time.localtime(time.time())))
 		cls.updateTencentNews()
 		cls.updateOWID()
 		cls.updateJHU()
-
+		print(time.strftime('%Y-%m-%d,%H:%M:%S', time.localtime(time.time())))
 
 
 	@classmethod
@@ -365,7 +368,9 @@ if __name__=='__main__':
 	from database.static.dao import clearTable
 	from database.static.dao import updateForeignProvinceInf
 	from database.static.getInitData import Init
-	schedule.every().day.at("9:00").do(job_func=Spider.timelyJob)
+
+	schedule.every().day.at("09:00").do(job_func=Spider.timelyJob)
+
 	while True:
 		schedule.run_pending()
 	"""yes,tod=Spider.getData(7)
