@@ -9,12 +9,15 @@ import os
 app = table.app
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 # 初始化数据库，第一次执行完后就可以注释掉
-'''Init()'''
-'''updateInf()
+'''clearTable('chinaInfMessages')
+clearTable('hisInfMessages')
+getGlobalProvinceHisInf()'''
+'''Init()
+updateInf()
 updateVac()'''
 '''getArea()
 getChinaHisInf()'''
-
+'''getGlobalCountryHisInf()'''
 
 @app.route('/')
 def index():

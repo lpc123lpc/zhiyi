@@ -79,12 +79,25 @@ def getCountryInfection(country):
     for i in data:
         position = ''
         confirmed, deceased, cured, times = [], [], [], []
+        last_cured, last_confirmed, last_deceased = 0, 0, 0
         for j in i:
             position = getattr(i[0], 'areaName')
             times.append(getattr(j, 'time'))
-            cured.append(getattr(j, 'cured'))
-            confirmed.append(getattr(j, 'totalNum'))
-            deceased.append(getattr(j, 'totalDead'))
+            if getattr(j, 'cured') != -1 and getattr(j, 'cured') > last_cured:
+                cured.append(getattr(j, 'cured'))
+                last_cured = getattr(j, 'cured')
+            else:
+                cured.append(last_cured)
+            if getattr(j, 'totalNum') != -1 and getattr(j, 'totalNum') > last_confirmed:
+                confirmed.append(getattr(j, 'totalNum'))
+                last_confirmed = getattr(j, 'totalNum')
+            else:
+                confirmed.append(last_confirmed)
+            if getattr(j, 'totalDead') != -1 and getattr(j, 'totalDead') > last_confirmed:
+                deceased.append(getattr(j, 'totalDead'))
+                last_deceased = getattr(j, 'totalDead')
+            else:
+                deceased.append(last_deceased)
         all_data.append({"name": position, "time": times, "confirmed": confirmed, "deceased": deceased, "cured": cured})
     return json.dumps(all_data)
 
