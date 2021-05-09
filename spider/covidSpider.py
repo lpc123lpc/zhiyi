@@ -342,20 +342,12 @@ class Spider:
 	@classmethod
 	def timelyJob(cls):
 		#cls.importDataBasePackages()
-<<<<<<< Updated upstream
 		print(time.strftime('%Y-%m-%d,%H:%M:%S', time.localtime(time.time())))
 		cls.updateTencentNews()
 		cls.updateOWID()
 		cls.updateJHU()
 		print(time.strftime('%Y-%m-%d,%H:%M:%S', time.localtime(time.time())))
-=======
-		print(time.strftime('%Y%m%d%H%M%S', time.localtime(time.time())))
-		cls.updateTencentNews()
-		cls.updateOWID()
-		cls.updateJHU()
-		print(time.strftime('%Y%m%d%H%M%S', time.localtime(time.time())))
 
->>>>>>> Stashed changes
 
 
 	@classmethod
@@ -378,12 +370,8 @@ if __name__=='__main__':
 	from database.static.dao import updateForeignProvinceInf
 	from database.static.getInitData import Init
 
-<<<<<<< Updated upstream
-	schedule.every().day.at("09:00").do(job_func=Spider.timelyJob)
 
-=======
 	schedule.every().day.at("09:00:00").do(job_func=Spider.timelyJob)
->>>>>>> Stashed changes
 	while True:
 		schedule.run_pending()
 	"""yes,tod=Spider.getData(7)
