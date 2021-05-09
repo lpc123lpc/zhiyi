@@ -233,7 +233,10 @@ def updateForeignProvinceInf():
             if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
                 Last_Update = province['Last_Update']
                 t = Last_Update[:10]
-                t = tChangeType(t)
+                try:
+                    t = tChangeType(t)
+                except Exception as e:
+                    print(e)
                 x = NowInfMessage(time=t,
                                   areaName=provinceName,
                                   currentNum=-1 if province['Active'] == '' else int(province['Active']),
@@ -257,7 +260,10 @@ def updateForeignProvinceInf():
     print(uy)
     for province in usProvinces:
         t = province['Last_Update'][:10]
-        t = tChangeType(t)
+        try:
+            t = tChangeType(t)
+        except Exception as e:
+            print(e)
         x = NowInfMessage(time=t,
                           areaName=province['Province_State'],
                           currentNum=-1 if province['Active'] == '' else int(province['Active'].split('.')[0]),
@@ -380,6 +386,7 @@ def addMessage(area, toType, today):
                           totalDead=area['dead'],
                           addDead=area['deadCompare'])
         add(x)
+
 
 def tChangeType(t):
     if t[1] == '/' and t[3] == '/':

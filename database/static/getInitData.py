@@ -169,10 +169,14 @@ def getGlobalProvinceHisInf():
                 countryName = province['Country_Region']
                 provinceName = province['Province_State']
                 cityName = province['Admin2']
-                if countryName != 'US' and countryName != 'China' and countryName != 'Taiwan*' and cityName == '' and provinceName != 'Unknown':
+                if countryName != 'US' and countryName != 'China' and countryName != 'Taiwan*' and cityName == '' and provinceName != 'Unknown' and provinceName != '':
                     Last_Update = province['Last_Update']
                     t = Last_Update[:10]
-                    t = tChangeType(t)
+                    try:
+                        t = tChangeType(t)
+                    except Exception as e:
+                        print(e)
+
                     x = InfMessage(time=t,
                                    areaName=provinceName,
                                    currentNum=-1 if province['Active'] == '' else int(province['Active']),
@@ -183,7 +187,13 @@ def getGlobalProvinceHisInf():
                                    addDead=-1)
                     add(x)
                 if countryName == 'China' or countryName == 'Taiwan*':
-                    china.time = province['Last_Update'][:10]
+                    t = province['Last_Update'][:10]
+                    try:
+                        t = tChangeType(t)
+                        print(t)
+                    except Exception as e:
+                        print(e)
+                    china.time = t
                     currentNum =-1 if province['Active'] == '' else int(province['Active'])
                     china.currentNum += currentNum
                     totalNum = -1 if province['Confirmed'] == '' else int(province['Confirmed'])
@@ -201,7 +211,10 @@ def getGlobalProvinceHisInf():
         date = Spider.getCSVDictReader(url)
         for province in date:
             t = province['Last_Update'][:10]
-            t = tChangeType(t)
+            try:
+                t = tChangeType(t)
+            except Exception as e:
+                print(e)
             x = InfMessage(time=t,
                            areaName=province['Province_State'],
                            currentNum=-1 if province['Active'] == '' else int(province['Active'].split('.')[0]),
