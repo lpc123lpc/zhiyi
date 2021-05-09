@@ -1,9 +1,9 @@
 <template>
     <div>
       <div style="width: 100%">
-        <el-button type="warning" style="margin-left: 20%" @click="change('confirmed')">确诊人数</el-button>
-        <el-button type="danger"  style="margin-left: 14%" @click="change('deceased')">死亡人数</el-button>
-        <el-button type="success" style="margin-left: 15%" @click="change('cured')">治愈人数</el-button>
+        <el-button type="warning" style="margin-left: 38%" @click="change('confirmed')">确诊人数</el-button>
+        <el-button type="danger"  style="margin-left: 8%" @click="change('deceased')">死亡人数</el-button>
+        <el-button type="success" style="margin-left: 8%" @click="change('cured')">治愈人数</el-button>
       </div>
       <el-row>
       <el-main style="text-align:center">
