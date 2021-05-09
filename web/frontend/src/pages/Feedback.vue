@@ -10,7 +10,7 @@
           </el-aside>
           <el-main id="my-el-main">
             <div id="feed-back-div" style="margin-left: 300px; margin-top: 150px">
-              <feed-back></feed-back>
+              <feed-back-content></feed-back-content>
             </div>
           </el-main>
         </el-container>
@@ -28,7 +28,7 @@ export default {
     'wbc-nav': header,
     'vaccine-sidebar': vaccineSidebar,
     'infect-sidebar': infectSidebar,
-    'feed-back': feedBackInput
+    'feed-back-content': feedBackInput
   },
   methods: {
     set_left () {
@@ -38,7 +38,7 @@ export default {
       feedBackInput.style.setProperty('margin-left', elMain.offsetWidth / 2 - 350 + 'px')
     }
   },
-  created () {
+  mounted () {
     this.set_left()
   }
 }
