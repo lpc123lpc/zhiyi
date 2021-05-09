@@ -29,10 +29,10 @@
       {{vaccine_cover_add}}
     </div>-->
     <div class="today-item">
-      覆盖率
+      每百人接种
     </div>
     <div class="today-item">
-      {{vaccine_cover}}
+      {{vaccine_cover}}剂
     </div>
   </el-card>
 </template>

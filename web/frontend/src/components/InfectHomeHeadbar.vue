@@ -1,10 +1,10 @@
 <template>
   <el-card class="box-card" shadow="always">
     <el-row>
-      <el-col :span="6"><div class="infect-sum">累计确诊{{infect_sum}}</div></el-col>
+      <el-col :span="8"><div class="infect-sum">累计确诊{{infect_sum}}</div></el-col>
       <el-col :span="2"><div class="infect-sum-add">+{{infect_sum_add}}</div></el-col>
-      <el-col :span="4"><div class="infect-sum">累计死亡{{infect_death}}</div></el-col>
-      <el-col :span="4"><div class="infect-sum-add">+{{infect_death_add}}</div></el-col>
+      <el-col :span="2"><div class="infect-sum">累计死亡{{infect_death}}</div></el-col>
+      <el-col :span="2"><div class="infect-sum-add">+{{infect_death_add}}</div></el-col>
       <el-col :span="2"><div class="infect-sum">累计治愈{{infect_cure}}</div></el-col>
       <!--<el-col :span="6"><div class="infect-sum-add">+{{infect_cure_add}}</div></el-col>-->
     </el-row>

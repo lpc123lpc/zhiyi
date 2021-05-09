@@ -3,7 +3,7 @@
     <el-row>
       <el-col :span="8"><div class="vaccine-sum">累计接种{{vaccine_sum}}</div></el-col>
       <el-col :span="4"><div class="vaccine-sum-add">+{{vaccine_sum_add}}</div></el-col>
-      <el-col :span="4"><div class="vaccine-sum">覆盖率{{vaccine_cover}}</div></el-col>
+      <el-col :span="4"><div class="vaccine-sum">每百人接种{{vaccine_cover}}剂</div></el-col>
       <!--<el-col :span="8"><div class="vaccine-sum-add">+{{vaccine_cover_add}}</div></el-col>-->
     </el-row>
   </el-card>
