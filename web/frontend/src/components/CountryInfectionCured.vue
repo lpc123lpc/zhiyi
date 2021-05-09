@@ -37,7 +37,7 @@ export default {
         },
         legend: {
           orient: 'vertical',
-          right: '50%',
+          right: '55%',
           data: this.names,
           itemGap: 15,
           textStyle: {
