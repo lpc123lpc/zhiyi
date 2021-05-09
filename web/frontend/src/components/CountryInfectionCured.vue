@@ -42,7 +42,8 @@ export default {
           textStyle: {
             color: '#000',
             fontSize: 18
-          }
+          },
+          selectedMode: 'single'
         },
         grid: {
           top: '15%',

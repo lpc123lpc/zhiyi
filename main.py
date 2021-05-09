@@ -16,7 +16,6 @@ updateVac()'''
 getChinaHisInf()'''
 
 
-
 @app.route('/')
 def index():
     return '欢迎来到知疫'

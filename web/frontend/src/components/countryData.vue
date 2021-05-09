@@ -2,7 +2,7 @@
   <div style="width: 100%;height:500px">
     <div>
       <el-button type="danger" style="margin-left: 35%" @click="change('inf')">感染数据</el-button>
-      <el-button type="success" style="margin-left: 15%" @click="change('vac')">接种数据</el-button>
+      <el-button type="success" style="margin-left: 10%" @click="change('vac')">接种数据</el-button>
     </div>
     <el-row>
       <el-main style="text-align:center">

@@ -18,21 +18,12 @@ export default {
       fetch('http://127.0.0.1:5000/countryInfData/' + this.country).then(function (response) {
         response.json().then(function (data) {
           mychart.setOption({
-            title: {
-              text: data.name + '感染数据',
-              textStyle: {
-                fontSize: '22',
-                color: '#000',
-                fontWeight: 'normal'
-              },
-              left: '20%'
-            },
             backgroundColor: '',
             tooltip: {
               trigger: 'axis'
             },
             legend: {
-              left: '50%',
+              left: 'center',
               data: ['确诊人数', '治愈人数', '死亡人数'],
               textStyle: {
                 color: '#000',

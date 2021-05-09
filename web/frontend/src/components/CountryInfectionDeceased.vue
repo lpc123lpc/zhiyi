@@ -42,9 +42,11 @@ export default {
           textStyle: {
             color: '#000',
             fontSize: 18
-          }
+          },
+          selectedMode: 'single'
         },
         grid: {
+          marginTop: '10%',
           top: '15%',
           containLabel: true
         },
@@ -52,7 +54,7 @@ export default {
           name: '日期',
           type: 'category',
           nameTextStyle: {
-            fontSize: '14',
+            fontSize: '14'
           },
           axisTick: {
             alignWithLabel: 'true'
