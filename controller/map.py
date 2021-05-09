@@ -8,12 +8,16 @@ infdata = testData.infdata'''
 
 
 def getMapVaccine(country):
-    time = datetime.date.today()
-    data = dao.getVacMessageInclude(country, time.strftime("%Y-%m-%d"))
+    a = 1.0
+    if country == 'global':
+        a = 10000.0
+    data = dao.getNowVacMessageInclude(country)
     vaccined, coverage = [], []
+    if data is None:
+        return jsonify({})
     for i in data:
-        vaccined.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum')})
-        coverage.append({"name": getattr(i, 'areaName'), "vacRate": getattr(i, 'vacRate')})
+        vaccined.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum') / a})
+        coverage.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'vacRate')})
     return jsonify({
         "vaccined": vaccined,
         "coverage": coverage
@@ -21,14 +25,18 @@ def getMapVaccine(country):
 
 
 def getMapInfection(country):
-    time = datetime.date.today()
-    data = dao.getInfMessageInclude(country, time.strftime("%Y-%m-%d"))
+    a = 1.0
+    if country == 'global':
+        a = 10000.0
+    data = dao.getNowInfMessageInclude(country)
     nowConfirm, totalConfirm, cured, dead = [], [], [], []
+    if data is None:
+        return jsonify({})
     for i in data:
-        nowConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'currentNum')})
-        totalConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum')})
-        cured.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'cured')})
-        dead.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalDead')})
+        nowConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'currentNum') / a})
+        totalConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum') / a})
+        cured.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'cured') / a})
+        dead.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalDead') / a})
     return jsonify({
         "nowConfirm": nowConfirm,
         "totalConfirm": totalConfirm,

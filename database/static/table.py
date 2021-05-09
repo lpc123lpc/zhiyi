@@ -22,6 +22,7 @@ class BaseModelVac(db.Model):
 
 class BaseModelInf(db.Model):
     __abstract__ = True
+    time = db.Column(db.String(20), primary_key=True)
     areaName = db.Column(db.String(200), primary_key=True)
     currentNum = db.Column(db.Integer)
     totalNum = db.Column(db.Integer)
@@ -43,24 +44,21 @@ class NowVacMessage(BaseModelVac):
 
 class InfMessage(BaseModelInf):
     __tablename__ = 'hisInfMessages'
-    time = db.Column(db.String(20), primary_key=True)
 
 
 class NowInfMessage(BaseModelInf):
     __tablename__ = 'nowInfMessages'
-    time = db.Column(db.String(20), primary_key=True)
 
 
 class ChinaInfMessage(BaseModelInf):
     __tablename__ = 'chinaInfMessages'
-    time = db.Column(db.String(20), primary_key=True)
 
 
 class Advice(db.Model):
     __tablename__ = 'advices'
 
     id = db.Column(db.Integer, primary_key=True)
-    time = db.Column(db.String(20))
+    time = db.Column(db.DATETIME)
     text = db.Column(db.String(800))
 
 
@@ -69,7 +67,6 @@ class Area(db.Model):
 
     parentArea = db.Column(db.String(100), primary_key=True)
     childArea = db.Column(db.String(100), primary_key=True)
-    number = db.Column(db.BIGINT)
 
 
 

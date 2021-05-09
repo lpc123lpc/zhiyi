@@ -14,7 +14,7 @@ export default {
       var myChart = echarts.init(document.getElementById('countryVaccine'))
       var series = []
       var names = []
-      fetch('../static/json/charts/testVaccine').then(function (response) {
+      fetch('http://127.0.0.1:5000/countryVaccine/' + this.$route.params.country).then(function (response) {
         response.json().then(function (data) {
           for (var i = 0; i < data.length; i++) {
             series.push(
@@ -28,25 +28,43 @@ export default {
           }
           myChart.setOption({
             title: {
-              text: data[0].name + '接种数据',
+              text: data[0].name + '接种人数折线图',
+              left: 'center',
               textStyle: {
-                color: '#333'
+                fontSize: '22',
+                color: '#000',
+                fontWeight: 'normal'
               }
             },
             tooltip: {
               trigger: 'axis'
             },
             legend: {
-              data: names
+              orient: 'vertical',
+              left: '0%',
+              data: names,
+              textStyle: {
+                color: '#000',
+                fontSize: 18
+              }
+            },
+            grid: {
+              left: '20%',
+              containLabel: true
             },
             xAxis: [{
               name: '日期',
               type: 'category',
+              nameTextStyle: {
+                fontSize: '14'
+              },
+              axisTick: {
+                alignWithLabel: 'true'
+              },
               data: data[0].time
             }],
             yAxis: [
               {
-                name: '接种人数',
                 type: 'value'
               }
             ],

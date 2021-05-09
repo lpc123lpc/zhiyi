@@ -1,80 +1,37 @@
 <template>
-  <div ref="countryDataCharts" style="width: 100%;height:500px"></div>
+  <div style="width: 100%;height:500px">
+    <div>
+      <el-button type="danger" style="margin-left: 35%" @click="change('inf')">感染数据</el-button>
+      <el-button type="success" style="margin-left: 10%" @click="change('vac')">接种数据</el-button>
+    </div>
+    <el-row>
+      <el-main style="text-align:center">
+        <CountryDataInf v-show="isShow==='inf'" v-bind:country="country"></CountryDataInf>
+        <CountryDataVac v-show="isShow==='vac'" v-bind:country="country"></CountryDataVac>
+      </el-main>
+    </el-row>
+  </div>
 </template>
 
 <script>
-import echarts from 'echarts'
+import CountryDataInf from './CountryDataInf'
+import CountryDataVac from './CountryDataVac'
 export default {
   name: 'countryData',
+  components: {CountryDataVac, CountryDataInf},
+  data: function () {
+    return {
+      isShow: 'inf'
+    }
+  },
   mounted () {
-    this.chart = echarts.init(this.$refs.countryDataCharts)
-    this.drawCountryData()
+  },
+  props: {
+    country: String
   },
   methods: {
-    drawCountryData () {
-      var that = this
-      fetch('../static/json/charts/testData').then(function (response) {
-        response.json().then(function (data) {
-          that.chart.setOption({
-            title: {
-              text: data.name + '总体数据',
-              textStyle: {
-                fontSize: '20',
-                color: '#696969'
-              },
-              left: '10%'
-            },
-            backgroundColor: '',
-            tooltip: {
-              trigger: 'axis'
-            },
-            legend: {
-              left: '50%',
-              data: ['接种人数', '确诊人数', '治愈人数', '死亡人数']
-            },
-            xAxis: [{
-              name: '日期',
-              type: 'category',
-              nameTextStyle: {
-                fontSize: '14',
-                fontWeight: 'bold'
-              },
-              axisTick: {
-                alignWithLabel: 'true'
-              },
-              data: data.time
-            }],
-            yAxis: [{
-              type: 'value'
-            }],
-            dataZoom: {
-              type: 'inside'
-            },
-            series: [{
-              name: '接种人数',
-              type: 'line',
-              data: data.vaccined
-            },
-            {
-              name: '确诊人数',
-              type: 'line',
-              data: data.confirmed
-            },
-            {
-              name: '治愈人数',
-              type: 'line',
-              data: data.cured
-            },
-            {
-              name: '死亡人数',
-              type: 'line',
-              data: data.deceased
-            }]
-          }, true)
-        })
-      }).catch(function (err) {
-        alert(err.toString())
-      })
+    change (x) {
+      this.isShow = x
     }
   }
 }

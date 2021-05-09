@@ -1,5 +1,5 @@
 <template>
-  <div ref="confirmedChart" style="width: 800px;height: 600px"></div>
+  <div ref="confirmedChart" style="width: 1000px;height: 600px"></div>
 </template>
 
 <script>
@@ -24,26 +24,36 @@ export default {
       var chart = echarts.init(this.$refs.confirmedChart)
       chart.setOption({
         title: {
-          text: '感染人数',
+          text: '感染人数折线图',
+          left: 'center',
           textStyle: {
-            fontSize: '20',
-            color: '#696969'
-          },
-          left: '10%'
+            fontSize: '22',
+            color: '#000',
+            fontWeight: 'normal'
+          }
         },
         tooltip: {
           trigger: 'axis'
         },
         legend: {
-          left: '50%',
-          data: this.names
+          orient: 'vertical',
+          left: '0%',
+          data: this.names,
+          textStyle: {
+            color: '#000',
+            fontSize: 18
+          },
+          selectedMode: 'single'
+        },
+        grid: {
+          left: '20%',
+          containLabel: true
         },
         xAxis: [{
           name: '日期',
           type: 'category',
           nameTextStyle: {
-            fontSize: '14',
-            fontWeight: 'bold'
+            fontSize: '14'
           },
           axisTick: {
             alignWithLabel: 'true'

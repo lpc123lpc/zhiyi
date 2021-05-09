@@ -15,7 +15,14 @@
     mixins: [mixin],
     mounted() {
       this.drawWorldMapVaccine()
-    }, 
+    },
+    watch: {
+      worldMapVaccineData() {
+        // console.log(this.worldMapVaccineData.vaccined)
+        // console.log(this.worldMapVaccineData.coverage)
+        this.drawWorldMapVaccine()
+      }
+    },
     methods: {
        drawWorldMapVaccine() {
         // console.log(this.worldMapVaccineData)
@@ -35,10 +42,13 @@
               formatter: function (params) {
                 var value = parseFloat(params.value)
                 if (!isNaN(params.value)) {
-                    if (params.seriesName === '覆盖率') {
-                        value =  value + '/百人'
-                    } else {
-                        value = value + '万'
+                    if (value < 0) value = NaN
+                    else {
+                      if (params.seriesName === '覆盖率') {
+                        value =  params.value + '/百人'
+                      } else {
+                          value = params.value + '万'
+                      }
                     }
                 }
                 return params.seriesName + '：' + value
@@ -66,33 +76,34 @@
           },
           visualMap: [{
             seriesIndex: 0,
-            show: true,
             showLabel: false,
             left: '5%',
             bottom: '1%',
-            calculable: true,   
+            calculable: true,
             realtime: true,
             textStyle: {
                 fontSize: 12,
             },
             min: 0,
             max: 5000,
-            maxOpen: true, 
+            maxOpen: true,
             // text: ['接种人数/万'],
             textGap: 20,
             realtime: true,
             calculable: true,
             inRange: {
-                color: ['#99CCFF', '#66CCFF', '#0099FF', '#0066CC', '#0033FF']
+                color: ['rgba(181,255,253,0.56)', '#a1d5ff', '#72a0ff',
+                  '#8885ff', '#7358ff']
             },
-            outOfRange: { color: 'darkblue' }
+            outOfRange: { color: 'lightblue' }
           },{
             seriesIndex: 1,
             show: false,
             left: '5%',
             bottom: '1%',
-            calculable: true,   
+            calculable: true,
             realtime: true,
+            // precision: 2,
             // text: ['覆盖率'],
             textGap: 20,
             textStyle: {
@@ -104,7 +115,8 @@
             realtime: true,
             calculable: true,
             inRange: {
-                color: ['#d6f6cf', '#acff9a', '#a6f6a3', '#7ae997', '#44d544', '#298518']
+                color: ['rgba(181,255,253,0.56)', '#a1d5ff', '#72a0ff',
+                  '#8885ff', '#7358ff']
             }
           }],
           series: [{

@@ -13,7 +13,7 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      {{vaccine_sum_add}}
+      +{{vaccine_sum_add}}
     </div>
     <div class="today-item">
       累计接种
@@ -22,12 +22,12 @@
       {{vaccine_sum}}
     </div>
     <el-divider></el-divider>
-    <div class="yersterday-item">
+    <!--<div class="yersterday-item">
       较昨日
     </div>
     <div class="yersterday-item">
       {{vaccine_cover_add}}
-    </div>
+    </div>-->
     <div class="today-item">
       覆盖率
     </div>
@@ -49,18 +49,18 @@ export default {
       vaccine_cover_add: ''
     }
   },
-  mounted () {
+  created () {
     this.getVaccineSum()
     this.getVaccineSumAdd()
     this.getVaccineCover()
-    this.getVaccineCoverAdd()
+    // this.getVaccineCoverAdd()
   },
   methods: {
     getVaccineSum () {
       var that = this
       fetch('http://127.0.0.1:5000/vaccineDetailSidebar/vaccineSum/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.vaccine_sum = data
+          that.vaccine_sum = data.value
         })
       })
     },
@@ -68,7 +68,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/vaccineDetailSidebar/vaccineSumAdd/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.vaccine_sum_add = data
+          that.vaccine_sum_add = data.value
         })
       })
     },
@@ -76,7 +76,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/vaccineDetailSidebar/vaccineCover/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.vaccine_cover = data
+          that.vaccine_cover = data.value
         })
       })
     },
@@ -84,7 +84,7 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/vaccineDetailSidebar/vaccineCoverAdd/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.vaccine_cover_add = data
+          that.vaccine_cover_add = data.value
         })
       })
     }

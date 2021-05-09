@@ -11,6 +11,9 @@
         <div style="align: center; margin-top: 20px">
           <vaccine-detail-country-map v-bind:country="countryMsg" v-bind:countryMapVaccineData="countryMapVaccineDataMsg"></vaccine-detail-country-map>
         </div>
+        <div style="align: center; margin-top: 50px">
+          <line-chart-vaccine></line-chart-vaccine>
+        </div>
       </el-main>
     </el-container>
   </el-container>
@@ -20,12 +23,16 @@
 import header from '../components/Header.vue'
 import vaccineDetailSidebar from '../components/VaccineDetailSidebar.vue'
 import vaccineDetailCountryMap from '../components/CountryMapVaccine.vue'
+import lineChartVaccine from '../components/CountryVaccine.vue'
+import {mixin} from '../mixins';
+
 export default {
   name: 'VaccineDetail',
   components: { // 定义组件
     'wbc-nav': header,
     'vaccine-detail-sidebar': vaccineDetailSidebar,
-    'vaccine-detail-country-map': vaccineDetailCountryMap
+    'vaccine-detail-country-map': vaccineDetailCountryMap,
+    'line-chart-vaccine': lineChartVaccine
   },
   data () { // 选项 / 数据
     return {
@@ -33,6 +40,7 @@ export default {
       countryMapVaccineDataMsg: ''
     }
   },
+  mixins: [mixin],
   methods: { // 事件处理器
     getCountryMsg () {
       var that = this
@@ -42,12 +50,14 @@ export default {
       var that = this
       fetch('http://127.0.0.1:5000/vaccineDetail/countryMapVaccineDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
+          that.judgeDataExist(data)
+          // console.log(data)
           that.countryMapVaccineDataMsg = data
         })
       })
     }
   },
-  mounted () {
+  created () {
     this.getCountryMsg()
     this.getCountryMapVaccineDataMsg()
   }

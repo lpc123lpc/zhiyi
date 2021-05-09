@@ -13,9 +13,14 @@
       'worldMapInfectionData'
     ],
     mixins: [mixin],
+    watch: {
+      worldMapInfectionData () {
+        this.drawWorldMapInfection()
+      }
+    },
     mounted() {
       this.drawWorldMapInfection()
-    }, 
+    },
     methods: {
        drawWorldMapInfection() {
             // console.log(this.worldMapInfectionData)
@@ -33,10 +38,14 @@
                 },
                 tooltip: {
                     formatter: function (params) {
-                        if (!isNaN(params.value)) {
-                            return params.seriesName + '：' + params.value + '万'
+                      var value = parseInt(params.value)
+                      if (!isNaN(params.value)) {
+                        if (value < 0) value = NaN
+                        else {
+                          value = params.value + '万'
                         }
-                        return params.seriesName + '：' + params.value
+                      }
+                      return params.seriesName + '：' + value
                     }
                 },
                 grid: {
@@ -51,7 +60,7 @@
                     left: '2%',
                     orient: 'vertical',
                     top: '10%',
-                    selected: {'当前确诊': true, '累计确诊': false, '累计治愈': false, '累计死亡': false},
+                    selected: {'当前确诊': false, '累计确诊': true, '累计治愈': false, '累计死亡': false},
                     selectedMode: 'single',
                     textStyle: {
                         color: '#000',
@@ -63,14 +72,14 @@
                     showLabel: false,
                     left: '5%',
                     bottom: '1%',
-                    calculable: true,   
+                    calculable: true,
                     realtime: true,
                     textStyle: {
                         fontSize: 12,
                     },
                     min: 0,
                     max: 5000,
-                    maxOpen: true, 
+                    maxOpen: true,
                     textGap: 20,
                     realtime: true,
                     calculable: true,

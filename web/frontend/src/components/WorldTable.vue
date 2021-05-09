@@ -2,7 +2,9 @@
     <div id = 'WorldTable'>
       <el-table :data="items" highlight-current-row height="600">
         <el-table-column type="expand">
-          <country_data></country_data>
+          <template slot-scope="props">
+            <country_data v-bind:country="props.row.name"></country_data>
+          </template>
         </el-table-column>
         <el-table-column
           prop="name"
@@ -39,7 +41,7 @@
           sortable>
         </el-table-column>
         <el-table-column
-          prop="vaccined_coverage"
+          prop="vaccine_coverage"
           label="接种率"
           sortable>
         </el-table-column>
@@ -64,7 +66,7 @@ export default {
   methods: {
     getWorldData () {
       var that = this
-      fetch('../static/json/charts/testWorld').then(function (response) {
+      fetch('http://127.0.0.1:5000/worldData').then(function (response) {
         response.json().then((data) => {
           that.items = data
         })

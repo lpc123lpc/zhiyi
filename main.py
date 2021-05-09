@@ -1,12 +1,19 @@
-import json
-
-from flask import Flask, request
+from flask import request
 from flask_cors import CORS
-from controller import map, table, sidebar
+from controller import map, tables, sidebar
+from database.static import dao, table
+from database.static.getInitData import *
+from database.static.dao import updateInf, updateVac
 import os
 
-app = Flask(__name__)
+app = table.app
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
+# 初始化数据库，第一次执行完后就可以注释掉
+'''Init()'''
+'''updateInf()
+updateVac()'''
+'''getArea()
+getChinaHisInf()'''
 
 
 @app.route('/')
@@ -16,27 +23,32 @@ def index():
 
 @app.route('/worldData', methods=["GET"])
 def getWordData():
-    return table.getWorldData()
+    return tables.getWorldData()
 
 
-@app.route('/countryData/<country>', methods=["GET"])
-def getCountryData(country):
-    return table.getCountryData(country)
+@app.route('/countryInfData/<country>', methods=["GET"])
+def getCountryInfData(country):
+    return tables.getCountryInfData(country)
+
+
+@app.route('/countryVacData/<country>', methods=["GET"])
+def getCountryVacData(country):
+    return tables.getCountryVacData(country)
 
 
 @app.route('/countryInfection/<country>', methods=["GET"])
 def getCountryInfection(country):
-    return table.getCountryInfection(country)
+    return tables.getCountryInfection(country)
 
 
 @app.route('/countryVaccine/<country>', methods=["GET"])
 def getCountryVaccine(country):
-    return table.getCountryInfection(country)
+    return tables.getCountryVaccine(country)
 
 
 @app.route('/provinceInfection/country/<province>', methods=["GET"])
 def getCountryData(province):
-    return table.getProvinceInfection(province)
+    return tables.getProvinceInfection(province)
 
 
 @app.route('/vaccineHome/worldMapVaccineDataMsg', methods=["GET"])
@@ -47,6 +59,21 @@ def getWorldMapVaccineDataMsg():
 @app.route('/vaccineDetail/countryMapVaccineDataMsg/<country>', methods=["GET"])
 def getWorldMapVaccineDataMsgCountry(country):
     return map.getMapVaccine(country)
+
+
+@app.route('/infectHome/worldMapInfectionDataMsg', methods=["GET"])
+def getWorldMapInfectionDataMsg():
+    return map.getMapInfection('global')
+
+
+@app.route('/infectDetail/countryMapInfectionDataMsg/<country>', methods=["GET"])
+def getWorldMapInfectionDataMsgCountry(country):
+    return map.getMapInfection(country)
+
+
+@app.route('/infectDetail/provinceMapInfectionDataMsg/<province>', methods=["GET"])
+def getInfectionProvince(province):
+    return map.getMapInfection(province)
 
 
 @app.route('/vaccineHomeHeadbar/vaccineSum', methods=["GET"])
@@ -64,11 +91,6 @@ def getVaccineCoverHeadbar():
     return sidebar.getVaccinationCovSidebar('global')
 
 
-@app.route('/vaccineHomeHeadbar/vaccineCoverAdd', methods=["GET"])
-def getVaccineCoverAddHeadbar():
-    return sidebar.getVaccinationCovAddSidebar('global')
-
-
 @app.route('/vaccineDetailSidebar/vaccineSum/<country>', methods=["GET"])
 def getVaccineSumHeadbarSon(country):
     return sidebar.getVaccinationTotalSidebar(country)
@@ -82,21 +104,6 @@ def getVaccineSumAddHeadbarSon(country):
 @app.route('/vaccineDetailSidebar/vaccineCover/<country>', methods=["GET"])
 def getVaccineCoverHeadbarSon(country):
     return sidebar.getVaccinationCovSidebar(country)
-
-
-@app.route('/vaccineDetailSidebar/vaccineCoverAdd/<country>', methods=["GET"])
-def getVaccineCoverAddHeadbarSon(country):
-    return sidebar.getVaccinationCovAddSidebar(country)
-
-
-@app.route('/infectHome/worldMapInfectionDataMsg', methods=["GET"])
-def getWorldMapInfectionDataMsg():
-    return map.getMapInfection('world')
-
-
-@app.route('/infectDetail/countryMapInfectionDataMsg/<country>', methods=["GET"])
-def getWorldMapInfectionDataMsgCountry(country):
-    return map.getMapInfection(country)
 
 
 @app.route('/infectHomeHeadbar/infectSum', methods=["GET"])
@@ -124,11 +131,6 @@ def getInfectionCureHeadbar():
     return sidebar.getInfectionCureSidebar('global')
 
 
-@app.route('/infectHomeHeadbar/infectCureAdd', methods=["GET"])
-def getInfectionCureAddHeadbar():
-    return sidebar.getInfectionCureAddSidebar('global')
-
-
 @app.route('/infectDetailSidebar/infectSum/<country>', methods=["GET"])
 def getInfectionSumCountryHeadbarSon(country):
     return sidebar.getInfectionTotalSidebar(country)
@@ -152,11 +154,6 @@ def getInfectionDeadAddCountryHeadbarSon(country):
 @app.route('/infectDetailSidebar/infectCure/<country>', methods=["GET"])
 def getInfectionCureCountryHeadbarSon(country):
     return sidebar.getInfectionCureSidebar(country)
-
-
-@app.route('/infectDetailSidebar/infectCureAdd/<country>', methods=["GET"])
-def getInfectionCureAddCountryHeadbarSon(country):
-    return sidebar.getInfectionCureAddSidebar(country)
 
 
 @app.route('/vaccineSidebar/vaccineSum', methods=["GET"])
@@ -184,16 +181,6 @@ def getInfectionCureMain():
     return sidebar.getInfectionCureSidebar('global')
 
 
-@app.route('/infectSidebar/infectCureAdd', methods=["GET"])
-def getInfectionCureAddMain():
-    return sidebar.getInfectionCureAddSidebar('global')
-
-
-@app.route('/infectDetail/provinceMapInfectionDataMsg/<province>', methods=["GET"])
-def getInfectionProvince(province):
-    return map.getMapInfection(province)
-
-
 @app.route('/infectDetailProvinceSidebar/infectSum/<province>', methods=["GET"])
 def getInfectionSumProvince(province):
     return sidebar.getInfectionTotalSidebar(province)
@@ -219,28 +206,24 @@ def getInfectionCureProvince(province):
     return sidebar.getInfectionCureSidebar(province)
 
 
-@app.route('/infectDetailProvinceSidebar/infectProvinceCureAdd/<province>', methods=["GET"])
-def getInfectionCureAddProvince(province):
-    return sidebar.getInfectionAddCureSidebar(province)
-
-
 post_data = []
 
 
 @app.route('/feedback', methods=["GET", "POST"])
 def getFeedBack():
-    print(1)
     if request.method == "POST":
-        post_data.append(request.get_json())
-        print(2)
+        data = request.get_json()
+        now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        for key in data:
+            post_data.append(data[key])
+            dao.saveAdvice(data[key], now_time)
     if request.method == "GET":
-        print(1)
         return json.dumps(post_data)
 
 
 if __name__ == '__main__':
-    os.chdir("/Users/liuqian/PycharmProjects/covid-19")  # 注意这里请改成自己电脑上该文件夹的绝对路径 通用方法目前仍在查找 by:zzy
-    os.system("python database\\static\\initCreate.py")
+    '''os.chdir("/Users/liuqian/PycharmProjects/covid-19")  # 注意这里请改成自己电脑上该文件夹的绝对路径 通用方法目前仍在查找 by:zzy
+    os.system("python database\\static\\initCreate.py")'''
     app.config['JSON_AS_ASCII'] = False
     app.debug = True
     app.run()

@@ -24,6 +24,9 @@
         country() {
             [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
             this.drawCountryMapVaccine()
+        },
+        countryMapVaccineData9() {
+            this.drawCountryMapVaccine()
         }
     },
     mounted() {
@@ -60,10 +63,9 @@
               formatter: function (params) {
                 var value = parseFloat(params.value)
                 if (!isNaN(params.value)) {
-                    if (params.seriesName === '覆盖率') {
+                    if (value < 0) value = NaN
+                    else if (params.seriesName === '覆盖率') {
                         value =  value + '/百人'
-                    } else {
-                        value = value + '万'
                     }
                 }
                 return params.seriesName + '：' + value
@@ -107,8 +109,10 @@
             textGap: 20,
             realtime: true,
             calculable: true,
+            // precision: 2,
             inRange: {
-                color: ['#99CCFF', '#66CCFF', '#0099FF', '#0066CC', '#0033FF']
+                color: ['rgba(181,255,253,0.56)', '#a1d5ff', '#72a0ff',
+                  '#8885ff', '#7358ff']
             },
             outOfRange: { color: 'darkblue' }
           },{
@@ -129,7 +133,8 @@
             realtime: true,
             calculable: true,
             inRange: {
-                color: ['#d6f6cf', '#acff9a', '#a6f6a3', '#7ae997', '#44d544', '#298518']
+                color: ['rgba(181,255,253,0.56)', '#a1d5ff', '#72a0ff',
+                  '#8885ff', '#7358ff']
             }
           }],
           series: [{

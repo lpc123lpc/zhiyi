@@ -6,22 +6,23 @@
 import echarts from 'echarts'
 export default {
   name: 'ProvinceInfection',
-  mouted () {
+  mounted () {
     this.drawProvinceInfection()
   },
   methods: {
     drawProvinceInfection () {
       var mychart = echarts.init(this.$refs.ProvinceInfection)
-      fetch('').then(function (response) {
+      fetch('http://127.0.0.1:5000/provinceInfection/country/' + this.$route.params.province).then(function (response) {
         response.json().then(function (data) {
           mychart.setOption({
             title: {
               text: data.name + '感染数据',
+              left: 'center',
               textStyle: {
-                fontSize: '20',
-                color: '#696969'
-              },
-              left: '10%'
+                fontSize: '22',
+                color: '#000',
+                fontWeight: 'normal'
+              }
             },
             backgroundColor: '',
             tooltip: {
@@ -29,14 +30,18 @@ export default {
             },
             legend: {
               left: '50%',
-              data: ['确诊人数', '死亡人数', '治愈人数']
+              top: '5%',
+              data: ['确诊人数', '死亡人数', '治愈人数'],
+              textStyle: {
+                color: '#000',
+                fontSize: 18
+              }
             },
             xAxis: [{
               name: '日期',
               type: 'category',
               nameTextStyle: {
-                fontSize: '14',
-                fontWeight: 'bold'
+                fontSize: '14'
               },
               axisTick: {
                 alignWithLabel: 'true'
