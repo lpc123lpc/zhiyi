@@ -36,8 +36,8 @@ export default {
           trigger: 'axis'
         },
         legend: {
-          left: '10%',
-          top: '5%',
+          orient: 'vertical',
+          left: '0%',
           data: this.names,
           textStyle: {
             color: '#000',
@@ -46,7 +46,7 @@ export default {
           selectedMode: 'single'
         },
         grid: {
-          top: '15%',
+          left: '20%',
           containLabel: true
         },
         xAxis: [{
