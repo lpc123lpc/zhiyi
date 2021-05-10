@@ -217,6 +217,7 @@ def getFeedBack():
         now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         for key in data:
             dao.saveAdvice(data[key], now_time)
+        return jsonify({})
     if request.method == "GET":
         return jsonify({})
 
