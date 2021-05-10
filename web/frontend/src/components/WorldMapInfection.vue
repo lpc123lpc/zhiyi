@@ -78,13 +78,13 @@
                         fontSize: 12,
                     },
                     min: 0,
-                    max: 5000,
+                    max: 3500,
                     maxOpen: true,
                     textGap: 20,
                     realtime: true,
                     calculable: true,
                     inRange: {
-                        color: ['#FDEBCF', '#F59E83', '#E55A4E', '#CB2A2F', '#70161D', '#30161D']
+                        color: ['#FDEBCF', '#F59E83', '#E55A4E', '#CB2A2F', '#70161D']
                     },
                     outOfRange: { color: 'darkRed' }
                 },
