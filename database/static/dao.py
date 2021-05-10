@@ -297,6 +297,7 @@ def updateInf():
 
 
 def updateVac():
+    print("i am in")
     vacMessage = Spider.getData(0)
     lastName = ""
     i = 0
@@ -305,6 +306,7 @@ def updateVac():
         worldMapping = json.load(f)
         v1 = None
         for v in vacMessage:
+            print("e")
             if v['location'] in worldMapping:
                 name = worldMapping[v['location']]['cn']
             else:
@@ -327,6 +329,7 @@ def updateVac():
             NowVacMessage.query.filter_by(areaName=lastName) \
                 .update({'time': v1['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
             db.session.commit()
+        print("i am out")
 
 
 # 清除表单

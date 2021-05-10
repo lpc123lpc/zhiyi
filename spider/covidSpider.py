@@ -372,7 +372,7 @@ if __name__ == '__main__':
     from database.static.dao import updateForeignProvinceInf
     from database.static.getInitData import Init
 
-    schedule.every().day.at("09:00:00").do(job_func=Spider.timelyJob)
+    schedule.every().day.at("03:00:00").do(job_func=Spider.timelyJob)
     while True:
         schedule.run_pending()
     """yes,tod=Spider.getData(7)
