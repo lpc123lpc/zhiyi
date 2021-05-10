@@ -4,6 +4,8 @@
 
 <script>
 import echarts from 'echarts'
+import {mixin} from "../mixins";
+
 export default {
   name: 'CountryInfectionDeceased',
   props: {
@@ -11,6 +13,7 @@ export default {
     names: Array,
     deceased: Array
   },
+  mixins: [mixin],
   watch: {
     deceased () {
       this.drawDeceased()
@@ -40,11 +43,12 @@ export default {
           right: '55%',
           itemGap: 15,
           data: this.names,
+          selected: this.getSelected(this.names),
           textStyle: {
             color: '#000',
             fontSize: 15
           },
-          selectedMode: 'single'
+          selectedMode: 'multiple'
         },
         grid: {
           left: '50%',

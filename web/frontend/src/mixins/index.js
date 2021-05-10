@@ -41,6 +41,18 @@ export const mixin = {
           this.$router.go(-1)
         })
       }
+    },
+    getSelected(list) {
+      var ret = {}
+      for (let i in list) {
+        ret[list[i]] = false
+      }
+      var val = Math.min(10, list.length)
+      for (let i=0; i<val; i++) {
+        ret[list[i]] = true
+      }
+      console.log(ret)
+      return ret
     }
   }
 }
