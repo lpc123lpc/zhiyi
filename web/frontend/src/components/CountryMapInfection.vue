@@ -93,11 +93,13 @@
                     },
                     splitList: [{start: 0, end: 100},
                                 {start: 100, end: 499},
-                                {start: 500, end: 1999},
-                                {start: 2000, end: 9999},
-                                {start: 10000, end: 99999},
-                                {start: 100000}],
-                    color: ['#FDEBCF', '#F59E83', '#E55A4E', '#CB2A2F', '#70161D']
+                                {start: 500, end: 999},
+                                {start: 1000, end: 49999},
+                                {start: 50000, end: 99999},
+                                {start: 100000, end: 999999},
+                                {start: 1000000}],
+                    color: ['#70161D', '#9c1609', '#d62b1f', '#E55A4E',
+                            '#F59E83', '#FDEBCF', '#DCE2EB']
                 },
                 series: [{
                     name: '当前确诊',

@@ -83,9 +83,9 @@
                                 {start: 1, end: 9},
                                 {start: 10, end: 99},
                                 {start: 100, end: 999},
-                                {start: 1000, end: 9999},
-                                {start: 10000}],
-                    color: ['#FDEBCF', '#F59E83', '#E55A4E', '#CB2A2F', '#70161D']
+                                {start: 1000, end: 1999},
+                                {start: 2000}],
+                    color: ['#70161D', '#CB2A2F', '#E55A4E', '#F59E83', '#FDEBCF', '#DCE2EB']
                 },
                 series: [{
                     name: '当前确诊',
