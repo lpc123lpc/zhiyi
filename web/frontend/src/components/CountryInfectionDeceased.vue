@@ -25,7 +25,7 @@ export default {
       chart.setOption({
         title: {
           text: '死亡人数折线图',
-          left: '56%',
+          left: '65%',
           textStyle: {
             fontSize: '22',
             color: '#000',
@@ -37,11 +37,12 @@ export default {
         },
         legend: {
           orient: 'vertical',
-          right: '50%',
+          right: '55%',
+          itemGap: 15,
           data: this.names,
           textStyle: {
             color: '#000',
-            fontSize: 18
+            fontSize: 15
           },
           selectedMode: 'single'
         },
