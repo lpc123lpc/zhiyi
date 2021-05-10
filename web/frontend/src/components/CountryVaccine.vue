@@ -14,7 +14,7 @@ export default {
       var myChart = echarts.init(document.getElementById('countryVaccine'))
       var series = []
       var names = []
-      fetch('http://127.0.0.1:5000/countryVaccine/' + this.$route.params.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/countryVaccine/' + this.$route.params.country).then(function (response) {
         response.json().then(function (data) {
           for (var i = 0; i < data.length; i++) {
             series.push(

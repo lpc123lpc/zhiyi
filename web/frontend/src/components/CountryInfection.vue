@@ -42,7 +42,7 @@ export default {
   methods: {
     getData () {
       var that = this
-      fetch('http://127.0.0.1:5000/countryInfection/' + this.$route.params.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/countryInfection/' + this.$route.params.country).then(function (response) {
         response.json().then(data => {
           that.times = data[0].time
           for (var i = 0; i < data.length; i++) {

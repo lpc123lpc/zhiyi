@@ -75,7 +75,7 @@ export default {
   methods: {
     getInfectProvinceSum () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailProvinceSidebar/infectSum/' + this.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailProvinceSidebar/infectSum/' + this.province).then(function (response) {
         response.json().then((data) => {
           that.infect_province_sum = data.value
         })
@@ -83,7 +83,7 @@ export default {
     },
     getInfectProvinceSumAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailProvinceSidebar/infectProvinceSumAdd/' + this.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailProvinceSidebar/infectProvinceSumAdd/' + this.province).then(function (response) {
         response.json().then((data) => {
           that.infect_province_sum_add = data.value
         })
@@ -91,7 +91,7 @@ export default {
     },
     getInfectProvinceDeath () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailProvinceSidebar/infectProvinceDeath/' + this.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailProvinceSidebar/infectProvinceDeath/' + this.province).then(function (response) {
         response.json().then((data) => {
           that.infect_province_death = data.value
         })
@@ -99,7 +99,7 @@ export default {
     },
     getInfectProvinceDeathAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailProvinceSidebar/infectProvinceDeathAdd/' + this.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailProvinceSidebar/infectProvinceDeathAdd/' + this.province).then(function (response) {
         response.json().then((data) => {
           that.infect_province_death_add = data.value
         })
@@ -107,7 +107,7 @@ export default {
     },
     getInfectProvinceCure () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailProvinceSidebar/infectProvinceCure/' + this.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailProvinceSidebar/infectProvinceCure/' + this.province).then(function (response) {
         response.json().then((data) => {
           that.infect_province_cure = data.value
         })
@@ -115,7 +115,7 @@ export default {
     },
     getInfectProvinceCureAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailProvinceSidebar/infectProvinceCureAdd/' + this.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailProvinceSidebar/infectProvinceCureAdd/' + this.province).then(function (response) {
         response.json().then((data) => {
           that.infect_province_cure_add = data.value
         })
