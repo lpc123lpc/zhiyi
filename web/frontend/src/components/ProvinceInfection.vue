@@ -14,7 +14,7 @@ export default {
       var mychart = echarts.init(this.$refs.ProvinceInfection)
       fetch('http://81.70.134.96:5000/provinceInfection/country/' + this.$route.params.province).then(function (response) {
         response.json().then(function (data) {
-          if (this.deceased.length === 0) {
+          if (JSON.stringify(data) === '{}') {
             return
           }
           mychart.setOption({
