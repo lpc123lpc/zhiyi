@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import header from '../components/Header.vue'
+import vueHeader from '../components/PageHeader.vue'
 import vaccineDetailSidebar from '../components/VaccineDetailSidebar.vue'
 import vaccineDetailCountryMap from '../components/CountryMapVaccine.vue'
 import lineChartVaccine from '../components/CountryVaccine.vue'
@@ -29,7 +29,7 @@ import {mixin} from '../mixins';
 export default {
   name: 'VaccineDetail',
   components: { // 定义组件
-    'wbc-nav': header,
+    'wbc-nav': vueHeader,
     'vaccine-detail-sidebar': vaccineDetailSidebar,
     'vaccine-detail-country-map': vaccineDetailCountryMap,
     'line-chart-vaccine': lineChartVaccine

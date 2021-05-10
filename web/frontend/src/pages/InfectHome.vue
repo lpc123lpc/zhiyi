@@ -26,13 +26,13 @@
 </template>
 
 <script>
-import header from '../components/Header.vue'
+import vueHeader from '../components/PageHeader.vue'
 import infectHomeHeadbar from '../components/InfectHomeHeadbar.vue'
 import infectHomeWorldMap from '../components/WorldMapInfection.vue'
 export default {
   name: 'InfectHome',
   components: { // 定义组件
-    'wbc-nav': header,
+    'wbc-nav': vueHeader,
     'home-info': infectHomeHeadbar,
     'infect-home-world-map': infectHomeWorldMap
   },

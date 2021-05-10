@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import header from '../components/Header.vue'
+import vueHeader from '../components/PageHeader.vue'
 import vaccineSidebar from '../components/VaccineSidebar.vue'
 import infectSidebar from '../components/InfectSidebar.vue'
 import worldTable from '../components/WorldTable.vue'
@@ -51,7 +51,7 @@ export default {
 
   },
   components: { // 定义组件
-    'wbc-nav': header,
+    'wbc-nav': vueHeader,
     'vaccine-sidebar': vaccineSidebar,
     'infect-sidebar': infectSidebar,
     'world-table': worldTable,

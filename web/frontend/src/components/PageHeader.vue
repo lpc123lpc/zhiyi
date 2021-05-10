@@ -45,7 +45,7 @@
 
 <script>
 export default {
-  name: 'header',
+  name: 'PageHeader',
   data () {
     return {
       activeIndex: '1',

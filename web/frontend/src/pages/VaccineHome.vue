@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import header from '../components/Header.vue'
+import vueHeader from '../components/PageHeader.vue'
 import vaccineHomeHeadbar from '../components/VaccineHomeHeadbar.vue'
 import vaccineHomeWorldMap from '../components/WorldMapVaccine.vue'
 export default {
@@ -47,7 +47,7 @@ export default {
     }
   },
   components: { // 定义组件
-    'wbc-nav': header,
+    'wbc-nav': vueHeader,
     'home-info': vaccineHomeHeadbar,
     'vaccine-home-world-map': vaccineHomeWorldMap
   },

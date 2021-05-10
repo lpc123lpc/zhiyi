@@ -18,14 +18,14 @@
 </template>
 
 <script>
-import header from '../components/Header.vue'
+import vueHeader from '../components/PageHeader.vue'
 import feedBackInput from '../components/FeedBackInput.vue'
 import vaccineSidebar from '../components/VaccineSidebar.vue'
 import infectSidebar from '../components/InfectSidebar.vue'
 export default {
   name: 'Feedback',
   components: { // 定义组件
-    'wbc-nav': header,
+    'wbc-nav': vueHeader,
     'vaccine-sidebar': vaccineSidebar,
     'infect-sidebar': infectSidebar,
     'feed-back-content': feedBackInput
