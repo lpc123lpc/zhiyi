@@ -44,7 +44,7 @@
                 if (!isNaN(params.value)) {
                     if (value < 0) value = NaN
                     else {
-                      if (params.seriesName === '覆盖率') {
+                      if (params.seriesName === '每百人接种剂量') {
                         value =  params.value + '/百人'
                       } else {
                           value = params.value + '万'
