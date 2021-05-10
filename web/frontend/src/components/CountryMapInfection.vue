@@ -160,11 +160,11 @@
                 }]
             }
             countryMapInfection.setOption(countryMapInfection_Option)
-            if (this.country == '中国') {
+            if (this.country === '中国') {
                 const that = this
                 countryMapInfection.on('click', function (param) {
                     // console.log(param.name)
-                    that.$router.push({path: `/InfectProvinceDetail/${param.name}`})
+                    if (param.name !== '') that.$router.push({path: `/InfectProvinceDetail/${param.name}`})
                 })
             }
         },

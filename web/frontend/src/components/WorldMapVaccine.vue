@@ -165,7 +165,7 @@
         const that = this
         worldMapVaccine.on('click', function (param) {
           // console.log(param.name)
-          that.$router.push({path: `/VaccineDetail/${param.name}`})
+          if (param.name !== '') that.$router.push({path: `/VaccineDetail/${param.name}`})
         })
       },
       getNameMap() {
