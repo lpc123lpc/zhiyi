@@ -24,6 +24,13 @@ export default {
   },
   methods: {
     drawConfirmed () {
+      if (this.confirmed.length === 0) {
+        return
+      }
+      var legendItemSize = 15
+      if (this.$route.params.country === '俄罗斯') {
+        legendItemSize = 8
+      }
       var chart = echarts.init(this.$refs.confirmedChart)
       chart.setOption({
         title: {
@@ -46,7 +53,7 @@ export default {
           selected: this.getSelected(this.names),
           textStyle: {
             color: '#000',
-            fontSize: 15
+            fontSize: legendItemSize
           },
           selectedMode: 'multiple'
         },

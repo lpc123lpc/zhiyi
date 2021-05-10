@@ -42,7 +42,7 @@
         </el-table-column>
         <el-table-column
           prop="vaccine_coverage"
-          label="接种率"
+          label="百人接种"
           sortable>
         </el-table-column>
       </el-table>

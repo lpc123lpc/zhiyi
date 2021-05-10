@@ -17,6 +17,9 @@ export default {
       let mychart = echarts.init(this.$refs.countryDataVacChart)
       fetch('http://81.70.134.96:5000/countryVacData/' + this.country).then(function (response) {
         response.json().then(function (data) {
+          if (JSON.stringify(data) === '{}') {
+            return
+          }
           mychart.setOption({
             backgroundColor: '',
             tooltip: {
