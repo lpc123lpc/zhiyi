@@ -49,11 +49,11 @@ class Spider:
     @classmethod
     def getHisWorldCovidUrls(cls):
 
-        prefix = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
-        USPrefix = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/"
+        prefix = "https://raw.fastgit.org/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
+        USPrefix = "https://raw.fastgit.org/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/"
         # 网页url
-        url = 'https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports'
-        USUrl = 'https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports_us'
+        url = 'https://hub.fastgit.org/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports'
+        USUrl = 'https://hub.fastgit.org/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports_us'
 
         r = requests.get(url, headers=cls.headers)
         data = r.text
@@ -90,11 +90,11 @@ class Spider:
 
     @classmethod
     def getUpdateCovidUrls(cls):
-        urlPrefix = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
-        USUrlPrefix = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/"
-        curTime = time.strftime("%m-%d-%Y", time.localtime())
-        todayUrl = urlPrefix + curTime + ".csv"
-        USTodayUrl = USUrlPrefix + curTime + ".csv"
+        urlPrefix = "https://raw.fastgit.org/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
+        USUrlPrefix = "https://raw.fastgit.org/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/"
+        #curTime = time.strftime("%m-%d-%Y", time.localtime())
+        #todayUrl = urlPrefix + curTime + ".csv"
+        #USTodayUrl = USUrlPrefix + curTime + ".csv"
 
         today = datetime.date.today()
         oneday = datetime.timedelta(days=1)
@@ -102,7 +102,11 @@ class Spider:
         yesterdayUrl = urlPrefix + yesterday + ".csv"
         USYesterdayUrl = USUrlPrefix + yesterday + ".csv"
 
-        return yesterdayUrl, todayUrl, USYesterdayUrl, USTodayUrl
+        last2Day = (today - oneday - oneday).strftime('%m-%d-%Y')
+        last2DayUrl = urlPrefix + last2Day + ".csv"
+        USlast2DayUrl = USUrlPrefix + last2Day + ".csv"
+
+        return last2DayUrl, yesterdayUrl, USlast2DayUrl, USYesterdayUrl
 
     # 国内省市的历史数据
     """
@@ -372,10 +376,7 @@ if __name__ == '__main__':
     from database.static.dao import updateForeignProvinceInf
     from database.static.getInitData import Init
 
-    schedule.every().day.at("09:00:00").do(job_func=Spider.timelyJob)
+    schedule.every().day.at("03:00").do(job_func=Spider.timelyJob)
     while True:
         schedule.run_pending()
-    """yes,tod=Spider.getData(7)
-	print(yes,tod)
-	todayCsv=Spider.getCSVDictReader(tod)
-	print(todayCsv.fieldnames)"""
+
