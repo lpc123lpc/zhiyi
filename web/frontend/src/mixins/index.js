@@ -32,14 +32,19 @@ export const mixin = {
       return json[province]
     },
     judgeDataExist(data) {
-      if (JSON.stringify(data) == '{}') {
+      if (JSON.stringify(data) === '{}') {
         this.$confirm('对不起，暂未收录该地区数据', '提示', {
           confirmButtonText: '返回',
-          showCancelButton: false
+          showCancelButton: false,
           // type: 'warning'
         }).then(() => {
           this.$router.go(-1)
         })
+        .catch(action => {
+            if (action === 'cancel') {
+                this.$router.go(-1)
+            }
+          });
       }
     },
     getSelected(list) {
