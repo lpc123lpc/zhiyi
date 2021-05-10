@@ -51,7 +51,7 @@ export const mixin = {
       for (let i=0; i<val; i++) {
         ret[list[i]] = true
       }
-      console.log(ret)
+      // console.log(ret)
       return ret
     }
   }
