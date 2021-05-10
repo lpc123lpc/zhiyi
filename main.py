@@ -13,7 +13,7 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 clearTable('hisInfMessages')
 getGlobalProvinceHisInf()'''
 '''Init()'''
-#updateInf()
+updateInf()
 '''updateVac()'''
 '''getArea()
 getChinaHisInf()'''
