@@ -146,7 +146,7 @@ return:返回该区域所包含的国家/地区的历史接种信息（下一级
 def getHisVacMessageInclude(name):
     messages = []
     areas = db.session.query(Area).filter(Area.parentArea == name).all()
-    if areas is None:
+    if areas is None or len(areas) == 0:
         return None
     else:
         for area in areas:
