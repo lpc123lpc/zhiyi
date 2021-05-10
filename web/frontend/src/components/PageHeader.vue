@@ -60,7 +60,7 @@ export default {
     }
   },
   methods: {
-    goHome() {
+    goHome () {
       this.$router.push({path: `/Home`})
     },
     handleSelect (key, keyPath) {
