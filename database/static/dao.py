@@ -306,7 +306,6 @@ def updateVac():
         worldMapping = json.load(f)
         v1 = None
         for v in vacMessage:
-            print("e")
             if v['location'] in worldMapping:
                 name = worldMapping[v['location']]['cn']
             else:
