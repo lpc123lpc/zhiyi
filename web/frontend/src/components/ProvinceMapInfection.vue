@@ -49,7 +49,7 @@
                 },
                 tooltip: {
                     formatter: function (params) {
-                      if (parseInt(parmas.value) < 0) return params.seriesName + '：' + NaN
+                      if (parseInt(params.value) < 0) return params.seriesName + '：' + NaN
                       return params.seriesName + '：' + params.value
                     }
                 },
