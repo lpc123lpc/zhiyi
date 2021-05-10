@@ -16,6 +16,9 @@ export default {
       var names = []
       fetch('http://81.70.134.96:5000/countryVaccine/' + this.$route.params.country).then(function (response) {
         response.json().then(function (data) {
+          if (JSON.stringify(data) === '{}') {
+            return
+          }
           for (var i = 0; i < data.length; i++) {
             series.push(
               {
@@ -26,10 +29,14 @@ export default {
             )
             names.push(data[i].name)
           }
+          var legendItemSize = 15
+          if (this.$route.params.country === '俄罗斯') {
+            legendItemSize = 8
+          }
           myChart.setOption({
             title: {
               text: data[0].name + '接种人数折线图',
-              left: 'center',
+              left: '65%',
               textStyle: {
                 fontSize: '22',
                 color: '#000',
@@ -41,15 +48,18 @@ export default {
             },
             legend: {
               orient: 'vertical',
-              left: '0%',
+              right: '55%',
+              itemGap: 15,
               data: names,
+              selected: this.getSelected(names),
               textStyle: {
                 color: '#000',
-                fontSize: 18
-              }
+                fontSize: legendItemSize
+              },
+              selectedMode: 'multiple'
             },
             grid: {
-              left: '20%',
+              left: '50%',
               containLabel: true
             },
             xAxis: [{
