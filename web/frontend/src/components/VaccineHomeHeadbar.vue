@@ -33,7 +33,7 @@ export default {
     set_length () {
       const headBar = document.getElementById('card-head-bar')
       // alert(document.body.offsetWidth)
-      headBar.style.setProperty('width', document.body.offsetWidth * 2 / 3 + 'px')
+      headBar.style.setProperty('width', document.body.offsetWidth * 4 / 5 + 'px')
     },
     getVaccineSum () {
       var that = this
