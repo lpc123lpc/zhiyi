@@ -66,7 +66,7 @@ return:返回该区域所包含的国家/地区的历史感染信息（下一级
 def getHisInfMessageInclude(name):
     areas = db.session.query(Area).filter(Area.parentArea == name).all()
     messages = []
-    if areas is None:
+    if areas is None or len(areas) == 0:
         return None
     else:
         a = areas[0]
