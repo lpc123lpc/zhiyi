@@ -15,7 +15,7 @@ export default {
   methods: {
     drawVac () {
       let mychart = echarts.init(this.$refs.countryDataVacChart)
-      fetch('http://127.0.0.1:5000/countryVacData/' + this.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/countryVacData/' + this.country).then(function (response) {
         response.json().then(function (data) {
           mychart.setOption({
             backgroundColor: '',

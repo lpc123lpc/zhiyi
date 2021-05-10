@@ -35,7 +35,7 @@ export default {
   methods: {
     postFeedBack () {
       var formData = JSON.stringify(this.ruleForm)
-      fetch('http://127.0.0.1:5000/feedback', {
+      fetch('http://81.70.134.96:5000/feedback', {
         method: 'POST',
         body: formData,
         headers: {
