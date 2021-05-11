@@ -44,6 +44,9 @@ export default {
       var that = this
       fetch('http://81.70.134.96:5000/countryInfection/' + this.$route.params.country).then(function (response) {
         response.json().then(data => {
+          if (JSON.stringify(data) === '{}') {
+            return
+          }
           that.times = data[0].time
           for (var i = 0; i < data.length; i++) {
             that.names.push(data[i].name)
