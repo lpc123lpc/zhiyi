@@ -6,8 +6,8 @@
     </div>
     <el-row>
       <el-main style="text-align:center">
-        <CountryDataInf v-show="isShow==='inf'" v-bind:country="country"></CountryDataInf>
-        <CountryDataVac v-show="isShow==='vac'" v-bind:country="country"></CountryDataVac>
+        <CountryDataInf v-if="isShow==='inf'" v-bind:country="country"></CountryDataInf>
+        <CountryDataVac v-if="isShow==='vac'" v-bind:country="country"></CountryDataVac>
       </el-main>
     </el-row>
   </div>
