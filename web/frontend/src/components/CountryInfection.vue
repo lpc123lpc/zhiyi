@@ -7,11 +7,11 @@
       </div>
       <el-row>
       <el-main style="text-align:center">
-        <country-infection-confirmed v-show="isShow==='confirmed'" v-bind:names="names"
+        <country-infection-confirmed v-if="isShow==='confirmed'" v-bind:names="names"
                                    v-bind:times="times" v-bind:confirmed="confirmed"></country-infection-confirmed>
-      <country-infection-deceased v-show="isShow==='deceased'" v-bind:names="names"
+      <country-infection-deceased v-if="isShow==='deceased'" v-bind:names="names"
       v-bind:times="times" v-bind:deceased="deceased"></country-infection-deceased>
-      <country-infection-cured v-show="isShow==='cured'" v-bind:names="names"
+      <country-infection-cured v-if="isShow==='cured'" v-bind:names="names"
       v-bind:times="times" v-bind:cured="cured"></country-infection-cured>
       </el-main>
         </el-row>

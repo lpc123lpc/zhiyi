@@ -1,5 +1,5 @@
 <template>
-    <div ref="deceasedChart" style="width: 1490px;height: 600px"></div>
+    <div ref="deceasedChart" style="width: 100%;height: 600px"></div>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
   watch: {
     deceased () {
       this.drawDeceased()
-    }
+    },
   },
   mounted () {
     this.drawDeceased()

@@ -1,5 +1,5 @@
 <template>
-  <div ref="countryDataVacChart" style="width: 900px;height:500px"></div>
+  <div ref="countryDataVacChart" style="width: 100%;height:500px"></div>
 </template>
 
 <script>

@@ -6,8 +6,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: resolve => require(['../pages/Home'], resolve)
+      name: 'Cover',
+      component: resolve => require(['../pages/Cover'], resolve)
     },
     {
       path: '/Home',

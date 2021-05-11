@@ -60,7 +60,7 @@ export default {
     }
   },
   methods: {
-    goHome() {
+    goHome () {
       this.$router.push({path: `/Home`})
     },
     handleSelect (key, keyPath) {
@@ -97,7 +97,7 @@ export default {
       }
       this.$alert(h('pre', null, data), '数据来源', {
         // customClass: 'message-alert'
-      })
+      }).catch(() => {}) // 注意这里，这里是重点！！！
     }
   },
   watch: {

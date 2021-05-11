@@ -1,9 +1,9 @@
 <template>
-  <el-card class="box-card" shadow="always">
+  <el-card class="box-card" shadow="always" id="card-head-bar">
     <el-row>
-      <el-col :span="8"><div class="vaccine-sum">累计接种{{vaccine_sum}}</div></el-col>
+      <el-col :span="9"><div class="vaccine-sum">累计接种{{vaccine_sum}}</div></el-col>
       <el-col :span="4"><div class="vaccine-sum-add">+{{vaccine_sum_add}}</div></el-col>
-      <el-col :span="4"><div class="vaccine-sum">每百人接种{{vaccine_cover}}剂</div></el-col>
+      <el-col :span="5"><div class="vaccine-sum">每百人接种{{vaccine_cover}}剂</div></el-col>
       <!--<el-col :span="8"><div class="vaccine-sum-add">+{{vaccine_cover_add}}</div></el-col>-->
     </el-row>
   </el-card>
@@ -26,7 +26,15 @@ export default {
     this.getVaccineCover()
     // this.getVaccineCoverAdd()
   },
+  mounted () {
+    this.set_length()
+  },
   methods: {
+    set_length () {
+      const headBar = document.getElementById('card-head-bar')
+      // alert(document.body.offsetWidth)
+      headBar.style.setProperty('width', document.body.offsetWidth * 4 / 5 + 'px')
+    },
     getVaccineSum () {
       var that = this
       fetch('http://81.70.134.96:5000/vaccineHomeHeadbar/vaccineSum').then(function (response) {
