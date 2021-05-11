@@ -72,8 +72,6 @@
                     showLabel: false,
                     left: '5%',
                     bottom: '1%',
-                    calculable: true,
-                    realtime: true,
                     textStyle: {
                         fontSize: 12,
                     },

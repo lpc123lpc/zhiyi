@@ -82,7 +82,7 @@
                     textStyle: {
                         color: '#000',
                         fontSize: 18
-                    }
+                    },
                 },
                 visualMap: {
                     show: true,
@@ -99,7 +99,8 @@
                                 {start: 100000, end: 999999},
                                 {start: 1000000}],
                     color: ['#70161D', '#9c1609', '#d62b1f', '#E55A4E',
-                            '#F59E83', '#FDEBCF', '#DCE2EB']
+                            '#F59E83', '#FDEBCF', '#DCE2EB'],
+                    outOfRange: { color: ['#EEEEEE'] }
                 },
                 series: [{
                     name: '当前确诊',
