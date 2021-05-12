@@ -9,7 +9,7 @@ import re
 import datetime
 from urllib import parse
 import schedule
-
+from retrying import retry
 
 class Spider:
     headers = {
@@ -177,26 +177,27 @@ class Spider:
 	"""
 
     @classmethod
+    @retry(wait_fixed=2000, stop_max_attempt_number=5)
     def getJsonData(cls, url):
         if url == cls.nowGlobalCovidDataUrl:
-            r = requests.post(url, headers=cls.headers)
+            r = requests.post(url, headers=cls.headers,timeout=8)
             data_json = json.loads(r.text)
             data = data_json['data']
             nowGlobalStatics = data['FAutoGlobalStatis']
             return nowGlobalStatics
         elif url == cls.hisGlobalCovidDataUrl:
-            r = requests.post(url, headers=cls.headers)
+            r = requests.post(url, headers=cls.headers,timeout=8)
             data_json = json.loads(r.text)
             data = data_json['data']
             hisGlobalStatics = data['FAutoGlobalDailyList']
             return hisGlobalStatics
         elif url == cls.nowForeignCovidDataUrl:
-            r = requests.post(url, headers=cls.headers)
+            r = requests.post(url, headers=cls.headers,timeout=8)
             data_json = json.loads(r.text)
             nowForeignCountryData = data_json['data']
             return nowForeignCountryData
         elif url == cls.nowDomesticCovidDataUrl:
-            r = requests.get(url, headers=cls.headers)
+            r = requests.get(url, headers=cls.headers,timeout=8)
             data_json = json.loads(r.text)
             Domesticdata = json.loads(data_json['data'])
             return Domesticdata
@@ -221,8 +222,9 @@ class Spider:
 	"""
 
     @classmethod
+    @retry(wait_fixed=2000, stop_max_attempt_number=5)
     def getCSVDictReader(cls, url):
-        r = requests.get(url, headers=cls.headers)
+        r = requests.get(url, headers=cls.headers,timeout=8)
         data = r.text
         dataFile = StringIO(data)
         dictReader = csv.DictReader(dataFile)
@@ -276,7 +278,7 @@ class Spider:
 
             for item in data.keys():
                 url = data[item]
-                r = requests.post(url, headers=headers)
+                r = requests.post(url, headers=headers,timeout=8)
                 data_list = json.loads(r.text)
                 data_list = data_list['data']
                 data[item] = data_list
