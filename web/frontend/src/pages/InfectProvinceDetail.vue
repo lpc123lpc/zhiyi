@@ -4,7 +4,7 @@
       <wbc-nav></wbc-nav>
     </el-header>
     <el-container>
-      <el-aside width="450px">
+      <el-aside width="400px">
         <infect-detail-province-sidebar v-bind:province="provinceMsg"></infect-detail-province-sidebar>
       </el-aside>
       <el-main>
