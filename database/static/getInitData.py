@@ -31,7 +31,7 @@ def getArea():
 
     yUrl, tUrl, yUSUrl, dUSUrl = Spider.getData(7)
     glolist, uslist = Spider.getData(6)
-    worldMappingPath = './world-mapping.json'
+    worldMappingPath = 'database/static/world-mapping.json'
     with open(worldMappingPath, mode='r', encoding='utf-8') as f:
         worldMapping = json.load(f)
         globalProvinces = Spider.getCSVDictReader(yUrl)
