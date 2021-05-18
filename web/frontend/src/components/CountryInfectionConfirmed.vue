@@ -1,5 +1,5 @@
 <template>
-  <div ref="confirmedChart" style="width: 1490px;height: 600px"></div>
+  <div ref="confirmedChart" style="width: 100%;height: 600px"></div>
 </template>
 
 <script>
@@ -24,6 +24,13 @@ export default {
   },
   methods: {
     drawConfirmed () {
+      if (this.confirmed.length === 0) {
+        return
+      }
+      var legendItemSize = 15
+      if (this.$route.params.country === '俄罗斯') {
+        legendItemSize = 8
+      }
       var chart = echarts.init(this.$refs.confirmedChart)
       chart.setOption({
         title: {
@@ -46,7 +53,7 @@ export default {
           selected: this.getSelected(this.names),
           textStyle: {
             color: '#000',
-            fontSize: 15
+            fontSize: legendItemSize
           },
           selectedMode: 'multiple'
         },

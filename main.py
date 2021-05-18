@@ -217,6 +217,7 @@ def getFeedBack():
         now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         for key in data:
             dao.saveAdvice(data[key], now_time)
+        return jsonify({})
     if request.method == "GET":
         return jsonify({})
 
@@ -225,5 +226,5 @@ if __name__ == '__main__':
     '''os.chdir("/Users/liuqian/PycharmProjects/covid-19")  # 注意这里请改成自己电脑上该文件夹的绝对路径 通用方法目前仍在查找 by:zzy
     os.system("python database\\static\\initCreate.py")'''
     app.config['JSON_AS_ASCII'] = False
-    app.debug = True
+    '''app.debug = True'''
     app.run()

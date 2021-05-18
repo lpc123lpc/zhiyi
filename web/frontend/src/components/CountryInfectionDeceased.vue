@@ -1,5 +1,5 @@
 <template>
-    <div ref="deceasedChart" style="width: 1490px;height: 600px"></div>
+    <div ref="deceasedChart" style="width: 100%;height: 600px"></div>
 </template>
 
 <script>
@@ -17,13 +17,20 @@ export default {
   watch: {
     deceased () {
       this.drawDeceased()
-    }
+    },
   },
   mounted () {
     this.drawDeceased()
   },
   methods: {
     drawDeceased () {
+      if (this.deceased.length === 0) {
+        return
+      }
+      var legendItemSize = 15
+      if (this.$route.params.country === '俄罗斯') {
+        legendItemSize = 8
+      }
       var chart = echarts.init(this.$refs.deceasedChart)
       chart.setOption({
         title: {
@@ -46,7 +53,7 @@ export default {
           selected: this.getSelected(this.names),
           textStyle: {
             color: '#000',
-            fontSize: 15
+            fontSize: legendItemSize
           },
           selectedMode: 'multiple'
         },

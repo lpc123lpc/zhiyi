@@ -4,7 +4,7 @@
       <wbc-nav></wbc-nav>
     </el-header>
     <el-container>
-      <el-aside width="450px">
+      <el-aside width="400px">
         <infect-detail-province-sidebar v-bind:province="provinceMsg"></infect-detail-province-sidebar>
       </el-aside>
       <el-main>
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import header from '../components/Header.vue'
+import vueHeader from '../components/PageHeader.vue'
 import infectDetailProvinceSidebar from '../components/InfectDetailProvinceSidebar.vue'
 import infectDetailProvinceMap from '../components/ProvinceMapInfection.vue'
 import lineChartInfectProvince from '../components/ProvinceInfection.vue'
@@ -32,7 +32,7 @@ import {mixin} from '../mixins'
 export default {
   name: 'InfectProvinceDetail',
   components: { // 定义组件
-    'wbc-nav': header,
+    'wbc-nav': vueHeader,
     'infect-detail-province-sidebar': infectDetailProvinceSidebar,
     'infect-detail-province-map': infectDetailProvinceMap,
     'line-chart-infect-province': lineChartInfectProvince
@@ -51,7 +51,7 @@ export default {
     },
     getProvinceInfectionDataMsg () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetail/provinceMapInfectionDataMsg/' + this.$route.params.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetail/provinceMapInfectionDataMsg/' + this.$route.params.province).then(function (response) {
         response.json().then((data) => {
           that.judgeDataExist(data)
           that.provinceMapInfectionDataMsg = data

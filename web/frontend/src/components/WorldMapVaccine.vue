@@ -44,7 +44,7 @@
                 if (!isNaN(params.value)) {
                     if (value < 0) value = NaN
                     else {
-                      if (params.seriesName === '覆盖率') {
+                      if (params.seriesName === '每百人接种剂量') {
                         value =  params.value + '/百人'
                       } else {
                           value = params.value + '万'
@@ -95,7 +95,7 @@
                 color: ['rgba(181,255,253,0.56)', '#a1d5ff', '#72a0ff',
                   '#8885ff', '#7358ff']
             },
-            outOfRange: { color: 'lightblue' }
+            outOfRange: { color: ['#EEEEEE'] }
           },{
             seriesIndex: 1,
             show: false,

@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import header from '../components/Header.vue'
+import vueHeader from '../components/PageHeader.vue'
 import vaccineHomeHeadbar from '../components/VaccineHomeHeadbar.vue'
 import vaccineHomeWorldMap from '../components/WorldMapVaccine.vue'
 export default {
@@ -39,7 +39,7 @@ export default {
   methods: { // 事件处理器
     getWorldMapVaccineDataMsg () {
       var that = this
-      fetch('http://127.0.0.1:5000/vaccineHome/worldMapVaccineDataMsg').then(function (response) {
+      fetch('http://81.70.134.96:5000/vaccineHome/worldMapVaccineDataMsg').then(function (response) {
         response.json().then((data) => {
           that.worldMapVaccineDataMsg = data
         })
@@ -47,7 +47,7 @@ export default {
     }
   },
   components: { // 定义组件
-    'wbc-nav': header,
+    'wbc-nav': vueHeader,
     'home-info': vaccineHomeHeadbar,
     'vaccine-home-world-map': vaccineHomeWorldMap
   },

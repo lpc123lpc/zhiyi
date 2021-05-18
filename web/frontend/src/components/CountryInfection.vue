@@ -7,11 +7,11 @@
       </div>
       <el-row>
       <el-main style="text-align:center">
-        <country-infection-confirmed v-show="isShow==='confirmed'" v-bind:names="names"
+        <country-infection-confirmed v-if="isShow==='confirmed'" v-bind:names="names"
                                    v-bind:times="times" v-bind:confirmed="confirmed"></country-infection-confirmed>
-      <country-infection-deceased v-show="isShow==='deceased'" v-bind:names="names"
+      <country-infection-deceased v-if="isShow==='deceased'" v-bind:names="names"
       v-bind:times="times" v-bind:deceased="deceased"></country-infection-deceased>
-      <country-infection-cured v-show="isShow==='cured'" v-bind:names="names"
+      <country-infection-cured v-if="isShow==='cured'" v-bind:names="names"
       v-bind:times="times" v-bind:cured="cured"></country-infection-cured>
       </el-main>
         </el-row>
@@ -42,8 +42,11 @@ export default {
   methods: {
     getData () {
       var that = this
-      fetch('http://127.0.0.1:5000/countryInfection/' + this.$route.params.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/countryInfection/' + this.$route.params.country).then(function (response) {
         response.json().then(data => {
+          if (JSON.stringify(data) === '{}') {
+            return
+          }
           that.times = data[0].time
           for (var i = 0; i < data.length; i++) {
             that.names.push(data[i].name)

@@ -1,5 +1,5 @@
 <template>
-    <div ref="countryDataInfChart" style="width: 900px;height:500px"></div>
+    <div ref="countryDataInfChart" style="width: 100%;height:500px"></div>
 </template>
 
 <script>
@@ -15,8 +15,11 @@ export default {
   methods: {
     drawInf () {
       let mychart = echarts.init(this.$refs.countryDataInfChart)
-      fetch('http://127.0.0.1:5000/countryInfData/' + this.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/countryInfData/' + this.country).then(function (response) {
         response.json().then(function (data) {
+          if (JSON.stringify(data) === '{}') {
+            return
+          }
           mychart.setOption({
             backgroundColor: '',
             tooltip: {

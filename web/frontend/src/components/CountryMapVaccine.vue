@@ -135,7 +135,8 @@
             inRange: {
                 color: ['rgba(181,255,253,0.56)', '#a1d5ff', '#72a0ff',
                   '#8885ff', '#7358ff']
-            }
+            },
+            outOfRange: { color: ['#EEEEEE'] }
           }],
           series: [{
             name: '已接种',

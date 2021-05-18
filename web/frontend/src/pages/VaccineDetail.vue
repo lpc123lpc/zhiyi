@@ -4,7 +4,7 @@
       <wbc-nav></wbc-nav>
     </el-header>
     <el-container>
-      <el-aside width="450px">
+      <el-aside width="400px">
         <vaccine-detail-sidebar v-bind:country="countryMsg"></vaccine-detail-sidebar>
       </el-aside>
       <el-main>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import header from '../components/Header.vue'
+import vueHeader from '../components/PageHeader.vue'
 import vaccineDetailSidebar from '../components/VaccineDetailSidebar.vue'
 import vaccineDetailCountryMap from '../components/CountryMapVaccine.vue'
 import lineChartVaccine from '../components/CountryVaccine.vue'
@@ -29,7 +29,7 @@ import {mixin} from '../mixins';
 export default {
   name: 'VaccineDetail',
   components: { // 定义组件
-    'wbc-nav': header,
+    'wbc-nav': vueHeader,
     'vaccine-detail-sidebar': vaccineDetailSidebar,
     'vaccine-detail-country-map': vaccineDetailCountryMap,
     'line-chart-vaccine': lineChartVaccine
@@ -48,7 +48,7 @@ export default {
     },
     getCountryMapVaccineDataMsg () {
       var that = this
-      fetch('http://127.0.0.1:5000/vaccineDetail/countryMapVaccineDataMsg/' + this.$route.params.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/vaccineDetail/countryMapVaccineDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
           that.judgeDataExist(data)
           // console.log(data)

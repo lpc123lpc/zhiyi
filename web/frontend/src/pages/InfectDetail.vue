@@ -5,7 +5,7 @@
       <wbc-nav></wbc-nav>
     </el-header>
     <el-container>
-      <el-aside width="450px">
+      <el-aside width="400px">
         <infect-detail-sidebar v-bind:country="countryMsg"></infect-detail-sidebar>
       </el-aside>
       <el-main>
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import header from '../components/Header.vue'
+import vueHeader from '../components/PageHeader.vue'
 import infectDetailSidebar from '../components/InfectDetailSidebar.vue'
 import infectDetailCountryMap from '../components/CountryMapInfection.vue'
 import lineChartInfect from '../components/CountryInfection.vue'
@@ -32,7 +32,7 @@ import { mixin } from '../mixins'
 export default {
   name: 'InfectDetail',
   components: { // 定义组件
-    'wbc-nav': header,
+    'wbc-nav': vueHeader,
     'infect-detail-sidebar': infectDetailSidebar,
     'infect-detail-country-map': infectDetailCountryMap,
     'line-chart-infect': lineChartInfect
@@ -51,7 +51,7 @@ export default {
     },
     getCountryInfectionDataMsg () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetail/countryMapInfectionDataMsg/' + this.$route.params.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetail/countryMapInfectionDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
           that.judgeDataExist(data)
           that.countryMapInfectionDataMsg = data

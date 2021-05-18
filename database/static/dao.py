@@ -229,6 +229,8 @@ def updateForeignProvinceInf():
             if countryName in worldMapping:
                 countryName = worldMapping[province['Country_Region']]['cn']
             provinceName = province['Province_State']
+            if provinceName == 'Greenland':
+                provinceName = '格陵兰'
             cityName = province['Admin2']
             if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
                 Last_Update = province['Last_Update']
@@ -297,6 +299,7 @@ def updateInf():
 
 
 def updateVac():
+    print("i am in")
     vacMessage = Spider.getData(0)
     lastName = ""
     i = 0
@@ -327,6 +330,7 @@ def updateVac():
             NowVacMessage.query.filter_by(areaName=lastName) \
                 .update({'time': v1['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
             db.session.commit()
+        print("i am out")
 
 
 # 清除表单
