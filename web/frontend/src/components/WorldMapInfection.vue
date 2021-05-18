@@ -60,7 +60,7 @@
                     left: '2%',
                     orient: 'vertical',
                     top: '10%',
-                    selected: {'当前确诊': false, '累计确诊': true, '累计治愈': false, '累计死亡': false},
+                    selected: {'当前确诊': true, '累计确诊': false, '累计治愈': false, '累计死亡': false},
                     selectedMode: 'single',
                     textStyle: {
                         color: '#000',
@@ -76,15 +76,13 @@
                         fontSize: 12,
                     },
                     min: 0,
-                    max: 3500,
+                    max: 100,
                     maxOpen: true,
                     textGap: 20,
                     realtime: true,
                     calculable: true,
-                    inRange: {
-                        color: ['#FDEBCF', '#F59E83', '#E55A4E', '#CB2A2F', '#70161D']
-                    },
-                    outOfRange: { color: 'darkRed' }
+                    color: this.getMapColor(0),
+                    outOfRange: { color: ['#EEEEEE'] }
                 },
                 series: [{
                     name: '当前确诊',
@@ -152,6 +150,19 @@
             worldMapInfection.on('click', function (param) {
                 // console.log(param.name)
                 if (param.name !== '') that.$router.push({path: `/InfectDetail/${param.name}`})
+            })
+            worldMapInfection.on('legendselectchanged', function(params) {
+                worldMapInfection_Option.legend.selected = params.selected
+                var keys = Object.keys(params.selected)
+                var max = [100, 2000, 1000, 50]
+                for (let i = 0; i < keys.length; i++) {
+                    if (params.selected[keys[i]]) { // show different color range in different legend
+                        worldMapInfection_Option.visualMap.color = that.getMapColor(i)
+                        worldMapInfection_Option.visualMap.max = max[i]
+                        break
+                    }
+                }
+                this.setOption(worldMapInfection_Option)
             })
         },
     }
