@@ -229,6 +229,8 @@ def updateForeignProvinceInf():
             if countryName in worldMapping:
                 countryName = worldMapping[province['Country_Region']]['cn']
             provinceName = province['Province_State']
+            if provinceName == 'Greenland':
+                provinceName = '格陵兰'
             cityName = province['Admin2']
             if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
                 Last_Update = province['Last_Update']

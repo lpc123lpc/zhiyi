@@ -23,6 +23,7 @@ def getArea():
 
     globalCountryData = Spider.getData(3)
     add(Area(parentArea='global', childArea='中国'))
+    add(Area(parentArea='global', childArea='格陵兰'))
     for country in globalCountryData:
         if country['name'] == '日本本土':
             country['name'] = '日本'
@@ -168,6 +169,8 @@ def getGlobalProvinceHisInf():
             try:
                 countryName = province['Country_Region']
                 provinceName = province['Province_State']
+                if provinceName == 'Greenland':
+                    provinceName = '格陵兰'
                 cityName = province['Admin2']
                 if countryName != 'US' and countryName != 'China' and countryName != 'Taiwan*' and cityName == '' and provinceName != 'Unknown' and provinceName != '':
                     Last_Update = province['Last_Update']

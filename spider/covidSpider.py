@@ -2,7 +2,7 @@ import json
 import requests
 import pandas as pd
 import time
-
+import sys
 from io import StringIO
 import csv
 import re
@@ -371,6 +371,9 @@ class Spider:
 
 if __name__ == '__main__':
     # Spider.importDataBasePackages()
+    import os
+
+    sys.path.append(os.path.dirname(sys.path[0]))
     from database.static.dao import updateChinaInf
     from database.static.dao import updateGlobalInf
     from database.static.dao import updateVac
@@ -378,6 +381,7 @@ if __name__ == '__main__':
     from database.static.dao import updateForeignProvinceInf
     from database.static.getInitData import Init
 
+    print("i am running")
 
     schedule.every().day.at("03:00:00").do(job_func=Spider.timelyJob)
     while True:

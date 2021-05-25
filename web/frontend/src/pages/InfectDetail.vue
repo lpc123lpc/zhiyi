@@ -5,7 +5,7 @@
       <wbc-nav></wbc-nav>
     </el-header>
     <el-container>
-      <el-aside width="450px">
+      <el-aside width="400px">
         <infect-detail-sidebar v-bind:country="countryMsg"></infect-detail-sidebar>
       </el-aside>
       <el-main>
