@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div id="countryMapInfection"><country-map-infection :countryMapInfectionData="data" :country="country"></country-map-infection></div>
+    <div id="countryMapInfection">
+      <country-map-infection :countryMapInfectionData="data" :country="country"></country-map-infection>
+    </div>
   </div>
 </template>
 
@@ -15,11 +17,15 @@ export default {
   data() {
     return {
       country: '',
-      data: {nowConfirm: [{name: 'Alberta', value: 48}, {name: 'Northwest Territories', value: 300}, {name: 'Quebec', value: 4000.3},  {name: '山东', value: 5010.3}], 
-            totalConfirm: [{name: 'Alberta', value: 12}], 
-            cured: [{name: 'Alberta', value: 32}],
-            dead: [{name: 'Alberta', value: 100}]
-        },
+      data: {
+        nowConfirm: [{name: 'Alberta', value: 48}, {name: 'Northwest Territories', value: 300}, {
+          name: 'Quebec',
+          value: 4000.3
+        }, {name: '山东', value: 5010.3}],
+        totalConfirm: [{name: 'Alberta', value: 12}],
+        cured: [{name: 'Alberta', value: 32}],
+        dead: [{name: 'Alberta', value: 100}]
+      },
       refresh: true
     }
   },
