@@ -1,25 +1,29 @@
 <template>
   <div>
     <el-container>
-    <el-header>
-      <wbc-nav></wbc-nav>
-    </el-header>
-    <el-container>
-      <el-aside width="400px">
-        <infect-detail-sidebar v-bind:country="countryMsg"></infect-detail-sidebar>
-      </el-aside>
-      <el-main>
-        <div style="align: center; margin-top: 20px">
-          <infect-detail-country-map v-bind:country="countryMsg" v-bind:countryMapInfectionData="countryMapInfectionDataMsg"></infect-detail-country-map>
-        </div>
-      </el-main>
+      <el-header>
+        <wbc-nav></wbc-nav>
+      </el-header>
+      <el-container>
+        <el-aside width="400px">
+          <infect-detail-sidebar v-bind:country="countryMsg"></infect-detail-sidebar>
+        </el-aside>
+        <el-main>
+          <div style="align: center; margin-top: 20px">
+            <infect-detail-country-map v-bind:country="countryMsg"
+                                       v-bind:countryMapInfectionData="countryMapInfectionDataMsg"></infect-detail-country-map>
+          </div>
+          <scroll-to-bottom
+            v-bind:is-bottom="false"
+            style="position: absolute; margin-left: 1050px; margin-top: -25px"
+          ></scroll-to-bottom>
+        </el-main>
+      </el-container>
     </el-container>
-  </el-container>
-  <div style="margin-top: 50px; text-align: center">
-        <line-chart-infect></line-chart-infect>
+    <div style="margin-top: 50px; text-align: center">
+      <line-chart-infect></line-chart-infect>
+    </div>
   </div>
-  </div>
-
 </template>
 
 <script>
@@ -27,7 +31,8 @@ import vueHeader from '../components/PageHeader.vue'
 import infectDetailSidebar from '../components/InfectDetailSidebar.vue'
 import infectDetailCountryMap from '../components/CountryMapInfection.vue'
 import lineChartInfect from '../components/CountryInfection.vue'
-import { mixin } from '../mixins'
+import scrollToBottom from "../components/scrollToBottom";
+import {mixin} from '../mixins'
 
 export default {
   name: 'InfectDetail',
@@ -35,21 +40,22 @@ export default {
     'wbc-nav': vueHeader,
     'infect-detail-sidebar': infectDetailSidebar,
     'infect-detail-country-map': infectDetailCountryMap,
-    'line-chart-infect': lineChartInfect
+    'line-chart-infect': lineChartInfect,
+    'scroll-to-bottom': scrollToBottom
   },
   mixins: [mixin],
-  data () { // 选项 / 数据
+  data() { // 选项 / 数据
     return {
       countryMsg: '',
-      countryMapInfectionDataMsg: ''
+      countryMapInfectionDataMsg: '',
     }
   },
   methods: { // 事件处理器
-    getCountryMsg () {
+    getCountryMsg() {
       var that = this
       that.countryMsg = this.$route.params.country
     },
-    getCountryInfectionDataMsg () {
+    getCountryInfectionDataMsg() {
       var that = this
       fetch('http://81.70.134.96:5000/infectDetail/countryMapInfectionDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
@@ -59,7 +65,7 @@ export default {
       })
     }
   },
-  created () {
+  created() {
     this.getCountryMsg()
     this.getCountryInfectionDataMsg()
   }

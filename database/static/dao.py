@@ -201,6 +201,9 @@ def updateChinaInf():
 def updateGlobalInf():
     globalInf = Spider.getData(1)
     today = globalInf['lastUpdateTime'][:10]
+    tNum = db.session.query(Area).filter(Area.childArea == 'global').first().population
+    rate = globalInf['nowConfirm'] / tNum
+    rate = ('%.5f' % rate)
     x = NowInfMessage(time=today,
                       areaName="global",
                       currentNum=globalInf['nowConfirm'],
@@ -208,7 +211,8 @@ def updateGlobalInf():
                       addNum=globalInf['confirmAdd'],
                       cured=globalInf['heal'],
                       totalDead=globalInf['dead'],
-                      addDead=globalInf['deadAdd']
+                      addDead=globalInf['deadAdd'],
+                      infRate=rate
                       )
     add(x)
     foreignInf = Spider.getData(3)
@@ -239,24 +243,34 @@ def updateForeignProvinceInf():
                     t = tChangeType(t)
                 except Exception as e:
                     print(e)
-                x = NowInfMessage(time=t,
-                                  areaName=provinceName,
-                                  currentNum=-1 if province['Active'] == '' else int(province['Active']),
-                                  totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed']),
-                                  addNum=-1,
-                                  cured=-1 if province['Recovered'] == '' else int(province['Recovered']),
-                                  totalDead=-1 if province['Deaths'] == '' else int(province['Deaths']),
-                                  addDead=-1)
-                add(x)
-                y = InfMessage(time=t,
-                               areaName=provinceName,
-                               currentNum=-1 if province['Active'] == '' else int(province['Active']),
-                               totalNum=int(province['Confirmed']),
-                               addNum=-1,
-                               cured=int(province['Recovered']),
-                               totalDead=int(province['Deaths']),
-                               addDead=-1)
-                add(y)
+                try:
+                    cNum = currentNum = -1 if province['Active'] == '' else int(province['Active'])
+                    tNum = db.session.query(Area).filter(Area.childArea == provinceName).first().population
+                    rate = -1 if tNum == 0 else cNum / tNum
+                    rate = ('%.5f' % rate)
+                    x = NowInfMessage(time=t,
+                                      areaName=provinceName,
+                                      currentNum=cNum,
+                                      totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed']),
+                                      addNum=-1,
+                                      cured=-1 if province['Recovered'] == '' else int(province['Recovered']),
+                                      totalDead=-1 if province['Deaths'] == '' else int(province['Deaths']),
+                                      addDead=-1,
+                                      infRate=rate)
+                    add(x)
+                    y = InfMessage(time=t,
+                                   areaName=provinceName,
+                                   currentNum=cNum,
+                                   totalNum=int(province['Confirmed']),
+                                   addNum=-1,
+                                   cured=int(province['Recovered']),
+                                   totalDead=int(province['Deaths']),
+                                   addDead=-1,
+                                   infRate=rate)
+                    add(y)
+                except Exception as e:
+                    print(provinceName)
+
 
     usProvinces = Spider.getCSVDictReader(uy)
     print(uy)
@@ -266,24 +280,33 @@ def updateForeignProvinceInf():
             t = tChangeType(t)
         except Exception as e:
             print(e)
-        x = NowInfMessage(time=t,
-                          areaName=province['Province_State'],
-                          currentNum=-1 if province['Active'] == '' else int(province['Active'].split('.')[0]),
-                          totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
-                          addNum=-1,
-                          cured=-1 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
-                          totalDead=-1 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
-                          addDead=-1)
-        add(x)
-        y = InfMessage(time=t,
-                       areaName=province['Province_State'],
-                       currentNum=-1 if province['Active'] == '' else int(province['Active'].split('.')[0]),
-                       totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
-                       addNum=-1,
-                       cured=-1 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
-                       totalDead=-1 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
-                       addDead=-1)
-        add(y)
+        try:
+            cNum = -1 if province['Active'] == '' else int(province['Active'].split('.')[0])
+            tNum = db.session.query(Area).filter(Area.childArea == province['Province_State']).first().population
+            rate = -1 if tNum == 0 else cNum / tNum
+            rate = ('%.5f' % rate)
+            x = NowInfMessage(time=t,
+                              areaName=province['Province_State'],
+                              currentNum=cNum,
+                              totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
+                              addNum=-1,
+                              cured=-1 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
+                              totalDead=-1 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
+                              addDead=-1,
+                              infRate=rate)
+            add(x)
+            y = InfMessage(time=t,
+                           areaName=province['Province_State'],
+                           currentNum=cNum,
+                           totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
+                           addNum=-1,
+                           cured=-1 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
+                           totalDead=-1 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
+                           addDead=-1,
+                           infRate=rate)
+            add(y)
+        except Exception as e:
+            print(e)
 
 
 def updateInf():
@@ -358,6 +381,9 @@ def addMessage(area, toType, today):
     if toType == "ChinaInfMessage":
         name = area['name']
         confirm = area['total']['nowConfirm']
+        tNum = db.session.query(Area).filter(Area.childArea == name).first().population
+        rate = -1 if tNum == 0 else confirm / tNum
+        rate = ('%.5f' % rate)
         x = ChinaInfMessage(time=today,
                             areaName=name,
                             currentNum=confirm,
@@ -365,7 +391,8 @@ def addMessage(area, toType, today):
                             addNum=area['today']['confirm'],
                             cured=area['total']['heal'],
                             totalDead=area['total']['dead'],
-                            addDead=0)
+                            addDead=0,
+                            infRate=rate)
         add(x)
         y = NowInfMessage(time=x.time,
                           areaName=x.areaName,
@@ -374,13 +401,18 @@ def addMessage(area, toType, today):
                           addNum=x.addNum,
                           cured=x.cured,
                           totalDead=x.totalDead,
-                          addDead=x.addDead)
+                          addDead=x.addDead,
+                          infRate=rate)
         add(y)
     elif toType == "NowInfMessage":
         name = area['name']
         if name == '日本本土':
             name = '日本'
         print(area['confirmAdd'])
+        cNum = area['nowConfirm']
+        tNum = db.session.query(Area).filter(Area.childArea == name).first().population
+        rate = -1 if tNum == 0 else cNum / tNum
+        rate = ('%.5f' % rate)
         x = NowInfMessage(time=today,
                           areaName=name,
                           currentNum=area['nowConfirm'],

@@ -1,25 +1,32 @@
 <template>
-  <el-container>
-    <el-header>
-      <wbc-nav></wbc-nav>
-    </el-header>
+  <div>
     <el-container>
-      <el-aside width="400px">
-        <infect-detail-province-sidebar v-bind:province="provinceMsg"></infect-detail-province-sidebar>
-      </el-aside>
-      <el-main>
-        <div style="margin-left: 950px; position: absolute">
-          <el-button type="primary" plain @click="back()">返回</el-button>
-        </div>
-        <div style="align: center; margin-top: 20px">
-          <infect-detail-province-map v-bind:province="provinceMsg" v-bind:provinceMapInfectionData="provinceMapInfectionDataMsg"></infect-detail-province-map>
-        </div>
-        <div style="align: center; margin-top: 50px">
-          <line-chart-infect-province></line-chart-infect-province>
-        </div>
-      </el-main>
+      <el-header>
+        <wbc-nav></wbc-nav>
+      </el-header>
+      <el-container>
+        <el-aside width="400px">
+          <infect-detail-province-sidebar v-bind:province="provinceMsg"></infect-detail-province-sidebar>
+        </el-aside>
+        <el-main>
+          <div style="margin-left: 950px; position: absolute">
+            <el-button type="primary" plain @click="back()">返回</el-button>
+          </div>
+          <div style="align: center; margin-top: 20px">
+            <infect-detail-province-map v-bind:province="provinceMsg"
+                                        v-bind:provinceMapInfectionData="provinceMapInfectionDataMsg"></infect-detail-province-map>
+          </div>
+          <scroll-to-bottom
+            v-bind:is-bottom="false"
+            style="position: absolute; margin-left: 1050px; margin-top: -25px"
+          ></scroll-to-bottom>
+        </el-main>
+      </el-container>
     </el-container>
-  </el-container>
+    <div style="text-align: center; margin-top: 50px">
+      <line-chart-infect-province></line-chart-infect-province>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -27,6 +34,7 @@ import vueHeader from '../components/PageHeader.vue'
 import infectDetailProvinceSidebar from '../components/InfectDetailProvinceSidebar.vue'
 import infectDetailProvinceMap from '../components/ProvinceMapInfection.vue'
 import lineChartInfectProvince from '../components/ProvinceInfection.vue'
+import scrollToBottom from "../components/scrollToBottom";
 import {mixin} from '../mixins'
 
 export default {
@@ -35,9 +43,10 @@ export default {
     'wbc-nav': vueHeader,
     'infect-detail-province-sidebar': infectDetailProvinceSidebar,
     'infect-detail-province-map': infectDetailProvinceMap,
-    'line-chart-infect-province': lineChartInfectProvince
+    'line-chart-infect-province': lineChartInfectProvince,
+    'scroll-to-bottom': scrollToBottom
   },
-  data () { // 选项 / 数据
+  data() { // 选项 / 数据
     return {
       provinceMsg: '',
       provinceMapInfectionDataMsg: ''
@@ -45,11 +54,11 @@ export default {
   },
   mixins: [mixin],
   methods: { // 事件处理器
-    getProvinceMsg () {
+    getProvinceMsg() {
       var that = this
       that.provinceMsg = this.$route.params.province
     },
-    getProvinceInfectionDataMsg () {
+    getProvinceInfectionDataMsg() {
       var that = this
       fetch('http://81.70.134.96:5000/infectDetail/provinceMapInfectionDataMsg/' + this.$route.params.province).then(function (response) {
         response.json().then((data) => {
@@ -58,11 +67,11 @@ export default {
         })
       })
     },
-    back () {
+    back() {
       this.$router.go(-1)
     }
   },
-  created () {
+  created() {
     this.getProvinceMsg()
     this.getProvinceInfectionDataMsg()
   }

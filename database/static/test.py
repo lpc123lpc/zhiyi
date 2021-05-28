@@ -32,5 +32,8 @@ def getCountryHisTest():
    data = Spider.getData(8)
    Spider.saveToJsonFile(data, 'country.json')
 
-'''clearTable('nowInfMessages')
-updateGlobalInf()'''
+#clearTable('nowInfMessages')
+#db.drop_all()
+#db.create_all()
+
+updateInf()

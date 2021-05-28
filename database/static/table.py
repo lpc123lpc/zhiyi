@@ -30,6 +30,7 @@ class BaseModelInf(db.Model):
     cured = db.Column(db.Integer)
     totalDead = db.Column(db.Integer)
     addDead = db.Column(db.Integer)
+    infRate = db.Column(db.FLOAT)
 
 
 class VacMessage(BaseModelVac):
@@ -60,6 +61,7 @@ class Advice(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     time = db.Column(db.DATETIME)
     text = db.Column(db.String(800))
+    point = db.Column(db.Integer)
 
 
 class Area(db.Model):
@@ -67,6 +69,6 @@ class Area(db.Model):
 
     parentArea = db.Column(db.String(100), primary_key=True)
     childArea = db.Column(db.String(100), primary_key=True)
-
+    population = db.Column(db.BIGINT)
 
 
