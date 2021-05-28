@@ -408,11 +408,13 @@ def addMessage(area, toType, today):
         name = area['name']
         if name == '日本本土':
             name = '日本'
-        print(area['confirmAdd'])
+
         cNum = area['nowConfirm']
         tNum = db.session.query(Area).filter(Area.childArea == name).first().population
+        print(cNum, tNum)
         rate = -1 if tNum == 0 else cNum / tNum
         rate = ('%.5f' % rate)
+        print(rate)
         x = NowInfMessage(time=today,
                           areaName=name,
                           currentNum=area['nowConfirm'],
@@ -420,8 +422,19 @@ def addMessage(area, toType, today):
                           addNum=area['confirmAdd'],
                           cured=area['heal'],
                           totalDead=area['dead'],
-                          addDead=area['deadCompare'])
+                          addDead=area['deadCompare'],
+                          infRate=rate)
         add(x)
+        y = InfMessage(time=x.time,
+                          areaName=x.areaName,
+                          currentNum=x.currentNum,
+                          totalNum=x.totalNum,
+                          addNum=x.addNum,
+                          cured=x.cured,
+                          totalDead=x.totalDead,
+                          addDead=x.addDead,
+                          infRate=rate)
+        add(y)
 
 
 def tChangeType(t):

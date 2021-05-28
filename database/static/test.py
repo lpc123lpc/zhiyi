@@ -35,5 +35,5 @@ def getCountryHisTest():
 #clearTable('nowInfMessages')
 #db.drop_all()
 #db.create_all()
-
-updateInf()
+clearTable('hisInfMessages')
+updateGlobalInf()
