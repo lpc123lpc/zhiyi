@@ -28,6 +28,7 @@ export default {
   },
   methods: {
     set_left () {
+
       const elMain = document.getElementById('my-el-main')
       // console.log(elMain.offsetWidth)
       const feedBackInput = document.getElementById('feed-back-div')
