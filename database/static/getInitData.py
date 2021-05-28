@@ -11,28 +11,29 @@ def getArea():
     name = chinaData['name']
     provinces = chinaData['children']
     for province in provinces:
-        pArea = Area(parentArea=name, childArea=province['name'])
+        pArea = Area(parentArea=name, childArea=province['name'], population=0)
         add(pArea)
         cities = province['children']
         for city in cities:
             if errorName(city['name']) == 1:
                 if city['name'] == "吉林":
                     city['name'] += '市'
-                cArea = Area(parentArea=province['name'], childArea=city['name'])
+                cArea = Area(parentArea=province['name'], childArea=city['name'], population=0)
                 add(cArea)
 
     globalCountryData = Spider.getData(3)
-    add(Area(parentArea='global', childArea='中国'))
-    add(Area(parentArea='global', childArea='格陵兰'))
+    add(Area(parentArea='global', childArea='中国', population=0))
+    add(Area(parentArea='global', childArea='格陵兰', population=0))
+    add(Area(parentArea='global', childArea='global', population=0))
     for country in globalCountryData:
         if country['name'] == '日本本土':
             country['name'] = '日本'
-        area = Area(parentArea='global', childArea=country['name'])
+        area = Area(parentArea='global', childArea=country['name'], population=0)
         add(area)
 
     yUrl, tUrl, yUSUrl, dUSUrl = Spider.getData(7)
     glolist, uslist = Spider.getData(6)
-    worldMappingPath = 'database/static/world-mapping.json'
+    worldMappingPath = 'world-mapping.json'
     with open(worldMappingPath, mode='r', encoding='utf-8') as f:
         worldMapping = json.load(f)
         globalProvinces = Spider.getCSVDictReader(yUrl)
@@ -45,7 +46,7 @@ def getArea():
                 else:
                     parent = province['Country_Region']
                 child = province['Province_State']
-                area = Area(parentArea=parent, childArea=child)
+                area = Area(parentArea=parent, childArea=child, population=0)
                 #print(parent)
                 add(area)
 
@@ -54,7 +55,7 @@ def getArea():
         for province in usProvinces:
             parent = '美国'
             child = province['Province_State']
-            area = Area(parentArea=parent, childArea=child)
+            area = Area(parentArea=parent, childArea=child, population=0)
             add(area)
 
 
