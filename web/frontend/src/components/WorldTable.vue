@@ -1,6 +1,6 @@
 <template>
     <div id = 'WorldTable'>
-      <el-table :data="items" highlight-current-row height="600">
+      <el-table :data="items" :default-sort ="{prop:'confirmed',order:'descending'}" highlight-current-row height="600">
         <el-table-column type="expand">
           <template slot-scope="props">
             <country_data v-bind:country="props.row.name"></country_data>
