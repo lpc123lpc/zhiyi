@@ -13,32 +13,32 @@
         <el-table-column
           prop="confirmed"
           label="累计确诊"
-          sortable>
+          sortable :formatter="matter">
         </el-table-column>
         <el-table-column
           prop="newConfirmed"
           label="新增确诊"
-          sortable>
+          sortable :formatter="matter">
         </el-table-column>
         <el-table-column
           prop="cured"
           label="累计治愈"
-          sortable>
+          sortable :formatter="matter">
         </el-table-column>
         <el-table-column
           prop="deceased"
           label="累计死亡"
-          sortable>
+          sortable :formatter="matter">
         </el-table-column>
         <el-table-column
           prop="vaccined"
           label="累计接种"
-          sortable>
+          sortable :formatter="matter">
         </el-table-column>
         <el-table-column
           prop="newVaccined"
           label="新增接种"
-          sortable>
+          sortable :formatter="matter">
         </el-table-column>
         <el-table-column
           prop="vaccine_coverage"
@@ -71,6 +71,13 @@ export default {
           that.items = data
         })
       })
+    },
+    matter (row, column, cellValue) {
+      cellValue += ''
+      if (!cellValue.includes('.')) cellValue += '.'
+      return cellValue.replace(/(\d)(?=(\d{3})+\.)/g, function($0, $1) {
+        return $1 + ','
+      }).replace(/\.$/, '')
     }
   }
 }
