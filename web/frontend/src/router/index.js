@@ -54,6 +54,11 @@ export default new Router({
       path: '/NewsInformation',
       name: 'NewsInformation',
       component: resolve => require(['../pages/NewsInformation'], resolve)
+    },
+    {
+      path: '/Search/:region',
+      name: 'Search',
+      // component: resolve => require(['../pages/Search'], resolve)
     }
   ]
 })
