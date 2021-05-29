@@ -28,8 +28,8 @@
         </el-submenu>
       </el-submenu>-->
       <el-menu-item index="/InfectHome" class="nav-menu-item">感染情况</el-menu-item>
-      <!--<el-menu-item index="3" class="nav-menu-item">出行建议</el-menu-item>
-      <el-menu-item index="4" class="nav-menu-item">新闻资讯</el-menu-item>-->
+      <el-menu-item index="/TravelAdvice" class="nav-menu-item">出行建议</el-menu-item>
+      <el-menu-item index="/NewsInformation" class="nav-menu-item">新闻资讯</el-menu-item>
       <el-menu-item index="/Feedback" class="nav-menu-item">反馈&建议</el-menu-item>
       <svg class="icon" aria-hidden="true" @click="showDataSource()">
         <use xlink:href="#icon-question"></use>

@@ -1,5 +1,12 @@
 <template>
   <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" style="width: 700px;" class="demo-ruleForm">
+    <el-form-item label="">
+      <el-rate
+        v-model="ruleForm.value"
+        show-text
+        allow-half>
+      </el-rate>
+    </el-form-item>
     <el-form-item label="" prop="desc">
       <el-input type="textarea"
                 v-model="ruleForm.desc"
@@ -23,6 +30,7 @@ export default {
       isDisabled: false,
       content: '提交',
       ruleForm: {
+        value: '',
         desc: ''
       },
       rules: {

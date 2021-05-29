@@ -44,6 +44,16 @@ export default new Router({
       path: '/Feedback',
       name: 'Feedback',
       component: resolve => require(['../pages/Feedback'], resolve)
+    },
+    {
+      path: '/TravelAdvice',
+      name: 'TravelAdvice',
+      component: resolve => require(['../pages/TravelAdvice'], resolve)
+    },
+    {
+      path: '/NewsInformation',
+      name: 'NewsInformation',
+      component: resolve => require(['../pages/NewsInformation'], resolve)
     }
   ]
 })

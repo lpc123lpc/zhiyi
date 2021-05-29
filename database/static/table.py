@@ -30,6 +30,17 @@ class BaseModelInf(db.Model):
     cured = db.Column(db.Integer)
     totalDead = db.Column(db.Integer)
     addDead = db.Column(db.Integer)
+    infRate = db.Column(db.FLOAT)
+
+
+class BaseModelNews(db.Model):
+    __abstract__ = True
+    time = db.Column(db.String(20), primary_key=True)
+    title = db.Column(db.String(60), primary_key=True)
+    urls = db.Column(db.String(200), primary_key=True)
+    source = db.Column(db.String(50))
+    abstracts = db.Column(db.String(200))
+    picUrls = db.Column(db.String(200))
 
 
 class VacMessage(BaseModelVac):
@@ -60,6 +71,7 @@ class Advice(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     time = db.Column(db.DATETIME)
     text = db.Column(db.String(800))
+    point = db.Column(db.Integer)
 
 
 class Area(db.Model):
@@ -67,6 +79,19 @@ class Area(db.Model):
 
     parentArea = db.Column(db.String(100), primary_key=True)
     childArea = db.Column(db.String(100), primary_key=True)
+    population = db.Column(db.BIGINT)
 
 
+class InfNews(BaseModelNews):
+    __tablename__ = 'infNews'
 
+
+class VacNews(BaseModelNews):
+    __tablename__ = 'vacNews'
+
+
+class VacInstitution(db.Model):
+    __tablename__ = 'vacInstitutions'
+
+    city = db.Column(db.String(20), primary_key=True)
+    institution = db.Column(db.String(100), primary_key=True)
