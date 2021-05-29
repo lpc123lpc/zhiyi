@@ -95,7 +95,7 @@ def getHisInfMessageInclude(name):
 
 
 '''
-description:get infection information
+description:get vaccine information
 name:"global"(世界)/国家姓名/地区姓名
 return:返回该区域的实时接种信息
 '''
@@ -107,7 +107,7 @@ def getNowVacMessage(name):
 
 
 '''
-description:get infection information
+description:get vaccine information
 name:"world"(世界)/国家姓名
 return:返回该区域所包含的国家/地区的实时接种信息（下一级）
 '''
@@ -121,7 +121,7 @@ def getNowVacMessageInclude(name):
 
 
 '''
-description:get infection information
+description:get vaccine information
 name:"global"(世界)/国家姓名/地区姓名
 return:返回该区域的历史接种信息
 '''
@@ -137,7 +137,7 @@ def getHisVacMessage(name):
 
 
 '''
-description:get infection information
+description:get vaccine information
 name:"world"(世界)/国家姓名
 return:返回该区域所包含的国家/地区的历史接种信息（下一级）
 '''

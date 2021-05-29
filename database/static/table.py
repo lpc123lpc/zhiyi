@@ -33,6 +33,15 @@ class BaseModelInf(db.Model):
     infRate = db.Column(db.FLOAT)
 
 
+class BaseModelNews(db.Model):
+    __abstract__ = True
+    time = db.Column(db.String(20), primary_key=True)
+    title = db.Column(db.String(60), primary_key=True)
+    urls = db.Column(db.String(200), primary_key=True)
+    abstracts = db.Column(db.String(200))
+    picUrls = db.Column(db.String(200))
+
+
 class VacMessage(BaseModelVac):
     __tablename__ = 'hisVacMessages'
     time = db.Column(db.String(20), primary_key=True)
@@ -72,3 +81,16 @@ class Area(db.Model):
     population = db.Column(db.BIGINT)
 
 
+class InfNews(BaseModelNews):
+    __tablename__ = 'infNews'
+
+
+class VacNews(BaseModelNews):
+    __tablename__ = 'vacNews'
+
+
+class VacInstitution(db.Model):
+    __tablename__ = 'vacInstitutions'
+
+    city = db.Column(db.String(20), primary_key=True)
+    institution = db.Column(db.String(100), primary_key=True)
