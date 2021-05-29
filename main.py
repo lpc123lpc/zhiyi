@@ -1,4 +1,4 @@
-from flask import request
+from flask import request, jsonify
 from flask_cors import CORS
 from controller import map, tables, sidebar
 from database.static import dao, table
@@ -9,9 +9,16 @@ import os
 app = table.app
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 # 初始化数据库，第一次执行完后就可以注释掉
-'''Init() 
-updateInf()
+'''clearTable('chinaInfMessages')
+clearTable('hisInfMessages')
+getGlobalProvinceHisInf()'''
+'''Init()'''
+'''updateInf()
 updateVac()'''
+'''getArea()
+getChinaHisInf()'''
+'''getGlobalCountryHisInf()'''
+
 
 @app.route('/')
 def index():
@@ -40,7 +47,7 @@ def getCountryInfection(country):
 
 @app.route('/countryVaccine/<country>', methods=["GET"])
 def getCountryVaccine(country):
-    return tables.getCountryInfection(country)
+    return tables.getCountryVaccine(country)
 
 
 @app.route('/provinceInfection/country/<province>', methods=["GET"])
@@ -128,7 +135,6 @@ def getInfectionCureHeadbar():
     return sidebar.getInfectionCureSidebar('global')
 
 
-
 @app.route('/infectDetailSidebar/infectSum/<country>', methods=["GET"])
 def getInfectionSumCountryHeadbarSon(country):
     return sidebar.getInfectionTotalSidebar(country)
@@ -204,24 +210,21 @@ def getInfectionCureProvince(province):
     return sidebar.getInfectionCureSidebar(province)
 
 
-post_data = []
-
-
 @app.route('/feedback', methods=["GET", "POST"])
 def getFeedBack():
     if request.method == "POST":
         data = request.get_json()
         now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         for key in data:
-            post_data.append(data[key])
             dao.saveAdvice(data[key], now_time)
+        return jsonify({})
     if request.method == "GET":
-        return json.dumps(post_data)
+        return jsonify({})
 
 
 if __name__ == '__main__':
     '''os.chdir("/Users/liuqian/PycharmProjects/covid-19")  # 注意这里请改成自己电脑上该文件夹的绝对路径 通用方法目前仍在查找 by:zzy
     os.system("python database\\static\\initCreate.py")'''
     app.config['JSON_AS_ASCII'] = False
-    app.debug = True
+    '''app.debug = True'''
     app.run()

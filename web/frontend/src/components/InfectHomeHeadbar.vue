@@ -1,12 +1,12 @@
 <template>
-  <el-card class="box-card" shadow="always">
+  <el-card class="box-card" shadow="always" id="card-head-bar">
     <el-row>
       <el-col :span="6"><div class="infect-sum">累计确诊{{infect_sum}}</div></el-col>
       <el-col :span="2"><div class="infect-sum-add">+{{infect_sum_add}}</div></el-col>
-      <el-col :span="4"><div class="infect-sum">累计死亡{{infect_death}}</div></el-col>
-      <el-col :span="4"><div class="infect-sum-add">+{{infect_death_add}}</div></el-col>
-      <el-col :span="2"><div class="infect-sum">累计治愈{{infect_cure}}</div></el-col>
-      <el-col :span="6"><div class="infect-sum-add">+{{infect_cure_add}}</div></el-col>
+      <el-col :span="6"><div class="infect-sum">累计死亡{{infect_death}}</div></el-col>
+      <el-col :span="2"><div class="infect-sum-add">+{{infect_death_add}}</div></el-col>
+      <el-col :span="6"><div class="infect-sum">累计治愈{{infect_cure}}</div></el-col>
+      <!--<el-col :span="6"><div class="infect-sum-add">+{{infect_cure_add}}</div></el-col>-->
     </el-row>
   </el-card>
 </template>
@@ -24,60 +24,68 @@ export default {
       infect_cure_add: ''
     }
   },
-  mounted () {
+  created () {
     this.getInfectSum()
     this.getInfectSumAdd()
     this.getInfectDeath()
     this.getInfectDeathAdd()
     this.getInfectCure()
-    this.getInfectCureAdd()
+    // this.getInfectCureAdd()
+  },
+  mounted () {
+    this.set_length()
   },
   methods: {
+    set_length () {
+      const headBar = document.getElementById('card-head-bar')
+      // alert(document.body.offsetWidth)
+      headBar.style.setProperty('width', document.body.offsetWidth * 4 / 5 + 'px')
+    },
     getInfectSum () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectSum').then(function (response) {
+      fetch('http://81.70.134.96:5000/infectHomeHeadbar/infectSum').then(function (response) {
         response.json().then((data) => {
-          that.infect_sum = data
+          that.infect_sum = data.value
         })
       })
     },
     getInfectSumAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectSumAdd').then(function (response) {
+      fetch('http://81.70.134.96:5000/infectHomeHeadbar/infectSumAdd').then(function (response) {
         response.json().then((data) => {
-          that.infect_sum_add = data
+          that.infect_sum_add = data.value
         })
       })
     },
     getInfectDeath () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectDeath').then(function (response) {
+      fetch('http://81.70.134.96:5000/infectHomeHeadbar/infectDeath').then(function (response) {
         response.json().then((data) => {
-          that.infect_death = data
+          that.infect_death = data.value
         })
       })
     },
     getInfectDeathAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectDeathAdd').then(function (response) {
+      fetch('http://81.70.134.96:5000/infectHomeHeadbar/infectDeathAdd').then(function (response) {
         response.json().then((data) => {
-          that.infect_death_add = data
+          that.infect_death_add = data.value
         })
       })
     },
     getInfectCure () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectCure').then(function (response) {
+      fetch('http://81.70.134.96:5000/infectHomeHeadbar/infectCure').then(function (response) {
         response.json().then((data) => {
-          that.infect_cure = data
+          that.infect_cure = data.value
         })
       })
     },
     getInfectCureAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectHomeHeadbar/infectCureAdd').then(function (response) {
+      fetch('http://81.70.134.96:5000/infectHomeHeadbar/infectCureAdd').then(function (response) {
         response.json().then((data) => {
-          that.infect_cure_add = data
+          that.infect_cure_add = data.value
         })
       })
     }

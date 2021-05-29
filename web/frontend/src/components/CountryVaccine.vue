@@ -14,8 +14,11 @@ export default {
       var myChart = echarts.init(document.getElementById('countryVaccine'))
       var series = []
       var names = []
-      fetch('../static/json/charts/testVaccine').then(function (response) {
+      fetch('http://81.70.134.96:5000/countryVaccine/' + this.$route.params.country).then(function (response) {
         response.json().then(function (data) {
+          if (JSON.stringify(data) === '{}') {
+            return
+          }
           for (var i = 0; i < data.length; i++) {
             series.push(
               {
@@ -26,10 +29,14 @@ export default {
             )
             names.push(data[i].name)
           }
+          var legendItemSize = 15
+          if (this.$route.params.country === '俄罗斯') {
+            legendItemSize = 8
+          }
           myChart.setOption({
             title: {
               text: data[0].name + '接种人数折线图',
-              left: 'center',
+              left: '65%',
               textStyle: {
                 fontSize: '22',
                 color: '#000',
@@ -40,23 +47,26 @@ export default {
               trigger: 'axis'
             },
             legend: {
-              left: '10%',
-              top: '5%',
+              orient: 'vertical',
+              right: '55%',
+              itemGap: 15,
               data: names,
+              selected: this.getSelected(names),
               textStyle: {
                 color: '#000',
-                fontSize: 18
-              }
+                fontSize: legendItemSize
+              },
+              selectedMode: 'multiple'
             },
             grid: {
-              top: '15%',
+              left: '50%',
               containLabel: true
             },
             xAxis: [{
               name: '日期',
               type: 'category',
               nameTextStyle: {
-                fontSize: '14',
+                fontSize: '14'
               },
               axisTick: {
                 alignWithLabel: 'true'

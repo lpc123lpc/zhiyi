@@ -5,7 +5,7 @@
           <wbc-nav></wbc-nav>
         </el-header>
         <el-container>
-          <el-aside width="450px">
+          <el-aside width="400px">
             <vaccine-sidebar v-bind:vaccine_header_title="'疫苗接种'"></vaccine-sidebar>
             <infect-sidebar v-bind:infect_header_title="'感染情况'"></infect-sidebar>
           </el-aside>
@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import header from '../components/Header.vue'
+import vueHeader from '../components/PageHeader.vue'
 import vaccineSidebar from '../components/VaccineSidebar.vue'
 import infectSidebar from '../components/InfectSidebar.vue'
 import worldTable from '../components/WorldTable.vue'
@@ -51,7 +51,7 @@ export default {
 
   },
   components: { // 定义组件
-    'wbc-nav': header,
+    'wbc-nav': vueHeader,
     'vaccine-sidebar': vaccineSidebar,
     'infect-sidebar': infectSidebar,
     'world-table': worldTable,

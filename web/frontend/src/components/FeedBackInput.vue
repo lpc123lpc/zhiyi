@@ -20,8 +20,8 @@ export default {
   name: 'FeedBackInput',
   data () {
     return {
-      isDisabled:false,
-      content:'提交',
+      isDisabled: false,
+      content: '提交',
       ruleForm: {
         desc: ''
       },
@@ -35,17 +35,15 @@ export default {
   methods: {
     postFeedBack () {
       var formData = JSON.stringify(this.ruleForm)
-      fetch('http://127.0.0.1:5000/feedback', {
+      fetch('http://81.70.134.96:5000/feedback', {
         method: 'POST',
         body: formData,
-        headers: {
+        headers: new Headers({
           'Content-Type': 'application/json'
-        }
-      }).then(res => {
-        return res.json()
-      }).then(res => {
-        console.log(res)
-      })
+        })
+      }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => console.log('Success:', response))
     },
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
@@ -54,14 +52,14 @@ export default {
           alert('提交成功，感谢您的意见！')
           this.resetForm(formName)
           this.isDisabled = true
-          /*setTimeout(() => {
+          /* setTimeout(() => {
             this.isDisabled = false
-          }, 5000)*/
+          }, 5000) */
           const TIME_COUNT = 30
           let vm = this
           vm.count = TIME_COUNT
           vm.timer = window.setInterval(() => {
-            if (vm.count > 0 && vm.count <= TIME_COUNT){
+            if (vm.count > 0 && vm.count <= TIME_COUNT) {
           	  // 倒计时时不可点击
               vm.isDisabled = true
               // 计时秒数
@@ -70,14 +68,14 @@ export default {
               vm.content = vm.count + 's后再次提交'
             } else {
           	  // 倒计时完，可点击
-             vm.isDisabled = false
+              vm.isDisabled = false
               // 更新按钮文字内容
-              vm.content = '获取短信验证码'
+              vm.content = '提交'
               // 清空定时器!!!
               clearInterval(vm.timer)
               vm.timer = null
-           }
-         }, 1000)
+            }
+          }, 1000)
         } else {
           console.log('error submit!!')
           return false

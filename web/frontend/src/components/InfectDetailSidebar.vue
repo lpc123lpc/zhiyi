@@ -13,7 +13,7 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      {{infect_sum_add}}
+      +{{infect_sum_add}}
     </div>
     <div class="today-item">
       累计确诊
@@ -26,7 +26,7 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      {{infect_death_add}}
+      +{{infect_death_add}}
     </div>
     <div class="today-item">
       累计死亡
@@ -64,7 +64,7 @@ export default {
       infect_cure_add: ''
     }
   },
-  mounted () {
+  created () {
     this.getInfectSum()
     this.getInfectSumAdd()
     this.getInfectDeath()
@@ -75,49 +75,49 @@ export default {
   methods: {
     getInfectSum () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailSidebar/infectSum/' + this.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailSidebar/infectSum/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.infect_sum = data
+          that.infect_sum = data.value
         })
       })
     },
     getInfectSumAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailSidebar/infectSumAdd/' + this.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailSidebar/infectSumAdd/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.infect_sum_add = data
+          that.infect_sum_add = data.value
         })
       })
     },
     getInfectDeath () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailSidebar/infectDeath/' + this.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailSidebar/infectDeath/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.infect_death = data
+          that.infect_death = data.value
         })
       })
     },
     getInfectDeathAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailSidebar/infectDeathAdd/' + this.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailSidebar/infectDeathAdd/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.infect_death_add = data
+          that.infect_death_add = data.value
         })
       })
     },
     getInfectCure () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailSidebar/infectCure/' + this.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailSidebar/infectCure/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.infect_cure = data
+          that.infect_cure = data.value
         })
       })
     },
     getInfectCureAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailSidebar/infectCureAdd/' + this.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailSidebar/infectCureAdd/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.infect_cure_add = data
+          that.infect_cure_add = data.value
         })
       })
     }

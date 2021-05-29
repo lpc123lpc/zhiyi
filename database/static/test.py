@@ -1,4 +1,4 @@
-from spider.spider import *
+from spider.covidSpider import *
 from database.static.table import *
 from database.static.dao import *
 from database.static.getInitData import *
@@ -32,3 +32,5 @@ def getCountryHisTest():
    data = Spider.getData(8)
    Spider.saveToJsonFile(data, 'country.json')
 
+'''clearTable('nowInfMessages')
+updateGlobalInf()'''

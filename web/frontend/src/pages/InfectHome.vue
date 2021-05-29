@@ -26,13 +26,13 @@
 </template>
 
 <script>
-import header from '../components/Header.vue'
+import vueHeader from '../components/PageHeader.vue'
 import infectHomeHeadbar from '../components/InfectHomeHeadbar.vue'
 import infectHomeWorldMap from '../components/WorldMapInfection.vue'
 export default {
   name: 'InfectHome',
   components: { // 定义组件
-    'wbc-nav': header,
+    'wbc-nav': vueHeader,
     'home-info': infectHomeHeadbar,
     'infect-home-world-map': infectHomeWorldMap
   },
@@ -44,15 +44,15 @@ export default {
   methods: { // 事件处理器
     getWorldMapInfectionDataMsg () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectHome/worldMapInfectionDataMsg').then(function (response) {
+      fetch('http://81.70.134.96:5000/infectHome/worldMapInfectionDataMsg').then(function (response) {
         response.json().then((data) => {
-          console.log(data)
+          // console.log(data)
           that.worldMapInfectionDataMsg = data
         })
       })
     }
   },
-  mounted () {
+  created () {
     this.getWorldMapInfectionDataMsg()
   }
 }

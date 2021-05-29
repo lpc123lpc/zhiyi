@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div id="provinceMapInfection"><province-map-infection :provinceMapInfectionData="data" :province="province"></province-map-infection></div>
+    <div id="provinceMapInfection">
+      <province-map-infection :provinceMapInfectionData="data" :province="province"></province-map-infection>
+    </div>
   </div>
 </template>
 
@@ -15,11 +17,15 @@ export default {
   data() {
     return {
       country: '',
-      data: {nowConfirm: [{name: '渝中区', value: 48}, {name: '涪陵区', value: 300}, {name: 'Quebec', value: 4000.3},  {name: '山东', value: 5010.3}], 
-            totalConfirm: [{name: '涪陵区', value: 12}], 
-            cured: [{name: '涪陵区', value: 32}],
-            dead: [{name: '涪陵区', value: 100}]
-        },
+      data: {
+        nowConfirm: [{name: '渝中区', value: 48}, {name: '涪陵区', value: 300}, {name: 'Quebec', value: 4000.3}, {
+          name: '山东',
+          value: 5010.3
+        }],
+        totalConfirm: [{name: '涪陵区', value: 12}],
+        cured: [{name: '涪陵区', value: 32}],
+        dead: [{name: '涪陵区', value: 100}]
+      },
       refresh: true
     }
   },

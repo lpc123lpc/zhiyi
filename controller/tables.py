@@ -9,47 +9,43 @@ from testcode.lq import testData
 worldVacData = testData.vacdata'''
 
 
+def dealWithNone(i):
+    if i == -1:
+        return None
+    else:
+        return i
+
+
 def getWorldData():
     worldVacData = dao.getNowVacMessageInclude('global')
     worldInfData = dao.getNowInfMessageInclude('global')
-
-
     all_data = []
     for i in worldInfData:
         for j in worldVacData:
             if getattr(i, 'areaName') == getattr(j, 'areaName'):
                 all_data.append({"name": getattr(i, 'areaName'),
-                                 "confirmed": getattr(i, 'totalNum'),
-                                 "newConfirmed": getattr(i, 'addNum'),
-                                 "cured": getattr(i, 'cured'),
-                                 "deceased": getattr(i, 'totalDead'),
-                                 "vaccined": getattr(j, 'totalNum'),
-                                 "newVaccined": getattr(j, 'addNum'),
-                                 "vaccine_coverage": getattr(j, 'vacRate')})
-                print(getattr(j, 'vacRate'))
+                                 "confirmed": dealWithNone(getattr(i, 'totalNum')),
+                                 "newConfirmed": dealWithNone(getattr(i, 'addNum')),
+                                 "cured": dealWithNone(getattr(i, 'cured')),
+                                 "deceased": dealWithNone(getattr(i, 'totalDead')),
+                                 "vaccined": dealWithNone(getattr(j, 'totalNum')),
+                                 "newVaccined": dealWithNone(getattr(j, 'addNum')),
+                                 "vaccine_coverage": dealWithNone(getattr(j, 'vacRate'))})
                 break
-    '''for j in worldInfData:
-        all_data.append({"name": getattr(j, 'areaName'),
-                             "confirmed": getattr(j, 'totalNum'),
-                                 "newConfirmed": getattr(j, 'addNum'),
-                                 "cured": getattr(j, 'cured'),
-                                 "deceased": getattr(j, 'totalDead'),
-                                 "vaccined": 0,
-                                 "newVaccined": 0,
-                                 "vaccine_coverage": 0})'''
     return json.dumps(all_data)
 
 
 def getCountryInfData(country):
     infData = dao.getHisInfMessage(country)
     times, confirmed, deceased, cure = [], [], [], []
-    if infData is None:
+    if infData is None or len(infData) == 0:
         return jsonify({})
     for i in infData:
-        times.append(getattr(i, 'time'))
-        confirmed.append(getattr(i, 'totalNum'))
-        deceased.append(getattr(i, 'totalDead'))
-        cure.append(getattr(i, 'cured'))
+        if getattr(i, 'totalNum') != -1:
+            times.append(getattr(i, 'time'))
+            confirmed.append(getattr(i, 'totalNum'))
+            deceased.append(getattr(i, 'totalDead'))
+            cure.append(getattr(i, 'cured'))
     return jsonify({
         "name": country,
         "time": times,
@@ -62,11 +58,12 @@ def getCountryInfData(country):
 def getCountryVacData(country):
     vacData = dao.getHisVacMessage(country)
     times, vaccined = [], []
-    if vacData is None:
+    if vacData is None or len(vacData) == 0:
         return jsonify({})
     for i in vacData:
-        times.append(getattr(i, 'time'))
-        vaccined.append(getattr(vacData, 'totalNum'))
+        if getattr(i, 'totalNum') != -1:
+            times.append(getattr(i, 'time'))
+            vaccined.append(getattr(i, 'totalNum'))
     return jsonify({
         "name": country,
         "time": times,
@@ -77,16 +74,30 @@ def getCountryVacData(country):
 def getCountryInfection(country):
     all_data = []
     data = dao.getHisInfMessageInclude(country)
-    if data is None:
+    if data is None or len(data) == 0:
         return jsonify({})
     for i in data:
-        position = getattr(i[0], 'areaName')
+        position = ''
         confirmed, deceased, cured, times = [], [], [], []
+        last_cured, last_confirmed, last_deceased = 0, 0, 0
         for j in i:
+            position = getattr(i[0], 'areaName')
             times.append(getattr(j, 'time'))
-            cured.append(getattr(j, 'cured'))
-            confirmed.append(getattr(j, 'totalNum'))
-            deceased.append(getattr(j, 'totalDead'))
+            if getattr(j, 'cured') != -1 and getattr(j, 'cured') > last_cured:
+                cured.append(getattr(j, 'cured'))
+                last_cured = getattr(j, 'cured')
+            else:
+                cured.append(last_cured)
+            if getattr(j, 'totalNum') != -1 and getattr(j, 'totalNum') > last_confirmed:
+                confirmed.append(getattr(j, 'totalNum'))
+                last_confirmed = getattr(j, 'totalNum')
+            else:
+                confirmed.append(last_confirmed)
+            if getattr(j, 'totalDead') != -1 and getattr(j, 'totalDead') > last_deceased:
+                deceased.append(getattr(j, 'totalDead'))
+                last_deceased = getattr(j, 'totalDead')
+            else:
+                deceased.append(last_deceased)
         all_data.append({"name": position, "time": times, "confirmed": confirmed, "deceased": deceased, "cured": cured})
     return json.dumps(all_data)
 
@@ -94,7 +105,7 @@ def getCountryInfection(country):
 def getCountryVaccine(country):
     all_data = []
     data = dao.getHisVacMessageInclude(country)
-    if data is None:
+    if data is None or len(data) == 0:
         return jsonify({})
     for i in data:
         position = getattr(i[0], 'areaName')
@@ -108,9 +119,9 @@ def getCountryVaccine(country):
 
 
 def getProvinceInfection(province):
-    times, confirmed, deceased, cure = [], [], [], [], []
+    times, confirmed, deceased, cure = [], [], [], []
     infData = dao.getHisInfMessage(province)
-    if infData is None:
+    if infData is None or len(infData) == 0:
         return jsonify({})
     for i in infData:
         confirmed.append(getattr(i, 'totalNum'))

@@ -1,5 +1,7 @@
 <template>
-  <div><world-map-vaccine :worldMapVaccineData="data"></world-map-vaccine></div>
+  <div>
+    <world-map-vaccine :worldMapVaccineData="data"></world-map-vaccine>
+  </div>
 </template>
 
 <script>
@@ -12,8 +14,10 @@ export default {
   },
   data() {
     return {
-      data : {vaccined: [{name: '中国', value: 22030.9}, {name: '加拿大', value: 10}], 
-              coverage: [{name: '中国', value: 0.111}]}
+      data: {
+        vaccined: [{name: '中国', value: 22030.9}, {name: '加拿大', value: 10}],
+        coverage: [{name: '中国', value: 0.111}]
+      }
     }
   }
 }

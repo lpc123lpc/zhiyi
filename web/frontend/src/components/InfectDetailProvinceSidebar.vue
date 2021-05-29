@@ -13,7 +13,7 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      {{infect_province_sum_add}}
+      +{{infect_province_sum_add}}
     </div>
     <div class="today-item">
       累计确诊
@@ -26,7 +26,7 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      {{infect_province_death_add}}
+      +{{infect_province_death_add}}
     </div>
     <div class="today-item">
       累计死亡
@@ -35,12 +35,12 @@
       {{infect_province_death}}
     </div>
     <el-divider></el-divider>
-    <div class="yersterday-item">
+    <!--<div class="yersterday-item">
       较昨日
     </div>
     <div class="yersterday-item">
       {{infect_province_cure_add}}
-    </div>
+    </div>-->
     <div class="today-item">
       累计治愈
     </div>
@@ -64,60 +64,60 @@ export default {
       infect_province_cure_add: ''
     }
   },
-  mounted () {
+  created () {
     this.getInfectProvinceSum()
     this.getInfectProvinceSumAdd()
     this.getInfectProvinceDeath()
     this.getInfectProvinceDeathAdd()
     this.getInfectProvinceCure()
-    this.getInfectProvinceCureAdd()
+    // this.getInfectProvinceCureAdd()
   },
   methods: {
     getInfectProvinceSum () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailProvinceSidebar/infectSum/' + this.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailProvinceSidebar/infectSum/' + this.province).then(function (response) {
         response.json().then((data) => {
-          that.infect_province_sum = data
+          that.infect_province_sum = data.value
         })
       })
     },
     getInfectProvinceSumAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailProvinceSidebar/infectProvinceSumAdd/' + this.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailProvinceSidebar/infectProvinceSumAdd/' + this.province).then(function (response) {
         response.json().then((data) => {
-          that.infect_province_sum_add = data
+          that.infect_province_sum_add = data.value
         })
       })
     },
     getInfectProvinceDeath () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailProvinceSidebar/infectProvinceDeath/' + this.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailProvinceSidebar/infectProvinceDeath/' + this.province).then(function (response) {
         response.json().then((data) => {
-          that.infect_province_death = data
+          that.infect_province_death = data.value
         })
       })
     },
     getInfectProvinceDeathAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailProvinceSidebar/infectProvinceDeathAdd/' + this.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailProvinceSidebar/infectProvinceDeathAdd/' + this.province).then(function (response) {
         response.json().then((data) => {
-          that.infect_province_death_add = data
+          that.infect_province_death_add = data.value
         })
       })
     },
     getInfectProvinceCure () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailProvinceSidebar/infectProvinceCure/' + this.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailProvinceSidebar/infectProvinceCure/' + this.province).then(function (response) {
         response.json().then((data) => {
-          that.infect_province_cure = data
+          that.infect_province_cure = data.value
         })
       })
     },
     getInfectProvinceCureAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/infectDetailProvinceSidebar/infectProvinceCureAdd/' + this.province).then(function (response) {
+      fetch('http://81.70.134.96:5000/infectDetailProvinceSidebar/infectProvinceCureAdd/' + this.province).then(function (response) {
         response.json().then((data) => {
-          that.infect_province_cure_add = data
+          that.infect_province_cure_add = data.value
         })
       })
     }

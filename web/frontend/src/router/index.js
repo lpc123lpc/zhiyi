@@ -6,8 +6,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: resolve => require(['../pages/Home'], resolve)
+      name: 'Cover',
+      component: resolve => require(['../pages/Cover'], resolve)
     },
     {
       path: '/Home',
@@ -47,3 +47,8 @@ export default new Router({
     }
   ]
 })
+
+const VueRouterPush = Router.prototype.push
+Router.prototype.push = function push (to) {
+  return VueRouterPush.call(this, to).catch(err => err)
+}

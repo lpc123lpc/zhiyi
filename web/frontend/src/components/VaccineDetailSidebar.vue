@@ -13,7 +13,7 @@
       较昨日
     </div>
     <div class="yersterday-item">
-      {{vaccine_sum_add}}
+      +{{vaccine_sum_add}}
     </div>
     <div class="today-item">
       累计接种
@@ -29,10 +29,10 @@
       {{vaccine_cover_add}}
     </div>-->
     <div class="today-item">
-      覆盖率
+      每百人接种
     </div>
     <div class="today-item">
-      {{vaccine_cover}}
+      {{vaccine_cover}}剂
     </div>
   </el-card>
 </template>
@@ -49,7 +49,7 @@ export default {
       vaccine_cover_add: ''
     }
   },
-  mounted () {
+  created () {
     this.getVaccineSum()
     this.getVaccineSumAdd()
     this.getVaccineCover()
@@ -58,33 +58,33 @@ export default {
   methods: {
     getVaccineSum () {
       var that = this
-      fetch('http://127.0.0.1:5000/vaccineDetailSidebar/vaccineSum/' + this.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/vaccineDetailSidebar/vaccineSum/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.vaccine_sum = data
+          that.vaccine_sum = data.value
         })
       })
     },
     getVaccineSumAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/vaccineDetailSidebar/vaccineSumAdd/' + this.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/vaccineDetailSidebar/vaccineSumAdd/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.vaccine_sum_add = data
+          that.vaccine_sum_add = data.value
         })
       })
     },
     getVaccineCover () {
       var that = this
-      fetch('http://127.0.0.1:5000/vaccineDetailSidebar/vaccineCover/' + this.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/vaccineDetailSidebar/vaccineCover/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.vaccine_cover = data
+          that.vaccine_cover = data.value
         })
       })
     },
     getVaccineCoverAdd () {
       var that = this
-      fetch('http://127.0.0.1:5000/vaccineDetailSidebar/vaccineCoverAdd/' + this.country).then(function (response) {
+      fetch('http://81.70.134.96:5000/vaccineDetailSidebar/vaccineCoverAdd/' + this.country).then(function (response) {
         response.json().then((data) => {
-          that.vaccine_cover_add = data
+          that.vaccine_cover_add = data.value
         })
       })
     }

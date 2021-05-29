@@ -1,9 +1,11 @@
 <template>
-    <div ref="curedChart" style="width: 1000px;height: 600px"></div>
+    <div ref="curedChart" style="width: 100%;height: 600px"></div>
 </template>
 
 <script>
 import echarts from 'echarts'
+import {mixin} from "../mixins";
+
 export default {
   name: 'CountryInfectionCured',
   props: {
@@ -11,6 +13,7 @@ export default {
     names: Array,
     cured: Array
   },
+  mixins: [mixin],
   watch: {
     cured () {
       this.drawCured()
@@ -21,11 +24,18 @@ export default {
   },
   methods: {
     drawCured () {
+      if (this.cured.length === 0) {
+        return
+      }
+      var legendItemSize = 15
+      if (this.$route.params.country === '俄罗斯') {
+        legendItemSize = 8
+      }
       var chart = echarts.init(this.$refs.curedChart)
       chart.setOption({
         title: {
           text: '治愈人数折线图',
-          left: 'center',
+          left: '65%',
           textStyle: {
             fontSize: '22',
             color: '#000',
@@ -36,16 +46,19 @@ export default {
           trigger: 'axis'
         },
         legend: {
-          left: '10%',
-          top: '5%',
+          orient: 'vertical',
+          right: '55%',
           data: this.names,
+          itemGap: 15,
+          selected: this.getSelected(this.names),
           textStyle: {
             color: '#000',
-            fontSize: 18
-          }
+            fontSize: legendItemSize
+          },
+          selectedMode: 'multiple'
         },
         grid: {
-          top: '15%',
+          left: '50%',
           containLabel: true
         },
         xAxis: [{

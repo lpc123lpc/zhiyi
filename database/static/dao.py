@@ -1,5 +1,5 @@
 from database.static.table import *
-from spider.spider import *
+from spider.covidSpider import *
 
 '''
 description:get infection information
@@ -39,7 +39,7 @@ return:返回该区域的历史感染信息
 
 
 def getHisInfMessage(name):
-    isChina = db.session.query(ChinaInfMessage.time).filter(ChinaInfMessage.areaName == name).first()
+    isChina = db.session.query(ChinaInfMessage).filter(ChinaInfMessage.areaName == name).first()
     messages = None
     if isChina is None:
         messages = db.session.query(InfMessage) \
@@ -64,16 +64,18 @@ return:返回该区域所包含的国家/地区的历史感染信息（下一级
 
 
 def getHisInfMessageInclude(name):
-    areas = db.session.query(Area.childArea).filter(Area.parentArea == name).all()
+    areas = db.session.query(Area).filter(Area.parentArea == name).all()
     messages = []
-    if areas is None:
+    if areas is None or len(areas) == 0:
         return None
     else:
-        isChina = db.session.query(ChinaInfMessage.time).filter(ChinaInfMessage.areaName == areas[0]).first()
+        a = areas[0]
+        isChina = db.session.query(ChinaInfMessage).filter(ChinaInfMessage.areaName == a.childArea).first()
+        print(isChina)
         if isChina is None:
             for area in areas:
                 message = db.session.query(InfMessage) \
-                    .filter(InfMessage.areaName == area) \
+                    .filter(InfMessage.areaName == area.childArea) \
                     .order_by(InfMessage.time.desc()).limit(180).all()
                 if message is not None:
                     message.reverse()
@@ -81,7 +83,7 @@ def getHisInfMessageInclude(name):
         else:
             for area in areas:
                 message = db.session.query(ChinaInfMessage) \
-                    .filter(ChinaInfMessage.areaName == area) \
+                    .filter(ChinaInfMessage.areaName == area.childArea) \
                     .order_by(ChinaInfMessage.time.desc()).limit(180).all()
                 if area == "吉林市":
                     for m in message:
@@ -143,12 +145,12 @@ return:返回该区域所包含的国家/地区的历史接种信息（下一级
 
 def getHisVacMessageInclude(name):
     messages = []
-    areas = db.session.query(Area.childArea).filter(Area.parentArea == name).all()
-    if areas is None:
+    areas = db.session.query(Area).filter(Area.parentArea == name).all()
+    if areas is None or len(areas) == 0:
         return None
     else:
         for area in areas:
-            message = getHisVacMessage(area)
+            message = getHisVacMessage(area.childArea)
             if message is not None:
                 messages.append(message)
         if len(messages) == 0:
@@ -227,50 +229,60 @@ def updateForeignProvinceInf():
             if countryName in worldMapping:
                 countryName = worldMapping[province['Country_Region']]['cn']
             provinceName = province['Province_State']
+            if provinceName == 'Greenland':
+                provinceName = '格陵兰'
             cityName = province['Admin2']
             if countryName != 'US' and cityName == '' and provinceName != 'Unknown':
                 Last_Update = province['Last_Update']
                 t = Last_Update[:10]
-
+                try:
+                    t = tChangeType(t)
+                except Exception as e:
+                    print(e)
                 x = NowInfMessage(time=t,
                                   areaName=provinceName,
-                                  currentNum=0 if province['Active'] == '' else int(province['Active']),
-                                  totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed']),
-                                  addNum=0,
-                                  cured=0 if province['Recovered'] == '' else int(province['Recovered']),
-                                  totalDead=0 if province['Deaths'] == '' else int(province['Deaths']),
-                                  addDead=0)
+                                  currentNum=-1 if province['Active'] == '' else int(province['Active']),
+                                  totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed']),
+                                  addNum=-1,
+                                  cured=-1 if province['Recovered'] == '' else int(province['Recovered']),
+                                  totalDead=-1 if province['Deaths'] == '' else int(province['Deaths']),
+                                  addDead=-1)
                 add(x)
                 y = InfMessage(time=t,
                                areaName=provinceName,
-                               currentNum=0 if province['Active'] == '' else int(province['Active']),
+                               currentNum=-1 if province['Active'] == '' else int(province['Active']),
                                totalNum=int(province['Confirmed']),
-                               addNum=0,
+                               addNum=-1,
                                cured=int(province['Recovered']),
                                totalDead=int(province['Deaths']),
-                               addDead=0)
+                               addDead=-1)
                 add(y)
 
     usProvinces = Spider.getCSVDictReader(uy)
+    print(uy)
     for province in usProvinces:
         t = province['Last_Update'][:10]
+        try:
+            t = tChangeType(t)
+        except Exception as e:
+            print(e)
         x = NowInfMessage(time=t,
-                          areaName=provinceName,
-                          currentNum=0 if province['Active'] == '' else int(province['Active'].split('.')[0]),
-                          totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
-                          addNum=0,
-                          cured=0 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
-                          totalDead=0 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
-                          addDead=0)
+                          areaName=province['Province_State'],
+                          currentNum=-1 if province['Active'] == '' else int(province['Active'].split('.')[0]),
+                          totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
+                          addNum=-1,
+                          cured=-1 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
+                          totalDead=-1 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
+                          addDead=-1)
         add(x)
         y = InfMessage(time=t,
-                       areaName=provinceName,
-                       currentNum=0 if province['Active'] == '' else int(province['Active'].split('.')[0]),
-                       totalNum=0 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
-                       addNum=0,
-                       cured=0 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
-                       totalDead=0 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
-                       addDead=0)
+                       areaName=province['Province_State'],
+                       currentNum=-1 if province['Active'] == '' else int(province['Active'].split('.')[0]),
+                       totalNum=-1 if province['Confirmed'] == '' else int(province['Confirmed'].split('.')[0]),
+                       addNum=-1,
+                       cured=-1 if province['Recovered'] == '' else int(province['Recovered'].split('.')[0]),
+                       totalDead=-1 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
+                       addDead=-1)
         add(y)
 
 
@@ -287,6 +299,7 @@ def updateInf():
 
 
 def updateVac():
+    print("i am in")
     vacMessage = Spider.getData(0)
     lastName = ""
     i = 0
@@ -300,21 +313,24 @@ def updateVac():
             else:
                 name = 'global' if v['location'] == 'World' else v['location']
             if name != lastName and i != 0:
-                totalNum = 0 if v1['total_vaccinations'] == '' else int(v1['total_vaccinations'])
-                addNum = 0 if v1['daily_vaccinations_raw'] == '' else int(v1['daily_vaccinations_raw'])
-                vacRate = 0 if v1['total_vaccinations_per_hundred'] == '' else float(v1['total_vaccinations_per_hundred'])
-                NowVacMessage.query.filter_by(areaName=lastName) \
-                    .update({'time': v1['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
-                db.session.commit()
+                totalNum = -1 if v1['total_vaccinations'] == '' else int(v1['total_vaccinations'])
+                addNum = -1 if v1['daily_vaccinations_raw'] == '' else int(v1['daily_vaccinations_raw'])
+                vacRate = -1 if v1['total_vaccinations_per_hundred'] == '' else float(v1['total_vaccinations_per_hundred'])
+                if totalNum != -1:
+                    NowVacMessage.query.filter_by(areaName=lastName) \
+                        .update({'time': v1['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
+                    db.session.commit()
             lastName = name
             v1 = v
             i += 1
-        totalNum = 0 if v['total_vaccinations'] == '' else int(v['total_vaccinations'])
-        addNum = 0 if v['daily_vaccinations_raw'] == '' else int(v['daily_vaccinations_raw'])
-        vacRate = 0 if v['total_vaccinations_per_hundred'] == '' else float(v['total_vaccinations_per_hundred'])
-        NowVacMessage.query.filter_by(areaName=name) \
-            .update({'time': v['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
-        db.session.commit()
+        totalNum = -1 if v['total_vaccinations'] == '' else int(v['total_vaccinations'])
+        addNum = -1 if v['daily_vaccinations_raw'] == '' else int(v['daily_vaccinations_raw'])
+        vacRate = -1 if v['total_vaccinations_per_hundred'] == '' else float(v['total_vaccinations_per_hundred'])
+        if totalNum > 0:
+            NowVacMessage.query.filter_by(areaName=lastName) \
+                .update({'time': v1['date'], 'totalNum': totalNum, 'addNum': addNum, 'vacRate': vacRate})
+            db.session.commit()
+        print("i am out")
 
 
 # 清除表单
@@ -374,3 +390,15 @@ def addMessage(area, toType, today):
                           totalDead=area['dead'],
                           addDead=area['deadCompare'])
         add(x)
+
+
+def tChangeType(t):
+    if t[1] == '/' and t[3] == '/':
+        t = '20' + t[4:6] + '-0' + t[0] + '-0' + t[2]
+    elif t[1] == '/' and t[4] == '/':
+        t = '20' + t[5:7] + '-0' + t[0] + '-' + t[2:4]
+    elif t[2] == '/' and t[4] == '/':
+        t = '20' + t[5:7] + '-' + t[:2] + '-0' + t[3]
+    elif t[2] == '/' and t[5] == '/':
+        t = '20' + t[6:8] + '-' + t[:2] + '-' + t[3:5]
+    return t
