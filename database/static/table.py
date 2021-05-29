@@ -38,6 +38,7 @@ class BaseModelNews(db.Model):
     time = db.Column(db.String(20), primary_key=True)
     title = db.Column(db.String(60), primary_key=True)
     urls = db.Column(db.String(200), primary_key=True)
+    source = db.Column(db.String(50))
     abstracts = db.Column(db.String(200))
     picUrls = db.Column(db.String(200))
 
