@@ -31,7 +31,7 @@ import vueHeader from '../components/PageHeader.vue'
 import infectDetailSidebar from '../components/InfectDetailSidebar.vue'
 import infectDetailCountryMap from '../components/CountryMapInfection.vue'
 import lineChartInfect from '../components/CountryInfection.vue'
-import scrollToBottom from "../components/scrollToBottom";
+import scrollToBottom from "../components/ScrollToBottom";
 import {mixin} from '../mixins'
 
 export default {

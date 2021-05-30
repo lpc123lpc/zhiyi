@@ -39,3 +39,4 @@ return:vaccination institutions of this city
 def getVacInstitutions(city):
     return m
 ```
+

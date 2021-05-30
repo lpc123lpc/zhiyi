@@ -28,24 +28,26 @@
         </el-submenu>
       </el-submenu>-->
       <el-menu-item index="/InfectHome" class="nav-menu-item">感染情况</el-menu-item>
-      <el-menu-item index="/TravelAdvice" class="nav-menu-item">出行建议</el-menu-item>
+      <el-menu-item index="/TravelAdvice/''" class="nav-menu-item">出行建议</el-menu-item>
       <el-menu-item index="/NewsInformation" class="nav-menu-item">新闻资讯</el-menu-item>
       <el-menu-item index="/Feedback" class="nav-menu-item">反馈&建议</el-menu-item>
       <svg class="icon" aria-hidden="true" @click="showDataSource()">
         <use xlink:href="#icon-question"></use>
       </svg>
-      <!--<el-container index="6" class="input-container">
-        <el-input placeholder="请输入内容" v-model="input" class="input-with-select">
-          <el-button slot="append" icon="el-icon-search"></el-button>
-        </el-input>
-      </el-container>-->
+      <el-container index="6" class="input-container">
+        <search-bar v-bind:data="[{value: '北京'}, {value: '西安'}, { value: '美国'}]"></search-bar>
+      </el-container>
     </el-menu>
   </div>
 </template>
 
 <script>
+import SearchBar from "./SearchBar";
 export default {
   name: 'PageHeader',
+  components: {
+    'search-bar': SearchBar
+  },
   data () {
     return {
       activeIndex: '1',

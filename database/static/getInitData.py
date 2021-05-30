@@ -293,11 +293,15 @@ def getGlobalProvinceHisInf():
             except Exception as e:
                 print(e)
 
-
+def getInitNowInf():
+    areas = db.session.query(Area).all()
+    for area in areas:
+        x = NowInfMessage(time='2021-05-29',areaName=area.childArea,currentNum=0,totalNum=0,addNum=0,cured=0,totalDead=0,addDead=0,infRate=0)
+        add(x)
 
 
 def Init():
-    getNewArea()       #github
+    getNewArea()
     print(1)
     getHisVac()
     print(2)
@@ -306,6 +310,10 @@ def Init():
     getGlobalCountryHisInf()
     print(4)
     getGlobalProvinceHisInf()       #github
+    print(5)
+    getInitNowInf()
+    updateInf()
+    print(6)
 
 '''clearTable('nowVacMessages')
 getHisVac()'''

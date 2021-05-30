@@ -75,7 +75,7 @@ export default {
     matter (row, column, cellValue) {
       cellValue += ''
       if (!cellValue.includes('.')) cellValue += '.'
-      return cellValue.replace(/(\d)(?=(\d{3})+\.)/g, function($0, $1) {
+      return cellValue.replace(/(\d)(?=(\d{3})+\.)/g, function ($0, $1) {
         return $1 + ','
       }).replace(/\.$/, '')
     }
@@ -83,6 +83,23 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
+  .el-table__expand-icon{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .el-table__expand-icon
+  .el-icon-arrow-right:before{
+    content: "\e6d9";
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 2px;
+  }
+  .el-table__expand-icon--expanded
+  .el-icon-arrow-right:before{
+    content: "\e6d8";
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 2px;
+  }
 </style>
