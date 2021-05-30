@@ -214,7 +214,10 @@ def updateGlobalInf():
                       addDead=globalInf['deadAdd'],
                       infRate=rate
                       )
-    add(x)
+    try:
+        updateNowInf(x)
+    except Exception as e:
+        print(x.areaName)
     foreignInf = Spider.getData(3)
     for message in foreignInf:
         addMessage(message, "NowInfMessage", today)
@@ -257,7 +260,10 @@ def updateForeignProvinceInf():
                                       totalDead=-1 if province['Deaths'] == '' else int(province['Deaths']),
                                       addDead=-1,
                                       infRate=rate)
-                    add(x)
+                    try:
+                        updateNowInf(x)
+                    except Exception as e:
+                        print(x.areaName)
                     y = InfMessage(time=t,
                                    areaName=provinceName,
                                    currentNum=cNum,
@@ -294,7 +300,10 @@ def updateForeignProvinceInf():
                               totalDead=-1 if province['Deaths'] == '' else int(province['Deaths'].split('.')[0]),
                               addDead=-1,
                               infRate=rate)
-            add(x)
+            try:
+                updateNowInf(x)
+            except Exception as e:
+                print(x.areaName)
             y = InfMessage(time=t,
                            areaName=province['Province_State'],
                            currentNum=cNum,
@@ -310,7 +319,6 @@ def updateForeignProvinceInf():
 
 
 def updateInf():
-    clearTable('nowInfMessages')
     updateChinaInf()
     updateGlobalInf()
     updateForeignProvinceInf()
@@ -322,7 +330,7 @@ def updateInf():
 
 
 def updateVac():
-    print("i am in")
+    print("i am in updateVac")
     vacMessage = Spider.getData(0)
     lastName = ""
     i = 0
@@ -393,7 +401,10 @@ def addMessage(area, toType, today):
                             totalDead=area['total']['dead'],
                             addDead=0,
                             infRate=rate)
-        add(x)
+        try:
+            updateNowInf(x)
+        except Exception as e:
+            print(x.areaName)
         y = NowInfMessage(time=x.time,
                           areaName=x.areaName,
                           currentNum=x.currentNum,
@@ -424,7 +435,10 @@ def addMessage(area, toType, today):
                           totalDead=area['dead'],
                           addDead=area['deadCompare'],
                           infRate=rate)
-        add(x)
+        try:
+            updateNowInf(x)
+        except Exception as e:
+            print(x.areaName)
         y = InfMessage(time=x.time,
                           areaName=x.areaName,
                           currentNum=x.currentNum,
@@ -447,3 +461,10 @@ def tChangeType(t):
     elif t[2] == '/' and t[5] == '/':
         t = '20' + t[6:8] + '-' + t[:2] + '-' + t[3:5]
     return t
+
+
+def updateNowInf(x):
+    if x.currentNum >= -1 and x.totalNum >= 0:
+        NowInfMessage.query.filter_by(areaName=x.areaName)\
+            .update({'time': x.time, 'currentNum': x.currentNum, 'totalNum': x.totalNum, 'addNum': x.addNum, 'cured': x.cured, 'totalDead': x.totalDead, 'addDead': x.addDead, 'infRate': x.infRate})
+        db.session.commit()
