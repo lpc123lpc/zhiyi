@@ -75,9 +75,15 @@ export default {
     matter (row, column, cellValue) {
       cellValue += ''
       if (!cellValue.includes('.')) cellValue += '.'
-      return cellValue.replace(/(\d)(?=(\d{3})+\.)/g, function ($0, $1) {
+      var out = cellValue.replace(/(\d)(?=(\d{3})+\.)/g, function ($0, $1) {
         return $1 + ','
       }).replace(/\.$/, '')
+      if (out === 'null') {
+        return ''
+      }
+      else {
+        return out
+      }
     }
   }
 }
