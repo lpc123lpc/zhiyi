@@ -41,17 +41,14 @@ export default {
         tooltip: {
           formatter: function (params) {
             var value = parseFloat(params.value)
-            if (!isNaN(params.value)) {
-              if (value < 0) value = NaN
-              else {
-                if (params.seriesName === '每百人接种剂量') {
-                  value = params.value + '/百人'
-                } else {
-                  value = params.value + '万'
-                }
+            if (!isNaN(params.value) && value >= 0) {
+              if (params.seriesName === '每百人接种剂量') {
+                value = params.value + '/百人'
+              } else {
+                value = params.value + '万'
               }
+              return params.seriesName + '：' + value
             }
-            return params.seriesName + '：' + value
           }
         },
         grid: {

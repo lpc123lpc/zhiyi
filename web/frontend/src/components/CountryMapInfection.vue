@@ -60,9 +60,9 @@ export default {
         },
         tooltip: {
           formatter: function (params) {
-            var value = parseInt(params.value)
-            if (value < 0) value = NaN
-            return params.seriesName + '：' + value
+            if (!isNaN(params.value) && parseInt(params.value) >=0 ) {
+              return params.seriesName + '：' + value
+            }
           }
         },
         grid: {

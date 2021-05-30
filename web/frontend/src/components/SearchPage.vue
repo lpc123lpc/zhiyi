@@ -15,11 +15,16 @@
             <span class="title">感染情况</span>
           </div>
           <div class="el-card__body">
-            <div class="text item">现有确诊：{{ this.data.infect.nowConfirm }}</div>
-            <div class="text item">累计确诊：{{ this.data.infect.totalConfirm }}</div>
-            <div class="text item">累计治愈：{{ this.data.infect.cured }}</div>
-            <div class="text item">累计死亡：{{ this.data.infect.dead }}</div>
-            <div class="text item">感染率：{{ this.data.infect.coverage * 100 }}%</div>
+            <div class="text item">现有确诊：
+              {{ this.data.infect.nowConfirm < 0? '暂未收录':this.data.infect.nowConfirm }}</div>
+            <div class="text item">累计确诊：
+              {{ this.data.infect.totalConfirm < 0? '暂未收录':this.data.infect.totalConfirm }}</div>
+            <div class="text item">累计治愈：
+              {{ this.data.infect.cured < 0? '暂未收录':this.data.infect.cured }}</div>
+            <div class="text item">累计死亡：
+              {{ this.data.infect.dead < 0? '暂未收录':this.data.infect.dead }}</div>
+            <div class="text item">感染率：
+              {{ this.data.infect.coverage < 0? '暂未收录': (this.data.infect.coverage * 100 + '%') }}</div>
           </div>
         </el-card>
       </el-col>
@@ -29,8 +34,10 @@
             <span class="title">接种情况</span>
           </div>
           <div class="el-card__body">
-            <div class="text item">接种人数：{{ this.data.infect.nowConfirm }}</div>
-            <div class="text item">每百人接种量：{{ this.data.infect.totalConfirm }}</div>
+            <div class="text item">接种人数：
+              {{ this.data.vaccine.vaccined < 0? '暂未收录':this.data.vaccine.vaccined }}</div>
+            <div class="text item">每百人接种量：
+              {{ this.data.vaccine.coverage < 0? '暂未收录':this.data.vaccine.coverage }}</div>
           </div>
         </el-card>
       </el-col>

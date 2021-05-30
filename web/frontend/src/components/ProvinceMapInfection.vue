@@ -49,8 +49,9 @@ export default {
         },
         tooltip: {
           formatter: function (params) {
-            if (parseInt(params.value) < 0) return params.seriesName + '：' + NaN
-            return params.seriesName + '：' + params.value
+            if (!isNaN(params.value) && parseInt(params.value) >= 0) {
+              return params.seriesName + '：' + params.value
+            }
           }
         },
         grid: {

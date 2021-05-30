@@ -137,7 +137,7 @@
     "mapFileName": "Botswana"
   },
   "Central African Rep.": {
-    "cn": "中非",
+    "cn": "中非共和国",
     "mapFileName": "Central_African_Republic"
   },
   "Canada": {
@@ -163,11 +163,11 @@
     "mapFileName": "Cameroon"
   },
   "Dem. Rep. Congo": {
-    "cn": "刚果(金)",
+    "cn": "刚果（金）",
     "mapFileName": "Congo-Kinshasa"
   },
   "Congo": {
-    "cn": "刚果(布)",
+    "cn": "刚果（布）",
     "mapFileName": "Congo-Brazzaville"
   },
   "Colombia": {

@@ -11,7 +11,7 @@
       <el-main id="my-el-main">
         <search-page v-bind:region="this.region"
                      v-bind:data="{infect: { nowConfirm: 10, totalConfirm: 10, cured: 10, dead: 10, coverage:	0.1},
-                                                  vaccine: { vaccined: 10, coverage: 0.1 }}"
+                                                  vaccine: { vaccined: -1, coverage: 10 }}"
                      v-bind:map-region="{ region: '北京', value: 1 }"
         ></search-page>
       </el-main>

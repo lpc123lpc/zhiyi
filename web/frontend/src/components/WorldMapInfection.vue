@@ -40,7 +40,7 @@ export default {
           formatter: function (params) {
             var value = parseInt(params.value)
             if (!isNaN(params.value)) {
-              if (value < 0) value = NaN
+              if (value < 0) return
               else {
                 if (params.seriesName === '感染率') {
                   value = parseFloat(params.value) * 100 + '%'
@@ -48,8 +48,8 @@ export default {
                   value = params.value + '万'
                 }
               }
+              return params.seriesName + '：' + value
             }
-            return params.seriesName + '：' + value
           }
         },
         grid: {

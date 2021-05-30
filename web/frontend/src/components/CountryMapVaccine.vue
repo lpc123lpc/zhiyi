@@ -62,13 +62,12 @@ export default {
         tooltip: {
           formatter: function (params) {
             var value = parseFloat(params.value)
-            if (!isNaN(params.value)) {
-              if (value < 0) value = NaN
-              else if (params.seriesName === '覆盖率') {
+            if (!isNaN(params.value) && value >= 0) {
+              if (params.seriesName === '覆盖率') {
                 value = value + '/百人'
               }
+              return params.seriesName + '：' + value
             }
-            return params.seriesName + '：' + value
           }
         },
         grid: {
@@ -97,8 +96,6 @@ export default {
           showLabel: false,
           left: '5%',
           bottom: '1%',
-          calculable: true,
-          realtime: true,
           textStyle: {
             fontSize: 12,
           },
@@ -120,8 +117,6 @@ export default {
           show: false,
           left: '5%',
           bottom: '1%',
-          calculable: true,
-          realtime: true,
           // text: ['覆盖率'],
           textGap: 20,
           textStyle: {
