@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: "searchBar",
+  name: "SearchBar",
   props: [
     'data'
   ],
@@ -53,8 +53,8 @@ export default {
 </script>
 
 <style scoped>
-  .button {
-    padding: 9.4px 20px;
-    font-size: 17px;
-  }
+.button {
+  padding: 9.4px 20px;
+  font-size: 17px;
+}
 </style>

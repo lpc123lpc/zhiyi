@@ -1,0 +1,46 @@
+.regionTitle {
+  margin-top: 50px;
+  margin-left: 60px;
+  font-size: 26px;
+}
+
+.button-list {
+  /*position: absolute;*/
+  margin-top: 50px;
+  margin-left: 600px;
+}
+
+.title {
+  font-size: 22px;
+  color: #409eff;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.item {
+  margin-bottom: 18px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both
+}
+
+.box-card {
+  width: 350px;
+  margin-left: 150px;
+  margin-top: 50px;
+  border-radius: 20px;
+  height: 320px;
+}
+
+.el-card__body {
+  padding: 10px 50px;
+}
