@@ -29,7 +29,7 @@ def getMapInfection(country):
     if country == 'global':
         a = 10000.0
     data = dao.getNowInfMessageInclude(country)
-    nowConfirm, totalConfirm, cured, dead = [], [], [], []
+    nowConfirm, totalConfirm, cured, dead, couverage = [], [], [], [], []
     if data is None:
         return jsonify({})
     for i in data:
@@ -37,6 +37,7 @@ def getMapInfection(country):
         totalConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum') / a})
         cured.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'cured') / a})
         dead.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalDead') / a})
+        couverage.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'infRate')})
     return jsonify({
         "nowConfirm": nowConfirm,
         "totalConfirm": totalConfirm,
