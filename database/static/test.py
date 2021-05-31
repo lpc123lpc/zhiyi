@@ -35,6 +35,4 @@ def getCountryHisTest():
 #clearTable('nowInfMessages')
 #db.drop_all()
 #db.create_all()
-clearTable('nowInfMessages')
-getInitNowInf()
-updateInf()
+getCountryInfoJson()
