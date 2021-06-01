@@ -35,7 +35,13 @@
         <use xlink:href="#icon-question"></use>
       </svg>
       <el-container index="6" class="input-container">
-        <search-bar v-bind:data="[{value: '北京'}, {value: '西安'}, { value: '美国'}]"></search-bar>
+        <search-bar v-bind:data="[{value: 1, label: '国外', children: [
+                                      {value: 2, label: '美国', children: [
+                                          {value: 3, label: '洛杉矶'}]}, { value: 4, label: '法国'}]},
+                                  {value: 5, label: '国内', children: [{value: 6, label: '中国'},
+                                     {value: 7, label: '北京', children: [{value: 8, label: '海淀区'}, {value: 9, label: '朝阳区'}]},
+                                     {value: 10, label: '上海'}]}]"
+                    ></search-bar>
       </el-container>
     </el-menu>
   </div>

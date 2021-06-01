@@ -1,13 +1,20 @@
 <template>
   <div>
-    <el-autocomplete
-      class="inline-input"
-      v-model="state"
-      :fetch-suggestions="querySearch"
-      placeholder="请输入地名"
-      :trigger-on-focus="true"
-      @select="handleSelect"
-    ></el-autocomplete>
+    <!--    <el-autocomplete-->
+    <!--      class="inline-input"-->
+    <!--      v-model="state"-->
+    <!--      :fetch-suggestions="querySearch"-->
+    <!--      placeholder="请输入地名"-->
+    <!--      :trigger-on-focus="true"-->
+    <!--      @select="handleSelect"-->
+    <!--    ></el-autocomplete>-->
+    <el-cascader
+      placeholder="请输入/选择地名"
+      ref="cascader"
+      :options="data"
+      @change="handleSelect"
+      filterable
+      clearable/>
     <el-button
       class="button"
       slot="append"
@@ -26,24 +33,19 @@ export default {
   ],
   data() {
     return {
-      state: '',
       searchRegion: ''
     };
   },
+  watch: {
+    '$route'() { //监听路由是否变化, 解决更新搜索结果后不刷新界面的问题
+      if (this.$route.params.region) {
+        this.$router.go(0)
+      }
+    }
+  },
   methods: {
-    querySearch(queryString, cb) {
-      var results = queryString ? this.data.filter(this.createFilter(queryString)) : this.data;
-      // 调用 callback 返回建议列表的数据
-      cb(results);
-    },
-    createFilter(queryString) {
-      return (restaurant) => {
-        return (restaurant.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
-      };
-    },
-    handleSelect(item) {
-      // console.log(item);
-      this.searchRegion = item.value
+    handleSelect() {
+      this.searchRegion = this.$refs['cascader'].getCheckedNodes(true)[0].label
     },
     goSearch() {
       this.$router.push({path: `/Search/${this.searchRegion}`})
