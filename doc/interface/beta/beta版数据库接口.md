@@ -40,3 +40,15 @@ def getVacInstitutions(city):
     return m
 ```
 
+## 存取优化
+
+* database/static/countryInfo.json
+
+国家列表的信息整合而成的json文件，格式与前端相匹配，每日随定时更新而更新
+
+生成json文件的函数：database/static/dao.py
+
+```python
+def getCountryInfoJson()
+```
+

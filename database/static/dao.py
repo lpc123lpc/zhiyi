@@ -1,5 +1,6 @@
 from database.static.table import *
 from spider.covidSpider import *
+import json
 
 '''
 description:get infection information
@@ -169,6 +170,32 @@ message:建议内容
 def saveAdvice(message, t, point):
     advice = Advice(text=message, time=t, point=point)
     add(advice)
+
+
+def getCountryInfoJson():
+    countries = db.session.query(NowInfMessage).filter(Area.parentArea == 'global').filter(Area.childArea != 'global')\
+                .filter(Area.childArea == NowInfMessage.areaName).all()
+    jsonList = []
+    for country in countries:
+        vacInfo = db.session.query(NowVacMessage).filter(NowVacMessage.areaName == country.areaName).first()
+        jsonDict = {}
+        jsonDict['name'] = country.areaName if country.areaName != -1 else None
+        jsonDict['confirmed'] = country.totalNum if country.totalNum != -1 else None
+        jsonDict['newConfirmed'] = country.addNum if country.addNum!= -1 else None
+        jsonDict['cured'] = country.cured if country.cured != -1 else None
+        jsonDict['deceased'] = country.totalDead if country.totalDead != -1 else None
+        if vacInfo is None:
+            jsonDict['vaccined'] = None
+            jsonDict['newVaccined'] = None
+            jsonDict['vaccine_coverage'] = None
+        else:
+            jsonDict['vaccined'] = vacInfo.totalNum if vacInfo.totalNum != -1 else None
+            jsonDict['newVaccined'] = vacInfo.addNum if vacInfo.addNum != -1 else None
+            jsonDict['vaccine_coverage'] = vacInfo.vacRate if vacInfo.vacRate != -1 else None
+        jsonList.append(jsonDict)
+
+    jsonArr = json.dumps(jsonList, ensure_ascii=False)
+    Spider.saveToJsonFile(jsonArr, 'countryInfo.json')
 
 
 '''
