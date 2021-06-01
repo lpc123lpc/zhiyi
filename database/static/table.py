@@ -94,4 +94,16 @@ class VacInstitution(db.Model):
     __tablename__ = 'vacInstitutions'
 
     city = db.Column(db.String(20), primary_key=True)
-    institution = db.Column(db.String(100), primary_key=True)
+    name = db.Column(db.String(100), primary_key=True)
+    addr = db.Column(db.String(100))
+    tel = db.Column(db.String(20))
+    
+
+
+class RiskArea(db.Model):
+    __tablename__ = 'riskAreas'
+
+    city = db.Column(db.String(20), primary_key=True)
+    childArea = db.Column(db.String(20))
+    level = db.Column(db.Integer)
+    abstract = db.Column(db.String(100), primary_key=True)
