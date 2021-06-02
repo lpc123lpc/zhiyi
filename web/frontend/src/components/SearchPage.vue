@@ -3,9 +3,13 @@
     <el-row class="regionTitle">
       <el-col :span=15 style="font-size: 26px" class="el-icon-location-information"> {{ this.region }}</el-col>
       <el-col :span=9>
-        <el-button type="primary" plain @click="goMap">地图</el-button>
+        <el-button type="primary" plain
+                   @click="showVaccineInstitution"
+                   class="el-icon-view"
+                   id="vaccine-institution-button"> 接种机构
+        </el-button>
+        <el-button type="primary" plain @click="goMap">查看地图</el-button>
         <el-button type="primary" plain @click="goTravelAdvice">查看出行建议</el-button>
-        <el-button type="primary" plain @click="showVaccineInstitution" class="el-icon-view"> 查看接种机构</el-button>
       </el-col>
     </el-row>
     <el-row>
@@ -71,6 +75,11 @@ export default {
   ],
   components: {
     'vaccine-institution': vaccineInstitution
+  },
+  mounted() {
+    if (this.mapRegion.value === 0) {
+      document.getElementById('vaccine-institution-button').style.display = 'none'
+    }
   },
   methods: {
     goMap() {
