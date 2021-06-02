@@ -59,11 +59,6 @@ export default new Router({
       path: '/Search/:region',
       name: 'Search',
       component: resolve => require(['../pages/Search'], resolve)
-    },
-    {
-      path: '/VaccineInstitution/:region',
-      name: 'VaccineInstitution',
-      // component: resolve => require(['../pages/Search'], resolve)
     }
   ]
 })

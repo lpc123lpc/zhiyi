@@ -1,13 +1,5 @@
 <template>
   <div>
-    <!--    <el-autocomplete-->
-    <!--      class="inline-input"-->
-    <!--      v-model="state"-->
-    <!--      :fetch-suggestions="querySearch"-->
-    <!--      placeholder="请输入地名"-->
-    <!--      :trigger-on-focus="true"-->
-    <!--      @select="handleSelect"-->
-    <!--    ></el-autocomplete>-->
     <el-cascader
       placeholder="请输入/选择地名"
       ref="cascader"

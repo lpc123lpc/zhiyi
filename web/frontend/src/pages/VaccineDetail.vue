@@ -9,6 +9,9 @@
           <vaccine-detail-sidebar v-bind:country="countryMsg"></vaccine-detail-sidebar>
         </el-aside>
         <el-main>
+          <div style="margin-left: 950px; position: absolute">
+            <el-button type="primary" plain @click="back()">返回</el-button>
+          </div>
           <div style="align: center; margin-top: 20px">
             <vaccine-detail-country-map v-bind:country="countryMsg"
                                         v-bind:countryMapVaccineData="countryMapVaccineDataMsg"></vaccine-detail-country-map>
@@ -64,6 +67,9 @@ export default {
           that.countryMapVaccineDataMsg = data
         })
       })
+    },
+    back() {
+      this.$router.go(-1)
     }
   },
   created() {
