@@ -1,14 +1,29 @@
 <template>
     <div id = 'WorldTable'>
-      <el-table :data="items" :default-sort ="{prop:'confirmed',order:'descending'}" highlight-current-row height="600">
+      <el-row type="flex">
+        <el-col span="4" offset="10">
+          <span style="font-size: 25px">全球概要数据</span>
+        </el-col>
+      </el-row>
+      <el-table :data="searchItem" :default-sort ="{prop:'confirmed',order:'descending'}" highlight-current-row height="600">
         <el-table-column type="expand">
           <template slot-scope="props">
             <country_data v-bind:country="props.row.name"></country_data>
           </template>
         </el-table-column>
         <el-table-column
-          prop="name"
-          label="国家">
+          prop="name">
+          <template slot="header" slot-scope="scope">
+            <el-input
+              class="inline-input"
+              v-model="input"
+              placeholder="搜索国家"
+              filterable
+              clearable
+              :trigger-on-focus="false"
+              @input="changeItem"
+            ></el-input>
+          </template>
         </el-table-column>
         <el-table-column
           prop="confirmed"
@@ -57,7 +72,10 @@ export default {
     'country_data': CountryData},
   data: function () {
     return {
-      items: []
+      items: [],
+      searchItem: [],
+      input: '',
+      names: []
     }
   },
   mounted () {
@@ -69,6 +87,7 @@ export default {
       fetch('http://81.70.134.96:5000/worldData').then(function (response) {
         response.json().then((data) => {
           that.items = data
+          that.searchItem = data
         })
       })
     },
@@ -80,10 +99,27 @@ export default {
       }).replace(/\.$/, '')
       if (out === 'null') {
         return ''
-      }
-      else {
+      } else {
         return out
       }
+    },
+    querySearch (queryString, cb) {
+      cb(this.names)
+    },
+    handleSelect (item) {
+    },
+    changeItem () {
+      var items = this.items
+      var tempItem = []
+      var names = []
+      for (var i = 0; i < 133; i++) {
+        if (items[i].name.indexOf(this.input) >= 0) {
+          tempItem.push(items[i])
+          names.push(items[i].name)
+        }
+      }
+      this.searchItem = tempItem
+      this.names = names
     }
   }
 }
