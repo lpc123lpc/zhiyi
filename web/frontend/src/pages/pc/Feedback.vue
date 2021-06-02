@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import vueHeader from '../components/PageHeader.vue'
-import feedBackInput from '../components/FeedBackInput.vue'
-import vaccineSidebar from '../components/VaccineSidebar.vue'
-import infectSidebar from '../components/InfectSidebar.vue'
+import vueHeader from '../../components/pc/PageHeader.vue'
+import feedBackInput from '../../components/pc/FeedBackInput.vue'
+import vaccineSidebar from '../../components/pc/VaccineSidebar.vue'
+import infectSidebar from '../../components/pc/InfectSidebar.vue'
 export default {
   name: 'Feedback',
   components: { // 定义组件
@@ -34,7 +34,7 @@ export default {
     set_left () {
       const elMain = document.getElementById('my-el-main')
       // console.log(elMain.offsetWidth)
-      const feedBackInput = document.getElementById('feed-back-div');
+      const feedBackInput = document.getElementById('feed-back-div')
       feedBackInput.style.setProperty('margin-left', elMain.offsetWidth / 2 - 350 + 'px')
     }
   },

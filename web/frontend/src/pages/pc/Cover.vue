@@ -3,7 +3,7 @@
   <el-header></el-header>
   <el-main>
     <div class="block" style="text-align: center">
-      <el-image src='../../static/image/Cover.png'></el-image>
+      <el-image src='../../../static/image/Cover.png'></el-image>
     </div>
     <div style="text-align: center">
       <el-button type="primary" @click="goHome()" plain style="height: 80px;width: 300px;font-size: 30px">开始</el-button>

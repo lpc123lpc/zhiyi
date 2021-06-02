@@ -5,7 +5,7 @@
 <script>
 import echarts from 'echarts'
 import 'echarts/theme/sakura'
-import {mixin} from '../mixins'
+import {mixin} from '../../mixins'
 
 export default {
   name: 'CountryMapInfection',
@@ -41,7 +41,7 @@ export default {
         return
       }
       // console.log(this.countryMapInfectionData)
-      var json = require('../../static/json/map/world/geojson/' + this.countryFileName + '.json')
+      var json = require('../../../static/json/map/world/geojson/' + this.countryFileName + '.json')
       if (json === null) {
         console.log('Load json error!')
         return

@@ -30,12 +30,12 @@
 </template>
 
 <script>
-import vueHeader from '../components/PageHeader.vue'
-import infectDetailProvinceSidebar from '../components/InfectDetailProvinceSidebar.vue'
-import infectDetailProvinceMap from '../components/ProvinceMapInfection.vue'
-import lineChartInfectProvince from '../components/ProvinceInfection.vue'
-import scrollToBottom from "../components/scrollToBottom";
-import {mixin} from '../mixins'
+import vueHeader from '../../components/pc/PageHeader.vue'
+import infectDetailProvinceSidebar from '../../components/pc/InfectDetailProvinceSidebar.vue'
+import infectDetailProvinceMap from '../../components/pc/ProvinceMapInfection.vue'
+import lineChartInfectProvince from '../../components/pc/ProvinceInfection.vue'
+import scrollToBottom from '../../components/pc/scrollToBottom'
+import {mixin} from '../../mixins'
 
 export default {
   name: 'InfectProvinceDetail',
@@ -46,7 +46,7 @@ export default {
     'line-chart-infect-province': lineChartInfectProvince,
     'scroll-to-bottom': scrollToBottom
   },
-  data() { // 选项 / 数据
+  data () { // 选项 / 数据
     return {
       provinceMsg: '',
       provinceMapInfectionDataMsg: ''
@@ -54,11 +54,11 @@ export default {
   },
   mixins: [mixin],
   methods: { // 事件处理器
-    getProvinceMsg() {
+    getProvinceMsg () {
       var that = this
       that.provinceMsg = this.$route.params.province
     },
-    getProvinceInfectionDataMsg() {
+    getProvinceInfectionDataMsg () {
       var that = this
       fetch('http://81.70.134.96:5000/infectDetail/provinceMapInfectionDataMsg/' + this.$route.params.province).then(function (response) {
         response.json().then((data) => {
@@ -67,11 +67,11 @@ export default {
         })
       })
     },
-    back() {
+    back () {
       this.$router.go(-1)
     }
   },
-  created() {
+  created () {
     this.getProvinceMsg()
     this.getProvinceInfectionDataMsg()
   }

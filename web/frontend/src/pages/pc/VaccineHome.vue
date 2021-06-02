@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import vueHeader from '../components/PageHeader.vue'
-import vaccineHomeHeadbar from '../components/VaccineHomeHeadbar.vue'
-import vaccineHomeWorldMap from '../components/WorldMapVaccine.vue'
+import vueHeader from '../../components/pc/PageHeader.vue'
+import vaccineHomeHeadbar from '../../components/pc/VaccineHomeHeadbar.vue'
+import vaccineHomeWorldMap from '../../components/pc/WorldMapVaccine.vue'
 export default {
   name: 'VaccineHome',
   data () { // 选项 / 数据

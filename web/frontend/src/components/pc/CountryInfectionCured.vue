@@ -1,40 +1,40 @@
 <template>
-    <div ref="deceasedChart" style="width: 100%;height: 600px"></div>
+    <div ref="curedChart" style="width: 100%;height: 600px"></div>
 </template>
 
 <script>
 import echarts from 'echarts'
-import {mixin} from "../mixins";
+import {mixin} from '../../mixins'
 
 export default {
-  name: 'CountryInfectionDeceased',
+  name: 'CountryInfectionCured',
   props: {
     times: Array,
     names: Array,
-    deceased: Array
+    cured: Array
   },
   mixins: [mixin],
   watch: {
-    deceased () {
-      this.drawDeceased()
-    },
+    cured () {
+      this.drawCured()
+    }
   },
   mounted () {
-    this.drawDeceased()
+    this.drawCured()
   },
   methods: {
-    drawDeceased () {
-      if (this.deceased.length === 0) {
+    drawCured () {
+      if (this.cured.length === 0) {
         return
       }
       var legendItemSize = 15
       if (this.$route.params.country === '俄罗斯') {
         legendItemSize = 8
       }
-      var chart = echarts.init(this.$refs.deceasedChart)
+      var chart = echarts.init(this.$refs.curedChart)
       chart.setOption({
         title: {
-          text: '死亡人数折线图',
+          text: '治愈人数折线图',
           left: '65%',
           textStyle: {
             fontSize: '22',
@@ -48,8 +48,8 @@ export default {
         legend: {
           orient: 'vertical',
           right: '55%',
-          itemGap: 15,
           data: this.names,
+          itemGap: 15,
           selected: this.getSelected(this.names),
           textStyle: {
             color: '#000',
@@ -78,7 +78,7 @@ export default {
         dataZoom: {
           type: 'inside'
         },
-        series: this.deceased
+        series: this.cured
       }, true)
     }
   }

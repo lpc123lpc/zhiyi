@@ -5,7 +5,7 @@
 <script>
 import echarts from 'echarts'
 import 'echarts/theme/sakura'
-import {mixin} from '../mixins'
+import {mixin} from '../../mixins'
 
 export default {
   name: 'ProvinceMapInfection',
@@ -15,29 +15,29 @@ export default {
   ],
   mixins: [mixin],
   watch: {
-    province() {
+    province () {
       // console.log(this.province)
       this.drawProvinceMapInfection()
     },
-    provinceMapInfectionData() {
+    provinceMapInfectionData () {
       this.drawProvinceMapInfection()
     }
   },
-  mounted() {
+  mounted () {
     this.drawProvinceMapInfection()
   },
   methods: {
-    drawProvinceMapInfection() {
+    drawProvinceMapInfection () {
       var provinceFileName = this.getChinaProvinceFileName(this.province)
       // console.log(provinceFileName)
-      var json = require('../../static/json/map/china-province/geojson/' + provinceFileName + '.json')
+      var json = require('../../../static/json/map/china-province/geojson/' + provinceFileName + '.json')
       if (json === null) {
         console.log('Load json error!')
         return
       }
       // console.log(json)
       echarts.registerMap(this.province, json)
-      var provinceMapInfection = echarts.init(document.getElementById('provinceMapInfection'), 'sakura');
+      var provinceMapInfection = echarts.init(document.getElementById('provinceMapInfection'), 'sakura')
       var provinceMapInfection_Option = {
         title: {
           text: '新冠疫苗感染中国' + this.province + '分布图',
@@ -61,7 +61,7 @@ export default {
           containLabel: true
         },
         legend: {
-          data: ['当前确诊', '累计确诊', "累计治愈", "累计死亡"],
+          data: ['当前确诊', '累计确诊', '累计治愈', '累计死亡'],
           left: '2%',
           orient: 'vertical',
           top: '10%',
@@ -77,7 +77,7 @@ export default {
           left: '5%',
           bottom: '1%',
           textStyle: {
-            fontSize: 12,
+            fontSize: 12
           },
           splitList: [{start: 0, end: 0},
             {start: 1, end: 9},
@@ -100,7 +100,7 @@ export default {
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           nameMap: this.getProvinceNameMap(this.province),
@@ -115,7 +115,7 @@ export default {
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           data: this.provinceMapInfectionData.totalConfirm
@@ -129,7 +129,7 @@ export default {
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           data: this.provinceMapInfectionData.cured
@@ -143,7 +143,7 @@ export default {
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           data: this.provinceMapInfectionData.dead

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="image-menu-item" @click="goHome()">
-      <el-image fit="contain" src='../../static/image/111.png' class="image-item"></el-image>
+      <el-image fit="contain" src='../../../static/image/111.png' class="image-item"></el-image>
     </div>
     <el-menu
       class="el-menu-demo"
@@ -52,8 +52,8 @@ export default {
       input: '',
       path: '',
       dataSource: ['全部数据来源：腾讯新闻、Our World in Data、约翰',
-                   '              霍普金斯大学网站',
-                   '每日凌晨3:00进行数据更新，届时带来不便，敬请谅解']
+        '              霍普金斯大学网站',
+        '每日凌晨3:00进行数据更新，届时带来不便，敬请谅解']
     }
   },
   methods: {

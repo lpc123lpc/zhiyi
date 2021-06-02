@@ -5,7 +5,7 @@
 <script>
 import echarts from 'echarts'
 import 'echarts/theme/sakura'
-import {mixin} from '../mixins'
+import {mixin} from '../../mixins'
 
 export default {
   name: 'WorldMapVaccine',
@@ -26,7 +26,7 @@ export default {
   methods: {
     drawWorldMapVaccine() {
       // console.log(this.worldMapVaccineData)
-      var json = require('../../static/json/map/world/geojson/world.json')
+      var json = require('../../../static/json/map/world/geojson/world.json')
       echarts.registerMap('world', json)
       var worldMapVaccine = echarts.init(document.getElementById('worldMapVaccine'), 'sakura');
       var worldMapVaccine_Option = {
@@ -165,7 +165,7 @@ export default {
       })
     },
     getNameMap() {
-      var json = require('../../static/json/map/world/world-mapping.json')
+      var json = require('../../../static/json/map/world/world-mapping.json')
       var nameMap = {}
       for (let i in json) {
         // console.log(i)

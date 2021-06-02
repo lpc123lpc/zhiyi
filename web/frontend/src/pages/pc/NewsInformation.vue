@@ -16,11 +16,11 @@
 </template>
 
 <script>
-import vueHeader from '../components/PageHeader.vue'
-import vaccineSidebar from '../components/VaccineSidebar.vue'
-import infectSidebar from '../components/InfectSidebar.vue'
+import vueHeader from '../../components/pc/PageHeader.vue'
+import vaccineSidebar from '../../components/pc/VaccineSidebar.vue'
+import infectSidebar from '../../components/pc/InfectSidebar.vue'
 export default {
-  name: 'TravelAdvice',
+  name: 'NewsInformation',
   components: { // 定义组件
     'wbc-nav': vueHeader,
     'vaccine-sidebar': vaccineSidebar,
