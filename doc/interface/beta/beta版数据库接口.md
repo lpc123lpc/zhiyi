@@ -52,3 +52,17 @@ def getVacInstitutions(city):
 def getCountryInfoJson()
 ```
 
+## 搜索
+
+* database/static/searchData.json
+
+生成json文件的函数：database/static/dao.py
+
+```python
+'''
+返回一个符合前端接口Data格式的List
+'''
+def getSearchData():
+	return searchData
+```
+
