@@ -33,11 +33,11 @@
 </template>
 
 <script>
-import vueHeader from '../components/PageHeader.vue'
-import vaccineSidebar from '../components/VaccineSidebar.vue'
-import infectSidebar from '../components/InfectSidebar.vue'
-import worldTable from '../components/WorldTable.vue'
-import lineChart from '../components/CountryVaccine'
+import vueHeader from '../../components/pc/PageHeader.vue'
+import vaccineSidebar from '../../components/pc/VaccineSidebar.vue'
+import infectSidebar from '../../components/pc/InfectSidebar.vue'
+import worldTable from '../../components/pc/WorldTable.vue'
+import lineChart from '../../components/pc/CountryVaccine'
 // import footer from '../components/footer.vue'
 // import temSharelist from '../components/temSharelist.vue'
 // import temRightlist from '../components/temRightlist.vue'

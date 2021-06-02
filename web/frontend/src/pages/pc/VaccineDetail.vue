@@ -30,12 +30,12 @@
 </template>
 
 <script>
-import vueHeader from '../components/PageHeader.vue'
-import vaccineDetailSidebar from '../components/VaccineDetailSidebar.vue'
-import vaccineDetailCountryMap from '../components/CountryMapVaccine.vue'
-import lineChartVaccine from '../components/CountryVaccine.vue'
-import scrollToBottom from "../components/ScrollToBottom";
-import {mixin} from '../mixins';
+import vueHeader from '../../components/pc/PageHeader.vue'
+import vaccineDetailSidebar from '../../components/pc/VaccineDetailSidebar.vue'
+import vaccineDetailCountryMap from '../../components/pc/CountryMapVaccine.vue'
+import lineChartVaccine from '../../components/pc/CountryVaccine.vue'
+import scrollToBottom from '../../components/pc/scrollToBottom'
+import {mixin} from '../../mixins'
 
 export default {
   name: 'VaccineDetail',
@@ -46,7 +46,7 @@ export default {
     'line-chart-vaccine': lineChartVaccine,
     'scroll-to-bottom': scrollToBottom
   },
-  data() { // 选项 / 数据
+  data () { // 选项 / 数据
     return {
       countryMsg: '',
       countryMapVaccineDataMsg: ''
@@ -54,11 +54,11 @@ export default {
   },
   mixins: [mixin],
   methods: { // 事件处理器
-    getCountryMsg() {
+    getCountryMsg () {
       var that = this
       that.countryMsg = this.$route.params.country
     },
-    getCountryMapVaccineDataMsg() {
+    getCountryMapVaccineDataMsg () {
       var that = this
       fetch('http://81.70.134.96:5000/vaccineDetail/countryMapVaccineDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
@@ -68,11 +68,11 @@ export default {
         })
       })
     },
-    back() {
+    back () {
       this.$router.go(-1)
     }
   },
-  created() {
+  created () {
     this.getCountryMsg()
     this.getCountryMapVaccineDataMsg()
   }

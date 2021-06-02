@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import vueHeader from '../components/PageHeader.vue'
-import infectHomeHeadbar from '../components/InfectHomeHeadbar.vue'
-import infectHomeWorldMap from '../components/WorldMapInfection.vue'
+import vueHeader from '../../components/pc/PageHeader.vue'
+import infectHomeHeadbar from '../../components/pc/InfectHomeHeadbar.vue'
+import infectHomeWorldMap from '../../components/pc/WorldMapInfection.vue'
 export default {
   name: 'InfectHome',
   components: { // 定义组件

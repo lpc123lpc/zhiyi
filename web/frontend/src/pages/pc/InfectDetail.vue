@@ -30,12 +30,12 @@
 </template>
 
 <script>
-import vueHeader from '../components/PageHeader.vue'
-import infectDetailSidebar from '../components/InfectDetailSidebar.vue'
-import infectDetailCountryMap from '../components/CountryMapInfection.vue'
-import lineChartInfect from '../components/CountryInfection.vue'
-import scrollToBottom from "../components/ScrollToBottom";
-import {mixin} from '../mixins'
+import vueHeader from '../../components/pc/PageHeader.vue'
+import infectDetailSidebar from '../../components/pc/InfectDetailSidebar.vue'
+import infectDetailCountryMap from '../../components/pc/CountryMapInfection.vue'
+import lineChartInfect from '../../components/pc/CountryInfection.vue'
+import scrollToBottom from '../../components/pc/scrollToBottom'
+import {mixin} from '../../mixins'
 
 export default {
   name: 'InfectDetail',
@@ -47,18 +47,18 @@ export default {
     'scroll-to-bottom': scrollToBottom
   },
   mixins: [mixin],
-  data() { // 选项 / 数据
+  data () { // 选项 / 数据
     return {
       countryMsg: '',
-      countryMapInfectionDataMsg: '',
+      countryMapInfectionDataMsg: ''
     }
   },
   methods: { // 事件处理器
-    getCountryMsg() {
+    getCountryMsg () {
       var that = this
       that.countryMsg = this.$route.params.country
     },
-    getCountryInfectionDataMsg() {
+    getCountryInfectionDataMsg () {
       var that = this
       fetch('http://81.70.134.96:5000/infectDetail/countryMapInfectionDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
@@ -67,11 +67,11 @@ export default {
         })
       })
     },
-    back() {
+    back () {
       this.$router.go(-1)
     }
   },
-  created() {
+  created () {
     this.getCountryMsg()
     this.getCountryInfectionDataMsg()
   }
