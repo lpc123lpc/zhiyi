@@ -1,0 +1,24 @@
+.infinite-list-wrapper {
+  height: 350px;
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+.list-item {
+  width: 1000px;
+  margin-left: -20px;
+  margin-top: 10px;
+  border-radius: 20px;
+  height: 100px;
+}
+
+.list-item-title {
+  font-family: "Microsoft YaHei", serif;
+  font-size: 20px;
+}
+
+.list-item-info {
+  margin-top: 10px;
+  font-family: "Microsoft Yi Baiti", serif;
+  font-size: 18px;
+}

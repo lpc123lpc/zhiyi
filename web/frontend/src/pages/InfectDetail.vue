@@ -9,6 +9,9 @@
           <infect-detail-sidebar v-bind:country="countryMsg"></infect-detail-sidebar>
         </el-aside>
         <el-main>
+          <div style="margin-left: 950px; position: absolute">
+            <el-button type="primary" plain @click="back()">返回</el-button>
+          </div>
           <div style="align: center; margin-top: 20px">
             <infect-detail-country-map v-bind:country="countryMsg"
                                        v-bind:countryMapInfectionData="countryMapInfectionDataMsg"></infect-detail-country-map>
@@ -63,6 +66,9 @@ export default {
           that.countryMapInfectionDataMsg = data
         })
       })
+    },
+    back() {
+      this.$router.go(-1)
     }
   },
   created() {

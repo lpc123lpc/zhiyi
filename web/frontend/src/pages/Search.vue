@@ -13,6 +13,9 @@
                      v-bind:data="{infect: { nowConfirm: 10, totalConfirm: 10, cured: 10, dead: 10, coverage:	0.1},
                                                   vaccine: { vaccined: -1, coverage: 10 }}"
                      v-bind:map-region="{ region: '北京', value: 1 }"
+                     v-bind:vaccine-data="[{name: 'name1', address: 'address1', tel: '11111111111'},
+                                           {name: 'name2', address: 'address2', tel: '11111111111'},
+                                           {name: 'name3', address: 'address3', tel: '11111111111'}]"
         ></search-page>
       </el-main>
     </el-container>
