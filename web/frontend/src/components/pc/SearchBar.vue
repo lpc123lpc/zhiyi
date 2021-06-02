@@ -19,27 +19,27 @@
 
 <script>
 export default {
-  name: "SearchBar",
+  name: 'SearchBar',
   props: [
     'data'
   ],
-  data() {
+  data () {
     return {
       searchRegion: ''
-    };
+    }
   },
   watch: {
-    '$route'() { //监听路由是否变化, 解决更新搜索结果后不刷新界面的问题
+    '$route' () { // 监听路由是否变化, 解决更新搜索结果后不刷新界面的问题
       if (this.$route.params.region) {
         this.$router.go(0)
       }
     }
   },
   methods: {
-    handleSelect() {
+    handleSelect () {
       this.searchRegion = this.$refs['cascader'].getCheckedNodes(true)[0].label
     },
-    goSearch() {
+    goSearch () {
       this.$router.push({path: `/Search/${this.searchRegion}`})
     }
   }

@@ -35,7 +35,7 @@ export default {
   props: [
     'data'
   ],
-  data() {
+  data () {
     return {
       count: Math.min(this.data.length, 10),
       loading: false
@@ -45,15 +45,15 @@ export default {
   //   console.log(this.data.slice(0, this.count))
   // },
   computed: {
-    noMore() {
+    noMore () {
       return this.count >= this.data.length
     },
-    disabled() {
+    disabled () {
       return this.loading || this.noMore
     }
   },
   methods: {
-    load() {
+    load () {
       this.loading = true
       setTimeout(() => {
         if (this.count + 10 > this.data.length) {
@@ -69,5 +69,5 @@ export default {
 </script>
 
 <style scoped>
-@import "../assets/css/vaccineInstitution.css";
+@import "../../assets/css/vaccineInstitution.css";
 </style>

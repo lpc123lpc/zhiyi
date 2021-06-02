@@ -63,10 +63,10 @@
 </template>
 
 <script>
-import vaccineInstitution from "./VaccineInstitution";
+import vaccineInstitution from './VaccineInstitution'
 
 export default {
-  name: "SearchPage",
+  name: 'SearchPage',
   props: [
     'region',
     'data',
@@ -76,23 +76,23 @@ export default {
   components: {
     'vaccine-institution': vaccineInstitution
   },
-  mounted() {
+  mounted () {
     if (this.mapRegion.value === 0) {
       document.getElementById('vaccine-institution-button').style.display = 'none'
     }
   },
   methods: {
-    goMap() {
+    goMap () {
       if (this.mapRegion.value === 0) { // 国家
         this.$router.push({path: `/InfectDetail/${this.mapRegion.region}`})
-      } else {  // 省（中国）
+      } else { // 省（中国）
         this.$router.push({path: `/InfectProvinceDetail/${this.mapRegion.region}`})
       }
     },
-    goTravelAdvice() {
+    goTravelAdvice () {
       this.$router.push({path: `/TravelAdvice/${this.region}`})
     },
-    showVaccineInstitution() {
+    showVaccineInstitution () {
       document.getElementById('vaccineInstitution').style.display = 'block'
     }
   }
@@ -100,5 +100,5 @@ export default {
 </script>
 
 <style scoped>
-@import "../assets/css/searchPage.css";
+@import "../../assets/css/searchPage.css";
 </style>
