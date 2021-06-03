@@ -383,7 +383,9 @@ if __name__ == '__main__':
 
     print("i am running")
 
-    schedule.every().day.at("03:00:00").do(job_func=Spider.timelyJob)
-    while True:
-        schedule.run_pending()
+    #schedule.every().day.at("03:00:00").do(job_func=Spider.timelyJob)
+    #while True:
+    #    schedule.run_pending()
+    Spider.crawlAndStoreHistory()
+    Spider.timelyJob()
 
