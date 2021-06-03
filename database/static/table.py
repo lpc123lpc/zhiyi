@@ -97,13 +97,20 @@ class VacInstitution(db.Model):
     name = db.Column(db.String(100), primary_key=True)
     addr = db.Column(db.String(100))
     tel = db.Column(db.String(20))
+    abstract = db.Column(db.String(100), primary_key=True)
     
-
 
 class RiskArea(db.Model):
     __tablename__ = 'riskAreas'
 
+    province = db.Column(db.String(20), primary_key=True)
     city = db.Column(db.String(20), primary_key=True)
     childArea = db.Column(db.String(20))
     level = db.Column(db.Integer)
     abstract = db.Column(db.String(100), primary_key=True)
+
+
+# 插入数据
+def add(x):
+    db.session.merge(x)
+    db.session.commit()

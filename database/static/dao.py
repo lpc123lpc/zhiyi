@@ -1,6 +1,7 @@
 from database.static.table import *
 from spider.covidSpider import *
 import json
+import pandas as pd
 
 '''
 description:get infection information
@@ -168,6 +169,7 @@ message:建议内容
 
 
 def saveAdvice(message, t, point):
+    message = message.replace(';', ' ')
     advice = Advice(text=message, time=t, point=point)
     add(advice)
 
@@ -448,12 +450,6 @@ def clearTable(name):
     db.get_engine().execute(f"truncate table {name}")
 
 
-# 插入数据
-def add(x):
-    db.session.merge(x)
-    db.session.commit()
-
-
 # 判断去除一些奇怪的地区名
 def errorName(name):
     if name == "地区待确认" or name[:2] == "境外" or name[:2] == "外地":
@@ -546,3 +542,4 @@ def updateNowInf(x):
         NowInfMessage.query.filter_by(areaName=x.areaName)\
             .update({'time': x.time, 'currentNum': x.currentNum, 'totalNum': x.totalNum, 'addNum': x.addNum, 'cured': x.cured, 'totalDead': x.totalDead, 'addDead': x.addDead, 'infRate': x.infRate})
         db.session.commit()
+

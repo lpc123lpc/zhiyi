@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import SearchBar from "./SearchBar";
+import SearchBar from './SearchBar';
 export default {
   name: 'PageHeader',
   components: {
