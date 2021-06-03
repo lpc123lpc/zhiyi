@@ -543,6 +543,3 @@ def updateNowInf(x):
             .update({'time': x.time, 'currentNum': x.currentNum, 'totalNum': x.totalNum, 'addNum': x.addNum, 'cured': x.cured, 'totalDead': x.totalDead, 'addDead': x.addDead, 'infRate': x.infRate})
         db.session.commit()
 
-
-
-
