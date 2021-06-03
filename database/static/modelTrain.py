@@ -60,4 +60,5 @@ def getAreaMapping():
     for a in areas:
         dirc[num] = a.childArea
         num += 1
+
     return dirc

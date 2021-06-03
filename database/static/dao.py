@@ -199,57 +199,6 @@ def getCountryInfoJson():
     Spider.saveToJsonFile(jsonList, 'countryInfo.json')
 
 
-def getSearchData():
-    jsonChina = {}
-    jsonForeign = {}
-    value = 1
-    jsonForeign['value'] = value
-    jsonForeign['label'] = '国外'
-    value += 1
-    foreignChildren = []
-    foreignCountries = db.session.query(Area).filter(Area.parentArea == 'global').filter(Area.childArea != 'global').filter(Area.childArea != '中国')\
-        .filter(Area.population != 0).order_by(Area.childArea.asc()).all()
-    for country in foreignCountries:
-        pName = country.childArea
-        foreignCountry = {'value': value, 'label': pName}
-        value += 1
-        countryAreas = db.session.query(Area).filter(Area.parentArea == pName).filter(Area.population != 0).order_by(Area.childArea.asc()).all()
-        if len(countryAreas) != 0:
-            foreignCountryChildren = []
-            for area in countryAreas:
-                cName = area.childArea
-                foreignCountryChild = {'value': value, 'label': cName}
-                value += 1
-                foreignCountryChildren.append(foreignCountryChild)
-            foreignCountry['children'] = foreignCountryChildren
-        foreignChildren.append(foreignCountry)
-    jsonForeign['children'] = foreignChildren
-
-    jsonChina['value'] = value
-    jsonChina['label'] = '国内'
-    value += 1
-    chinaChildren = []
-    china = {'value': value, 'label': '中国'}
-    chinaChildren.append(china)
-    provinces = db.session.query(Area).filter(Area.parentArea == '中国').order_by(Area.childArea.asc()).all()
-    for p in provinces:
-        pName = p.childArea
-        province = {'value': value, 'label': pName}
-        value += 1
-        pChildren = []
-        cities = db.session.query(Area).filter(Area.parentArea == pName).order_by(Area.childArea.asc()).all()
-        for c in cities:
-            city = {'value': value, 'label': c.childArea}
-            value += 1
-            pChildren.append(city)
-        province['children'] = pChildren
-        chinaChildren.append(province)
-    jsonChina['children'] = chinaChildren
-
-    searchData = [jsonForeign, jsonChina]
-    Spider.saveToJsonFile(searchData, 'searchData.json')
-    return searchData
-
 
 '''
 每日更新中国疫情信息
