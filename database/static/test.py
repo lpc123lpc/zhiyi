@@ -38,4 +38,5 @@ def getCountryHisTest():
 #clearTable('nowInfMessages')
 #db.drop_all()
 #db.create_all()
-getSearchData()
+#getNewArea()
+getTrainCsv()

@@ -2,6 +2,7 @@ from database.static.table import *
 from spider.covidSpider import *
 import json
 import pandas as pd
+import datetime
 
 def getChinaCsv():
     china = db.session.query(ChinaInfMessage).filter(ChinaInfMessage.areaName == '中国')\
@@ -18,8 +19,8 @@ def getChinaCsv():
     test.to_csv('china.csv', encoding='gbk')
 
 
-def getForeignCsv(name):
-    area = db.session.query(InfMessage).filter(InfMessage.areaName == name)\
+def getForeignCsv(n):
+    area = db.session.query(InfMessage).filter(InfMessage.areaName == n)\
         .filter(InfMessage.totalNum != 0).order_by(InfMessage.time.asc()).all()
     list = []
     num = 1
@@ -30,11 +31,11 @@ def getForeignCsv(name):
     name = ['序号', '时间', '累计确诊']
     test = pd.DataFrame(columns=name, data=list)
     print(test)
-    test.to_csv('India.csv', encoding='gbk')
+    test.to_csv(n+'.csv', encoding='gbk')
 
 
-def getProvinceCsv(name):
-    area = db.session.query(ChinaInfMessage).filter(ChinaInfMessage.areaName == name)\
+def getProvinceCsv(n):
+    area = db.session.query(ChinaInfMessage).filter(ChinaInfMessage.areaName == n)\
         .filter(ChinaInfMessage.totalNum != 0).order_by(ChinaInfMessage.time.asc()).all()
     list = []
     num = 1
@@ -45,7 +46,41 @@ def getProvinceCsv(name):
     name = ['序号', '时间', '累计确诊']
     test = pd.DataFrame(columns=name, data=list)
     print(test)
-    test.to_csv('province.csv', encoding='gbk')
+    test.to_csv(n+'.csv', encoding='gbk')
+
+
+def getTrainCsv():
+    dirc = getAreaMapping()
+    i = 1
+    q = 0
+    mapList = []
+    mapListName = ['序号', '地区名', '开始时间']
+    while i in dirc:
+        areaName = dirc[i]
+        area = db.session.query(InfMessage).filter(InfMessage.areaName == areaName)\
+        .filter(InfMessage.totalNum != 0).order_by(InfMessage.time.asc()).all()
+        if len(area) == 0:
+            area = db.session.query(ChinaInfMessage).filter(ChinaInfMessage.areaName == areaName)\
+                .filter(ChinaInfMessage.totalNum != 0).order_by(ChinaInfMessage.time.asc()).all()
+        try:
+            start = area[0].time
+            mapList.append([i-q, areaName, start])
+            start = datetime.datetime(int(start[0:4]), int(start[5:7]), int(start[8:10]))
+            cList = []
+            for a in area:
+                atime = datetime.datetime(int(a.time[0:4]), int(a.time[5:7]), int(a.time[8:10]))
+                childList = [(atime - start).days + 1, a.time, a.totalNum]
+                cList.append(childList)
+            cListName = ['no', 'time', 'num']
+            cCsv = pd.DataFrame(columns=cListName, data=cList)
+            cCsv.to_csv('./trainCsv/' + str(i-q) + '.csv', encoding='gbk')
+        except Exception as e:
+            print(areaName)
+            q += 1
+        i += 1
+    mapCsv = pd.DataFrame(columns=mapListName, data=mapList)
+    mapCsv.to_csv('./trainCsv/area.csv', encoding='gbk')
+
 
 '''
 返回有数据地区的字典映射

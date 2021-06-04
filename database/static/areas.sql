@@ -237,7 +237,6 @@ INSERT INTO `areas` VALUES ('中国', '青海', 5923957);
 INSERT INTO `areas` VALUES ('中国', '香港', 7428887);
 INSERT INTO `areas` VALUES ('中国', '黑龙江', 31850088);
 INSERT INTO `areas` VALUES ('丹麦', 'Faroe Islands', 52967);
-INSERT INTO `areas` VALUES ('丹麦', 'Greenland', 56421);
 INSERT INTO `areas` VALUES ('乌克兰', 'Cherkasy Oblast', 1192137);
 INSERT INTO `areas` VALUES ('乌克兰', 'Chernihiv Oblast', 991294);
 INSERT INTO `areas` VALUES ('乌克兰', 'Chernivtsi Oblast', 901632);
