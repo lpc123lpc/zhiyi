@@ -1,8 +1,10 @@
+from database.static.getInitData import getChinaHisInf
 from database.static.modelTrain import getChinaCsv
 from spider.covidSpider import *
-from database.static.table import *
+from database.static.getInitData import *
 from database.static.dao import *
 from database.static.modelTrain import *
+from database.static.search import *
 
 def getInf():
    data = Spider.getData(1)
@@ -36,5 +38,5 @@ def getCountryHisTest():
 #clearTable('nowInfMessages')
 #db.drop_all()
 #db.create_all()
-x = getAreaMapping()
-print(x)
+#getNewArea()
+getTrainCsv()

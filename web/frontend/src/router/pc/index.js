@@ -24,8 +24,7 @@ let router = new Router({
       path: '/VaccineDetail/:country',
       name: 'VaccineDetail',
       component: resolve => require(['../../pages/pc/VaccineDetail'], resolve)
-    }
-    ,
+    },
     {
       path: '/InfectHome',
       name: 'InfectHome',

@@ -1,10 +1,5 @@
 from flask import jsonify
 from database.static import dao
-import datetime
-from testcode.lq import testData
-
-'''vacdata = testData.vacdata
-infdata = testData.infdata'''
 
 
 def getMapVaccine(country):
