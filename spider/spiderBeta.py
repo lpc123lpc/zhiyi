@@ -3,15 +3,29 @@ import requests
 import html
 import re
 import json
+from bs4 import BeautifulSoup
+import requests
+import html
+import re
+from requests.auth import AuthBase
+from requests.auth import HTTPBasicAuth
+import hashlib
+# import datetime
+import time
+from datetime import timedelta, timezone
+import datetime
+import json
 from database.static.table import *
 from database.static.dao import clearTable
+
+
 def updateCovidNews():
 	headers = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36'
 	}
 	url = "https://www.baidu.com/s?ie=utf-8&medium=1&rtt=1&bsst=1&rsv_dl=news_t_sk&cl=2&wd=%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E+%E5%9B%BD%E5%A4%96&rn=50&tn=news&rsv_bp=1&rsv_sug3=1&oq=&rsv_btype=t&f=8&rsv_sug4=673"
 	response = requests.get(url=url, headers=headers)
-	soup = BeautifulSoup(response.text)
+	soup = BeautifulSoup(response.text, features="lxml")
 	items = soup.find_all("div", class_="result-op c-container xpath-log new-pmd")
 
 	dataInDict = {}
@@ -88,12 +102,13 @@ def updateCovidNews():
 	clearTable("infNews")
 
 	for index, news in dataInDict.items():
-		title = news['tittle']
+		title = news['title']
 		href = news['href']
 		info = news['info']
 		source = news['source']
 		updateTime = news['updateTime']
 		imgUrl = news['imgUrl']
+		print(news)
 		x = InfNews(time=updateTime,
 		            title=title,
 		            urls=href,
@@ -107,13 +122,15 @@ def updateCovidNews():
 	with open(path, mode="w", encoding="utf-8") as f:
 		json.dump(dataInDict, f)
 		print("写入文件成功！")"""
+
+
 def updateVaccineNews():
 	headers = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36'
 	}
 	url = "https://www.baidu.com/s?ie=utf-8&medium=1&rtt=1&bsst=1&rsv_dl=news_t_sk&cl=2&wd=%E6%96%B0%E5%86%A0%E7%96%AB%E8%8B%97+%E5%85%A8%E7%90%83&rn=50&tn=news&rsv_bp=1&rsv_sug3=15&rsv_sug1=9&rsv_sug7=100&oq=&rsv_sug2=0&rsv_btype=t&f=8&inputT=25794&rsv_sug4=25941"
 	response = requests.get(url=url, headers=headers)
-	soup = BeautifulSoup(response.text)
+	soup = BeautifulSoup(response.text, features="lxml")
 	items = soup.find_all("div", class_="result-op c-container xpath-log new-pmd")
 
 	dataInDict = {}
@@ -187,15 +204,16 @@ def updateVaccineNews():
 		if cnt >= 20:
 			break
 
-	clearTable("infNews")
+	clearTable("vacNews")
 
 	for index, news in dataInDict.items():
-		title = news['tittle']
+		title = news['title']
 		href = news['href']
 		info = news['info']
 		source = news['source']
 		updateTime = news['updateTime']
 		imgUrl = news['imgUrl']
+		print(news)
 		x = VacNews(time=updateTime,
 		            title=title,
 		            urls=href,
@@ -209,8 +227,77 @@ def updateVaccineNews():
 	with open(path, mode="w", encoding="utf-8") as f:
 		json.dump(dataInDict, f)
 		print("写入文件成功！")"""
-#def updateRiskList():
 
 
+def updateRiskList():
+	header = {}
+	body = {}
+	timestamp = int(datetime.datetime.now().timestamp())
+	url = "http://103.66.32.242:8005/zwfwMovePortal/interface/interfaceJson"
+	STATE_COUNCIL_SIGNATURE_KEY = "fTN2pfuisxTavbTuYVSsNJHetwq5bJvCQkjjtiLM2dCratiA"
+	STATE_COUNCIL_X_WIF_NONCE = "QkjjtiLM2dCratiA"
+	STATE_COUNCIL_X_WIF_PAASID = "smt-application"
+
+	STATE_COUNCIL_APP_ID = "NcApplication"
+	STATE_COUNCIL_PASSID = "zdww"
+	STATE_COUNCIL_NONCE = "123456789abcdefg"
+	STATE_COUNCIL_TOEKN = "23y0ufFl5YxIyGrI8hWRUZmKkvtSjLQA"
+	STATE_COUNCIL_KEY = "3C502C97ABDA40D0A60FBEE50FAAD1DA"
+	signatureStr = str(timestamp) + STATE_COUNCIL_SIGNATURE_KEY + str(timestamp)
+	signature = hashlib.sha256(signatureStr.encode('utf-8')).hexdigest().upper()
+	header["x-wif-nonce"] = STATE_COUNCIL_X_WIF_NONCE
+	header["x-wif-paasid"] = STATE_COUNCIL_X_WIF_PAASID
+	header["x-wif-signature"] = signature
+	header["x-wif-timestamp"] = str(timestamp)
+	header[
+		"user-agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36"
+	body["appId"] = STATE_COUNCIL_APP_ID
+	body["paasHeader"] = STATE_COUNCIL_PASSID
+	body["timestampHeader"] = timestamp
+	body["nonceHeader"] = STATE_COUNCIL_NONCE
+	signatureStr = str(timestamp) + STATE_COUNCIL_TOEKN + STATE_COUNCIL_NONCE + str(timestamp)
+	signatureHeader = hashlib.sha256(signatureStr.encode('utf-8')).hexdigest().upper()
+	body["signatureHeader"] = signatureHeader
+	body["key"] = STATE_COUNCIL_KEY
+	response = requests.post(url, json=body, headers=header)
+	# print(response.text)
+	data = json.loads(response.text)
+	data = data["data"]
+	highlist = data["highlist"]
+	middlelist = data["middlelist"]
+	for item in highlist:
+		print(item)
+		province = item["province"]
+		city = item["city"]
+		county = item["county"]
+		for community in item["communitys"]:
+			x = RiskArea(province=province,
+			             city=city,
+			             childArea=county,
+			             level=2,
+			             abstract=community)
+			add(x)
+	for item in middlelist:
+		print(item)
+		province = item["province"]
+		city = item["city"]
+		county = item["county"]
+		for community in item["communitys"]:
+			x = RiskArea(province=province,
+			             city=city,
+			             childArea=county,
+			             level=1,
+			             abstract=community)
+			add(x)
+
+	"""print(data)
+	with open('riskList.json', 'w') as f:
+		json.dump(data, f)"""
 
 
+if __name__ == '__main__':
+	updateCovidNews()
+	updateVaccineNews()
+	updateRiskList()
+
+# def updateRiskList():
