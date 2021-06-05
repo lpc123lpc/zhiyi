@@ -27,6 +27,7 @@ export default {
       fetch('http://81.70.134.96:5000/infectHome/worldMapInfectionDataMsg').then(function (response) {
         response.json().then((data) => {
           // console.log(data)
+            
           that.worldMapInfectionDataMsg = data
         })
       })
