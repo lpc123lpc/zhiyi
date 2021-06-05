@@ -107,3 +107,9 @@ class RiskArea(db.Model):
     childArea = db.Column(db.String(20))
     level = db.Column(db.Integer)
     abstract = db.Column(db.String(100), primary_key=True)
+
+
+# 插入数据
+def add(x):
+    db.session.merge(x)
+    db.session.commit()
