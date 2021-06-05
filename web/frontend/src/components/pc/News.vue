@@ -39,50 +39,50 @@ export default {
     test () {
       this.items = [{
         'time': '2021-5-2',
-        'title': '贺老太帅啦',
+        'title': '芃村太帅啦',
         'urls': 'https://www.baidu.com/?tn=80035161_1_dg',
         'source': '百度',
-        'abstracts': '贺老，作为308中最帅的男人，荣获北航第一',
+        'abstracts': '芃村，作为308中最帅的男人，荣获北航第一',
         'picUrls': 'C:\\Users\\lpc\\Desktop\\helao.jpg'
       },
       {
         'time': '2021-5-2',
-        'title': '贺老太帅啦',
+        'title': '芃村太帅啦',
         'urls': 'https://www.baidu.com/?tn=80035161_1_dg',
         'source': '百度',
-        'abstracts': '贺老，作为308中最帅的男人，荣获北航第一',
+        'abstracts': '芃村，作为308中最帅的男人，荣获北航第一',
         'picUrls': 'C:\\Users\\lpc\\Desktop\\helao.jpg'
       },
       {
         'time': '2021-5-2',
-        'title': '贺老太帅啦',
+        'title': '芃村太帅啦',
         'urls': 'https://www.baidu.com/?tn=80035161_1_dg',
         'source': '百度',
-        'abstracts': '贺老，作为308中最帅的男人，荣获北航第一',
+        'abstracts': '芃村，作为308中最帅的男人，荣获北航第一',
         'picUrls': 'C:\\Users\\lpc\\Desktop\\helao.jpg'
       },
       {
         'time': '2021-5-2',
-        'title': '贺老太帅啦',
+        'title': '芃村太帅啦',
         'urls': 'https://www.baidu.com/?tn=80035161_1_dg',
         'source': '百度',
-        'abstracts': '贺老，作为308中最帅的男人，荣获北航第一',
+        'abstracts': '芃村，作为308中最帅的男人，荣获北航第一',
         'picUrls': 'C:\\Users\\lpc\\Desktop\\helao.jpg'
       },
       {
         'time': '2021-5-2',
-        'title': '贺老太帅啦',
+        'title': '芃村太帅啦',
         'urls': 'https://www.baidu.com/?tn=80035161_1_dg',
         'source': '百度',
-        'abstracts': '贺老，作为308中最帅的男人，荣获北航第一',
+        'abstracts': '芃村，作为308中最帅的男人，荣获北航第一',
         'picUrls': 'C:\\Users\\lpc\\Desktop\\helao.jpg'
       },
       {
         'time': '2021-5-2',
-        'title': '贺老太帅啦',
+        'title': '芃村太帅啦',
         'urls': 'https://www.baidu.com/?tn=80035161_1_dg',
         'source': '百度',
-        'abstracts': '贺老，作为308中最帅的男人，荣获北航第一',
+        'abstracts': '芃村，作为308中最帅的男人，荣获北航第一',
         'picUrls': 'C:\\Users\\lpc\\Desktop\\helao.jpg'
       }
       ]
