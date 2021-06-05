@@ -12,8 +12,19 @@
         <search-page v-bind:region="this.region"
                      v-bind:data="{infect: { nowConfirm: 10, totalConfirm: 10, cured: 10, dead: 10, coverage: 0.1},
                                                   vaccine: { vaccined: -1, coverage: 10 }}"
-                     v-bind:map-region="{ region: '北京', value: 1 }"
                      v-bind:vaccine-data="[{name: 'name1', address: 'address1', tel: '11111111111'},
+                                           {name: 'name2', address: 'address2', tel: '11111111111'},
+                                           {name: 'name3', address: 'address3', tel: '11111111111'},
+                                           {name: 'name1', address: 'address1', tel: '11111111111'},
+                                           {name: 'name2', address: 'address2', tel: '11111111111'},
+                                           {name: 'name3', address: 'address3', tel: '11111111111'},
+                                           {name: 'name1', address: 'address1', tel: '11111111111'},
+                                           {name: 'name2', address: 'address2', tel: '11111111111'},
+                                           {name: 'name3', address: 'address3', tel: '11111111111'},
+                                           {name: 'name1', address: 'address1', tel: '11111111111'},
+                                           {name: 'name2', address: 'address2', tel: '11111111111'},
+                                           {name: 'name3', address: 'address3', tel: '11111111111'},
+                                           {name: 'name1', address: 'address1', tel: '11111111111'},
                                            {name: 'name2', address: 'address2', tel: '11111111111'},
                                            {name: 'name3', address: 'address3', tel: '11111111111'}]"
         ></search-page>
@@ -36,17 +47,17 @@ export default {
     'infect-sidebar': infectSidebar,
     'search-page': searchPage
   },
-  data () {
+  data() {
     return {
       region: ''
     }
   },
-  mounted () {
+  mounted() {
     this.region = this.$route.params.region
     this.set_left()
   },
   methods: {
-    set_left () {
+    set_left() {
       const elMain = document.getElementById('my-el-main')
       // console.log(elMain.offsetWidth)
       const feedBackInput = document.getElementById('feed-back-div')
