@@ -1,7 +1,7 @@
 <template>
   <van-nav-bar class="mobile-header" id="mobile-header-id">
     <template #left>
-      <van-image fit="contain" src='../../../static/image/111.png' class="image-item" id="image-item-id"></van-image>
+      <van-image fit="contain" src='../../../static/image/111.png' class="image-item" id="image-item-id" @click="goHome()"></van-image>
     </template>
     <template #title>
       <van-search
@@ -13,7 +13,22 @@
       </van-search>
     </template>
     <template #right>
-      <van-icon name="wap-nav" size="20" class="icon-item" id="icon-item-id"/>
+      <van-icon name="wap-nav" size="20" class="icon-item" id="icon-item-id-1" v-show="show_nav===false" @click="showNav"/>
+      <van-icon name="cross" size="20" class="icon-item" id="icon-item-id-2" v-show="show_nav===true" @click="showNav"/>
+      <van-popup v-model="show_nav" position="top" style="top: 51px; height: 308px" :overlay="false" transition="van-fade" class="popup-item" :close-on-popstate="true">
+        <van-cell title="国家列表" is-link to="/" class="cell-item"/>
+        <van-cell title="疫苗接种" is-link to="/VaccineHome" class="cell-item"/>
+        <van-cell title="感染情况" is-link to="/InfectHome" class="cell-item"/>
+        <van-cell title="出行建议" is-link to="/TravelAdvice" class="cell-item"/>
+        <van-cell title="新闻资讯" is-link to="/NewsInformation" class="cell-item"/>
+        <van-cell title="反馈&建议" is-link to="/Feedback" class="cell-item"/>
+        <van-cell title="数据来源" :clickable="true" @click="showDialog" class="cell-item"/>
+      </van-popup>
+      <van-dialog v-model="show_dialog" title="数据来源" confirm-button-text="关闭" confirm-button-color="#8cc4ff" @confirm="handleConfirm" class="dialog-item">
+        <div style="margin-left: 2px; margin-right: 2px; margin-top: 10px; font-size: small; color: #000000">全部数据来源：腾讯新闻、Our World in Data、约翰霍普金斯大学网站</div>
+        <van-divider style="color: #8cc4ff"/>
+        <div style="margin-left: 2px; margin-right: 2px; margin-bottom: 10px; font-size: small; color: #000000">每日凌晨3:00进行数据更新，届时带来不便，敬请谅解</div>
+      </van-dialog>
     </template>
     <!--<mt-field v-model="input" placeholder="请输入内容" slot="right"></mt-field>-->
     <!--<mt-button icon="search" slot="right" class="search-button" id="search-button-id"></mt-button>
@@ -22,7 +37,7 @@
 </template>
 
 <script>
-import { Toast } from 'vant';
+import { Toast } from 'vant'
 export default {
   name: 'PageHeader',
   props: {
@@ -33,6 +48,8 @@ export default {
   },
   data () {
     return {
+      show_nav: false,
+      show_dialog: false,
       input: ''
     }
   },
@@ -40,6 +57,22 @@ export default {
     // this.set_height()
   },
   methods: {
+    showNav () {
+      if (this.show_nav === false) {
+        this.show_nav = true
+      } else {
+        this.show_nav = false
+      }
+    },
+    showDialog () {
+      this.show_dialog = true
+    },
+    handleConfirm () {
+      this.show_dialog = false
+    },
+    goHome () {
+      this.$router.push({path: `/Home`})
+    },
     set_height () {
       // const header = document.getElementById('mobile-header-id')
       // const searchButton = document.getElementById('search-button-id')
@@ -87,7 +120,20 @@ export default {
   width: 200px;
   margin-left: 20px;
 }
-.icon-item {
-
+.popup-item {
+  border-style: solid;
+  border-color: #ffffff #ffffff #e6e6e6 #ffffff;
+  border-bottom-width: 1px;
+}
+.cell-item {
+  text-align: left;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-size: medium;
+  color: #8cc4ff;
+}
+.dialog-item {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-size: medium;
+  color: #000000;
 }
 </style>
