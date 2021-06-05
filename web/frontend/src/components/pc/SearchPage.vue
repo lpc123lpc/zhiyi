@@ -70,29 +70,53 @@ export default {
   props: [
     'region',
     'data',
-    'mapRegion',
     'vaccineData'
   ],
+  data() {
+    return {
+      mapRegion: {}
+    }
+  },
   components: {
     'vaccine-institution': vaccineInstitution
   },
-  mounted () {
+  created() {
+    this.getMapRegion()
+  },
+  watch: {
+    region() {
+      this.mapRegion = this.getMapRegion()
+    }
+  },
+  mounted() {
+    // console.log(this.mapRegion)
     if (this.mapRegion.value === 0) {
       document.getElementById('vaccine-institution-button').style.display = 'none'
+    } else {
+      document.getElementById('vaccine-institution-button').style.display = 'inline'
     }
   },
   methods: {
-    goMap () {
+    getMapRegion() {
+      var regions = this.region.split('|')
+      // region取 0：国家/ 1：省
+      if (regions[0] === '中国' && regions.length > 1) {
+        return {region: regions[1], value: 1}
+      } else {
+        return {region: regions[0], value: 0}
+      }
+    },
+    goMap() {
       if (this.mapRegion.value === 0) { // 国家
         this.$router.push({path: `/InfectDetail/${this.mapRegion.region}`})
       } else { // 省（中国）
         this.$router.push({path: `/InfectProvinceDetail/${this.mapRegion.region}`})
       }
     },
-    goTravelAdvice () {
+    goTravelAdvice() {
       this.$router.push({path: `/TravelAdvice/${this.region}`})
     },
-    showVaccineInstitution () {
+    showVaccineInstitution() {
       document.getElementById('vaccineInstitution').style.display = 'block'
     }
   }

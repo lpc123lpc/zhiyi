@@ -11,10 +11,10 @@
       text-color="#8cc4ff"
       active-text-color="#409eff"
       router
-      :default-active = "path">
+      :default-active="path">
 
-      <el-menu-item index="/Home" class="nav-menu-item" >国家列表</el-menu-item>
-      <el-menu-item index="/VaccineHome" class="nav-menu-item" >疫苗接种</el-menu-item>
+      <el-menu-item index="/Home" class="nav-menu-item">国家列表</el-menu-item>
+      <el-menu-item index="/VaccineHome" class="nav-menu-item">疫苗接种</el-menu-item>
       <!--<el-submenu index="2">
         <template slot="title">我的工作台</template>
         <el-menu-item index="2-1">选项1</el-menu-item>
@@ -35,13 +35,7 @@
         <use xlink:href="#icon-question"></use>
       </svg>
       <el-container index="6" class="input-container">
-        <search-bar v-bind:data="[{value: 1, label: '国外', children: [
-                                      {value: 2, label: '美国', children: [
-                                          {value: 3, label: '洛杉矶'}]}, { value: 4, label: '法国'}]},
-                                  {value: 5, label: '国内', children: [{value: 6, label: '中国'},
-                                     {value: 7, label: '北京', children: [{value: 8, label: '海淀区'}, {value: 9, label: '朝阳区'}]},
-                                     {value: 10, label: '上海'}]}]"
-                    ></search-bar>
+        <search-bar></search-bar>
       </el-container>
     </el-menu>
   </div>
@@ -49,12 +43,13 @@
 
 <script>
 import SearchBar from "./SearchBar";
+
 export default {
   name: 'PageHeader',
   components: {
     'search-bar': SearchBar
   },
-  data () {
+  data() {
     return {
       activeIndex: '1',
       input: '',
@@ -65,13 +60,13 @@ export default {
     }
   },
   methods: {
-    goHome () {
+    goHome() {
       this.$router.push({path: `/Home`})
     },
-    handleSelect (key, keyPath) {
+    handleSelect(key, keyPath) {
       console.log(key, keyPath)
     },
-    onRouteChanged () {
+    onRouteChanged() {
       let that = this
       var posVaccine = that.$route.path.search('/VaccineDetail')
       if (posVaccine === -1) {
@@ -94,7 +89,7 @@ export default {
         that.path = '/VaccineHome'
       }
     },
-    showDataSource () {
+    showDataSource() {
       const data = []
       const h = this.$createElement
       for (let i in this.dataSource) {
@@ -102,13 +97,14 @@ export default {
       }
       this.$alert(h('pre', null, data), '数据来源', {
         // customClass: 'message-alert'
-      }).catch(() => {}) // 注意这里，这里是重点！！！
+      }).catch(() => {
+      }) // 注意这里，这里是重点！！！
     }
   },
   watch: {
     '$route': 'onRouteChanged'
   },
-  created () {
+  created() {
     this.onRouteChanged()
   }
 }
@@ -123,39 +119,50 @@ export default {
   overflow: hidden;
   outline: none
 }
+
 .input-container {
   /*position: absolute;*/
   width: 300px;
   margin-top: 10px;
   float: right;
 }
+
 .el-menu-demo {
   height: 60px;
   margin-left: 170px;
   padding-right: 20px;
 }
+
 .nav-menu-item {
   width: 130px;
   margin-left: 10px;
   margin-right: 10px;
   text-align: center;
-  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   font-size: medium;
 }
+
 .nav-menu-item:hover {
   background-color: #ffffff !important;
   color: #409eff !important;
 }
+
 .image-item {
   height: 70px;
   margin-top: -8px;
 }
+
 .image-menu-item {
   position: absolute;
   width: 150px;
   margin-left: 5px;
   margin-right: 10px;
 }
+
+.image-menu-item img {
+  width: 100%;
+}
+
 /* .message-alert {
   word-break: break-all !important;
   white-space: pre;

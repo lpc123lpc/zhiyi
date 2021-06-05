@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 Vue.use(Router)
 
 let router = new Router({
@@ -46,9 +47,14 @@ let router = new Router({
       component: resolve => require(['../../pages/pc/Feedback'], resolve)
     },
     {
-      path: '/TravelAdvice',
+      path: '/TravelAdvice/:region',
       name: 'TravelAdvice',
       component: resolve => require(['../../pages/pc/TravelAdvice'], resolve)
+    },
+    {
+      path: '/Search/:region',
+      name: 'Search',
+      component: resolve => require(['../../pages/pc/Search'], resolve)
     },
     {
       path: '/NewsInformation',
@@ -69,6 +75,6 @@ router.beforeEach((to, from, next) => {
 export default router
 
 const VueRouterPush = Router.prototype.push
-Router.prototype.push = function push (to) {
+Router.prototype.push = function push(to) {
   return VueRouterPush.call(this, to).catch(err => err)
 }
