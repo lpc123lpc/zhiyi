@@ -34,7 +34,7 @@ import vueHeader from '../../components/pc/PageHeader.vue'
 import vaccineDetailSidebar from '../../components/pc/VaccineDetailSidebar.vue'
 import vaccineDetailCountryMap from '../../components/pc/CountryMapVaccine.vue'
 import lineChartVaccine from '../../components/pc/CountryVaccine.vue'
-import scrollToBottom from '../../components/pc/scrollToBottom'
+import scrollToBottom from '../../components/pc/ScrollToBottom'
 import {mixin} from '../../mixins'
 
 export default {

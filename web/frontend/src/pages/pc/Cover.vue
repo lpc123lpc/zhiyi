@@ -19,12 +19,12 @@
     <!--    <div class="image-menu-item">-->
     <!--      <el-image src='../../../static/image/Cover.png'></el-image>-->
     <!--    </div>-->
-    <el-row style="margin-bottom: 40px">
+    <el-row style="margin-bottom: 60px">
       <el-col :span="2">
         <img src='../../../static/image/top-icon.jpg' style="height: 100px"/>
       </el-col>
       <el-col :span="22" class="title">
-        <span>知疫——疫情与疫苗可视化平台</span>
+        <span>知疫</span>
       </el-col>
     </el-row>
     <el-carousel

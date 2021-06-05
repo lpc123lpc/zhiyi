@@ -1,75 +1,75 @@
 [
   {
     "value": 1,
-    "label": "\u56fd\u5916",
+    "label": "国外",
     "children": [
       {
         "value": 2,
-        "label": "\u963f\u5c14\u5df4\u5c3c\u4e9a"
+        "label": "阿尔巴尼亚"
       },
       {
         "value": 3,
-        "label": "\u963f\u5c14\u53ca\u5229\u4e9a"
+        "label": "阿尔及利亚"
       },
       {
         "value": 4,
-        "label": "\u963f\u5bcc\u6c57"
+        "label": "阿富汗"
       },
       {
         "value": 5,
-        "label": "\u963f\u6839\u5ef7"
+        "label": "阿根廷"
       },
       {
         "value": 6,
-        "label": "\u963f\u8054\u914b"
+        "label": "阿联酋"
       },
       {
         "value": 7,
-        "label": "\u963f\u66fc"
+        "label": "阿曼"
       },
       {
         "value": 8,
-        "label": "\u963f\u585e\u62dc\u7586"
+        "label": "阿塞拜疆"
       },
       {
         "value": 9,
-        "label": "\u57c3\u53ca"
+        "label": "埃及"
       },
       {
         "value": 10,
-        "label": "\u57c3\u585e\u4fc4\u6bd4\u4e9a"
+        "label": "埃塞俄比亚"
       },
       {
         "value": 11,
-        "label": "\u7231\u5c14\u5170"
+        "label": "爱尔兰"
       },
       {
         "value": 12,
-        "label": "\u7231\u6c99\u5c3c\u4e9a"
+        "label": "爱沙尼亚"
       },
       {
         "value": 13,
-        "label": "\u5b89\u9053\u5c14"
+        "label": "安道尔"
       },
       {
         "value": 14,
-        "label": "\u5b89\u54e5\u62c9"
+        "label": "安哥拉"
       },
       {
         "value": 15,
-        "label": "\u5b89\u63d0\u74dc\u548c\u5df4\u5e03\u8fbe"
+        "label": "安提瓜和巴布达"
       },
       {
         "value": 16,
-        "label": "\u5965\u5730\u5229"
+        "label": "奥地利"
       },
       {
         "value": 17,
-        "label": "\u6fb3\u5927\u5229\u4e9a",
+        "label": "澳大利亚",
         "children": [
           {
             "value": 18,
-            "label": "\u6fb3\u5927\u5229\u4e9a"
+            "label": "澳大利亚"
           },
           {
             "value": 19,
@@ -107,23 +107,23 @@
       },
       {
         "value": 27,
-        "label": "\u5df4\u5df4\u591a\u65af"
+        "label": "巴巴多斯"
       },
       {
         "value": 28,
-        "label": "\u5df4\u5e03\u4e9a\u65b0\u51e0\u5185\u4e9a"
+        "label": "巴布亚新几内亚"
       },
       {
         "value": 29,
-        "label": "\u5df4\u54c8\u9a6c"
+        "label": "巴哈马"
       },
       {
         "value": 30,
-        "label": "\u5df4\u57fa\u65af\u5766",
+        "label": "巴基斯坦",
         "children": [
           {
             "value": 31,
-            "label": "\u5df4\u57fa\u65af\u5766"
+            "label": "巴基斯坦"
           },
           {
             "value": 32,
@@ -157,27 +157,27 @@
       },
       {
         "value": 39,
-        "label": "\u5df4\u62c9\u572d"
+        "label": "巴拉圭"
       },
       {
         "value": 40,
-        "label": "\u5df4\u52d2\u65af\u5766"
+        "label": "巴勒斯坦"
       },
       {
         "value": 41,
-        "label": "\u5df4\u6797"
+        "label": "巴林"
       },
       {
         "value": 42,
-        "label": "\u5df4\u62ff\u9a6c"
+        "label": "巴拿马"
       },
       {
         "value": 43,
-        "label": "\u5df4\u897f",
+        "label": "巴西",
         "children": [
           {
             "value": 44,
-            "label": "\u5df4\u897f"
+            "label": "巴西"
           },
           {
             "value": 45,
@@ -291,27 +291,27 @@
       },
       {
         "value": 72,
-        "label": "\u767d\u4fc4\u7f57\u65af"
+        "label": "白俄罗斯"
       },
       {
         "value": 73,
-        "label": "\u4fdd\u52a0\u5229\u4e9a"
+        "label": "保加利亚"
       },
       {
         "value": 74,
-        "label": "\u5317\u9a6c\u5176\u987f"
+        "label": "北马其顿"
       },
       {
         "value": 75,
-        "label": "\u8d1d\u5b81"
+        "label": "贝宁"
       },
       {
         "value": 76,
-        "label": "\u6bd4\u5229\u65f6",
+        "label": "比利时",
         "children": [
           {
             "value": 77,
-            "label": "\u6bd4\u5229\u65f6"
+            "label": "比利时"
           },
           {
             "value": 78,
@@ -361,4619 +361,4571 @@
       },
       {
         "value": 89,
-        "label": "\u51b0\u5c9b"
+        "label": "冰岛"
       },
       {
         "value": 90,
-        "label": "\u6ce2\u9ed1"
+        "label": "波黑"
       },
       {
         "value": 91,
-        "label": "\u6ce2\u5170"
+        "label": "波兰"
       },
       {
         "value": 92,
-        "label": "\u73bb\u5229\u7ef4\u4e9a"
+        "label": "玻利维亚"
       },
       {
         "value": 93,
-        "label": "\u4f2f\u5229\u5179"
+        "label": "伯利兹"
       },
       {
         "value": 94,
-        "label": "\u535a\u8328\u74e6\u7eb3"
+        "label": "博茨瓦纳"
       },
       {
         "value": 95,
-        "label": "\u4e0d\u4e39"
+        "label": "不丹"
       },
       {
         "value": 96,
-        "label": "\u5e03\u57fa\u7eb3\u6cd5\u7d22"
+        "label": "布基纳法索"
       },
       {
         "value": 97,
-        "label": "\u5e03\u9686\u8fea"
+        "label": "布隆迪"
       },
       {
         "value": 98,
-        "label": "\u8d64\u9053\u51e0\u5185\u4e9a"
+        "label": "赤道几内亚"
       },
       {
         "value": 99,
-        "label": "\u4e39\u9ea6",
+        "label": "丹麦",
         "children": [
           {
             "value": 100,
-            "label": "\u4e39\u9ea6"
+            "label": "丹麦"
           },
           {
             "value": 101,
             "label": "Faroe Islands"
-          },
-          {
-            "value": 102,
-            "label": "Greenland"
           }
         ]
       },
       {
-        "value": 103,
-        "label": "\u5fb7\u56fd",
+        "value": 102,
+        "label": "德国",
         "children": [
           {
-            "value": 104,
-            "label": "\u5fb7\u56fd"
+            "value": 103,
+            "label": "德国"
           },
           {
-            "value": 105,
+            "value": 104,
             "label": "Baden-Wurttemberg"
           },
           {
-            "value": 106,
+            "value": 105,
             "label": "Bayern"
           },
           {
-            "value": 107,
+            "value": 106,
             "label": "Berlin"
           },
           {
-            "value": 108,
+            "value": 107,
             "label": "Brandenburg"
           },
           {
-            "value": 109,
+            "value": 108,
             "label": "Bremen"
           },
           {
-            "value": 110,
+            "value": 109,
             "label": "Hamburg"
           },
           {
-            "value": 111,
+            "value": 110,
             "label": "Hessen"
           },
           {
-            "value": 112,
+            "value": 111,
             "label": "Mecklenburg-Vorpommern"
           },
           {
-            "value": 113,
+            "value": 112,
             "label": "Niedersachsen"
           },
           {
-            "value": 114,
+            "value": 113,
             "label": "Nordrhein-Westfalen"
           },
           {
-            "value": 115,
+            "value": 114,
             "label": "Rheinland-Pfalz"
           },
           {
-            "value": 116,
+            "value": 115,
             "label": "Saarland"
           },
           {
-            "value": 117,
+            "value": 116,
             "label": "Sachsen"
           },
           {
-            "value": 118,
+            "value": 117,
             "label": "Sachsen-Anhalt"
           },
           {
-            "value": 119,
+            "value": 118,
             "label": "Schleswig-Holstein"
           },
           {
-            "value": 120,
+            "value": 119,
             "label": "Thuringen"
           }
         ]
       },
       {
+        "value": 120,
+        "label": "东帝汶"
+      },
+      {
         "value": 121,
-        "label": "\u4e1c\u5e1d\u6c76"
+        "label": "多哥"
       },
       {
         "value": 122,
-        "label": "\u591a\u54e5"
+        "label": "多米尼加"
       },
       {
         "value": 123,
-        "label": "\u591a\u7c73\u5c3c\u52a0"
+        "label": "多米尼克"
       },
       {
         "value": 124,
-        "label": "\u591a\u7c73\u5c3c\u514b"
-      },
-      {
-        "value": 125,
-        "label": "\u4fc4\u7f57\u65af",
+        "label": "俄罗斯",
         "children": [
           {
-            "value": 126,
-            "label": "\u4fc4\u7f57\u65af"
+            "value": 125,
+            "label": "俄罗斯"
           },
           {
-            "value": 127,
+            "value": 126,
             "label": "Adygea Republic"
           },
           {
-            "value": 128,
+            "value": 127,
             "label": "Altai Krai"
           },
           {
-            "value": 129,
+            "value": 128,
             "label": "Altai Republic"
           },
           {
-            "value": 130,
+            "value": 129,
             "label": "Amur Oblast"
           },
           {
-            "value": 131,
+            "value": 130,
             "label": "Arkhangelsk Oblast"
           },
           {
-            "value": 132,
+            "value": 131,
             "label": "Astrakhan Oblast"
           },
           {
-            "value": 133,
+            "value": 132,
             "label": "Bashkortostan Republic"
           },
           {
-            "value": 134,
+            "value": 133,
             "label": "Belgorod Oblast"
           },
           {
-            "value": 135,
+            "value": 134,
             "label": "Bryansk Oblast"
           },
           {
-            "value": 136,
+            "value": 135,
             "label": "Buryatia Republic"
           },
           {
-            "value": 137,
+            "value": 136,
             "label": "Chechen Republic"
           },
           {
-            "value": 138,
+            "value": 137,
             "label": "Chelyabinsk Oblast"
           },
           {
-            "value": 139,
+            "value": 138,
             "label": "Chukotka Autonomous Okrug"
           },
           {
-            "value": 140,
+            "value": 139,
             "label": "Chuvashia Republic"
           },
           {
-            "value": 141,
+            "value": 140,
             "label": "Dagestan Republic"
           },
           {
-            "value": 142,
+            "value": 141,
             "label": "Ingushetia Republic"
           },
           {
-            "value": 143,
+            "value": 142,
             "label": "Irkutsk Oblast"
           },
           {
-            "value": 144,
+            "value": 143,
             "label": "Ivanovo Oblast"
           },
           {
-            "value": 145,
+            "value": 144,
             "label": "Jewish Autonomous Okrug"
           },
           {
-            "value": 146,
+            "value": 145,
             "label": "Kabardino-Balkarian Republic"
           },
           {
-            "value": 147,
+            "value": 146,
             "label": "Kaliningrad Oblast"
           },
           {
-            "value": 148,
+            "value": 147,
             "label": "Kalmykia Republic"
           },
           {
-            "value": 149,
+            "value": 148,
             "label": "Kaluga Oblast"
           },
           {
-            "value": 150,
+            "value": 149,
             "label": "Kamchatka Krai"
           },
           {
-            "value": 151,
+            "value": 150,
             "label": "Karachay-Cherkess Republic"
           },
           {
-            "value": 152,
+            "value": 151,
             "label": "Karelia Republic"
           },
           {
-            "value": 153,
+            "value": 152,
             "label": "Kemerovo Oblast"
           },
           {
-            "value": 154,
+            "value": 153,
             "label": "Khabarovsk Krai"
           },
           {
-            "value": 155,
+            "value": 154,
             "label": "Khakassia Republic"
           },
           {
-            "value": 156,
+            "value": 155,
             "label": "Khanty-Mansi Autonomous Okrug"
           },
           {
-            "value": 157,
+            "value": 156,
             "label": "Kirov Oblast"
           },
           {
-            "value": 158,
+            "value": 157,
             "label": "Komi Republic"
           },
           {
-            "value": 159,
+            "value": 158,
             "label": "Kostroma Oblast"
           },
           {
-            "value": 160,
+            "value": 159,
             "label": "Krasnodar Krai"
           },
           {
-            "value": 161,
+            "value": 160,
             "label": "Krasnoyarsk Krai"
           },
           {
-            "value": 162,
+            "value": 161,
             "label": "Kurgan Oblast"
           },
           {
-            "value": 163,
+            "value": 162,
             "label": "Kursk Oblast"
           },
           {
-            "value": 164,
+            "value": 163,
             "label": "Leningrad Oblast"
           },
           {
-            "value": 165,
+            "value": 164,
             "label": "Lipetsk Oblast"
           },
           {
-            "value": 166,
+            "value": 165,
             "label": "Magadan Oblast"
           },
           {
-            "value": 167,
+            "value": 166,
             "label": "Mari El Republic"
           },
           {
-            "value": 168,
+            "value": 167,
             "label": "Mordovia Republic"
           },
           {
-            "value": 169,
+            "value": 168,
             "label": "Moscow"
           },
           {
-            "value": 170,
+            "value": 169,
             "label": "Moscow Oblast"
           },
           {
-            "value": 171,
+            "value": 170,
             "label": "Murmansk Oblast"
           },
           {
-            "value": 172,
+            "value": 171,
             "label": "Nenets Autonomous Okrug"
           },
           {
-            "value": 173,
+            "value": 172,
             "label": "Nizhny Novgorod Oblast"
           },
           {
-            "value": 174,
+            "value": 173,
             "label": "North Ossetia - Alania Republic"
           },
           {
-            "value": 175,
+            "value": 174,
             "label": "Novgorod Oblast"
           },
           {
-            "value": 176,
+            "value": 175,
             "label": "Novosibirsk Oblast"
           },
           {
-            "value": 177,
+            "value": 176,
             "label": "Omsk Oblast"
           },
           {
-            "value": 178,
+            "value": 177,
             "label": "Orel Oblast"
           },
           {
-            "value": 179,
+            "value": 178,
             "label": "Orenburg Oblast"
           },
           {
-            "value": 180,
+            "value": 179,
             "label": "Penza Oblast"
           },
           {
-            "value": 181,
+            "value": 180,
             "label": "Perm Krai"
           },
           {
-            "value": 182,
+            "value": 181,
             "label": "Primorsky Krai"
           },
           {
-            "value": 183,
+            "value": 182,
             "label": "Pskov Oblast"
           },
           {
-            "value": 184,
+            "value": 183,
             "label": "Rostov Oblast"
           },
           {
-            "value": 185,
+            "value": 184,
             "label": "Ryazan Oblast"
           },
           {
-            "value": 186,
+            "value": 185,
             "label": "Saint Petersburg"
           },
           {
-            "value": 187,
+            "value": 186,
             "label": "Sakha (Yakutiya) Republic"
           },
           {
-            "value": 188,
+            "value": 187,
             "label": "Sakhalin Oblast"
           },
           {
-            "value": 189,
+            "value": 188,
             "label": "Samara Oblast"
           },
           {
-            "value": 190,
+            "value": 189,
             "label": "Saratov Oblast"
           },
           {
-            "value": 191,
+            "value": 190,
             "label": "Smolensk Oblast"
           },
           {
-            "value": 192,
+            "value": 191,
             "label": "Stavropol Krai"
           },
           {
-            "value": 193,
+            "value": 192,
             "label": "Sverdlovsk Oblast"
           },
           {
-            "value": 194,
+            "value": 193,
             "label": "Tambov Oblast"
           },
           {
-            "value": 195,
+            "value": 194,
             "label": "Tatarstan Republic"
           },
           {
-            "value": 196,
+            "value": 195,
             "label": "Tomsk Oblast"
           },
           {
-            "value": 197,
+            "value": 196,
             "label": "Tula Oblast"
           },
           {
-            "value": 198,
+            "value": 197,
             "label": "Tver Oblast"
           },
           {
-            "value": 199,
+            "value": 198,
             "label": "Tyumen Oblast"
           },
           {
-            "value": 200,
+            "value": 199,
             "label": "Tyva Republic"
           },
           {
-            "value": 201,
+            "value": 200,
             "label": "Udmurt Republic"
           },
           {
-            "value": 202,
+            "value": 201,
             "label": "Ulyanovsk Oblast"
           },
           {
-            "value": 203,
+            "value": 202,
             "label": "Vladimir Oblast"
           },
           {
-            "value": 204,
+            "value": 203,
             "label": "Volgograd Oblast"
           },
           {
-            "value": 205,
+            "value": 204,
             "label": "Vologda Oblast"
           },
           {
-            "value": 206,
+            "value": 205,
             "label": "Voronezh Oblast"
           },
           {
-            "value": 207,
+            "value": 206,
             "label": "Yamalo-Nenets Autonomous Okrug"
           },
           {
-            "value": 208,
+            "value": 207,
             "label": "Yaroslavl Oblast"
           },
           {
-            "value": 209,
+            "value": 208,
             "label": "Zabaykalsky Krai"
           }
         ]
       },
       {
+        "value": 209,
+        "label": "厄瓜多尔"
+      },
+      {
         "value": 210,
-        "label": "\u5384\u74dc\u591a\u5c14"
+        "label": "厄立特里亚"
       },
       {
         "value": 211,
-        "label": "\u5384\u7acb\u7279\u91cc\u4e9a"
+        "label": "法国"
       },
       {
         "value": 212,
-        "label": "\u6cd5\u56fd"
+        "label": "梵蒂冈"
       },
       {
         "value": 213,
-        "label": "\u68b5\u8482\u5188"
+        "label": "菲律宾"
       },
       {
         "value": 214,
-        "label": "\u83f2\u5f8b\u5bbe"
+        "label": "斐济"
       },
       {
         "value": 215,
-        "label": "\u6590\u6d4e"
+        "label": "芬兰"
       },
       {
         "value": 216,
-        "label": "\u82ac\u5170"
+        "label": "佛得角"
       },
       {
         "value": 217,
-        "label": "\u4f5b\u5f97\u89d2"
+        "label": "冈比亚"
       },
       {
         "value": 218,
-        "label": "\u5188\u6bd4\u4e9a"
+        "label": "刚果（布）"
       },
       {
         "value": 219,
-        "label": "\u521a\u679c\uff08\u5e03\uff09"
+        "label": "刚果（金）"
       },
       {
         "value": 220,
-        "label": "\u521a\u679c\uff08\u91d1\uff09"
-      },
-      {
-        "value": 221,
-        "label": "\u54e5\u4f26\u6bd4\u4e9a",
+        "label": "哥伦比亚",
         "children": [
           {
-            "value": 222,
-            "label": "\u54e5\u4f26\u6bd4\u4e9a"
+            "value": 221,
+            "label": "哥伦比亚"
           },
           {
-            "value": 223,
+            "value": 222,
             "label": "Amazonas"
           },
           {
-            "value": 224,
+            "value": 223,
             "label": "Antioquia"
           },
           {
-            "value": 225,
+            "value": 224,
             "label": "Arauca"
           },
           {
-            "value": 226,
+            "value": 225,
             "label": "Atlantico"
           },
           {
-            "value": 227,
+            "value": 226,
             "label": "Bolivar"
           },
           {
-            "value": 228,
+            "value": 227,
             "label": "Boyaca"
           },
           {
-            "value": 229,
+            "value": 228,
             "label": "Caldas"
           },
           {
-            "value": 230,
+            "value": 229,
             "label": "Caqueta"
           },
           {
-            "value": 231,
+            "value": 230,
             "label": "Casanare"
           },
           {
-            "value": 232,
+            "value": 231,
             "label": "Cauca"
           },
           {
-            "value": 233,
+            "value": 232,
             "label": "Cesar"
           },
           {
-            "value": 234,
+            "value": 233,
             "label": "Choco"
           },
           {
-            "value": 235,
+            "value": 234,
             "label": "Cordoba"
           },
           {
-            "value": 236,
+            "value": 235,
             "label": "Cundinamarca"
           },
           {
-            "value": 237,
+            "value": 236,
             "label": "Guainia"
           },
           {
-            "value": 238,
+            "value": 237,
             "label": "Guaviare"
           },
           {
-            "value": 239,
+            "value": 238,
             "label": "Huila"
           },
           {
-            "value": 240,
+            "value": 239,
             "label": "La Guajira"
           },
           {
-            "value": 241,
+            "value": 240,
             "label": "Magdalena"
           },
           {
-            "value": 242,
+            "value": 241,
             "label": "Meta"
           },
           {
-            "value": 243,
+            "value": 242,
             "label": "Narino"
           },
           {
-            "value": 244,
+            "value": 243,
             "label": "Norte de Santander"
           },
           {
-            "value": 245,
+            "value": 244,
             "label": "Putumayo"
           },
           {
-            "value": 246,
+            "value": 245,
             "label": "Quindio"
           },
           {
-            "value": 247,
+            "value": 246,
             "label": "Risaralda"
           },
           {
-            "value": 248,
+            "value": 247,
             "label": "San Andres y Providencia"
           },
           {
-            "value": 249,
+            "value": 248,
             "label": "Santander"
           },
           {
-            "value": 250,
+            "value": 249,
             "label": "Sucre"
           },
           {
-            "value": 251,
+            "value": 250,
             "label": "Tolima"
           },
           {
-            "value": 252,
+            "value": 251,
             "label": "Valle del Cauca"
           },
           {
-            "value": 253,
+            "value": 252,
             "label": "Vaupes"
           },
           {
-            "value": 254,
+            "value": 253,
             "label": "Vichada"
           }
         ]
       },
       {
+        "value": 254,
+        "label": "哥斯达黎加"
+      },
+      {
         "value": 255,
-        "label": "\u54e5\u65af\u8fbe\u9ece\u52a0"
+        "label": "格林纳达"
       },
       {
         "value": 256,
-        "label": "\u683c\u6797\u7eb3\u8fbe"
+        "label": "格陵兰"
       },
       {
         "value": 257,
-        "label": "\u683c\u9675\u5170"
+        "label": "格鲁吉亚"
       },
       {
         "value": 258,
-        "label": "\u683c\u9c81\u5409\u4e9a"
+        "label": "古巴"
       },
       {
         "value": 259,
-        "label": "\u53e4\u5df4"
+        "label": "圭亚那"
       },
       {
         "value": 260,
-        "label": "\u572d\u4e9a\u90a3"
+        "label": "哈萨克斯坦"
       },
       {
         "value": 261,
-        "label": "\u54c8\u8428\u514b\u65af\u5766"
+        "label": "海地"
       },
       {
         "value": 262,
-        "label": "\u6d77\u5730"
+        "label": "韩国"
       },
       {
         "value": 263,
-        "label": "\u97e9\u56fd"
-      },
-      {
-        "value": 264,
-        "label": "\u8377\u5170",
+        "label": "荷兰",
         "children": [
           {
-            "value": 265,
-            "label": "\u8377\u5170"
+            "value": 264,
+            "label": "荷兰"
           },
           {
-            "value": 266,
+            "value": 265,
             "label": "Aruba"
           },
           {
-            "value": 267,
+            "value": 266,
             "label": "Bonaire, Sint Eustatius and Saba"
           },
           {
-            "value": 268,
+            "value": 267,
             "label": "Curacao"
           },
           {
-            "value": 269,
+            "value": 268,
             "label": "Drenthe"
           },
           {
-            "value": 270,
+            "value": 269,
             "label": "Flevoland"
           },
           {
-            "value": 271,
+            "value": 270,
             "label": "Friesland"
           },
           {
-            "value": 272,
+            "value": 271,
             "label": "Gelderland"
           },
           {
-            "value": 273,
+            "value": 272,
             "label": "Groningen"
           },
           {
-            "value": 274,
+            "value": 273,
             "label": "Limburg"
           },
           {
-            "value": 275,
+            "value": 274,
             "label": "Noord-Brabant"
           },
           {
-            "value": 276,
+            "value": 275,
             "label": "Noord-Holland"
           },
           {
-            "value": 277,
+            "value": 276,
             "label": "Overijssel"
           },
           {
-            "value": 278,
+            "value": 277,
             "label": "Sint Maarten"
           },
           {
-            "value": 279,
+            "value": 278,
             "label": "Utrecht"
           },
           {
-            "value": 280,
+            "value": 279,
             "label": "Zeeland"
           },
           {
-            "value": 281,
+            "value": 280,
             "label": "Zuid-Holland"
           }
         ]
       },
       {
+        "value": 281,
+        "label": "黑山"
+      },
+      {
         "value": 282,
-        "label": "\u9ed1\u5c71"
+        "label": "洪都拉斯"
       },
       {
         "value": 283,
-        "label": "\u6d2a\u90fd\u62c9\u65af"
+        "label": "吉布提"
       },
       {
         "value": 284,
-        "label": "\u5409\u5e03\u63d0"
+        "label": "吉尔吉斯斯坦"
       },
       {
         "value": 285,
-        "label": "\u5409\u5c14\u5409\u65af\u65af\u5766"
+        "label": "几内亚"
       },
       {
         "value": 286,
-        "label": "\u51e0\u5185\u4e9a"
+        "label": "几内亚比绍"
       },
       {
         "value": 287,
-        "label": "\u51e0\u5185\u4e9a\u6bd4\u7ecd"
-      },
-      {
-        "value": 288,
-        "label": "\u52a0\u62ff\u5927",
+        "label": "加拿大",
         "children": [
           {
-            "value": 289,
-            "label": "\u52a0\u62ff\u5927"
+            "value": 288,
+            "label": "加拿大"
           },
           {
-            "value": 290,
+            "value": 289,
             "label": "Alberta"
           },
           {
-            "value": 291,
+            "value": 290,
             "label": "British Columbia"
           },
           {
-            "value": 292,
+            "value": 291,
             "label": "Manitoba"
           },
           {
-            "value": 293,
+            "value": 292,
             "label": "New Brunswick"
           },
           {
-            "value": 294,
+            "value": 293,
             "label": "Newfoundland and Labrador"
           },
           {
-            "value": 295,
+            "value": 294,
             "label": "Northwest Territories"
           },
           {
-            "value": 296,
+            "value": 295,
             "label": "Nova Scotia"
           },
           {
-            "value": 297,
+            "value": 296,
             "label": "Nunavut"
           },
           {
-            "value": 298,
+            "value": 297,
             "label": "Ontario"
           },
           {
-            "value": 299,
+            "value": 298,
             "label": "Prince Edward Island"
           },
           {
-            "value": 300,
+            "value": 299,
             "label": "Quebec"
           },
           {
-            "value": 301,
+            "value": 300,
             "label": "Saskatchewan"
           },
           {
-            "value": 302,
+            "value": 301,
             "label": "Yukon"
           }
         ]
       },
       {
+        "value": 302,
+        "label": "加纳"
+      },
+      {
         "value": 303,
-        "label": "\u52a0\u7eb3"
+        "label": "加蓬"
       },
       {
         "value": 304,
-        "label": "\u52a0\u84ec"
+        "label": "柬埔寨"
       },
       {
         "value": 305,
-        "label": "\u67ec\u57d4\u5be8"
+        "label": "捷克"
       },
       {
         "value": 306,
-        "label": "\u6377\u514b"
+        "label": "津巴布韦"
       },
       {
         "value": 307,
-        "label": "\u6d25\u5df4\u5e03\u97e6"
+        "label": "喀麦隆"
       },
       {
         "value": 308,
-        "label": "\u5580\u9ea6\u9686"
+        "label": "卡塔尔"
       },
       {
         "value": 309,
-        "label": "\u5361\u5854\u5c14"
+        "label": "科摩罗"
       },
       {
         "value": 310,
-        "label": "\u79d1\u6469\u7f57"
+        "label": "科特迪瓦"
       },
       {
         "value": 311,
-        "label": "\u79d1\u7279\u8fea\u74e6"
+        "label": "科威特"
       },
       {
         "value": 312,
-        "label": "\u79d1\u5a01\u7279"
+        "label": "克罗地亚"
       },
       {
         "value": 313,
-        "label": "\u514b\u7f57\u5730\u4e9a"
+        "label": "肯尼亚"
       },
       {
         "value": 314,
-        "label": "\u80af\u5c3c\u4e9a"
+        "label": "拉脱维亚"
       },
       {
         "value": 315,
-        "label": "\u62c9\u8131\u7ef4\u4e9a"
+        "label": "莱索托"
       },
       {
         "value": 316,
-        "label": "\u83b1\u7d22\u6258"
+        "label": "老挝"
       },
       {
         "value": 317,
-        "label": "\u8001\u631d"
+        "label": "黎巴嫩"
       },
       {
         "value": 318,
-        "label": "\u9ece\u5df4\u5ae9"
+        "label": "立陶宛"
       },
       {
         "value": 319,
-        "label": "\u7acb\u9676\u5b9b"
+        "label": "利比里亚"
       },
       {
         "value": 320,
-        "label": "\u5229\u6bd4\u91cc\u4e9a"
+        "label": "利比亚"
       },
       {
         "value": 321,
-        "label": "\u5229\u6bd4\u4e9a"
+        "label": "列支敦士登公国"
       },
       {
         "value": 322,
-        "label": "\u5217\u652f\u6566\u58eb\u767b\u516c\u56fd"
+        "label": "卢森堡"
       },
       {
         "value": 323,
-        "label": "\u5362\u68ee\u5821"
+        "label": "卢旺达"
       },
       {
         "value": 324,
-        "label": "\u5362\u65fa\u8fbe"
+        "label": "罗马尼亚"
       },
       {
         "value": 325,
-        "label": "\u7f57\u9a6c\u5c3c\u4e9a"
+        "label": "马达加斯加"
       },
       {
         "value": 326,
-        "label": "\u9a6c\u8fbe\u52a0\u65af\u52a0"
+        "label": "马尔代夫"
       },
       {
         "value": 327,
-        "label": "\u9a6c\u5c14\u4ee3\u592b"
+        "label": "马耳他"
       },
       {
         "value": 328,
-        "label": "\u9a6c\u8033\u4ed6"
+        "label": "马拉维"
       },
       {
         "value": 329,
-        "label": "\u9a6c\u62c9\u7ef4"
+        "label": "马来西亚"
       },
       {
         "value": 330,
-        "label": "\u9a6c\u6765\u897f\u4e9a"
+        "label": "马里"
       },
       {
         "value": 331,
-        "label": "\u9a6c\u91cc"
+        "label": "马绍尔群岛"
       },
       {
         "value": 332,
-        "label": "\u9a6c\u7ecd\u5c14\u7fa4\u5c9b"
+        "label": "马提尼克岛"
       },
       {
         "value": 333,
-        "label": "\u9a6c\u63d0\u5c3c\u514b\u5c9b"
+        "label": "毛里求斯"
       },
       {
         "value": 334,
-        "label": "\u6bdb\u91cc\u6c42\u65af"
+        "label": "毛里塔尼亚"
       },
       {
         "value": 335,
-        "label": "\u6bdb\u91cc\u5854\u5c3c\u4e9a"
-      },
-      {
-        "value": 336,
-        "label": "\u7f8e\u56fd",
+        "label": "美国",
         "children": [
           {
-            "value": 337,
-            "label": "\u7f8e\u56fd"
+            "value": 336,
+            "label": "美国"
           },
           {
-            "value": 338,
+            "value": 337,
             "label": "Alabama"
           },
           {
-            "value": 339,
+            "value": 338,
             "label": "Alaska"
           },
           {
-            "value": 340,
+            "value": 339,
             "label": "Arizona"
           },
           {
-            "value": 341,
+            "value": 340,
             "label": "Arkansas"
           },
           {
-            "value": 342,
+            "value": 341,
             "label": "California"
           },
           {
-            "value": 343,
+            "value": 342,
             "label": "Colorado"
           },
           {
-            "value": 344,
+            "value": 343,
             "label": "Connecticut"
           },
           {
-            "value": 345,
+            "value": 344,
             "label": "Delaware"
           },
           {
-            "value": 346,
+            "value": 345,
             "label": "District of Columbia"
           },
           {
-            "value": 347,
+            "value": 346,
             "label": "Florida"
           },
           {
-            "value": 348,
+            "value": 347,
             "label": "Georgia"
           },
           {
-            "value": 349,
+            "value": 348,
             "label": "Guam"
           },
           {
-            "value": 350,
+            "value": 349,
             "label": "Hawaii"
           },
           {
-            "value": 351,
+            "value": 350,
             "label": "Idaho"
           },
           {
-            "value": 352,
+            "value": 351,
             "label": "Illinois"
           },
           {
-            "value": 353,
+            "value": 352,
             "label": "Indiana"
           },
           {
-            "value": 354,
+            "value": 353,
             "label": "Iowa"
           },
           {
-            "value": 355,
+            "value": 354,
             "label": "Kansas"
           },
           {
-            "value": 356,
+            "value": 355,
             "label": "Kentucky"
           },
           {
-            "value": 357,
+            "value": 356,
             "label": "Louisiana"
           },
           {
-            "value": 358,
+            "value": 357,
             "label": "Maine"
           },
           {
-            "value": 359,
+            "value": 358,
             "label": "Maryland"
           },
           {
-            "value": 360,
+            "value": 359,
             "label": "Massachusetts"
           },
           {
-            "value": 361,
+            "value": 360,
             "label": "Michigan"
           },
           {
-            "value": 362,
+            "value": 361,
             "label": "Minnesota"
           },
           {
-            "value": 363,
+            "value": 362,
             "label": "Mississippi"
           },
           {
-            "value": 364,
+            "value": 363,
             "label": "Missouri"
           },
           {
-            "value": 365,
+            "value": 364,
             "label": "Montana"
           },
           {
-            "value": 366,
+            "value": 365,
             "label": "Nebraska"
           },
           {
-            "value": 367,
+            "value": 366,
             "label": "Nevada"
           },
           {
-            "value": 368,
+            "value": 367,
             "label": "New Hampshire"
           },
           {
-            "value": 369,
+            "value": 368,
             "label": "New Jersey"
           },
           {
-            "value": 370,
+            "value": 369,
             "label": "New Mexico"
           },
           {
-            "value": 371,
+            "value": 370,
             "label": "New York"
           },
           {
-            "value": 372,
+            "value": 371,
             "label": "North Carolina"
           },
           {
-            "value": 373,
+            "value": 372,
             "label": "North Dakota"
           },
           {
-            "value": 374,
+            "value": 373,
             "label": "Northern Mariana Islands"
           },
           {
-            "value": 375,
+            "value": 374,
             "label": "Ohio"
           },
           {
-            "value": 376,
+            "value": 375,
             "label": "Oklahoma"
           },
           {
-            "value": 377,
+            "value": 376,
             "label": "Oregon"
           },
           {
-            "value": 378,
+            "value": 377,
             "label": "Pennsylvania"
           },
           {
-            "value": 379,
+            "value": 378,
             "label": "Puerto Rico"
           },
           {
-            "value": 380,
+            "value": 379,
             "label": "Rhode Island"
           },
           {
-            "value": 381,
+            "value": 380,
             "label": "South Carolina"
           },
           {
-            "value": 382,
+            "value": 381,
             "label": "South Dakota"
           },
           {
-            "value": 383,
+            "value": 382,
             "label": "Tennessee"
           },
           {
-            "value": 384,
+            "value": 383,
             "label": "Texas"
           },
           {
-            "value": 385,
+            "value": 384,
             "label": "Utah"
           },
           {
-            "value": 386,
+            "value": 385,
             "label": "Vermont"
           },
           {
-            "value": 387,
+            "value": 386,
             "label": "Virgin Islands"
           },
           {
-            "value": 388,
+            "value": 387,
             "label": "Virginia"
           },
           {
-            "value": 389,
+            "value": 388,
             "label": "Washington"
           },
           {
-            "value": 390,
+            "value": 389,
             "label": "West Virginia"
           },
           {
-            "value": 391,
+            "value": 390,
             "label": "Wisconsin"
           },
           {
-            "value": 392,
+            "value": 391,
             "label": "Wyoming"
           }
         ]
       },
       {
+        "value": 392,
+        "label": "蒙古"
+      },
+      {
         "value": 393,
-        "label": "\u8499\u53e4"
+        "label": "孟加拉"
       },
       {
         "value": 394,
-        "label": "\u5b5f\u52a0\u62c9"
-      },
-      {
-        "value": 395,
-        "label": "\u79d8\u9c81",
+        "label": "秘鲁",
         "children": [
           {
-            "value": 396,
-            "label": "\u79d8\u9c81"
+            "value": 395,
+            "label": "秘鲁"
           },
           {
-            "value": 397,
+            "value": 396,
             "label": "Amazonas"
           },
           {
-            "value": 398,
+            "value": 397,
             "label": "Ancash"
           },
           {
-            "value": 399,
+            "value": 398,
             "label": "Apurimac"
           },
           {
-            "value": 400,
+            "value": 399,
             "label": "Arequipa"
           },
           {
-            "value": 401,
+            "value": 400,
             "label": "Ayacucho"
           },
           {
-            "value": 402,
+            "value": 401,
             "label": "Cajamarca"
           },
           {
-            "value": 403,
+            "value": 402,
             "label": "Callao"
           },
           {
-            "value": 404,
+            "value": 403,
             "label": "Cusco"
           },
           {
-            "value": 405,
+            "value": 404,
             "label": "Huancavelica"
           },
           {
-            "value": 406,
+            "value": 405,
             "label": "Huanuco"
           },
           {
-            "value": 407,
+            "value": 406,
             "label": "Ica"
           },
           {
-            "value": 408,
+            "value": 407,
             "label": "Junin"
           },
           {
-            "value": 409,
+            "value": 408,
             "label": "La Libertad"
           },
           {
-            "value": 410,
+            "value": 409,
             "label": "Lambayeque"
           },
           {
-            "value": 411,
+            "value": 410,
             "label": "Lima"
           },
           {
-            "value": 412,
+            "value": 411,
             "label": "Loreto"
           },
           {
-            "value": 413,
+            "value": 412,
             "label": "Madre de Dios"
           },
           {
-            "value": 414,
+            "value": 413,
             "label": "Moquegua"
           },
           {
-            "value": 415,
+            "value": 414,
             "label": "Pasco"
           },
           {
-            "value": 416,
+            "value": 415,
             "label": "Piura"
           },
           {
-            "value": 417,
+            "value": 416,
             "label": "Puno"
           },
           {
-            "value": 418,
+            "value": 417,
             "label": "San Martin"
           },
           {
-            "value": 419,
+            "value": 418,
             "label": "Tacna"
           },
           {
-            "value": 420,
+            "value": 419,
             "label": "Tumbes"
           },
           {
-            "value": 421,
+            "value": 420,
             "label": "Ucayali"
           }
         ]
       },
       {
+        "value": 421,
+        "label": "缅甸"
+      },
+      {
         "value": 422,
-        "label": "\u7f05\u7538"
+        "label": "摩尔多瓦"
       },
       {
         "value": 423,
-        "label": "\u6469\u5c14\u591a\u74e6"
+        "label": "摩洛哥"
       },
       {
         "value": 424,
-        "label": "\u6469\u6d1b\u54e5"
+        "label": "摩纳哥"
       },
       {
         "value": 425,
-        "label": "\u6469\u7eb3\u54e5"
+        "label": "莫桑比克"
       },
       {
         "value": 426,
-        "label": "\u83ab\u6851\u6bd4\u514b"
-      },
-      {
-        "value": 427,
-        "label": "\u58a8\u897f\u54e5",
+        "label": "墨西哥",
         "children": [
           {
-            "value": 428,
-            "label": "\u58a8\u897f\u54e5"
+            "value": 427,
+            "label": "墨西哥"
           },
           {
-            "value": 429,
+            "value": 428,
             "label": "Aguascalientes"
           },
           {
-            "value": 430,
+            "value": 429,
             "label": "Baja California"
           },
           {
-            "value": 431,
+            "value": 430,
             "label": "Baja California Sur"
           },
           {
-            "value": 432,
+            "value": 431,
             "label": "Campeche"
           },
           {
-            "value": 433,
+            "value": 432,
             "label": "Chiapas"
           },
           {
-            "value": 434,
+            "value": 433,
             "label": "Chihuahua"
           },
           {
-            "value": 435,
+            "value": 434,
             "label": "Ciudad de Mexico"
           },
           {
-            "value": 436,
+            "value": 435,
             "label": "Coahuila"
           },
           {
-            "value": 437,
+            "value": 436,
             "label": "Colima"
           },
           {
-            "value": 438,
+            "value": 437,
             "label": "Durango"
           },
           {
-            "value": 439,
+            "value": 438,
             "label": "Guanajuato"
           },
           {
-            "value": 440,
+            "value": 439,
             "label": "Guerrero"
           },
           {
-            "value": 441,
+            "value": 440,
             "label": "Hidalgo"
           },
           {
-            "value": 442,
+            "value": 441,
             "label": "Jalisco"
           },
           {
-            "value": 443,
+            "value": 442,
             "label": "Mexico"
           },
           {
-            "value": 444,
+            "value": 443,
             "label": "Michoacan"
           },
           {
-            "value": 445,
+            "value": 444,
             "label": "Morelos"
           },
           {
-            "value": 446,
+            "value": 445,
             "label": "Nayarit"
           },
           {
-            "value": 447,
+            "value": 446,
             "label": "Nuevo Leon"
           },
           {
-            "value": 448,
+            "value": 447,
             "label": "Oaxaca"
           },
           {
-            "value": 449,
+            "value": 448,
             "label": "Puebla"
           },
           {
-            "value": 450,
+            "value": 449,
             "label": "Queretaro"
           },
           {
-            "value": 451,
+            "value": 450,
             "label": "Quintana Roo"
           },
           {
-            "value": 452,
+            "value": 451,
             "label": "San Luis Potosi"
           },
           {
-            "value": 453,
+            "value": 452,
             "label": "Sinaloa"
           },
           {
-            "value": 454,
+            "value": 453,
             "label": "Sonora"
           },
           {
-            "value": 455,
+            "value": 454,
             "label": "Tabasco"
           },
           {
-            "value": 456,
+            "value": 455,
             "label": "Tamaulipas"
           },
           {
-            "value": 457,
+            "value": 456,
             "label": "Tlaxcala"
           },
           {
-            "value": 458,
+            "value": 457,
             "label": "Veracruz"
           },
           {
-            "value": 459,
+            "value": 458,
             "label": "Yucatan"
           },
           {
-            "value": 460,
+            "value": 459,
             "label": "Zacatecas"
           }
         ]
       },
       {
+        "value": 460,
+        "label": "纳米比亚"
+      },
+      {
         "value": 461,
-        "label": "\u7eb3\u7c73\u6bd4\u4e9a"
+        "label": "南非"
       },
       {
         "value": 462,
-        "label": "\u5357\u975e"
+        "label": "尼泊尔"
       },
       {
         "value": 463,
-        "label": "\u5c3c\u6cca\u5c14"
+        "label": "尼加拉瓜"
       },
       {
         "value": 464,
-        "label": "\u5c3c\u52a0\u62c9\u74dc"
+        "label": "尼日尔"
       },
       {
         "value": 465,
-        "label": "\u5c3c\u65e5\u5c14"
+        "label": "尼日利亚"
       },
       {
         "value": 466,
-        "label": "\u5c3c\u65e5\u5229\u4e9a"
+        "label": "挪威"
       },
       {
         "value": 467,
-        "label": "\u632a\u5a01"
+        "label": "葡萄牙"
       },
       {
         "value": 468,
-        "label": "\u8461\u8404\u7259"
-      },
-      {
-        "value": 469,
-        "label": "\u65e5\u672c",
+        "label": "日本",
         "children": [
           {
-            "value": 470,
-            "label": "\u65e5\u672c"
+            "value": 469,
+            "label": "日本"
           },
           {
-            "value": 471,
+            "value": 470,
             "label": "Aichi"
           },
           {
-            "value": 472,
+            "value": 471,
             "label": "Akita"
           },
           {
-            "value": 473,
+            "value": 472,
             "label": "Aomori"
           },
           {
-            "value": 474,
+            "value": 473,
             "label": "Chiba"
           },
           {
-            "value": 475,
+            "value": 474,
             "label": "Ehime"
           },
           {
-            "value": 476,
+            "value": 475,
             "label": "Fukui"
           },
           {
-            "value": 477,
+            "value": 476,
             "label": "Fukuoka"
           },
           {
-            "value": 478,
+            "value": 477,
             "label": "Fukushima"
           },
           {
-            "value": 479,
+            "value": 478,
             "label": "Gifu"
           },
           {
-            "value": 480,
+            "value": 479,
             "label": "Gunma"
           },
           {
-            "value": 481,
+            "value": 480,
             "label": "Hiroshima"
           },
           {
-            "value": 482,
+            "value": 481,
             "label": "Hokkaido"
           },
           {
-            "value": 483,
+            "value": 482,
             "label": "Hyogo"
           },
           {
-            "value": 484,
+            "value": 483,
             "label": "Ibaraki"
           },
           {
-            "value": 485,
+            "value": 484,
             "label": "Ishikawa"
           },
           {
-            "value": 486,
+            "value": 485,
             "label": "Iwate"
           },
           {
-            "value": 487,
+            "value": 486,
             "label": "Kagawa"
           },
           {
-            "value": 488,
+            "value": 487,
             "label": "Kagoshima"
           },
           {
-            "value": 489,
+            "value": 488,
             "label": "Kanagawa"
           },
           {
-            "value": 490,
+            "value": 489,
             "label": "Kochi"
           },
           {
-            "value": 491,
+            "value": 490,
             "label": "Kumamoto"
           },
           {
-            "value": 492,
+            "value": 491,
             "label": "Kyoto"
           },
           {
-            "value": 493,
+            "value": 492,
             "label": "Mie"
           },
           {
-            "value": 494,
+            "value": 493,
             "label": "Miyagi"
           },
           {
-            "value": 495,
+            "value": 494,
             "label": "Miyazaki"
           },
           {
-            "value": 496,
+            "value": 495,
             "label": "Nagano"
           },
           {
-            "value": 497,
+            "value": 496,
             "label": "Nagasaki"
           },
           {
-            "value": 498,
+            "value": 497,
             "label": "Nara"
           },
           {
-            "value": 499,
+            "value": 498,
             "label": "Niigata"
           },
           {
-            "value": 500,
+            "value": 499,
             "label": "Oita"
           },
           {
-            "value": 501,
+            "value": 500,
             "label": "Okayama"
           },
           {
-            "value": 502,
+            "value": 501,
             "label": "Okinawa"
           },
           {
-            "value": 503,
+            "value": 502,
             "label": "Osaka"
           },
           {
-            "value": 504,
+            "value": 503,
             "label": "Saga"
           },
           {
-            "value": 505,
+            "value": 504,
             "label": "Saitama"
           },
           {
-            "value": 506,
+            "value": 505,
             "label": "Shiga"
           },
           {
-            "value": 507,
+            "value": 506,
             "label": "Shimane"
           },
           {
-            "value": 508,
+            "value": 507,
             "label": "Shizuoka"
           },
           {
-            "value": 509,
+            "value": 508,
             "label": "Tochigi"
           },
           {
-            "value": 510,
+            "value": 509,
             "label": "Tokushima"
           },
           {
-            "value": 511,
+            "value": 510,
             "label": "Tokyo"
           },
           {
-            "value": 512,
+            "value": 511,
             "label": "Tottori"
           },
           {
-            "value": 513,
+            "value": 512,
             "label": "Toyama"
           },
           {
-            "value": 514,
+            "value": 513,
             "label": "Wakayama"
           },
           {
-            "value": 515,
+            "value": 514,
             "label": "Yamagata"
           },
           {
-            "value": 516,
+            "value": 515,
             "label": "Yamaguchi"
           },
           {
-            "value": 517,
+            "value": 516,
             "label": "Yamanashi"
           }
         ]
       },
       {
-        "value": 518,
-        "label": "\u745e\u5178",
+        "value": 517,
+        "label": "瑞典",
         "children": [
           {
-            "value": 519,
-            "label": "\u745e\u5178"
+            "value": 518,
+            "label": "瑞典"
           },
           {
-            "value": 520,
+            "value": 519,
             "label": "Blekinge"
           },
           {
-            "value": 521,
+            "value": 520,
             "label": "Dalarna"
           },
           {
-            "value": 522,
+            "value": 521,
             "label": "Gavleborg"
           },
           {
-            "value": 523,
+            "value": 522,
             "label": "Gotland"
           },
           {
-            "value": 524,
+            "value": 523,
             "label": "Halland"
           },
           {
-            "value": 525,
+            "value": 524,
             "label": "Jamtland Harjedalen"
           },
           {
-            "value": 526,
+            "value": 525,
             "label": "Jonkoping"
           },
           {
-            "value": 527,
+            "value": 526,
             "label": "Kalmar"
           },
           {
-            "value": 528,
+            "value": 527,
             "label": "Kronoberg"
           },
           {
-            "value": 529,
+            "value": 528,
             "label": "Norrbotten"
           },
           {
-            "value": 530,
+            "value": 529,
             "label": "Orebro"
           },
           {
-            "value": 531,
+            "value": 530,
             "label": "Ostergotland"
           },
           {
-            "value": 532,
+            "value": 531,
             "label": "Skane"
           },
           {
-            "value": 533,
+            "value": 532,
             "label": "Sormland"
           },
           {
-            "value": 534,
+            "value": 533,
             "label": "Stockholm"
           },
           {
-            "value": 535,
+            "value": 534,
             "label": "Uppsala"
           },
           {
-            "value": 536,
+            "value": 535,
             "label": "Varmland"
           },
           {
-            "value": 537,
+            "value": 536,
             "label": "Vasterbotten"
           },
           {
-            "value": 538,
+            "value": 537,
             "label": "Vasternorrland"
           },
           {
-            "value": 539,
+            "value": 538,
             "label": "Vastmanland"
           },
           {
-            "value": 540,
+            "value": 539,
             "label": "Vastra Gotaland"
           }
         ]
       },
       {
+        "value": 540,
+        "label": "瑞士"
+      },
+      {
         "value": 541,
-        "label": "\u745e\u58eb"
+        "label": "萨尔瓦多"
       },
       {
         "value": 542,
-        "label": "\u8428\u5c14\u74e6\u591a"
+        "label": "塞尔维亚"
       },
       {
         "value": 543,
-        "label": "\u585e\u5c14\u7ef4\u4e9a"
+        "label": "塞拉利昂"
       },
       {
         "value": 544,
-        "label": "\u585e\u62c9\u5229\u6602"
+        "label": "塞内加尔"
       },
       {
         "value": 545,
-        "label": "\u585e\u5185\u52a0\u5c14"
+        "label": "塞浦路斯"
       },
       {
         "value": 546,
-        "label": "\u585e\u6d66\u8def\u65af"
+        "label": "塞舌尔"
       },
       {
         "value": 547,
-        "label": "\u585e\u820c\u5c14"
+        "label": "沙特阿拉伯"
       },
       {
         "value": 548,
-        "label": "\u6c99\u7279\u963f\u62c9\u4f2f"
+        "label": "圣基茨和尼维斯"
       },
       {
         "value": 549,
-        "label": "\u5723\u57fa\u8328\u548c\u5c3c\u7ef4\u65af"
+        "label": "圣卢西亚"
       },
       {
         "value": 550,
-        "label": "\u5723\u5362\u897f\u4e9a"
+        "label": "圣马力诺"
       },
       {
         "value": 551,
-        "label": "\u5723\u9a6c\u529b\u8bfa"
+        "label": "圣文森特和格林纳丁斯"
       },
       {
         "value": 552,
-        "label": "\u5723\u6587\u68ee\u7279\u548c\u683c\u6797\u7eb3\u4e01\u65af"
+        "label": "斯里兰卡"
       },
       {
         "value": 553,
-        "label": "\u65af\u91cc\u5170\u5361"
+        "label": "斯洛伐克"
       },
       {
         "value": 554,
-        "label": "\u65af\u6d1b\u4f10\u514b"
+        "label": "斯洛文尼亚"
       },
       {
         "value": 555,
-        "label": "\u65af\u6d1b\u6587\u5c3c\u4e9a"
+        "label": "斯威士兰"
       },
       {
         "value": 556,
-        "label": "\u65af\u5a01\u58eb\u5170"
+        "label": "苏丹"
       },
       {
         "value": 557,
-        "label": "\u82cf\u4e39"
+        "label": "苏里南"
       },
       {
         "value": 558,
-        "label": "\u82cf\u91cc\u5357"
+        "label": "所罗门群岛"
       },
       {
         "value": 559,
-        "label": "\u6240\u7f57\u95e8\u7fa4\u5c9b"
+        "label": "索马里"
       },
       {
         "value": 560,
-        "label": "\u7d22\u9a6c\u91cc"
+        "label": "塔吉克斯坦"
       },
       {
         "value": 561,
-        "label": "\u5854\u5409\u514b\u65af\u5766"
+        "label": "泰国"
       },
       {
         "value": 562,
-        "label": "\u6cf0\u56fd"
+        "label": "坦桑尼亚"
       },
       {
         "value": 563,
-        "label": "\u5766\u6851\u5c3c\u4e9a"
+        "label": "特立尼达和多巴哥"
       },
       {
         "value": 564,
-        "label": "\u7279\u7acb\u5c3c\u8fbe\u548c\u591a\u5df4\u54e5"
+        "label": "突尼斯"
       },
       {
         "value": 565,
-        "label": "\u7a81\u5c3c\u65af"
+        "label": "土耳其"
       },
       {
         "value": 566,
-        "label": "\u571f\u8033\u5176"
+        "label": "瓦努阿图"
       },
       {
         "value": 567,
-        "label": "\u74e6\u52aa\u963f\u56fe"
+        "label": "危地马拉"
       },
       {
         "value": 568,
-        "label": "\u5371\u5730\u9a6c\u62c9"
+        "label": "委内瑞拉"
       },
       {
         "value": 569,
-        "label": "\u59d4\u5185\u745e\u62c9"
+        "label": "文莱"
       },
       {
         "value": 570,
-        "label": "\u6587\u83b1"
+        "label": "乌干达"
       },
       {
         "value": 571,
-        "label": "\u4e4c\u5e72\u8fbe"
-      },
-      {
-        "value": 572,
-        "label": "\u4e4c\u514b\u5170",
+        "label": "乌克兰",
         "children": [
           {
-            "value": 573,
-            "label": "\u4e4c\u514b\u5170"
+            "value": 572,
+            "label": "乌克兰"
           },
           {
-            "value": 574,
+            "value": 573,
             "label": "Cherkasy Oblast"
           },
           {
-            "value": 575,
+            "value": 574,
             "label": "Chernihiv Oblast"
           },
           {
-            "value": 576,
+            "value": 575,
             "label": "Chernivtsi Oblast"
           },
           {
-            "value": 577,
+            "value": 576,
             "label": "Crimea Republic*"
           },
           {
-            "value": 578,
+            "value": 577,
             "label": "Dnipropetrovsk Oblast"
           },
           {
-            "value": 579,
+            "value": 578,
             "label": "Donetsk Oblast"
           },
           {
-            "value": 580,
+            "value": 579,
             "label": "Ivano-Frankivsk Oblast"
           },
           {
-            "value": 581,
+            "value": 580,
             "label": "Kharkiv Oblast"
           },
           {
-            "value": 582,
+            "value": 581,
             "label": "Kherson Oblast"
           },
           {
-            "value": 583,
+            "value": 582,
             "label": "Khmelnytskyi Oblast"
           },
           {
-            "value": 584,
+            "value": 583,
             "label": "Kiev"
           },
           {
-            "value": 585,
+            "value": 584,
             "label": "Kiev Oblast"
           },
           {
-            "value": 586,
+            "value": 585,
             "label": "Kirovohrad Oblast"
           },
           {
-            "value": 587,
+            "value": 586,
             "label": "Luhansk Oblast"
           },
           {
-            "value": 588,
+            "value": 587,
             "label": "Lviv Oblast"
           },
           {
-            "value": 589,
+            "value": 588,
             "label": "Mykolaiv Oblast"
           },
           {
-            "value": 590,
+            "value": 589,
             "label": "Odessa Oblast"
           },
           {
-            "value": 591,
+            "value": 590,
             "label": "Poltava Oblast"
           },
           {
-            "value": 592,
+            "value": 591,
             "label": "Rivne Oblast"
           },
           {
-            "value": 593,
+            "value": 592,
             "label": "Sevastopol*"
           },
           {
-            "value": 594,
+            "value": 593,
             "label": "Sumy Oblast"
           },
           {
-            "value": 595,
+            "value": 594,
             "label": "Ternopil Oblast"
           },
           {
-            "value": 596,
+            "value": 595,
             "label": "Vinnytsia Oblast"
           },
           {
-            "value": 597,
+            "value": 596,
             "label": "Volyn Oblast"
           },
           {
-            "value": 598,
+            "value": 597,
             "label": "Zakarpattia Oblast"
           },
           {
-            "value": 599,
+            "value": 598,
             "label": "Zaporizhia Oblast"
           },
           {
-            "value": 600,
+            "value": 599,
             "label": "Zhytomyr Oblast"
           }
         ]
       },
       {
+        "value": 600,
+        "label": "乌拉圭"
+      },
+      {
         "value": 601,
-        "label": "\u4e4c\u62c9\u572d"
+        "label": "乌兹别克斯坦"
       },
       {
         "value": 602,
-        "label": "\u4e4c\u5179\u522b\u514b\u65af\u5766"
-      },
-      {
-        "value": 603,
-        "label": "\u897f\u73ed\u7259",
+        "label": "西班牙",
         "children": [
           {
-            "value": 604,
-            "label": "\u897f\u73ed\u7259"
+            "value": 603,
+            "label": "西班牙"
           },
           {
-            "value": 605,
+            "value": 604,
             "label": "Andalusia"
           },
           {
-            "value": 606,
+            "value": 605,
             "label": "Aragon"
           },
           {
-            "value": 607,
+            "value": 606,
             "label": "Asturias"
           },
           {
-            "value": 608,
+            "value": 607,
             "label": "Baleares"
           },
           {
-            "value": 609,
+            "value": 608,
             "label": "C. Valenciana"
           },
           {
-            "value": 610,
+            "value": 609,
             "label": "Canarias"
           },
           {
-            "value": 611,
+            "value": 610,
             "label": "Cantabria"
           },
           {
-            "value": 612,
+            "value": 611,
             "label": "Castilla - La Mancha"
           },
           {
-            "value": 613,
+            "value": 612,
             "label": "Castilla y Leon"
           },
           {
-            "value": 614,
+            "value": 613,
             "label": "Catalonia"
           },
           {
-            "value": 615,
+            "value": 614,
             "label": "Ceuta"
           },
           {
-            "value": 616,
+            "value": 615,
             "label": "Extremadura"
           },
           {
-            "value": 617,
+            "value": 616,
             "label": "Galicia"
           },
           {
-            "value": 618,
+            "value": 617,
             "label": "La Rioja"
           },
           {
-            "value": 619,
+            "value": 618,
             "label": "Madrid"
           },
           {
-            "value": 620,
+            "value": 619,
             "label": "Melilla"
           },
           {
-            "value": 621,
+            "value": 620,
             "label": "Murcia"
           },
           {
-            "value": 622,
+            "value": 621,
             "label": "Navarra"
           },
           {
-            "value": 623,
+            "value": 622,
             "label": "Pais Vasco"
           }
         ]
       },
       {
+        "value": 623,
+        "label": "希腊"
+      },
+      {
         "value": 624,
-        "label": "\u5e0c\u814a"
+        "label": "新加坡"
       },
       {
         "value": 625,
-        "label": "\u65b0\u52a0\u5761"
+        "label": "新西兰"
       },
       {
         "value": 626,
-        "label": "\u65b0\u897f\u5170"
+        "label": "匈牙利"
       },
       {
         "value": 627,
-        "label": "\u5308\u7259\u5229"
+        "label": "叙利亚"
       },
       {
         "value": 628,
-        "label": "\u53d9\u5229\u4e9a"
+        "label": "牙买加"
       },
       {
         "value": 629,
-        "label": "\u7259\u4e70\u52a0"
+        "label": "亚美尼亚"
       },
       {
         "value": 630,
-        "label": "\u4e9a\u7f8e\u5c3c\u4e9a"
+        "label": "也门"
       },
       {
         "value": 631,
-        "label": "\u4e5f\u95e8"
+        "label": "伊拉克"
       },
       {
         "value": 632,
-        "label": "\u4f0a\u62c9\u514b"
+        "label": "伊朗"
       },
       {
         "value": 633,
-        "label": "\u4f0a\u6717"
+        "label": "以色列"
       },
       {
         "value": 634,
-        "label": "\u4ee5\u8272\u5217"
-      },
-      {
-        "value": 635,
-        "label": "\u610f\u5927\u5229",
+        "label": "意大利",
         "children": [
           {
-            "value": 636,
-            "label": "\u610f\u5927\u5229"
+            "value": 635,
+            "label": "意大利"
           },
           {
-            "value": 637,
+            "value": 636,
             "label": "Abruzzo"
           },
           {
-            "value": 638,
+            "value": 637,
             "label": "Basilicata"
           },
           {
-            "value": 639,
+            "value": 638,
             "label": "Calabria"
           },
           {
-            "value": 640,
+            "value": 639,
             "label": "Campania"
           },
           {
-            "value": 641,
+            "value": 640,
             "label": "Emilia-Romagna"
           },
           {
-            "value": 642,
+            "value": 641,
             "label": "Friuli Venezia Giulia"
           },
           {
-            "value": 643,
+            "value": 642,
             "label": "Lazio"
           },
           {
-            "value": 644,
+            "value": 643,
             "label": "Liguria"
           },
           {
-            "value": 645,
+            "value": 644,
             "label": "Lombardia"
           },
           {
-            "value": 646,
+            "value": 645,
             "label": "Marche"
           },
           {
-            "value": 647,
+            "value": 646,
             "label": "Molise"
           },
           {
-            "value": 648,
+            "value": 647,
             "label": "P.A. Bolzano"
           },
           {
-            "value": 649,
+            "value": 648,
             "label": "P.A. Trento"
           },
           {
-            "value": 650,
+            "value": 649,
             "label": "Piemonte"
           },
           {
-            "value": 651,
+            "value": 650,
             "label": "Puglia"
           },
           {
-            "value": 652,
+            "value": 651,
             "label": "Sardegna"
           },
           {
-            "value": 653,
+            "value": 652,
             "label": "Sicilia"
           },
           {
-            "value": 654,
+            "value": 653,
             "label": "Toscana"
           },
           {
-            "value": 655,
+            "value": 654,
             "label": "Umbria"
           },
           {
-            "value": 656,
+            "value": 655,
             "label": "Valle d'Aosta"
           },
           {
-            "value": 657,
+            "value": 656,
             "label": "Veneto"
           }
         ]
       },
       {
-        "value": 658,
-        "label": "\u5370\u5ea6",
+        "value": 657,
+        "label": "印度",
         "children": [
           {
-            "value": 659,
-            "label": "\u5370\u5ea6"
+            "value": 658,
+            "label": "印度"
           },
           {
-            "value": 660,
+            "value": 659,
             "label": "Andaman and Nicobar Islands"
           },
           {
-            "value": 661,
+            "value": 660,
             "label": "Andhra Pradesh"
           },
           {
-            "value": 662,
+            "value": 661,
             "label": "Arunachal Pradesh"
           },
           {
-            "value": 663,
+            "value": 662,
             "label": "Assam"
           },
           {
-            "value": 664,
+            "value": 663,
             "label": "Bihar"
           },
           {
-            "value": 665,
+            "value": 664,
             "label": "Chandigarh"
           },
           {
-            "value": 666,
+            "value": 665,
             "label": "Chhattisgarh"
           },
           {
-            "value": 667,
+            "value": 666,
             "label": "Dadra and Nagar Haveli and Daman and Diu"
           },
           {
-            "value": 668,
+            "value": 667,
             "label": "Delhi"
           },
           {
-            "value": 669,
+            "value": 668,
             "label": "Goa"
           },
           {
-            "value": 670,
+            "value": 669,
             "label": "Gujarat"
           },
           {
-            "value": 671,
+            "value": 670,
             "label": "Haryana"
           },
           {
-            "value": 672,
+            "value": 671,
             "label": "Himachal Pradesh"
           },
           {
-            "value": 673,
+            "value": 672,
             "label": "Jammu and Kashmir"
           },
           {
-            "value": 674,
+            "value": 673,
             "label": "Jharkhand"
           },
           {
-            "value": 675,
+            "value": 674,
             "label": "Karnataka"
           },
           {
-            "value": 676,
+            "value": 675,
             "label": "Kerala"
           },
           {
-            "value": 677,
+            "value": 676,
             "label": "Ladakh"
           },
           {
-            "value": 678,
+            "value": 677,
             "label": "Lakshadweep"
           },
           {
-            "value": 679,
+            "value": 678,
             "label": "Madhya Pradesh"
           },
           {
-            "value": 680,
+            "value": 679,
             "label": "Maharashtra"
           },
           {
-            "value": 681,
+            "value": 680,
             "label": "Manipur"
           },
           {
-            "value": 682,
+            "value": 681,
             "label": "Meghalaya"
           },
           {
-            "value": 683,
+            "value": 682,
             "label": "Mizoram"
           },
           {
-            "value": 684,
+            "value": 683,
             "label": "Nagaland"
           },
           {
-            "value": 685,
+            "value": 684,
             "label": "Odisha"
           },
           {
-            "value": 686,
+            "value": 685,
             "label": "Puducherry"
           },
           {
-            "value": 687,
+            "value": 686,
             "label": "Punjab"
           },
           {
-            "value": 688,
+            "value": 687,
             "label": "Rajasthan"
           },
           {
-            "value": 689,
+            "value": 688,
             "label": "Sikkim"
           },
           {
-            "value": 690,
+            "value": 689,
             "label": "Tamil Nadu"
           },
           {
-            "value": 691,
+            "value": 690,
             "label": "Telangana"
           },
           {
-            "value": 692,
+            "value": 691,
             "label": "Tripura"
           },
           {
-            "value": 693,
+            "value": 692,
             "label": "Uttar Pradesh"
           },
           {
-            "value": 694,
+            "value": 693,
             "label": "Uttarakhand"
           },
           {
-            "value": 695,
+            "value": 694,
             "label": "West Bengal"
           }
         ]
       },
       {
-        "value": 696,
-        "label": "\u5370\u5ea6\u5c3c\u897f\u4e9a"
+        "value": 695,
+        "label": "印度尼西亚"
       },
       {
-        "value": 697,
-        "label": "\u82f1\u56fd",
+        "value": 696,
+        "label": "英国",
         "children": [
           {
-            "value": 698,
-            "label": "\u82f1\u56fd"
+            "value": 697,
+            "label": "英国"
           },
           {
-            "value": 699,
+            "value": 698,
             "label": "Anguilla"
           },
           {
-            "value": 700,
+            "value": 699,
             "label": "Bermuda"
           },
           {
-            "value": 701,
+            "value": 700,
             "label": "British Virgin Islands"
           },
           {
-            "value": 702,
+            "value": 701,
             "label": "Cayman Islands"
           },
           {
-            "value": 703,
+            "value": 702,
             "label": "Channel Islands"
           },
           {
-            "value": 704,
+            "value": 703,
             "label": "England"
           },
           {
-            "value": 705,
+            "value": 704,
             "label": "Falkland Islands (Malvinas)"
           },
           {
-            "value": 706,
+            "value": 705,
             "label": "Gibraltar"
           },
           {
-            "value": 707,
+            "value": 706,
             "label": "Isle of Man"
           },
           {
-            "value": 708,
+            "value": 707,
             "label": "Montserrat"
           },
           {
-            "value": 709,
+            "value": 708,
             "label": "Northern Ireland"
           },
           {
-            "value": 710,
+            "value": 709,
             "label": "Saint Helena, Ascension and Tristan da Cunha"
           },
           {
-            "value": 711,
+            "value": 710,
             "label": "Scotland"
           },
           {
-            "value": 712,
+            "value": 711,
             "label": "Turks and Caicos Islands"
           },
           {
-            "value": 713,
+            "value": 712,
             "label": "Wales"
           }
         ]
       },
       {
+        "value": 713,
+        "label": "约旦"
+      },
+      {
         "value": 714,
-        "label": "\u7ea6\u65e6"
+        "label": "越南"
       },
       {
         "value": 715,
-        "label": "\u8d8a\u5357"
+        "label": "赞比亚"
       },
       {
         "value": 716,
-        "label": "\u8d5e\u6bd4\u4e9a"
+        "label": "乍得"
       },
       {
         "value": 717,
-        "label": "\u4e4d\u5f97"
-      },
-      {
-        "value": 718,
-        "label": "\u667a\u5229",
+        "label": "智利",
         "children": [
           {
-            "value": 719,
-            "label": "\u667a\u5229"
+            "value": 718,
+            "label": "智利"
           },
           {
-            "value": 720,
+            "value": 719,
             "label": "Antofagasta"
           },
           {
-            "value": 721,
+            "value": 720,
             "label": "Araucania"
           },
           {
-            "value": 722,
+            "value": 721,
             "label": "Arica y Parinacota"
           },
           {
-            "value": 723,
+            "value": 722,
             "label": "Atacama"
           },
           {
-            "value": 724,
+            "value": 723,
             "label": "Aysen"
           },
           {
-            "value": 725,
+            "value": 724,
             "label": "Biobio"
           },
           {
-            "value": 726,
+            "value": 725,
             "label": "Coquimbo"
           },
           {
-            "value": 727,
+            "value": 726,
             "label": "Los Lagos"
           },
           {
-            "value": 728,
+            "value": 727,
             "label": "Los Rios"
           },
           {
-            "value": 729,
+            "value": 728,
             "label": "Magallanes"
           },
           {
-            "value": 730,
+            "value": 729,
             "label": "Maule"
           },
           {
-            "value": 731,
+            "value": 730,
             "label": "Metropolitana"
           },
           {
-            "value": 732,
+            "value": 731,
             "label": "Nuble"
           },
           {
-            "value": 733,
+            "value": 732,
             "label": "OHiggins"
           },
           {
-            "value": 734,
+            "value": 733,
             "label": "Tarapaca"
           },
           {
-            "value": 735,
+            "value": 734,
             "label": "Valparaiso"
           }
         ]
       },
       {
-        "value": 736,
-        "label": "\u4e2d\u975e\u5171\u548c\u56fd"
+        "value": 735,
+        "label": "中非共和国"
       },
       {
-        "value": 737,
-        "label": "\u94bb\u77f3\u53f7\u90ae\u8f6e"
+        "value": 736,
+        "label": "钻石号邮轮"
       }
     ]
   },
   {
-    "value": 738,
-    "label": "\u56fd\u5185",
+    "value": 737,
+    "label": "国内",
     "children": [
       {
-        "value": 739,
-        "label": "\u4e2d\u56fd"
+        "value": 738,
+        "label": "中国"
       },
       {
-        "value": 740,
-        "label": "\u5b89\u5fbd",
+        "value": 739,
+        "label": "安徽",
         "children": [
           {
+            "value": 740,
+            "label": "安徽"
+          },
+          {
             "value": 741,
-            "label": "\u5b89\u5fbd"
+            "label": "安庆"
           },
           {
             "value": 742,
-            "label": "\u5b89\u5e86"
-          },
-          {
-            "value": 743,
-            "label": "\u868c\u57e0"
+            "label": "蚌埠"
           },
           {
             "value": 744,
-            "label": "\u4eb3\u5dde"
+            "label": "池州"
           },
           {
             "value": 745,
-            "label": "\u6c60\u5dde"
+            "label": "滁州"
           },
           {
             "value": 746,
-            "label": "\u6ec1\u5dde"
+            "label": "阜阳"
           },
           {
             "value": 747,
-            "label": "\u961c\u9633"
+            "label": "合肥"
           },
           {
             "value": 748,
-            "label": "\u5408\u80a5"
+            "label": "淮北"
           },
           {
             "value": 749,
-            "label": "\u6dee\u5317"
+            "label": "淮南"
           },
           {
             "value": 750,
-            "label": "\u6dee\u5357"
+            "label": "黄山"
           },
           {
             "value": 751,
-            "label": "\u9ec4\u5c71"
+            "label": "六安"
           },
           {
             "value": 752,
-            "label": "\u516d\u5b89"
+            "label": "马鞍山"
           },
           {
             "value": 753,
-            "label": "\u9a6c\u978d\u5c71"
+            "label": "宿州"
           },
           {
             "value": 754,
-            "label": "\u5bbf\u5dde"
+            "label": "铜陵"
           },
           {
             "value": 755,
-            "label": "\u94dc\u9675"
+            "label": "芜湖"
           },
           {
             "value": 756,
-            "label": "\u829c\u6e56"
-          },
-          {
-            "value": 757,
-            "label": "\u5ba3\u57ce"
+            "label": "宣城"
           }
         ]
       },
       {
-        "value": 759,
-        "label": "\u5317\u4eac",
+        "value": 757,
+        "label": "澳门"
+      },
+      {
+        "value": 758,
+        "label": "北京",
         "children": [
           {
+            "value": 759,
+            "label": "北京"
+          },
+          {
             "value": 760,
-            "label": "\u5317\u4eac"
+            "label": "昌平"
           },
           {
             "value": 761,
-            "label": "\u660c\u5e73"
+            "label": "朝阳"
           },
           {
             "value": 762,
-            "label": "\u671d\u9633"
+            "label": "大兴"
           },
           {
             "value": 763,
-            "label": "\u5927\u5174"
+            "label": "东城"
           },
           {
             "value": 764,
-            "label": "\u4e1c\u57ce"
+            "label": "房山"
           },
           {
             "value": 765,
-            "label": "\u623f\u5c71"
+            "label": "丰台"
           },
           {
             "value": 766,
-            "label": "\u4e30\u53f0"
+            "label": "海淀"
           },
           {
             "value": 767,
-            "label": "\u6d77\u6dc0"
+            "label": "怀柔"
           },
           {
             "value": 768,
-            "label": "\u6000\u67d4"
+            "label": "门头沟"
           },
           {
             "value": 769,
-            "label": "\u95e8\u5934\u6c9f"
+            "label": "密云"
           },
           {
             "value": 770,
-            "label": "\u5bc6\u4e91"
+            "label": "石景山"
           },
           {
             "value": 771,
-            "label": "\u77f3\u666f\u5c71"
+            "label": "顺义"
           },
           {
             "value": 772,
-            "label": "\u987a\u4e49"
+            "label": "通州"
           },
           {
             "value": 773,
-            "label": "\u901a\u5dde"
+            "label": "西城"
           },
           {
             "value": 774,
-            "label": "\u897f\u57ce"
-          },
-          {
-            "value": 775,
-            "label": "\u5ef6\u5e86"
+            "label": "延庆"
           }
         ]
       },
       {
-        "value": 776,
-        "label": "\u798f\u5efa",
+        "value": 775,
+        "label": "福建",
         "children": [
           {
+            "value": 776,
+            "label": "福建"
+          },
+          {
             "value": 777,
-            "label": "\u798f\u5efa"
+            "label": "福州"
           },
           {
             "value": 778,
-            "label": "\u798f\u5dde"
+            "label": "龙岩"
           },
           {
             "value": 779,
-            "label": "\u9f99\u5ca9"
+            "label": "南平"
           },
           {
             "value": 780,
-            "label": "\u5357\u5e73"
+            "label": "宁德"
           },
           {
             "value": 781,
-            "label": "\u5b81\u5fb7"
+            "label": "莆田"
           },
           {
             "value": 782,
-            "label": "\u8386\u7530"
+            "label": "泉州"
           },
           {
             "value": 783,
-            "label": "\u6cc9\u5dde"
+            "label": "三明"
           },
           {
             "value": 784,
-            "label": "\u4e09\u660e"
+            "label": "厦门"
           },
           {
             "value": 785,
-            "label": "\u53a6\u95e8"
-          },
-          {
-            "value": 786,
-            "label": "\u6f33\u5dde"
+            "label": "漳州"
           }
         ]
       },
       {
-        "value": 787,
-        "label": "\u7518\u8083",
+        "value": 786,
+        "label": "甘肃",
         "children": [
           {
+            "value": 787,
+            "label": "甘肃"
+          },
+          {
             "value": 788,
-            "label": "\u7518\u8083"
+            "label": "白银"
           },
           {
             "value": 789,
-            "label": "\u767d\u94f6"
+            "label": "定西"
           },
           {
             "value": 790,
-            "label": "\u5b9a\u897f"
+            "label": "甘南州"
           },
           {
             "value": 791,
-            "label": "\u7518\u5357\u5dde"
+            "label": "金昌"
           },
           {
             "value": 792,
-            "label": "\u91d1\u660c"
+            "label": "兰州"
           },
           {
             "value": 793,
-            "label": "\u5170\u5dde"
+            "label": "临夏"
           },
           {
             "value": 794,
-            "label": "\u4e34\u590f"
+            "label": "陇南"
           },
           {
             "value": 795,
-            "label": "\u9647\u5357"
+            "label": "平凉"
           },
           {
             "value": 796,
-            "label": "\u5e73\u51c9"
+            "label": "庆阳"
           },
           {
             "value": 797,
-            "label": "\u5e86\u9633"
+            "label": "天水"
           },
           {
             "value": 798,
-            "label": "\u5929\u6c34"
-          },
-          {
-            "value": 799,
-            "label": "\u5f20\u6396"
+            "label": "张掖"
           }
         ]
       },
       {
-        "value": 800,
-        "label": "\u5e7f\u4e1c",
+        "value": 799,
+        "label": "广东",
         "children": [
           {
+            "value": 800,
+            "label": "广东"
+          },
+          {
             "value": 801,
-            "label": "\u5e7f\u4e1c"
+            "label": "潮州"
           },
           {
             "value": 802,
-            "label": "\u6f6e\u5dde"
+            "label": "东莞"
           },
           {
             "value": 803,
-            "label": "\u4e1c\u839e"
+            "label": "佛山"
           },
           {
             "value": 804,
-            "label": "\u4f5b\u5c71"
+            "label": "广州"
           },
           {
             "value": 805,
-            "label": "\u5e7f\u5dde"
+            "label": "河源"
           },
           {
             "value": 806,
-            "label": "\u6cb3\u6e90"
+            "label": "惠州"
           },
           {
             "value": 807,
-            "label": "\u60e0\u5dde"
+            "label": "江门"
           },
           {
             "value": 808,
-            "label": "\u6c5f\u95e8"
+            "label": "揭阳"
           },
           {
             "value": 809,
-            "label": "\u63ed\u9633"
+            "label": "茂名"
           },
           {
             "value": 810,
-            "label": "\u8302\u540d"
+            "label": "梅州"
           },
           {
             "value": 811,
-            "label": "\u6885\u5dde"
+            "label": "清远"
           },
           {
             "value": 812,
-            "label": "\u6e05\u8fdc"
+            "label": "汕头"
           },
           {
             "value": 813,
-            "label": "\u6c55\u5934"
+            "label": "汕尾"
           },
           {
             "value": 814,
-            "label": "\u6c55\u5c3e"
+            "label": "韶关"
           },
           {
             "value": 815,
-            "label": "\u97f6\u5173"
+            "label": "深圳"
           },
           {
             "value": 816,
-            "label": "\u6df1\u5733"
+            "label": "阳江"
           },
           {
             "value": 817,
-            "label": "\u9633\u6c5f"
+            "label": "湛江"
           },
           {
             "value": 818,
-            "label": "\u6e5b\u6c5f"
+            "label": "肇庆"
           },
           {
             "value": 819,
-            "label": "\u8087\u5e86"
+            "label": "中山"
           },
           {
             "value": 820,
-            "label": "\u4e2d\u5c71"
-          },
-          {
-            "value": 821,
-            "label": "\u73e0\u6d77"
+            "label": "珠海"
           }
         ]
       },
       {
-        "value": 822,
-        "label": "\u5e7f\u897f",
+        "value": 821,
+        "label": "广西",
         "children": [
           {
+            "value": 822,
+            "label": "广西"
+          },
+          {
             "value": 823,
-            "label": "\u5e7f\u897f"
+            "label": "百色"
           },
           {
             "value": 824,
-            "label": "\u767e\u8272"
+            "label": "北海"
           },
           {
             "value": 825,
-            "label": "\u5317\u6d77"
+            "label": "防城港"
           },
           {
             "value": 826,
-            "label": "\u9632\u57ce\u6e2f"
+            "label": "贵港"
           },
           {
             "value": 827,
-            "label": "\u8d35\u6e2f"
+            "label": "桂林"
           },
           {
             "value": 828,
-            "label": "\u6842\u6797"
+            "label": "河池"
           },
           {
             "value": 829,
-            "label": "\u6cb3\u6c60"
+            "label": "贺州"
           },
           {
             "value": 830,
-            "label": "\u8d3a\u5dde"
+            "label": "来宾"
           },
           {
             "value": 831,
-            "label": "\u6765\u5bbe"
+            "label": "柳州"
           },
           {
             "value": 832,
-            "label": "\u67f3\u5dde"
+            "label": "南宁"
           },
           {
             "value": 833,
-            "label": "\u5357\u5b81"
+            "label": "钦州"
           },
           {
             "value": 834,
-            "label": "\u94a6\u5dde"
+            "label": "梧州"
           },
           {
             "value": 835,
-            "label": "\u68a7\u5dde"
-          },
-          {
-            "value": 836,
-            "label": "\u7389\u6797"
+            "label": "玉林"
           }
         ]
       },
       {
-        "value": 837,
-        "label": "\u8d35\u5dde",
+        "value": 836,
+        "label": "贵州",
         "children": [
           {
+            "value": 837,
+            "label": "贵州"
+          },
+          {
             "value": 838,
-            "label": "\u8d35\u5dde"
+            "label": "安顺"
           },
           {
             "value": 839,
-            "label": "\u5b89\u987a"
+            "label": "毕节"
           },
           {
             "value": 840,
-            "label": "\u6bd5\u8282"
+            "label": "贵阳"
           },
           {
             "value": 841,
-            "label": "\u8d35\u9633"
+            "label": "六盘水"
           },
           {
             "value": 842,
-            "label": "\u516d\u76d8\u6c34"
+            "label": "黔东南州"
           },
           {
             "value": 843,
-            "label": "\u9ed4\u4e1c\u5357\u5dde"
+            "label": "黔南州"
           },
           {
             "value": 844,
-            "label": "\u9ed4\u5357\u5dde"
+            "label": "黔西南州"
           },
           {
             "value": 845,
-            "label": "\u9ed4\u897f\u5357\u5dde"
+            "label": "铜仁"
           },
           {
             "value": 846,
-            "label": "\u94dc\u4ec1"
-          },
-          {
-            "value": 847,
-            "label": "\u9075\u4e49"
+            "label": "遵义"
           }
         ]
       },
       {
-        "value": 848,
-        "label": "\u6d77\u5357",
+        "value": 847,
+        "label": "海南",
         "children": [
           {
-            "value": 849,
-            "label": "\u6d77\u5357"
+            "value": 848,
+            "label": "海南"
           },
           {
             "value": 850,
-            "label": "\u4fdd\u4ead"
+            "label": "昌江县"
           },
           {
             "value": 851,
-            "label": "\u660c\u6c5f\u53bf"
+            "label": "澄迈县"
           },
           {
             "value": 852,
-            "label": "\u6f84\u8fc8\u53bf"
+            "label": "儋州"
           },
           {
             "value": 853,
-            "label": "\u510b\u5dde"
+            "label": "定安县"
           },
           {
             "value": 854,
-            "label": "\u5b9a\u5b89\u53bf"
+            "label": "东方"
           },
           {
             "value": 855,
-            "label": "\u4e1c\u65b9"
+            "label": "海口"
           },
           {
             "value": 856,
-            "label": "\u6d77\u53e3"
+            "label": "乐东"
           },
           {
             "value": 857,
-            "label": "\u4e50\u4e1c"
+            "label": "临高县"
           },
           {
             "value": 858,
-            "label": "\u4e34\u9ad8\u53bf"
+            "label": "陵水县"
           },
           {
             "value": 859,
-            "label": "\u9675\u6c34\u53bf"
+            "label": "琼海"
           },
           {
             "value": 860,
-            "label": "\u743c\u6d77"
+            "label": "琼中县"
           },
           {
             "value": 861,
-            "label": "\u743c\u4e2d\u53bf"
+            "label": "三亚"
           },
           {
             "value": 862,
-            "label": "\u4e09\u4e9a"
+            "label": "万宁"
           },
           {
             "value": 863,
-            "label": "\u4e07\u5b81"
-          },
-          {
-            "value": 864,
-            "label": "\u6587\u660c"
+            "label": "文昌"
           }
         ]
       },
       {
-        "value": 865,
-        "label": "\u6cb3\u5317",
+        "value": 864,
+        "label": "河北",
         "children": [
           {
+            "value": 865,
+            "label": "河北"
+          },
+          {
             "value": 866,
-            "label": "\u6cb3\u5317"
+            "label": "保定"
           },
           {
             "value": 867,
-            "label": "\u4fdd\u5b9a"
+            "label": "沧州"
           },
           {
             "value": 868,
-            "label": "\u6ca7\u5dde"
+            "label": "承德"
           },
           {
             "value": 869,
-            "label": "\u627f\u5fb7"
+            "label": "邯郸"
           },
           {
             "value": 870,
-            "label": "\u90af\u90f8"
+            "label": "衡水"
           },
           {
             "value": 871,
-            "label": "\u8861\u6c34"
+            "label": "廊坊"
           },
           {
             "value": 872,
-            "label": "\u5eca\u574a"
+            "label": "秦皇岛"
           },
           {
             "value": 873,
-            "label": "\u79e6\u7687\u5c9b"
+            "label": "石家庄"
           },
           {
             "value": 874,
-            "label": "\u77f3\u5bb6\u5e84"
+            "label": "唐山"
           },
           {
             "value": 875,
-            "label": "\u5510\u5c71"
+            "label": "邢台"
           },
           {
             "value": 876,
-            "label": "\u90a2\u53f0"
-          },
-          {
-            "value": 877,
-            "label": "\u5f20\u5bb6\u53e3"
+            "label": "张家口"
           }
         ]
       },
       {
-        "value": 878,
-        "label": "\u6cb3\u5357",
+        "value": 877,
+        "label": "河南",
         "children": [
           {
+            "value": 878,
+            "label": "河南"
+          },
+          {
             "value": 879,
-            "label": "\u6cb3\u5357"
+            "label": "安阳"
           },
           {
             "value": 880,
-            "label": "\u5b89\u9633"
+            "label": "鹤壁"
           },
           {
             "value": 881,
-            "label": "\u9e64\u58c1"
+            "label": "济源示范区"
           },
           {
             "value": 882,
-            "label": "\u6d4e\u6e90\u793a\u8303\u533a"
+            "label": "焦作"
           },
           {
             "value": 883,
-            "label": "\u7126\u4f5c"
+            "label": "开封"
           },
           {
             "value": 884,
-            "label": "\u5f00\u5c01"
+            "label": "洛阳"
           },
           {
             "value": 885,
-            "label": "\u6d1b\u9633"
+            "label": "漯河"
           },
           {
             "value": 886,
-            "label": "\u6f2f\u6cb3"
+            "label": "南阳"
           },
           {
             "value": 887,
-            "label": "\u5357\u9633"
+            "label": "平顶山"
           },
           {
             "value": 888,
-            "label": "\u5e73\u9876\u5c71"
+            "label": "濮阳"
           },
           {
             "value": 889,
-            "label": "\u6fee\u9633"
+            "label": "三门峡"
           },
           {
             "value": 890,
-            "label": "\u4e09\u95e8\u5ce1"
+            "label": "商丘"
           },
           {
             "value": 891,
-            "label": "\u5546\u4e18"
+            "label": "新乡"
           },
           {
             "value": 892,
-            "label": "\u65b0\u4e61"
+            "label": "信阳"
           },
           {
             "value": 893,
-            "label": "\u4fe1\u9633"
+            "label": "许昌"
           },
           {
             "value": 894,
-            "label": "\u8bb8\u660c"
+            "label": "郑州"
           },
           {
             "value": 895,
-            "label": "\u90d1\u5dde"
+            "label": "周口"
           },
           {
             "value": 896,
-            "label": "\u5468\u53e3"
-          },
-          {
-            "value": 897,
-            "label": "\u9a7b\u9a6c\u5e97"
+            "label": "驻马店"
           }
         ]
       },
       {
-        "value": 898,
-        "label": "\u9ed1\u9f99\u6c5f",
+        "value": 897,
+        "label": "黑龙江",
         "children": [
           {
+            "value": 898,
+            "label": "黑龙江"
+          },
+          {
             "value": 899,
-            "label": "\u9ed1\u9f99\u6c5f"
+            "label": "大庆"
           },
           {
             "value": 900,
-            "label": "\u5927\u5e86"
+            "label": "大兴安岭"
           },
           {
             "value": 901,
-            "label": "\u5927\u5174\u5b89\u5cad"
+            "label": "哈尔滨"
           },
           {
             "value": 902,
-            "label": "\u54c8\u5c14\u6ee8"
+            "label": "鹤岗"
           },
           {
             "value": 903,
-            "label": "\u9e64\u5c97"
+            "label": "黑河"
           },
           {
             "value": 904,
-            "label": "\u9ed1\u6cb3"
+            "label": "鸡西"
           },
           {
             "value": 905,
-            "label": "\u9e21\u897f"
+            "label": "佳木斯"
           },
           {
             "value": 906,
-            "label": "\u4f73\u6728\u65af"
+            "label": "牡丹江"
           },
           {
             "value": 907,
-            "label": "\u7261\u4e39\u6c5f"
+            "label": "七台河"
           },
           {
             "value": 908,
-            "label": "\u4e03\u53f0\u6cb3"
+            "label": "齐齐哈尔"
           },
           {
             "value": 909,
-            "label": "\u9f50\u9f50\u54c8\u5c14"
+            "label": "双鸭山"
           },
           {
             "value": 910,
-            "label": "\u53cc\u9e2d\u5c71"
+            "label": "绥化"
           },
           {
             "value": 911,
-            "label": "\u7ee5\u5316"
-          },
-          {
-            "value": 912,
-            "label": "\u4f0a\u6625"
+            "label": "伊春"
           }
         ]
       },
       {
-        "value": 913,
-        "label": "\u6e56\u5317",
+        "value": 912,
+        "label": "湖北",
         "children": [
           {
+            "value": 913,
+            "label": "湖北"
+          },
+          {
             "value": 914,
-            "label": "\u6e56\u5317"
+            "label": "鄂州"
           },
           {
             "value": 915,
-            "label": "\u9102\u5dde"
+            "label": "恩施州"
           },
           {
             "value": 916,
-            "label": "\u6069\u65bd\u5dde"
+            "label": "黄冈"
           },
           {
             "value": 917,
-            "label": "\u9ec4\u5188"
+            "label": "黄石"
           },
           {
             "value": 918,
-            "label": "\u9ec4\u77f3"
+            "label": "荆门"
           },
           {
             "value": 919,
-            "label": "\u8346\u95e8"
+            "label": "荆州"
           },
           {
             "value": 920,
-            "label": "\u8346\u5dde"
+            "label": "潜江"
           },
           {
             "value": 921,
-            "label": "\u6f5c\u6c5f"
+            "label": "神农架"
           },
           {
             "value": 922,
-            "label": "\u795e\u519c\u67b6"
+            "label": "十堰"
           },
           {
             "value": 923,
-            "label": "\u5341\u5830"
+            "label": "随州"
           },
           {
             "value": 924,
-            "label": "\u968f\u5dde"
+            "label": "天门"
           },
           {
             "value": 925,
-            "label": "\u5929\u95e8"
+            "label": "武汉"
           },
           {
             "value": 926,
-            "label": "\u6b66\u6c49"
+            "label": "仙桃"
           },
           {
             "value": 927,
-            "label": "\u4ed9\u6843"
+            "label": "咸宁"
           },
           {
             "value": 928,
-            "label": "\u54b8\u5b81"
+            "label": "襄阳"
           },
           {
             "value": 929,
-            "label": "\u8944\u9633"
+            "label": "孝感"
           },
           {
             "value": 930,
-            "label": "\u5b5d\u611f"
-          },
-          {
-            "value": 931,
-            "label": "\u5b9c\u660c"
+            "label": "宜昌"
           }
         ]
       },
       {
-        "value": 932,
-        "label": "\u6e56\u5357",
+        "value": 931,
+        "label": "湖南",
         "children": [
           {
+            "value": 932,
+            "label": "湖南"
+          },
+          {
             "value": 933,
-            "label": "\u6e56\u5357"
+            "label": "长沙"
           },
           {
             "value": 934,
-            "label": "\u957f\u6c99"
+            "label": "常德"
           },
           {
             "value": 935,
-            "label": "\u5e38\u5fb7"
+            "label": "郴州"
           },
           {
             "value": 936,
-            "label": "\u90f4\u5dde"
+            "label": "衡阳"
           },
           {
             "value": 937,
-            "label": "\u8861\u9633"
+            "label": "怀化"
           },
           {
             "value": 938,
-            "label": "\u6000\u5316"
+            "label": "娄底"
           },
           {
             "value": 939,
-            "label": "\u5a04\u5e95"
+            "label": "邵阳"
           },
           {
             "value": 940,
-            "label": "\u90b5\u9633"
+            "label": "湘潭"
           },
           {
             "value": 941,
-            "label": "\u6e58\u6f6d"
+            "label": "湘西自治州"
           },
           {
             "value": 942,
-            "label": "\u6e58\u897f\u81ea\u6cbb\u5dde"
+            "label": "益阳"
           },
           {
             "value": 943,
-            "label": "\u76ca\u9633"
+            "label": "永州"
           },
           {
             "value": 944,
-            "label": "\u6c38\u5dde"
+            "label": "岳阳"
           },
           {
             "value": 945,
-            "label": "\u5cb3\u9633"
+            "label": "张家界"
           },
           {
             "value": 946,
-            "label": "\u5f20\u5bb6\u754c"
-          },
-          {
-            "value": 947,
-            "label": "\u682a\u6d32"
+            "label": "株洲"
           }
         ]
       },
       {
-        "value": 948,
-        "label": "\u5409\u6797",
+        "value": 947,
+        "label": "吉林",
         "children": [
           {
+            "value": 948,
+            "label": "吉林"
+          },
+          {
             "value": 949,
-            "label": "\u5409\u6797"
+            "label": "白城"
           },
           {
             "value": 950,
-            "label": "\u767d\u57ce"
+            "label": "长春"
           },
           {
             "value": 951,
-            "label": "\u957f\u6625"
+            "label": "公主岭"
           },
           {
             "value": 952,
-            "label": "\u516c\u4e3b\u5cad"
+            "label": "吉林市"
           },
           {
             "value": 953,
-            "label": "\u5409\u6797\u5e02"
-          },
-          {
-            "value": 954,
-            "label": "\u8fbd\u6e90"
+            "label": "辽源"
           },
           {
             "value": 955,
-            "label": "\u6885\u6cb3\u53e3\u5e02"
+            "label": "四平"
           },
           {
             "value": 956,
-            "label": "\u56db\u5e73"
+            "label": "松原"
           },
           {
             "value": 957,
-            "label": "\u677e\u539f"
+            "label": "通化"
           },
           {
             "value": 958,
-            "label": "\u901a\u5316"
-          },
-          {
-            "value": 959,
-            "label": "\u5ef6\u8fb9"
+            "label": "延边"
           }
         ]
       },
       {
-        "value": 960,
-        "label": "\u6c5f\u82cf",
+        "value": 959,
+        "label": "江苏",
         "children": [
           {
+            "value": 960,
+            "label": "江苏"
+          },
+          {
             "value": 961,
-            "label": "\u6c5f\u82cf"
+            "label": "常州"
           },
           {
             "value": 962,
-            "label": "\u5e38\u5dde"
+            "label": "淮安"
           },
           {
             "value": 963,
-            "label": "\u6dee\u5b89"
+            "label": "连云港"
           },
           {
             "value": 964,
-            "label": "\u8fde\u4e91\u6e2f"
+            "label": "南京"
           },
           {
             "value": 965,
-            "label": "\u5357\u4eac"
+            "label": "南通"
           },
           {
             "value": 966,
-            "label": "\u5357\u901a"
+            "label": "苏州"
           },
           {
             "value": 967,
-            "label": "\u82cf\u5dde"
+            "label": "宿迁"
           },
           {
             "value": 968,
-            "label": "\u5bbf\u8fc1"
+            "label": "泰州"
           },
           {
             "value": 969,
-            "label": "\u6cf0\u5dde"
+            "label": "无锡"
           },
           {
             "value": 970,
-            "label": "\u65e0\u9521"
+            "label": "徐州"
           },
           {
             "value": 971,
-            "label": "\u5f90\u5dde"
+            "label": "盐城"
           },
           {
             "value": 972,
-            "label": "\u76d0\u57ce"
+            "label": "扬州"
           },
           {
             "value": 973,
-            "label": "\u626c\u5dde"
-          },
-          {
-            "value": 974,
-            "label": "\u9547\u6c5f"
+            "label": "镇江"
           }
         ]
       },
       {
-        "value": 975,
-        "label": "\u6c5f\u897f",
+        "value": 974,
+        "label": "江西",
         "children": [
           {
+            "value": 975,
+            "label": "江西"
+          },
+          {
             "value": 976,
-            "label": "\u6c5f\u897f"
+            "label": "抚州"
           },
           {
             "value": 977,
-            "label": "\u629a\u5dde"
+            "label": "赣江新区"
           },
           {
             "value": 978,
-            "label": "\u8d63\u6c5f\u65b0\u533a"
+            "label": "赣州"
           },
           {
             "value": 979,
-            "label": "\u8d63\u5dde"
+            "label": "吉安"
           },
           {
             "value": 980,
-            "label": "\u5409\u5b89"
+            "label": "景德镇"
           },
           {
             "value": 981,
-            "label": "\u666f\u5fb7\u9547"
+            "label": "九江"
           },
           {
             "value": 982,
-            "label": "\u4e5d\u6c5f"
+            "label": "南昌"
           },
           {
             "value": 983,
-            "label": "\u5357\u660c"
+            "label": "萍乡"
           },
           {
             "value": 984,
-            "label": "\u840d\u4e61"
+            "label": "上饶"
           },
           {
             "value": 985,
-            "label": "\u4e0a\u9976"
+            "label": "新余"
           },
           {
             "value": 986,
-            "label": "\u65b0\u4f59"
+            "label": "宜春"
           },
           {
             "value": 987,
-            "label": "\u5b9c\u6625"
-          },
-          {
-            "value": 988,
-            "label": "\u9e70\u6f6d"
+            "label": "鹰潭"
           }
         ]
       },
       {
-        "value": 989,
-        "label": "\u8fbd\u5b81",
+        "value": 988,
+        "label": "辽宁",
         "children": [
           {
+            "value": 989,
+            "label": "辽宁"
+          },
+          {
             "value": 990,
-            "label": "\u8fbd\u5b81"
+            "label": "鞍山"
           },
           {
             "value": 991,
-            "label": "\u978d\u5c71"
+            "label": "本溪"
           },
           {
             "value": 992,
-            "label": "\u672c\u6eaa"
+            "label": "朝阳市"
           },
           {
             "value": 993,
-            "label": "\u671d\u9633\u5e02"
+            "label": "大连"
           },
           {
             "value": 994,
-            "label": "\u5927\u8fde"
-          },
-          {
-            "value": 995,
-            "label": "\u4e39\u4e1c"
+            "label": "丹东"
           },
           {
             "value": 996,
-            "label": "\u629a\u987a"
+            "label": "阜新"
           },
           {
             "value": 997,
-            "label": "\u961c\u65b0"
+            "label": "葫芦岛"
           },
           {
             "value": 998,
-            "label": "\u846b\u82a6\u5c9b"
+            "label": "锦州"
           },
           {
             "value": 999,
-            "label": "\u9526\u5dde"
+            "label": "辽阳"
           },
           {
             "value": 1000,
-            "label": "\u8fbd\u9633"
+            "label": "盘锦"
           },
           {
             "value": 1001,
-            "label": "\u76d8\u9526"
+            "label": "沈阳"
           },
           {
             "value": 1002,
-            "label": "\u6c88\u9633"
+            "label": "铁岭"
           },
           {
             "value": 1003,
-            "label": "\u94c1\u5cad"
-          },
-          {
-            "value": 1004,
-            "label": "\u8425\u53e3"
+            "label": "营口"
           }
         ]
       },
       {
-        "value": 1005,
-        "label": "\u5185\u8499\u53e4",
+        "value": 1004,
+        "label": "内蒙古",
         "children": [
           {
+            "value": 1005,
+            "label": "内蒙古"
+          },
+          {
             "value": 1006,
-            "label": "\u5185\u8499\u53e4"
+            "label": "巴彦淖尔"
           },
           {
             "value": 1007,
-            "label": "\u5df4\u5f66\u6dd6\u5c14"
+            "label": "包头"
           },
           {
             "value": 1008,
-            "label": "\u5305\u5934"
+            "label": "赤峰"
           },
           {
             "value": 1009,
-            "label": "\u8d64\u5cf0"
+            "label": "鄂尔多斯"
           },
           {
             "value": 1010,
-            "label": "\u9102\u5c14\u591a\u65af"
+            "label": "呼和浩特"
           },
           {
             "value": 1011,
-            "label": "\u547c\u548c\u6d69\u7279"
-          },
-          {
-            "value": 1012,
-            "label": "\u547c\u4f26\u8d1d\u5c14"
+            "label": "呼伦贝尔"
           },
           {
             "value": 1013,
-            "label": "\u901a\u8fbd"
+            "label": "乌海"
           },
           {
             "value": 1014,
-            "label": "\u4e4c\u6d77"
+            "label": "乌兰察布"
           },
           {
             "value": 1015,
-            "label": "\u4e4c\u5170\u5bdf\u5e03"
-          },
-          {
-            "value": 1016,
-            "label": "\u9521\u6797\u90ed\u52d2"
-          },
-          {
-            "value": 1017,
-            "label": "\u5174\u5b89\u76df"
+            "label": "锡林郭勒"
           }
         ]
       },
       {
-        "value": 1018,
-        "label": "\u5b81\u590f",
+        "value": 1017,
+        "label": "宁夏",
         "children": [
           {
+            "value": 1018,
+            "label": "宁夏"
+          },
+          {
             "value": 1019,
-            "label": "\u5b81\u590f"
+            "label": "固原"
           },
           {
             "value": 1020,
-            "label": "\u56fa\u539f"
+            "label": "宁东管委会"
           },
           {
             "value": 1021,
-            "label": "\u5b81\u4e1c\u7ba1\u59d4\u4f1a"
+            "label": "石嘴山"
           },
           {
             "value": 1022,
-            "label": "\u77f3\u5634\u5c71"
+            "label": "吴忠"
           },
           {
             "value": 1023,
-            "label": "\u5434\u5fe0"
+            "label": "银川"
           },
           {
             "value": 1024,
-            "label": "\u94f6\u5ddd"
-          },
-          {
-            "value": 1025,
-            "label": "\u4e2d\u536b"
+            "label": "中卫"
           }
         ]
       },
       {
-        "value": 1026,
-        "label": "\u9752\u6d77",
+        "value": 1025,
+        "label": "青海",
         "children": [
           {
+            "value": 1026,
+            "label": "青海"
+          },
+          {
             "value": 1027,
-            "label": "\u9752\u6d77"
+            "label": "海北州"
           },
           {
             "value": 1028,
-            "label": "\u6d77\u5317\u5dde"
-          },
-          {
-            "value": 1029,
-            "label": "\u897f\u5b81"
+            "label": "西宁"
           }
         ]
       },
       {
-        "value": 1030,
-        "label": "\u5c71\u4e1c",
+        "value": 1029,
+        "label": "山东",
         "children": [
           {
+            "value": 1030,
+            "label": "山东"
+          },
+          {
             "value": 1031,
-            "label": "\u5c71\u4e1c"
+            "label": "滨州"
           },
           {
             "value": 1032,
-            "label": "\u6ee8\u5dde"
+            "label": "德州"
           },
           {
             "value": 1033,
-            "label": "\u5fb7\u5dde"
+            "label": "菏泽"
           },
           {
             "value": 1034,
-            "label": "\u83cf\u6cfd"
+            "label": "济南"
           },
           {
             "value": 1035,
-            "label": "\u6d4e\u5357"
+            "label": "济宁"
           },
           {
             "value": 1036,
-            "label": "\u6d4e\u5b81"
+            "label": "聊城"
           },
           {
             "value": 1037,
-            "label": "\u804a\u57ce"
+            "label": "临沂"
           },
           {
             "value": 1038,
-            "label": "\u4e34\u6c82"
+            "label": "青岛"
           },
           {
             "value": 1039,
-            "label": "\u9752\u5c9b"
+            "label": "日照"
           },
           {
             "value": 1040,
-            "label": "\u65e5\u7167"
+            "label": "泰安"
           },
           {
             "value": 1041,
-            "label": "\u6cf0\u5b89"
+            "label": "威海"
           },
           {
             "value": 1042,
-            "label": "\u5a01\u6d77"
+            "label": "潍坊"
           },
           {
             "value": 1043,
-            "label": "\u6f4d\u574a"
+            "label": "烟台"
           },
           {
             "value": 1044,
-            "label": "\u70df\u53f0"
+            "label": "枣庄"
           },
           {
             "value": 1045,
-            "label": "\u67a3\u5e84"
-          },
-          {
-            "value": 1046,
-            "label": "\u6dc4\u535a"
+            "label": "淄博"
           }
         ]
       },
       {
-        "value": 1047,
-        "label": "\u5c71\u897f",
+        "value": 1046,
+        "label": "山西",
         "children": [
           {
+            "value": 1047,
+            "label": "山西"
+          },
+          {
             "value": 1048,
-            "label": "\u5c71\u897f"
+            "label": "长治"
           },
           {
             "value": 1049,
-            "label": "\u957f\u6cbb"
+            "label": "大同"
           },
           {
             "value": 1050,
-            "label": "\u5927\u540c"
+            "label": "晋城"
           },
           {
             "value": 1051,
-            "label": "\u664b\u57ce"
+            "label": "晋中"
           },
           {
             "value": 1052,
-            "label": "\u664b\u4e2d"
+            "label": "临汾"
           },
           {
             "value": 1053,
-            "label": "\u4e34\u6c7e"
+            "label": "吕梁"
           },
           {
             "value": 1054,
-            "label": "\u5415\u6881"
+            "label": "朔州"
           },
           {
             "value": 1055,
-            "label": "\u6714\u5dde"
+            "label": "太原"
           },
           {
             "value": 1056,
-            "label": "\u592a\u539f"
+            "label": "忻州"
           },
           {
             "value": 1057,
-            "label": "\u5ffb\u5dde"
+            "label": "阳泉"
           },
           {
             "value": 1058,
-            "label": "\u9633\u6cc9"
-          },
-          {
-            "value": 1059,
-            "label": "\u8fd0\u57ce"
+            "label": "运城"
           }
         ]
       },
       {
-        "value": 1060,
-        "label": "\u9655\u897f",
+        "value": 1059,
+        "label": "陕西",
         "children": [
           {
+            "value": 1060,
+            "label": "陕西"
+          },
+          {
             "value": 1061,
-            "label": "\u9655\u897f"
+            "label": "安康"
           },
           {
             "value": 1062,
-            "label": "\u5b89\u5eb7"
+            "label": "宝鸡"
           },
           {
             "value": 1063,
-            "label": "\u5b9d\u9e21"
+            "label": "韩城"
           },
           {
             "value": 1064,
-            "label": "\u97e9\u57ce"
+            "label": "汉中"
           },
           {
             "value": 1065,
-            "label": "\u6c49\u4e2d"
+            "label": "商洛"
           },
           {
             "value": 1066,
-            "label": "\u5546\u6d1b"
+            "label": "铜川"
           },
           {
             "value": 1067,
-            "label": "\u94dc\u5ddd"
+            "label": "渭南"
           },
           {
             "value": 1068,
-            "label": "\u6e2d\u5357"
+            "label": "西安"
           },
           {
             "value": 1069,
-            "label": "\u897f\u5b89"
+            "label": "咸阳"
           },
           {
             "value": 1070,
-            "label": "\u54b8\u9633"
+            "label": "延安"
           },
           {
             "value": 1071,
-            "label": "\u5ef6\u5b89"
+            "label": "杨凌"
           },
           {
             "value": 1072,
-            "label": "\u6768\u51cc"
-          },
-          {
-            "value": 1073,
-            "label": "\u6986\u6797"
+            "label": "榆林"
           }
         ]
       },
       {
-        "value": 1074,
-        "label": "\u4e0a\u6d77",
+        "value": 1073,
+        "label": "上海",
         "children": [
           {
+            "value": 1074,
+            "label": "上海"
+          },
+          {
             "value": 1075,
-            "label": "\u4e0a\u6d77"
+            "label": "宝山"
           },
           {
             "value": 1076,
-            "label": "\u5b9d\u5c71"
+            "label": "长宁"
           },
           {
             "value": 1077,
-            "label": "\u957f\u5b81"
+            "label": "崇明"
           },
           {
             "value": 1078,
-            "label": "\u5d07\u660e"
+            "label": "奉贤"
           },
           {
             "value": 1079,
-            "label": "\u5949\u8d24"
+            "label": "虹口"
           },
           {
             "value": 1080,
-            "label": "\u8679\u53e3"
+            "label": "黄浦"
           },
           {
             "value": 1081,
-            "label": "\u9ec4\u6d66"
+            "label": "嘉定"
           },
           {
             "value": 1082,
-            "label": "\u5609\u5b9a"
+            "label": "金山"
           },
           {
             "value": 1083,
-            "label": "\u91d1\u5c71"
+            "label": "静安"
           },
           {
             "value": 1084,
-            "label": "\u9759\u5b89"
+            "label": "闵行"
           },
           {
             "value": 1085,
-            "label": "\u95f5\u884c"
+            "label": "浦东"
           },
           {
             "value": 1086,
-            "label": "\u6d66\u4e1c"
+            "label": "普陀"
           },
           {
             "value": 1087,
-            "label": "\u666e\u9640"
+            "label": "青浦"
           },
           {
             "value": 1088,
-            "label": "\u9752\u6d66"
+            "label": "松江"
           },
           {
             "value": 1089,
-            "label": "\u677e\u6c5f"
+            "label": "徐汇"
           },
           {
             "value": 1090,
-            "label": "\u5f90\u6c47"
-          },
-          {
-            "value": 1091,
-            "label": "\u6768\u6d66"
+            "label": "杨浦"
           }
         ]
       },
       {
-        "value": 1092,
-        "label": "\u56db\u5ddd",
+        "value": 1091,
+        "label": "四川",
         "children": [
           {
-            "value": 1093,
-            "label": "\u56db\u5ddd"
+            "value": 1092,
+            "label": "四川"
           },
           {
             "value": 1094,
-            "label": "\u963f\u575d"
+            "label": "巴中"
           },
           {
             "value": 1095,
-            "label": "\u5df4\u4e2d"
+            "label": "成都"
           },
           {
             "value": 1096,
-            "label": "\u6210\u90fd"
+            "label": "达州"
           },
           {
             "value": 1097,
-            "label": "\u8fbe\u5dde"
+            "label": "德阳"
           },
           {
             "value": 1098,
-            "label": "\u5fb7\u9633"
+            "label": "甘孜"
           },
           {
             "value": 1099,
-            "label": "\u7518\u5b5c"
+            "label": "广安"
           },
           {
             "value": 1100,
-            "label": "\u5e7f\u5b89"
+            "label": "广元"
           },
           {
             "value": 1101,
-            "label": "\u5e7f\u5143"
+            "label": "乐山"
           },
           {
             "value": 1102,
-            "label": "\u4e50\u5c71"
+            "label": "凉山"
           },
           {
             "value": 1103,
-            "label": "\u51c9\u5c71"
+            "label": "泸州"
           },
           {
             "value": 1104,
-            "label": "\u6cf8\u5dde"
+            "label": "眉山"
           },
           {
             "value": 1105,
-            "label": "\u7709\u5c71"
+            "label": "绵阳"
           },
           {
             "value": 1106,
-            "label": "\u7ef5\u9633"
+            "label": "内江"
           },
           {
             "value": 1107,
-            "label": "\u5185\u6c5f"
+            "label": "南充"
           },
           {
             "value": 1108,
-            "label": "\u5357\u5145"
+            "label": "攀枝花"
           },
           {
             "value": 1109,
-            "label": "\u6500\u679d\u82b1"
+            "label": "遂宁"
           },
           {
             "value": 1110,
-            "label": "\u9042\u5b81"
+            "label": "雅安"
           },
           {
             "value": 1111,
-            "label": "\u96c5\u5b89"
+            "label": "宜宾"
           },
           {
             "value": 1112,
-            "label": "\u5b9c\u5bbe"
+            "label": "资阳"
           },
           {
             "value": 1113,
-            "label": "\u8d44\u9633"
-          },
-          {
-            "value": 1114,
-            "label": "\u81ea\u8d21"
+            "label": "自贡"
           }
         ]
       },
       {
-        "value": 1116,
-        "label": "\u5929\u6d25",
+        "value": 1114,
+        "label": "台湾"
+      },
+      {
+        "value": 1115,
+        "label": "天津",
         "children": [
           {
+            "value": 1116,
+            "label": "天津"
+          },
+          {
             "value": 1117,
-            "label": "\u5929\u6d25"
+            "label": "宝坻区"
           },
           {
             "value": 1118,
-            "label": "\u5b9d\u577b\u533a"
+            "label": "北辰区"
           },
           {
             "value": 1119,
-            "label": "\u5317\u8fb0\u533a"
+            "label": "滨海新区"
           },
           {
             "value": 1120,
-            "label": "\u6ee8\u6d77\u65b0\u533a"
+            "label": "东丽区"
           },
           {
             "value": 1121,
-            "label": "\u4e1c\u4e3d\u533a"
+            "label": "和平区"
           },
           {
             "value": 1122,
-            "label": "\u548c\u5e73\u533a"
+            "label": "河北区"
           },
           {
             "value": 1123,
-            "label": "\u6cb3\u5317\u533a"
+            "label": "河东区"
           },
           {
             "value": 1124,
-            "label": "\u6cb3\u4e1c\u533a"
+            "label": "河西区"
           },
           {
             "value": 1125,
-            "label": "\u6cb3\u897f\u533a"
+            "label": "红桥区"
           },
           {
             "value": 1126,
-            "label": "\u7ea2\u6865\u533a"
+            "label": "津南区"
           },
           {
             "value": 1127,
-            "label": "\u6d25\u5357\u533a"
+            "label": "南开区"
           },
           {
             "value": 1128,
-            "label": "\u5357\u5f00\u533a"
+            "label": "宁河区"
           },
           {
             "value": 1129,
-            "label": "\u5b81\u6cb3\u533a"
+            "label": "武清区"
           },
           {
             "value": 1130,
-            "label": "\u6b66\u6e05\u533a"
-          },
-          {
-            "value": 1131,
-            "label": "\u897f\u9752\u533a"
+            "label": "西青区"
           }
         ]
       },
       {
-        "value": 1132,
-        "label": "\u897f\u85cf",
+        "value": 1131,
+        "label": "西藏",
         "children": [
+          {
+            "value": 1132,
+            "label": "西藏"
+          },
           {
             "value": 1133,
-            "label": "\u897f\u85cf"
-          },
-          {
-            "value": 1134,
-            "label": "\u62c9\u8428"
+            "label": "拉萨"
           }
         ]
       },
       {
-        "value": 1136,
-        "label": "\u65b0\u7586",
+        "value": 1134,
+        "label": "香港"
+      },
+      {
+        "value": 1135,
+        "label": "新疆",
         "children": [
           {
+            "value": 1136,
+            "label": "新疆"
+          },
+          {
             "value": 1137,
-            "label": "\u65b0\u7586"
+            "label": "阿克苏"
           },
           {
             "value": 1138,
-            "label": "\u963f\u514b\u82cf"
+            "label": "巴州"
           },
           {
             "value": 1139,
-            "label": "\u5df4\u5dde"
+            "label": "兵团第九师"
           },
           {
             "value": 1140,
-            "label": "\u5175\u56e2\u7b2c\u4e5d\u5e08"
+            "label": "兵团第十二师"
           },
           {
             "value": 1141,
-            "label": "\u5175\u56e2\u7b2c\u5341\u4e8c\u5e08"
+            "label": "兵团第四师"
           },
           {
             "value": 1142,
-            "label": "\u5175\u56e2\u7b2c\u56db\u5e08"
+            "label": "昌吉州"
           },
           {
             "value": 1143,
-            "label": "\u660c\u5409\u5dde"
-          },
-          {
-            "value": 1144,
-            "label": "\u7b2c\u516b\u5e08\u77f3\u6cb3\u5b50"
-          },
-          {
-            "value": 1145,
-            "label": "\u7b2c\u4e03\u5e08"
-          },
-          {
-            "value": 1146,
-            "label": "\u5580\u4ec0"
+            "label": "第八师石河子"
           },
           {
             "value": 1147,
-            "label": "\u516d\u5e08\u4e94\u5bb6\u6e20"
-          },
-          {
-            "value": 1148,
-            "label": "\u5410\u9c81\u756a"
+            "label": "吐鲁番"
           },
           {
             "value": 1149,
-            "label": "\u4e4c\u9c81\u6728\u9f50"
-          },
-          {
-            "value": 1150,
-            "label": "\u4f0a\u7281\u5dde"
+            "label": "伊犁州"
           }
         ]
       },
       {
-        "value": 1151,
-        "label": "\u4e91\u5357",
+        "value": 1150,
+        "label": "云南",
         "children": [
           {
-            "value": 1152,
-            "label": "\u4e91\u5357"
+            "value": 1151,
+            "label": "云南"
           },
           {
             "value": 1153,
-            "label": "\u4fdd\u5c71\u5e02"
+            "label": "楚雄州"
           },
           {
             "value": 1154,
-            "label": "\u695a\u96c4\u5dde"
-          },
-          {
-            "value": 1155,
-            "label": "\u5927\u7406"
+            "label": "大理"
           },
           {
             "value": 1156,
-            "label": "\u5fb7\u5b8f\u5dde"
+            "label": "红河"
           },
           {
             "value": 1157,
-            "label": "\u7ea2\u6cb3"
+            "label": "昆明"
           },
           {
             "value": 1158,
-            "label": "\u6606\u660e"
+            "label": "丽江市"
           },
           {
             "value": 1159,
-            "label": "\u4e3d\u6c5f\u5e02"
+            "label": "临沧"
           },
           {
             "value": 1160,
-            "label": "\u4e34\u6ca7"
+            "label": "普洱"
           },
           {
             "value": 1161,
-            "label": "\u666e\u6d31"
+            "label": "曲靖"
           },
           {
             "value": 1162,
-            "label": "\u66f2\u9756"
+            "label": "文山州"
           },
           {
             "value": 1163,
-            "label": "\u6587\u5c71\u5dde"
+            "label": "西双版纳州"
           },
           {
             "value": 1164,
-            "label": "\u897f\u53cc\u7248\u7eb3\u5dde"
-          },
-          {
-            "value": 1165,
-            "label": "\u7389\u6eaa"
-          },
-          {
-            "value": 1166,
-            "label": "\u662d\u901a\u5e02"
+            "label": "玉溪"
           }
         ]
       },
       {
-        "value": 1167,
-        "label": "\u6d59\u6c5f",
+        "value": 1166,
+        "label": "浙江",
         "children": [
           {
+            "value": 1167,
+            "label": "浙江"
+          },
+          {
             "value": 1168,
-            "label": "\u6d59\u6c5f"
+            "label": "杭州"
           },
           {
             "value": 1169,
-            "label": "\u676d\u5dde"
+            "label": "湖州"
           },
           {
             "value": 1170,
-            "label": "\u6e56\u5dde"
+            "label": "嘉兴"
           },
           {
             "value": 1171,
-            "label": "\u5609\u5174"
+            "label": "金华"
           },
           {
             "value": 1172,
-            "label": "\u91d1\u534e"
+            "label": "丽水"
           },
           {
             "value": 1173,
-            "label": "\u4e3d\u6c34"
+            "label": "宁波"
           },
           {
             "value": 1174,
-            "label": "\u5b81\u6ce2"
+            "label": "衢州"
           },
           {
             "value": 1175,
-            "label": "\u8862\u5dde"
+            "label": "绍兴"
           },
           {
             "value": 1176,
-            "label": "\u7ecd\u5174"
+            "label": "省十里丰监狱"
           },
           {
             "value": 1177,
-            "label": "\u7701\u5341\u91cc\u4e30\u76d1\u72f1"
+            "label": "台州"
           },
           {
             "value": 1178,
-            "label": "\u53f0\u5dde"
+            "label": "温州"
           },
           {
             "value": 1179,
-            "label": "\u6e29\u5dde"
-          },
-          {
-            "value": 1180,
-            "label": "\u821f\u5c71"
+            "label": "舟山"
           }
         ]
       },
       {
-        "value": 1181,
-        "label": "\u91cd\u5e86",
+        "value": 1180,
+        "label": "重庆",
         "children": [
           {
+            "value": 1181,
+            "label": "重庆"
+          },
+          {
             "value": 1182,
-            "label": "\u91cd\u5e86"
+            "label": "巴南区"
           },
           {
             "value": 1183,
-            "label": "\u5df4\u5357\u533a"
+            "label": "璧山区"
           },
           {
             "value": 1184,
-            "label": "\u74a7\u5c71\u533a"
+            "label": "长寿区"
           },
           {
             "value": 1185,
-            "label": "\u957f\u5bff\u533a"
+            "label": "城口县"
           },
           {
             "value": 1186,
-            "label": "\u57ce\u53e3\u53bf"
+            "label": "大渡口区"
           },
           {
             "value": 1187,
-            "label": "\u5927\u6e21\u53e3\u533a"
+            "label": "大足区"
           },
           {
             "value": 1188,
-            "label": "\u5927\u8db3\u533a"
+            "label": "垫江县"
           },
           {
             "value": 1189,
-            "label": "\u57ab\u6c5f\u53bf"
+            "label": "丰都县"
           },
           {
             "value": 1190,
-            "label": "\u4e30\u90fd\u53bf"
+            "label": "奉节县"
           },
           {
             "value": 1191,
-            "label": "\u5949\u8282\u53bf"
+            "label": "涪陵区"
           },
           {
             "value": 1192,
-            "label": "\u6daa\u9675\u533a"
+            "label": "高新区"
           },
           {
             "value": 1193,
-            "label": "\u9ad8\u65b0\u533a"
+            "label": "合川区"
           },
           {
             "value": 1194,
-            "label": "\u5408\u5ddd\u533a"
+            "label": "江北区"
           },
           {
             "value": 1195,
-            "label": "\u6c5f\u5317\u533a"
+            "label": "江津区"
           },
           {
             "value": 1196,
-            "label": "\u6c5f\u6d25\u533a"
+            "label": "九龙坡区"
           },
           {
             "value": 1197,
-            "label": "\u4e5d\u9f99\u5761\u533a"
+            "label": "开州区"
           },
           {
             "value": 1198,
-            "label": "\u5f00\u5dde\u533a"
+            "label": "梁平区"
           },
           {
             "value": 1199,
-            "label": "\u6881\u5e73\u533a"
+            "label": "两江新区"
           },
           {
             "value": 1200,
-            "label": "\u4e24\u6c5f\u65b0\u533a"
+            "label": "南岸区"
           },
           {
             "value": 1201,
-            "label": "\u5357\u5cb8\u533a"
+            "label": "彭水县"
           },
           {
             "value": 1202,
-            "label": "\u5f6d\u6c34\u53bf"
+            "label": "綦江区"
           },
           {
             "value": 1203,
-            "label": "\u7da6\u6c5f\u533a"
+            "label": "黔江区"
           },
           {
             "value": 1204,
-            "label": "\u9ed4\u6c5f\u533a"
+            "label": "荣昌区"
           },
           {
             "value": 1205,
-            "label": "\u8363\u660c\u533a"
+            "label": "沙坪坝区"
           },
           {
             "value": 1206,
-            "label": "\u6c99\u576a\u575d\u533a"
+            "label": "石柱县"
           },
           {
             "value": 1207,
-            "label": "\u77f3\u67f1\u53bf"
+            "label": "铜梁区"
           },
           {
             "value": 1208,
-            "label": "\u94dc\u6881\u533a"
+            "label": "潼南区"
           },
           {
             "value": 1209,
-            "label": "\u6f7c\u5357\u533a"
+            "label": "万盛经开区"
           },
           {
             "value": 1210,
-            "label": "\u4e07\u76db\u7ecf\u5f00\u533a"
+            "label": "万州区"
           },
           {
             "value": 1211,
-            "label": "\u4e07\u5dde\u533a"
+            "label": "巫山县"
           },
           {
             "value": 1212,
-            "label": "\u5deb\u5c71\u53bf"
+            "label": "巫溪县"
           },
           {
             "value": 1213,
-            "label": "\u5deb\u6eaa\u53bf"
+            "label": "武隆区"
           },
           {
             "value": 1214,
-            "label": "\u6b66\u9686\u533a"
+            "label": "秀山县"
           },
           {
             "value": 1215,
-            "label": "\u79c0\u5c71\u53bf"
+            "label": "永川区"
           },
           {
             "value": 1216,
-            "label": "\u6c38\u5ddd\u533a"
+            "label": "酉阳县"
           },
           {
             "value": 1217,
-            "label": "\u9149\u9633\u53bf"
+            "label": "渝北区"
           },
           {
             "value": 1218,
-            "label": "\u6e1d\u5317\u533a"
+            "label": "渝中区"
           },
           {
             "value": 1219,
-            "label": "\u6e1d\u4e2d\u533a"
+            "label": "云阳县"
           },
           {
             "value": 1220,
-            "label": "\u4e91\u9633\u53bf"
-          },
-          {
-            "value": 1221,
-            "label": "\u5fe0\u53bf"
+            "label": "忠县"
           }
         ]
       }
