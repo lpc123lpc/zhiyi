@@ -86,24 +86,28 @@ export default {
   watch: {
     region() {
       this.mapRegion = this.getMapRegion()
+      this.showVaccineButton()
     }
   },
   mounted() {
-    // console.log(this.mapRegion)
-    if (this.mapRegion.value === 0) {
-      document.getElementById('vaccine-institution-button').style.display = 'none'
-    } else {
-      document.getElementById('vaccine-institution-button').style.display = 'inline'
-    }
+    this.showVaccineButton()
   },
   methods: {
     getMapRegion() {
-      var regions = this.region.split('|')
+      var regions = this.region.split('  ')
       // region取 0：国家/ 1：省
       if (regions[0] === '中国' && regions.length > 1) {
         return {region: regions[1], value: 1}
       } else {
         return {region: regions[0], value: 0}
+      }
+    },
+    showVaccineButton() {
+      // console.log(this.region.split('  ').length)
+      if (this.region.split('  ').length < 3) {
+        document.getElementById('vaccine-institution-button').style.display = 'none'
+      } else {
+        document.getElementById('vaccine-institution-button').style.display = 'inline'
       }
     },
     goMap() {

@@ -18,13 +18,10 @@
 </template>
 
 <script>
-import data from '../../../../../database/static/searchData.json'
+import data from '../../../static/json/searchData.json'
 
 export default {
   name: 'SearchBar',
-  // props: [
-  //   'data'
-  // ],
   data() {
     return {
       data: '',
@@ -43,22 +40,25 @@ export default {
     }
   },
   methods: {
-    handleSelect() {
-      var regions = []  // 将级联地区名以'/'连接
-      var node = this.$refs['cascader'].getCheckedNodes()[0]
+    handleSelect(val) {
+      var regions = []  // 将级联地区名以'  '连接
+      // console.log(val)
+      // console.log(this.$refs['cascader'].panel.getNodeByValue(val))
+      var node = this.$refs['cascader'].panel.getNodeByValue(val)
       regions.push(node.label)
       while (node.parent != null) {
         node = node.parent
         regions.push(node.label)
       }
-      // console.log(regions)
+      console.log(regions)
       let type = regions.pop()
       if (type === '国内') regions.push('中国')
       // 处理最后两个名字相同的情况
+      regions = regions.reverse()
       if (regions.length > 1 && regions[regions.length - 1] === regions[regions.length - 2]) {
         regions.pop()
       }
-      this.searchRegion = regions.reverse().join('|')
+      this.searchRegion = regions.join('  ')
       // console.log(this.searchRegion)
     },
     goSearch() {

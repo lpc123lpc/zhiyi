@@ -5,7 +5,11 @@
           <span style="font-size: 25px">全球概要数据</span>
         </el-col>
       </el-row>
-      <el-table :data="searchItem" :default-sort ="{prop:'confirmed',order:'descending'}" highlight-current-row height="600">
+      <el-table v-loading="loading"
+                :data="searchItem"
+                empty-text=""
+                :default-sort ="{prop:'confirmed',order:'descending'}"
+                highlight-current-row height="600">
         <el-table-column type="expand">
           <template slot-scope="props">
             <country_data v-bind:country="props.row.name"></country_data>
@@ -75,7 +79,8 @@ export default {
       items: [],
       searchItem: [],
       input: '',
-      names: []
+      names: [],
+      loading: true
     }
   },
   mounted () {
@@ -88,6 +93,7 @@ export default {
         response.json().then((data) => {
           that.items = data
           that.searchItem = data
+          that.loading = false
         })
       })
     },
