@@ -82,6 +82,7 @@ def getTrainCsv():
     mapCsv.to_csv('./trainCsv/area.csv', encoding='gbk')
 
 
+
 '''
 返回有数据地区的字典映射
 dirc[num] = name
