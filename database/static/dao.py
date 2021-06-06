@@ -393,12 +393,6 @@ def updateVac():
         print("i am out")
 
 
-# 清除表单
-def clearTable(name):
-    db.reflect(app=app)
-    db.get_engine().execute(f"truncate table {name}")
-
-
 # 判断去除一些奇怪的地区名
 def errorName(name):
     if name == "地区待确认" or name[:2] == "境外" or name[:2] == "外地":
