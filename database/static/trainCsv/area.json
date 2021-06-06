@@ -1,0 +1,5747 @@
+{
+  "1": {
+    "name": "不丹",
+    "begindate": "2020-03-06",
+    "population": 817054
+  },
+  "2": {
+    "name": "东帝汶",
+    "begindate": "2020-03-21",
+    "population": 1324094
+  },
+  "3": {
+    "name": "中国",
+    "begindate": "",
+    "population": 1411780000
+  },
+  "4": {
+    "name": "中非共和国",
+    "begindate": "2020-03-15",
+    "population": 4737423
+  },
+  "5": {
+    "name": "丹麦",
+    "begindate": "2020-02-27",
+    "population": 5754356
+  },
+  "6": {
+    "name": "乌克兰",
+    "begindate": "2020-03-03",
+    "population": 44009214
+  },
+  "7": {
+    "name": "乌兹别克斯坦",
+    "begindate": "2020-03-15",
+    "population": 32364996
+  },
+  "8": {
+    "name": "乌干达",
+    "begindate": "2020-03-22",
+    "population": 44270563
+  },
+  "9": {
+    "name": "乌拉圭",
+    "begindate": "2020-03-14",
+    "population": 3469551
+  },
+  "10": {
+    "name": "乍得",
+    "begindate": "2020-03-20",
+    "population": 15353184
+  },
+  "11": {
+    "name": "也门",
+    "begindate": "2020-04-10",
+    "population": 28915284
+  },
+  "12": {
+    "name": "亚美尼亚",
+    "begindate": "2020-03-12",
+    "population": 2934152
+  },
+  "13": {
+    "name": "以色列",
+    "begindate": "2020-02-21",
+    "population": 8452841
+  },
+  "14": {
+    "name": "伊拉克",
+    "begindate": "2020-02-25",
+    "population": 39339753
+  },
+  "15": {
+    "name": "伊朗",
+    "begindate": "2020-02-19",
+    "population": 82011735
+  },
+  "16": {
+    "name": "伯利兹",
+    "begindate": "2020-03-24",
+    "population": 382444
+  },
+  "17": {
+    "name": "佛得角",
+    "begindate": "2020-03-20",
+    "population": 553335
+  },
+  "18": {
+    "name": "俄罗斯",
+    "begindate": "2020-01-31",
+    "population": 143964709
+  },
+  "19": {
+    "name": "保加利亚",
+    "begindate": "2020-03-08",
+    "population": 7036848
+  },
+  "20": {
+    "name": "克罗地亚",
+    "begindate": "2020-02-25",
+    "population": 4164783
+  },
+  "21": {
+    "name": "冈比亚",
+    "begindate": "2020-03-18",
+    "population": 2163765
+  },
+  "22": {
+    "name": "冰岛",
+    "begindate": "2020-02-29",
+    "population": 337780
+  },
+  "23": {
+    "name": "几内亚",
+    "begindate": "2020-03-13",
+    "population": 13052608
+  },
+  "24": {
+    "name": "几内亚比绍",
+    "begindate": "2020-03-25",
+    "population": 1907268
+  },
+  "25": {
+    "name": "列支敦士登公国",
+    "begindate": "2020-03-06",
+    "population": 38155
+  },
+  "26": {
+    "name": "刚果（布）",
+    "begindate": "2020-03-15",
+    "population": 5399895
+  },
+  "27": {
+    "name": "刚果（金）",
+    "begindate": "2020-03-10",
+    "population": 82643624
+  },
+  "28": {
+    "name": "利比亚",
+    "begindate": "2020-03-25",
+    "population": 6470956
+  },
+  "29": {
+    "name": "利比里亚",
+    "begindate": "2020-03-16",
+    "population": 4853516
+  },
+  "30": {
+    "name": "加拿大",
+    "begindate": "2020-01-28",
+    "population": 36953765
+  },
+  "31": {
+    "name": "加纳",
+    "begindate": "2020-03-13",
+    "population": 29463643
+  },
+  "32": {
+    "name": "加蓬",
+    "begindate": "2020-03-13",
+    "population": 2067561
+  },
+  "33": {
+    "name": "匈牙利",
+    "begindate": "2020-03-05",
+    "population": 9688847
+  },
+  "34": {
+    "name": "北马其顿",
+    "begindate": "2020-02-26",
+    "population": 2081260
+  },
+  "35": {
+    "name": "南非",
+    "begindate": "2020-03-05",
+    "population": 57398421
+  },
+  "36": {
+    "name": "博茨瓦纳",
+    "begindate": "2020-03-31",
+    "population": 2333201
+  },
+  "37": {
+    "name": "卡塔尔",
+    "begindate": "2020-02-29",
+    "population": 2694849
+  },
+  "38": {
+    "name": "卢旺达",
+    "begindate": "2020-03-16",
+    "population": 12501156
+  },
+  "39": {
+    "name": "卢森堡",
+    "begindate": "2020-03-07",
+    "population": 590321
+  },
+  "40": {
+    "name": "印度",
+    "begindate": "2020-01-30",
+    "population": 1354051854
+  },
+  "41": {
+    "name": "印度尼西亚",
+    "begindate": "2020-03-02",
+    "population": 266794980
+  },
+  "42": {
+    "name": "危地马拉",
+    "begindate": "2020-03-14",
+    "population": 17245346
+  },
+  "43": {
+    "name": "厄瓜多尔",
+    "begindate": "2020-03-01",
+    "population": 16863425
+  },
+  "44": {
+    "name": "厄立特里亚",
+    "begindate": "2020-03-22",
+    "population": 5187948
+  },
+  "45": {
+    "name": "叙利亚",
+    "begindate": "2020-03-23",
+    "population": 18284407
+  },
+  "46": {
+    "name": "古巴",
+    "begindate": "2020-03-12",
+    "population": 11489082
+  },
+  "47": {
+    "name": "吉尔吉斯斯坦",
+    "begindate": "2020-03-18",
+    "population": 6132932
+  },
+  "48": {
+    "name": "吉布提",
+    "begindate": "2020-03-18",
+    "population": 971408
+  },
+  "49": {
+    "name": "哈萨克斯坦",
+    "begindate": "2020-03-13",
+    "population": 18403860
+  },
+  "50": {
+    "name": "哥伦比亚",
+    "begindate": "2020-03-07",
+    "population": 49464683
+  },
+  "51": {
+    "name": "哥斯达黎加",
+    "begindate": "2020-03-07",
+    "population": 4953199
+  },
+  "52": {
+    "name": "喀麦隆",
+    "begindate": "2020-03-06",
+    "population": 24678234
+  },
+  "53": {
+    "name": "土耳其",
+    "begindate": "2020-03-11",
+    "population": 81916871
+  },
+  "54": {
+    "name": "圣卢西亚",
+    "begindate": "2020-03-21",
+    "population": 179667
+  },
+  "55": {
+    "name": "圣基茨和尼维斯",
+    "begindate": "2020-03-26",
+    "population": 55850
+  },
+  "56": {
+    "name": "圣文森特和格林纳丁斯",
+    "begindate": "2020-03-21",
+    "population": 110200
+  },
+  "57": {
+    "name": "圣马力诺",
+    "begindate": "2020-03-06",
+    "population": 33557
+  },
+  "58": {
+    "name": "圭亚那",
+    "begindate": "2020-03-12",
+    "population": 782225
+  },
+  "59": {
+    "name": "坦桑尼亚",
+    "begindate": "2020-03-16",
+    "population": 59091392
+  },
+  "60": {
+    "name": "埃及",
+    "begindate": "2020-03-02",
+    "population": 99375741
+  },
+  "61": {
+    "name": "埃塞俄比亚",
+    "begindate": "2020-03-13",
+    "population": 106672306
+  },
+  "62": {
+    "name": "塔吉克斯坦",
+    "begindate": "2020-04-30",
+    "population": 9107211
+  },
+  "63": {
+    "name": "塞内加尔",
+    "begindate": "2020-03-03",
+    "population": 16294270
+  },
+  "64": {
+    "name": "塞尔维亚",
+    "begindate": "2020-03-06",
+    "population": 8762027
+  },
+  "65": {
+    "name": "塞拉利昂",
+    "begindate": "2020-03-31",
+    "population": 7719729
+  },
+  "66": {
+    "name": "塞浦路斯",
+    "begindate": "2020-03-10",
+    "population": 1189085
+  },
+  "67": {
+    "name": "塞舌尔",
+    "begindate": "2020-03-15",
+    "population": 95235
+  },
+  "68": {
+    "name": "墨西哥",
+    "begindate": "2020-02-28",
+    "population": 130759074
+  },
+  "69": {
+    "name": "多哥",
+    "begindate": "2020-03-06",
+    "population": 7990926
+  },
+  "70": {
+    "name": "多米尼克",
+    "begindate": "2020-03-23",
+    "population": 74308
+  },
+  "71": {
+    "name": "多米尼加",
+    "begindate": "2020-03-01",
+    "population": 10135100
+  },
+  "72": {
+    "name": "奥地利",
+    "begindate": "2020-02-25",
+    "population": 8751820
+  },
+  "73": {
+    "name": "委内瑞拉",
+    "begindate": "2020-03-14",
+    "population": 32381221
+  },
+  "74": {
+    "name": "孟加拉",
+    "begindate": "2020-03-08",
+    "population": 166368149
+  },
+  "75": {
+    "name": "安哥拉",
+    "begindate": "2020-03-21",
+    "population": 30774205
+  },
+  "76": {
+    "name": "安提瓜和巴布达",
+    "begindate": "2020-03-14",
+    "population": 103050
+  },
+  "77": {
+    "name": "安道尔",
+    "begindate": "2020-03-02",
+    "population": 76953
+  },
+  "78": {
+    "name": "尼加拉瓜",
+    "begindate": "2020-03-19",
+    "population": 6284757
+  },
+  "79": {
+    "name": "尼日利亚",
+    "begindate": "2020-02-28",
+    "population": 195875237
+  },
+  "80": {
+    "name": "尼日尔",
+    "begindate": "2020-03-20",
+    "population": 22311375
+  },
+  "81": {
+    "name": "尼泊尔",
+    "begindate": "2020-01-28",
+    "population": 29624035
+  },
+  "82": {
+    "name": "巴勒斯坦",
+    "begindate": "2020-03-06",
+    "population": 5052776
+  },
+  "83": {
+    "name": "巴哈马",
+    "begindate": "2020-03-21",
+    "population": 399285
+  },
+  "84": {
+    "name": "巴基斯坦",
+    "begindate": "2020-02-22",
+    "population": 200813818
+  },
+  "85": {
+    "name": "巴巴多斯",
+    "begindate": "2020-03-21",
+    "population": 286388
+  },
+  "86": {
+    "name": "巴布亚新几内亚",
+    "begindate": "2020-03-21",
+    "population": 8418346
+  },
+  "87": {
+    "name": "巴拉圭",
+    "begindate": "2020-03-08",
+    "population": 6896908
+  },
+  "88": {
+    "name": "巴拿马",
+    "begindate": "2020-03-10",
+    "population": 4162618
+  },
+  "89": {
+    "name": "巴林",
+    "begindate": "2020-02-24",
+    "population": 1566993
+  },
+  "90": {
+    "name": "巴西",
+    "begindate": "2020-02-26",
+    "population": 210867954
+  },
+  "91": {
+    "name": "布基纳法索",
+    "begindate": "2020-03-10",
+    "population": 19751651
+  },
+  "92": {
+    "name": "布隆迪",
+    "begindate": "2020-04-01",
+    "population": 11216450
+  },
+  "93": {
+    "name": "希腊",
+    "begindate": "2020-02-26",
+    "population": 11142161
+  },
+  "94": {
+    "name": "德国",
+    "begindate": "2020-01-28",
+    "population": 82293457
+  },
+  "95": {
+    "name": "意大利",
+    "begindate": "2020-01-31",
+    "population": 60482200
+  },
+  "96": {
+    "name": "所罗门群岛",
+    "begindate": "2020-10-13",
+    "population": 623281
+  },
+  "97": {
+    "name": "拉脱维亚",
+    "begindate": "2020-03-03",
+    "population": 1929938
+  },
+  "98": {
+    "name": "挪威",
+    "begindate": "2020-02-27",
+    "population": 5353363
+  },
+  "99": {
+    "name": "捷克",
+    "begindate": "2020-03-02",
+    "population": 10625250
+  },
+  "100": {
+    "name": "摩尔多瓦",
+    "begindate": "2020-03-08",
+    "population": 4041065
+  },
+  "101": {
+    "name": "摩洛哥",
+    "begindate": "2020-03-05",
+    "population": 36191805
+  },
+  "102": {
+    "name": "摩纳哥",
+    "begindate": "2020-02-29",
+    "population": 38897
+  },
+  "103": {
+    "name": "文莱",
+    "begindate": "2020-03-09",
+    "population": 434076
+  },
+  "104": {
+    "name": "斐济",
+    "begindate": "2020-03-21",
+    "population": 912241
+  },
+  "105": {
+    "name": "斯威士兰",
+    "begindate": "2020-03-14",
+    "population": 1391385
+  },
+  "106": {
+    "name": "斯洛伐克",
+    "begindate": "2020-03-06",
+    "population": 5449816
+  },
+  "107": {
+    "name": "斯洛文尼亚",
+    "begindate": "2020-03-05",
+    "population": 2081260
+  },
+  "108": {
+    "name": "斯里兰卡",
+    "begindate": "2020-01-28",
+    "population": 20950041
+  },
+  "109": {
+    "name": "新加坡",
+    "begindate": "2020-01-28",
+    "population": 5791901
+  },
+  "110": {
+    "name": "新西兰",
+    "begindate": "2020-02-28",
+    "population": 4749598
+  },
+  "111": {
+    "name": "日本",
+    "begindate": "2020-01-28",
+    "population": 127185332
+  },
+  "112": {
+    "name": "智利",
+    "begindate": "2020-03-04",
+    "population": 18197209
+  },
+  "113": {
+    "name": "柬埔寨",
+    "begindate": "2020-01-31",
+    "population": 16245729
+  },
+  "114": {
+    "name": "格林纳达",
+    "begindate": "2020-03-23",
+    "population": 108339
+  },
+  "115": {
+    "name": "格陵兰",
+    "begindate": "2020-03-22",
+    "population": 56565
+  },
+  "116": {
+    "name": "格鲁吉亚",
+    "begindate": "2020-02-27",
+    "population": 3907131
+  },
+  "117": {
+    "name": "梵蒂冈",
+    "begindate": "2020-03-06",
+    "population": 801
+  },
+  "118": {
+    "name": "比利时",
+    "begindate": "2020-02-04",
+    "population": 11498519
+  },
+  "119": {
+    "name": "毛里塔尼亚",
+    "begindate": "2020-03-14",
+    "population": 4540068
+  },
+  "120": {
+    "name": "毛里求斯",
+    "begindate": "2020-03-19",
+    "population": 1268315
+  },
+  "121": {
+    "name": "沙特阿拉伯",
+    "begindate": "2020-03-03",
+    "population": 33554343
+  },
+  "122": {
+    "name": "法国",
+    "begindate": "2020-01-28",
+    "population": 65233271
+  },
+  "123": {
+    "name": "波兰",
+    "begindate": "2020-03-04",
+    "population": 38104832
+  },
+  "124": {
+    "name": "波黑",
+    "begindate": "2020-03-05",
+    "population": 3503554
+  },
+  "125": {
+    "name": "泰国",
+    "begindate": "2020-01-28",
+    "population": 69183173
+  },
+  "126": {
+    "name": "津巴布韦",
+    "begindate": "2020-03-21",
+    "population": 16913261
+  },
+  "127": {
+    "name": "洪都拉斯",
+    "begindate": "2020-03-11",
+    "population": 9417167
+  },
+  "128": {
+    "name": "海地",
+    "begindate": "2020-03-20",
+    "population": 11112945
+  },
+  "129": {
+    "name": "澳大利亚",
+    "begindate": "2020-01-28",
+    "population": 24772247
+  },
+  "130": {
+    "name": "爱尔兰",
+    "begindate": "2020-03-01",
+    "population": 4803748
+  },
+  "131": {
+    "name": "爱沙尼亚",
+    "begindate": "2020-02-27",
+    "population": 1306788
+  },
+  "132": {
+    "name": "牙买加",
+    "begindate": "2020-03-21",
+    "population": 2898677
+  },
+  "133": {
+    "name": "特立尼达和多巴哥",
+    "begindate": "2020-03-21",
+    "population": 1372598
+  },
+  "134": {
+    "name": "玻利维亚",
+    "begindate": "2020-03-12",
+    "population": 11215674
+  },
+  "135": {
+    "name": "瑞典",
+    "begindate": "2020-01-31",
+    "population": 9982709
+  },
+  "136": {
+    "name": "瑞士",
+    "begindate": "2020-02-25",
+    "population": 8544034
+  },
+  "137": {
+    "name": "瓦努阿图",
+    "begindate": "2020-11-12",
+    "population": 282117
+  },
+  "138": {
+    "name": "白俄罗斯",
+    "begindate": "2020-02-28",
+    "population": 9452113
+  },
+  "139": {
+    "name": "科威特",
+    "begindate": "2020-02-24",
+    "population": 4197128
+  },
+  "140": {
+    "name": "科摩罗",
+    "begindate": "2020-04-30",
+    "population": 800000
+  },
+  "141": {
+    "name": "科特迪瓦",
+    "begindate": "2020-03-12",
+    "population": 24905843
+  },
+  "142": {
+    "name": "秘鲁",
+    "begindate": "2020-03-06",
+    "population": 32551815
+  },
+  "143": {
+    "name": "突尼斯",
+    "begindate": "2020-03-03",
+    "population": 11659174
+  },
+  "144": {
+    "name": "立陶宛",
+    "begindate": "2020-02-28",
+    "population": 2876475
+  },
+  "145": {
+    "name": "索马里",
+    "begindate": "2020-03-16",
+    "population": 15181925
+  },
+  "146": {
+    "name": "约旦",
+    "begindate": "2020-03-02",
+    "population": 9903802
+  },
+  "147": {
+    "name": "纳米比亚",
+    "begindate": "2020-03-14",
+    "population": 2587801
+  },
+  "148": {
+    "name": "缅甸",
+    "begindate": "2020-03-24",
+    "population": 53855735
+  },
+  "149": {
+    "name": "罗马尼亚",
+    "begindate": "2020-02-27",
+    "population": 19580634
+  },
+  "150": {
+    "name": "美国",
+    "begindate": "2020-01-28",
+    "population": 326766748
+  },
+  "151": {
+    "name": "老挝",
+    "begindate": "2020-03-24",
+    "population": 6961210
+  },
+  "152": {
+    "name": "肯尼亚",
+    "begindate": "2020-03-13",
+    "population": 50950879
+  },
+  "153": {
+    "name": "芬兰",
+    "begindate": "2020-01-30",
+    "population": 5542517
+  },
+  "154": {
+    "name": "苏丹",
+    "begindate": "2020-03-13",
+    "population": 41511526
+  },
+  "155": {
+    "name": "苏里南",
+    "begindate": "2020-03-21",
+    "population": 568301
+  },
+  "156": {
+    "name": "英国",
+    "begindate": "2020-01-31",
+    "population": 66573504
+  },
+  "157": {
+    "name": "荷兰",
+    "begindate": "2020-02-28",
+    "population": 17084459
+  },
+  "158": {
+    "name": "莫桑比克",
+    "begindate": "2020-03-23",
+    "population": 30528673
+  },
+  "159": {
+    "name": "莱索托",
+    "begindate": "2020-05-13",
+    "population": 2263010
+  },
+  "160": {
+    "name": "菲律宾",
+    "begindate": "2020-01-28",
+    "population": 106512074
+  },
+  "161": {
+    "name": "萨尔瓦多",
+    "begindate": "2020-03-21",
+    "population": 6378000
+  },
+  "162": {
+    "name": "葡萄牙",
+    "begindate": "2020-03-02",
+    "population": 10291196
+  },
+  "163": {
+    "name": "蒙古",
+    "begindate": "2020-03-10",
+    "population": 3121772
+  },
+  "164": {
+    "name": "西班牙",
+    "begindate": "2020-02-01",
+    "population": 46397452
+  },
+  "165": {
+    "name": "贝宁",
+    "begindate": "2020-03-16",
+    "population": 11485674
+  },
+  "166": {
+    "name": "赞比亚",
+    "begindate": "2020-03-18",
+    "population": 17609178
+  },
+  "167": {
+    "name": "赤道几内亚",
+    "begindate": "2020-03-14",
+    "population": 1313894
+  },
+  "168": {
+    "name": "越南",
+    "begindate": "2020-01-28",
+    "population": 96491146
+  },
+  "169": {
+    "name": "阿塞拜疆",
+    "begindate": "2020-02-28",
+    "population": 9923914
+  },
+  "170": {
+    "name": "阿富汗",
+    "begindate": "2020-02-24",
+    "population": 36373176
+  },
+  "171": {
+    "name": "阿尔及利亚",
+    "begindate": "2020-02-26",
+    "population": 42008054
+  },
+  "172": {
+    "name": "阿尔巴尼亚",
+    "begindate": "2020-03-10",
+    "population": 2934363
+  },
+  "173": {
+    "name": "阿曼",
+    "begindate": "2020-02-24",
+    "population": 4829946
+  },
+  "174": {
+    "name": "阿根廷",
+    "begindate": "2020-03-04",
+    "population": 44688864
+  },
+  "175": {
+    "name": "阿联酋",
+    "begindate": "2020-01-29",
+    "population": 9541615
+  },
+  "176": {
+    "name": "韩国",
+    "begindate": "2020-01-28",
+    "population": 51269185
+  },
+  "177": {
+    "name": "马尔代夫",
+    "begindate": "2020-03-08",
+    "population": 444259
+  },
+  "178": {
+    "name": "马拉维",
+    "begindate": "2020-04-03",
+    "population": 19164728
+  },
+  "179": {
+    "name": "马提尼克岛",
+    "begindate": "2020-03-21",
+    "population": 385065
+  },
+  "180": {
+    "name": "马来西亚",
+    "begindate": "2020-01-28",
+    "population": 32042458
+  },
+  "181": {
+    "name": "马绍尔群岛",
+    "begindate": "2020-10-29",
+    "population": 53167
+  },
+  "182": {
+    "name": "马耳他",
+    "begindate": "2020-03-07",
+    "population": 432089
+  },
+  "183": {
+    "name": "马达加斯加",
+    "begindate": "2020-03-21",
+    "population": 26262810
+  },
+  "184": {
+    "name": "马里",
+    "begindate": "2020-03-25",
+    "population": 19107706
+  },
+  "185": {
+    "name": "黎巴嫩",
+    "begindate": "2020-02-21",
+    "population": 6093509
+  },
+  "186": {
+    "name": "黑山",
+    "begindate": "2020-03-18",
+    "population": 629219
+  },
+  "187": {
+    "name": "嘉定",
+    "begindate": "2020-01-28",
+    "population": 1471231
+  },
+  "188": {
+    "name": "奉贤",
+    "begindate": "2020-01-28",
+    "population": 1083463
+  },
+  "189": {
+    "name": "宝山",
+    "begindate": "2020-01-28",
+    "population": 1904886
+  },
+  "190": {
+    "name": "崇明",
+    "begindate": "2020-01-30",
+    "population": 703722
+  },
+  "191": {
+    "name": "徐汇",
+    "begindate": "2020-01-28",
+    "population": 1085130
+  },
+  "192": {
+    "name": "普陀",
+    "begindate": "2020-01-30",
+    "population": 1288881
+  },
+  "193": {
+    "name": "杨浦",
+    "begindate": "2020-01-30",
+    "population": 1313222
+  },
+  "194": {
+    "name": "松江",
+    "begindate": "2020-01-29",
+    "population": 1582398
+  },
+  "195": {
+    "name": "浦东",
+    "begindate": "2020-01-28",
+    "population": 5044430
+  },
+  "196": {
+    "name": "虹口",
+    "begindate": "2020-01-28",
+    "population": 852476
+  },
+  "197": {
+    "name": "金山",
+    "begindate": "2020-01-29",
+    "population": 732410
+  },
+  "198": {
+    "name": "长宁",
+    "begindate": "2020-01-28",
+    "population": 690571
+  },
+  "199": {
+    "name": "闵行",
+    "begindate": "2020-01-28",
+    "population": 5429372
+  },
+  "200": {
+    "name": "青浦",
+    "begindate": "2020-01-28",
+    "population": 1081022
+  },
+  "201": {
+    "name": "静安",
+    "begindate": "2020-01-28",
+    "population": 246788
+  },
+  "202": {
+    "name": "黄浦",
+    "begindate": "2020-01-29",
+    "population": 852476
+  },
+  "203": {
+    "name": "上海",
+    "begindate": "2020-02-03",
+    "population": 24870895
+  },
+  "204": {
+    "name": "云南",
+    "begindate": "2020-01-29",
+    "population": 47209277
+  },
+  "205": {
+    "name": "内蒙古",
+    "begindate": "2020-01-26",
+    "population": 24049155
+  },
+  "206": {
+    "name": "北京",
+    "begindate": "2020-01-28",
+    "population": 21893095
+  },
+  "207": {
+    "name": "台湾",
+    "begindate": "2020-01-20",
+    "population": 22901897
+  },
+  "208": {
+    "name": "吉林",
+    "begindate": "2020-01-27",
+    "population": 24073453
+  },
+  "209": {
+    "name": "四川",
+    "begindate": "2020-01-27",
+    "population": 83644866
+  },
+  "210": {
+    "name": "天津",
+    "begindate": "2020-01-26",
+    "population": 13866009
+  },
+  "211": {
+    "name": "宁夏",
+    "begindate": "2020-01-22",
+    "population": 7202654
+  },
+  "212": {
+    "name": "安徽",
+    "begindate": "2020-01-23",
+    "population": 61027171
+  },
+  "213": {
+    "name": "山东",
+    "begindate": "2020-01-28",
+    "population": 101527453
+  },
+  "214": {
+    "name": "山西",
+    "begindate": "2020-01-24",
+    "population": 34915616
+  },
+  "215": {
+    "name": "广东",
+    "begindate": "2020-01-21",
+    "population": 126012510
+  },
+  "216": {
+    "name": "广西",
+    "begindate": "2020-01-22",
+    "population": 50126804
+  },
+  "217": {
+    "name": "新疆",
+    "begindate": "2020-01-20",
+    "population": 25852345
+  },
+  "218": {
+    "name": "江苏",
+    "begindate": "2020-01-22",
+    "population": 84748016
+  },
+  "219": {
+    "name": "江西",
+    "begindate": "2020-01-22",
+    "population": 45188635
+  },
+  "220": {
+    "name": "河北",
+    "begindate": "2020-01-29",
+    "population": 74610235
+  },
+  "221": {
+    "name": "河南",
+    "begindate": "2020-01-21",
+    "population": 99365519
+  },
+  "222": {
+    "name": "浙江",
+    "begindate": "2020-01-24",
+    "population": 64567588
+  },
+  "223": {
+    "name": "海南",
+    "begindate": "2020-01-24",
+    "population": 10081232
+  },
+  "224": {
+    "name": "湖北",
+    "begindate": "2020-01-20",
+    "population": 57752557
+  },
+  "225": {
+    "name": "湖南",
+    "begindate": "2020-01-23",
+    "population": 66444864
+  },
+  "226": {
+    "name": "澳门",
+    "begindate": "2020-01-20",
+    "population": 683110
+  },
+  "227": {
+    "name": "甘肃",
+    "begindate": "2020-01-25",
+    "population": 25019831
+  },
+  "228": {
+    "name": "福建",
+    "begindate": "2020-01-28",
+    "population": 41540086
+  },
+  "229": {
+    "name": "西藏",
+    "begindate": "2020-01-20",
+    "population": 3648100
+  },
+  "230": {
+    "name": "贵州",
+    "begindate": "2020-01-23",
+    "population": 38562148
+  },
+  "231": {
+    "name": "辽宁",
+    "begindate": "2020-02-01",
+    "population": 42591407
+  },
+  "232": {
+    "name": "重庆",
+    "begindate": "2020-01-21",
+    "population": 32054159
+  },
+  "233": {
+    "name": "陕西",
+    "begindate": "2020-01-29",
+    "population": 39528999
+  },
+  "234": {
+    "name": "青海",
+    "begindate": "2020-01-20",
+    "population": 5923957
+  },
+  "235": {
+    "name": "香港",
+    "begindate": "2020-01-20",
+    "population": 7428887
+  },
+  "236": {
+    "name": "黑龙江",
+    "begindate": "2020-01-31",
+    "population": 31850088
+  },
+  "237": {
+    "name": "Faroe Islands",
+    "begindate": "2020-03-22",
+    "population": 52967
+  },
+  "238": {
+    "name": "Cherkasy Oblast",
+    "begindate": "2020-06-02",
+    "population": 1192137
+  },
+  "239": {
+    "name": "Chernihiv Oblast",
+    "begindate": "2020-06-02",
+    "population": 991294
+  },
+  "240": {
+    "name": "Chernivtsi Oblast",
+    "begindate": "2020-06-02",
+    "population": 901632
+  },
+  "241": {
+    "name": "Crimea Republic*",
+    "begindate": "2020-06-02",
+    "population": 1912622
+  },
+  "242": {
+    "name": "Dnipropetrovsk Oblast",
+    "begindate": "2020-06-02",
+    "population": 3176648
+  },
+  "243": {
+    "name": "Donetsk Oblast",
+    "begindate": "2020-06-02",
+    "population": 4131808
+  },
+  "244": {
+    "name": "Ivano-Frankivsk Oblast",
+    "begindate": "2020-06-02",
+    "population": 1368097
+  },
+  "245": {
+    "name": "Kharkiv Oblast",
+    "begindate": "2020-06-02",
+    "population": 2658461
+  },
+  "246": {
+    "name": "Kherson Oblast",
+    "begindate": "2020-06-02",
+    "population": 1027913
+  },
+  "247": {
+    "name": "Khmelnytskyi Oblast",
+    "begindate": "2020-06-02",
+    "population": 1254702
+  },
+  "248": {
+    "name": "Kiev",
+    "begindate": "2020-06-02",
+    "population": 2967360
+  },
+  "249": {
+    "name": "Kiev Oblast",
+    "begindate": "2020-06-02",
+    "population": 1781044
+  },
+  "250": {
+    "name": "Kirovohrad Oblast",
+    "begindate": "2020-06-02",
+    "population": 933109
+  },
+  "251": {
+    "name": "Luhansk Oblast",
+    "begindate": "2020-06-02",
+    "population": 2135913
+  },
+  "252": {
+    "name": "Lviv Oblast",
+    "begindate": "2020-06-02",
+    "population": 2512084
+  },
+  "253": {
+    "name": "Mykolaiv Oblast",
+    "begindate": "2020-06-02",
+    "population": 1119862
+  },
+  "254": {
+    "name": "Odessa Oblast",
+    "begindate": "2020-06-02",
+    "population": 2377230
+  },
+  "255": {
+    "name": "Poltava Oblast",
+    "begindate": "2020-06-02",
+    "population": 1386978
+  },
+  "256": {
+    "name": "Rivne Oblast",
+    "begindate": "2020-06-02",
+    "population": 1152961
+  },
+  "257": {
+    "name": "Sevastopol*",
+    "begindate": "2020-06-02",
+    "population": 449138
+  },
+  "258": {
+    "name": "Sumy Oblast",
+    "begindate": "2020-06-02",
+    "population": 1068247
+  },
+  "259": {
+    "name": "Ternopil Oblast",
+    "begindate": "2020-06-02",
+    "population": 1038695
+  },
+  "260": {
+    "name": "Vinnytsia Oblast",
+    "begindate": "2020-06-02",
+    "population": 1545416
+  },
+  "261": {
+    "name": "Volyn Oblast",
+    "begindate": "2020-06-02",
+    "population": 1031421
+  },
+  "262": {
+    "name": "Zakarpattia Oblast",
+    "begindate": "2020-06-02",
+    "population": 1253791
+  },
+  "263": {
+    "name": "Zaporizhia Oblast",
+    "begindate": "2020-06-02",
+    "population": 1687401
+  },
+  "264": {
+    "name": "Zhytomyr Oblast",
+    "begindate": "2020-06-02",
+    "population": 1208212
+  },
+  "265": {
+    "name": "临沧",
+    "begindate": "2020-02-01",
+    "population": 2538200
+  },
+  "266": {
+    "name": "丽江市",
+    "begindate": "2020-01-28",
+    "population": 1296000
+  },
+  "267": {
+    "name": "大理",
+    "begindate": "2020-01-28",
+    "population": 3599000
+  },
+  "268": {
+    "name": "文山州",
+    "begindate": "2020-02-04",
+    "population": 3654000
+  },
+  "269": {
+    "name": "昆明",
+    "begindate": "2020-01-28",
+    "population": 6850000
+  },
+  "270": {
+    "name": "普洱",
+    "begindate": "2020-01-29",
+    "population": 2637000
+  },
+  "271": {
+    "name": "曲靖",
+    "begindate": "2020-01-28",
+    "population": 6177700
+  },
+  "272": {
+    "name": "楚雄州",
+    "begindate": "2020-02-02",
+    "population": 2755000
+  },
+  "273": {
+    "name": "玉溪",
+    "begindate": "2020-01-28",
+    "population": 2389000
+  },
+  "274": {
+    "name": "红河",
+    "begindate": "2020-01-28",
+    "population": 4775000
+  },
+  "275": {
+    "name": "西双版纳州",
+    "begindate": "2020-01-28",
+    "population": 1196000
+  },
+  "276": {
+    "name": "Adygea Republic",
+    "begindate": "2020-06-02",
+    "population": 463167
+  },
+  "277": {
+    "name": "Altai Krai",
+    "begindate": "2020-06-02",
+    "population": 2296353
+  },
+  "278": {
+    "name": "Altai Republic",
+    "begindate": "2020-06-02",
+    "population": 220954
+  },
+  "279": {
+    "name": "Amur Oblast",
+    "begindate": "2020-06-02",
+    "population": 781846
+  },
+  "280": {
+    "name": "Arkhangelsk Oblast",
+    "begindate": "2020-06-02",
+    "population": 1127051
+  },
+  "281": {
+    "name": "Astrakhan Oblast",
+    "begindate": "2020-06-02",
+    "population": 997778
+  },
+  "282": {
+    "name": "Bashkortostan Republic",
+    "begindate": "2020-06-02",
+    "population": 4013786
+  },
+  "283": {
+    "name": "Belgorod Oblast",
+    "begindate": "2020-06-02",
+    "population": 1541259
+  },
+  "284": {
+    "name": "Bryansk Oblast",
+    "begindate": "2020-06-02",
+    "population": 1182682
+  },
+  "285": {
+    "name": "Buryatia Republic",
+    "begindate": "2020-06-02",
+    "population": 985431
+  },
+  "286": {
+    "name": "Chechen Republic",
+    "begindate": "2020-06-02",
+    "population": 1497992
+  },
+  "287": {
+    "name": "Chelyabinsk Oblast",
+    "begindate": "2020-06-02",
+    "population": 3442810
+  },
+  "288": {
+    "name": "Chukotka Autonomous Okrug",
+    "begindate": "2020-06-02",
+    "population": 49527
+  },
+  "289": {
+    "name": "Chuvashia Republic",
+    "begindate": "2020-06-02",
+    "population": 1207875
+  },
+  "290": {
+    "name": "Dagestan Republic",
+    "begindate": "2020-06-02",
+    "population": 3133303
+  },
+  "291": {
+    "name": "Ingushetia Republic",
+    "begindate": "2020-06-02",
+    "population": 515564
+  },
+  "292": {
+    "name": "Irkutsk Oblast",
+    "begindate": "2020-06-02",
+    "population": 2375021
+  },
+  "293": {
+    "name": "Ivanovo Oblast",
+    "begindate": "2020-06-02",
+    "population": 987032
+  },
+  "294": {
+    "name": "Jewish Autonomous Okrug",
+    "begindate": "2020-06-02",
+    "population": 156500
+  },
+  "295": {
+    "name": "Kabardino-Balkarian Republic",
+    "begindate": "2020-06-02",
+    "population": 869191
+  },
+  "296": {
+    "name": "Kaliningrad Oblast",
+    "begindate": "2020-06-02",
+    "population": 1018624
+  },
+  "297": {
+    "name": "Kalmykia Republic",
+    "begindate": "2020-06-02",
+    "population": 269984
+  },
+  "298": {
+    "name": "Kaluga Oblast",
+    "begindate": "2020-06-02",
+    "population": 1000980
+  },
+  "299": {
+    "name": "Kamchatka Krai",
+    "begindate": "2020-06-02",
+    "population": 311667
+  },
+  "300": {
+    "name": "Karachay-Cherkess Republic",
+    "begindate": "2020-06-02",
+    "population": 465357
+  },
+  "301": {
+    "name": "Karelia Republic",
+    "begindate": "2020-06-02",
+    "population": 609071
+  },
+  "302": {
+    "name": "Kemerovo Oblast",
+    "begindate": "2020-06-02",
+    "population": 2633446
+  },
+  "303": {
+    "name": "Khabarovsk Krai",
+    "begindate": "2020-06-02",
+    "population": 1301127
+  },
+  "304": {
+    "name": "Khakassia Republic",
+    "begindate": "2020-06-02",
+    "population": 532036
+  },
+  "305": {
+    "name": "Khanty-Mansi Autonomous Okrug",
+    "begindate": "2020-06-02",
+    "population": 1532243
+  },
+  "306": {
+    "name": "Kirov Oblast",
+    "begindate": "2020-06-02",
+    "population": 1250173
+  },
+  "307": {
+    "name": "Komi Republic",
+    "begindate": "2020-06-02",
+    "population": 813590
+  },
+  "308": {
+    "name": "Kostroma Oblast",
+    "begindate": "2020-06-02",
+    "population": 628423
+  },
+  "309": {
+    "name": "Krasnodar Krai",
+    "begindate": "2020-06-02",
+    "population": 5683947
+  },
+  "310": {
+    "name": "Krasnoyarsk Krai",
+    "begindate": "2020-06-02",
+    "population": 2855899
+  },
+  "311": {
+    "name": "Kurgan Oblast",
+    "begindate": "2020-06-02",
+    "population": 818570
+  },
+  "312": {
+    "name": "Kursk Oblast",
+    "begindate": "2020-06-02",
+    "population": 1096488
+  },
+  "313": {
+    "name": "Leningrad Oblast",
+    "begindate": "2020-06-02",
+    "population": 1892711
+  },
+  "314": {
+    "name": "Lipetsk Oblast",
+    "begindate": "2020-06-02",
+    "population": 1128192
+  },
+  "315": {
+    "name": "Magadan Oblast",
+    "begindate": "2020-06-02",
+    "population": 139034
+  },
+  "316": {
+    "name": "Mari El Republic",
+    "begindate": "2020-06-02",
+    "population": 675332
+  },
+  "317": {
+    "name": "Mordovia Republic",
+    "begindate": "2020-06-02",
+    "population": 778965
+  },
+  "318": {
+    "name": "Moscow",
+    "begindate": "2020-06-02",
+    "population": 12655050
+  },
+  "319": {
+    "name": "Moscow Oblast",
+    "begindate": "2020-06-02",
+    "population": 7708499
+  },
+  "320": {
+    "name": "Murmansk Oblast",
+    "begindate": "2020-06-02",
+    "population": 732864
+  },
+  "321": {
+    "name": "Nenets Autonomous Okrug",
+    "begindate": "2020-06-02",
+    "population": 42090
+  },
+  "322": {
+    "name": "Nizhny Novgorod Oblast",
+    "begindate": "2020-06-02",
+    "population": 3176552
+  },
+  "323": {
+    "name": "North Ossetia - Alania Republic",
+    "begindate": "2020-06-02",
+    "population": 693098
+  },
+  "324": {
+    "name": "Novgorod Oblast",
+    "begindate": "2020-06-02",
+    "population": 592415
+  },
+  "325": {
+    "name": "Novosibirsk Oblast",
+    "begindate": "2020-06-02",
+    "population": 2785836
+  },
+  "326": {
+    "name": "Omsk Oblast",
+    "begindate": "2020-06-02",
+    "population": 1903675
+  },
+  "327": {
+    "name": "Orel Oblast",
+    "begindate": "2020-06-02",
+    "population": 724686
+  },
+  "328": {
+    "name": "Orenburg Oblast",
+    "begindate": "2020-06-02",
+    "population": 1942915
+  },
+  "329": {
+    "name": "Penza Oblast",
+    "begindate": "2020-06-02",
+    "population": 1290898
+  },
+  "330": {
+    "name": "Perm Krai",
+    "begindate": "2020-06-02",
+    "population": 2579261
+  },
+  "331": {
+    "name": "Primorsky Krai",
+    "begindate": "2020-06-02",
+    "population": 1877844
+  },
+  "332": {
+    "name": "Pskov Oblast",
+    "begindate": "2020-06-02",
+    "population": 620249
+  },
+  "333": {
+    "name": "Rostov Oblast",
+    "begindate": "2020-06-02",
+    "population": 4181486
+  },
+  "334": {
+    "name": "Ryazan Oblast",
+    "begindate": "2020-06-02",
+    "population": 1098257
+  },
+  "335": {
+    "name": "Saint Petersburg",
+    "begindate": "2020-06-02",
+    "population": 5384342
+  },
+  "336": {
+    "name": "Sakha (Yakutiya) Republic",
+    "begindate": "2020-06-02",
+    "population": 981971
+  },
+  "337": {
+    "name": "Sakhalin Oblast",
+    "begindate": "2020-06-02",
+    "population": 485621
+  },
+  "338": {
+    "name": "Samara Oblast",
+    "begindate": "2020-06-02",
+    "population": 3154164
+  },
+  "339": {
+    "name": "Saratov Oblast",
+    "begindate": "2020-06-02",
+    "population": 2395111
+  },
+  "340": {
+    "name": "Smolensk Oblast",
+    "begindate": "2020-06-02",
+    "population": 921127
+  },
+  "341": {
+    "name": "Stavropol Krai",
+    "begindate": "2020-06-02",
+    "population": 2792796
+  },
+  "342": {
+    "name": "Sverdlovsk Oblast",
+    "begindate": "2020-06-02",
+    "population": 4290067
+  },
+  "343": {
+    "name": "Tambov Oblast",
+    "begindate": "2020-06-02",
+    "population": 994420
+  },
+  "344": {
+    "name": "Tatarstan Republic",
+    "begindate": "2020-06-02",
+    "population": 3894120
+  },
+  "345": {
+    "name": "Tomsk Oblast",
+    "begindate": "2020-06-02",
+    "population": 1070339
+  },
+  "346": {
+    "name": "Tula Oblast",
+    "begindate": "2020-06-02",
+    "population": 1449115
+  },
+  "347": {
+    "name": "Tver Oblast",
+    "begindate": "2020-06-02",
+    "population": 1245619
+  },
+  "348": {
+    "name": "Tyumen Oblast",
+    "begindate": "2020-06-02",
+    "population": 3778053
+  },
+  "349": {
+    "name": "Tyva Republic",
+    "begindate": "2020-06-02",
+    "population": 330368
+  },
+  "350": {
+    "name": "Udmurt Republic",
+    "begindate": "2020-06-02",
+    "population": 1493356
+  },
+  "351": {
+    "name": "Ulyanovsk Oblast",
+    "begindate": "2020-06-02",
+    "population": 1218319
+  },
+  "352": {
+    "name": "Vladimir Oblast",
+    "begindate": "2020-06-02",
+    "population": 1342099
+  },
+  "353": {
+    "name": "Volgograd Oblast",
+    "begindate": "2020-06-02",
+    "population": 2474556
+  },
+  "354": {
+    "name": "Vologda Oblast",
+    "begindate": "2020-06-02",
+    "population": 1151042
+  },
+  "355": {
+    "name": "Voronezh Oblast",
+    "begindate": "2020-06-02",
+    "population": 2305608
+  },
+  "356": {
+    "name": "Yamalo-Nenets Autonomous Okrug",
+    "begindate": "2020-06-02",
+    "population": 522904
+  },
+  "357": {
+    "name": "Yaroslavl Oblast",
+    "begindate": "2020-06-02",
+    "population": 1241424
+  },
+  "358": {
+    "name": "Zabaykalsky Krai",
+    "begindate": "2020-06-02",
+    "population": 1053485
+  },
+  "359": {
+    "name": "乌兰察布",
+    "begindate": "2020-01-31",
+    "population": 2090200
+  },
+  "360": {
+    "name": "乌海",
+    "begindate": "2020-02-02",
+    "population": 566100
+  },
+  "361": {
+    "name": "包头",
+    "begindate": "2020-01-28",
+    "population": 2897000
+  },
+  "362": {
+    "name": "呼伦贝尔",
+    "begindate": "2020-01-28",
+    "population": 2534100
+  },
+  "363": {
+    "name": "呼和浩特",
+    "begindate": "2020-01-28",
+    "population": 3137000
+  },
+  "364": {
+    "name": "巴彦淖尔",
+    "begindate": "2020-01-29",
+    "population": 1694000
+  },
+  "365": {
+    "name": "赤峰",
+    "begindate": "2020-01-28",
+    "population": 4330900
+  },
+  "366": {
+    "name": "鄂尔多斯",
+    "begindate": "2020-01-28",
+    "population": 2087600
+  },
+  "367": {
+    "name": "锡林郭勒",
+    "begindate": "2020-01-28",
+    "population": 1058300
+  },
+  "368": {
+    "name": "Alberta",
+    "begindate": "2020-03-22",
+    "population": 4421876
+  },
+  "369": {
+    "name": "British Columbia",
+    "begindate": "2020-03-22",
+    "population": 5147712
+  },
+  "370": {
+    "name": "Manitoba",
+    "begindate": "2020-03-22",
+    "population": 1379263
+  },
+  "371": {
+    "name": "New Brunswick",
+    "begindate": "2020-03-22",
+    "population": 781476
+  },
+  "372": {
+    "name": "Newfoundland and Labrador",
+    "begindate": "2020-03-22",
+    "population": 522103
+  },
+  "373": {
+    "name": "Northwest Territories",
+    "begindate": "2020-03-22",
+    "population": 45161
+  },
+  "374": {
+    "name": "Nova Scotia",
+    "begindate": "2020-03-22",
+    "population": 979351
+  },
+  "375": {
+    "name": "Nunavut",
+    "begindate": "2020-03-22",
+    "population": 39353
+  },
+  "376": {
+    "name": "Ontario",
+    "begindate": "2020-03-22",
+    "population": 14734014
+  },
+  "377": {
+    "name": "Prince Edward Island",
+    "begindate": "2020-03-22",
+    "population": 159625
+  },
+  "378": {
+    "name": "Quebec",
+    "begindate": "2020-03-22",
+    "population": 8574571
+  },
+  "379": {
+    "name": "Saskatchewan",
+    "begindate": "2020-03-22",
+    "population": 1178681
+  },
+  "380": {
+    "name": "Yukon",
+    "begindate": "2020-03-26",
+    "population": 42052
+  },
+  "381": {
+    "name": "东城",
+    "begindate": "2020-01-28",
+    "population": 794000
+  },
+  "382": {
+    "name": "丰台",
+    "begindate": "2020-01-28",
+    "population": 2025000
+  },
+  "383": {
+    "name": "大兴",
+    "begindate": "2020-01-28",
+    "population": 1712000
+  },
+  "384": {
+    "name": "密云",
+    "begindate": "2020-02-08",
+    "population": 503000
+  },
+  "385": {
+    "name": "延庆",
+    "begindate": "2020-02-03",
+    "population": 357000
+  },
+  "386": {
+    "name": "怀柔",
+    "begindate": "2020-01-30",
+    "population": 422000
+  },
+  "387": {
+    "name": "房山",
+    "begindate": "2020-02-01",
+    "population": 1255000
+  },
+  "388": {
+    "name": "昌平",
+    "begindate": "2020-01-28",
+    "population": 2166000
+  },
+  "389": {
+    "name": "朝阳",
+    "begindate": "2020-01-28",
+    "population": 3473000
+  },
+  "390": {
+    "name": "海淀",
+    "begindate": "2020-01-28",
+    "population": 3237000
+  },
+  "391": {
+    "name": "石景山",
+    "begindate": "2020-01-28",
+    "population": 570000
+  },
+  "392": {
+    "name": "西城",
+    "begindate": "2020-01-28",
+    "population": 1137000
+  },
+  "393": {
+    "name": "通州",
+    "begindate": "2020-01-28",
+    "population": 1675000
+  },
+  "394": {
+    "name": "门头沟",
+    "begindate": "2020-01-29",
+    "population": 344000
+  },
+  "395": {
+    "name": "顺义",
+    "begindate": "2020-01-28",
+    "population": 1228000
+  },
+  "396": {
+    "name": "Andaman and Nicobar Islands",
+    "begindate": "2020-06-11",
+    "population": 380581
+  },
+  "397": {
+    "name": "Andhra Pradesh",
+    "begindate": "2020-06-11",
+    "population": 49577103
+  },
+  "398": {
+    "name": "Arunachal Pradesh",
+    "begindate": "2020-06-11",
+    "population": 1383727
+  },
+  "399": {
+    "name": "Assam",
+    "begindate": "2020-06-11",
+    "population": 31205576
+  },
+  "400": {
+    "name": "Bihar",
+    "begindate": "2020-06-11",
+    "population": 104099452
+  },
+  "401": {
+    "name": "Chandigarh",
+    "begindate": "2020-06-11",
+    "population": 1158500
+  },
+  "402": {
+    "name": "Chhattisgarh",
+    "begindate": "2020-06-11",
+    "population": 25545198
+  },
+  "403": {
+    "name": "Dadra and Nagar Haveli and Daman and Diu",
+    "begindate": "2020-06-12",
+    "population": 586956
+  },
+  "404": {
+    "name": "Delhi",
+    "begindate": "2020-06-11",
+    "population": 16787941
+  },
+  "405": {
+    "name": "Goa",
+    "begindate": "2020-06-11",
+    "population": 1458545
+  },
+  "406": {
+    "name": "Gujarat",
+    "begindate": "2020-06-11",
+    "population": 60439642
+  },
+  "407": {
+    "name": "Haryana",
+    "begindate": "2020-06-11",
+    "population": 25351462
+  },
+  "408": {
+    "name": "Himachal Pradesh",
+    "begindate": "2020-06-11",
+    "population": 6864602
+  },
+  "409": {
+    "name": "Jammu and Kashmir",
+    "begindate": "2020-06-11",
+    "population": 12267013
+  },
+  "410": {
+    "name": "Jharkhand",
+    "begindate": "2020-06-11",
+    "population": 32988134
+  },
+  "411": {
+    "name": "Karnataka",
+    "begindate": "2020-06-11",
+    "population": 61095297
+  },
+  "412": {
+    "name": "Kerala",
+    "begindate": "2020-06-11",
+    "population": 33406061
+  },
+  "413": {
+    "name": "Ladakh",
+    "begindate": "2020-06-11",
+    "population": 274286
+  },
+  "414": {
+    "name": "Lakshadweep",
+    "begindate": "2020-07-29",
+    "population": 73200
+  },
+  "415": {
+    "name": "Madhya Pradesh",
+    "begindate": "2020-06-11",
+    "population": 72626809
+  },
+  "416": {
+    "name": "Maharashtra",
+    "begindate": "2020-06-11",
+    "population": 112374333
+  },
+  "417": {
+    "name": "Manipur",
+    "begindate": "2020-06-11",
+    "population": 2855794
+  },
+  "418": {
+    "name": "Meghalaya",
+    "begindate": "2020-06-11",
+    "population": 2966889
+  },
+  "419": {
+    "name": "Mizoram",
+    "begindate": "2020-06-11",
+    "population": 1097206
+  },
+  "420": {
+    "name": "Nagaland",
+    "begindate": "2020-06-11",
+    "population": 1978502
+  },
+  "421": {
+    "name": "Odisha",
+    "begindate": "2020-06-11",
+    "population": 41974218
+  },
+  "422": {
+    "name": "Puducherry",
+    "begindate": "2020-06-11",
+    "population": 1247953
+  },
+  "423": {
+    "name": "Punjab",
+    "begindate": "2020-06-11",
+    "population": 27743338
+  },
+  "424": {
+    "name": "Rajasthan",
+    "begindate": "2020-06-11",
+    "population": 68548437
+  },
+  "425": {
+    "name": "Sikkim",
+    "begindate": "2020-06-11",
+    "population": 610577
+  },
+  "426": {
+    "name": "Tamil Nadu",
+    "begindate": "2020-06-11",
+    "population": 72147030
+  },
+  "427": {
+    "name": "Telangana",
+    "begindate": "2020-06-11",
+    "population": 35003674
+  },
+  "428": {
+    "name": "Tripura",
+    "begindate": "2020-06-11",
+    "population": 3673917
+  },
+  "429": {
+    "name": "Uttar Pradesh",
+    "begindate": "2020-06-11",
+    "population": 199812341
+  },
+  "430": {
+    "name": "Uttarakhand",
+    "begindate": "2020-06-11",
+    "population": 10086292
+  },
+  "431": {
+    "name": "West Bengal",
+    "begindate": "2020-06-11",
+    "population": 91276115
+  },
+  "432": {
+    "name": "公主岭",
+    "begindate": "2020-01-28",
+    "population": 1067100
+  },
+  "433": {
+    "name": "吉林市",
+    "begindate": "2020-01-28",
+    "population": 4116000
+  },
+  "434": {
+    "name": "四平",
+    "begindate": "2020-01-28",
+    "population": 3182000
+  },
+  "435": {
+    "name": "延边",
+    "begindate": "2020-01-30",
+    "population": 2072000
+  },
+  "436": {
+    "name": "松原",
+    "begindate": "2020-01-28",
+    "population": 2750000
+  },
+  "437": {
+    "name": "白城",
+    "begindate": "2020-02-08",
+    "population": 1899000
+  },
+  "438": {
+    "name": "辽源",
+    "begindate": "2020-02-04",
+    "population": 1172400
+  },
+  "439": {
+    "name": "通化",
+    "begindate": "2020-01-29",
+    "population": 2159400
+  },
+  "440": {
+    "name": "长春",
+    "begindate": "2020-01-29",
+    "population": 7538000
+  },
+  "441": {
+    "name": "Amazonas",
+    "begindate": "2020-05-21",
+    "population": 79020
+  },
+  "442": {
+    "name": "Antioquia",
+    "begindate": "2020-05-29",
+    "population": 6677930
+  },
+  "443": {
+    "name": "Arauca",
+    "begindate": "2020-05-29",
+    "population": 294206
+  },
+  "444": {
+    "name": "Atlantico",
+    "begindate": "2020-05-29",
+    "population": 2722128
+  },
+  "445": {
+    "name": "Bolivar",
+    "begindate": "2020-05-29",
+    "population": 2180976
+  },
+  "446": {
+    "name": "Boyaca",
+    "begindate": "2020-05-29",
+    "population": 1242731
+  },
+  "447": {
+    "name": "Caldas",
+    "begindate": "2020-05-29",
+    "population": 1018453
+  },
+  "448": {
+    "name": "Caqueta",
+    "begindate": "2020-05-29",
+    "population": 410521
+  },
+  "449": {
+    "name": "Casanare",
+    "begindate": "2020-05-29",
+    "population": 435195
+  },
+  "450": {
+    "name": "Cauca",
+    "begindate": "2020-05-29",
+    "population": 1491937
+  },
+  "451": {
+    "name": "Cesar",
+    "begindate": "2020-05-29",
+    "population": 1295387
+  },
+  "452": {
+    "name": "Choco",
+    "begindate": "2020-05-29",
+    "population": 544764
+  },
+  "453": {
+    "name": "Cordoba",
+    "begindate": "2020-05-29",
+    "population": 1828947
+  },
+  "454": {
+    "name": "Cundinamarca",
+    "begindate": "2020-05-29",
+    "population": 3242999
+  },
+  "455": {
+    "name": "Guainia",
+    "begindate": "2020-05-30",
+    "population": 50636
+  },
+  "456": {
+    "name": "Guaviare",
+    "begindate": "2020-06-09",
+    "population": 86657
+  },
+  "457": {
+    "name": "Huila",
+    "begindate": "2020-05-29",
+    "population": 1122622
+  },
+  "458": {
+    "name": "La Guajira",
+    "begindate": "2020-05-29",
+    "population": 965718
+  },
+  "459": {
+    "name": "Magdalena",
+    "begindate": "2020-05-29",
+    "population": 1427026
+  },
+  "460": {
+    "name": "Meta",
+    "begindate": "2020-05-29",
+    "population": 1063454
+  },
+  "461": {
+    "name": "Narino",
+    "begindate": "2020-05-29",
+    "population": 1627589
+  },
+  "462": {
+    "name": "Norte de Santander",
+    "begindate": "2020-05-29",
+    "population": 1620318
+  },
+  "463": {
+    "name": "Putumayo",
+    "begindate": "2020-05-29",
+    "population": 359127
+  },
+  "464": {
+    "name": "Quindio",
+    "begindate": "2020-05-29",
+    "population": 555401
+  },
+  "465": {
+    "name": "Risaralda",
+    "begindate": "2020-05-29",
+    "population": 961055
+  },
+  "466": {
+    "name": "San Andres y Providencia",
+    "begindate": "2020-05-29",
+    "population": 63692
+  },
+  "467": {
+    "name": "Santander",
+    "begindate": "2020-05-29",
+    "population": 2280908
+  },
+  "468": {
+    "name": "Sucre",
+    "begindate": "2020-05-29",
+    "population": 949252
+  },
+  "469": {
+    "name": "Tolima",
+    "begindate": "2020-05-29",
+    "population": 1339998
+  },
+  "470": {
+    "name": "Valle del Cauca",
+    "begindate": "2020-05-29",
+    "population": 4532152
+  },
+  "471": {
+    "name": "Vaupes",
+    "begindate": "2020-05-29",
+    "population": 44712
+  },
+  "472": {
+    "name": "Vichada",
+    "begindate": "2020-05-31",
+    "population": 112958
+  },
+  "473": {
+    "name": "乐山",
+    "begindate": "2020-01-28",
+    "population": 3271000
+  },
+  "474": {
+    "name": "内江",
+    "begindate": "2020-01-29",
+    "population": 3700000
+  },
+  "475": {
+    "name": "凉山",
+    "begindate": "2020-01-28",
+    "population": 5299400
+  },
+  "476": {
+    "name": "南充",
+    "begindate": "2020-01-28",
+    "population": 6435000
+  },
+  "477": {
+    "name": "宜宾",
+    "begindate": "2020-01-28",
+    "population": 4573000
+  },
+  "478": {
+    "name": "巴中",
+    "begindate": "2020-01-29",
+    "population": 3319200
+  },
+  "479": {
+    "name": "广元",
+    "begindate": "2020-01-29",
+    "population": 2675000
+  },
+  "480": {
+    "name": "广安",
+    "begindate": "2020-01-29",
+    "population": 3251000
+  },
+  "481": {
+    "name": "德阳",
+    "begindate": "2020-01-29",
+    "population": 3545000
+  },
+  "482": {
+    "name": "成都",
+    "begindate": "2020-01-29",
+    "population": 16581000
+  },
+  "483": {
+    "name": "攀枝花",
+    "begindate": "2020-01-31",
+    "population": 1214000
+  },
+  "484": {
+    "name": "泸州",
+    "begindate": "2020-01-29",
+    "population": 4329400
+  },
+  "485": {
+    "name": "甘孜",
+    "begindate": "2020-01-28",
+    "population": 1199000
+  },
+  "486": {
+    "name": "眉山",
+    "begindate": "2020-01-28",
+    "population": 2995000
+  },
+  "487": {
+    "name": "绵阳",
+    "begindate": "2020-01-29",
+    "population": 4877000
+  },
+  "488": {
+    "name": "自贡",
+    "begindate": "2020-01-29",
+    "population": 2922000
+  },
+  "489": {
+    "name": "资阳",
+    "begindate": "2020-01-28",
+    "population": 2503000
+  },
+  "490": {
+    "name": "达州",
+    "begindate": "2020-01-29",
+    "population": 5741000
+  },
+  "491": {
+    "name": "遂宁",
+    "begindate": "2020-01-29",
+    "population": 3189000
+  },
+  "492": {
+    "name": "雅安",
+    "begindate": "2020-01-29",
+    "population": 1541000
+  },
+  "493": {
+    "name": "Aguascalientes",
+    "begindate": "2020-05-21",
+    "population": 1425607
+  },
+  "494": {
+    "name": "Baja California",
+    "begindate": "2020-05-21",
+    "population": 3769020
+  },
+  "495": {
+    "name": "Baja California Sur",
+    "begindate": "2020-05-21",
+    "population": 798447
+  },
+  "496": {
+    "name": "Campeche",
+    "begindate": "2020-05-21",
+    "population": 928363
+  },
+  "497": {
+    "name": "Chiapas",
+    "begindate": "2020-05-21",
+    "population": 5543828
+  },
+  "498": {
+    "name": "Chihuahua",
+    "begindate": "2020-05-21",
+    "population": 3741869
+  },
+  "499": {
+    "name": "Ciudad de Mexico",
+    "begindate": "2020-05-21",
+    "population": 9209944
+  },
+  "500": {
+    "name": "Coahuila",
+    "begindate": "2020-05-21",
+    "population": 3146771
+  },
+  "501": {
+    "name": "Colima",
+    "begindate": "2020-05-21",
+    "population": 731391
+  },
+  "502": {
+    "name": "Durango",
+    "begindate": "2020-05-21",
+    "population": 1832650
+  },
+  "503": {
+    "name": "Guanajuato",
+    "begindate": "2020-05-21",
+    "population": 6166934
+  },
+  "504": {
+    "name": "Guerrero",
+    "begindate": "2020-05-21",
+    "population": 3540685
+  },
+  "505": {
+    "name": "Hidalgo",
+    "begindate": "2020-05-21",
+    "population": 3082841
+  },
+  "506": {
+    "name": "Jalisco",
+    "begindate": "2020-05-21",
+    "population": 8348151
+  },
+  "507": {
+    "name": "Mexico",
+    "begindate": "2020-05-21",
+    "population": 16992418
+  },
+  "508": {
+    "name": "Michoacan",
+    "begindate": "2020-05-21",
+    "population": 4748846
+  },
+  "509": {
+    "name": "Morelos",
+    "begindate": "2020-05-21",
+    "population": 1971520
+  },
+  "510": {
+    "name": "Nayarit",
+    "begindate": "2020-05-21",
+    "population": 1235456
+  },
+  "511": {
+    "name": "Nuevo Leon",
+    "begindate": "2020-05-21",
+    "population": 5784442
+  },
+  "512": {
+    "name": "Oaxaca",
+    "begindate": "2020-05-21",
+    "population": 4132148
+  },
+  "513": {
+    "name": "Puebla",
+    "begindate": "2020-05-21",
+    "population": 6583278
+  },
+  "514": {
+    "name": "Queretaro",
+    "begindate": "2020-05-21",
+    "population": 2368467
+  },
+  "515": {
+    "name": "Quintana Roo",
+    "begindate": "2020-05-21",
+    "population": 1857985
+  },
+  "516": {
+    "name": "San Luis Potosi",
+    "begindate": "2020-05-21",
+    "population": 2822255
+  },
+  "517": {
+    "name": "Sinaloa",
+    "begindate": "2020-05-21",
+    "population": 3026943
+  },
+  "518": {
+    "name": "Sonora",
+    "begindate": "2020-05-21",
+    "population": 2944840
+  },
+  "519": {
+    "name": "Tabasco",
+    "begindate": "2020-05-21",
+    "population": 2402598
+  },
+  "520": {
+    "name": "Tamaulipas",
+    "begindate": "2020-05-21",
+    "population": 3527735
+  },
+  "521": {
+    "name": "Tlaxcala",
+    "begindate": "2020-05-21",
+    "population": 1342977
+  },
+  "522": {
+    "name": "Veracruz",
+    "begindate": "2020-05-21",
+    "population": 8062579
+  },
+  "523": {
+    "name": "Yucatan",
+    "begindate": "2020-05-21",
+    "population": 2320898
+  },
+  "524": {
+    "name": "Zacatecas",
+    "begindate": "2020-05-21",
+    "population": 1622138
+  },
+  "525": {
+    "name": "东丽区",
+    "begindate": "2020-02-01",
+    "population": 763300
+  },
+  "526": {
+    "name": "北辰区",
+    "begindate": "2020-02-06",
+    "population": 865000
+  },
+  "527": {
+    "name": "南开区",
+    "begindate": "2020-01-30",
+    "population": 1141600
+  },
+  "528": {
+    "name": "和平区",
+    "begindate": "2020-01-30",
+    "population": 350700
+  },
+  "529": {
+    "name": "宁河区",
+    "begindate": "2020-01-30",
+    "population": 405088
+  },
+  "530": {
+    "name": "宝坻区",
+    "begindate": "2020-02-01",
+    "population": 732600
+  },
+  "531": {
+    "name": "武清区",
+    "begindate": "2020-02-08",
+    "population": 995000
+  },
+  "532": {
+    "name": "河东区",
+    "begindate": "2020-01-30",
+    "population": 972800
+  },
+  "533": {
+    "name": "河北区",
+    "begindate": "2020-01-30",
+    "population": 889000
+  },
+  "534": {
+    "name": "河西区",
+    "begindate": "2020-01-30",
+    "population": 992400
+  },
+  "535": {
+    "name": "津南区",
+    "begindate": "2020-02-04",
+    "population": 896000
+  },
+  "536": {
+    "name": "滨海新区",
+    "begindate": "2020-01-30",
+    "population": 2984200
+  },
+  "537": {
+    "name": "红桥区",
+    "begindate": "2020-01-30",
+    "population": 565000
+  },
+  "538": {
+    "name": "西青区",
+    "begindate": "2020-01-30",
+    "population": 863400
+  },
+  "539": {
+    "name": "中卫",
+    "begindate": "2020-01-28",
+    "population": 1174600
+  },
+  "540": {
+    "name": "吴忠",
+    "begindate": "2020-01-28",
+    "population": 1422500
+  },
+  "541": {
+    "name": "固原",
+    "begindate": "2020-01-28",
+    "population": 1250500
+  },
+  "542": {
+    "name": "石嘴山",
+    "begindate": "2020-02-04",
+    "population": 803000
+  },
+  "543": {
+    "name": "银川",
+    "begindate": "2020-01-28",
+    "population": 2293100
+  },
+  "544": {
+    "name": "六安",
+    "begindate": "2020-01-28",
+    "population": 4837000
+  },
+  "545": {
+    "name": "合肥",
+    "begindate": "2020-01-28",
+    "population": 8087000
+  },
+  "546": {
+    "name": "安庆",
+    "begindate": "2020-01-28",
+    "population": 4691000
+  },
+  "547": {
+    "name": "宣城",
+    "begindate": "2020-01-28",
+    "population": 2648000
+  },
+  "548": {
+    "name": "宿州",
+    "begindate": "2020-01-28",
+    "population": 5681000
+  },
+  "549": {
+    "name": "池州",
+    "begindate": "2020-01-28",
+    "population": 1474000
+  },
+  "550": {
+    "name": "淮北",
+    "begindate": "2020-01-28",
+    "population": 2254000
+  },
+  "551": {
+    "name": "淮南",
+    "begindate": "2020-01-28",
+    "population": 3490000
+  },
+  "552": {
+    "name": "滁州",
+    "begindate": "2020-01-28",
+    "population": 4114000
+  },
+  "553": {
+    "name": "芜湖",
+    "begindate": "2020-01-28",
+    "population": 3748000
+  },
+  "554": {
+    "name": "蚌埠",
+    "begindate": "2020-01-28",
+    "population": 3392000
+  },
+  "555": {
+    "name": "铜陵",
+    "begindate": "2020-01-28",
+    "population": 1629000
+  },
+  "556": {
+    "name": "阜阳",
+    "begindate": "2020-01-28",
+    "population": 10708000
+  },
+  "557": {
+    "name": "马鞍山",
+    "begindate": "2020-01-28",
+    "population": 2337000
+  },
+  "558": {
+    "name": "黄山",
+    "begindate": "2020-01-28",
+    "population": 1407000
+  },
+  "559": {
+    "name": "临沂",
+    "begindate": "2020-01-28",
+    "population": 10667100
+  },
+  "560": {
+    "name": "威海",
+    "begindate": "2020-01-28",
+    "population": 2836000
+  },
+  "561": {
+    "name": "德州",
+    "begindate": "2020-01-28",
+    "population": 5748500
+  },
+  "562": {
+    "name": "日照",
+    "begindate": "2020-01-28",
+    "population": 2949000
+  },
+  "563": {
+    "name": "枣庄",
+    "begindate": "2020-01-28",
+    "population": 3933000
+  },
+  "564": {
+    "name": "泰安",
+    "begindate": "2020-01-28",
+    "population": 5635000
+  },
+  "565": {
+    "name": "济南",
+    "begindate": "2020-01-28",
+    "population": 8908700
+  },
+  "566": {
+    "name": "济宁",
+    "begindate": "2020-01-28",
+    "population": 8356000
+  },
+  "567": {
+    "name": "淄博",
+    "begindate": "2020-01-28",
+    "population": 4697000
+  },
+  "568": {
+    "name": "滨州",
+    "begindate": "2020-01-28",
+    "population": 3923000
+  },
+  "569": {
+    "name": "潍坊",
+    "begindate": "2020-01-28",
+    "population": 9351500
+  },
+  "570": {
+    "name": "烟台",
+    "begindate": "2020-01-28",
+    "population": 7138000
+  },
+  "571": {
+    "name": "聊城",
+    "begindate": "2020-01-28",
+    "population": 6098300
+  },
+  "572": {
+    "name": "菏泽",
+    "begindate": "2020-01-28",
+    "population": 8781700
+  },
+  "573": {
+    "name": "青岛",
+    "begindate": "2020-01-28",
+    "population": 9499800
+  },
+  "574": {
+    "name": "临汾",
+    "begindate": "2020-01-28",
+    "population": 4435700
+  },
+  "575": {
+    "name": "吕梁",
+    "begindate": "2020-01-28",
+    "population": 3832200
+  },
+  "576": {
+    "name": "大同",
+    "begindate": "2020-01-28",
+    "population": 3406400
+  },
+  "577": {
+    "name": "太原",
+    "begindate": "2020-01-28",
+    "population": 4318700
+  },
+  "578": {
+    "name": "忻州",
+    "begindate": "2020-02-01",
+    "population": 3141300
+  },
+  "579": {
+    "name": "晋中",
+    "begindate": "2020-01-28",
+    "population": 3335700
+  },
+  "580": {
+    "name": "晋城",
+    "begindate": "2020-02-01",
+    "population": 2315000
+  },
+  "581": {
+    "name": "朔州",
+    "begindate": "2020-01-28",
+    "population": 1762200
+  },
+  "582": {
+    "name": "运城",
+    "begindate": "2020-01-28",
+    "population": 5275300
+  },
+  "583": {
+    "name": "长治",
+    "begindate": "2020-01-28",
+    "population": 3420400
+  },
+  "584": {
+    "name": "阳泉",
+    "begindate": "2020-01-28",
+    "population": 1408800
+  },
+  "585": {
+    "name": "Azad Jammu and Kashmir",
+    "begindate": "2020-06-11",
+    "population": 4045366
+  },
+  "586": {
+    "name": "Balochistan",
+    "begindate": "2020-06-11",
+    "population": 12344739
+  },
+  "587": {
+    "name": "Gilgit-Baltistan",
+    "begindate": "2020-06-11",
+    "population": 1301000
+  },
+  "588": {
+    "name": "Islamabad",
+    "begindate": "2020-06-11",
+    "population": 2001579
+  },
+  "589": {
+    "name": "Khyber Pakhtunkhwa",
+    "begindate": "2020-06-11",
+    "population": 30523371
+  },
+  "590": {
+    "name": "Punjab",
+    "begindate": "2020-06-11",
+    "population": 110017465
+  },
+  "591": {
+    "name": "Sindh",
+    "begindate": "2020-06-11",
+    "population": 47893244
+  },
+  "592": {
+    "name": "Acre",
+    "begindate": "2020-05-21",
+    "population": 894470
+  },
+  "593": {
+    "name": "Alagoas",
+    "begindate": "2020-05-21",
+    "population": 3351543
+  },
+  "594": {
+    "name": "Amapa",
+    "begindate": "2020-05-21",
+    "population": 861773
+  },
+  "595": {
+    "name": "Amazonas",
+    "begindate": "2020-05-21",
+    "population": 4207714
+  },
+  "596": {
+    "name": "Bahia",
+    "begindate": "2020-05-21",
+    "population": 14930634
+  },
+  "597": {
+    "name": "Ceara",
+    "begindate": "2020-05-21",
+    "population": 9187103
+  },
+  "598": {
+    "name": "Distrito Federal",
+    "begindate": "2020-05-21",
+    "population": 3055149
+  },
+  "599": {
+    "name": "Espirito Santo",
+    "begindate": "2020-05-21",
+    "population": 4064052
+  },
+  "600": {
+    "name": "Goias",
+    "begindate": "2020-05-21",
+    "population": 7113540
+  },
+  "601": {
+    "name": "Maranhao",
+    "begindate": "2020-05-21",
+    "population": 7114598
+  },
+  "602": {
+    "name": "Mato Grosso",
+    "begindate": "2020-05-21",
+    "population": 3526220
+  },
+  "603": {
+    "name": "Mato Grosso do Sul",
+    "begindate": "2020-05-21",
+    "population": 2809394
+  },
+  "604": {
+    "name": "Minas Gerais",
+    "begindate": "2020-05-21",
+    "population": 21292666
+  },
+  "605": {
+    "name": "Para",
+    "begindate": "2020-05-21",
+    "population": 8690745
+  },
+  "606": {
+    "name": "Paraiba",
+    "begindate": "2020-05-21",
+    "population": 4039277
+  },
+  "607": {
+    "name": "Parana",
+    "begindate": "2020-05-21",
+    "population": 11516840
+  },
+  "608": {
+    "name": "Pernambuco",
+    "begindate": "2020-05-21",
+    "population": 9616621
+  },
+  "609": {
+    "name": "Piaui",
+    "begindate": "2020-05-21",
+    "population": 3281480
+  },
+  "610": {
+    "name": "Rio de Janeiro",
+    "begindate": "2020-05-21",
+    "population": 17366189
+  },
+  "611": {
+    "name": "Rio Grande do Norte",
+    "begindate": "2020-05-21",
+    "population": 3534165
+  },
+  "612": {
+    "name": "Rio Grande do Sul",
+    "begindate": "2020-05-21",
+    "population": 11422973
+  },
+  "613": {
+    "name": "Rondonia",
+    "begindate": "2020-05-21",
+    "population": 1796460
+  },
+  "614": {
+    "name": "Roraima",
+    "begindate": "2020-05-21",
+    "population": 631181
+  },
+  "615": {
+    "name": "Santa Catarina",
+    "begindate": "2020-05-21",
+    "population": 7252502
+  },
+  "616": {
+    "name": "Sao Paulo",
+    "begindate": "2020-05-21",
+    "population": 46289333
+  },
+  "617": {
+    "name": "Sergipe",
+    "begindate": "2020-05-21",
+    "population": 2318822
+  },
+  "618": {
+    "name": "Tocantins",
+    "begindate": "2020-05-21",
+    "population": 1590248
+  },
+  "619": {
+    "name": "东莞",
+    "begindate": "2020-01-28",
+    "population": 8392200
+  },
+  "620": {
+    "name": "中山",
+    "begindate": "2020-01-28",
+    "population": 3310000
+  },
+  "621": {
+    "name": "佛山",
+    "begindate": "2020-01-28",
+    "population": 7905700
+  },
+  "622": {
+    "name": "广州",
+    "begindate": "2020-01-28",
+    "population": 14904400
+  },
+  "623": {
+    "name": "惠州",
+    "begindate": "2020-01-28",
+    "population": 4830000
+  },
+  "624": {
+    "name": "揭阳",
+    "begindate": "2020-01-28",
+    "population": 6089400
+  },
+  "625": {
+    "name": "梅州",
+    "begindate": "2020-01-28",
+    "population": 4378800
+  },
+  "626": {
+    "name": "汕头",
+    "begindate": "2020-01-28",
+    "population": 5638500
+  },
+  "627": {
+    "name": "汕尾",
+    "begindate": "2020-01-28",
+    "population": 2993600
+  },
+  "628": {
+    "name": "江门",
+    "begindate": "2020-01-29",
+    "population": 4598200
+  },
+  "629": {
+    "name": "河源",
+    "begindate": "2020-01-28",
+    "population": 3093900
+  },
+  "630": {
+    "name": "深圳",
+    "begindate": "2020-01-28",
+    "population": 13026600
+  },
+  "631": {
+    "name": "清远",
+    "begindate": "2020-01-28",
+    "population": 3874000
+  },
+  "632": {
+    "name": "湛江",
+    "begindate": "2020-01-28",
+    "population": 7332000
+  },
+  "633": {
+    "name": "潮州",
+    "begindate": "2020-02-01",
+    "population": 2656600
+  },
+  "634": {
+    "name": "珠海",
+    "begindate": "2020-01-28",
+    "population": 1891100
+  },
+  "635": {
+    "name": "肇庆",
+    "begindate": "2020-01-28",
+    "population": 4151700
+  },
+  "636": {
+    "name": "茂名",
+    "begindate": "2020-01-29",
+    "population": 6313200
+  },
+  "637": {
+    "name": "阳江",
+    "begindate": "2020-01-28",
+    "population": 2555600
+  },
+  "638": {
+    "name": "韶关",
+    "begindate": "2020-01-28",
+    "population": 2997600
+  },
+  "639": {
+    "name": "北海",
+    "begindate": "2020-01-28",
+    "population": 1659000
+  },
+  "640": {
+    "name": "南宁",
+    "begindate": "2020-01-28",
+    "population": 7153000
+  },
+  "641": {
+    "name": "来宾",
+    "begindate": "2020-02-06",
+    "population": 2681000
+  },
+  "642": {
+    "name": "柳州",
+    "begindate": "2020-01-28",
+    "population": 4000000
+  },
+  "643": {
+    "name": "桂林",
+    "begindate": "2020-01-28",
+    "population": 5058000
+  },
+  "644": {
+    "name": "梧州",
+    "begindate": "2020-01-28",
+    "population": 3037000
+  },
+  "645": {
+    "name": "河池",
+    "begindate": "2020-01-28",
+    "population": 3524000
+  },
+  "646": {
+    "name": "玉林",
+    "begindate": "2020-01-28",
+    "population": 5811000
+  },
+  "647": {
+    "name": "百色",
+    "begindate": "2020-01-28",
+    "population": 3647000
+  },
+  "648": {
+    "name": "贵港",
+    "begindate": "2020-02-02",
+    "population": 4372000
+  },
+  "649": {
+    "name": "贺州",
+    "begindate": "2020-01-30",
+    "population": 2045000
+  },
+  "650": {
+    "name": "钦州",
+    "begindate": "2020-01-30",
+    "population": 3273000
+  },
+  "651": {
+    "name": "防城港",
+    "begindate": "2020-01-28",
+    "population": 1003600
+  },
+  "652": {
+    "name": "Baden-Wurttemberg",
+    "begindate": "2020-05-15",
+    "population": 11100394
+  },
+  "653": {
+    "name": "Bayern",
+    "begindate": "2020-05-15",
+    "population": 13124737
+  },
+  "654": {
+    "name": "Berlin",
+    "begindate": "2020-05-15",
+    "population": 3669491
+  },
+  "655": {
+    "name": "Brandenburg",
+    "begindate": "2020-05-15",
+    "population": 2521893
+  },
+  "656": {
+    "name": "Bremen",
+    "begindate": "2020-05-15",
+    "population": 681202
+  },
+  "657": {
+    "name": "Hamburg",
+    "begindate": "2020-05-15",
+    "population": 1847253
+  },
+  "658": {
+    "name": "Hessen",
+    "begindate": "2020-05-15",
+    "population": 6288080
+  },
+  "659": {
+    "name": "Mecklenburg-Vorpommern",
+    "begindate": "2020-05-15",
+    "population": 1608138
+  },
+  "660": {
+    "name": "Niedersachsen",
+    "begindate": "2020-05-15",
+    "population": 7993608
+  },
+  "661": {
+    "name": "Nordrhein-Westfalen",
+    "begindate": "2020-05-15",
+    "population": 17947221
+  },
+  "662": {
+    "name": "Rheinland-Pfalz",
+    "begindate": "2020-05-15",
+    "population": 4093903
+  },
+  "663": {
+    "name": "Saarland",
+    "begindate": "2020-05-15",
+    "population": 986887
+  },
+  "664": {
+    "name": "Sachsen",
+    "begindate": "2020-05-15",
+    "population": 4071971
+  },
+  "665": {
+    "name": "Sachsen-Anhalt",
+    "begindate": "2020-05-15",
+    "population": 2194782
+  },
+  "666": {
+    "name": "Schleswig-Holstein",
+    "begindate": "2020-05-15",
+    "population": 2903773
+  },
+  "667": {
+    "name": "Thuringen",
+    "begindate": "2020-05-15",
+    "population": 2133378
+  },
+  "668": {
+    "name": "Abruzzo",
+    "begindate": "2020-05-15",
+    "population": 1285256
+  },
+  "669": {
+    "name": "Basilicata",
+    "begindate": "2020-05-15",
+    "population": 547579
+  },
+  "670": {
+    "name": "Calabria",
+    "begindate": "2020-05-15",
+    "population": 1877728
+  },
+  "671": {
+    "name": "Campania",
+    "begindate": "2020-05-15",
+    "population": 5679759
+  },
+  "672": {
+    "name": "Emilia-Romagna",
+    "begindate": "2020-05-15",
+    "population": 4445549
+  },
+  "673": {
+    "name": "Friuli Venezia Giulia",
+    "begindate": "2020-05-15",
+    "population": 1198753
+  },
+  "674": {
+    "name": "Lazio",
+    "begindate": "2020-05-15",
+    "population": 5720796
+  },
+  "675": {
+    "name": "Liguria",
+    "begindate": "2020-05-15",
+    "population": 1509805
+  },
+  "676": {
+    "name": "Lombardia",
+    "begindate": "2020-05-15",
+    "population": 9966992
+  },
+  "677": {
+    "name": "Marche",
+    "begindate": "2020-05-15",
+    "population": 1501406
+  },
+  "678": {
+    "name": "Molise",
+    "begindate": "2020-05-15",
+    "population": 296547
+  },
+  "679": {
+    "name": "P.A. Bolzano",
+    "begindate": "2020-05-15",
+    "population": 532644
+  },
+  "680": {
+    "name": "P.A. Trento",
+    "begindate": "2020-05-15",
+    "population": 544745
+  },
+  "681": {
+    "name": "Piemonte",
+    "begindate": "2020-05-15",
+    "population": 4273210
+  },
+  "682": {
+    "name": "Puglia",
+    "begindate": "2020-05-15",
+    "population": 3926931
+  },
+  "683": {
+    "name": "Sardegna",
+    "begindate": "2020-05-15",
+    "population": 1598225
+  },
+  "684": {
+    "name": "Sicilia",
+    "begindate": "2020-05-15",
+    "population": 4840876
+  },
+  "685": {
+    "name": "Toscana",
+    "begindate": "2020-05-15",
+    "population": 3668333
+  },
+  "686": {
+    "name": "Umbria",
+    "begindate": "2020-05-15",
+    "population": 865013
+  },
+  "687": {
+    "name": "Valle d'Aosta",
+    "begindate": "2020-05-15",
+    "population": 123895
+  },
+  "688": {
+    "name": "Veneto",
+    "begindate": "2020-05-15",
+    "population": 4852453
+  },
+  "689": {
+    "name": "伊犁州",
+    "begindate": "2020-01-28",
+    "population": 4556800
+  },
+  "690": {
+    "name": "兵团第九师",
+    "begindate": "2020-02-01",
+    "population": 73866
+  },
+  "691": {
+    "name": "兵团第十二师",
+    "begindate": "2020-02-08",
+    "population": 150000
+  },
+  "692": {
+    "name": "兵团第四师",
+    "begindate": "2020-02-10",
+    "population": 228200
+  },
+  "693": {
+    "name": "吐鲁番",
+    "begindate": "2020-01-28",
+    "population": 633400
+  },
+  "694": {
+    "name": "巴州",
+    "begindate": "2020-02-06",
+    "population": 1285700
+  },
+  "695": {
+    "name": "昌吉州",
+    "begindate": "2020-02-04",
+    "population": 1603900
+  },
+  "696": {
+    "name": "第八师石河子",
+    "begindate": "2020-01-28",
+    "population": 717000
+  },
+  "697": {
+    "name": "阿克苏",
+    "begindate": "2020-01-31",
+    "population": 2562000
+  },
+  "698": {
+    "name": "Aichi",
+    "begindate": "2020-05-29",
+    "population": 7539185
+  },
+  "699": {
+    "name": "Akita",
+    "begindate": "2020-05-29",
+    "population": 980684
+  },
+  "700": {
+    "name": "Aomori",
+    "begindate": "2020-05-29",
+    "population": 1262823
+  },
+  "701": {
+    "name": "Chiba",
+    "begindate": "2020-05-29",
+    "population": 6268585
+  },
+  "702": {
+    "name": "Ehime",
+    "begindate": "2020-05-29",
+    "population": 1351510
+  },
+  "703": {
+    "name": "Fukui",
+    "begindate": "2020-05-29",
+    "population": 773731
+  },
+  "704": {
+    "name": "Fukuoka",
+    "begindate": "2020-05-29",
+    "population": 5111494
+  },
+  "705": {
+    "name": "Fukushima",
+    "begindate": "2020-05-29",
+    "population": 1862705
+  },
+  "706": {
+    "name": "Gifu",
+    "begindate": "2020-05-29",
+    "population": 1999406
+  },
+  "707": {
+    "name": "Gunma",
+    "begindate": "2020-05-29",
+    "population": 1949440
+  },
+  "708": {
+    "name": "Hiroshima",
+    "begindate": "2020-05-29",
+    "population": 2819962
+  },
+  "709": {
+    "name": "Hokkaido",
+    "begindate": "2020-05-29",
+    "population": 5285430
+  },
+  "710": {
+    "name": "Hyogo",
+    "begindate": "2020-05-29",
+    "population": 5483450
+  },
+  "711": {
+    "name": "Ibaraki",
+    "begindate": "2020-05-29",
+    "population": 2882943
+  },
+  "712": {
+    "name": "Ishikawa",
+    "begindate": "2020-05-29",
+    "population": 1142965
+  },
+  "713": {
+    "name": "Iwate",
+    "begindate": "2020-07-19",
+    "population": 1240522
+  },
+  "714": {
+    "name": "Kagawa",
+    "begindate": "2020-05-29",
+    "population": 961900
+  },
+  "715": {
+    "name": "Kagoshima",
+    "begindate": "2020-05-29",
+    "population": 1613969
+  },
+  "716": {
+    "name": "Kanagawa",
+    "begindate": "2020-05-29",
+    "population": 9179835
+  },
+  "717": {
+    "name": "Kochi",
+    "begindate": "2020-05-29",
+    "population": 705880
+  },
+  "718": {
+    "name": "Kumamoto",
+    "begindate": "2020-05-29",
+    "population": 1756442
+  },
+  "719": {
+    "name": "Kyoto",
+    "begindate": "2020-05-29",
+    "population": 2591779
+  },
+  "720": {
+    "name": "Mie",
+    "begindate": "2020-05-29",
+    "population": 1790376
+  },
+  "721": {
+    "name": "Miyagi",
+    "begindate": "2020-05-29",
+    "population": 2313215
+  },
+  "722": {
+    "name": "Miyazaki",
+    "begindate": "2020-05-29",
+    "population": 1079727
+  },
+  "723": {
+    "name": "Nagano",
+    "begindate": "2020-05-29",
+    "population": 2063865
+  },
+  "724": {
+    "name": "Nagasaki",
+    "begindate": "2020-05-29",
+    "population": 1339438
+  },
+  "725": {
+    "name": "Nara",
+    "begindate": "2020-05-29",
+    "population": 1340070
+  },
+  "726": {
+    "name": "Niigata",
+    "begindate": "2020-05-29",
+    "population": 2245057
+  },
+  "727": {
+    "name": "Oita",
+    "begindate": "2020-05-29",
+    "population": 1142943
+  },
+  "728": {
+    "name": "Okayama",
+    "begindate": "2020-05-29",
+    "population": 1899739
+  },
+  "729": {
+    "name": "Okinawa",
+    "begindate": "2020-05-29",
+    "population": 1448101
+  },
+  "730": {
+    "name": "Osaka",
+    "begindate": "2020-05-29",
+    "population": 8824566
+  },
+  "731": {
+    "name": "Saga",
+    "begindate": "2020-05-29",
+    "population": 819110
+  },
+  "732": {
+    "name": "Saitama",
+    "begindate": "2020-05-29",
+    "population": 7322645
+  },
+  "733": {
+    "name": "Shiga",
+    "begindate": "2020-05-29",
+    "population": 1412881
+  },
+  "734": {
+    "name": "Shimane",
+    "begindate": "2020-05-29",
+    "population": 679626
+  },
+  "735": {
+    "name": "Shizuoka",
+    "begindate": "2020-05-29",
+    "population": 3656487
+  },
+  "736": {
+    "name": "Tochigi",
+    "begindate": "2020-05-29",
+    "population": 1952926
+  },
+  "737": {
+    "name": "Tokushima",
+    "begindate": "2020-05-29",
+    "population": 736475
+  },
+  "738": {
+    "name": "Tokyo",
+    "begindate": "2020-05-29",
+    "population": 13843403
+  },
+  "739": {
+    "name": "Tottori",
+    "begindate": "2020-05-29",
+    "population": 560517
+  },
+  "740": {
+    "name": "Toyama",
+    "begindate": "2020-05-29",
+    "population": 1050246
+  },
+  "741": {
+    "name": "Wakayama",
+    "begindate": "2020-05-29",
+    "population": 934051
+  },
+  "742": {
+    "name": "Yamagata",
+    "begindate": "2020-05-29",
+    "population": 1089806
+  },
+  "743": {
+    "name": "Yamaguchi",
+    "begindate": "2020-05-29",
+    "population": 1368495
+  },
+  "744": {
+    "name": "Yamanashi",
+    "begindate": "2020-05-29",
+    "population": 818391
+  },
+  "745": {
+    "name": "Antofagasta",
+    "begindate": "2020-05-21",
+    "population": 691854
+  },
+  "746": {
+    "name": "Araucania",
+    "begindate": "2020-05-21",
+    "population": 938626
+  },
+  "747": {
+    "name": "Arica y Parinacota",
+    "begindate": "2020-05-21",
+    "population": 252110
+  },
+  "748": {
+    "name": "Atacama",
+    "begindate": "2020-05-21",
+    "population": 314709
+  },
+  "749": {
+    "name": "Aysen",
+    "begindate": "2020-05-21",
+    "population": 107297
+  },
+  "750": {
+    "name": "Biobio",
+    "begindate": "2020-05-21",
+    "population": 1663696
+  },
+  "751": {
+    "name": "Coquimbo",
+    "begindate": "2020-05-21",
+    "population": 836096
+  },
+  "752": {
+    "name": "Los Lagos",
+    "begindate": "2020-05-21",
+    "population": 891440
+  },
+  "753": {
+    "name": "Los Rios",
+    "begindate": "2020-05-21",
+    "population": 405835
+  },
+  "754": {
+    "name": "Magallanes",
+    "begindate": "2020-05-21",
+    "population": 178362
+  },
+  "755": {
+    "name": "Maule",
+    "begindate": "2020-05-21",
+    "population": 1131939
+  },
+  "756": {
+    "name": "Metropolitana",
+    "begindate": "2020-05-21",
+    "population": 6000000
+  },
+  "757": {
+    "name": "Nuble",
+    "begindate": "2020-05-21",
+    "population": 511551
+  },
+  "758": {
+    "name": "OHiggins",
+    "begindate": "2020-05-21",
+    "population": 991063
+  },
+  "759": {
+    "name": "Tarapaca",
+    "begindate": "2020-05-21",
+    "population": 382773
+  },
+  "760": {
+    "name": "Valparaiso",
+    "begindate": "2020-05-21",
+    "population": 1960170
+  },
+  "761": {
+    "name": "Antwerp",
+    "begindate": "2020-11-13",
+    "population": 1869730
+  },
+  "762": {
+    "name": "Brussels",
+    "begindate": "2020-11-13",
+    "population": 1218255
+  },
+  "763": {
+    "name": "East Flanders",
+    "begindate": "2020-11-13",
+    "population": 1525255
+  },
+  "764": {
+    "name": "Flemish Brabant",
+    "begindate": "2020-11-13",
+    "population": 1155843
+  },
+  "765": {
+    "name": "Hainaut",
+    "begindate": "2020-11-13",
+    "population": 1346840
+  },
+  "766": {
+    "name": "Liege",
+    "begindate": "2020-11-13",
+    "population": 1109800
+  },
+  "767": {
+    "name": "Limburg",
+    "begindate": "2020-07-18",
+    "population": 877370
+  },
+  "768": {
+    "name": "Luxembourg",
+    "begindate": "2020-11-13",
+    "population": 286752
+  },
+  "769": {
+    "name": "Namur",
+    "begindate": "2020-11-13",
+    "population": 495832
+  },
+  "770": {
+    "name": "Walloon Brabant",
+    "begindate": "2020-11-13",
+    "population": 406019
+  },
+  "771": {
+    "name": "West Flanders",
+    "begindate": "2020-11-13",
+    "population": 1200945
+  },
+  "772": {
+    "name": "南京",
+    "begindate": "2020-01-28",
+    "population": 8500000
+  },
+  "773": {
+    "name": "南通",
+    "begindate": "2020-01-28",
+    "population": 7318000
+  },
+  "774": {
+    "name": "宿迁",
+    "begindate": "2020-01-28",
+    "population": 4937900
+  },
+  "775": {
+    "name": "常州",
+    "begindate": "2020-01-28",
+    "population": 4736000
+  },
+  "776": {
+    "name": "徐州",
+    "begindate": "2020-01-28",
+    "population": 8825600
+  },
+  "777": {
+    "name": "扬州",
+    "begindate": "2020-01-28",
+    "population": 4549000
+  },
+  "778": {
+    "name": "无锡",
+    "begindate": "2020-01-28",
+    "population": 5028300
+  },
+  "779": {
+    "name": "泰州",
+    "begindate": "2020-01-28",
+    "population": 4636100
+  },
+  "780": {
+    "name": "淮安",
+    "begindate": "2020-01-28",
+    "population": 4932600
+  },
+  "781": {
+    "name": "盐城",
+    "begindate": "2020-01-28",
+    "population": 7208900
+  },
+  "782": {
+    "name": "苏州",
+    "begindate": "2020-01-28",
+    "population": 10750000
+  },
+  "783": {
+    "name": "连云港",
+    "begindate": "2020-01-28",
+    "population": 4511000
+  },
+  "784": {
+    "name": "镇江",
+    "begindate": "2020-01-28",
+    "population": 3196400
+  },
+  "785": {
+    "name": "上饶",
+    "begindate": "2020-01-28",
+    "population": 6688000
+  },
+  "786": {
+    "name": "九江",
+    "begindate": "2020-01-28",
+    "population": 4806900
+  },
+  "787": {
+    "name": "南昌",
+    "begindate": "2020-01-28",
+    "population": 5240200
+  },
+  "788": {
+    "name": "吉安",
+    "begindate": "2020-01-28",
+    "population": 4881200
+  },
+  "789": {
+    "name": "宜春",
+    "begindate": "2020-01-28",
+    "population": 5493300
+  },
+  "790": {
+    "name": "抚州",
+    "begindate": "2020-01-28",
+    "population": 3976600
+  },
+  "791": {
+    "name": "新余",
+    "begindate": "2020-01-28",
+    "population": 1160800
+  },
+  "792": {
+    "name": "景德镇",
+    "begindate": "2020-01-28",
+    "population": 1629800
+  },
+  "793": {
+    "name": "萍乡",
+    "begindate": "2020-01-28",
+    "population": 1890000
+  },
+  "794": {
+    "name": "赣州",
+    "begindate": "2020-01-28",
+    "population": 8507500
+  },
+  "795": {
+    "name": "赣江新区",
+    "begindate": "2020-02-10",
+    "population": 700000
+  },
+  "796": {
+    "name": "鹰潭",
+    "begindate": "2020-01-28",
+    "population": 1147600
+  },
+  "797": {
+    "name": "保定",
+    "begindate": "2020-01-29",
+    "population": 9399100
+  },
+  "798": {
+    "name": "唐山",
+    "begindate": "2020-01-28",
+    "population": 7964000
+  },
+  "799": {
+    "name": "廊坊",
+    "begindate": "2020-01-28",
+    "population": 4836600
+  },
+  "800": {
+    "name": "张家口",
+    "begindate": "2020-01-29",
+    "population": 4423300
+  },
+  "801": {
+    "name": "承德",
+    "begindate": "2020-01-28",
+    "population": 3582700
+  },
+  "802": {
+    "name": "沧州",
+    "begindate": "2020-01-28",
+    "population": 7544300
+  },
+  "803": {
+    "name": "石家庄",
+    "begindate": "2020-01-30",
+    "population": 11031200
+  },
+  "804": {
+    "name": "秦皇岛",
+    "begindate": "2020-02-01",
+    "population": 3146300
+  },
+  "805": {
+    "name": "衡水",
+    "begindate": "2020-01-28",
+    "population": 4486000
+  },
+  "806": {
+    "name": "邢台",
+    "begindate": "2020-01-29",
+    "population": 7395200
+  },
+  "807": {
+    "name": "邯郸",
+    "begindate": "2020-01-28",
+    "population": 9549700
+  },
+  "808": {
+    "name": "三门峡",
+    "begindate": "2020-01-28",
+    "population": 2276500
+  },
+  "809": {
+    "name": "信阳",
+    "begindate": "2020-01-28",
+    "population": 6463900
+  },
+  "810": {
+    "name": "南阳",
+    "begindate": "2020-01-28",
+    "population": 10031600
+  },
+  "811": {
+    "name": "周口",
+    "begindate": "2020-01-28",
+    "population": 8662200
+  },
+  "812": {
+    "name": "商丘",
+    "begindate": "2020-01-28",
+    "population": 7333600
+  },
+  "813": {
+    "name": "安阳",
+    "begindate": "2020-01-28",
+    "population": 5192200
+  },
+  "814": {
+    "name": "平顶山",
+    "begindate": "2020-01-28",
+    "population": 5025700
+  },
+  "815": {
+    "name": "开封",
+    "begindate": "2020-01-28",
+    "population": 4574900
+  },
+  "816": {
+    "name": "新乡",
+    "begindate": "2020-01-28",
+    "population": 5814300
+  },
+  "817": {
+    "name": "洛阳",
+    "begindate": "2020-01-28",
+    "population": 6922200
+  },
+  "818": {
+    "name": "济源示范区",
+    "begindate": "2020-02-03",
+    "population": 733700
+  },
+  "819": {
+    "name": "漯河",
+    "begindate": "2020-01-28",
+    "population": 2668200
+  },
+  "820": {
+    "name": "濮阳",
+    "begindate": "2020-01-29",
+    "population": 3610400
+  },
+  "821": {
+    "name": "焦作",
+    "begindate": "2020-01-28",
+    "population": 3597100
+  },
+  "822": {
+    "name": "许昌",
+    "begindate": "2020-01-28",
+    "population": 4462100
+  },
+  "823": {
+    "name": "郑州",
+    "begindate": "2020-01-28",
+    "population": 10352000
+  },
+  "824": {
+    "name": "驻马店",
+    "begindate": "2020-02-15",
+    "population": 7045800
+  },
+  "825": {
+    "name": "鹤壁",
+    "begindate": "2020-01-28",
+    "population": 1631500
+  },
+  "826": {
+    "name": "丽水",
+    "begindate": "2020-01-28",
+    "population": 2206000
+  },
+  "827": {
+    "name": "台州",
+    "begindate": "2020-01-28",
+    "population": 6150000
+  },
+  "828": {
+    "name": "嘉兴",
+    "begindate": "2020-01-28",
+    "population": 4800000
+  },
+  "829": {
+    "name": "宁波",
+    "begindate": "2020-01-28",
+    "population": 8542000
+  },
+  "830": {
+    "name": "杭州",
+    "begindate": "2020-01-28",
+    "population": 10360000
+  },
+  "831": {
+    "name": "温州",
+    "begindate": "2020-01-28",
+    "population": 9300000
+  },
+  "832": {
+    "name": "湖州",
+    "begindate": "2020-01-28",
+    "population": 3043500
+  },
+  "833": {
+    "name": "绍兴",
+    "begindate": "2020-01-28",
+    "population": 5057000
+  },
+  "834": {
+    "name": "舟山",
+    "begindate": "2020-01-28",
+    "population": 1176000
+  },
+  "835": {
+    "name": "衢州",
+    "begindate": "2020-01-28",
+    "population": 2218000
+  },
+  "836": {
+    "name": "金华",
+    "begindate": "2020-01-28",
+    "population": 7050700
+  },
+  "837": {
+    "name": "万宁",
+    "begindate": "2020-01-28",
+    "population": 585000
+  },
+  "838": {
+    "name": "三亚",
+    "begindate": "2020-01-28",
+    "population": 634400
+  },
+  "839": {
+    "name": "东方",
+    "begindate": "2020-01-28",
+    "population": 434500
+  },
+  "840": {
+    "name": "临高县",
+    "begindate": "2020-01-28",
+    "population": 451000
+  },
+  "841": {
+    "name": "乐东",
+    "begindate": "2020-01-31",
+    "population": 482700
+  },
+  "842": {
+    "name": "儋州",
+    "begindate": "2020-01-28",
+    "population": 920700
+  },
+  "843": {
+    "name": "定安县",
+    "begindate": "2020-01-31",
+    "population": 301000
+  },
+  "844": {
+    "name": "文昌",
+    "begindate": "2020-02-03",
+    "population": 575200
+  },
+  "845": {
+    "name": "昌江县",
+    "begindate": "2020-01-31",
+    "population": 233500
+  },
+  "846": {
+    "name": "海口",
+    "begindate": "2020-01-28",
+    "population": 2327900
+  },
+  "847": {
+    "name": "澄迈县",
+    "begindate": "2020-01-28",
+    "population": 494400
+  },
+  "848": {
+    "name": "琼中县",
+    "begindate": "2020-01-28",
+    "population": 180200
+  },
+  "849": {
+    "name": "琼海",
+    "begindate": "2020-01-28",
+    "population": 521400
+  },
+  "850": {
+    "name": "陵水县",
+    "begindate": "2020-01-28",
+    "population": 333900
+  },
+  "851": {
+    "name": "仙桃",
+    "begindate": "2020-01-24",
+    "population": 1166000
+  },
+  "852": {
+    "name": "十堰",
+    "begindate": "2020-01-24",
+    "population": 3383000
+  },
+  "853": {
+    "name": "咸宁",
+    "begindate": "2020-01-26",
+    "population": 2507000
+  },
+  "854": {
+    "name": "天门",
+    "begindate": "2020-01-25",
+    "population": 1292000
+  },
+  "855": {
+    "name": "孝感",
+    "begindate": "2020-01-23",
+    "population": 4878000
+  },
+  "856": {
+    "name": "宜昌",
+    "begindate": "2020-01-24",
+    "population": 4115000
+  },
+  "857": {
+    "name": "恩施州",
+    "begindate": "2020-01-25",
+    "population": 4021000
+  },
+  "858": {
+    "name": "武汉",
+    "begindate": "2020-01-21",
+    "population": 10607700
+  },
+  "859": {
+    "name": "潜江",
+    "begindate": "2020-01-27",
+    "population": 954400
+  },
+  "860": {
+    "name": "神农架",
+    "begindate": "2020-01-28",
+    "population": 76800
+  },
+  "861": {
+    "name": "荆州",
+    "begindate": "2020-01-23",
+    "population": 5744200
+  },
+  "862": {
+    "name": "荆门",
+    "begindate": "2020-01-23",
+    "population": 2896300
+  },
+  "863": {
+    "name": "襄阳",
+    "begindate": "2020-01-26",
+    "population": 5614000
+  },
+  "864": {
+    "name": "鄂州",
+    "begindate": "2020-01-26",
+    "population": 1059500
+  },
+  "865": {
+    "name": "随州",
+    "begindate": "2020-01-24",
+    "population": 2190800
+  },
+  "866": {
+    "name": "黄冈",
+    "begindate": "2020-01-21",
+    "population": 6291000
+  },
+  "867": {
+    "name": "黄石",
+    "begindate": "2020-01-26",
+    "population": 2449200
+  },
+  "868": {
+    "name": "娄底",
+    "begindate": "2020-01-28",
+    "population": 3941300
+  },
+  "869": {
+    "name": "岳阳",
+    "begindate": "2020-01-28",
+    "population": 5771300
+  },
+  "870": {
+    "name": "常德",
+    "begindate": "2020-01-28",
+    "population": 5772000
+  },
+  "871": {
+    "name": "张家界",
+    "begindate": "2020-01-30",
+    "population": 1549000
+  },
+  "872": {
+    "name": "怀化",
+    "begindate": "2020-01-28",
+    "population": 4983300
+  },
+  "873": {
+    "name": "株洲",
+    "begindate": "2020-01-28",
+    "population": 4028500
+  },
+  "874": {
+    "name": "永州",
+    "begindate": "2020-01-28",
+    "population": 5446100
+  },
+  "875": {
+    "name": "湘潭",
+    "begindate": "2020-01-28",
+    "population": 2882000
+  },
+  "876": {
+    "name": "湘西自治州",
+    "begindate": "2020-01-28",
+    "population": 2638300
+  },
+  "877": {
+    "name": "益阳",
+    "begindate": "2020-01-28",
+    "population": 4420700
+  },
+  "878": {
+    "name": "衡阳",
+    "begindate": "2020-01-28",
+    "population": 7300600
+  },
+  "879": {
+    "name": "邵阳",
+    "begindate": "2020-01-28",
+    "population": 7302400
+  },
+  "880": {
+    "name": "郴州",
+    "begindate": "2020-01-28",
+    "population": 4755000
+  },
+  "881": {
+    "name": "长沙",
+    "begindate": "2020-01-28",
+    "population": 8394500
+  },
+  "882": {
+    "name": "Australian Capital Territory",
+    "begindate": "2020-03-22",
+    "population": 397397
+  },
+  "883": {
+    "name": "New South Wales",
+    "begindate": "2020-03-22",
+    "population": 8167532
+  },
+  "884": {
+    "name": "Northern Territory",
+    "begindate": "2020-03-22",
+    "population": 246143
+  },
+  "885": {
+    "name": "Queensland",
+    "begindate": "2020-03-22",
+    "population": 5176186
+  },
+  "886": {
+    "name": "South Australia",
+    "begindate": "2020-03-22",
+    "population": 1770375
+  },
+  "887": {
+    "name": "Tasmania",
+    "begindate": "2020-03-22",
+    "population": 540780
+  },
+  "888": {
+    "name": "Victoria",
+    "begindate": "2020-03-22",
+    "population": 6696670
+  },
+  "889": {
+    "name": "Western Australia",
+    "begindate": "2020-03-22",
+    "population": 2663561
+  },
+  "890": {
+    "name": "Blekinge",
+    "begindate": "2020-06-06",
+    "population": 159056
+  },
+  "891": {
+    "name": "Dalarna",
+    "begindate": "2020-06-06",
+    "population": 287676
+  },
+  "892": {
+    "name": "Gavleborg",
+    "begindate": "2020-06-06",
+    "population": 287502
+  },
+  "893": {
+    "name": "Gotland",
+    "begindate": "2020-06-06",
+    "population": 60124
+  },
+  "894": {
+    "name": "Halland",
+    "begindate": "2020-06-06",
+    "population": 336748
+  },
+  "895": {
+    "name": "Jamtland Harjedalen",
+    "begindate": "2020-06-06",
+    "population": 131155
+  },
+  "896": {
+    "name": "Jonkoping",
+    "begindate": "2020-06-06",
+    "population": 365010
+  },
+  "897": {
+    "name": "Kalmar",
+    "begindate": "2020-06-06",
+    "population": 246010
+  },
+  "898": {
+    "name": "Kronoberg",
+    "begindate": "2020-06-06",
+    "population": 202263
+  },
+  "899": {
+    "name": "Norrbotten",
+    "begindate": "2020-06-06",
+    "population": 249614
+  },
+  "900": {
+    "name": "Orebro",
+    "begindate": "2020-06-06",
+    "population": 305643
+  },
+  "901": {
+    "name": "Ostergotland",
+    "begindate": "2020-06-06",
+    "population": 467158
+  },
+  "902": {
+    "name": "Skane",
+    "begindate": "2020-06-06",
+    "population": 1389336
+  },
+  "903": {
+    "name": "Sormland",
+    "begindate": "2020-06-06",
+    "population": 299401
+  },
+  "904": {
+    "name": "Stockholm",
+    "begindate": "2020-06-06",
+    "population": 2391990
+  },
+  "905": {
+    "name": "Uppsala",
+    "begindate": "2020-06-06",
+    "population": 388394
+  },
+  "906": {
+    "name": "Varmland",
+    "begindate": "2020-06-06",
+    "population": 282885
+  },
+  "907": {
+    "name": "Vasterbotten",
+    "begindate": "2020-06-06",
+    "population": 273192
+  },
+  "908": {
+    "name": "Vasternorrland",
+    "begindate": "2020-06-06",
+    "population": 244554
+  },
+  "909": {
+    "name": "Vastmanland",
+    "begindate": "2020-06-06",
+    "population": 277141
+  },
+  "910": {
+    "name": "Vastra Gotaland",
+    "begindate": "2020-06-06",
+    "population": 1734443
+  },
+  "911": {
+    "name": "临夏",
+    "begindate": "2020-01-28",
+    "population": 2071400
+  },
+  "912": {
+    "name": "兰州",
+    "begindate": "2020-01-28",
+    "population": 3790900
+  },
+  "913": {
+    "name": "天水",
+    "begindate": "2020-01-28",
+    "population": 3368900
+  },
+  "914": {
+    "name": "定西",
+    "begindate": "2020-01-28",
+    "population": 2825800
+  },
+  "915": {
+    "name": "平凉",
+    "begindate": "2020-01-29",
+    "population": 2125300
+  },
+  "916": {
+    "name": "庆阳",
+    "begindate": "2020-02-03",
+    "population": 2278800
+  },
+  "917": {
+    "name": "张掖",
+    "begindate": "2020-01-28",
+    "population": 1237600
+  },
+  "918": {
+    "name": "甘南州",
+    "begindate": "2020-02-01",
+    "population": 723200
+  },
+  "919": {
+    "name": "白银",
+    "begindate": "2020-01-28",
+    "population": 1740800
+  },
+  "920": {
+    "name": "金昌",
+    "begindate": "2020-01-28",
+    "population": 428200
+  },
+  "921": {
+    "name": "陇南",
+    "begindate": "2020-01-28",
+    "population": 2643100
+  },
+  "922": {
+    "name": "三明",
+    "begindate": "2020-01-28",
+    "population": 2550000
+  },
+  "923": {
+    "name": "南平",
+    "begindate": "2020-01-28",
+    "population": 2660000
+  },
+  "924": {
+    "name": "厦门",
+    "begindate": "2020-01-28",
+    "population": 3920000
+  },
+  "925": {
+    "name": "宁德",
+    "begindate": "2020-01-28",
+    "population": 2890000
+  },
+  "926": {
+    "name": "泉州",
+    "begindate": "2020-01-28",
+    "population": 8580000
+  },
+  "927": {
+    "name": "漳州",
+    "begindate": "2020-01-28",
+    "population": 5054328
+  },
+  "928": {
+    "name": "福州",
+    "begindate": "2020-01-28",
+    "population": 7570000
+  },
+  "929": {
+    "name": "莆田",
+    "begindate": "2020-01-28",
+    "population": 2890000
+  },
+  "930": {
+    "name": "龙岩",
+    "begindate": "2020-01-29",
+    "population": 2630000
+  },
+  "931": {
+    "name": "Amazonas",
+    "begindate": "2020-05-21",
+    "population": 426806
+  },
+  "932": {
+    "name": "Ancash",
+    "begindate": "2020-05-29",
+    "population": 1180638
+  },
+  "933": {
+    "name": "Apurimac",
+    "begindate": "2020-05-29",
+    "population": 430736
+  },
+  "934": {
+    "name": "Arequipa",
+    "begindate": "2020-05-29",
+    "population": 1497438
+  },
+  "935": {
+    "name": "Ayacucho",
+    "begindate": "2020-05-29",
+    "population": 668213
+  },
+  "936": {
+    "name": "Cajamarca",
+    "begindate": "2020-05-29",
+    "population": 1453711
+  },
+  "937": {
+    "name": "Callao",
+    "begindate": "2020-05-29",
+    "population": 1129854
+  },
+  "938": {
+    "name": "Cusco",
+    "begindate": "2020-05-29",
+    "population": 1357075
+  },
+  "939": {
+    "name": "Huancavelica",
+    "begindate": "2020-05-29",
+    "population": 365317
+  },
+  "940": {
+    "name": "Huanuco",
+    "begindate": "2020-05-29",
+    "population": 760267
+  },
+  "941": {
+    "name": "Ica",
+    "begindate": "2020-05-29",
+    "population": 975182
+  },
+  "942": {
+    "name": "Junin",
+    "begindate": "2020-05-29",
+    "population": 1361467
+  },
+  "943": {
+    "name": "La Libertad",
+    "begindate": "2020-05-29",
+    "population": 2016771
+  },
+  "944": {
+    "name": "Lambayeque",
+    "begindate": "2020-05-29",
+    "population": 1310785
+  },
+  "945": {
+    "name": "Lima",
+    "begindate": "2020-05-29",
+    "population": 10628470
+  },
+  "946": {
+    "name": "Loreto",
+    "begindate": "2020-05-29",
+    "population": 1027559
+  },
+  "947": {
+    "name": "Madre de Dios",
+    "begindate": "2020-05-29",
+    "population": 173811
+  },
+  "948": {
+    "name": "Moquegua",
+    "begindate": "2020-05-29",
+    "population": 192740
+  },
+  "949": {
+    "name": "Pasco",
+    "begindate": "2020-05-29",
+    "population": 271904
+  },
+  "950": {
+    "name": "Piura",
+    "begindate": "2020-05-29",
+    "population": 2047954
+  },
+  "951": {
+    "name": "Puno",
+    "begindate": "2020-05-29",
+    "population": 1237997
+  },
+  "952": {
+    "name": "San Martin",
+    "begindate": "2020-05-29",
+    "population": 899648
+  },
+  "953": {
+    "name": "Tacna",
+    "begindate": "2020-05-29",
+    "population": 370974
+  },
+  "954": {
+    "name": "Tumbes",
+    "begindate": "2020-05-29",
+    "population": 251521
+  },
+  "955": {
+    "name": "Ucayali",
+    "begindate": "2020-05-29",
+    "population": 589110
+  },
+  "956": {
+    "name": "Alabama",
+    "begindate": "2020-04-12",
+    "population": 5024279
+  },
+  "957": {
+    "name": "Alaska",
+    "begindate": "2020-04-12",
+    "population": 733391
+  },
+  "958": {
+    "name": "Arizona",
+    "begindate": "2020-04-12",
+    "population": 7151502
+  },
+  "959": {
+    "name": "Arkansas",
+    "begindate": "2020-04-12",
+    "population": 3011524
+  },
+  "960": {
+    "name": "California",
+    "begindate": "2020-04-12",
+    "population": 39538223
+  },
+  "961": {
+    "name": "Colorado",
+    "begindate": "2020-04-12",
+    "population": 5773714
+  },
+  "962": {
+    "name": "Connecticut",
+    "begindate": "2020-04-12",
+    "population": 3605944
+  },
+  "963": {
+    "name": "Delaware",
+    "begindate": "2020-04-12",
+    "population": 989948
+  },
+  "964": {
+    "name": "District of Columbia",
+    "begindate": "2020-04-12",
+    "population": 689545
+  },
+  "965": {
+    "name": "Florida",
+    "begindate": "2020-04-12",
+    "population": 21538187
+  },
+  "966": {
+    "name": "Georgia",
+    "begindate": "2020-04-12",
+    "population": 10711908
+  },
+  "967": {
+    "name": "Guam",
+    "begindate": "2020-04-12",
+    "population": 178430
+  },
+  "968": {
+    "name": "Hawaii",
+    "begindate": "2020-04-12",
+    "population": 1455271
+  },
+  "969": {
+    "name": "Idaho",
+    "begindate": "2020-04-12",
+    "population": 1839106
+  },
+  "970": {
+    "name": "Illinois",
+    "begindate": "2020-04-12",
+    "population": 12812508
+  },
+  "971": {
+    "name": "Indiana",
+    "begindate": "2020-04-12",
+    "population": 6785528
+  },
+  "972": {
+    "name": "Iowa",
+    "begindate": "2020-04-12",
+    "population": 3190369
+  },
+  "973": {
+    "name": "Kansas",
+    "begindate": "2020-04-12",
+    "population": 2937880
+  },
+  "974": {
+    "name": "Kentucky",
+    "begindate": "2020-04-12",
+    "population": 4505836
+  },
+  "975": {
+    "name": "Louisiana",
+    "begindate": "2020-04-12",
+    "population": 4657757
+  },
+  "976": {
+    "name": "Maine",
+    "begindate": "2020-04-12",
+    "population": 1362359
+  },
+  "977": {
+    "name": "Maryland",
+    "begindate": "2020-04-12",
+    "population": 6177224
+  },
+  "978": {
+    "name": "Massachusetts",
+    "begindate": "2020-04-12",
+    "population": 7029917
+  },
+  "979": {
+    "name": "Michigan",
+    "begindate": "2020-04-12",
+    "population": 10077331
+  },
+  "980": {
+    "name": "Minnesota",
+    "begindate": "2020-04-12",
+    "population": 5706494
+  },
+  "981": {
+    "name": "Mississippi",
+    "begindate": "2020-04-12",
+    "population": 2961279
+  },
+  "982": {
+    "name": "Missouri",
+    "begindate": "2020-04-12",
+    "population": 6154913
+  },
+  "983": {
+    "name": "Montana",
+    "begindate": "2020-04-12",
+    "population": 1084225
+  },
+  "984": {
+    "name": "Nebraska",
+    "begindate": "2020-04-12",
+    "population": 1961504
+  },
+  "985": {
+    "name": "Nevada",
+    "begindate": "2020-04-12",
+    "population": 3104614
+  },
+  "986": {
+    "name": "New Hampshire",
+    "begindate": "2020-04-12",
+    "population": 1377529
+  },
+  "987": {
+    "name": "New Jersey",
+    "begindate": "2020-04-12",
+    "population": 9288994
+  },
+  "988": {
+    "name": "New Mexico",
+    "begindate": "2020-04-12",
+    "population": 2117522
+  },
+  "989": {
+    "name": "New York",
+    "begindate": "2020-04-12",
+    "population": 20201249
+  },
+  "990": {
+    "name": "North Carolina",
+    "begindate": "2020-04-12",
+    "population": 10439388
+  },
+  "991": {
+    "name": "North Dakota",
+    "begindate": "2020-04-12",
+    "population": 779094
+  },
+  "992": {
+    "name": "Northern Mariana Islands",
+    "begindate": "2020-04-12",
+    "population": 55023
+  },
+  "993": {
+    "name": "Ohio",
+    "begindate": "2020-04-12",
+    "population": 11799448
+  },
+  "994": {
+    "name": "Oklahoma",
+    "begindate": "2020-04-12",
+    "population": 3959353
+  },
+  "995": {
+    "name": "Oregon",
+    "begindate": "2020-04-12",
+    "population": 4237256
+  },
+  "996": {
+    "name": "Pennsylvania",
+    "begindate": "2020-04-12",
+    "population": 13002700
+  },
+  "997": {
+    "name": "Puerto Rico",
+    "begindate": "2020-04-12",
+    "population": 3659000
+  },
+  "998": {
+    "name": "Rhode Island",
+    "begindate": "2020-04-12",
+    "population": 1097379
+  },
+  "999": {
+    "name": "South Carolina",
+    "begindate": "2020-04-12",
+    "population": 5118425
+  },
+  "1000": {
+    "name": "South Dakota",
+    "begindate": "2020-04-12",
+    "population": 886667
+  },
+  "1001": {
+    "name": "Tennessee",
+    "begindate": "2020-04-12",
+    "population": 6910840
+  },
+  "1002": {
+    "name": "Texas",
+    "begindate": "2020-04-12",
+    "population": 29145505
+  },
+  "1003": {
+    "name": "Utah",
+    "begindate": "2020-04-12",
+    "population": 3271616
+  },
+  "1004": {
+    "name": "Vermont",
+    "begindate": "2020-04-12",
+    "population": 643077
+  },
+  "1005": {
+    "name": "Virgin Islands",
+    "begindate": "",
+    "population": 106405
+  },
+  "1006": {
+    "name": "Virginia",
+    "begindate": "2020-04-12",
+    "population": 8631393
+  },
+  "1007": {
+    "name": "Washington",
+    "begindate": "2020-04-12",
+    "population": 7705281
+  },
+  "1008": {
+    "name": "West Virginia",
+    "begindate": "2020-04-12",
+    "population": 1793716
+  },
+  "1009": {
+    "name": "Wisconsin",
+    "begindate": "2020-04-12",
+    "population": 5893718
+  },
+  "1010": {
+    "name": "Wyoming",
+    "begindate": "2020-04-12",
+    "population": 576851
+  },
+  "1011": {
+    "name": "Anguilla",
+    "begindate": "2020-03-28",
+    "population": 16750
+  },
+  "1012": {
+    "name": "Bermuda",
+    "begindate": "2020-03-22",
+    "population": 62278
+  },
+  "1013": {
+    "name": "British Virgin Islands",
+    "begindate": "2020-03-28",
+    "population": 30030
+  },
+  "1014": {
+    "name": "Cayman Islands",
+    "begindate": "2020-03-22",
+    "population": 67433
+  },
+  "1015": {
+    "name": "Channel Islands",
+    "begindate": "2020-03-22",
+    "population": 175245
+  },
+  "1016": {
+    "name": "England",
+    "begindate": "2020-06-12",
+    "population": 55270000
+  },
+  "1017": {
+    "name": "Falkland Islands (Malvinas)",
+    "begindate": "2020-04-07",
+    "population": 3198
+  },
+  "1018": {
+    "name": "Gibraltar",
+    "begindate": "2020-03-22",
+    "population": 30000
+  },
+  "1019": {
+    "name": "Isle of Man",
+    "begindate": "2020-03-22",
+    "population": 84584
+  },
+  "1020": {
+    "name": "Montserrat",
+    "begindate": "2020-03-22",
+    "population": 5270
+  },
+  "1021": {
+    "name": "Northern Ireland",
+    "begindate": "2020-06-12",
+    "population": 1860000
+  },
+  "1022": {
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "begindate": "2020-03-22",
+    "population": 5661
+  },
+  "1023": {
+    "name": "Scotland",
+    "begindate": "2020-06-12",
+    "population": 5400000
+  },
+  "1024": {
+    "name": "Turks and Caicos Islands",
+    "begindate": "2020-03-28",
+    "population": 38191
+  },
+  "1025": {
+    "name": "Wales",
+    "begindate": "2020-06-12",
+    "population": 3110000
+  },
+  "1026": {
+    "name": "Aruba",
+    "begindate": "2020-03-22",
+    "population": 101484
+  },
+  "1027": {
+    "name": "Bonaire, Sint Eustatius and Saba",
+    "begindate": "2020-04-02",
+    "population": 25987
+  },
+  "1028": {
+    "name": "Curacao",
+    "begindate": "2020-03-22",
+    "population": 156223
+  },
+  "1029": {
+    "name": "Drenthe",
+    "begindate": "2020-07-18",
+    "population": 494760
+  },
+  "1030": {
+    "name": "Flevoland",
+    "begindate": "2020-07-18",
+    "population": 428264
+  },
+  "1031": {
+    "name": "Friesland",
+    "begindate": "2020-07-18",
+    "population": 651459
+  },
+  "1032": {
+    "name": "Gelderland",
+    "begindate": "2020-07-18",
+    "population": 2096620
+  },
+  "1033": {
+    "name": "Groningen",
+    "begindate": "2020-07-18",
+    "population": 586813
+  },
+  "1034": {
+    "name": "Limburg",
+    "begindate": "2020-07-18",
+    "population": 1115895
+  },
+  "1035": {
+    "name": "Noord-Brabant",
+    "begindate": "2020-07-18",
+    "population": 2573853
+  },
+  "1036": {
+    "name": "Noord-Holland",
+    "begindate": "2020-07-18",
+    "population": 2887906
+  },
+  "1037": {
+    "name": "Overijssel",
+    "begindate": "2020-07-18",
+    "population": 1166478
+  },
+  "1038": {
+    "name": "Sint Maarten",
+    "begindate": "2020-03-22",
+    "population": 38247
+  },
+  "1039": {
+    "name": "Utrecht",
+    "begindate": "2020-07-18",
+    "population": 1361093
+  },
+  "1040": {
+    "name": "Zeeland",
+    "begindate": "2020-07-18",
+    "population": 385379
+  },
+  "1041": {
+    "name": "Zuid-Holland",
+    "begindate": "2020-07-18",
+    "population": 3726173
+  },
+  "1042": {
+    "name": "Andalusia",
+    "begindate": "2020-05-15",
+    "population": 8464411
+  },
+  "1043": {
+    "name": "Aragon",
+    "begindate": "2020-05-15",
+    "population": 1329391
+  },
+  "1044": {
+    "name": "Asturias",
+    "begindate": "2020-05-15",
+    "population": 1018784
+  },
+  "1045": {
+    "name": "Baleares",
+    "begindate": "2020-05-15",
+    "population": 1171543
+  },
+  "1046": {
+    "name": "C. Valenciana",
+    "begindate": "2020-05-15",
+    "population": 5057353
+  },
+  "1047": {
+    "name": "Canarias",
+    "begindate": "2020-05-15",
+    "population": 2175952
+  },
+  "1048": {
+    "name": "Cantabria",
+    "begindate": "2020-05-15",
+    "population": 582905
+  },
+  "1049": {
+    "name": "Castilla - La Mancha",
+    "begindate": "2020-05-15",
+    "population": 2045221
+  },
+  "1050": {
+    "name": "Castilla y Leon",
+    "begindate": "2020-05-15",
+    "population": 2394918
+  },
+  "1051": {
+    "name": "Catalonia",
+    "begindate": "2020-05-15",
+    "population": 7780479
+  },
+  "1052": {
+    "name": "Ceuta",
+    "begindate": "2020-05-15",
+    "population": 84202
+  },
+  "1053": {
+    "name": "Extremadura",
+    "begindate": "2020-05-15",
+    "population": 1063987
+  },
+  "1054": {
+    "name": "Galicia",
+    "begindate": "2020-05-15",
+    "population": 2701819
+  },
+  "1055": {
+    "name": "La Rioja",
+    "begindate": "2020-05-15",
+    "population": 319914
+  },
+  "1056": {
+    "name": "Madrid",
+    "begindate": "2020-05-15",
+    "population": 6779888
+  },
+  "1057": {
+    "name": "Melilla",
+    "begindate": "2020-05-15",
+    "population": 87076
+  },
+  "1058": {
+    "name": "Murcia",
+    "begindate": "2020-05-15",
+    "population": 1511251
+  },
+  "1059": {
+    "name": "Navarra",
+    "begindate": "2020-05-15",
+    "population": 661197
+  },
+  "1060": {
+    "name": "Pais Vasco",
+    "begindate": "2020-05-15",
+    "population": 2220504
+  },
+  "1061": {
+    "name": "拉萨",
+    "begindate": "2020-01-30",
+    "population": 515300
+  },
+  "1062": {
+    "name": "六盘水",
+    "begindate": "2020-01-28",
+    "population": 2889900
+  },
+  "1063": {
+    "name": "安顺",
+    "begindate": "2020-02-02",
+    "population": 2313500
+  },
+  "1064": {
+    "name": "毕节",
+    "begindate": "2020-01-30",
+    "population": 6606100
+  },
+  "1065": {
+    "name": "贵阳",
+    "begindate": "2020-01-28",
+    "population": 4621800
+  },
+  "1066": {
+    "name": "遵义",
+    "begindate": "2020-01-30",
+    "population": 6192100
+  },
+  "1067": {
+    "name": "铜仁",
+    "begindate": "2020-01-28",
+    "population": 3122400
+  },
+  "1068": {
+    "name": "黔东南州",
+    "begindate": "2020-01-30",
+    "population": 3485400
+  },
+  "1069": {
+    "name": "黔南州",
+    "begindate": "2020-01-28",
+    "population": 3242200
+  },
+  "1070": {
+    "name": "黔西南州",
+    "begindate": "2020-01-28",
+    "population": 2821600
+  },
+  "1071": {
+    "name": "丹东",
+    "begindate": "2020-01-28",
+    "population": 2329000
+  },
+  "1072": {
+    "name": "大连",
+    "begindate": "2020-01-29",
+    "population": 5499000
+  },
+  "1073": {
+    "name": "朝阳市",
+    "begindate": "2020-01-29",
+    "population": 3349000
+  },
+  "1074": {
+    "name": "本溪",
+    "begindate": "2020-01-28",
+    "population": 1445200
+  },
+  "1075": {
+    "name": "沈阳",
+    "begindate": "2020-01-28",
+    "population": 7564000
+  },
+  "1076": {
+    "name": "盘锦",
+    "begindate": "2020-01-28",
+    "population": 1300000
+  },
+  "1077": {
+    "name": "营口",
+    "begindate": "2020-01-28",
+    "population": 2308000
+  },
+  "1078": {
+    "name": "葫芦岛",
+    "begindate": "2020-01-28",
+    "population": 2329000
+  },
+  "1079": {
+    "name": "辽阳",
+    "begindate": "2020-01-28",
+    "population": 1754000
+  },
+  "1080": {
+    "name": "铁岭",
+    "begindate": "2020-01-28",
+    "population": 2890000
+  },
+  "1081": {
+    "name": "锦州",
+    "begindate": "2020-01-28",
+    "population": 2934000
+  },
+  "1082": {
+    "name": "阜新",
+    "begindate": "2020-01-31",
+    "population": 1837000
+  },
+  "1083": {
+    "name": "鞍山",
+    "begindate": "2020-01-31",
+    "population": 3398000
+  },
+  "1084": {
+    "name": "万州区",
+    "begindate": "2020-01-28",
+    "population": 1739000
+  },
+  "1085": {
+    "name": "万盛经开区",
+    "begindate": "2020-02-06",
+    "population": 273200
+  },
+  "1086": {
+    "name": "两江新区",
+    "begindate": "2020-01-28",
+    "population": 2210000
+  },
+  "1087": {
+    "name": "丰都县",
+    "begindate": "2020-01-28",
+    "population": 820100
+  },
+  "1088": {
+    "name": "九龙坡区",
+    "begindate": "2020-01-28",
+    "population": 950100
+  },
+  "1089": {
+    "name": "云阳县",
+    "begindate": "2020-01-28",
+    "population": 1341200
+  },
+  "1090": {
+    "name": "南岸区",
+    "begindate": "2020-01-28",
+    "population": 736800
+  },
+  "1091": {
+    "name": "合川区",
+    "begindate": "2020-01-28",
+    "population": 1525900
+  },
+  "1092": {
+    "name": "垫江县",
+    "begindate": "2020-01-28",
+    "population": 970900
+  },
+  "1093": {
+    "name": "城口县",
+    "begindate": "2020-01-28",
+    "population": 251500
+  },
+  "1094": {
+    "name": "大渡口区",
+    "begindate": "2020-01-28",
+    "population": 269100
+  },
+  "1095": {
+    "name": "大足区",
+    "begindate": "2020-01-28",
+    "population": 1071600
+  },
+  "1096": {
+    "name": "奉节县",
+    "begindate": "2020-01-28",
+    "population": 1058200
+  },
+  "1097": {
+    "name": "巫山县",
+    "begindate": "2020-01-28",
+    "population": 634900
+  },
+  "1098": {
+    "name": "巫溪县",
+    "begindate": "2020-01-28",
+    "population": 542200
+  },
+  "1099": {
+    "name": "巴南区",
+    "begindate": "2020-01-28",
+    "population": 930200
+  },
+  "1100": {
+    "name": "开州区",
+    "begindate": "2020-01-28",
+    "population": 1685300
+  },
+  "1101": {
+    "name": "彭水县",
+    "begindate": "2020-02-04",
+    "population": 701500
+  },
+  "1102": {
+    "name": "忠县",
+    "begindate": "2020-01-28",
+    "population": 990200
+  },
+  "1103": {
+    "name": "梁平区",
+    "begindate": "2020-01-28",
+    "population": 928000
+  },
+  "1104": {
+    "name": "武隆区",
+    "begindate": "2020-01-30",
+    "population": 411500
+  },
+  "1105": {
+    "name": "永川区",
+    "begindate": "2020-01-28",
+    "population": 1140900
+  },
+  "1106": {
+    "name": "江北区",
+    "begindate": "2020-01-28",
+    "population": 622800
+  },
+  "1107": {
+    "name": "江津区",
+    "begindate": "2020-01-28",
+    "population": 1492700
+  },
+  "1108": {
+    "name": "沙坪坝区",
+    "begindate": "2020-02-01",
+    "population": 858200
+  },
+  "1109": {
+    "name": "涪陵区",
+    "begindate": "2020-01-28",
+    "population": 1151300
+  },
+  "1110": {
+    "name": "渝中区",
+    "begindate": "2020-01-29",
+    "population": 504400
+  },
+  "1111": {
+    "name": "渝北区",
+    "begindate": "2020-01-28",
+    "population": 1367500
+  },
+  "1112": {
+    "name": "潼南区",
+    "begindate": "2020-01-28",
+    "population": 952000
+  },
+  "1113": {
+    "name": "璧山区",
+    "begindate": "2020-01-28",
+    "population": 647700
+  },
+  "1114": {
+    "name": "石柱县",
+    "begindate": "2020-01-28",
+    "population": 548600
+  },
+  "1115": {
+    "name": "秀山县",
+    "begindate": "2020-01-28",
+    "population": 667800
+  },
+  "1116": {
+    "name": "綦江区",
+    "begindate": "2020-01-28",
+    "population": 1196900
+  },
+  "1117": {
+    "name": "荣昌区",
+    "begindate": "2020-01-31",
+    "population": 850100
+  },
+  "1118": {
+    "name": "酉阳县",
+    "begindate": "2020-02-05",
+    "population": 854400
+  },
+  "1119": {
+    "name": "铜梁区",
+    "begindate": "2020-01-28",
+    "population": 851100
+  },
+  "1120": {
+    "name": "长寿区",
+    "begindate": "2020-01-28",
+    "population": 892600
+  },
+  "1121": {
+    "name": "高新区",
+    "begindate": "2020-02-03",
+    "population": 360000
+  },
+  "1122": {
+    "name": "黔江区",
+    "begindate": "2020-01-28",
+    "population": 556600
+  },
+  "1123": {
+    "name": "咸阳",
+    "begindate": "2020-01-28",
+    "population": 4356200
+  },
+  "1124": {
+    "name": "商洛",
+    "begindate": "2020-01-28",
+    "population": 2379100
+  },
+  "1125": {
+    "name": "安康",
+    "begindate": "2020-01-28",
+    "population": 2674900
+  },
+  "1126": {
+    "name": "宝鸡",
+    "begindate": "2020-01-28",
+    "population": 3761000
+  },
+  "1127": {
+    "name": "延安",
+    "begindate": "2020-01-28",
+    "population": 2255700
+  },
+  "1128": {
+    "name": "杨凌",
+    "begindate": "2020-02-07",
+    "population": 160000
+  },
+  "1129": {
+    "name": "榆林",
+    "begindate": "2020-01-30",
+    "population": 3424200
+  },
+  "1130": {
+    "name": "汉中",
+    "begindate": "2020-01-28",
+    "population": 3437000
+  },
+  "1131": {
+    "name": "渭南",
+    "begindate": "2020-01-29",
+    "population": 5278100
+  },
+  "1132": {
+    "name": "西安",
+    "begindate": "2020-01-28",
+    "population": 10203500
+  },
+  "1133": {
+    "name": "铜川",
+    "begindate": "2020-01-28",
+    "population": 803700
+  },
+  "1134": {
+    "name": "韩城",
+    "begindate": "2020-01-30",
+    "population": 401530
+  },
+  "1135": {
+    "name": "海北州",
+    "begindate": "2020-02-03",
+    "population": 284300
+  },
+  "1136": {
+    "name": "西宁",
+    "begindate": "2020-01-28",
+    "population": 2387100
+  },
+  "1137": {
+    "name": "七台河",
+    "begindate": "2020-01-28",
+    "population": 777100
+  },
+  "1138": {
+    "name": "伊春",
+    "begindate": "2020-02-15",
+    "population": 1124400
+  },
+  "1139": {
+    "name": "佳木斯",
+    "begindate": "2020-01-28",
+    "population": 2333000
+  },
+  "1140": {
+    "name": "双鸭山",
+    "begindate": "2020-01-28",
+    "population": 1408000
+  },
+  "1141": {
+    "name": "哈尔滨",
+    "begindate": "2020-01-29",
+    "population": 9515000
+  },
+  "1142": {
+    "name": "大兴安岭",
+    "begindate": "2020-01-29",
+    "population": 430000
+  },
+  "1143": {
+    "name": "大庆",
+    "begindate": "2020-01-28",
+    "population": 2728000
+  },
+  "1144": {
+    "name": "牡丹江",
+    "begindate": "2020-01-28",
+    "population": 2525000
+  },
+  "1145": {
+    "name": "绥化",
+    "begindate": "2020-01-29",
+    "population": 5247000
+  },
+  "1146": {
+    "name": "鸡西",
+    "begindate": "2020-01-29",
+    "population": 1727000
+  },
+  "1147": {
+    "name": "鹤岗",
+    "begindate": "2020-01-30",
+    "population": 458700
+  },
+  "1148": {
+    "name": "黑河",
+    "begindate": "2020-02-01",
+    "population": 1593000
+  },
+  "1149": {
+    "name": "齐齐哈尔",
+    "begindate": "2020-01-28",
+    "population": 5297000
+  }
+}

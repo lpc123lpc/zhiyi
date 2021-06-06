@@ -39,4 +39,4 @@ def getCountryHisTest():
 #db.drop_all()
 #db.create_all()
 #getNewArea()
-getSearchData()
+getAreaJson()
