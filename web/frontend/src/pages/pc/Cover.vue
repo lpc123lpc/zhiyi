@@ -47,16 +47,16 @@
 </template>
 
 <script>
-import {swiperList} from "../../assets/js/swiper";
+import {swiperList} from '../../assets/js/swiper'
 
 export default {
   name: 'Cover',
-  data() {
+  data () {
     return {
       swiperList: []
     }
   },
-  created() {
+  created () {
     this.swiperList = swiperList
   },
   // mounted() {
@@ -66,7 +66,7 @@ export default {
   //   document.querySelector('body').removeAttribute('style')
   // },
   methods: {
-    goHome() {
+    goHome () {
       this.$router.push({path: `/Home`})
     }
   }
