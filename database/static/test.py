@@ -5,6 +5,7 @@ from database.static.getInitData import *
 from database.static.dao import *
 from database.static.modelTrain import *
 from database.static.search import *
+from database.static.travelAdvice import *
 
 def getInf():
    data = Spider.getData(1)
@@ -39,4 +40,4 @@ def getCountryHisTest():
 #db.drop_all()
 #db.create_all()
 #getNewArea()
-getAreaJson()
+print(getIfAddInf('广东'))

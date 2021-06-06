@@ -66,3 +66,46 @@ def getSearchData():
 	return searchData
 ```
 
+## 近14天新增感染情况
+
+* database/static/travelAdvice.py
+
+```python
+'''
+参数：`region	`	 地区名称
+
+返回值：`list<int>`
+
+- 若有新增，返回近十四天的新增感染人数，时间从前到后。eg：[十四天前的， 十三天前的， ...]
+
+- 若无新增，返回一个空的列表
+
+- 若无该地区信息，返回None
+
+'''
+
+def getIfAddInf(region):
+	return list
+```
+
+## 政策严格指数查询
+
+* database/static/travelAdvice.py
+
+```python
+'''
+参数：`region	`	 地区名称
+
+返回值：`double`
+
+- 若`region`是国家，直接返回该国家的值
+
+- 若`region`是地区，返回该地区对应国家的值
+
+- 若不存在`region`的数据，则返回`none`
+'''
+
+def getPolicyIndex(region):
+    return double
+```
+
