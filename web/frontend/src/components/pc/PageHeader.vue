@@ -42,14 +42,14 @@
 </template>
 
 <script>
-import SearchBar from "./SearchBar";
+import SearchBar from './SearchBar'
 
 export default {
   name: 'PageHeader',
   components: {
     'search-bar': SearchBar
   },
-  data() {
+  data () {
     return {
       activeIndex: '1',
       input: '',
@@ -60,13 +60,13 @@ export default {
     }
   },
   methods: {
-    goHome() {
+    goHome () {
       this.$router.push({path: `/Home`})
     },
-    handleSelect(key, keyPath) {
+    handleSelect (key, keyPath) {
       console.log(key, keyPath)
     },
-    onRouteChanged() {
+    onRouteChanged () {
       let that = this
       var posVaccine = that.$route.path.search('/VaccineDetail')
       if (posVaccine === -1) {
@@ -89,7 +89,7 @@ export default {
         that.path = '/VaccineHome'
       }
     },
-    showDataSource() {
+    showDataSource () {
       const data = []
       const h = this.$createElement
       for (let i in this.dataSource) {
@@ -104,7 +104,7 @@ export default {
   watch: {
     '$route': 'onRouteChanged'
   },
-  created() {
+  created () {
     this.onRouteChanged()
   }
 }

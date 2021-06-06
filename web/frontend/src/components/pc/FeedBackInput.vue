@@ -57,7 +57,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           this.postFeedBack()
-          alert('提交成功，感谢您的意见！')
+          alert('提交成功，感谢您的建议！')
           this.resetForm(formName)
           this.isDisabled = true
           /* setTimeout(() => {
@@ -67,15 +67,13 @@ export default {
           let vm = this
           vm.count = TIME_COUNT
           vm.timer = window.setInterval(() => {
-            if (vm.count > 0 && vm.count <= TIME_COUNT) {
-          	  // 倒计时时不可点击
+            if (vm.count > 0 && vm.count <= TIME_COUNT) { // 倒计时时不可点击
               vm.isDisabled = true
               // 计时秒数
               vm.count--
               // 更新按钮的文字内容
               vm.content = vm.count + 's后再次提交'
-            } else {
-          	  // 倒计时完，可点击
+            } else { // 倒计时完，可点击
               vm.isDisabled = false
               // 更新按钮文字内容
               vm.content = '提交'

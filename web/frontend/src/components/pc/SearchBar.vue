@@ -22,26 +22,26 @@ import data from '../../../static/json/searchData.json'
 
 export default {
   name: 'SearchBar',
-  data() {
+  data () {
     return {
       data: '',
-      searchRegion: '',
+      searchRegion: ''
     }
   },
-  mounted() {
+  mounted () {
     this.data = data
     // console.log(this.data)
   },
   watch: {
-    '$route'() { // 监听路由是否变化, 解决更新搜索结果后不刷新界面的问题
+    '$route' () { // 监听路由是否变化, 解决更新搜索结果后不刷新界面的问题
       if (this.$route.params.region) {
         this.$router.go(0)
       }
     }
   },
   methods: {
-    handleSelect(val) {
-      var regions = []  // 将级联地区名以'  '连接
+    handleSelect (val) {
+      var regions = [] // 将级联地区名以'  '连接
       // console.log(val)
       // console.log(this.$refs['cascader'].panel.getNodeByValue(val))
       var node = this.$refs['cascader'].panel.getNodeByValue(val)
@@ -61,7 +61,7 @@ export default {
       this.searchRegion = regions.join('  ')
       // console.log(this.searchRegion)
     },
-    goSearch() {
+    goSearch () {
       this.$router.push({path: `/Search/${this.searchRegion}`})
     }
   }
