@@ -37,7 +37,7 @@ export default {
   data () {
     return {
       form: {
-        region: '',
+        region: [],
         time: ''
       },
       rules: {
@@ -54,35 +54,42 @@ export default {
         }
       },
       data: '',
-      searchRegion: ''
+      searchRegion: '',
+      state: ''
     }
   },
   mounted () {
     this.data = data
+    this.state = 0
+    this.form.region = [1, 2]
   },
   methods: {
     onSubmit () {
+      alert(this.form.region)
       if (this.form.region.length === 0) {
         // do nothing
       } else if (this.form.time.length === 0) {
         // do nothing
       } else {
-        alert('查询')
-        /*fetch('http://81.70.134.96:5000/travelAdvice', {method: 'POST',
+        alert(this.form.region)
+        fetch('http://81.70.134.96:5000/travelAdvice', {method: 'POST',
           body: JSON.stringify({
             'region': this.searchRegion,
             'time': this.form.time
           })}).then(function (response) {
           response.json().then((data) => {
-            // do here
+
           })
-        })*/
+        }).catch(function (err) {
+          alert(err.toString())
+        })
       }
     },
     handleSelect (val) {
       var regions = [] // 将级联地区名以'  '连接
       // console.log(val)
       // console.log(this.$refs['cascader'].panel.getNodeByValue(val))
+      alert(this.$refs['cascader'].getCheckedNodes())
       var node = this.$refs['cascader'].panel.getNodeByValue(val)
       regions.push(node.label)
       while (node.parent != null) {
