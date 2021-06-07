@@ -51,7 +51,7 @@ latestDataDay是要存储的数据，存储了最新一天的国家政策严格�
 有用的信息有： 国家名 数据对应的日期 严格性指数（stringency字段）
 """
 
-with open('./world-mapping.json', mode='r', encoding='utf-8') as f:
+with open('./world-mapping-policy.json', mode='r', encoding='utf-8') as f:
 	worldMapping = json.load(f)
 	with open('./country-codes-lat-long-alpha3.json', mode='r', encoding='utf-8') as c:
 		countryAlpha3 = json.load(c)["ref_country_codes"]
