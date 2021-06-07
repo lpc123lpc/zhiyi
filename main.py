@@ -1,6 +1,6 @@
 from flask import request, jsonify
 from flask_cors import CORS
-from controller import map, tables, sidebar
+from controller import map, tables, sidebar, vaccineAgency, search, news
 from database.static import dao, table
 from database.static.getInitData import *
 from database.static.dao import updateInf, updateVac
@@ -219,6 +219,21 @@ def getFeedBack():
         return jsonify({})
     if request.method == "GET":
         return jsonify({})
+
+
+@app.route('/search/<region>/regionInfectDataMsg', methods=["GET"])
+def getSearchMsg(region):
+    return search.getAllMassage(region)
+
+
+@app.route('/search/<region>/regionVaccineDataMsg', methods=["GET"])
+def getVaccineMsg(region):
+    return vaccineAgency.getVaccineAgency(region)
+
+
+@app.route('/news', methods=["GET"])
+def getNews():
+    return news.getNews()
 
 
 if __name__ == '__main__':
