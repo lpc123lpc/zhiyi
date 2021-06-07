@@ -9,7 +9,7 @@
           <infect-sidebar v-bind:infect_header_title="'感染情况'"></infect-sidebar>
         </el-aside>
         <el-main id="my-el-main">
-
+          <travel-advice-com></travel-advice-com>
         </el-main>
       </el-container>
   </el-container>
@@ -19,9 +19,11 @@
 import vueHeader from '../../components/pc/PageHeader.vue'
 import vaccineSidebar from '../../components/pc/VaccineSidebar.vue'
 import infectSidebar from '../../components/pc/InfectSidebar.vue'
+import TravelAdviceCom from '../../components/pc/TravelAdviceCom';
 export default {
   name: 'TravelAdvice',
-  components: { // 定义组件
+  components: {
+    TravelAdviceCom, // 定义组件
     'wbc-nav': vueHeader,
     'vaccine-sidebar': vaccineSidebar,
     'infect-sidebar': infectSidebar
