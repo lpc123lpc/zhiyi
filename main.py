@@ -231,6 +231,11 @@ def getVaccineMsg(region):
     return vaccineAgency.getVaccineAgency(region)
 
 
+@app.route('/news', methods=["GET"])
+def getNews():
+    return news.getNews()
+
+
 if __name__ == '__main__':
     '''os.chdir("/Users/liuqian/PycharmProjects/covid-19")  # 注意这里请改成自己电脑上该文件夹的绝对路径 通用方法目前仍在查找 by:zzy
     os.system("python database\\static\\initCreate.py")'''
