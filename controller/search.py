@@ -2,7 +2,13 @@ from flask import jsonify
 from database.static import dao
 
 
-def getAllMassage(region):
+def getRegion(region):
+    places = region.splite(str="  ")
+    return places[len(places) - 1]
+
+
+def getAllMassage(oriRegion):
+    region = getRegion(oriRegion)
     vacData = dao.getNowVacMessage(region)
     infData = dao.getNowInfMessage(region)
     return jsonify({
