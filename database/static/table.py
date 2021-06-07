@@ -110,7 +110,19 @@ class RiskArea(db.Model):
     abstract = db.Column(db.String(100), primary_key=True)
 
 
+class PolicyStrict(db.Model):
+    __tablename__ = 'policyStrict'
+
+    countryName = db.Column(db.String(20), primary_key=True)
+    strictIndex = db.Column(db.FLOAT)
+
+
 # 插入数据
 def add(x):
     db.session.merge(x)
     db.session.commit()
+
+# 清除表单
+def clearTable(name):
+    db.reflect(app=app)
+    db.get_engine().execute(f"truncate table {name}")

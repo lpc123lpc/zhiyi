@@ -79,7 +79,7 @@ def getTrainCsv():
             q += 1
         i += 1
     mapCsv = pd.DataFrame(columns=mapListName, data=mapList)
-    mapCsv.to_csv('./trainCsv/area.csv', encoding='gbk')
+
 
 
 '''
@@ -96,4 +96,29 @@ def getAreaMapping():
         dirc[num] = a.childArea
         num += 1
 
-    return dirc
+    return
+
+
+def getAreaJson():
+    areas = db.session.query(Area).filter(Area.population != 0).filter(Area.childArea != 'global').all()
+    jsonDirc = {}
+    num = 1
+    startTime = ''
+    population = 0
+    for a in areas:
+        name = a.childArea
+        population = a.population
+        hisMes = db.session.query(InfMessage).filter(InfMessage.areaName == name).order_by(InfMessage.time.asc()).first()
+        if hisMes is None:
+            hisMes = db.session.query(ChinaInfMessage).filter(ChinaInfMessage.areaName == name).order_by(ChinaInfMessage.time.asc()).first()
+            if hisMes is None:
+                continue
+            else:
+                startTime = hisMes.time
+        else:
+            startTime = hisMes.time
+        jsonDirc[name] = {'num': num, 'begindate': startTime, 'population': population}
+        num += 1
+    fp = open('./trainCsv/area.json', 'w')
+    fp.write(json.dumps(jsonDirc, ensure_ascii=False))
+    fp.close()

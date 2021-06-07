@@ -1,7 +1,11 @@
 <template>
   <van-nav-bar class="mobile-header" id="mobile-header-id">
     <template #left>
-      <van-image fit="contain" src='../../../static/image/111.png' class="image-item" id="image-item-id" @click="goHome()"></van-image>
+      <van-image fit="contain" src='../../../static/image/111.png' class="image-item" id="image-item-id" @click="goHome()">
+        <template v-slot:loading>
+          <van-loading type="spinner" size="20" />
+        </template>
+      </van-image>
     </template>
     <template #title>
       <van-search

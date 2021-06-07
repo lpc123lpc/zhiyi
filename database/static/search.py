@@ -1,6 +1,7 @@
+# -*- coding:utf-8 -*-
+
 from sqlalchemy.sql import text
 from database.static.table import *
-from spider.covidSpider import *
 import json
 import pandas as pd
 
@@ -54,10 +55,12 @@ def getSearchData():
                 value += 1
                 pChildren.append(city)
             province['children'] = pChildren
-            chinaChildren.append(province)
+        chinaChildren.append(province)
     jsonChina['children'] = chinaChildren
 
     searchData = [jsonForeign, jsonChina]
-    Spider.saveToJsonFile(searchData, 'searchData.json')
+    fp = open('./searchData.json', 'w')
+    fp.write(json.dumps(searchData, ensure_ascii=False))
+    fp.close()
     return searchData
 

@@ -20,9 +20,24 @@ let router = new Router({
       component: resolve => require(['../../pages/mobile/VaccineHome'], resolve)
     },
     {
+      path: '/VaccineDetail/:country',
+      name: 'VaccineDetail',
+      component: resolve => require(['../../pages/mobile/VaccineDetail'], resolve)
+    },
+    {
       path: '/InfectHome',
       name: 'InfectHome',
       component: resolve => require(['../../pages/mobile/InfectHome'], resolve)
+    },
+    {
+      path: '/InfectDetail/:country',
+      name: 'InfectDetail',
+      component: resolve => require(['../../pages/mobile/InfectDetail'], resolve)
+    },
+    {
+      path: '/InfectProvinceDetail/:province',
+      name: 'InfectProvinceDetail',
+      component: resolve => require(['../../pages/mobile/InfectProvinceDetail'], resolve)
     },
     {
       path: '/Feedback',

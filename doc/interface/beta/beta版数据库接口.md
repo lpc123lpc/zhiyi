@@ -40,6 +40,23 @@ def getVacInstitutions(city):
     return m
 ```
 
+## 中高风险地区相关接口（与前端对接）
+
+* database/static/travelAdvice.py
+
+```python
+'''
+*areas:变长参数
+- len(areas) = 0:查询中国所有中高风险地区
+- len(areas) = 1:参数：省份名称。查询该省份所有中高风险地区
+- len(areas) = 2:参数：省份名称，地级市名称。查询该地级市所有中高风险地区
+
+riskArea:为table.py中的RiskArea类的对象的列表，若未查询到则会返回空列表
+'''
+def getRiskArea(*areas):
+    return riskArea
+```
+
 ## 存取优化
 
 * database/static/countryInfo.json
@@ -64,5 +81,48 @@ def getCountryInfoJson()
 '''
 def getSearchData():
 	return searchData
+```
+
+## 近14天新增感染情况
+
+* database/static/travelAdvice.py
+
+```python
+'''
+参数：`region	`	 地区名称
+
+返回值：`list<int>`
+
+- 若有新增，返回近十四天的新增感染人数，时间从前到后。eg：[十四天前的， 十三天前的， ...]
+
+- 若无新增，返回一个空的列表
+
+- 若无该地区信息，返回None
+
+'''
+
+def getIfAddInf(region):
+	return list
+```
+
+## 政策严格指数查询
+
+* database/static/travelAdvice.py
+
+```python
+'''
+参数：`region	`	 地区名称
+
+返回值：`double`
+
+- 若`region`是国家，直接返回该国家的值
+
+- 若`region`是地区，返回该地区对应国家的值
+
+- 若不存在`region`的数据，则返回`none`
+'''
+
+def getPolicyIndex(region):
+    return double
 ```
 
