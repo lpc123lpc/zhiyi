@@ -2,7 +2,6 @@
 
 from sqlalchemy.sql import text
 from database.static.table import *
-from spider.covidSpider import *
 import json
 import pandas as pd
 

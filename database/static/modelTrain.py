@@ -117,7 +117,7 @@ def getAreaJson():
                 startTime = hisMes.time
         else:
             startTime = hisMes.time
-        jsonDirc[num] = {'name': name, 'begindate': startTime, 'population': population}
+        jsonDirc[name] = {'num': num, 'begindate': startTime, 'population': population}
         num += 1
     fp = open('./trainCsv/area.json', 'w')
     fp.write(json.dumps(jsonDirc, ensure_ascii=False))

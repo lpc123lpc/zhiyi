@@ -40,6 +40,23 @@ def getVacInstitutions(city):
     return m
 ```
 
+## 中高风险地区相关接口（与前端对接）
+
+* database/static/travelAdvice.py
+
+```python
+'''
+*areas:变长参数
+- len(areas) = 0:查询中国所有中高风险地区
+- len(areas) = 1:参数：省份名称。查询该省份所有中高风险地区
+- len(areas) = 2:参数：省份名称，地级市名称。查询该地级市所有中高风险地区
+
+riskArea:为table.py中的RiskArea类的对象的列表，若未查询到则会返回空列表
+'''
+def getRiskArea(*areas):
+    return riskArea
+```
+
 ## 存取优化
 
 * database/static/countryInfo.json

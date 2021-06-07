@@ -40,4 +40,4 @@ def getCountryHisTest():
 #db.drop_all()
 #db.create_all()
 #getNewArea()
-print(getIfAddInf('广东'))
+getRiskArea('河南', '焦作')
