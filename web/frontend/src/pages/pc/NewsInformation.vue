@@ -37,6 +37,7 @@ export default {
     }
   },
   mounted () {
+
     // this.set_left()
   }
 }
