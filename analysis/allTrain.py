@@ -4,7 +4,7 @@ from sklearn.neighbors import KNeighborsRegressor
 import pandas as pd
 
 
-if __name__ == '__main__':
+def train():
     pathHead = "../database/static/trainCsv/"
     pathTail = ".csv"
     targetPathHead = '../saved_model/'

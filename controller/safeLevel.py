@@ -76,10 +76,3 @@ def safeLevel(oriRegion, time):
         "mid": mid,
         "high": high
     })
-
-
-if __name__ == '__main__':
-    getInfo("1")
-    num = datetime.datetime.today() - datetime.datetime.strptime("2021-06-01", '%Y-%m-%d')
-    a = num.days
-    print(num)
