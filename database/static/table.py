@@ -97,7 +97,6 @@ class VacInstitution(db.Model):
     name = db.Column(db.String(100), primary_key=True)
     addr = db.Column(db.String(100))
     tel = db.Column(db.String(20))
-    abstract = db.Column(db.String(100), primary_key=True)
     
 
 class RiskArea(db.Model):
@@ -115,12 +114,14 @@ class PolicyStrict(db.Model):
 
     countryName = db.Column(db.String(20), primary_key=True)
     strictIndex = db.Column(db.FLOAT)
+    date = db.Column(db.String(20))
 
 
 # 插入数据
 def add(x):
     db.session.merge(x)
     db.session.commit()
+
 
 # 清除表单
 def clearTable(name):

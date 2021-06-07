@@ -24,10 +24,12 @@ with open(path, mode="w", encoding="utf-8") as f:
 	json.dump(data, f)
 # print("写入文件成功！")
 
+countries = data['countries']
+
 data = data["data"]
 # print(len(data))
 latestDate = ""
-# print(data)
+#print(data)
 for day in data:
 	# print(day)
 	if latestDate == "":
@@ -36,8 +38,9 @@ for day in data:
 		latestDate = day
 	# latestDataDay=dataDay
 	# latestDataDay=dataDay
-latestDataDay = data[day]
-# print(latestDataDay)
+latestDataDay = data[latestDate]
+print(latestDataDay)
+
 
 """
 country-codes-lat-long-alpha3.json 存储了各个国家的alpha3 country code与国家名称（英文）的对应关系
@@ -48,3 +51,21 @@ latestDataDay是要存储的数据，存储了最新一天的国家政策严格�
 有用的信息有： 国家名 数据对应的日期 严格性指数（stringency字段）
 """
 
+with open('./world-mapping-policy.json', mode='r', encoding='utf-8') as f:
+	worldMapping = json.load(f)
+	with open('./country-codes-lat-long-alpha3.json', mode='r', encoding='utf-8') as c:
+		countryAlpha3 = json.load(c)["ref_country_codes"]
+		cAlpha3Mapping = {}
+		for country in countryAlpha3:
+			cAlpha3Mapping[country['alpha3']] = country['country']
+		for country in countries:
+			try:
+				countryName = worldMapping[cAlpha3Mapping[country]]['cn']
+				p = PolicyStrict(countryName=countryName, strictIndex=latestDataDay[country]['stringency'], date=latestDataDay[country]['date_value'])
+				add(p)
+			except Exception as e:
+				print(latestDataDay[country])
+				try:
+					print(cAlpha3Mapping[country])
+				except Exception as ex:
+					print(country)

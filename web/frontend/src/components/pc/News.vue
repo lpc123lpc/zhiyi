@@ -2,7 +2,7 @@
   <el-tabs  stretch>
     <el-tab-pane label="疫苗新闻">
       <ul class="infinite-list" v-infinite-scroll="load" style="overflow:auto;list-style-type:none">
-        <li v-for="item in items" class="infinite-list-item" style="height: 30%;width:40%;padding: 1%">
+        <li v-for="item in items" class="infinite-list-item" style="height: 30%;padding: 1%">
           <el-card @click.native="go(item.urls)" style="height: 100%">
             <el-row  type="flex">
               <el-col span="6">
@@ -24,7 +24,7 @@
     <el-tab-pane label="疫情新闻">
       <span>国外新闻</span>
       <ul class="infinite-list" v-infinite-scroll="load" style="overflow:auto;list-style-type:none">
-        <li v-for="item in items" class="infinite-list-item" style="height: 30%;width:40%;padding: 1%">
+        <li v-for="item in items" class="infinite-list-item" style="height: 30%;padding: 1%">
           <el-card @click.native="go(item.urls)" style="height: 100%">
             <el-row  type="flex">
               <el-col span="6">
