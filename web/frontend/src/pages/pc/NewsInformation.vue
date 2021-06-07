@@ -9,7 +9,7 @@
           <infect-sidebar v-bind:infect_header_title="'感染情况'"></infect-sidebar>
         </el-aside>
         <el-main id="my-el-main">
-          <news></news>
+          <news-information-content></news-information-content>
         </el-main>
       </el-container>
   </el-container>
@@ -19,14 +19,14 @@
 import vueHeader from '../../components/pc/PageHeader.vue'
 import vaccineSidebar from '../../components/pc/VaccineSidebar.vue'
 import infectSidebar from '../../components/pc/InfectSidebar.vue'
-import News from '../../components/pc/News'
+import newsInformationContent from '../../components/pc/News.vue'
 export default {
   name: 'NewsInformation',
   components: {
-    News, // 定义组件
     'wbc-nav': vueHeader,
     'vaccine-sidebar': vaccineSidebar,
-    'infect-sidebar': infectSidebar
+    'infect-sidebar': infectSidebar,
+    'news-information-content': newsInformationContent
   },
   methods: {
     set_left () {
@@ -37,7 +37,7 @@ export default {
     }
   },
   mounted () {
-    this.set_left()
+    // this.set_left()
   }
 }
 </script>
