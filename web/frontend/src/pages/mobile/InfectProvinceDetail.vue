@@ -1,17 +1,18 @@
 <template>
   <div>
     <page-header v-bind:header_title="'感染情况'"></page-header>
-    <van-button
+    <!--<van-button
       class="button"
       type="default" plain
       size="mini"
       color="#8cc4ff"
       @click.native="back()"
-    >返回</van-button>
-    <div style="align: center; margin-top: 20px">
+    >返回</van-button>-->
+    <van-cell style="align: center; margin-top: 10px">
       <infect-detail-province-map v-bind:province="provinceMsg"
                                   v-bind:provinceMapInfectionData="provinceMapInfectionDataMsg"></infect-detail-province-map>
-    </div>
+    </van-cell>
+    <van-button color="#8cc4ff" hairline plain block @click="back" class="button-item" id="button-item-id-1">返回</van-button>
   </div>
 </template>
 
@@ -24,9 +25,9 @@ export default {
   name: 'InfectProvinceDetail',
   components: { // 定义组件
     'page-header': pageHeader,
-    'infect-detail-province-map': infectDetailProvinceMap,
+    'infect-detail-province-map': infectDetailProvinceMap
   },
-  data() { // 选项 / 数据
+  data () { // 选项 / 数据
     return {
       provinceMsg: '',
       provinceMapInfectionDataMsg: ''
@@ -34,11 +35,11 @@ export default {
   },
   mixins: [mixin],
   methods: { // 事件处理器
-    getProvinceMsg() {
+    getProvinceMsg () {
       var that = this
       that.provinceMsg = this.$route.params.province
     },
-    getProvinceInfectionDataMsg() {
+    getProvinceInfectionDataMsg () {
       var that = this
       fetch('http://81.70.134.96:5000/infectDetail/provinceMapInfectionDataMsg/' + this.$route.params.province).then(function (response) {
         response.json().then((data) => {
@@ -47,13 +48,21 @@ export default {
         })
       })
     },
-    back() {
+    back () {
       this.$router.go(-1)
+    },
+    set_button_length () {
+      const button1 = document.getElementById('button-item-id-1')
+      button1.style.setProperty('width', window.screen.width / 10 * 9 + 'px')
+      button1.style.setProperty('margin-left', window.screen.width / 20 + 'px')
     }
   },
-  created() {
+  created () {
     this.getProvinceMsg()
     this.getProvinceInfectionDataMsg()
+  },
+  mounted () {
+    this.set_button_length()
   }
 }
 </script>

@@ -1,19 +1,17 @@
 <template>
   <div>
     <page-header v-bind:header_title="'疫苗接种'"></page-header>
-    <div style="align: center;">
-      <home-info></home-info>
-    </div>
-    <div style="align: center; margin-top: 120px">
+    <home-info></home-info>
+    <van-cell style="align: center; margin-top: 10px">
       <world-map-vaccine v-bind:worldMapVaccineData="worldMapVaccineDataMsg"></world-map-vaccine>
-    </div>
+    </van-cell>
   </div>
 </template>
 
 <script>
 import pageHeader from '../../components/mobile/PageHeader.vue'
 import worldMapVaccine from '../../components/mobile/WorldMapVaccine'
-import vaccineHomeHeadbar from "../../components/mobile/VaccineHomeHeadbar";
+import vaccineHomeHeadbar from '../../components/mobile/VaccineHomeHeadbar'
 
 export default {
   name: 'VaccineHome',
@@ -22,13 +20,13 @@ export default {
     'home-info': vaccineHomeHeadbar,
     'world-map-vaccine': worldMapVaccine
   },
-  data() { // 选项 / 数据
+  data () { // 选项 / 数据
     return {
       worldMapVaccineDataMsg: ''
     }
   },
   methods: { // 事件处理器
-    getWorldMapVaccineDataMsg() {
+    getWorldMapVaccineDataMsg () {
       var that = this
       fetch('http://81.70.134.96:5000/vaccineHome/worldMapVaccineDataMsg').then(function (response) {
         response.json().then((data) => {
@@ -37,9 +35,9 @@ export default {
       })
     }
   },
-  created() { // 生命周期函数
+  created () { // 生命周期函数
     this.getWorldMapVaccineDataMsg()
-  },
+  }
 }
 </script>
 
