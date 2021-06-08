@@ -13,6 +13,7 @@
                                   v-bind:countryMapVaccineData="countryMapVaccineDataMsg"></vaccine-detail-country-map>
     </van-cell>
     <van-button color="#8cc4ff" hairline plain block @click="back" class="button-item" id="button-item-id-1">返回</van-button>
+    <mobile-country-vaccine></mobile-country-vaccine>
   </div>
 </template>
 
@@ -20,10 +21,12 @@
 import pageHeader from '../../components/mobile/PageHeader.vue'
 import vaccineDetailCountryMap from '../../components/mobile/CountryMapVaccine.vue'
 import {mixin} from '../../mixins'
+import MobileCountryVaccine from '../../components/mobile/MobileCountryVaccine';
 
 export default {
   name: 'VaccineDetail',
-  components: { // 定义组件
+  components: {
+    MobileCountryVaccine, // 定义组件
     'page-header': pageHeader,
     'vaccine-detail-country-map': vaccineDetailCountryMap,
   },
@@ -43,7 +46,7 @@ export default {
       var that = this
       fetch('http://81.70.134.96:5000/vaccineDetail/countryMapVaccineDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
-          that.judgeDataExist(data)
+          that.judgeDataExistMobile(data)
           // console.log(data)
           that.countryMapVaccineDataMsg = data
         })

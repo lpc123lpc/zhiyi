@@ -72,18 +72,18 @@ export default {
           top: 40,
           selected: {'当前确诊': true, '累计确诊': false, '累计治愈': false, '累计死亡': false, '感染率': false},
           selectedMode: 'single',
-          itemWidth: 12,
-          itemHeight: 8,
+          itemWidth: 14,
+          itemHeight: 10,
           textStyle: {
             color: '#000',
-            fontSize: 10
+            fontSize: 14
           }
         },
         visualMap: {
           show: true,
           showLabel: false,
           left: '3%',
-          top: 150,
+          top: 180,
           itemHeight: 60,
           itemWidth: 10,
           textStyle: {

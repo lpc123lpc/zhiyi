@@ -78,7 +78,7 @@ export default {
           itemHeight: 10,
           textStyle: {
             color: '#000',
-            fontSize: 12
+            fontSize: 13
           }
         },
         visualMap: {
@@ -89,7 +89,7 @@ export default {
           itemHeight: 10,
           itemWidth: 10,
           textStyle: {
-            fontSize: 8
+            fontSize: 10
           },
           splitList: [{start: 0, end: 0},
             {start: 1, end: 9},
