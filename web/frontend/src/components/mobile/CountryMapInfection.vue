@@ -94,11 +94,11 @@ export default {
         },
         visualMap: {
           show: true,
-          left: '1%',
-          bottom: '1%',
+          left: '0%',
+          bottom: '0%',
           orient: 'vertical',
-          itemHeight: 12,
-          itemWidth: 12,
+          itemHeight: 10,
+          itemWidth: 10,
           textStyle: {
             fontSize: 12
           },
