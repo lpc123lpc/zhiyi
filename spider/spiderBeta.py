@@ -1,18 +1,9 @@
+
 from bs4 import BeautifulSoup
 import requests
-import html
-import re
-import json
-from bs4 import BeautifulSoup
-import requests
-import html
-import re
-from requests.auth import AuthBase
-from requests.auth import HTTPBasicAuth
+
 import hashlib
-# import datetime
-import time
-from datetime import timedelta, timezone
+
 import json
 import datetime
 from urllib import parse
@@ -268,9 +259,9 @@ def updateRiskList():
 	middlelist = data["middlelist"]
 
 	clearTable('riskAreas')
-	with open('./city-map.json', mode='r', encoding='utf-8') as f:
+	with open('../spider/city-map.json', mode='r', encoding='utf-8') as f:
 		cityMap = json.load(f)
-	with open('./rankListProcess.json', mode='r', encoding='utf-8') as f:
+	with open('../spider/rankListProcess.json', mode='r', encoding='utf-8') as f:
 		provinceMap = json.load(f)
 
 	for item in highlist:
@@ -339,7 +330,7 @@ def updateStringency():
 	data = json.loads(response.text)
 	# print(data)
 
-	path = "testStrict.json"
+	path = "../spider/testStrict.json"
 	with open(path, mode="w", encoding="utf-8") as f:
 		json.dump(data, f)
 	# print("写入文件成功！")
@@ -360,7 +351,6 @@ def updateStringency():
 	# latestDataDay=dataDay
 	latestDataDay = data[latestDate]
 	print(latestDataDay)
-	clearTable('policyStrict')
 
 	"""
 	country-codes-lat-long-alpha3.json 存储了各个国家的alpha3 country code与国家名称（英文）的对应关系
@@ -371,9 +361,10 @@ def updateStringency():
 	有用的信息有： 国家名 数据对应的日期 严格性指数（stringency字段）
 	"""
 
-	with open('./world-mapping-policy.json', mode='r', encoding='utf-8') as f:
+	clearTable('policyStrict')
+	with open('../spider//world-mapping-policy.json', mode='r', encoding='utf-8') as f:
 		worldMapping = json.load(f)
-		with open('./country-codes-lat-long-alpha3.json', mode='r', encoding='utf-8') as c:
+		with open('../spider/country-codes-lat-long-alpha3.json', mode='r', encoding='utf-8') as c:
 			countryAlpha3 = json.load(c)["ref_country_codes"]
 			cAlpha3Mapping = {}
 			for country in countryAlpha3:
@@ -382,7 +373,7 @@ def updateStringency():
 				try:
 					countryName = worldMapping[cAlpha3Mapping[country]]['cn']
 					p = PolicyStrict(countryName=countryName, strictIndex=latestDataDay[country]['stringency'],
-					                 date=latestDataDay[country]['date_value'])
+									 date=latestDataDay[country]['date_value'])
 					add(p)
 				except Exception as e:
 					print(latestDataDay[country])
@@ -402,9 +393,9 @@ def insertVaccineInstitutionsTencent():
 		'Accept': 'application/json, text/plain, */*',
 		'Referer': 'https://new.qq.com/'
 	}
-	with open('./city-map.json', mode='r', encoding='utf-8') as f:
+	with open('../spider/city-map.json', mode='r', encoding='utf-8') as f:
 		cityMap = json.load(f)
-	with open('./rankListProcess.json', mode='r', encoding='utf-8') as f:
+	with open('../spider/rankListProcess.json', mode='r', encoding='utf-8') as f:
 		provinceMap = json.load(f)
 	provinces = ["北京", "天津", "河北", "内蒙古", "辽宁", "上海", "浙江", "安徽", "福建",
 	           "山东", "河南", "湖北", "湖南", "广东", "广西", "四川", "云南", "陕西"]
@@ -479,9 +470,10 @@ def updateVaccineInstitutions():
 
 
 if __name__ == '__main__':
-	# updateCovidNews()
-	# updateVaccineNews()
-	updateRiskList()
+	#updateCovidNews()
+	#updateVaccineNews()
+	#updateRiskList()
 	#updateVaccineInstitutions()
+	updateStringency()
 
 # def updateRiskList():
