@@ -11,9 +11,9 @@
     <van-cell style="align: center; margin-top: 10px">
       <vaccine-detail-country-map v-bind:country="countryMsg"
                                   v-bind:countryMapVaccineData="countryMapVaccineDataMsg"></vaccine-detail-country-map>
+      <mobile-country-vaccine-chart v-bind:country="countryMsg" style="margin-top: 10px"></mobile-country-vaccine-chart>
     </van-cell>
     <van-button color="#8cc4ff" hairline plain block @click="back" class="button-item" id="button-item-id-1">返回</van-button>
-    <mobile-country-vaccine></mobile-country-vaccine>
   </div>
 </template>
 
@@ -21,14 +21,13 @@
 import pageHeader from '../../components/mobile/PageHeader.vue'
 import vaccineDetailCountryMap from '../../components/mobile/CountryMapVaccine.vue'
 import {mixin} from '../../mixins'
-import MobileCountryVaccine from '../../components/mobile/MobileCountryVaccine';
-
+import mobileCountryVaccineChart from '../../components/mobile/CountryVaccineChartMobile.vue'
 export default {
   name: 'VaccineDetail',
   components: {
-    MobileCountryVaccine, // 定义组件
     'page-header': pageHeader,
     'vaccine-detail-country-map': vaccineDetailCountryMap,
+    'mobile-country-vaccine-chart': mobileCountryVaccineChart
   },
   data () { // 选项 / 数据
     return {
@@ -72,5 +71,7 @@ export default {
 </script>
 
 <style scoped>
-
+.button-item {
+  margin-bottom: 10px;
+}
 </style>

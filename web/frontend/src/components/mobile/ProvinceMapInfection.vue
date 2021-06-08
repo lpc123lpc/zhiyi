@@ -69,7 +69,7 @@ export default {
         },
         legend: {
           data: ['当前确诊', '累计确诊', '累计治愈', '累计死亡'],
-          left: '2%',
+          left: 'center',
           orient: 'horizontal',
           top: 40,
           selected: {'当前确诊': true, '累计确诊': false, '累计治愈': false, '累计死亡': false},
