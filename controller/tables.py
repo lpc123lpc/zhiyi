@@ -1,12 +1,6 @@
 from flask import jsonify
 from database.static import dao
-import datetime
 import json
-from testcode.lq import testData
-
-
-'''worldInfData = testData.infdata
-worldVacData = testData.vacdata'''
 
 
 def dealWithNone(i):
@@ -33,6 +27,9 @@ def getWorldData():
                                  "vaccine_coverage": dealWithNone(getattr(j, 'vacRate'))})
                 break
     return json.dumps(all_data)
+    '''with open("database/static/countryInfo.json", 'r', encoding='gbk') as f:
+        allInfo = json.load(f)
+    return json.dumps(allInfo)'''
 
 
 def getCountryInfData(country):
