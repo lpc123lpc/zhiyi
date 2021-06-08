@@ -3,7 +3,7 @@ import json
 
 
 def getRegion(region):
-    places = region.splite(str="  ")
+    places = region.split("  ")
     return places[len(places) - 1]
 
 
@@ -20,6 +20,6 @@ def getVaccineAgency(oriRegion):
     data = []
     for i in vacAgencys:
         data.append({"name": delWithNone(getattr(i, "name")),
-                     "addr": delWithNone(getattr(i, "address")),
+                     "addr": delWithNone(getattr(i, "addr")),
                      "tel": delWithNone(getattr(i, "tel"))})
-    return json(data)
+    return json.dumps(data)

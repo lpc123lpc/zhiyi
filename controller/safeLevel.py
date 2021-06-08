@@ -13,7 +13,7 @@ def getInfo(region):
 
 
 def getRegion(region):
-    places = region.splite(str="  ")
+    places = region.split("  ")
     return places[len(places) - 1]
 
 
