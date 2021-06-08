@@ -19,7 +19,7 @@
     <template #right>
       <van-icon name="wap-nav" size="20" class="icon-item" id="icon-item-id-1" v-show="show_nav===false" @click="showNav"/>
       <van-icon name="cross" size="20" class="icon-item" id="icon-item-id-2" v-show="show_nav===true" @click="showNav"/>
-      <van-popup v-model="show_nav" position="top" style="top: 51px; height: 308px" :overlay="false" transition="van-fade" class="popup-item" :close-on-popstate="true">
+      <van-popup v-model="show_nav" position="top" style="top: 51px; height: 308px" :overlay="false" transition="van-fade" class="popup-item" :close-on-popstate="true" @click="closeNavItself">
         <van-cell title="国家列表" is-link to="/" class="cell-item"/>
         <van-cell title="疫苗接种" is-link to="/VaccineHome" class="cell-item"/>
         <van-cell title="感染情况" is-link to="/InfectHome" class="cell-item"/>
@@ -67,6 +67,9 @@ export default {
       } else {
         this.show_nav = false
       }
+    },
+    closeNavItself () {
+      this.show_nav = false
     },
     showDialog () {
       this.show_dialog = true
