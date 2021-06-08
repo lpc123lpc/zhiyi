@@ -67,7 +67,7 @@ def getWorldMapVaccineDataMsgCountry(country):
 
 @app.route('/infectHome/worldMapInfectionDataMsg', methods=["GET"])
 def getWorldMapInfectionDataMsg():
-    return map.getMapInfection('global')
+    return map.getMapInfectionGlobal('global')
 
 
 @app.route('/infectDetail/countryMapInfectionDataMsg/<country>', methods=["GET"])
