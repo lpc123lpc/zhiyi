@@ -41,17 +41,17 @@ def getIfAddInf(region):
 
 def getRiskArea(*areas):
     if len(areas) == 0:
-        riskArea = db.session.query(RiskArea).from_statement(text('select * from riskArea ORDER BY CONVERT(province USING gbk) ASC')).all()
+        riskArea = db.session.query(RiskArea).from_statement(text('select * from riskAreas ORDER BY CONVERT(province USING gbk) ASC')).all()
         return riskArea
     elif len(areas) == 1:
         province = areas[0]
         riskArea = db.session.query(RiskArea)\
-            .from_statement(text('select * from riskArea where province = :p ORDER BY CONVERT(city USING gbk) ASC')).params(p=province).all()
+            .from_statement(text('select * from riskAreas where province = :p ORDER BY CONVERT(city USING gbk) ASC')).params(p=province).all()
         return riskArea
     elif len(areas) == 2:
         province = areas[0]
         city = areas[1]
         riskArea = db.session.query(RiskArea) \
-            .from_statement(text('select * from riskArea where province = :p and city = :ci'))\
+            .from_statement(text('select * from riskAreas where province = :p and city = :ci'))\
             .params(p=province, ci=city).all()
         return riskArea

@@ -152,7 +152,7 @@ export default {
       }
       provinceMapInfection.setOption(provinceMapInfection_Option)
       var that = this
-      provinceMapInfection_Option.on('legendselectchanged', function (params) {
+      provinceMapInfection.on('legendselectchanged', function (params) {
         provinceMapInfection_Option.legend.selected = params.selected
         var keys = Object.keys(params.selected)
         for (let i = 0; i < keys.length; i++) {

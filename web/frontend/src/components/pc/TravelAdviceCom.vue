@@ -9,7 +9,6 @@
                        ref="cascader"
                        :options="this.data"
                        v-model="form.region"
-                       @change="handleSelect"
                        filterable
                        clearable/>
         </el-form-item>
@@ -73,6 +72,13 @@ export default {
     }
   },
   mounted () {
+    if (this.$route.query.data.length !== 0) {
+      var temp = []
+      for (var i = 0; i < this.$route.query.data.length; i++) {
+        temp.push(parseInt(this.$route.query.data[i]))
+      }
+      this.form.region = temp
+    }
     this.data = data
     this.state = 0
   },
@@ -85,6 +91,8 @@ export default {
       } else if (this.form.time.length === 0) {
         // do nothing
       } else {
+        that.getSearch()
+        alert(this.searchRegion)
         fetch('http://81.70.134.96:5000/travelAdvice', {method: 'POST',
           body: JSON.stringify({
             'region': that.searchRegion,
@@ -118,6 +126,13 @@ export default {
       if (type === '国内') regions.push('中国')
       // 处理最后两个名字相同的情况
       regions = regions.reverse()
+      if (regions.length > 1 && regions[regions.length - 1] === regions[regions.length - 2]) {
+        regions.pop()
+      }
+      this.searchRegion = regions.join('  ')
+    },
+    getSearch () {
+      var regions = this.$refs['cascader'].getCheckedNodes()[0].pathLabels
       if (regions.length > 1 && regions[regions.length - 1] === regions[regions.length - 2]) {
         regions.pop()
       }

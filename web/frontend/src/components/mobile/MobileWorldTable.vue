@@ -16,7 +16,7 @@
       <van-list
         v-model="loading"
         :finished="finished"
-        @load="getWorldData">
+        >
         <van-cell v-for="(item,index) in items" :key="index" :title="item.name" :value="matter(item.newConfirmed)" />
       </van-list>
     </van-tab>
@@ -36,7 +36,7 @@
       <van-list
         v-model="loading"
         :finished="finished"
-        @load="getWorldData">
+        >
         <van-cell v-for="(item,index) in items" :key="index" :title="item.name" :value="matter(item.vaccine_coverage)" />
       </van-list>
     </van-tab>
@@ -64,6 +64,7 @@ export default {
   },
   mounted () {
     // this.setPopupHeight()
+    this.getWorldData()
   },
   methods: {
     setPopupHeight () {

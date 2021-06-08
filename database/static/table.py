@@ -15,7 +15,7 @@ db = SQLAlchemy(app)
 class BaseModelVac(db.Model):
     __abstract__ = True
     areaName = db.Column(db.String(200), primary_key=True)
-    totalNum = db.Column(db.Integer)
+    totalNum = db.Column(db.BIGINT)
     addNum = db.Column(db.Integer)
     vacRate = db.Column(db.FLOAT)
 
@@ -25,7 +25,7 @@ class BaseModelInf(db.Model):
     time = db.Column(db.String(20), primary_key=True)
     areaName = db.Column(db.String(200), primary_key=True)
     currentNum = db.Column(db.Integer)
-    totalNum = db.Column(db.Integer)
+    totalNum = db.Column(db.BIGINT)
     addNum = db.Column(db.Integer)
     cured = db.Column(db.Integer)
     totalDead = db.Column(db.Integer)
