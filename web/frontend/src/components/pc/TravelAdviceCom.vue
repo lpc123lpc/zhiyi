@@ -85,7 +85,7 @@ export default {
       } else if (this.form.time.length === 0) {
         // do nothing
       } else {
-        fetch('http://81.70.134.96:5000/travelAdvice', {method: 'POST',
+        fetch('http://127.0.0.1:5000/travelAdvice', {method: 'POST',
           body: JSON.stringify({
             'region': that.searchRegion,
             'time': that.form.time
