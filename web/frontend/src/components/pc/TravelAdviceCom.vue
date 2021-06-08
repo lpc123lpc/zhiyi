@@ -87,9 +87,13 @@ export default {
       } else {
         fetch('http://81.70.134.96:5000/travelAdvice', {method: 'POST',
           body: JSON.stringify({
-            'region': this.searchRegion,
-            'time': this.form.time
-          })}).then(function (response) {
+            'region': that.searchRegion,
+            'time': that.form.time
+          }),
+          headers: new Headers({
+            'Content-Type': 'application/json'
+          })
+        }).then(function (response) {
           response.json().then((data) => {
             that.state = 1
             that.result = data
