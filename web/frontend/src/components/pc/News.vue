@@ -2,7 +2,7 @@
   <el-tabs  stretch>
     <el-tab-pane label="疫苗新闻">
       <ul class="infinite-list" v-infinite-scroll="load" style="overflow:auto;list-style-type:none">
-        <li v-for="item in items" class="infinite-list-item" style="height: 30%;padding: 1%">
+        <li v-for="item in infData" class="infinite-list-item" style="height: 30%;padding: 1%">
           <el-card @click.native="go(item.urls)" style="height: 100%">
             <el-row  type="flex">
               <el-col span="6">
@@ -22,9 +22,8 @@
       </ul>
     </el-tab-pane>
     <el-tab-pane label="疫情新闻">
-      <span>国外新闻</span>
       <ul class="infinite-list" v-infinite-scroll="load" style="overflow:auto;list-style-type:none">
-        <li v-for="item in items" class="infinite-list-item" style="height: 30%;padding: 1%">
+        <li v-for="item in vacData" class="infinite-list-item" style="height: 30%;padding: 1%">
           <el-card @click.native="go(item.urls)" style="height: 100%">
             <el-row  type="flex">
               <el-col span="6">
@@ -48,75 +47,25 @@ export default {
   name: 'News',
   data: function () {
     return {
-      items: []
+      infData: [],
+      vacData: []
     }
   },
   mounted () {
-    this.test()
+    this.getNewsData()
   },
   methods: {
     getNewsData () {
       var that = this
       fetch('http://81.70.134.96:5000/news').then(function (response) {
         response.json().then((data) => {
-          that.items = data
-          that.searchItem = data
+          that.infData = data.infNews
+          that.vacData = data.vacNews
         })
       })
     },
     go (url) {
       window.open(url, '_blank')
-    },
-    test () {
-      this.items = [{
-        'time': '2021-5-2',
-        'title': '贺佬太帅啦',
-        'urls': 'https://www.baidu.com/?tn=80035161_1_dg',
-        'source': '百度',
-        'abstracts': '贺佬，作为308中最帅的男人，荣获北航第一',
-        'picUrls': 'http://inews.gtimg.com/newsapp_ls/0/13617707633_640330/0'
-      },
-      {
-        'time': '2021-5-2',
-        'title': '贺佬太帅啦',
-        'urls': 'https://www.baidu.com/?tn=80035161_1_dg',
-        'source': '百度',
-        'abstracts': '贺佬，作为308中最帅的男人，荣获北航第一',
-        'picUrls': 'http://inews.gtimg.com/newsapp_ls/0/13617707633_640330/0'
-      },
-      {
-        'time': '2021-5-2',
-        'title': '贺佬太帅啦',
-        'urls': 'https://www.baidu.com/?tn=80035161_1_dg',
-        'source': '百度',
-        'abstracts': '贺佬，作为308中最帅的男人，荣获北航第一',
-        'picUrls': 'C:\\Users\\lpc\\Desktop\\helao.jpg'
-      },
-      {
-        'time': '2021-5-2',
-        'title': '贺佬太帅啦',
-        'urls': 'https://www.baidu.com/?tn=80035161_1_dg',
-        'source': '百度',
-        'abstracts': '贺佬，作为308中最帅的男人，荣获北航第一',
-        'picUrls': 'C:\\Users\\lpc\\Desktop\\helao.jpg'
-      },
-      {
-        'time': '2021-5-2',
-        'title': '贺佬太帅啦',
-        'urls': 'https://www.baidu.com/?tn=80035161_1_dg',
-        'source': '百度',
-        'abstracts': '贺佬，作为308中最帅的男人，荣获北航第一',
-        'picUrls': 'C:\\Users\\lpc\\Desktop\\helao.jpg'
-      },
-      {
-        'time': '2021-5-2',
-        'title': '贺佬太帅啦',
-        'urls': 'https://www.baidu.com/?tn=80035161_1_dg',
-        'source': '百度',
-        'abstracts': '贺佬，作为308中最帅的男人，荣获北航第一',
-        'picUrls': 'C:\\Users\\lpc\\Desktop\\helao.jpg'
-      }
-      ]
     }
   }
 }

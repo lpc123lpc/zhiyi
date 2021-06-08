@@ -16,6 +16,7 @@
         <el-form-item label="出行时间" prop="time" style="width: 100%" label-width="20%">
           <el-date-picker style="width: 80%" prop="time"
                           v-model="form.time"
+                          value-format="yyyy-MM-dd"
                           align="right"
                           type="date"
                           placeholder="选择日期"
