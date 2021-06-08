@@ -24,9 +24,14 @@ export default {
     }
   },
   mounted () {
+    this.setEchartHeight()
     this.drawProvinceMapInfection()
   },
   methods: {
+    setEchartHeight () {
+      const echartItem = document.getElementById('provinceMapInfection')
+      echartItem.style.setProperty('height', window.screen.width + 'px')
+    },
     drawProvinceMapInfection () {
       var provinceFileName = this.getChinaProvinceFileName(this.province)
       // console.log(provinceFileName)
@@ -42,6 +47,7 @@ export default {
         title: {
           text: '新冠疫苗感染中国' + this.province + '分布图',
           left: 'center',
+          top: 0,
           textStyle: {
             color: '#000',
             fontSize: 18
@@ -64,8 +70,8 @@ export default {
         legend: {
           data: ['当前确诊', '累计确诊', '累计治愈', '累计死亡'],
           left: '2%',
-          orient: 'vertical',
-          top: '10%',
+          orient: 'horizontal',
+          top: 40,
           selected: {'当前确诊': true, '累计确诊': false, '累计治愈': false, '累计死亡': false},
           selectedMode: 'single',
           itemWidth: 14,
@@ -73,17 +79,18 @@ export default {
           textStyle: {
             color: '#000',
             fontSize: 12
-          },
+          }
         },
         visualMap: {
           show: true,
           left: '3%',
           bottom: '1%',
+          top: 150,
           orient: 'horizontal',
           itemHeight: 10,
           itemWidth: 10,
           textStyle: {
-            fontSize: 8,
+            fontSize: 8
           },
           splitList: [{start: 0, end: 0},
             {start: 1, end: 9},
@@ -100,7 +107,7 @@ export default {
           roam: true,
           mapType: this.province,
           zoom: 1.2,
-          top: '15%',
+          top: 100,
           left: 'center',
           showLegendSymbol: false,
           label: {
@@ -175,6 +182,10 @@ export default {
 <style>
 #provinceMapInfection {
   position: relative;
-  height: 300px;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-color: #ffffff #ffffff #e6e6e6 #ffffff;
+  border-bottom-width: 1px;
 }
 </style>

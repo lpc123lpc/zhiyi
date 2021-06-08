@@ -14,32 +14,37 @@ export default {
     'countryMapVaccineData'
   ],
   mixins: [mixin],
-  data() {
+  data () {
     return {
       countryFileName: '',
       countryEgName: ''
     }
   },
   watch: {
-    country() {
+    country () {
       [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
       this.drawCountryMapVaccine()
     },
-    countryMapVaccineData9() {
+    countryMapVaccineData9 () {
       this.drawCountryMapVaccine()
     }
   },
-  mounted() {
+  mounted () {
     //   console.log(this.country)
     //   console.log(this.countryMapVaccineData)
     [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
+    this.setEchartHeight()
     this.drawCountryMapVaccine()
   },
   methods: {
-    drawCountryMapVaccine() {
+    setEchartHeight () {
+      const echartItem = document.getElementById('map')
+      echartItem.style.setProperty('height', window.screen.width + 'px')
+    },
+    drawCountryMapVaccine () {
       // console.log(this.countryEgName)
       if (this.countryFileName === '') {
-        console.log("Name error!")
+        console.log('Name error!')
         return
       }
       var json = require('../../../static/json/map/world/geojson/' + this.countryFileName + '.json')
@@ -49,11 +54,12 @@ export default {
       }
       // console.log(json)
       echarts.registerMap(this.countryEgName, json)
-      var countryMapVaccine = echarts.init(document.getElementById('map'), 'sakura');
+      var countryMapVaccine = echarts.init(document.getElementById('map'), 'sakura')
       var countryMapVaccine_Option = {
         title: {
           text: '新冠疫苗接种' + this.country + '分布图',
           left: 'center',
+          top: 0,
           textStyle: {
             color: '#000',
             fontSize: 18
@@ -82,7 +88,7 @@ export default {
           data: ['已接种', '每百人接种剂量'],
           left: '2%',
           orient: 'horizontal',
-          top: '7%',
+          top: 40,
           selected: {'已接种': true, '每百人接种剂量': false},
           selectedMode: 'single',
           itemWidth: 14,
@@ -90,19 +96,19 @@ export default {
           textStyle: {
             color: '#000',
             fontSize: 12
-          },
+          }
         },
         visualMap: [{
           seriesIndex: 0,
           show: true,
           showLabel: false,
           left: '3%',
-          top: 350,
+          top: 150,
           orient: 'horizontal',
           itemHeight: 10,
           itemWidth: 10,
           textStyle: {
-            fontSize: 8,
+            fontSize: 8
           },
           min: 0,
           max: 5000,
@@ -121,12 +127,12 @@ export default {
           seriesIndex: 1,
           show: false,
           left: '3%',
-          top: 350,
+          top: 150,
           orient: 'horizontal',
           itemHeight: 10,
           itemWidth: 10,
           textStyle: {
-            fontSize: 8,
+            fontSize: 8
           },
           min: 0,
           max: 100,
@@ -144,13 +150,13 @@ export default {
           mapType: this.countryEgName,
           roam: true,
           zoom: 1.2,
-          top: '15%',
+          top: 100,
           left: 'center',
           showLegendSymbol: false,
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           data: this.countryMapVaccineData.vaccined
@@ -164,7 +170,7 @@ export default {
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           data: this.countryMapVaccineData.coverage
@@ -183,7 +189,7 @@ export default {
         // console.log(countryMapVaccine_Option.visualMap)
         this.setOption(countryMapVaccine_Option)
       })
-    },
+    }
   }
 }
 </script>
@@ -192,6 +198,9 @@ export default {
 #map {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 100%;
+  border-style: solid;
+  border-color: #ffffff #ffffff #e6e6e6 #ffffff;
+  border-bottom-width: 1px;
 }
 </style>

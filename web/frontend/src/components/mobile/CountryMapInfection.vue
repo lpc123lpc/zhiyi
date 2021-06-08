@@ -14,30 +14,35 @@ export default {
     'countryMapInfectionData'
   ],
   mixins: [mixin],
-  data() {
+  data () {
     return {
       countryFileName: '',
       countryEgName: ''
     }
   },
   watch: {
-    country() {
+    country () {
       [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
       this.drawCountryMapInfection()
     },
-    countryMapInfectionData() {
+    countryMapInfectionData () {
       this.drawCountryMapInfection()
     }
   },
-  mounted() {
+  mounted () {
     [this.countryFileName, this.countryEgName] = this.getCountryName(this.country)
+    this.setEchartHeight()
     this.drawCountryMapInfection()
   },
   methods: {
-    drawCountryMapInfection() {
+    setEchartHeight () {
+      const echartItem = document.getElementById('countryMapInfection')
+      echartItem.style.setProperty('height', window.screen.width + 'px')
+    },
+    drawCountryMapInfection () {
       // console.log(this.countryFileName)
       if (this.countryFileName === '') {
-        console.log("Name error!")
+        console.log('Name error!')
         return
       }
       // console.log(this.countryMapInfectionData)
@@ -53,6 +58,7 @@ export default {
         title: {
           text: '新冠疫情感染情况' + this.country + '分布图',
           left: 'center',
+          top: 0,
           textStyle: {
             color: '#000',
             fontSize: 18
@@ -60,8 +66,8 @@ export default {
         },
         tooltip: {
           formatter: function (params) {
-            if (!isNaN(params.value) && parseInt(params.value) >=0 ) {
-              return params.seriesName + '：' + value
+            if (!isNaN(params.value) && parseInt(params.value) >= 0) {
+              return params.seriesName + '：' + params.value
             }
           }
         },
@@ -73,10 +79,10 @@ export default {
           containLabel: true
         },
         legend: {
-          data: ['当前确诊', '累计确诊', "累计治愈", "累计死亡"],
+          data: ['当前确诊', '累计确诊', '累计治愈', '累计死亡'],
           left: '2%',
           orient: 'horizontal',
-          top: '7%',
+          top: 40,
           selected: {'当前确诊': true, '累计确诊': false, '累计治愈': false, '累计死亡': false},
           selectedMode: 'single',
           itemWidth: 14,
@@ -84,17 +90,17 @@ export default {
           textStyle: {
             color: '#000',
             fontSize: 12
-          },
+          }
         },
         visualMap: {
           show: true,
           left: '3%',
-          top: 350,
+          top: 150,
           orient: 'horizontal',
           itemHeight: 10,
           itemWidth: 10,
           textStyle: {
-            fontSize: 8,
+            fontSize: 8
           },
           splitList: [{start: 0, end: 999},
             {start: 1000, end: 9999},
@@ -113,13 +119,13 @@ export default {
             roam: true,
             mapType: this.countryEgName,
             zoom: 1.2,
-            top: '15%',
+            top: 100,
             left: 'center',
             showLegendSymbol: false,
             label: {
               emphasis: {
                 show: true,
-                fontSize: 14,
+                fontSize: 14
               }
             },
             data: this.countryMapInfectionData.nowConfirm
@@ -134,7 +140,7 @@ export default {
             label: {
               emphasis: {
                 show: true,
-                fontSize: 14,
+                fontSize: 14
               }
             },
             data: this.countryMapInfectionData.totalConfirm
@@ -149,7 +155,7 @@ export default {
             label: {
               emphasis: {
                 show: true,
-                fontSize: 14,
+                fontSize: 14
               }
             },
             data: this.countryMapInfectionData.cured
@@ -164,7 +170,7 @@ export default {
             label: {
               emphasis: {
                 show: true,
-                fontSize: 14,
+                fontSize: 14
               }
             },
             data: this.countryMapInfectionData.dead
@@ -237,7 +243,7 @@ export default {
         }
         this.setOption(countryMapInfection_Option)
       })
-    },
+    }
   }
 }
 </script>
@@ -245,6 +251,10 @@ export default {
 <style>
 #countryMapInfection {
   position: relative;
-  height: 600px;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-color: #ffffff #ffffff #e6e6e6 #ffffff;
+  border-bottom-width: 1px;
 }
 </style>

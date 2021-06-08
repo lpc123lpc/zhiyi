@@ -14,24 +14,29 @@ export default {
   ],
   mixins: [mixin],
   watch: {
-    worldMapInfectionData() {
+    worldMapInfectionData () {
       this.drawWorldMapInfection()
     }
   },
-  mounted() {
+  mounted () {
+    this.setEchartHeight()
     this.drawWorldMapInfection()
   },
   methods: {
-    drawWorldMapInfection() {
+    setEchartHeight () {
+      const echartItem = document.getElementById('worldMapInfection')
+      echartItem.style.setProperty('height', window.screen.width + 'px')
+    },
+    drawWorldMapInfection () {
       // console.log(this.worldMapInfectionData)
       var json = require('../../../static/json/map/world/geojson/world.json')
       echarts.registerMap('world', json)
-      var worldMapInfection = echarts.init(document.getElementById('worldMapInfection'), 'sakura');
+      var worldMapInfection = echarts.init(document.getElementById('worldMapInfection'), 'sakura')
       var worldMapInfection_Option = {
         title: {
           text: '新冠疫情感染情况全球分布图',
           left: 'center',
-          top: 10,
+          top: 0,
           textStyle: {
             color: '#000',
             fontSize: 18
@@ -61,10 +66,10 @@ export default {
           containLabel: true
         },
         legend: {
-          data: ['当前确诊', '累计确诊', "累计治愈", "累计死亡", "感染率"],
+          data: ['当前确诊', '累计确诊', '累计治愈', '累计死亡', '感染率'],
           left: '2%',
           orient: 'horizontal',
-          top: '7%',
+          top: 40,
           selected: {'当前确诊': true, '累计确诊': false, '累计治愈': false, '累计死亡': false, '感染率': false},
           selectedMode: 'single',
           itemWidth: 12,
@@ -78,11 +83,11 @@ export default {
           show: true,
           showLabel: false,
           left: '3%',
-          top: 180,
+          top: 150,
           itemHeight: 60,
           itemWidth: 10,
           textStyle: {
-            fontSize: 8,
+            fontSize: 8
           },
           min: 0,
           max: 100,
@@ -100,13 +105,13 @@ export default {
           roam: true,
           mapType: 'world',
           zoom: 1.2,
-          top: '15%',
+          top: 100,
           left: 'center',
           showLegendSymbol: false,
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           nameMap: this.getWorldNameMap(),
@@ -121,7 +126,7 @@ export default {
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           data: this.worldMapInfectionData.totalConfirm
@@ -135,7 +140,7 @@ export default {
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           data: this.worldMapInfectionData.cured
@@ -149,7 +154,7 @@ export default {
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           data: this.worldMapInfectionData.dead
@@ -163,7 +168,7 @@ export default {
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           data: this.worldMapInfectionData.coverage
@@ -189,7 +194,7 @@ export default {
         }
         this.setOption(worldMapInfection_Option)
       })
-    },
+    }
   }
 }
 </script>
@@ -198,7 +203,9 @@ export default {
 #worldMapInfection {
   position: relative;
   width: 100%;
-  height: 600px;
-  margin-top: 30px;
+  height: 100%;
+  border-style: solid;
+  border-color: #ffffff #ffffff #e6e6e6 #ffffff;
+  border-bottom-width: 1px;
 }
 </style>

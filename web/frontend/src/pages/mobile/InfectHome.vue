@@ -2,7 +2,7 @@
   <div>
     <page-header v-bind:header_title="'感染情况'"></page-header>
     <home-info></home-info>
-    <van-cell style="align: center; margin-top: 10px">
+    <van-cell style="align: center; margin-top: 10px" id="world-map-infection-id">
       <world-map-infection v-bind:worldMapInfectionData="worldMapInfectionDataMsg"></world-map-infection>
     </van-cell>
   </div>
@@ -38,6 +38,8 @@ export default {
   },
   created () { // 生命周期函数
     this.getWorldMapInfectionDataMsg()
+  },
+  mounted () {
   }
 }
 </script>

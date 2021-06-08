@@ -13,26 +13,32 @@ export default {
     'worldMapVaccineData'
   ],
   mixins: [mixin],
-  mounted() {
+  mounted () {
+    this.setEchartHeight()
     this.drawWorldMapVaccine()
   },
   watch: {
-    worldMapVaccineData() {
+    worldMapVaccineData () {
       // console.log(this.worldMapVaccineData.vaccined)
       // console.log(this.worldMapVaccineData.coverage)
       this.drawWorldMapVaccine()
     }
   },
   methods: {
-    drawWorldMapVaccine() {
+    setEchartHeight () {
+      const echartItem = document.getElementById('worldMapVaccine')
+      echartItem.style.setProperty('height', window.screen.width + 'px')
+    },
+    drawWorldMapVaccine () {
       // console.log(this.worldMapVaccineData)
       var json = require('../../../static/json/map/world/geojson/world.json')
       echarts.registerMap('world', json)
-      var worldMapVaccine = echarts.init(document.getElementById('worldMapVaccine'), 'sakura');
+      var worldMapVaccine = echarts.init(document.getElementById('worldMapVaccine'), 'sakura')
       var worldMapVaccine_Option = {
         title: {
           text: '新冠疫苗接种全球分布图',
           left: 'center',
+          top: 0,
           textStyle: {
             color: '#000',
             fontSize: 18
@@ -63,7 +69,7 @@ export default {
           data: ['已接种', '每百人接种剂量'],
           left: '2%',
           orient: 'horizontal',
-          top: '7%',
+          top: 40,
           selected: {'已接种': true, '每百人接种剂量': false},
           selectedMode: 'single',
           itemWidth: 12,
@@ -77,11 +83,11 @@ export default {
           seriesIndex: 0,
           showLabel: false,
           left: '3%',
-          top: 180,
+          top: 150,
           itemHeight: 60,
           itemWidth: 10,
           textStyle: {
-            fontSize: 8,
+            fontSize: 8
           },
           min: 0,
           max: 5000,
@@ -106,7 +112,7 @@ export default {
           textGap: 20,
           textStyle: {
             // fontStyle: 'italic',
-            fontSize: 8,
+            fontSize: 8
           },
           min: 0,
           max: 100,
@@ -123,13 +129,13 @@ export default {
           roam: true,
           mapType: 'world',
           zoom: 1.2,
-          top: '15%',
+          top: 100,
           left: 'center',
           showLegendSymbol: false,
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           nameMap: this.getWorldNameMap(),
@@ -144,7 +150,7 @@ export default {
           label: {
             emphasis: {
               show: true,
-              fontSize: 14,
+              fontSize: 14
             }
           },
           data: this.worldMapVaccineData.coverage
@@ -166,7 +172,7 @@ export default {
         if (param.name !== '') that.$router.push({path: `/VaccineDetail/${param.name}`})
       })
     },
-    getNameMap() {
+    getNameMap () {
       var json = require('../../../static/json/map/world/world-mapping.json')
       var nameMap = {}
       for (let i in json) {
@@ -184,7 +190,9 @@ export default {
 #worldMapVaccine {
   position: relative;
   width: 100%;
-  height: 600px;
-  margin-top: 30px;
+  height: 100%;
+  border-style: solid;
+  border-color: #ffffff #ffffff #e6e6e6 #ffffff;
+  border-bottom-width: 1px;
 }
 </style>
