@@ -1,8 +1,5 @@
 from sklearn.model_selection import train_test_split as holdout
 from sklearn.linear_model import LinearRegression
-from sklearn import metrics
-from sklearn.preprocessing import LabelEncoder
-import matplotlib.font_manager as fm
 import joblib
 from sklearn.neighbors import KNeighborsRegressor
 import sklearn.pipeline as pl
@@ -14,7 +11,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.svm import SVR
 
-import warnings
 
 if __name__ == '__main__':
     plt.rcParams['font.sans-serif'] = ['PingFang HK']

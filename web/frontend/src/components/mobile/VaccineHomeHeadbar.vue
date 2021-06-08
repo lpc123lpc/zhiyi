@@ -1,18 +1,18 @@
 <template>
-  <el-card class="box-card" shadow="always" id="card-head-bar">
-    <el-row>
-      <div class="vaccine-add">+{{ vaccine_sum_add }}</div>
-    </el-row>
-    <el-row>
-      <el-col :span="12">
-        <div class="vaccine-sum">累计接种{{ vaccine_sum }}</div>
-      </el-col>
-      <el-col :span="12">
-        <div class="vaccine-sum">每百人接种{{ vaccine_cover }}剂</div>
-      </el-col>
-      <!--<el-col :span="8"><div class="vaccine-sum-add">+{{vaccine_cover_add}}</div></el-col>-->
-    </el-row>
-  </el-card>
+  <van-grid :column-num="2">
+    <van-grid-item id="van-grid-item-id-1">
+      <van-icon name="arrow-down" style="margin-bottom: 5px"/>
+      <div class="infect-sum">累计接种</div>
+      <div class="infect-sum">{{ vaccine_sum }}</div>
+      <div class="infect-sum-add">+{{ vaccine_sum_add }}</div>
+    </van-grid-item>
+    <van-grid-item id="van-grid-item-id-2">
+      <van-icon name="arrow-down" style="margin-bottom: 5px"/>
+      <div class="infect-sum">每百人接种</div>
+      <div class="infect-sum">{{ vaccine_cover }} 剂</div>
+      <div class="infect-sum-add">NaN</div>
+    </van-grid-item>
+  </van-grid>
 </template>
 
 <script>
@@ -26,22 +26,26 @@ export default {
       vaccine_cover_add: ''
     }
   },
-  created() {
+  created () {
     this.getVaccineSum()
     this.getVaccineSumAdd()
     this.getVaccineCover()
     // this.getVaccineCoverAdd()
   },
-  mounted() {
-    this.set_length()
+  mounted () {
+    // this.set_length()
   },
   methods: {
-    set_length() {
-      const headBar = document.getElementById('card-head-bar')
-      // alert(document.body.offsetWidth)
-      headBar.style.setProperty('width', document.body.offsetWidth * 4 / 5 + 'px')
+    set_length () {
+      const gridItem1 = document.getElementById('van-grid-item-id-1')
+      const gridItem2 = document.getElementById('van-grid-item-id-2')
+      const gridItem3 = document.getElementById('van-grid-item-id-3')
+      // alert(window.screen.width)
+      gridItem1.style.setProperty('width', window.screen.width / 3 + 'px')
+      gridItem2.style.setProperty('width', window.screen.width / 3 + 'px')
+      gridItem3.style.setProperty('width', window.screen.width / 3 + 'px')
     },
-    getVaccineSum() {
+    getVaccineSum () {
       var that = this
       fetch('http://81.70.134.96:5000/vaccineHomeHeadbar/vaccineSum').then(function (response) {
         response.json().then((data) => {
@@ -49,7 +53,7 @@ export default {
         })
       })
     },
-    getVaccineSumAdd() {
+    getVaccineSumAdd () {
       var that = this
       fetch('http://81.70.134.96:5000/vaccineHomeHeadbar/vaccineSumAdd').then(function (response) {
         response.json().then((data) => {
@@ -57,7 +61,7 @@ export default {
         })
       })
     },
-    getVaccineCover() {
+    getVaccineCover () {
       var that = this
       fetch('http://81.70.134.96:5000/vaccineHomeHeadbar/vaccineCover').then(function (response) {
         response.json().then((data) => {
@@ -65,7 +69,7 @@ export default {
         })
       })
     },
-    getVaccineCoverAdd() {
+    getVaccineCoverAdd () {
       var that = this
       fetch('http://81.70.134.96:5000/vaccineHomeHeadbar/vaccineCoverAdd').then(function (response) {
         response.json().then((data) => {
@@ -78,23 +82,12 @@ export default {
 </script>
 
 <style scoped>
-.vaccine-sum {
-  font-size: 10px;
+.infect-sum {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: small;
 }
-
-.vaccine-add {
-  font-size: 5px;
-  margin-left: 25px;
-}
-
-.box-card {
-  width: 180px;
-  height: 65px;
-  border-radius: 10px;
-  position: absolute;
-  margin: auto;
-  right: 0;
-  left: 0;
-  margin-top: 30px;
+.infect-sum-add {
+  font-size: small;
 }
 </style>

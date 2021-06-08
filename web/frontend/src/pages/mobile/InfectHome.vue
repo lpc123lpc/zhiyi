@@ -1,19 +1,17 @@
 <template>
   <div>
     <page-header v-bind:header_title="'感染情况'"></page-header>
-    <div style="align: center;">
-      <home-info></home-info>
-    </div>
-    <div style="align: center; margin-top: 130px">
+    <home-info></home-info>
+    <van-cell style="align: center; margin-top: 10px">
       <world-map-infection v-bind:worldMapInfectionData="worldMapInfectionDataMsg"></world-map-infection>
-    </div>
+    </van-cell>
   </div>
 </template>
 
 <script>
 import pageHeader from '../../components/mobile/PageHeader.vue'
 import worldMapInfection from '../../components/mobile/WorldMapInfection'
-import infectHomeHeadbar from "../../components/mobile/InfectHomeHeadbar";
+import infectHomeHeadbar from '../../components/mobile/InfectHomeHeadbar'
 
 export default {
   name: 'InfectHome',
@@ -22,7 +20,7 @@ export default {
     'home-info': infectHomeHeadbar,
     'world-map-infection': worldMapInfection
   },
-  data() { // 选项 / 数据
+  data () { // 选项 / 数据
     return {
       worldMapInfectionDataMsg: ''
     }
@@ -38,9 +36,9 @@ export default {
       })
     }
   },
-  created() { // 生命周期函数
+  created () { // 生命周期函数
     this.getWorldMapInfectionDataMsg()
-  },
+  }
 }
 </script>
 

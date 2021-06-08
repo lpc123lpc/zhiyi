@@ -1,27 +1,24 @@
 <template>
-  <el-card class="box-card" shadow="always" id="card-head-bar">
-    <el-row>
-      <el-col :span="8">
-        <div class="infect-sum-add">+{{ infect_sum_add }}</div>
-      </el-col>
-      <el-col :span="8">
-        <div class="infect-sum-add">+{{ infect_death_add }}</div>
-      </el-col>
-      <el-col :span="8"></el-col>
-    </el-row>
-    <el-row>
-      <el-col :span="8">
-        <div class="infect-sum">累计确诊{{ infect_sum }}</div>
-      </el-col>
-      <el-col :span="8">
-        <div class="infect-sum">累计死亡{{ infect_death }}</div>
-      </el-col>
-      <el-col :span="8">
-        <div class="infect-sum">累计治愈{{ infect_cure }}</div>
-      </el-col>
-      <!--<el-col :span="6"><div class="infect-sum-add">+{{infect_cure_add}}</div></el-col>-->
-    </el-row>
-  </el-card>
+  <van-grid :column-num="3">
+    <van-grid-item id="van-grid-item-id-1">
+      <van-icon name="arrow-down" style="margin-bottom: 5px"/>
+      <div class="infect-sum">累计确诊</div>
+      <div class="infect-sum">{{ infect_sum }}</div>
+      <div class="infect-sum-add">+{{ infect_sum_add }}</div>
+    </van-grid-item>
+    <van-grid-item id="van-grid-item-id-2">
+      <van-icon name="arrow-down" style="margin-bottom: 5px"/>
+      <div class="infect-sum">累计死亡</div>
+      <div class="infect-sum">{{ infect_death }}</div>
+      <div class="infect-sum-add">+{{ infect_death_add }}</div>
+    </van-grid-item>
+    <van-grid-item id="van-grid-item-id-3">
+      <van-icon name="arrow-down" style="margin-bottom: 5px"/>
+      <div class="infect-sum">累计治愈</div>
+      <div class="infect-sum">{{ infect_cure }}</div>
+      <div class="infect-sum-add">NaN</div>
+    </van-grid-item>
+  </van-grid>
 </template>
 
 <script>
@@ -37,7 +34,7 @@ export default {
       infect_cure_add: ''
     }
   },
-  created() {
+  created () {
     this.getInfectSum()
     this.getInfectSumAdd()
     this.getInfectDeath()
@@ -45,16 +42,20 @@ export default {
     this.getInfectCure()
     // this.getInfectCureAdd()
   },
-  mounted() {
-    this.set_length()
+  mounted () {
+    // this.set_length()
   },
   methods: {
-    set_length() {
-      const headBar = document.getElementById('card-head-bar')
-      // alert(document.body.offsetWidth)
-      headBar.style.setProperty('width', document.body.offsetWidth * 4 / 5 + 'px')
+    set_length () {
+      const gridItem1 = document.getElementById('van-grid-item-id-1')
+      const gridItem2 = document.getElementById('van-grid-item-id-2')
+      const gridItem3 = document.getElementById('van-grid-item-id-3')
+      // alert(window.screen.width)
+      gridItem1.style.setProperty('width', window.screen.width / 3 + 'px')
+      gridItem2.style.setProperty('width', window.screen.width / 3 + 'px')
+      gridItem3.style.setProperty('width', window.screen.width / 3 + 'px')
     },
-    getInfectSum() {
+    getInfectSum () {
       var that = this
       fetch('http://81.70.134.96:5000/infectHomeHeadbar/infectSum').then(function (response) {
         response.json().then((data) => {
@@ -62,7 +63,7 @@ export default {
         })
       })
     },
-    getInfectSumAdd() {
+    getInfectSumAdd () {
       var that = this
       fetch('http://81.70.134.96:5000/infectHomeHeadbar/infectSumAdd').then(function (response) {
         response.json().then((data) => {
@@ -70,7 +71,7 @@ export default {
         })
       })
     },
-    getInfectDeath() {
+    getInfectDeath () {
       var that = this
       fetch('http://81.70.134.96:5000/infectHomeHeadbar/infectDeath').then(function (response) {
         response.json().then((data) => {
@@ -78,7 +79,7 @@ export default {
         })
       })
     },
-    getInfectDeathAdd() {
+    getInfectDeathAdd () {
       var that = this
       fetch('http://81.70.134.96:5000/infectHomeHeadbar/infectDeathAdd').then(function (response) {
         response.json().then((data) => {
@@ -86,7 +87,7 @@ export default {
         })
       })
     },
-    getInfectCure() {
+    getInfectCure () {
       var that = this
       fetch('http://81.70.134.96:5000/infectHomeHeadbar/infectCure').then(function (response) {
         response.json().then((data) => {
@@ -94,7 +95,7 @@ export default {
         })
       })
     },
-    getInfectCureAdd() {
+    getInfectCureAdd () {
       var that = this
       fetch('http://81.70.134.96:5000/infectHomeHeadbar/infectCureAdd').then(function (response) {
         response.json().then((data) => {
@@ -108,23 +109,11 @@ export default {
 
 <style scoped>
 .infect-sum {
-  font-size: 10px;
-  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: small;
 }
-
 .infect-sum-add {
-  font-size: 5px;
-  text-align: center;
-}
-
-.box-card {
-  width: 250px;
-  height: 80px;
-  border-radius: 10px;
-  position: absolute;
-  margin: auto;
-  right: 0;
-  left: 0;
-  margin-top: 30px;
+  font-size: small;
 }
 </style>

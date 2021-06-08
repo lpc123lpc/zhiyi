@@ -13,7 +13,7 @@ def getInfo(region):
 
 
 def getRegion(region):
-    places = region.splite(str="  ")
+    places = region.split("  ")
     return places[len(places) - 1]
 
 
@@ -49,7 +49,8 @@ def safeLevel(oriRegion, time):
         ans = model.predict(predictnum)
         infMsg = dao.getNowInfMessage(region)
         rate = (ans + modify(getattr(infMsg, "addNum"))) / info['population']
-        if rate >= 0.001:
+        print(rate)
+        if rate >= 0.000001:
             str3 = "该地区目前的风险等级为高"
         else:
             str3 = "该地区目前的风险等级为中"
@@ -76,3 +77,4 @@ def safeLevel(oriRegion, time):
         "mid": mid,
         "high": high
     })
+

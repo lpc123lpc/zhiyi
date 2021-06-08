@@ -13,8 +13,9 @@ import hashlib
 # import datetime
 import time
 from datetime import timedelta, timezone
-import datetime
 import json
+import datetime
+from urllib import parse
 from database.static.table import *
 from database.static.dao import clearTable
 
@@ -265,6 +266,9 @@ def updateRiskList():
 	data = data["data"]
 	highlist = data["highlist"]
 	middlelist = data["middlelist"]
+
+	clearTable('riskAreas')
+
 	for item in highlist:
 		print(item)
 		province = item["province"]
@@ -293,11 +297,122 @@ def updateRiskList():
 	"""print(data)
 	with open('riskList.json', 'w') as f:
 		json.dump(data, f)"""
+def updateStringency():
+	headers = {
+		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36'
+	}
 
+	today = datetime.date.today()
+	beginDay = today - datetime.timedelta(days=7)
+	# print(type(beginDay.__format__("%Y%Y%Y%Y-%m%m-%d%d")))
+	beginStr = beginDay.__format__("%Y-%m-%d")
+	endStr = today.__format__("%Y-%m-%d")
+	url = "https://covidtrackerapi.bsg.ox.ac.uk/api/v2/stringency/date-range/" + beginStr + "/" + endStr
+	response = requests.get(url=url, headers=headers)
+
+	data = json.loads(response.text)
+	# print(data)
+
+	path = "testStrict.json"
+	with open(path, mode="w", encoding="utf-8") as f:
+		json.dump(data, f)
+	# print("写入文件成功！")
+
+	countries = data['countries']
+
+	data = data["data"]
+	# print(len(data))
+	latestDate = ""
+	# print(data)
+	for day in data:
+		# print(day)
+		if latestDate == "":
+			latestDate = day
+		elif latestDate < day:
+			latestDate = day
+	# latestDataDay=dataDay
+	# latestDataDay=dataDay
+	latestDataDay = data[latestDate]
+	print(latestDataDay)
+	clearTable('policyStrict')
+
+	"""
+	country-codes-lat-long-alpha3.json 存储了各个国家的alpha3 country code与国家名称（英文）的对应关系
+	testStrict.json是对于爬取出的结果的序列化结果，存储为json文件，用于查看格式
+	latestDataDay是要存储的数据，存储了最新一天的国家政策严格性指数
+	参照country-codes-lat-long-alpha3.json 和 testStrict.json，以及国家中英文映射文件，
+	存储latestDataDay中内容到数据库中
+	有用的信息有： 国家名 数据对应的日期 严格性指数（stringency字段）
+	"""
+
+	with open('./world-mapping-policy.json', mode='r', encoding='utf-8') as f:
+		worldMapping = json.load(f)
+		with open('./country-codes-lat-long-alpha3.json', mode='r', encoding='utf-8') as c:
+			countryAlpha3 = json.load(c)["ref_country_codes"]
+			cAlpha3Mapping = {}
+			for country in countryAlpha3:
+				cAlpha3Mapping[country['alpha3']] = country['country']
+			for country in countries:
+				try:
+					countryName = worldMapping[cAlpha3Mapping[country]]['cn']
+					p = PolicyStrict(countryName=countryName, strictIndex=latestDataDay[country]['stringency'],
+					                 date=latestDataDay[country]['date_value'])
+					add(p)
+				except Exception as e:
+					print(latestDataDay[country])
+					try:
+						print(cAlpha3Mapping[country])
+					except Exception as ex:
+						print(country)
+
+
+
+def insertVaccineInstitutionsFile():
+	pass
+
+
+
+def insertVaccineInstitutionsTencent():
+	headers = {
+		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36',
+		'Accept': 'application/json, text/plain, */*',
+		'Referer': 'https://new.qq.com/'
+	}
+	regions = ["北京", "天津", "河北", "内蒙古", "辽宁", "上海", "浙江", "安徽", "福建",
+	           "山东", "河南", "湖北", "湖南", "广东", "广西", "四川", "云南", "陕西"]
+	for region in regions:
+		# %E5%A4%A9%E6%B4%A5
+		url = "https://apis.map.qq.com/place_cloud/search/region?region=" + parse.quote(
+			region) + "&key=ZTCBZ-M6FWU-DFTVG-2HCU2-OM7SV-2LBCF&orderby=distance(39.90387,116.389893)&table_id=5fed45b33fc08460dcadf521&page_size=20&page_index=1"
+		response = requests.get(url=url, headers=headers)
+		data=json.loads(response.text)
+		data=data["result"]["data"]
+		print(data)
+		for item in data:
+			print(item)
+
+			city=item["city"]
+			name=item["title"]
+			addr=item["address"]
+			tel=item["tel"]
+			if tel=="":
+				tel="暂未公布"
+			x=VacInstitution(
+				city=city,
+				name=name,
+				addr=addr,
+				tel=tel
+			)
+			add(x)
+def updateVaccineInstitutions():
+	clearTable('vacInstitutions')
+	insertVaccineInstitutionsTencent()
+	insertVaccineInstitutionsFile()
 
 if __name__ == '__main__':
-	updateCovidNews()
-	updateVaccineNews()
-	updateRiskList()
+	#updateCovidNews()
+	#updateVaccineNews()
+	#updateRiskList()
+	updateVaccineInstitutions()
 
 # def updateRiskList():
