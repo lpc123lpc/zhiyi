@@ -361,6 +361,7 @@ def updateStringency():
 	有用的信息有： 国家名 数据对应的日期 严格性指数（stringency字段）
 	"""
 
+	clearTable('policyStrict')
 	with open('../spider//world-mapping-policy.json', mode='r', encoding='utf-8') as f:
 		worldMapping = json.load(f)
 		with open('../spider/country-codes-lat-long-alpha3.json', mode='r', encoding='utf-8') as c:
@@ -469,10 +470,10 @@ def updateVaccineInstitutions():
 
 
 if __name__ == '__main__':
-	updateCovidNews()
-	updateVaccineNews()
-	updateRiskList()
-	updateVaccineInstitutions()
+	#updateCovidNews()
+	#updateVaccineNews()
+	#updateRiskList()
+	#updateVaccineInstitutions()
 	updateStringency()
 
 # def updateRiskList():
