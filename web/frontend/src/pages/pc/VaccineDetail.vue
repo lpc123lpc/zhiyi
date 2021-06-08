@@ -62,7 +62,7 @@ export default {
       var that = this
       fetch('http://81.70.134.96:5000/vaccineDetail/countryMapVaccineDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
-          that.judgeDataExist(data)
+          that.judgeDataExistPC(data)
           // console.log(data)
           that.countryMapVaccineDataMsg = data
         })

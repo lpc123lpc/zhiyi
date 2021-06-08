@@ -78,19 +78,18 @@ export default {
           itemHeight: 10,
           textStyle: {
             color: '#000',
-            fontSize: 12
+            fontSize: 13
           }
         },
         visualMap: {
           show: true,
-          left: '3%',
+          left: '1%',
           bottom: '1%',
-          top: 150,
-          orient: 'horizontal',
-          itemHeight: 10,
-          itemWidth: 10,
+          orient: 'vertical',
+          itemHeight: 12,
+          itemWidth: 12,
           textStyle: {
-            fontSize: 8
+            fontSize: 10
           },
           splitList: [{start: 0, end: 0},
             {start: 1, end: 9},

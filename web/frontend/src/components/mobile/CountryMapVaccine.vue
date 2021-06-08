@@ -95,20 +95,20 @@ export default {
           itemHeight: 10,
           textStyle: {
             color: '#000',
-            fontSize: 12
+            fontSize: 13
           }
         },
         visualMap: [{
           seriesIndex: 0,
           show: true,
           showLabel: false,
-          left: '3%',
-          top: 150,
-          orient: 'horizontal',
-          itemHeight: 10,
+          left: '1%',
+          bottom: '1%',
+          orient: 'vertical',
+          itemHeight: 60,
           itemWidth: 10,
           textStyle: {
-            fontSize: 8
+            fontSize: 12
           },
           min: 0,
           max: 5000,
@@ -126,13 +126,13 @@ export default {
         }, {
           seriesIndex: 1,
           show: false,
-          left: '3%',
-          top: 150,
-          orient: 'horizontal',
-          itemHeight: 10,
+          left: '1%',
+          bottom: '1%',
+          orient: 'vertical',
+          itemHeight: 60,
           itemWidth: 10,
           textStyle: {
-            fontSize: 8
+            fontSize: 12
           },
           min: 0,
           max: 100,
