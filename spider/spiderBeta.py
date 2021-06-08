@@ -268,11 +268,25 @@ def updateRiskList():
 	middlelist = data["middlelist"]
 
 	clearTable('riskAreas')
+	with open('./city-map.json', mode='r', encoding='utf-8') as f:
+		cityMap = json.load(f)
+	with open('./rankListProcess.json', mode='r', encoding='utf-8') as f:
+		provinceMap = json.load(f)
 
 	for item in highlist:
 		print(item)
 		province = item["province"]
+		province = provinceMap[province]
 		city = item["city"]
+		cities=cityMap[province]
+		if province == "海南" or province == "湖北" or province == "河南" or province == "新疆":
+			if cities.get(city)==None:
+				cities=cities["省直辖县级行政单位"]
+				city=cities[city]
+			else:
+				city=cities[city]
+		else:
+			city=cities[city]
 		county = item["county"]
 		for community in item["communitys"]:
 			x = RiskArea(province=province,
@@ -284,19 +298,31 @@ def updateRiskList():
 	for item in middlelist:
 		print(item)
 		province = item["province"]
+		province = provinceMap[province]
 		city = item["city"]
+		cities = cityMap[province]
+		if province == "海南" or province == "湖北" or province == "河南" or province == "新疆":
+			if cities.get(city) == None:
+				county=item["county"]
+				city = cities[county]
+			else:
+				city = cities[city]
+		else:
+			city = cities[city]
 		county = item["county"]
 		for community in item["communitys"]:
 			x = RiskArea(province=province,
 			             city=city,
 			             childArea=county,
-			             level=1,
+			             level=2,
 			             abstract=community)
 			add(x)
 
 	"""print(data)
 	with open('riskList.json', 'w') as f:
 		json.dump(data, f)"""
+
+
 def updateStringency():
 	headers = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36'
@@ -366,10 +392,8 @@ def updateStringency():
 						print(country)
 
 
-
 def insertVaccineInstitutionsFile():
 	pass
-
 
 
 def insertVaccineInstitutionsTencent():
@@ -378,41 +402,86 @@ def insertVaccineInstitutionsTencent():
 		'Accept': 'application/json, text/plain, */*',
 		'Referer': 'https://new.qq.com/'
 	}
-	regions = ["北京", "天津", "河北", "内蒙古", "辽宁", "上海", "浙江", "安徽", "福建",
+	with open('./city-map.json', mode='r', encoding='utf-8') as f:
+		cityMap = json.load(f)
+	with open('./rankListProcess.json', mode='r', encoding='utf-8') as f:
+		provinceMap = json.load(f)
+	provinces = ["北京", "天津", "河北", "内蒙古", "辽宁", "上海", "浙江", "安徽", "福建",
 	           "山东", "河南", "湖北", "湖南", "广东", "广西", "四川", "云南", "陕西"]
-	for region in regions:
+	for province in provinces:
 		# %E5%A4%A9%E6%B4%A5
-		url = "https://apis.map.qq.com/place_cloud/search/region?region=" + parse.quote(
-			region) + "&key=ZTCBZ-M6FWU-DFTVG-2HCU2-OM7SV-2LBCF&orderby=distance(39.90387,116.389893)&table_id=5fed45b33fc08460dcadf521&page_size=20&page_index=1"
-		response = requests.get(url=url, headers=headers)
-		data=json.loads(response.text)
-		data=data["result"]["data"]
-		print(data)
-		for item in data:
-			print(item)
+		if province=="北京" or province=="天津" or province=="上海"or province=="重庆":
+			region=province
+			url = "https://apis.map.qq.com/place_cloud/search/region?region=" + parse.quote(
+				region) + "&key=ZTCBZ-M6FWU-DFTVG-2HCU2-OM7SV-2LBCF&orderby=distance(39.90387,116.389893)&table_id=5fed45b33fc08460dcadf521&page_size=20&page_index=1"
+			response = requests.get(url=url, headers=headers)
+			data = json.loads(response.text)
+			data = data["result"]["data"]
+			if len(data) == 0:
+				pass
+			else:
+				for item in data:
+					district=item["district"]
+					cities=cityMap[province]
+					district=cities[district]
+					name = item["title"]
+					addr = item["address"]
+					tel = item["tel"]
+					if tel == "":
+						tel = "暂未公布"
+					x = VacInstitution(
+						city=district,
+						name=name,
+						addr=addr,
+						tel=tel
+					)
+					add(x)
 
-			city=item["city"]
-			name=item["title"]
-			addr=item["address"]
-			tel=item["tel"]
-			if tel=="":
-				tel="暂未公布"
-			x=VacInstitution(
-				city=city,
-				name=name,
-				addr=addr,
-				tel=tel
-			)
-			add(x)
+		else :
+			cities=cityMap[province]
+			for city in cities:
+				city=cities[city]
+				if city=="济源示范区":
+					city="济源"
+				region=province+","+city
+				url="https://apis.map.qq.com/place_cloud/search/region?region=" + parse.quote(
+			region) + "&key=ZTCBZ-M6FWU-DFTVG-2HCU2-OM7SV-2LBCF&orderby=distance(39.90387,116.389893)&table_id=5fed45b33fc08460dcadf521&page_size=20&page_index=1"
+				response = requests.get(url=url, headers=headers)
+				data = json.loads(response.text)
+				#print(region)
+				if data["status"]!=0:
+					print("ERROR: "+region)
+					continue
+
+				data = data["result"]["data"]
+				if len(data)==0:
+					pass
+				else:
+					for item in data:
+						#print(item)
+						name = item["title"]
+						addr = item["address"]
+						tel = item["tel"]
+						if tel == "":
+							tel = "暂未公布"
+						x = VacInstitution(
+							city=city,
+							name=name,
+							addr=addr,
+							tel=tel
+						)
+						add(x)
+
 def updateVaccineInstitutions():
 	clearTable('vacInstitutions')
 	insertVaccineInstitutionsTencent()
 	insertVaccineInstitutionsFile()
 
+
 if __name__ == '__main__':
-	#updateCovidNews()
-	#updateVaccineNews()
-	#updateRiskList()
-	updateVaccineInstitutions()
+	# updateCovidNews()
+	# updateVaccineNews()
+	updateRiskList()
+	#updateVaccineInstitutions()
 
 # def updateRiskList():

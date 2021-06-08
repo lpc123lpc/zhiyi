@@ -1,0 +1,14 @@
+目标：将爬取的数据转换为后端数据库统一格式，方便前端查询
+中高风险等级：
+1. 使用rankListProcess将原始数据中省份转换为统一格式，
+2. 利用1. 得到的结果在city-map.json中进行市名称的转换
+
+说明：
+1. 原始数据中海南省的市级存在`省直辖县级行政单位`，该单位展开是市和县，处理时需要特判
+http://bmfw.www.gov.cn/yqfxdjcx/index.html
+2. 原始数据中湖北省的市级存在`省直辖县级行政单位`，该单位展开是市和县，处理时需要特判
+http://bmfw.www.gov.cn/yqfxdjcx/index.html
+3. 原始数据中河南省的市级存在`省直辖县级行政单位`，该单位展开是市和县，处理时需要特判
+http://bmfw.www.gov.cn/yqfxdjcx/index.html
+4. 原始数据中新疆的市级存在`省直辖县级行政单位`，该单位展开是市和县，处理时需要特判
+http://bmfw.www.gov.cn/yqfxdjcx/index.html
