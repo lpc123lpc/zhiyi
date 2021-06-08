@@ -1,33 +1,45 @@
 <template>
-  <el-row type="flex" justify="center" style="top: 10%">
-    <el-form ref="form" :model="form" label-position="left" :rules="rules" style="width: 40%">
-      <el-form-item label="目的地区" prop="region" style="width: 100%" label-width="20%">
-        <el-cascader prop="region"
-          style="width: 80%"
-          @change="handleSelect"
-          placeholder="请输入/选择地名"
-          ref="cascader"
-          :options="this.data"
-          v-model="form.region"
-          filterable
-          clearable/>
-      </el-form-item>
-      <el-form-item label="出行时间" prop="time" style="width: 100%" label-width="20%">
-        <el-date-picker style="width: 80%" prop="time"
-          v-model="form.time"
-          align="right"
-          type="date"
-          placeholder="选择日期"
-          :picker-options="pickerOptions">
-        </el-date-picker>
-      </el-form-item>
-      <el-form-item style="width: 100%">
-        <p style="text-align: center;width: 100%">
-          <el-button type="primary" @click="onSubmit" >查询</el-button>
-        </p>
-      </el-form-item>
-    </el-form>
-  </el-row>
+  <el-container style="width: auto">
+    <el-row type="flex" justify="center" style="margin-top: 10%;width: 100%">
+      <el-form ref="form" :model="form" label-position="left" :rules="rules" style="width: 40%">
+        <el-form-item label="目的地区" prop="region" style="width: 100%" label-width="20%">
+          <el-cascader prop="region"
+                       style="width: 80%"
+                       @change="handleSelect"
+                       placeholder="请输入/选择地名"
+                       ref="cascader"
+                       :options="this.data"
+                       v-model="form.region"
+                       filterable
+                       clearable/>
+        </el-form-item>
+        <el-form-item label="出行时间" prop="time" style="width: 100%" label-width="20%">
+          <el-date-picker style="width: 80%" prop="time"
+                          v-model="form.time"
+                          align="right"
+                          type="date"
+                          placeholder="选择日期"
+                          :picker-options="pickerOptions">
+          </el-date-picker>
+        </el-form-item>
+        <el-form-item style="width: 100%">
+          <p style="text-align: center;width: 100%">
+            <el-button type="primary" @click="onSubmit" >查询</el-button>
+          </p>
+        </el-form-item>
+      </el-form>
+    </el-row>
+    <el-row>
+      <div v-if="state===1">
+        <div>{{this.result.str1}}</div>
+        <div v-if="result.str2 !==''">{{this.result.str2}}</div>
+        <div v-if="result.str3 !==''">{{this.result.str3}}</div>
+        <div v-if="result.str4 !==''">{{this.result.str4}}</div>
+        <div></div>
+      </div>
+    </el-row>
+  </el-container>
+
 </template>
 
 <script>
@@ -55,30 +67,31 @@ export default {
       },
       data: '',
       searchRegion: '',
-      state: ''
+      state: '',
+      result: ''
     }
   },
   mounted () {
     this.data = data
     this.state = 0
-    this.form.region = [1, 2]
   },
   methods: {
     onSubmit () {
-      alert(this.form.region)
+      var that = this
+      // alert(this.form.region)
       if (this.form.region.length === 0) {
         // do nothing
       } else if (this.form.time.length === 0) {
         // do nothing
       } else {
-        alert(this.form.region)
         fetch('http://81.70.134.96:5000/travelAdvice', {method: 'POST',
           body: JSON.stringify({
             'region': this.searchRegion,
             'time': this.form.time
           })}).then(function (response) {
           response.json().then((data) => {
-
+            that.state = 1
+            that.result = data
           })
         }).catch(function (err) {
           alert(err.toString())
@@ -89,7 +102,7 @@ export default {
       var regions = [] // 将级联地区名以'  '连接
       // console.log(val)
       // console.log(this.$refs['cascader'].panel.getNodeByValue(val))
-      alert(this.$refs['cascader'].getCheckedNodes())
+      // alert(this.$refs['cascader'].getCheckedNodes()[0].pathLabels)
       var node = this.$refs['cascader'].panel.getNodeByValue(val)
       regions.push(node.label)
       while (node.parent != null) {

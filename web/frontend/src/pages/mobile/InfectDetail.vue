@@ -12,6 +12,9 @@
       <infect-detail-country-map v-bind:country="countryMsg"
                                  v-bind:countryMapInfectionData="countryMapInfectionDataMsg"></infect-detail-country-map>
     </div>
+    <div>
+      <mobile-country-infection></mobile-country-infection>
+    </div>
   </div>
 </template>
 
@@ -19,10 +22,12 @@
 import pageHeader from '../../components/mobile/PageHeader.vue'
 import infectDetailCountryMap from '../../components/mobile/CountryMapInfection.vue'
 import {mixin} from '../../mixins'
+import MobileCountryInfection from '../../components/mobile/MobileCountryInfection'
 
 export default {
   name: 'InfectDetail',
-  components: { // 定义组件
+  components: {
+    MobileCountryInfection, // 定义组件
     'page-header': pageHeader,
     'infect-detail-country-map': infectDetailCountryMap,
   },
