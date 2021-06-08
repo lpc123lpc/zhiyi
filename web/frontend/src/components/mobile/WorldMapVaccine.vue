@@ -72,18 +72,18 @@ export default {
           top: 40,
           selected: {'已接种': true, '每百人接种剂量': false},
           selectedMode: 'single',
-          itemWidth: 12,
-          itemHeight: 8,
+          itemWidth: 14,
+          itemHeight: 10,
           textStyle: {
             color: '#000',
-            fontSize: 12
+            fontSize: 14
           }
         },
         visualMap: [{
           seriesIndex: 0,
           showLabel: false,
           left: '3%',
-          top: 150,
+          top: 180,
           itemHeight: 60,
           itemWidth: 10,
           textStyle: {
@@ -105,7 +105,7 @@ export default {
           seriesIndex: 1,
           show: false,
           left: '3%',
-          top: 150,
+          top: 180,
           itemHeight: 60,
           itemWidth: 10,
           // precision: 2,

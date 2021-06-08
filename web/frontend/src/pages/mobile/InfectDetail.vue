@@ -1,13 +1,6 @@
 <template>
   <div>
     <page-header v-bind:header_title="'感染情况'"></page-header>
-    <!--<van-button
-      class="button"
-      type="default" plain
-      size="mini"
-      color="#8cc4ff"
-      @click.native="back()"
-    >返回</van-button>-->
     <van-cell style="align: center; margin-top: 10px">
       <infect-detail-country-map v-bind:country="countryMsg"
                                  v-bind:countryMapInfectionData="countryMapInfectionDataMsg"></infect-detail-country-map>
@@ -48,7 +41,7 @@ export default {
       var that = this
       fetch('http://81.70.134.96:5000/infectDetail/countryMapInfectionDataMsg/' + this.$route.params.country).then(function (response) {
         response.json().then((data) => {
-          that.judgeDataExist(data)
+          that.judgeDataExistMobile(data)
           that.countryMapInfectionDataMsg = data
         })
       })
