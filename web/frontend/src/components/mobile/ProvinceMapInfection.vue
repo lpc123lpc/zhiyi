@@ -83,10 +83,9 @@ export default {
         },
         visualMap: {
           show: true,
-          left: '3%',
-          bottom: '1%',
-          top: 150,
-          orient: 'horizontal',
+          left: '0%',
+          bottom: '0%',
+          orient: 'vertical',
           itemHeight: 10,
           itemWidth: 10,
           textStyle: {
