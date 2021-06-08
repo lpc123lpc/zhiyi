@@ -1,7 +1,7 @@
 <template>
   <el-container>
   <el-header>
-    <wbc-nav></wbc-nav>
+    <wbc-nav v-on:transSearchData="getSearchData"></wbc-nav>
   </el-header>
   <el-container>
         <el-aside width="400px">
@@ -34,6 +34,9 @@ export default {
       // console.log(elMain.offsetWidth)
       const feedBackInput = document.getElementById('feed-back-div')
       feedBackInput.style.setProperty('margin-left', elMain.offsetWidth / 2 - 350 + 'px')
+    },
+    getSearchData(data) {
+      console.log(data)
     }
   },
   mounted () {

@@ -4,6 +4,7 @@
       placeholder="请输入/选择地名"
       ref="cascader"
       :options="this.data"
+      v-model="selectData"
       @change="handleSelect"
       filterable
       clearable/>
@@ -25,6 +26,7 @@ export default {
   data () {
     return {
       data: '',
+      selectData: [],
       searchRegion: ''
     }
   },
@@ -41,6 +43,7 @@ export default {
   },
   methods: {
     handleSelect (val) {
+      // console.log(this.selectData)
       var regions = [] // 将级联地区名以'  '连接
       // console.log(val)
       // console.log(this.$refs['cascader'].panel.getNodeByValue(val))
@@ -50,7 +53,7 @@ export default {
         node = node.parent
         regions.push(node.label)
       }
-      console.log(regions)
+      // console.log(regions)
       let type = regions.pop()
       if (type === '国内') regions.push('中国')
       // 处理最后两个名字相同的情况
@@ -62,7 +65,7 @@ export default {
       // console.log(this.searchRegion)
     },
     goSearch () {
-      this.$router.push({path: `/Search/${this.searchRegion}`})
+      this.$router.push({path: `/Search/${this.searchRegion}`, query: {data: this.selectData}})
     }
   }
 }
