@@ -30,14 +30,14 @@
           v-model="loading"
           :finished="finished"
           >
-          <van-cell v-for="(item,index) in items" :key="index" :title="item.name" :value="matter(item.vaccine_coverage)" :icon="iconName" :clickable="true" @click="showCountryInfectionChart(item.name)"/>
+          <van-cell v-for="(item,index) in items" :key="index" :title="item.name" :value="matter(item.vaccine_coverage)" :icon="iconName" :clickable="true" @click="showCountryVaccineChart(item.name)"/>
         </van-list>
       </van-tab>
     </van-tabs>
-    <van-popup v-model="showCountryInfectionChartVariable" position="bottom" closeable class="popup-item" id="popupId1">
+    <van-popup v-model="showCountryInfectionChartVariable" position="bottom" class="popup-item" id="popupId1">
       <mobile-country-infection-chart v-bind:country="countryMsg" ></mobile-country-infection-chart>
     </van-popup>
-    <van-popup v-model="showCountryVaccineChartVariable" position="bottom" closeable class="popup-item" id="popupId2">
+    <van-popup v-model="showCountryVaccineChartVariable" position="bottom" class="popup-item" id="popupId2">
       <mobile-country-vaccine-chart v-bind:country="countryMsg" ></mobile-country-vaccine-chart>
     </van-popup>
   </div>

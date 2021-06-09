@@ -6,8 +6,8 @@ let router = new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: resolve => require(['../../pages/mobile/Home'], resolve)
+      name: 'Cover',
+      component: resolve => require(['../../pages/mobile/Cover'], resolve)
     },
     {
       path: '/Home',
