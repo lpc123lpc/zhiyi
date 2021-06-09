@@ -1,1 +1,1872 @@
-[{"name": "美国", "confirmed": 34210782, "newConfirmed": 6408, "cured": 28122737, "deceased": 612366, "vaccined": 301638578, "newVaccined": 1369848, "vaccine_coverage": 90.19}, {"name": "印度", "confirmed": 28909975, "newConfirmed": 100636, "cured": 27159180, "deceased": 349186, "vaccined": 228041045, "newVaccined": 2469901, "vaccine_coverage": 16.52}, {"name": "巴西", "confirmed": 16947062, "newConfirmed": 39637, "cured": 15002817, "deceased": 473404, "vaccined": 71691137, "newVaccined": 261880, "vaccine_coverage": 33.73}, {"name": "法国", "confirmed": 5774552, "newConfirmed": 5261, "cured": 395519, "deceased": 110160, "vaccined": 40057082, "newVaccined": 483783, "vaccine_coverage": 59.29}, {"name": "土耳其", "confirmed": 5287980, "newConfirmed": 5386, "cured": 5160774, "deceased": 48164, "vaccined": 30857320, "newVaccined": 281258, "vaccine_coverage": 36.59}, {"name": "俄罗斯", "confirmed": 5076543, "newConfirmed": 9297, "cured": 4688413, "deceased": 122037, "vaccined": 30708050, "newVaccined": 101506, "vaccine_coverage": 21.04}, {"name": "英国", "confirmed": 4532802, "newConfirmed": 5225, "cured": 15534, "deceased": 128103, "vaccined": 67994584, "newVaccined": 676991, "vaccine_coverage": 100.16}, {"name": "意大利", "confirmed": 4232428, "newConfirmed": 0, "cured": 3913633, "deceased": 126523, "vaccined": 38178684, "newVaccined": 493112, "vaccine_coverage": 63.15}, {"name": "阿根廷", "confirmed": 3955439, "newConfirmed": 16415, "cured": 3529033, "deceased": 81214, "vaccined": 14092493, "newVaccined": 361972, "vaccine_coverage": 31.18}, {"name": "德国", "confirmed": 3709683, "newConfirmed": 957, "cured": 3542000, "deceased": 89249, "vaccined": 54240350, "newVaccined": 780201, "vaccine_coverage": 64.74}, {"name": "西班牙", "confirmed": 3697987, "newConfirmed": 4975, "cured": 3471163, "deceased": 80196, "vaccined": 28752570, "newVaccined": 570225, "vaccine_coverage": 61.5}, {"name": "哥伦比亚", "confirmed": 3571067, "newConfirmed": 24050, "cured": 3310737, "deceased": 91961, "vaccined": 11485904, "newVaccined": 241312, "vaccine_coverage": 22.57}, {"name": "伊朗", "confirmed": 2971270, "newConfirmed": 4907, "cured": 2565972, "deceased": 81183, "vaccined": 3141577, "newVaccined": null, "vaccine_coverage": 3.74}, {"name": "波兰", "confirmed": 2875328, "newConfirmed": 192, "cured": 2645877, "deceased": 74160, "vaccined": 22134362, "newVaccined": 108491, "vaccine_coverage": 58.48}, {"name": "墨西哥", "confirmed": 2433681, "newConfirmed": 1979, "cured": 1939596, "deceased": 228804, "vaccined": 34457602, "newVaccined": 0, "vaccine_coverage": 26.73}, {"name": "乌克兰", "confirmed": 2274375, "newConfirmed": 667, "cured": 2149760, "deceased": 53295, "vaccined": 1388124, "newVaccined": 24860, "vaccine_coverage": 3.17}, {"name": "印度尼西亚", "confirmed": 1863031, "newConfirmed": 6993, "cured": 1711565, "deceased": 51803, "vaccined": 28770360, "newVaccined": 67427, "vaccine_coverage": 10.52}, {"name": "南非", "confirmed": 1696564, "newConfirmed": 5073, "cured": 1578033, "deceased": 56974, "vaccined": 1343433, "newVaccined": 6886, "vaccine_coverage": 2.27}, {"name": "荷兰", "confirmed": 1691858, "newConfirmed": 1395, "cured": 26971, "deceased": 17957, "vaccined": 9934313, "newVaccined": null, "vaccine_coverage": 57.98}, {"name": "捷克", "confirmed": 1663607, "newConfirmed": 90, "cured": 1626306, "deceased": 30164, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "智利", "confirmed": 1427956, "newConfirmed": 7690, "cured": 1347676, "deceased": 29937, "vaccined": 19462408, "newVaccined": 36660, "vaccine_coverage": 101.81}, {"name": "加拿大", "confirmed": 1400332, "newConfirmed": 1294, "cured": 1350595, "deceased": 25697, "vaccined": 26095464, "newVaccined": 322977, "vaccine_coverage": 69.14}, {"name": "菲律宾", "confirmed": 1276004, "newConfirmed": 6526, "cured": 1195181, "deceased": 21969, "vaccined": 5965651, "newVaccined": null, "vaccine_coverage": 5.44}, {"name": "伊拉克", "confirmed": 1229121, "newConfirmed": 4129, "cured": 1146745, "deceased": 16566, "vaccined": 582537, "newVaccined": null, "vaccine_coverage": 1.45}, {"name": "罗马尼亚", "confirmed": 1078952, "newConfirmed": 89, "cured": 1043171, "deceased": 30878, "vaccined": 8180838, "newVaccined": 70255, "vaccine_coverage": 42.53}, {"name": "瑞典", "confirmed": 1078062, "newConfirmed": 0, "cured": 0, "deceased": 14523, "vaccined": 5552320, "newVaccined": 151884, "vaccine_coverage": 54.98}, {"name": "比利时", "confirmed": 1070802, "newConfirmed": 928, "cured": 0, "deceased": 25033, "vaccined": 7459773, "newVaccined": 77861, "vaccine_coverage": 64.37}, {"name": "巴基斯坦", "confirmed": 933630, "newConfirmed": 1490, "cured": 864931, "deceased": 21323, "vaccined": 8263763, "newVaccined": null, "vaccine_coverage": 3.74}, {"name": "葡萄牙", "confirmed": 852646, "newConfirmed": 612, "cured": 811897, "deceased": 17034, "vaccined": 6228272, "newVaccined": 80930, "vaccine_coverage": 61.08}, {"name": "以色列", "confirmed": 839577, "newConfirmed": 11, "cured": 832858, "deceased": 6418, "vaccined": 10598448, "newVaccined": 4758, "vaccine_coverage": 122.45}, {"name": "孟加拉", "confirmed": 812960, "newConfirmed": 3646, "cured": 753240, "deceased": 12869, "vaccined": 10027760, "newVaccined": 6126, "vaccine_coverage": 6.09}, {"name": "匈牙利", "confirmed": 806089, "newConfirmed": 81, "cured": 717254, "deceased": 29866, "vaccined": 9249943, "newVaccined": null, "vaccine_coverage": 95.75}, {"name": "日本", "confirmed": 764182, "newConfirmed": 1218, "cured": 706488, "deceased": 13595, "vaccined": 17254680, "newVaccined": null, "vaccine_coverage": 13.64}, {"name": "约旦", "confirmed": 739847, "newConfirmed": 528, "cured": 721016, "deceased": 9530, "vaccined": 2307978, "newVaccined": null, "vaccine_coverage": 22.62}, {"name": "塞尔维亚", "confirmed": 713840, "newConfirmed": 162, "cured": 0, "deceased": 6924, "vaccined": 4770589, "newVaccined": null, "vaccine_coverage": 70.11}, {"name": "瑞士", "confirmed": 698369, "newConfirmed": 1077, "cured": 317600, "deceased": 10839, "vaccined": 5128983, "newVaccined": 122001, "vaccine_coverage": 59.26}, {"name": "奥地利", "confirmed": 647079, "newConfirmed": 279, "cured": 631294, "deceased": 10640, "vaccined": 5633751, "newVaccined": 39982, "vaccine_coverage": 62.55}, {"name": "马来西亚", "confirmed": 622086, "newConfirmed": 5271, "cured": 534357, "deceased": 3460, "vaccined": 3493193, "newVaccined": 72480, "vaccine_coverage": 10.79}, {"name": "尼泊尔", "confirmed": 591494, "newConfirmed": 3370, "cured": 497960, "deceased": 7990, "vaccined": 2804574, "newVaccined": null, "vaccine_coverage": 9.63}, {"name": "阿联酋", "confirmed": 585039, "newConfirmed": 1968, "cured": 564509, "deceased": 1702, "vaccined": 13315751, "newVaccined": 21741, "vaccine_coverage": 134.63}, {"name": "黎巴嫩", "confirmed": 541557, "newConfirmed": 134, "cured": 523476, "deceased": 7763, "vaccined": 863134, "newVaccined": 11044, "vaccine_coverage": 12.65}, {"name": "摩洛哥", "confirmed": 521426, "newConfirmed": 231, "cured": 509083, "deceased": 9178, "vaccined": 15007487, "newVaccined": null, "vaccine_coverage": 40.66}, {"name": "沙特阿拉伯", "confirmed": 457546, "newConfirmed": 0, "cured": 440644, "deceased": 7456, "vaccined": 14977476, "newVaccined": 134280, "vaccine_coverage": 43.02}, {"name": "哈萨克斯坦", "confirmed": 450868, "newConfirmed": 1010, "cured": 418803, "deceased": 3473, "vaccined": 3409522, "newVaccined": 34517, "vaccine_coverage": 18.16}, {"name": "厄瓜多尔", "confirmed": 432353, "newConfirmed": 924, "cured": 398645, "deceased": 20809, "vaccined": 2597836, "newVaccined": 68618, "vaccine_coverage": 14.72}, {"name": "保加利亚", "confirmed": 419473, "newConfirmed": 47, "cured": 386099, "deceased": 17820, "vaccined": 1464251, "newVaccined": 7410, "vaccine_coverage": 21.07}, {"name": "希腊", "confirmed": 409368, "newConfirmed": 579, "cured": 93764, "deceased": 12277, "vaccined": 6084963, "newVaccined": 98483, "vaccine_coverage": 58.38}, {"name": "白俄罗斯", "confirmed": 400422, "newConfirmed": 570, "cured": 392744, "deceased": 2919, "vaccined": 796834, "newVaccined": null, "vaccine_coverage": 8.43}, {"name": "斯洛伐克", "confirmed": 390451, "newConfirmed": 15, "cured": 255300, "deceased": 12414, "vaccined": 2773294, "newVaccined": 18842, "vaccine_coverage": 50.8}, {"name": "玻利维亚", "confirmed": 387162, "newConfirmed": 1428, "cured": 306819, "deceased": 15024, "vaccined": 1829560, "newVaccined": 3914, "vaccine_coverage": 15.67}, {"name": "巴拿马", "confirmed": 382475, "newConfirmed": 526, "cured": 368365, "deceased": 6402, "vaccined": 1100689, "newVaccined": 16833, "vaccine_coverage": 25.51}, {"name": "巴拉圭", "confirmed": 373165, "newConfirmed": 2144, "cured": 306695, "deceased": 9874, "vaccined": 407644, "newVaccined": 14977, "vaccine_coverage": 5.72}, {"name": "克罗地亚", "confirmed": 357608, "newConfirmed": 43, "cured": 348274, "deceased": 8091, "vaccined": 1902092, "newVaccined": 16320, "vaccine_coverage": 46.33}, {"name": "突尼斯", "confirmed": 355732, "newConfirmed": 1950, "cured": 311340, "deceased": 12980, "vaccined": 1126036, "newVaccined": 74240, "vaccine_coverage": 9.53}, {"name": "格鲁吉亚", "confirmed": 349405, "newConfirmed": 307, "cured": 334519, "deceased": 4934, "vaccined": 211728, "newVaccined": 8970, "vaccine_coverage": 5.31}, {"name": "阿塞拜疆", "confirmed": 334747, "newConfirmed": 32, "cured": 327114, "deceased": 4945, "vaccined": 2546169, "newVaccined": 33084, "vaccine_coverage": 25.11}, {"name": "哥斯达黎加", "confirmed": 327979, "newConfirmed": 0, "cured": 247905, "deceased": 4153, "vaccined": 1658685, "newVaccined": null, "vaccine_coverage": 32.56}, {"name": "科威特", "confirmed": 317197, "newConfirmed": 1297, "cured": 301137, "deceased": 1795, "vaccined": 1820000, "newVaccined": null, "vaccine_coverage": 42.62}, {"name": "乌拉圭", "confirmed": 316535, "newConfirmed": 3832, "cured": 275138, "deceased": 4640, "vaccined": 3012523, "newVaccined": null, "vaccine_coverage": 86.72}, {"name": "巴勒斯坦", "confirmed": 310026, "newConfirmed": 173, "cured": 301881, "deceased": 3517, "vaccined": 607832, "newVaccined": 710, "vaccine_coverage": 11.91}, {"name": "多米尼加", "confirmed": 301078, "newConfirmed": 1397, "cured": 245190, "deceased": 3654, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "丹麦", "confirmed": 287735, "newConfirmed": 462, "cured": 273104, "deceased": 2521, "vaccined": 3715218, "newVaccined": 42487, "vaccine_coverage": 64.14}, {"name": "立陶宛", "confirmed": 276543, "newConfirmed": 90, "cured": 259909, "deceased": 4309, "vaccined": 1799353, "newVaccined": 5577, "vaccine_coverage": 66.1}, {"name": "埃塞俄比亚", "confirmed": 272914, "newConfirmed": 109, "cured": 246247, "deceased": 4209, "vaccined": 1865958, "newVaccined": 12699, "vaccine_coverage": 1.62}, {"name": "埃及", "confirmed": 267972, "newConfirmed": 801, "cured": 196604, "deceased": 15352, "vaccined": 2698411, "newVaccined": null, "vaccine_coverage": 2.64}, {"name": "爱尔兰", "confirmed": 264498, "newConfirmed": 0, "cured": 23364, "deceased": 4941, "vaccined": 2387348, "newVaccined": null, "vaccine_coverage": 48.35}, {"name": "危地马拉", "confirmed": 261958, "newConfirmed": 566, "cured": 239176, "deceased": 8294, "vaccined": 595590, "newVaccined": 810, "vaccine_coverage": 3.32}, {"name": "摩尔多瓦", "confirmed": 255453, "newConfirmed": 21, "cured": 248040, "deceased": 6134, "vaccined": 470718, "newVaccined": 1053, "vaccine_coverage": 11.67}, {"name": "斯洛文尼亚", "confirmed": 255432, "newConfirmed": 57, "cured": 247381, "deceased": 4390, "vaccined": 1198098, "newVaccined": 6332, "vaccine_coverage": 57.63}, {"name": "巴林", "confirmed": 251078, "newConfirmed": 1496, "cured": 228370, "deceased": 1119, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "委内瑞拉", "confirmed": 242138, "newConfirmed": 1424, "cured": 222531, "deceased": 2719, "vaccined": 3300000, "newVaccined": null, "vaccine_coverage": 11.61}, {"name": "洪都拉斯", "confirmed": 241826, "newConfirmed": 252, "cured": 86150, "deceased": 6479, "vaccined": 420531, "newVaccined": null, "vaccine_coverage": 4.25}, {"name": "阿曼", "confirmed": 225095, "newConfirmed": 1216, "cured": 205305, "deceased": 2424, "vaccined": 296894, "newVaccined": null, "vaccine_coverage": 5.81}, {"name": "亚美尼亚", "confirmed": 223212, "newConfirmed": 32, "cured": 214504, "deceased": 4463, "vaccined": 33529, "newVaccined": null, "vaccine_coverage": 1.13}, {"name": "卡塔尔", "confirmed": 218627, "newConfirmed": 0, "cured": 215294, "deceased": 569, "vaccined": 2676239, "newVaccined": 19544, "vaccine_coverage": 92.89}, {"name": "斯里兰卡", "confirmed": 205333, "newConfirmed": 2976, "cured": 167304, "deceased": 1742, "vaccined": 2296864, "newVaccined": 24604, "vaccine_coverage": 10.73}, {"name": "波黑", "confirmed": 204304, "newConfirmed": 0, "cured": 176286, "deceased": 9374, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "利比亚", "confirmed": 187685, "newConfirmed": 404, "cured": 173394, "deceased": 3146, "vaccined": 243891, "newVaccined": null, "vaccine_coverage": 3.55}, {"name": "泰国", "confirmed": 179886, "newConfirmed": 2419, "cured": 26873, "deceased": 1269, "vaccined": 4190503, "newVaccined": null, "vaccine_coverage": 6.0}, {"name": "肯尼亚", "confirmed": 172491, "newConfirmed": 166, "cured": 117595, "deceased": 3287, "vaccined": 983580, "newVaccined": 1693, "vaccine_coverage": 1.83}, {"name": "尼日利亚", "confirmed": 166767, "newConfirmed": 11, "cured": 163096, "deceased": 2117, "vaccined": 2225765, "newVaccined": null, "vaccine_coverage": 1.08}, {"name": "北马其顿", "confirmed": 155417, "newConfirmed": 0, "cured": 149292, "deceased": 5455, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "古巴", "confirmed": 148918, "newConfirmed": 1087, "cured": 141949, "deceased": 1012, "vaccined": 2734854, "newVaccined": 142279, "vaccine_coverage": 24.15}, {"name": "韩国", "confirmed": 144637, "newConfirmed": 485, "cured": 134861, "deceased": 1974, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "缅甸", "confirmed": 144317, "newConfirmed": 64, "cured": 132452, "deceased": 3225, "vaccined": 2994900, "newVaccined": null, "vaccine_coverage": 5.5}, {"name": "拉脱维亚", "confirmed": 134888, "newConfirmed": 76, "cured": 128619, "deceased": 2413, "vaccined": 850848, "newVaccined": 4841, "vaccine_coverage": 45.11}, {"name": "阿尔巴尼亚", "confirmed": 132379, "newConfirmed": 5, "cured": 129664, "deceased": 2451, "vaccined": 798624, "newVaccined": null, "vaccine_coverage": 27.75}, {"name": "阿尔及利亚", "confirmed": 130958, "newConfirmed": 277, "cured": 91198, "deceased": 3518, "vaccined": 75000, "newVaccined": null, "vaccine_coverage": 0.17}, {"name": "爱沙尼亚", "confirmed": 130156, "newConfirmed": 37, "cured": 124716, "deceased": 1264, "vaccined": 762382, "newVaccined": 5218, "vaccine_coverage": 57.47}, {"name": "挪威", "confirmed": 126817, "newConfirmed": 44, "cured": 17998, "deceased": 785, "vaccined": 2915249, "newVaccined": 96774, "vaccine_coverage": 53.77}, {"name": "中国", "confirmed": 114674, "newConfirmed": 568, "cured": 98996, "deceased": 5132, "vaccined": 777879000, "newVaccined": 14814000, "vaccine_coverage": 54.04}, {"name": "吉尔吉斯斯坦", "confirmed": 107335, "newConfirmed": 362, "cured": 100722, "deceased": 1852, "vaccined": 54101, "newVaccined": null, "vaccine_coverage": 0.83}, {"name": "乌兹别克斯坦", "confirmed": 101964, "newConfirmed": 242, "cured": 97861, "deceased": 696, "vaccined": 2136423, "newVaccined": null, "vaccine_coverage": 6.38}, {"name": "赞比亚", "confirmed": 100278, "newConfirmed": 0, "cured": 93374, "deceased": 1308, "vaccined": 147115, "newVaccined": null, "vaccine_coverage": 0.8}, {"name": "黑山", "confirmed": 99812, "newConfirmed": 21, "cured": 97578, "deceased": 1592, "vaccined": 242070, "newVaccined": 3196, "vaccine_coverage": 38.54}, {"name": "加纳", "confirmed": 94228, "newConfirmed": 40, "cured": 92362, "deceased": 787, "vaccined": 1228216, "newVaccined": null, "vaccine_coverage": 3.95}, {"name": "芬兰", "confirmed": 93281, "newConfirmed": 55, "cured": 46000, "deceased": 959, "vaccined": 3240047, "newVaccined": null, "vaccine_coverage": 58.48}, {"name": "阿富汗", "confirmed": 80841, "newConfirmed": 2878, "cured": 58622, "deceased": 3187, "vaccined": 626290, "newVaccined": null, "vaccine_coverage": 1.61}, {"name": "喀麦隆", "confirmed": 78929, "newConfirmed": 0, "cured": 35261, "deceased": 1275, "vaccined": 75215, "newVaccined": null, "vaccine_coverage": 0.28}, {"name": "萨尔瓦多", "confirmed": 74141, "newConfirmed": 0, "cured": 69215, "deceased": 2274, "vaccined": 2015408, "newVaccined": 44161, "vaccine_coverage": 31.07}, {"name": "塞浦路斯", "confirmed": 72779, "newConfirmed": 29, "cured": 39061, "deceased": 363, "vaccined": 649005, "newVaccined": null, "vaccine_coverage": 74.1}, {"name": "莫桑比克", "confirmed": 71114, "newConfirmed": 32, "cured": 69662, "deceased": 837, "vaccined": 394312, "newVaccined": null, "vaccine_coverage": 1.26}, {"name": "卢森堡", "confirmed": 70182, "newConfirmed": 0, "cured": 68556, "deceased": 818, "vaccined": 373485, "newVaccined": 17163, "vaccine_coverage": 59.66}, {"name": "马尔代夫", "confirmed": 67950, "newConfirmed": 412, "cured": 48086, "deceased": 185, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "蒙古", "confirmed": 66443, "newConfirmed": 1177, "cured": 54081, "deceased": 313, "vaccined": 3397608, "newVaccined": 16796, "vaccine_coverage": 103.64}, {"name": "新加坡", "confirmed": 62196, "newConfirmed": 0, "cured": 61635, "deceased": 33, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "纳米比亚", "confirmed": 58707, "newConfirmed": 650, "cured": 52032, "deceased": 912, "vaccined": 87457, "newVaccined": 2214, "vaccine_coverage": 3.44}, {"name": "博茨瓦纳", "confirmed": 56217, "newConfirmed": 0, "cured": 52675, "deceased": 866, "vaccined": 146725, "newVaccined": null, "vaccine_coverage": 6.24}, {"name": "乌干达", "confirmed": 52935, "newConfirmed": 1259, "cured": 47760, "deceased": 383, "vaccined": 706626, "newVaccined": 29542, "vaccine_coverage": 1.54}, {"name": "牙买加", "confirmed": 48810, "newConfirmed": 0, "cured": 25936, "deceased": 960, "vaccined": 177883, "newVaccined": null, "vaccine_coverage": 6.01}, {"name": "科特迪瓦", "confirmed": 47490, "newConfirmed": 14, "cured": 46969, "deceased": 306, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "马达加斯加", "confirmed": 41742, "newConfirmed": 52, "cured": 40870, "deceased": 866, "vaccined": 36640, "newVaccined": null, "vaccine_coverage": 0.13}, {"name": "塞内加尔", "confirmed": 41713, "newConfirmed": 82, "cured": 40298, "deceased": 1148, "vaccined": 522575, "newVaccined": null, "vaccine_coverage": 3.12}, {"name": "津巴布韦", "confirmed": 39189, "newConfirmed": 21, "cured": 36728, "deceased": 1606, "vaccined": 1061951, "newVaccined": 5713, "vaccine_coverage": 7.14}, {"name": "苏丹", "confirmed": 36004, "newConfirmed": 348, "cured": 29716, "deceased": 2697, "vaccined": 402114, "newVaccined": null, "vaccine_coverage": 0.92}, {"name": "安哥拉", "confirmed": 35772, "newConfirmed": 178, "cured": 28880, "deceased": 797, "vaccined": 909215, "newVaccined": null, "vaccine_coverage": 2.77}, {"name": "柬埔寨", "confirmed": 34833, "newConfirmed": 589, "cured": 28092, "deceased": 266, "vaccined": 4782587, "newVaccined": 58643, "vaccine_coverage": 28.61}, {"name": "马拉维", "confirmed": 34390, "newConfirmed": 6, "cured": 32667, "deceased": 1157, "vaccined": 357650, "newVaccined": 635, "vaccine_coverage": 1.87}, {"name": "刚果（金）", "confirmed": 33202, "newConfirmed": 0, "cured": 27751, "deceased": 804, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "佛得角", "confirmed": 31097, "newConfirmed": 94, "cured": 29647, "deceased": 267, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "马耳他", "confirmed": 30571, "newConfirmed": 0, "cured": 30080, "deceased": 419, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "澳大利亚", "confirmed": 30195, "newConfirmed": 20, "cured": 23611, "deceased": 910, "vaccined": 5016352, "newVaccined": 88745, "vaccine_coverage": 19.67}, {"name": "卢旺达", "confirmed": 27245, "newConfirmed": 34, "cured": 26225, "deceased": 360, "vaccined": 400096, "newVaccined": null, "vaccine_coverage": 3.09}, {"name": "特立尼达和多巴哥", "confirmed": 26410, "newConfirmed": 218, "cured": 15911, "deceased": 577, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "叙利亚", "confirmed": 24659, "newConfirmed": 20, "cured": 21635, "deceased": 1793, "vaccined": 24781, "newVaccined": null, "vaccine_coverage": 0.14}, {"name": "加蓬", "confirmed": 24591, "newConfirmed": 0, "cured": 22815, "deceased": 154, "vaccined": 23371, "newVaccined": null, "vaccine_coverage": 1.05}, {"name": "几内亚", "confirmed": 23255, "newConfirmed": 0, "cured": 21284, "deceased": 162, "vaccined": 369859, "newVaccined": 4598, "vaccine_coverage": 2.82}, {"name": "毛里塔尼亚", "confirmed": 19817, "newConfirmed": 32, "cured": 18805, "deceased": 468, "vaccined": 37331, "newVaccined": null, "vaccine_coverage": 0.8}, {"name": "斯威士兰", "confirmed": 18653, "newConfirmed": 17, "cured": 17903, "deceased": 673, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "圭亚那", "confirmed": 17665, "newConfirmed": 48, "cured": 15374, "deceased": 409, "vaccined": 285247, "newVaccined": null, "vaccine_coverage": 36.27}, {"name": "苏里南", "confirmed": 16541, "newConfirmed": 249, "cured": 12518, "deceased": 350, "vaccined": 102612, "newVaccined": 5904, "vaccine_coverage": 17.49}, {"name": "巴布亚新几内亚", "confirmed": 16327, "newConfirmed": 0, "cured": 15641, "deceased": 164, "vaccined": 11537, "newVaccined": null, "vaccine_coverage": 0.13}, {"name": "海地", "confirmed": 15435, "newConfirmed": 312, "cured": 12557, "deceased": 325, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "索马里", "confirmed": 14748, "newConfirmed": 19, "cured": 6943, "deceased": 773, "vaccined": 137618, "newVaccined": null, "vaccine_coverage": 0.87}, {"name": "马里", "confirmed": 14298, "newConfirmed": 2, "cured": 9873, "deceased": 519, "vaccined": 127042, "newVaccined": null, "vaccine_coverage": 0.63}, {"name": "安道尔", "confirmed": 13758, "newConfirmed": 0, "cured": 13527, "deceased": 127, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "多哥", "confirmed": 13539, "newConfirmed": 6, "cured": 13249, "deceased": 125, "vaccined": 311938, "newVaccined": null, "vaccine_coverage": 3.77}, {"name": "布基纳法索", "confirmed": 13453, "newConfirmed": 1, "cured": 13265, "deceased": 167, "vaccined": 200, "newVaccined": null, "vaccine_coverage": 0.0}, {"name": "塔吉克斯坦", "confirmed": 13308, "newConfirmed": 0, "cured": 13218, "deceased": 90, "vaccined": 91775, "newVaccined": null, "vaccine_coverage": 0.96}, {"name": "伯利兹", "confirmed": 12861, "newConfirmed": 0, "cured": 12439, "deceased": 325, "vaccined": 80121, "newVaccined": 1591, "vaccine_coverage": 20.15}, {"name": "塞舌尔", "confirmed": 12158, "newConfirmed": 0, "cured": 10883, "deceased": 42, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "巴哈马", "confirmed": 11930, "newConfirmed": 0, "cured": 10932, "deceased": 232, "vaccined": 55037, "newVaccined": null, "vaccine_coverage": 14.0}, {"name": "刚果（布）", "confirmed": 11920, "newConfirmed": 0, "cured": 10591, "deceased": 155, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "吉布提", "confirmed": 11562, "newConfirmed": 6, "cured": 11385, "deceased": 154, "vaccined": 21357, "newVaccined": null, "vaccine_coverage": 2.16}, {"name": "莱索托", "confirmed": 10837, "newConfirmed": 0, "cured": 6437, "deceased": 326, "vaccined": 36759, "newVaccined": null, "vaccine_coverage": 1.72}, {"name": "越南", "confirmed": 8983, "newConfirmed": 236, "cured": 3509, "deceased": 53, "vaccined": 1248559, "newVaccined": 5255, "vaccine_coverage": 1.28}, {"name": "赤道几内亚", "confirmed": 8626, "newConfirmed": 0, "cured": 8203, "deceased": 118, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "贝宁", "confirmed": 8082, "newConfirmed": 0, "cured": 7893, "deceased": 102, "vaccined": 12934, "newVaccined": null, "vaccine_coverage": 0.11}, {"name": "东帝汶", "confirmed": 7740, "newConfirmed": 0, "cured": 5321, "deceased": 17, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "尼加拉瓜", "confirmed": 7481, "newConfirmed": 0, "cured": 4225, "deceased": 187, "vaccined": 167500, "newVaccined": null, "vaccine_coverage": 2.53}, {"name": "中非共和国", "confirmed": 7091, "newConfirmed": 0, "cured": 6859, "deceased": 98, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "也门", "confirmed": 6787, "newConfirmed": 7, "cured": 3571, "deceased": 1329, "vaccined": 104070, "newVaccined": null, "vaccine_coverage": 0.35}, {"name": "冰岛", "confirmed": 6555, "newConfirmed": 0, "cured": 6476, "deceased": 29, "vaccined": 273455, "newVaccined": 4131, "vaccine_coverage": 80.13}, {"name": "冈比亚", "confirmed": 5999, "newConfirmed": 0, "cured": 5796, "deceased": 179, "vaccined": 38490, "newVaccined": null, "vaccine_coverage": 1.59}, {"name": "尼日尔", "confirmed": 5439, "newConfirmed": 1, "cured": 5132, "deceased": 192, "vaccined": 159525, "newVaccined": null, "vaccine_coverage": 0.66}, {"name": "圣卢西亚", "confirmed": 5133, "newConfirmed": 25, "cured": 4899, "deceased": 80, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "圣马力诺", "confirmed": 5090, "newConfirmed": 0, "cured": 4998, "deceased": 90, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "乍得", "confirmed": 4939, "newConfirmed": 0, "cured": 4757, "deceased": 174, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "布隆迪", "confirmed": 4905, "newConfirmed": 24, "cured": 773, "deceased": 8, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "厄立特里亚", "confirmed": 4427, "newConfirmed": 0, "cured": 3894, "deceased": 14, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "塞拉利昂", "confirmed": 4201, "newConfirmed": 13, "cured": 3157, "deceased": 79, "vaccined": 79762, "newVaccined": null, "vaccine_coverage": 1.0}, {"name": "巴巴多斯", "confirmed": 4031, "newConfirmed": 1, "cured": 3922, "deceased": 47, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "科摩罗", "confirmed": 3888, "newConfirmed": 0, "cured": 3736, "deceased": 146, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "几内亚比绍", "confirmed": 3787, "newConfirmed": 0, "cured": 3529, "deceased": 68, "vaccined": 5889, "newVaccined": null, "vaccine_coverage": 0.3}, {"name": "列支敦士登公国", "confirmed": 3022, "newConfirmed": 0, "cured": 2934, "deceased": 58, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "新西兰", "confirmed": 2682, "newConfirmed": 0, "cured": 2639, "deceased": 26, "vaccined": 668115, "newVaccined": 19181, "vaccine_coverage": 13.85}, {"name": "摩纳哥", "confirmed": 2508, "newConfirmed": 0, "cured": 2469, "deceased": 33, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "利比里亚", "confirmed": 2250, "newConfirmed": 0, "cured": 2049, "deceased": 86, "vaccined": 56144, "newVaccined": null, "vaccine_coverage": 1.11}, {"name": "圣文森特和格林纳丁斯", "confirmed": 2076, "newConfirmed": 8, "cured": 1845, "deceased": 12, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "老挝", "confirmed": 1968, "newConfirmed": 5, "cured": 1720, "deceased": 3, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "不丹", "confirmed": 1703, "newConfirmed": 16, "cured": 1405, "deceased": 1, "vaccined": 482716, "newVaccined": 43, "vaccine_coverage": 62.56}, {"name": "毛里求斯", "confirmed": 1458, "newConfirmed": 4, "cured": 1206, "deceased": 18, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "安提瓜和巴布达", "confirmed": 1263, "newConfirmed": 0, "cured": 1214, "deceased": 42, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "钻石号邮轮", "confirmed": 712, "newConfirmed": 0, "cured": 699, "deceased": 13, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "斐济", "confirmed": 687, "newConfirmed": 83, "cured": 193, "deceased": 4, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "坦桑尼亚", "confirmed": 509, "newConfirmed": 0, "cured": 183, "deceased": 21, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "文莱", "confirmed": 244, "newConfirmed": 0, "cured": 231, "deceased": 3, "vaccined": 55085, "newVaccined": null, "vaccine_coverage": 12.59}, {"name": "多米尼克", "confirmed": 188, "newConfirmed": 0, "cured": 188, "deceased": 0, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "格林纳达", "confirmed": 161, "newConfirmed": 0, "cured": 160, "deceased": 1, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "圣基茨和尼维斯", "confirmed": 83, "newConfirmed": 0, "cured": 51, "deceased": 0, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "格陵兰", "confirmed": 43, "newConfirmed": null, "cured": 34, "deceased": 0, "vaccined": 26063, "newVaccined": 728, "vaccine_coverage": 45.91}, {"name": "马提尼克岛", "confirmed": 37, "newConfirmed": 0, "cured": 0, "deceased": 1, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "梵蒂冈", "confirmed": 27, "newConfirmed": 0, "cured": 27, "deceased": 0, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "所罗门群岛", "confirmed": 20, "newConfirmed": 0, "cured": 20, "deceased": 0, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "瓦努阿图", "confirmed": 4, "newConfirmed": 0, "cured": 3, "deceased": 1, "vaccined": 270, "newVaccined": null, "vaccine_coverage": 0.09}, {"name": "马绍尔群岛", "confirmed": 4, "newConfirmed": 0, "cured": 4, "deceased": 0, "vaccined": null, "newVaccined": null, "vaccine_coverage": null}, {"name": "秘鲁", "confirmed": 0, "newConfirmed": 0, "cured": 0, "deceased": 0, "vaccined": 4298860, "newVaccined": 19841, "vaccine_coverage": 13.04}]
+[
+  {
+    "name": "美国",
+    "confirmed": 34210782,
+    "newConfirmed": 6408,
+    "cured": 28122737,
+    "deceased": 612366,
+    "vaccined": 301638578,
+    "newVaccined": 1369848,
+    "vaccine_coverage": 90.19
+  },
+  {
+    "name": "印度",
+    "confirmed": 28909975,
+    "newConfirmed": 100636,
+    "cured": 27159180,
+    "deceased": 349186,
+    "vaccined": 228041045,
+    "newVaccined": 2469901,
+    "vaccine_coverage": 16.52
+  },
+  {
+    "name": "巴西",
+    "confirmed": 16947062,
+    "newConfirmed": 39637,
+    "cured": 15002817,
+    "deceased": 473404,
+    "vaccined": 71691137,
+    "newVaccined": 261880,
+    "vaccine_coverage": 33.73
+  },
+  {
+    "name": "法国",
+    "confirmed": 5774552,
+    "newConfirmed": 5261,
+    "cured": 395519,
+    "deceased": 110160,
+    "vaccined": 40057082,
+    "newVaccined": 483783,
+    "vaccine_coverage": 59.29
+  },
+  {
+    "name": "土耳其",
+    "confirmed": 5287980,
+    "newConfirmed": 5386,
+    "cured": 5160774,
+    "deceased": 48164,
+    "vaccined": 30857320,
+    "newVaccined": 281258,
+    "vaccine_coverage": 36.59
+  },
+  {
+    "name": "俄罗斯",
+    "confirmed": 5076543,
+    "newConfirmed": 9297,
+    "cured": 4688413,
+    "deceased": 122037,
+    "vaccined": 30708050,
+    "newVaccined": 101506,
+    "vaccine_coverage": 21.04
+  },
+  {
+    "name": "英国",
+    "confirmed": 4532802,
+    "newConfirmed": 5225,
+    "cured": 15534,
+    "deceased": 128103,
+    "vaccined": 67994584,
+    "newVaccined": 676991,
+    "vaccine_coverage": 100.16
+  },
+  {
+    "name": "意大利",
+    "confirmed": 4232428,
+    "newConfirmed": 0,
+    "cured": 3913633,
+    "deceased": 126523,
+    "vaccined": 38178684,
+    "newVaccined": 493112,
+    "vaccine_coverage": 63.15
+  },
+  {
+    "name": "阿根廷",
+    "confirmed": 3955439,
+    "newConfirmed": 16415,
+    "cured": 3529033,
+    "deceased": 81214,
+    "vaccined": 14092493,
+    "newVaccined": 361972,
+    "vaccine_coverage": 31.18
+  },
+  {
+    "name": "德国",
+    "confirmed": 3709683,
+    "newConfirmed": 957,
+    "cured": 3542000,
+    "deceased": 89249,
+    "vaccined": 54240350,
+    "newVaccined": 780201,
+    "vaccine_coverage": 64.74
+  },
+  {
+    "name": "西班牙",
+    "confirmed": 3697987,
+    "newConfirmed": 4975,
+    "cured": 3471163,
+    "deceased": 80196,
+    "vaccined": 28752570,
+    "newVaccined": 570225,
+    "vaccine_coverage": 61.5
+  },
+  {
+    "name": "哥伦比亚",
+    "confirmed": 3571067,
+    "newConfirmed": 24050,
+    "cured": 3310737,
+    "deceased": 91961,
+    "vaccined": 11485904,
+    "newVaccined": 241312,
+    "vaccine_coverage": 22.57
+  },
+  {
+    "name": "伊朗",
+    "confirmed": 2971270,
+    "newConfirmed": 4907,
+    "cured": 2565972,
+    "deceased": 81183,
+    "vaccined": 3141577,
+    "newVaccined": null,
+    "vaccine_coverage": 3.74
+  },
+  {
+    "name": "波兰",
+    "confirmed": 2875328,
+    "newConfirmed": 192,
+    "cured": 2645877,
+    "deceased": 74160,
+    "vaccined": 22134362,
+    "newVaccined": 108491,
+    "vaccine_coverage": 58.48
+  },
+  {
+    "name": "墨西哥",
+    "confirmed": 2433681,
+    "newConfirmed": 1979,
+    "cured": 1939596,
+    "deceased": 228804,
+    "vaccined": 34457602,
+    "newVaccined": 0,
+    "vaccine_coverage": 26.73
+  },
+  {
+    "name": "乌克兰",
+    "confirmed": 2274375,
+    "newConfirmed": 667,
+    "cured": 2149760,
+    "deceased": 53295,
+    "vaccined": 1388124,
+    "newVaccined": 24860,
+    "vaccine_coverage": 3.17
+  },
+  {
+    "name": "印度尼西亚",
+    "confirmed": 1863031,
+    "newConfirmed": 6993,
+    "cured": 1711565,
+    "deceased": 51803,
+    "vaccined": 28770360,
+    "newVaccined": 67427,
+    "vaccine_coverage": 10.52
+  },
+  {
+    "name": "南非",
+    "confirmed": 1696564,
+    "newConfirmed": 5073,
+    "cured": 1578033,
+    "deceased": 56974,
+    "vaccined": 1343433,
+    "newVaccined": 6886,
+    "vaccine_coverage": 2.27
+  },
+  {
+    "name": "荷兰",
+    "confirmed": 1691858,
+    "newConfirmed": 1395,
+    "cured": 26971,
+    "deceased": 17957,
+    "vaccined": 9934313,
+    "newVaccined": null,
+    "vaccine_coverage": 57.98
+  },
+  {
+    "name": "捷克",
+    "confirmed": 1663607,
+    "newConfirmed": 90,
+    "cured": 1626306,
+    "deceased": 30164,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "智利",
+    "confirmed": 1427956,
+    "newConfirmed": 7690,
+    "cured": 1347676,
+    "deceased": 29937,
+    "vaccined": 19462408,
+    "newVaccined": 36660,
+    "vaccine_coverage": 101.81
+  },
+  {
+    "name": "加拿大",
+    "confirmed": 1400332,
+    "newConfirmed": 1294,
+    "cured": 1350595,
+    "deceased": 25697,
+    "vaccined": 26095464,
+    "newVaccined": 322977,
+    "vaccine_coverage": 69.14
+  },
+  {
+    "name": "菲律宾",
+    "confirmed": 1276004,
+    "newConfirmed": 6526,
+    "cured": 1195181,
+    "deceased": 21969,
+    "vaccined": 5965651,
+    "newVaccined": null,
+    "vaccine_coverage": 5.44
+  },
+  {
+    "name": "伊拉克",
+    "confirmed": 1229121,
+    "newConfirmed": 4129,
+    "cured": 1146745,
+    "deceased": 16566,
+    "vaccined": 582537,
+    "newVaccined": null,
+    "vaccine_coverage": 1.45
+  },
+  {
+    "name": "罗马尼亚",
+    "confirmed": 1078952,
+    "newConfirmed": 89,
+    "cured": 1043171,
+    "deceased": 30878,
+    "vaccined": 8180838,
+    "newVaccined": 70255,
+    "vaccine_coverage": 42.53
+  },
+  {
+    "name": "瑞典",
+    "confirmed": 1078062,
+    "newConfirmed": 0,
+    "cured": 0,
+    "deceased": 14523,
+    "vaccined": 5552320,
+    "newVaccined": 151884,
+    "vaccine_coverage": 54.98
+  },
+  {
+    "name": "比利时",
+    "confirmed": 1070802,
+    "newConfirmed": 928,
+    "cured": 0,
+    "deceased": 25033,
+    "vaccined": 7459773,
+    "newVaccined": 77861,
+    "vaccine_coverage": 64.37
+  },
+  {
+    "name": "巴基斯坦",
+    "confirmed": 933630,
+    "newConfirmed": 1490,
+    "cured": 864931,
+    "deceased": 21323,
+    "vaccined": 8263763,
+    "newVaccined": null,
+    "vaccine_coverage": 3.74
+  },
+  {
+    "name": "葡萄牙",
+    "confirmed": 852646,
+    "newConfirmed": 612,
+    "cured": 811897,
+    "deceased": 17034,
+    "vaccined": 6228272,
+    "newVaccined": 80930,
+    "vaccine_coverage": 61.08
+  },
+  {
+    "name": "以色列",
+    "confirmed": 839577,
+    "newConfirmed": 11,
+    "cured": 832858,
+    "deceased": 6418,
+    "vaccined": 10598448,
+    "newVaccined": 4758,
+    "vaccine_coverage": 122.45
+  },
+  {
+    "name": "孟加拉",
+    "confirmed": 812960,
+    "newConfirmed": 3646,
+    "cured": 753240,
+    "deceased": 12869,
+    "vaccined": 10027760,
+    "newVaccined": 6126,
+    "vaccine_coverage": 6.09
+  },
+  {
+    "name": "匈牙利",
+    "confirmed": 806089,
+    "newConfirmed": 81,
+    "cured": 717254,
+    "deceased": 29866,
+    "vaccined": 9249943,
+    "newVaccined": null,
+    "vaccine_coverage": 95.75
+  },
+  {
+    "name": "日本",
+    "confirmed": 764182,
+    "newConfirmed": 1218,
+    "cured": 706488,
+    "deceased": 13595,
+    "vaccined": 17254680,
+    "newVaccined": null,
+    "vaccine_coverage": 13.64
+  },
+  {
+    "name": "约旦",
+    "confirmed": 739847,
+    "newConfirmed": 528,
+    "cured": 721016,
+    "deceased": 9530,
+    "vaccined": 2307978,
+    "newVaccined": null,
+    "vaccine_coverage": 22.62
+  },
+  {
+    "name": "塞尔维亚",
+    "confirmed": 713840,
+    "newConfirmed": 162,
+    "cured": 0,
+    "deceased": 6924,
+    "vaccined": 4770589,
+    "newVaccined": null,
+    "vaccine_coverage": 70.11
+  },
+  {
+    "name": "瑞士",
+    "confirmed": 698369,
+    "newConfirmed": 1077,
+    "cured": 317600,
+    "deceased": 10839,
+    "vaccined": 5128983,
+    "newVaccined": 122001,
+    "vaccine_coverage": 59.26
+  },
+  {
+    "name": "奥地利",
+    "confirmed": 647079,
+    "newConfirmed": 279,
+    "cured": 631294,
+    "deceased": 10640,
+    "vaccined": 5633751,
+    "newVaccined": 39982,
+    "vaccine_coverage": 62.55
+  },
+  {
+    "name": "马来西亚",
+    "confirmed": 622086,
+    "newConfirmed": 5271,
+    "cured": 534357,
+    "deceased": 3460,
+    "vaccined": 3493193,
+    "newVaccined": 72480,
+    "vaccine_coverage": 10.79
+  },
+  {
+    "name": "尼泊尔",
+    "confirmed": 591494,
+    "newConfirmed": 3370,
+    "cured": 497960,
+    "deceased": 7990,
+    "vaccined": 2804574,
+    "newVaccined": null,
+    "vaccine_coverage": 9.63
+  },
+  {
+    "name": "阿联酋",
+    "confirmed": 585039,
+    "newConfirmed": 1968,
+    "cured": 564509,
+    "deceased": 1702,
+    "vaccined": 13315751,
+    "newVaccined": 21741,
+    "vaccine_coverage": 134.63
+  },
+  {
+    "name": "黎巴嫩",
+    "confirmed": 541557,
+    "newConfirmed": 134,
+    "cured": 523476,
+    "deceased": 7763,
+    "vaccined": 863134,
+    "newVaccined": 11044,
+    "vaccine_coverage": 12.65
+  },
+  {
+    "name": "摩洛哥",
+    "confirmed": 521426,
+    "newConfirmed": 231,
+    "cured": 509083,
+    "deceased": 9178,
+    "vaccined": 15007487,
+    "newVaccined": null,
+    "vaccine_coverage": 40.66
+  },
+  {
+    "name": "沙特阿拉伯",
+    "confirmed": 457546,
+    "newConfirmed": 0,
+    "cured": 440644,
+    "deceased": 7456,
+    "vaccined": 14977476,
+    "newVaccined": 134280,
+    "vaccine_coverage": 43.02
+  },
+  {
+    "name": "哈萨克斯坦",
+    "confirmed": 450868,
+    "newConfirmed": 1010,
+    "cured": 418803,
+    "deceased": 3473,
+    "vaccined": 3409522,
+    "newVaccined": 34517,
+    "vaccine_coverage": 18.16
+  },
+  {
+    "name": "厄瓜多尔",
+    "confirmed": 432353,
+    "newConfirmed": 924,
+    "cured": 398645,
+    "deceased": 20809,
+    "vaccined": 2597836,
+    "newVaccined": 68618,
+    "vaccine_coverage": 14.72
+  },
+  {
+    "name": "保加利亚",
+    "confirmed": 419473,
+    "newConfirmed": 47,
+    "cured": 386099,
+    "deceased": 17820,
+    "vaccined": 1464251,
+    "newVaccined": 7410,
+    "vaccine_coverage": 21.07
+  },
+  {
+    "name": "希腊",
+    "confirmed": 409368,
+    "newConfirmed": 579,
+    "cured": 93764,
+    "deceased": 12277,
+    "vaccined": 6084963,
+    "newVaccined": 98483,
+    "vaccine_coverage": 58.38
+  },
+  {
+    "name": "白俄罗斯",
+    "confirmed": 400422,
+    "newConfirmed": 570,
+    "cured": 392744,
+    "deceased": 2919,
+    "vaccined": 796834,
+    "newVaccined": null,
+    "vaccine_coverage": 8.43
+  },
+  {
+    "name": "斯洛伐克",
+    "confirmed": 390451,
+    "newConfirmed": 15,
+    "cured": 255300,
+    "deceased": 12414,
+    "vaccined": 2773294,
+    "newVaccined": 18842,
+    "vaccine_coverage": 50.8
+  },
+  {
+    "name": "玻利维亚",
+    "confirmed": 387162,
+    "newConfirmed": 1428,
+    "cured": 306819,
+    "deceased": 15024,
+    "vaccined": 1829560,
+    "newVaccined": 3914,
+    "vaccine_coverage": 15.67
+  },
+  {
+    "name": "巴拿马",
+    "confirmed": 382475,
+    "newConfirmed": 526,
+    "cured": 368365,
+    "deceased": 6402,
+    "vaccined": 1100689,
+    "newVaccined": 16833,
+    "vaccine_coverage": 25.51
+  },
+  {
+    "name": "巴拉圭",
+    "confirmed": 373165,
+    "newConfirmed": 2144,
+    "cured": 306695,
+    "deceased": 9874,
+    "vaccined": 407644,
+    "newVaccined": 14977,
+    "vaccine_coverage": 5.72
+  },
+  {
+    "name": "克罗地亚",
+    "confirmed": 357608,
+    "newConfirmed": 43,
+    "cured": 348274,
+    "deceased": 8091,
+    "vaccined": 1902092,
+    "newVaccined": 16320,
+    "vaccine_coverage": 46.33
+  },
+  {
+    "name": "突尼斯",
+    "confirmed": 355732,
+    "newConfirmed": 1950,
+    "cured": 311340,
+    "deceased": 12980,
+    "vaccined": 1126036,
+    "newVaccined": 74240,
+    "vaccine_coverage": 9.53
+  },
+  {
+    "name": "格鲁吉亚",
+    "confirmed": 349405,
+    "newConfirmed": 307,
+    "cured": 334519,
+    "deceased": 4934,
+    "vaccined": 211728,
+    "newVaccined": 8970,
+    "vaccine_coverage": 5.31
+  },
+  {
+    "name": "阿塞拜疆",
+    "confirmed": 334747,
+    "newConfirmed": 32,
+    "cured": 327114,
+    "deceased": 4945,
+    "vaccined": 2546169,
+    "newVaccined": 33084,
+    "vaccine_coverage": 25.11
+  },
+  {
+    "name": "哥斯达黎加",
+    "confirmed": 327979,
+    "newConfirmed": 0,
+    "cured": 247905,
+    "deceased": 4153,
+    "vaccined": 1658685,
+    "newVaccined": null,
+    "vaccine_coverage": 32.56
+  },
+  {
+    "name": "科威特",
+    "confirmed": 317197,
+    "newConfirmed": 1297,
+    "cured": 301137,
+    "deceased": 1795,
+    "vaccined": 1820000,
+    "newVaccined": null,
+    "vaccine_coverage": 42.62
+  },
+  {
+    "name": "乌拉圭",
+    "confirmed": 316535,
+    "newConfirmed": 3832,
+    "cured": 275138,
+    "deceased": 4640,
+    "vaccined": 3012523,
+    "newVaccined": null,
+    "vaccine_coverage": 86.72
+  },
+  {
+    "name": "巴勒斯坦",
+    "confirmed": 310026,
+    "newConfirmed": 173,
+    "cured": 301881,
+    "deceased": 3517,
+    "vaccined": 607832,
+    "newVaccined": 710,
+    "vaccine_coverage": 11.91
+  },
+  {
+    "name": "多米尼加",
+    "confirmed": 301078,
+    "newConfirmed": 1397,
+    "cured": 245190,
+    "deceased": 3654,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "丹麦",
+    "confirmed": 287735,
+    "newConfirmed": 462,
+    "cured": 273104,
+    "deceased": 2521,
+    "vaccined": 3715218,
+    "newVaccined": 42487,
+    "vaccine_coverage": 64.14
+  },
+  {
+    "name": "立陶宛",
+    "confirmed": 276543,
+    "newConfirmed": 90,
+    "cured": 259909,
+    "deceased": 4309,
+    "vaccined": 1799353,
+    "newVaccined": 5577,
+    "vaccine_coverage": 66.1
+  },
+  {
+    "name": "埃塞俄比亚",
+    "confirmed": 272914,
+    "newConfirmed": 109,
+    "cured": 246247,
+    "deceased": 4209,
+    "vaccined": 1865958,
+    "newVaccined": 12699,
+    "vaccine_coverage": 1.62
+  },
+  {
+    "name": "埃及",
+    "confirmed": 267972,
+    "newConfirmed": 801,
+    "cured": 196604,
+    "deceased": 15352,
+    "vaccined": 2698411,
+    "newVaccined": null,
+    "vaccine_coverage": 2.64
+  },
+  {
+    "name": "爱尔兰",
+    "confirmed": 264498,
+    "newConfirmed": 0,
+    "cured": 23364,
+    "deceased": 4941,
+    "vaccined": 2387348,
+    "newVaccined": null,
+    "vaccine_coverage": 48.35
+  },
+  {
+    "name": "危地马拉",
+    "confirmed": 261958,
+    "newConfirmed": 566,
+    "cured": 239176,
+    "deceased": 8294,
+    "vaccined": 595590,
+    "newVaccined": 810,
+    "vaccine_coverage": 3.32
+  },
+  {
+    "name": "摩尔多瓦",
+    "confirmed": 255453,
+    "newConfirmed": 21,
+    "cured": 248040,
+    "deceased": 6134,
+    "vaccined": 470718,
+    "newVaccined": 1053,
+    "vaccine_coverage": 11.67
+  },
+  {
+    "name": "斯洛文尼亚",
+    "confirmed": 255432,
+    "newConfirmed": 57,
+    "cured": 247381,
+    "deceased": 4390,
+    "vaccined": 1198098,
+    "newVaccined": 6332,
+    "vaccine_coverage": 57.63
+  },
+  {
+    "name": "巴林",
+    "confirmed": 251078,
+    "newConfirmed": 1496,
+    "cured": 228370,
+    "deceased": 1119,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "委内瑞拉",
+    "confirmed": 242138,
+    "newConfirmed": 1424,
+    "cured": 222531,
+    "deceased": 2719,
+    "vaccined": 3300000,
+    "newVaccined": null,
+    "vaccine_coverage": 11.61
+  },
+  {
+    "name": "洪都拉斯",
+    "confirmed": 241826,
+    "newConfirmed": 252,
+    "cured": 86150,
+    "deceased": 6479,
+    "vaccined": 420531,
+    "newVaccined": null,
+    "vaccine_coverage": 4.25
+  },
+  {
+    "name": "阿曼",
+    "confirmed": 225095,
+    "newConfirmed": 1216,
+    "cured": 205305,
+    "deceased": 2424,
+    "vaccined": 296894,
+    "newVaccined": null,
+    "vaccine_coverage": 5.81
+  },
+  {
+    "name": "亚美尼亚",
+    "confirmed": 223212,
+    "newConfirmed": 32,
+    "cured": 214504,
+    "deceased": 4463,
+    "vaccined": 33529,
+    "newVaccined": null,
+    "vaccine_coverage": 1.13
+  },
+  {
+    "name": "卡塔尔",
+    "confirmed": 218627,
+    "newConfirmed": 0,
+    "cured": 215294,
+    "deceased": 569,
+    "vaccined": 2676239,
+    "newVaccined": 19544,
+    "vaccine_coverage": 92.89
+  },
+  {
+    "name": "斯里兰卡",
+    "confirmed": 205333,
+    "newConfirmed": 2976,
+    "cured": 167304,
+    "deceased": 1742,
+    "vaccined": 2296864,
+    "newVaccined": 24604,
+    "vaccine_coverage": 10.73
+  },
+  {
+    "name": "波黑",
+    "confirmed": 204304,
+    "newConfirmed": 0,
+    "cured": 176286,
+    "deceased": 9374,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "利比亚",
+    "confirmed": 187685,
+    "newConfirmed": 404,
+    "cured": 173394,
+    "deceased": 3146,
+    "vaccined": 243891,
+    "newVaccined": null,
+    "vaccine_coverage": 3.55
+  },
+  {
+    "name": "泰国",
+    "confirmed": 179886,
+    "newConfirmed": 2419,
+    "cured": 26873,
+    "deceased": 1269,
+    "vaccined": 4190503,
+    "newVaccined": null,
+    "vaccine_coverage": 6.0
+  },
+  {
+    "name": "肯尼亚",
+    "confirmed": 172491,
+    "newConfirmed": 166,
+    "cured": 117595,
+    "deceased": 3287,
+    "vaccined": 983580,
+    "newVaccined": 1693,
+    "vaccine_coverage": 1.83
+  },
+  {
+    "name": "尼日利亚",
+    "confirmed": 166767,
+    "newConfirmed": 11,
+    "cured": 163096,
+    "deceased": 2117,
+    "vaccined": 2225765,
+    "newVaccined": null,
+    "vaccine_coverage": 1.08
+  },
+  {
+    "name": "北马其顿",
+    "confirmed": 155417,
+    "newConfirmed": 0,
+    "cured": 149292,
+    "deceased": 5455,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "古巴",
+    "confirmed": 148918,
+    "newConfirmed": 1087,
+    "cured": 141949,
+    "deceased": 1012,
+    "vaccined": 2734854,
+    "newVaccined": 142279,
+    "vaccine_coverage": 24.15
+  },
+  {
+    "name": "韩国",
+    "confirmed": 144637,
+    "newConfirmed": 485,
+    "cured": 134861,
+    "deceased": 1974,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "缅甸",
+    "confirmed": 144317,
+    "newConfirmed": 64,
+    "cured": 132452,
+    "deceased": 3225,
+    "vaccined": 2994900,
+    "newVaccined": null,
+    "vaccine_coverage": 5.5
+  },
+  {
+    "name": "拉脱维亚",
+    "confirmed": 134888,
+    "newConfirmed": 76,
+    "cured": 128619,
+    "deceased": 2413,
+    "vaccined": 850848,
+    "newVaccined": 4841,
+    "vaccine_coverage": 45.11
+  },
+  {
+    "name": "阿尔巴尼亚",
+    "confirmed": 132379,
+    "newConfirmed": 5,
+    "cured": 129664,
+    "deceased": 2451,
+    "vaccined": 798624,
+    "newVaccined": null,
+    "vaccine_coverage": 27.75
+  },
+  {
+    "name": "阿尔及利亚",
+    "confirmed": 130958,
+    "newConfirmed": 277,
+    "cured": 91198,
+    "deceased": 3518,
+    "vaccined": 75000,
+    "newVaccined": null,
+    "vaccine_coverage": 0.17
+  },
+  {
+    "name": "爱沙尼亚",
+    "confirmed": 130156,
+    "newConfirmed": 37,
+    "cured": 124716,
+    "deceased": 1264,
+    "vaccined": 762382,
+    "newVaccined": 5218,
+    "vaccine_coverage": 57.47
+  },
+  {
+    "name": "挪威",
+    "confirmed": 126817,
+    "newConfirmed": 44,
+    "cured": 17998,
+    "deceased": 785,
+    "vaccined": 2915249,
+    "newVaccined": 96774,
+    "vaccine_coverage": 53.77
+  },
+  {
+    "name": "中国",
+    "confirmed": 114674,
+    "newConfirmed": 568,
+    "cured": 98996,
+    "deceased": 5132,
+    "vaccined": 777879000,
+    "newVaccined": 14814000,
+    "vaccine_coverage": 54.04
+  },
+  {
+    "name": "吉尔吉斯斯坦",
+    "confirmed": 107335,
+    "newConfirmed": 362,
+    "cured": 100722,
+    "deceased": 1852,
+    "vaccined": 54101,
+    "newVaccined": null,
+    "vaccine_coverage": 0.83
+  },
+  {
+    "name": "乌兹别克斯坦",
+    "confirmed": 101964,
+    "newConfirmed": 242,
+    "cured": 97861,
+    "deceased": 696,
+    "vaccined": 2136423,
+    "newVaccined": null,
+    "vaccine_coverage": 6.38
+  },
+  {
+    "name": "赞比亚",
+    "confirmed": 100278,
+    "newConfirmed": 0,
+    "cured": 93374,
+    "deceased": 1308,
+    "vaccined": 147115,
+    "newVaccined": null,
+    "vaccine_coverage": 0.8
+  },
+  {
+    "name": "黑山",
+    "confirmed": 99812,
+    "newConfirmed": 21,
+    "cured": 97578,
+    "deceased": 1592,
+    "vaccined": 242070,
+    "newVaccined": 3196,
+    "vaccine_coverage": 38.54
+  },
+  {
+    "name": "加纳",
+    "confirmed": 94228,
+    "newConfirmed": 40,
+    "cured": 92362,
+    "deceased": 787,
+    "vaccined": 1228216,
+    "newVaccined": null,
+    "vaccine_coverage": 3.95
+  },
+  {
+    "name": "芬兰",
+    "confirmed": 93281,
+    "newConfirmed": 55,
+    "cured": 46000,
+    "deceased": 959,
+    "vaccined": 3240047,
+    "newVaccined": null,
+    "vaccine_coverage": 58.48
+  },
+  {
+    "name": "阿富汗",
+    "confirmed": 80841,
+    "newConfirmed": 2878,
+    "cured": 58622,
+    "deceased": 3187,
+    "vaccined": 626290,
+    "newVaccined": null,
+    "vaccine_coverage": 1.61
+  },
+  {
+    "name": "喀麦隆",
+    "confirmed": 78929,
+    "newConfirmed": 0,
+    "cured": 35261,
+    "deceased": 1275,
+    "vaccined": 75215,
+    "newVaccined": null,
+    "vaccine_coverage": 0.28
+  },
+  {
+    "name": "萨尔瓦多",
+    "confirmed": 74141,
+    "newConfirmed": 0,
+    "cured": 69215,
+    "deceased": 2274,
+    "vaccined": 2015408,
+    "newVaccined": 44161,
+    "vaccine_coverage": 31.07
+  },
+  {
+    "name": "塞浦路斯",
+    "confirmed": 72779,
+    "newConfirmed": 29,
+    "cured": 39061,
+    "deceased": 363,
+    "vaccined": 649005,
+    "newVaccined": null,
+    "vaccine_coverage": 74.1
+  },
+  {
+    "name": "莫桑比克",
+    "confirmed": 71114,
+    "newConfirmed": 32,
+    "cured": 69662,
+    "deceased": 837,
+    "vaccined": 394312,
+    "newVaccined": null,
+    "vaccine_coverage": 1.26
+  },
+  {
+    "name": "卢森堡",
+    "confirmed": 70182,
+    "newConfirmed": 0,
+    "cured": 68556,
+    "deceased": 818,
+    "vaccined": 373485,
+    "newVaccined": 17163,
+    "vaccine_coverage": 59.66
+  },
+  {
+    "name": "马尔代夫",
+    "confirmed": 67950,
+    "newConfirmed": 412,
+    "cured": 48086,
+    "deceased": 185,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "蒙古",
+    "confirmed": 66443,
+    "newConfirmed": 1177,
+    "cured": 54081,
+    "deceased": 313,
+    "vaccined": 3397608,
+    "newVaccined": 16796,
+    "vaccine_coverage": 103.64
+  },
+  {
+    "name": "新加坡",
+    "confirmed": 62196,
+    "newConfirmed": 0,
+    "cured": 61635,
+    "deceased": 33,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "纳米比亚",
+    "confirmed": 58707,
+    "newConfirmed": 650,
+    "cured": 52032,
+    "deceased": 912,
+    "vaccined": 87457,
+    "newVaccined": 2214,
+    "vaccine_coverage": 3.44
+  },
+  {
+    "name": "博茨瓦纳",
+    "confirmed": 56217,
+    "newConfirmed": 0,
+    "cured": 52675,
+    "deceased": 866,
+    "vaccined": 146725,
+    "newVaccined": null,
+    "vaccine_coverage": 6.24
+  },
+  {
+    "name": "乌干达",
+    "confirmed": 52935,
+    "newConfirmed": 1259,
+    "cured": 47760,
+    "deceased": 383,
+    "vaccined": 706626,
+    "newVaccined": 29542,
+    "vaccine_coverage": 1.54
+  },
+  {
+    "name": "牙买加",
+    "confirmed": 48810,
+    "newConfirmed": 0,
+    "cured": 25936,
+    "deceased": 960,
+    "vaccined": 177883,
+    "newVaccined": null,
+    "vaccine_coverage": 6.01
+  },
+  {
+    "name": "科特迪瓦",
+    "confirmed": 47490,
+    "newConfirmed": 14,
+    "cured": 46969,
+    "deceased": 306,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "马达加斯加",
+    "confirmed": 41742,
+    "newConfirmed": 52,
+    "cured": 40870,
+    "deceased": 866,
+    "vaccined": 36640,
+    "newVaccined": null,
+    "vaccine_coverage": 0.13
+  },
+  {
+    "name": "塞内加尔",
+    "confirmed": 41713,
+    "newConfirmed": 82,
+    "cured": 40298,
+    "deceased": 1148,
+    "vaccined": 522575,
+    "newVaccined": null,
+    "vaccine_coverage": 3.12
+  },
+  {
+    "name": "津巴布韦",
+    "confirmed": 39189,
+    "newConfirmed": 21,
+    "cured": 36728,
+    "deceased": 1606,
+    "vaccined": 1061951,
+    "newVaccined": 5713,
+    "vaccine_coverage": 7.14
+  },
+  {
+    "name": "苏丹",
+    "confirmed": 36004,
+    "newConfirmed": 348,
+    "cured": 29716,
+    "deceased": 2697,
+    "vaccined": 402114,
+    "newVaccined": null,
+    "vaccine_coverage": 0.92
+  },
+  {
+    "name": "安哥拉",
+    "confirmed": 35772,
+    "newConfirmed": 178,
+    "cured": 28880,
+    "deceased": 797,
+    "vaccined": 909215,
+    "newVaccined": null,
+    "vaccine_coverage": 2.77
+  },
+  {
+    "name": "柬埔寨",
+    "confirmed": 34833,
+    "newConfirmed": 589,
+    "cured": 28092,
+    "deceased": 266,
+    "vaccined": 4782587,
+    "newVaccined": 58643,
+    "vaccine_coverage": 28.61
+  },
+  {
+    "name": "马拉维",
+    "confirmed": 34390,
+    "newConfirmed": 6,
+    "cured": 32667,
+    "deceased": 1157,
+    "vaccined": 357650,
+    "newVaccined": 635,
+    "vaccine_coverage": 1.87
+  },
+  {
+    "name": "刚果（金）",
+    "confirmed": 33202,
+    "newConfirmed": 0,
+    "cured": 27751,
+    "deceased": 804,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "佛得角",
+    "confirmed": 31097,
+    "newConfirmed": 94,
+    "cured": 29647,
+    "deceased": 267,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "马耳他",
+    "confirmed": 30571,
+    "newConfirmed": 0,
+    "cured": 30080,
+    "deceased": 419,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "澳大利亚",
+    "confirmed": 30195,
+    "newConfirmed": 20,
+    "cured": 23611,
+    "deceased": 910,
+    "vaccined": 5016352,
+    "newVaccined": 88745,
+    "vaccine_coverage": 19.67
+  },
+  {
+    "name": "卢旺达",
+    "confirmed": 27245,
+    "newConfirmed": 34,
+    "cured": 26225,
+    "deceased": 360,
+    "vaccined": 400096,
+    "newVaccined": null,
+    "vaccine_coverage": 3.09
+  },
+  {
+    "name": "特立尼达和多巴哥",
+    "confirmed": 26410,
+    "newConfirmed": 218,
+    "cured": 15911,
+    "deceased": 577,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "叙利亚",
+    "confirmed": 24659,
+    "newConfirmed": 20,
+    "cured": 21635,
+    "deceased": 1793,
+    "vaccined": 24781,
+    "newVaccined": null,
+    "vaccine_coverage": 0.14
+  },
+  {
+    "name": "加蓬",
+    "confirmed": 24591,
+    "newConfirmed": 0,
+    "cured": 22815,
+    "deceased": 154,
+    "vaccined": 23371,
+    "newVaccined": null,
+    "vaccine_coverage": 1.05
+  },
+  {
+    "name": "几内亚",
+    "confirmed": 23255,
+    "newConfirmed": 0,
+    "cured": 21284,
+    "deceased": 162,
+    "vaccined": 369859,
+    "newVaccined": 4598,
+    "vaccine_coverage": 2.82
+  },
+  {
+    "name": "毛里塔尼亚",
+    "confirmed": 19817,
+    "newConfirmed": 32,
+    "cured": 18805,
+    "deceased": 468,
+    "vaccined": 37331,
+    "newVaccined": null,
+    "vaccine_coverage": 0.8
+  },
+  {
+    "name": "斯威士兰",
+    "confirmed": 18653,
+    "newConfirmed": 17,
+    "cured": 17903,
+    "deceased": 673,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "圭亚那",
+    "confirmed": 17665,
+    "newConfirmed": 48,
+    "cured": 15374,
+    "deceased": 409,
+    "vaccined": 285247,
+    "newVaccined": null,
+    "vaccine_coverage": 36.27
+  },
+  {
+    "name": "苏里南",
+    "confirmed": 16541,
+    "newConfirmed": 249,
+    "cured": 12518,
+    "deceased": 350,
+    "vaccined": 102612,
+    "newVaccined": 5904,
+    "vaccine_coverage": 17.49
+  },
+  {
+    "name": "巴布亚新几内亚",
+    "confirmed": 16327,
+    "newConfirmed": 0,
+    "cured": 15641,
+    "deceased": 164,
+    "vaccined": 11537,
+    "newVaccined": null,
+    "vaccine_coverage": 0.13
+  },
+  {
+    "name": "海地",
+    "confirmed": 15435,
+    "newConfirmed": 312,
+    "cured": 12557,
+    "deceased": 325,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "索马里",
+    "confirmed": 14748,
+    "newConfirmed": 19,
+    "cured": 6943,
+    "deceased": 773,
+    "vaccined": 137618,
+    "newVaccined": null,
+    "vaccine_coverage": 0.87
+  },
+  {
+    "name": "马里",
+    "confirmed": 14298,
+    "newConfirmed": 2,
+    "cured": 9873,
+    "deceased": 519,
+    "vaccined": 127042,
+    "newVaccined": null,
+    "vaccine_coverage": 0.63
+  },
+  {
+    "name": "安道尔",
+    "confirmed": 13758,
+    "newConfirmed": 0,
+    "cured": 13527,
+    "deceased": 127,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "多哥",
+    "confirmed": 13539,
+    "newConfirmed": 6,
+    "cured": 13249,
+    "deceased": 125,
+    "vaccined": 311938,
+    "newVaccined": null,
+    "vaccine_coverage": 3.77
+  },
+  {
+    "name": "布基纳法索",
+    "confirmed": 13453,
+    "newConfirmed": 1,
+    "cured": 13265,
+    "deceased": 167,
+    "vaccined": 200,
+    "newVaccined": null,
+    "vaccine_coverage": 0.0
+  },
+  {
+    "name": "塔吉克斯坦",
+    "confirmed": 13308,
+    "newConfirmed": 0,
+    "cured": 13218,
+    "deceased": 90,
+    "vaccined": 91775,
+    "newVaccined": null,
+    "vaccine_coverage": 0.96
+  },
+  {
+    "name": "伯利兹",
+    "confirmed": 12861,
+    "newConfirmed": 0,
+    "cured": 12439,
+    "deceased": 325,
+    "vaccined": 80121,
+    "newVaccined": 1591,
+    "vaccine_coverage": 20.15
+  },
+  {
+    "name": "塞舌尔",
+    "confirmed": 12158,
+    "newConfirmed": 0,
+    "cured": 10883,
+    "deceased": 42,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "巴哈马",
+    "confirmed": 11930,
+    "newConfirmed": 0,
+    "cured": 10932,
+    "deceased": 232,
+    "vaccined": 55037,
+    "newVaccined": null,
+    "vaccine_coverage": 14.0
+  },
+  {
+    "name": "刚果（布）",
+    "confirmed": 11920,
+    "newConfirmed": 0,
+    "cured": 10591,
+    "deceased": 155,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "吉布提",
+    "confirmed": 11562,
+    "newConfirmed": 6,
+    "cured": 11385,
+    "deceased": 154,
+    "vaccined": 21357,
+    "newVaccined": null,
+    "vaccine_coverage": 2.16
+  },
+  {
+    "name": "莱索托",
+    "confirmed": 10837,
+    "newConfirmed": 0,
+    "cured": 6437,
+    "deceased": 326,
+    "vaccined": 36759,
+    "newVaccined": null,
+    "vaccine_coverage": 1.72
+  },
+  {
+    "name": "越南",
+    "confirmed": 8983,
+    "newConfirmed": 236,
+    "cured": 3509,
+    "deceased": 53,
+    "vaccined": 1248559,
+    "newVaccined": 5255,
+    "vaccine_coverage": 1.28
+  },
+  {
+    "name": "赤道几内亚",
+    "confirmed": 8626,
+    "newConfirmed": 0,
+    "cured": 8203,
+    "deceased": 118,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "贝宁",
+    "confirmed": 8082,
+    "newConfirmed": 0,
+    "cured": 7893,
+    "deceased": 102,
+    "vaccined": 12934,
+    "newVaccined": null,
+    "vaccine_coverage": 0.11
+  },
+  {
+    "name": "东帝汶",
+    "confirmed": 7740,
+    "newConfirmed": 0,
+    "cured": 5321,
+    "deceased": 17,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "尼加拉瓜",
+    "confirmed": 7481,
+    "newConfirmed": 0,
+    "cured": 4225,
+    "deceased": 187,
+    "vaccined": 167500,
+    "newVaccined": null,
+    "vaccine_coverage": 2.53
+  },
+  {
+    "name": "中非共和国",
+    "confirmed": 7091,
+    "newConfirmed": 0,
+    "cured": 6859,
+    "deceased": 98,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "也门",
+    "confirmed": 6787,
+    "newConfirmed": 7,
+    "cured": 3571,
+    "deceased": 1329,
+    "vaccined": 104070,
+    "newVaccined": null,
+    "vaccine_coverage": 0.35
+  },
+  {
+    "name": "冰岛",
+    "confirmed": 6555,
+    "newConfirmed": 0,
+    "cured": 6476,
+    "deceased": 29,
+    "vaccined": 273455,
+    "newVaccined": 4131,
+    "vaccine_coverage": 80.13
+  },
+  {
+    "name": "冈比亚",
+    "confirmed": 5999,
+    "newConfirmed": 0,
+    "cured": 5796,
+    "deceased": 179,
+    "vaccined": 38490,
+    "newVaccined": null,
+    "vaccine_coverage": 1.59
+  },
+  {
+    "name": "尼日尔",
+    "confirmed": 5439,
+    "newConfirmed": 1,
+    "cured": 5132,
+    "deceased": 192,
+    "vaccined": 159525,
+    "newVaccined": null,
+    "vaccine_coverage": 0.66
+  },
+  {
+    "name": "圣卢西亚",
+    "confirmed": 5133,
+    "newConfirmed": 25,
+    "cured": 4899,
+    "deceased": 80,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "圣马力诺",
+    "confirmed": 5090,
+    "newConfirmed": 0,
+    "cured": 4998,
+    "deceased": 90,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "乍得",
+    "confirmed": 4939,
+    "newConfirmed": 0,
+    "cured": 4757,
+    "deceased": 174,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "布隆迪",
+    "confirmed": 4905,
+    "newConfirmed": 24,
+    "cured": 773,
+    "deceased": 8,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "厄立特里亚",
+    "confirmed": 4427,
+    "newConfirmed": 0,
+    "cured": 3894,
+    "deceased": 14,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "塞拉利昂",
+    "confirmed": 4201,
+    "newConfirmed": 13,
+    "cured": 3157,
+    "deceased": 79,
+    "vaccined": 79762,
+    "newVaccined": null,
+    "vaccine_coverage": 1.0
+  },
+  {
+    "name": "巴巴多斯",
+    "confirmed": 4031,
+    "newConfirmed": 1,
+    "cured": 3922,
+    "deceased": 47,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "科摩罗",
+    "confirmed": 3888,
+    "newConfirmed": 0,
+    "cured": 3736,
+    "deceased": 146,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "几内亚比绍",
+    "confirmed": 3787,
+    "newConfirmed": 0,
+    "cured": 3529,
+    "deceased": 68,
+    "vaccined": 5889,
+    "newVaccined": null,
+    "vaccine_coverage": 0.3
+  },
+  {
+    "name": "列支敦士登公国",
+    "confirmed": 3022,
+    "newConfirmed": 0,
+    "cured": 2934,
+    "deceased": 58,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "新西兰",
+    "confirmed": 2682,
+    "newConfirmed": 0,
+    "cured": 2639,
+    "deceased": 26,
+    "vaccined": 668115,
+    "newVaccined": 19181,
+    "vaccine_coverage": 13.85
+  },
+  {
+    "name": "摩纳哥",
+    "confirmed": 2508,
+    "newConfirmed": 0,
+    "cured": 2469,
+    "deceased": 33,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "利比里亚",
+    "confirmed": 2250,
+    "newConfirmed": 0,
+    "cured": 2049,
+    "deceased": 86,
+    "vaccined": 56144,
+    "newVaccined": null,
+    "vaccine_coverage": 1.11
+  },
+  {
+    "name": "圣文森特和格林纳丁斯",
+    "confirmed": 2076,
+    "newConfirmed": 8,
+    "cured": 1845,
+    "deceased": 12,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "老挝",
+    "confirmed": 1968,
+    "newConfirmed": 5,
+    "cured": 1720,
+    "deceased": 3,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "不丹",
+    "confirmed": 1703,
+    "newConfirmed": 16,
+    "cured": 1405,
+    "deceased": 1,
+    "vaccined": 482716,
+    "newVaccined": 43,
+    "vaccine_coverage": 62.56
+  },
+  {
+    "name": "毛里求斯",
+    "confirmed": 1458,
+    "newConfirmed": 4,
+    "cured": 1206,
+    "deceased": 18,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "安提瓜和巴布达",
+    "confirmed": 1263,
+    "newConfirmed": 0,
+    "cured": 1214,
+    "deceased": 42,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "钻石号邮轮",
+    "confirmed": 712,
+    "newConfirmed": 0,
+    "cured": 699,
+    "deceased": 13,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "斐济",
+    "confirmed": 687,
+    "newConfirmed": 83,
+    "cured": 193,
+    "deceased": 4,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "坦桑尼亚",
+    "confirmed": 509,
+    "newConfirmed": 0,
+    "cured": 183,
+    "deceased": 21,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "文莱",
+    "confirmed": 244,
+    "newConfirmed": 0,
+    "cured": 231,
+    "deceased": 3,
+    "vaccined": 55085,
+    "newVaccined": null,
+    "vaccine_coverage": 12.59
+  },
+  {
+    "name": "多米尼克",
+    "confirmed": 188,
+    "newConfirmed": 0,
+    "cured": 188,
+    "deceased": 0,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "格林纳达",
+    "confirmed": 161,
+    "newConfirmed": 0,
+    "cured": 160,
+    "deceased": 1,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "圣基茨和尼维斯",
+    "confirmed": 83,
+    "newConfirmed": 0,
+    "cured": 51,
+    "deceased": 0,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "格陵兰",
+    "confirmed": 43,
+    "newConfirmed": null,
+    "cured": 34,
+    "deceased": 0,
+    "vaccined": 26063,
+    "newVaccined": 728,
+    "vaccine_coverage": 45.91
+  },
+  {
+    "name": "马提尼克岛",
+    "confirmed": 37,
+    "newConfirmed": 0,
+    "cured": 0,
+    "deceased": 1,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "梵蒂冈",
+    "confirmed": 27,
+    "newConfirmed": 0,
+    "cured": 27,
+    "deceased": 0,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "所罗门群岛",
+    "confirmed": 20,
+    "newConfirmed": 0,
+    "cured": 20,
+    "deceased": 0,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "瓦努阿图",
+    "confirmed": 4,
+    "newConfirmed": 0,
+    "cured": 3,
+    "deceased": 1,
+    "vaccined": 270,
+    "newVaccined": null,
+    "vaccine_coverage": 0.09
+  },
+  {
+    "name": "马绍尔群岛",
+    "confirmed": 4,
+    "newConfirmed": 0,
+    "cured": 4,
+    "deceased": 0,
+    "vaccined": null,
+    "newVaccined": null,
+    "vaccine_coverage": null
+  },
+  {
+    "name": "秘鲁",
+    "confirmed": 0,
+    "newConfirmed": 0,
+    "cured": 0,
+    "deceased": 0,
+    "vaccined": 4298860,
+    "newVaccined": 19841,
+    "vaccine_coverage": 13.04
+  }
+]

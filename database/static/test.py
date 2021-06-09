@@ -42,4 +42,4 @@ def getCountryHisTest():
 #db.create_all()
 #getNewArea()
 
-getCountryInfoJson()
+print(getIfAddInf('Texas'))
