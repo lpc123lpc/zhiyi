@@ -72,6 +72,7 @@ export default {
     }
   },
   mounted () {
+    this.data = data
     if (this.$route.query.data.length !== 0) {
       var temp = []
       for (var i = 0; i < this.$route.query.data.length; i++) {
@@ -79,7 +80,6 @@ export default {
       }
       this.form.region = temp
     }
-    this.data = data
     this.state = 0
   },
   methods: {
