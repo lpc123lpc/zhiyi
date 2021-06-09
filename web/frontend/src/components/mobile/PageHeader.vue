@@ -20,7 +20,7 @@
         <van-cell title="国家列表" is-link to="/Home" class="cell-item"/>
         <van-cell title="疫苗接种" is-link to="/VaccineHome" class="cell-item"/>
         <van-cell title="感染情况" is-link to="/InfectHome" class="cell-item"/>
-        <van-cell title="出行建议" is-link to="/TravelAdvice" class="cell-item"/>
+        <van-cell title="出行建议" is-link to="/TravelAdvice/''" class="cell-item"/>
         <van-cell title="新闻资讯" is-link to="/NewsInformation" class="cell-item"/>
         <van-cell title="反馈&建议" is-link to="/Feedback" class="cell-item"/>
         <van-cell title="数据来源" :clickable="true" @click="showDialog" class="cell-item"/>
