@@ -12,8 +12,8 @@
         <el-button type="primary" plain @click="goTravelAdvice">查看出行建议</el-button>
       </el-col>
     </el-row>
-    <el-row>
-      <el-col :span=50>
+    <el-row style="margin-top: 50px;">
+      <el-col :span=12>
         <el-card class="box-card">
           <div slot="header" class="clearfix">
             <span class="title">感染情况</span>
@@ -37,7 +37,7 @@
           </div>
         </el-card>
       </el-col>
-      <el-col :span=50>
+      <el-col :span=12>
         <el-card class="box-card">
           <div slot="header" class="clearfix">
             <span class="title">接种情况</span>

@@ -28,8 +28,7 @@
 
 .box-card {
   width: 350px;
-  margin-left: 150px;
-  margin-top: 50px;
+  margin: auto;
   border-radius: 20px;
   height: 320px;
 }
