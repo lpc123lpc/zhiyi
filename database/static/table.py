@@ -96,7 +96,7 @@ class VacInstitution(db.Model):
     city = db.Column(db.String(20), primary_key=True)
     name = db.Column(db.String(100), primary_key=True)
     addr = db.Column(db.String(100))
-    tel = db.Column(db.String(20))
+    tel = db.Column(db.String(100))
     
 
 class RiskArea(db.Model):

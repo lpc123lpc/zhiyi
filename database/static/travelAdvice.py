@@ -9,8 +9,9 @@ def getPolicyIndex(region):
     else:
         parent = area.parentArea
         while parent != 'global':
-            area = db.session.query(Area).filter(Area.childArea == region).first()
+            area = db.session.query(Area).filter(Area.childArea == parent).first()
             parent = area.parentArea
+            print(parent)
         name = area.childArea
         policy = db.session.query(PolicyStrict).filter(PolicyStrict.countryName == name).first()
         if policy is None:
