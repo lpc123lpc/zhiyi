@@ -35,8 +35,8 @@ class Spider:
     nowDomesticCovidDataUrl = 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5'
     # 感染-国内各省、市-历史-数据
     # Tencent News
-    provinceCityMapPath = './provinceCityMap.json'
-    provinceCityUrlsPath = './provinceCityUrlsMap.json'
+    provinceCityMapPath = 'spider/provinceCityMap.json'
+    provinceCityUrlsPath = 'spider/provinceCityUrlsMap.json'
 
     # 感染-各国(包括中国)、主要国家的各行政区-历史-数据
     # JHU
@@ -130,8 +130,8 @@ class Spider:
 
     @classmethod
     def gerUrlsMap(cls):
-        provinceCityMapPath = './provinceCityMap.json'
-        provinceCityUrlsPath = './provinceCityUrlsMap.json'
+        provinceCityMapPath = 'spider/provinceCityMap.json'
+        provinceCityUrlsPath = 'spider/provinceCityUrlsMap.json'
         with open(provinceCityMapPath, mode='r', encoding='utf-8') as f:
             locationsMap = json.load(f)
             # print(locationsMap)
@@ -155,7 +155,7 @@ class Spider:
 
     @classmethod
     def getProvinceCityJsonData(cls):
-        provinceCityUrlsPath = './provinceCityUrlsMap.json'
+        provinceCityUrlsPath = 'spider/provinceCityUrlsMap.json'
         provinceCityJson = {}
         with open(provinceCityUrlsPath, mode='r', encoding='utf-8') as f:
             urlsMap = json.load(f)
@@ -268,7 +268,7 @@ class Spider:
         elif idx == 8:
             # 感染-海外国家-历史-数据
             # 返回 dict 类型，可用saveToJson存储到json文件进行查看
-            countriesUrlsMapPath = "./countriesUrlsMap.json"
+            countriesUrlsMapPath = "spider/countriesUrlsMap.json"
             # countriesDataMapPath = "./countriesDataMap.json"
             headers = {
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
