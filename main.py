@@ -3,12 +3,14 @@ from flask_cors import CORS
 from controller import map, tables, sidebar, vaccineAgency, search, news, safeLevel
 from database.static import dao, table
 from database.static.getInitData import *
-from database.static.dao import updateInf, updateVac
-import os
+from spider import spiderBeta
+
 
 app = table.app
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 # 初始化数据库，第一次执行完后就可以注释掉
+'''spiderBeta.updateRiskList()
+spiderBeta.updateVaccineInstitutions()'''
 '''clearTable('chinaInfMessages')
 clearTable('hisInfMessages')
 getGlobalProvinceHisInf()'''
@@ -246,8 +248,6 @@ def getTravelAdvice():
 
 
 if __name__ == '__main__':
-    '''os.chdir("/Users/liuqian/PycharmProjects/covid-19")  # 注意这里请改成自己电脑上该文件夹的绝对路径 通用方法目前仍在查找 by:zzy
-    os.system("python database\\static\\initCreate.py")'''
     app.config['JSON_AS_ASCII'] = False
     '''app.debug = True'''
     app.run()
