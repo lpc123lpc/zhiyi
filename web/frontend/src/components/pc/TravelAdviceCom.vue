@@ -29,15 +29,19 @@
         </el-form-item>
       </el-form>
     </el-row>
-    <el-row>
-      <div v-if="state===1" style="text-align: center">
-        <div>出行建议</div>
-        <div>{{this.result.str1}}</div>
-        <div v-if="result.str2 !==''">{{this.result.str2}}</div>
-        <div v-if="result.str3 !==''">{{this.result.str3}}</div>
-        <div v-if="result.str4 !==''">{{this.result.str4}}</div>
-        <div></div>
-      </div>
+    <el-row type="flex" justify="center">
+      <el-card class="box-card" v-if="state===1" style="text-align: center;width: 50%;">
+        <div slot="header" class="clearfix" style="font-size: 22px;color: #409eff">出行建议</div>
+        <div>{{result.str1}}</div>
+        <div v-if="result.mid !== ''">
+          <span>中风险地区有：</span>
+          <span v-for="(item,index) in result.mid" :key="index">{{item}}</span>
+        </div>
+        <div v-if="result.high !== ''">
+          <span>高风险地区有：</span>
+          <span v-for="(item,index) in result.high" :key="index">{{item}}</span>
+        </div>
+      </el-card>
     </el-row>
   </div>
 </template>
@@ -65,7 +69,7 @@ export default {
           return time.getTime() < Date.now() || time.getTime() > Date.now() + 14 * 24 * 3600 * 1000
         }
       },
-      data: '',
+      data: [],
       searchRegion: '',
       state: '',
       result: ''
@@ -92,7 +96,6 @@ export default {
         // do nothing
       } else {
         that.getSearch()
-        alert(this.searchRegion)
         fetch('http://81.70.134.96:5000/travelAdvice', {method: 'POST',
           body: JSON.stringify({
             'region': that.searchRegion,
