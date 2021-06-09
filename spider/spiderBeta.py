@@ -259,9 +259,9 @@ def updateRiskList():
 	middlelist = data["middlelist"]
 
 	clearTable('riskAreas')
-	with open('../spider/city-map.json', mode='r', encoding='utf-8') as f:
+	with open('spider/city-map.json', mode='r', encoding='utf-8') as f:
 		cityMap = json.load(f)
-	with open('../spider/rankListProcess.json', mode='r', encoding='utf-8') as f:
+	with open('spider/rankListProcess.json', mode='r', encoding='utf-8') as f:
 		provinceMap = json.load(f)
 
 	for item in highlist:
@@ -393,9 +393,9 @@ def insertVaccineInstitutionsTencent():
 		'Accept': 'application/json, text/plain, */*',
 		'Referer': 'https://new.qq.com/'
 	}
-	with open('../spider/city-map.json', mode='r', encoding='utf-8') as f:
+	with open('spider/city-map.json', mode='r', encoding='utf-8') as f:
 		cityMap = json.load(f)
-	with open('../spider/rankListProcess.json', mode='r', encoding='utf-8') as f:
+	with open('spider/rankListProcess.json', mode='r', encoding='utf-8') as f:
 		provinceMap = json.load(f)
 	provinces = ["北京", "天津", "河北", "内蒙古", "辽宁", "上海", "浙江", "安徽", "福建",
 	           "山东", "河南", "湖北", "湖南", "广东", "广西", "四川", "云南", "陕西"]
