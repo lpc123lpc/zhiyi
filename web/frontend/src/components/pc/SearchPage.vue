@@ -6,7 +6,7 @@
         <el-button type="primary" plain
                    @click="showVaccineInstitution"
                    class="el-icon-view"
-                   id="vaccine-institution-button"> 接种机构
+                   v-show="show"> 接种机构
         </el-button>
         <el-button type="primary" plain @click="goMap">查看地图</el-button>
         <el-button type="primary" plain @click="goTravelAdvice">查看出行建议</el-button>
@@ -74,7 +74,8 @@ export default {
   ],
   data() {
     return {
-      mapRegion: {}
+      mapRegion: {},
+      show: true
     }
   },
   components: {
@@ -106,9 +107,9 @@ export default {
     showVaccineButton() {
       // console.log(this.region.split('  ').length)
       if (this.region.split('  ').length < 3) {
-        document.getElementById('vaccine-institution-button').style.display = 'none'
+        this.show = false
       } else {
-        document.getElementById('vaccine-institution-button').style.display = 'inline'
+        this.show = true
       }
     },
     goMap() {

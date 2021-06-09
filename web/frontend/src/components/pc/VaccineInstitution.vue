@@ -1,5 +1,6 @@
 <template>
   <div class="infinite-list-wrapper" style="overflow:auto">
+    <div style="text-align: center; font-size: 18px; color: dimgrey" v-show="show">暂未收录</div>
     <ul
       v-infinite-scroll="load"
       infinite-scroll-disabled="disabled">
@@ -38,12 +39,17 @@ export default {
   data () {
     return {
       count: Math.min(this.data.length, 10),
-      loading: false
+      loading: false,
+      show: true
     }
   },
-  // mounted() {
-  //   console.log(this.data.slice(0, this.count))
-  // },
+  mounted() {
+    // console.log(this.data.slice(0, this.count))
+    this.showNoDataHint()
+  },
+  created() {
+    this.showNoDataHint()
+  },
   computed: {
     noMore () {
       return this.count >= this.data.length
@@ -53,6 +59,10 @@ export default {
     }
   },
   methods: {
+    showNoDataHint() {
+      if (this.data.length === 0) this.show = true
+      else this.show = false
+    },
     load () {
       this.loading = true
       setTimeout(() => {

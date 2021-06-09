@@ -1,64 +1,52 @@
 <template>
   <div>
-    <el-row class="regionTitle">
-      <el-col :span=15 style="font-size: 26px" class="el-icon-location-information"> {{ this.region }}</el-col>
-      <el-col :span=9>
-        <el-button type="primary" plain
-                   @click="showVaccineInstitution"
-                   class="el-icon-view"
-                   id="vaccine-institution-button"> 接种机构
-        </el-button>
-        <el-button type="primary" plain @click="goMap">查看地图</el-button>
-        <el-button type="primary" plain @click="goTravelAdvice">查看出行建议</el-button>
-      </el-col>
-    </el-row>
-    <el-row>
-      <el-col :span=50>
-        <el-card class="box-card">
-          <div slot="header" class="clearfix">
-            <span class="title">感染情况</span>
-          </div>
-          <div class="el-card__body">
-            <div class="text item">现有确诊：
-              {{ this.data.infect.nowConfirm < 0 ? '暂未收录' : this.data.infect.nowConfirm }}
-            </div>
-            <div class="text item">累计确诊：
-              {{ this.data.infect.totalConfirm < 0 ? '暂未收录' : this.data.infect.totalConfirm }}
-            </div>
-            <div class="text item">累计治愈：
-              {{ this.data.infect.cured < 0 ? '暂未收录' : this.data.infect.cured }}
-            </div>
-            <div class="text item">累计死亡：
-              {{ this.data.infect.dead < 0 ? '暂未收录' : this.data.infect.dead }}
-            </div>
-            <div class="text item">感染率：
-              {{ this.data.infect.coverage < 0 ? '暂未收录' : (this.data.infect.coverage * 100 + '%') }}
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span=50>
-        <el-card class="box-card">
-          <div slot="header" class="clearfix">
-            <span class="title">接种情况</span>
-          </div>
-          <div class="el-card__body">
-            <div class="text item">接种人数：
-              {{ this.data.vaccine.vaccined < 0 ? '暂未收录' : this.data.vaccine.vaccined }}
-            </div>
-            <div class="text item">每百人接种量：
-              {{ this.data.vaccine.coverage < 0 ? '暂未收录' : this.data.vaccine.coverage }}
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-    <div id="vaccineInstitution" style="display: none">
-      <div class="regionTitle" style="font-size: 24px">
-        <i class="el-icon-office-building"> 接种机构</i>
-      </div>
-      <vaccine-institution v-bind:data="this.vaccineData"></vaccine-institution>
+    <div class="title">
+      <van-icon name="location-o"> {{ this.region }}</van-icon>
     </div>
+    <van-collapse v-model="activeNames">
+      <van-collapse-item title="感染情况" name="1">
+        <div class="list-item">现有确诊:
+          {{ this.data.infect.nowConfirm < 0 ? '暂未收录' : this.data.infect.nowConfirm }}
+        </div>
+        <div class="list-item">累计确诊:
+          {{ this.data.infect.totalConfirm < 0 ? '暂未收录' : this.data.infect.totalConfirm }}
+        </div>
+        <div class="list-item">累计治愈：
+          {{ this.data.infect.cured < 0 ? '暂未收录' : this.data.infect.cured }}
+        </div>
+        <div class="list-item">累计死亡：
+          {{ this.data.infect.dead < 0 ? '暂未收录' : this.data.infect.dead }}
+        </div>
+        <div class="list-item">感染率：
+          {{ this.data.infect.coverage < 0 ? '暂未收录' : (this.data.infect.coverage * 100 + '%') }}
+        </div>
+      </van-collapse-item>
+      <van-collapse-item title="接种情况" name="2">
+        <div class="list-item">接种人数：
+          {{ this.data.vaccine.vaccined < 0 ? '暂未收录' : this.data.vaccine.vaccined }}
+        </div>
+        <div class="list-item">每百人接种量：
+          {{ this.data.vaccine.coverage < 0 ? '暂未收录' : this.data.vaccine.coverage }}
+        </div>
+      </van-collapse-item>
+      <van-collapse-item name="3" title="接种机构" v-show="show">
+        <vaccine-institution v-bind:data="this.vaccineData"></vaccine-institution>
+      </van-collapse-item>
+    </van-collapse>
+    <van-button
+      color="#8cc4ff"
+      hairline plain block
+      @click="goMap"
+      class="button-item"
+      id="button-item-id-1">查看地图
+    </van-button>
+    <van-button
+      color="#8cc4ff"
+      hairline plain block
+      @click="goTravelAdvice"
+      class="button-item"
+      id="button-item-id-2">查看出行建议
+    </van-button>
   </div>
 </template>
 
@@ -70,11 +58,13 @@ export default {
   props: [
     'region',
     'data',
-    'vaccineData'
+    'vaccineData',
   ],
   data() {
     return {
-      mapRegion: {}
+      mapRegion: {},
+      activeNames: [],
+      show: true
     }
   },
   components: {
@@ -86,12 +76,12 @@ export default {
   watch: {
     region() {
       this.mapRegion = this.getMapRegion()
-      this.showVaccineButton()
+      this.showVaccineInstitution()
     }
   },
   mounted() {
-    console.log(this.$route.query.data)
-    this.showVaccineButton()
+    // console.log(this.$route.query.data)
+    this.showVaccineInstitution()
   },
   methods: {
     getMapRegion() {
@@ -103,13 +93,10 @@ export default {
         return {region: regions[0], value: 0}
       }
     },
-    showVaccineButton() {
+    showVaccineInstitution() {
       // console.log(this.region.split('  ').length)
-      if (this.region.split('  ').length < 3) {
-        document.getElementById('vaccine-institution-button').style.display = 'none'
-      } else {
-        document.getElementById('vaccine-institution-button').style.display = 'inline'
-      }
+      if (this.region.split('  ').length < 3) this.show = false
+      else this.show = true
     },
     goMap() {
       if (this.mapRegion.value === 0) { // 国家
@@ -120,14 +107,25 @@ export default {
     },
     goTravelAdvice() {
       this.$router.push({path: `/TravelAdvice/${this.region}`, query: {data: this.$route.query.data}})
-    },
-    showVaccineInstitution() {
-      document.getElementById('vaccineInstitution').style.display = 'block'
     }
   }
 }
 </script>
 
 <style scoped>
-@import "../../assets/css/searchPage.css";
+
+.title {
+  margin: 15px 15px;
+  font-size: 18px;
+  color: black;
+}
+
+.list-item {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.button-item {
+  margin-bottom: 5px;
+}
 </style>

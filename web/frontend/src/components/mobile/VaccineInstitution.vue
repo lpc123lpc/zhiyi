@@ -1,31 +1,19 @@
 <template>
-  <div class="infinite-list-wrapper" style="overflow:auto">
-    <ul
-      v-infinite-scroll="load"
-      infinite-scroll-disabled="disabled">
-      <el-card
-        v-for="(i, index) in this.data.slice(0, count)"
-        :key="index"
-        class="list-item"
-        shadow="hover">
+  <div>
+    <div v-show="show" style="text-align: center;">暂未收录</div>
+    <div v-for="(i, index) in this.data" :key="index">
+      <div class="card">
         <div class="list-item-title">{{ i.name }}</div>
-        <el-row :gutter="50" class="list-item-info">
-          <el-col :span="16">
+        <div class="list-item-info">
             <i class="el-icon-map-location"/>
             <span>地址：{{ i.address }}</span>
-          </el-col>
-          <el-col :span="8">
-            <i class="el-icon-phone-outline"/>
-            <span>咨询电话：{{ i.tel }}</span>
-          </el-col>
-        </el-row>
-      </el-card>
-    </ul>
-    <p style="width: 100%"
-       v-loading="loading"
-       element-loading-spinner="el-icon-loading"
-       element-loading-text='加载中...'/>
-    <!--    <p v-if="noMore">没有更多了</p>-->
+        </div>
+        <div class="list-item-info">
+          <van-icon name="phone-o"/>
+          <span>咨询电话：{{ i.tel }}</span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -35,39 +23,48 @@ export default {
   props: [
     'data'
   ],
-  data () {
+  data() {
     return {
       count: Math.min(this.data.length, 10),
-      loading: false
+      loading: false,
+      show: true
     }
   },
-  // mounted() {
-  //   console.log(this.data.slice(0, this.count))
-  // },
-  computed: {
-    noMore () {
-      return this.count >= this.data.length
-    },
-    disabled () {
-      return this.loading || this.noMore
-    }
+  mounted() {
+    this.showNodataHint()
+  },
+  created() {
+    this.showNodataHint()
   },
   methods: {
-    load () {
-      this.loading = true
-      setTimeout(() => {
-        if (this.count + 10 > this.data.length) {
-          this.count = this.data.length
-        } else {
-          this.count += 10
-        }
-        this.loading = false
-      }, 2000)
+    showNodataHint() {
+      if (this.data.length !== 0) this.show = false
+      else this.show = true
     }
   }
 }
 </script>
 
 <style scoped>
-@import "../../assets/css/vaccineInstitution.css";
+.card {
+  position: relative;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  color: #323233;
+  font-size: 12px;
+  background-color: #fafafa;
+  margin-bottom: 5px;
+}
+
+.list-item-title {
+  font-family: "Microsoft YaHei", serif;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.list-item-info {
+  margin-bottom: 5px;
+  font-family: "Microsoft Yi Baiti", serif;
+  font-size: 12px;
+}
 </style>
