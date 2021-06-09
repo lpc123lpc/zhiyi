@@ -33,12 +33,12 @@
       <el-card class="box-card" v-if="state===1" style="text-align: center;width: 50%;">
         <div slot="header" class="clearfix" style="font-size: 22px;color: #409eff">出行建议</div>
         <div>{{result.str1}}</div>
-        <div v-if="result.mid !== ''">
-          <span>中风险地区有：</span>
+        <div v-if="result.mid.length !== 0" style="padding: 20px">
+          <span>中风险地区：</span>
           <span v-for="(item,index) in result.mid" :key="index">{{item}}</span>
         </div>
-        <div v-if="result.high !== ''">
-          <span>高风险地区有：</span>
+        <div v-if="result.high.length !== 0" style="padding: 20px">
+          <span>高风险地区：</span>
           <span v-for="(item,index) in result.high" :key="index">{{item}}</span>
         </div>
       </el-card>
@@ -114,7 +114,7 @@ export default {
         })
       }
     },
-    handleSelect (val) {
+    /* handleSelect (val) {
       var regions = [] // 将级联地区名以'  '连接
       // console.log(val)
       // alert(this.$refs['cascader'].getCheckedNodes())
@@ -133,7 +133,7 @@ export default {
         regions.pop()
       }
       this.searchRegion = regions.join('  ')
-    },
+    }, */
     getSearch () {
       var regions = this.$refs['cascader'].getCheckedNodes()[0].pathLabels
       if (regions.length > 1 && regions[regions.length - 1] === regions[regions.length - 2]) {
