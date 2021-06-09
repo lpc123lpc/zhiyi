@@ -61,7 +61,7 @@ export default {
         tooltip: {
           formatter: function (params) {
             if (!isNaN(params.value) && parseInt(params.value) >=0 ) {
-              return params.seriesName + '：' + value
+              return params.seriesName + '：' + params.value
             }
           }
         },
