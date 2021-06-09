@@ -11,7 +11,7 @@ def dealWithNone(i):
 
 
 def getWorldData():
-    worldVacData = dao.getNowVacMessageInclude('global')
+    '''worldVacData = dao.getNowVacMessageInclude('global')
     worldInfData = dao.getNowInfMessageInclude('global')
     all_data = []
     for i in worldInfData:
@@ -26,10 +26,10 @@ def getWorldData():
                                  "newVaccined": dealWithNone(getattr(j, 'addNum')),
                                  "vaccine_coverage": dealWithNone(getattr(j, 'vacRate'))})
                 break
-    return json.dumps(all_data)
-    '''with open("database/static/countryInfo.json", 'r', encoding='gbk') as f:
+    return json.dumps(all_data)'''
+    with open("database/static/countryInfo.json", 'r', encoding='gbk') as f:
         allInfo = json.load(f)
-    return json.dumps(allInfo)'''
+    return json.dumps(allInfo)
 
 
 def getCountryInfData(country):

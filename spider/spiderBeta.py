@@ -259,9 +259,9 @@ def updateRiskList():
 	middlelist = data["middlelist"]
 
 	clearTable('riskAreas')
-	with open('../spider/city-map.json', mode='r', encoding='utf-8') as f:
+	with open('spider/city-map.json', mode='r', encoding='utf-8') as f:
 		cityMap = json.load(f)
-	with open('../spider/rankListProcess.json', mode='r', encoding='utf-8') as f:
+	with open('spider/rankListProcess.json', mode='r', encoding='utf-8') as f:
 		provinceMap = json.load(f)
 
 	for item in highlist:
@@ -330,7 +330,7 @@ def updateStringency():
 	data = json.loads(response.text)
 	# print(data)
 
-	path = "../spider/testStrict.json"
+	path = "spider/testStrict.json"
 	with open(path, mode="w", encoding="utf-8") as f:
 		json.dump(data, f)
 	# print("写入文件成功！")
@@ -362,9 +362,9 @@ def updateStringency():
 	"""
 
 	clearTable('policyStrict')
-	with open('../spider//world-mapping-policy.json', mode='r', encoding='utf-8') as f:
+	with open('spider/world-mapping-policy.json', mode='r', encoding='utf-8') as f:
 		worldMapping = json.load(f)
-		with open('../spider/country-codes-lat-long-alpha3.json', mode='r', encoding='utf-8') as c:
+		with open('spider/country-codes-lat-long-alpha3.json', mode='r', encoding='utf-8') as c:
 			countryAlpha3 = json.load(c)["ref_country_codes"]
 			cAlpha3Mapping = {}
 			for country in countryAlpha3:
@@ -393,9 +393,9 @@ def insertVaccineInstitutionsTencent():
 		'Accept': 'application/json, text/plain, */*',
 		'Referer': 'https://new.qq.com/'
 	}
-	with open('../spider/city-map.json', mode='r', encoding='utf-8') as f:
+	with open('spider/city-map.json', mode='r', encoding='utf-8') as f:
 		cityMap = json.load(f)
-	with open('../spider/rankListProcess.json', mode='r', encoding='utf-8') as f:
+	with open('spider/rankListProcess.json', mode='r', encoding='utf-8') as f:
 		provinceMap = json.load(f)
 	provinces = ["北京", "天津", "河北", "内蒙古", "辽宁", "上海", "浙江", "安徽", "福建",
 	           "山东", "河南", "湖北", "湖南", "广东", "广西", "四川", "云南", "陕西"]
@@ -405,10 +405,12 @@ def insertVaccineInstitutionsTencent():
 			region=province
 			url = "https://apis.map.qq.com/place_cloud/search/region?region=" + parse.quote(
 				region) + "&key=ZTCBZ-M6FWU-DFTVG-2HCU2-OM7SV-2LBCF&orderby=distance(39.90387,116.389893)&table_id=5fed45b33fc08460dcadf521&page_size=20&page_index=1"
+			print(region)
 			response = requests.get(url=url, headers=headers)
 			data = json.loads(response.text)
 			data = data["result"]["data"]
 			if len(data) == 0:
+				print("data is empty.")
 				pass
 			else:
 				for item in data:
@@ -437,6 +439,7 @@ def insertVaccineInstitutionsTencent():
 				region=province+","+city
 				url="https://apis.map.qq.com/place_cloud/search/region?region=" + parse.quote(
 			region) + "&key=ZTCBZ-M6FWU-DFTVG-2HCU2-OM7SV-2LBCF&orderby=distance(39.90387,116.389893)&table_id=5fed45b33fc08460dcadf521&page_size=20&page_index=1"
+				print(region)
 				response = requests.get(url=url, headers=headers)
 				data = json.loads(response.text)
 				#print(region)
@@ -470,10 +473,11 @@ def updateVaccineInstitutions():
 
 
 if __name__ == '__main__':
+	pass
 	#updateCovidNews()
 	#updateVaccineNews()
 	#updateRiskList()
 	#updateVaccineInstitutions()
-	updateStringency()
-
+	#updateStringency()
+	#clearTable('vacInstitutions')
 # def updateRiskList():

@@ -13,8 +13,8 @@
                placeholder="请留下您的反馈及建议"
                show-word-limit>
     </van-field>
-    <van-button color="#8cc4ff" hairline plain block @click="submitForm()" :disabled="isDisabled" class="button-item" id="button-item-id-1">{{content}}</van-button>
-    <van-button color="#778899" hairline plain block @click="resetForm()" class="button-item" id="button-item-id-2">重置</van-button>
+    <van-button color="#8cc4ff" plain block @click="submitForm()" :disabled="isDisabled" class="button-item" id="button-item-id-1">{{content}}</van-button>
+    <van-button color="#778899" plain block @click="resetForm()" class="button-item" id="button-item-id-2">重置</van-button>
   </van-form>
 </template>
 
@@ -47,7 +47,7 @@ export default {
     },
     set_container_pos () {
       const containerItem = document.getElementById('container-item-id')
-      containerItem.style.setProperty('margin-top', (window.screen.height - 363) / 4 + 'px')
+      containerItem.style.setProperty('margin-top', (window.screen.height - 363) * 0.382 + 'px')
     },
     postFeedBack () {
       var formData = JSON.stringify(this.ruleForm)
@@ -105,6 +105,8 @@ export default {
 .button-item {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: medium;
+  letter-spacing: 2px;
 }
 .container-item {
 

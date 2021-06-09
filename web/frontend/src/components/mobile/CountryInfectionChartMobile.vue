@@ -1,5 +1,5 @@
 <template>
-  <div id="countryDataInfChart"></div>
+  <div id="countryDataInfChart" ref="countryDataInfChartRef"></div>
 </template>
 
 <script>
@@ -24,8 +24,8 @@ export default {
       echartItem.style.setProperty('height', window.screen.width + 'px')
     },
     drawInf () {
-      const echartItem = document.getElementById('countryDataInfChart')
-      let mychart = echarts.init(echartItem)
+      // const echartItem = document.getElementById('countryDataInfChart')
+      let mychart = echarts.init(this.$refs.countryDataInfChartRef)
       fetch('http://81.70.134.96:5000/countryInfData/' + this.country).then(function (response) {
         response.json().then(function (data) {
           if (JSON.stringify(data) === '{}') {

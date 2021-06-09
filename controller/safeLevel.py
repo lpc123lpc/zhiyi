@@ -27,7 +27,7 @@ def modify(a):
 
 def safeLevel(oriRegion, time):
     print(oriRegion)
-    str1, str2, str3, str4 = "", "", "", ""
+    # str1 = ""
     region = getRegion(oriRegion)
     print(region)
     addList = travelAdvice.getIfAddInf(region)
@@ -36,13 +36,20 @@ def safeLevel(oriRegion, time):
     if addList is None:
         str1 = "抱歉，该地区的收据暂未收录。"
     elif len(addList) == 0:
-        str1 = "该地区十四天内无新增病例。"
-        str2 = "该地区目前疫情态势稳定，出行前请了解目的地的相关政策，并做好防护。"
+        policyIndex = travelAdvice.getPolicyIndex(region)
+        if policyIndex is None:
+            str1 = "该地区十四天内无新增病例，目前疫情态势稳定，出行前请了解目的地的相关政策，并做好防护。"
+        else:
+            str1 = "该地区的政策严格性指数为：" + str(policyIndex) + "，且十四天内无新增病例。目前疫情态势稳定，出行前请了解目的地的相关政策，并做好防护。"
     else:
-        str1 = "该地区十四天内有新增病例。"
-        str2 = "该地区近十四天的新增病例数为："
+        policyIndex = travelAdvice.getPolicyIndex(region)
+        if policyIndex is None:
+            str1 = "该地区十四天内有新增病例，新增病例数为："
+        else:
+            str1 = "该地区的政策严格性指数为:" + str(policyIndex) + "，且十四天内有新增病例，新增病例数为："
         for i in addList:
-            str2 = str2 + str(i) + "例 "
+            str1 = str1 + str(i) + "例 "
+        str1 = str1 + "。"
         info = getInfo(region)
         path = "saved_model/" + str(info['num']) + ".pkl"
         num = datetime.datetime.strptime(time, '%Y-%m-%d') - datetime.datetime.strptime(info['begindate'], '%Y-%m-%d')
@@ -53,10 +60,10 @@ def safeLevel(oriRegion, time):
         infMsg = dao.getNowInfMessage(region)
         rate = (abs((ans - modify(getattr(infMsg, "totalNum")))) + modify(getattr(infMsg, "addNum"))) / info['population']
         if rate >= 0.0001:
-            str3 = "该地区目前的风险等级为高"
+            str1 = str1 + "该地区目前的风险等级为高，"
         else:
-            str3 = "该地区目前的风险等级为中"
-        str4 = "该地区目前有一定风险，建议您如非必要不要前往。出行前请了解目的地的相关政策，并做好防护。"
+            str1 = str1 + "该地区目前的风险等级为中，"
+        str1 = str1 + "目前有一定风险，建议您如非必要不要前往。出行前请了解目的地的相关政策，并做好防护。"
         places = oriRegion.split("  ")
         # risks = []
         if len(places) == 1:
@@ -73,9 +80,6 @@ def safeLevel(oriRegion, time):
                     high.append({"area": getattr(i, "childArea"), "abstract": getattr(i, "abstract")})
     return jsonify({
         "str1": str1,
-        "str2": str2,
-        "str3": str3,
-        "str4": str4,
         "mid": mid,
         "high": high
     })
