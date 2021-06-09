@@ -91,17 +91,30 @@ export default {
       timeValue: '',
       pickValue: new Date(),
       state: '',
-      result: ''
+      result: {
+        str1: '',
+        mid: [],
+        high: []
+      }
     }
   },
   mounted () {
     this.data = data
-    if (this.$route.query.data.length !== 0) {
-      var temp = []
-      for (var i = 0; i < this.$route.query.data.length; i++) {
-        temp.push(parseInt(this.$route.query.data[i]))
+    var temp = this.$route.params.region
+    alert(temp)
+    if (temp === '/"') {
+      // do nothing
+    }
+    else if (temp.indexOf('  ') !== -1) {
+      var regions = temp.split('  ')
+      if (regions[0] === '中国') {
+        regions[0] = '国内'
+      } else {
       }
-      this.form.region = temp
+      this.fieldValue = regions.join('/')
+    }
+    else {
+      this.fieldValue = temp
     }
     this.state = 0
   },

@@ -25,13 +25,13 @@ export default {
   name: 'SearchBar',
   data () {
     return {
-      data: '',
+      data: [],
       selectData: [],
       searchRegion: ''
     }
   },
   mounted () {
-    this.data = data
+    this.data = JSON.parse(JSON.stringify(data))
     // console.log(this.data)
   },
   watch: {
