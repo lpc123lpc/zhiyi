@@ -42,7 +42,4 @@ def getCountryHisTest():
 #db.create_all()
 #getNewArea()
 
-updateStringency()
-print(5)
-updateVaccineInstitutions()
-print(6)
+getCountryInfoJson()

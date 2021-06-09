@@ -196,8 +196,11 @@ def getCountryInfoJson():
             jsonDict['vaccine_coverage'] = vacInfo.vacRate if vacInfo.vacRate != -1 else None
         jsonList.append(jsonDict)
 
-    Spider.saveToJsonFile(jsonList, 'countryInfo.json')
+    jsonList = sorted(jsonList, key=lambda dic: dic['confirmed'], reverse=True)
 
+    fp = open('./countryInfo.json', 'w')
+    fp.write(json.dumps(jsonList, ensure_ascii=False))
+    fp.close()
 
 
 '''
