@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="margin-top: 20px">
+    <div>
       <van-field
         v-model="fieldValue"
         is-link
@@ -39,9 +39,7 @@
         </van-datetime-picker>
       </van-popup>
     </div>
-    <div style="text-align:center;margin-top: 30px">
-      <van-button type="info" @click="onSubmit" style="width: 80%">查询</van-button>
-    </div>
+    <van-button color="#8cc4ff" plain block @click="onSubmit" class="button-item" id="button-item-id-1">查询</van-button>
     <div v-if="state === 1" style="padding: 20px">
       <div style="margin-top: 30px;font-size: 22px;color: #409eff;text-align: center">出行建议</div>
       <div style="margin-top: 20px">{{result.str1}}</div>
@@ -95,6 +93,7 @@ export default {
     }
   },
   mounted () {
+    this.set_button_length()
     this.data = data
     if (this.$route.query.data.length !== 0) {
       var temp = []
@@ -180,11 +179,21 @@ export default {
         '-' +
         (date < 10 ? '0' + date : date)
       this.showTime = false
+    },
+    set_button_length () {
+      const button1 = document.getElementById('button-item-id-1')
+      button1.style.setProperty('width', window.screen.width / 10 * 9 + 'px')
+      button1.style.setProperty('margin-left', window.screen.width / 20 + 'px')
     }
   }
 }
 </script>
 
 <style scoped>
-
+.button-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: medium;
+  letter-spacing: 2px;
+}
 </style>

@@ -35,17 +35,17 @@
     </van-collapse>
     <van-button
       color="#8cc4ff"
-      hairline plain block
+      plain block
       @click="goMap"
       class="button-item"
-      id="button-item-id-1">查看地图
+      ref="buttonItemId1">查看地图
     </van-button>
     <van-button
       color="#8cc4ff"
-      hairline plain block
+      plain block
       @click="goTravelAdvice"
       class="button-item"
-      id="button-item-id-2">查看出行建议
+      ref="buttonItemId2">查看出行建议
     </van-button>
   </div>
 </template>
@@ -58,9 +58,9 @@ export default {
   props: [
     'region',
     'data',
-    'vaccineData',
+    'vaccineData'
   ],
-  data() {
+  data () {
     return {
       mapRegion: {},
       activeNames: [],
@@ -70,21 +70,22 @@ export default {
   components: {
     'vaccine-institution': vaccineInstitution
   },
-  created() {
+  created () {
     this.getMapRegion()
   },
   watch: {
-    region() {
+    region () {
       this.mapRegion = this.getMapRegion()
       this.showVaccineInstitution()
     }
   },
-  mounted() {
+  mounted () {
+    // this.set_button_length()
     // console.log(this.$route.query.data)
     this.showVaccineInstitution()
   },
   methods: {
-    getMapRegion() {
+    getMapRegion () {
       var regions = this.region.split('  ')
       // region取 0：国家/ 1：省
       if (regions[0] === '中国' && regions.length > 1) {
@@ -93,20 +94,28 @@ export default {
         return {region: regions[0], value: 0}
       }
     },
-    showVaccineInstitution() {
+    showVaccineInstitution () {
       // console.log(this.region.split('  ').length)
       if (this.region.split('  ').length < 3) this.show = false
       else this.show = true
     },
-    goMap() {
+    goMap () {
       if (this.mapRegion.value === 0) { // 国家
         this.$router.push({path: `/InfectDetail/${this.mapRegion.region}`})
       } else { // 省（中国）
         this.$router.push({path: `/InfectProvinceDetail/${this.mapRegion.region}`})
       }
     },
-    goTravelAdvice() {
+    goTravelAdvice () {
       this.$router.push({path: `/TravelAdvice/${this.region}`, query: {data: this.$route.query.data}})
+    },
+    set_button_length () {
+      // const button1 = this.getElementById('button-item-id-1')
+      // const button2 = this.getElementById('button-item-id-2')
+      this.$refs.buttonItemId1.style.setProperty('width', window.screen.width / 10 * 9 + 'px')
+      this.$refs.buttonItemId2.style.setProperty('width', window.screen.width / 10 * 9 + 'px')
+      this.$refs.buttonItemId1.style.setProperty('margin-left', window.screen.width / 20 + 'px')
+      this.$refs.buttonItemId2.style.setProperty('margin-left', window.screen.width / 20 + 'px')
     }
   }
 }
@@ -126,6 +135,10 @@ export default {
 }
 
 .button-item {
-  margin-bottom: 5px;
+  font-size: medium;
+  letter-spacing: 2px;
+  width: 90%;
+  margin: 10px auto;
 }
+
 </style>
