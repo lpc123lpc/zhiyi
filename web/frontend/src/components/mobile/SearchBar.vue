@@ -7,7 +7,7 @@
       placeholder="请选择地名"
       @click="state.show = true"
     />
-    <van-popup v-model:show="state.show" round position="bottom">
+    <van-popup v-model:show="state.show" position="bottom">
       <van-cascader
         v-model="this.selectData"
         title="请选择所在地区"
@@ -26,7 +26,7 @@ import data from '../../../static/json/searchData.json'
 
 export default {
   name: 'SearchBar',
-  data() {
+  data () {
     return {
       data: '',
       selectData: [],
@@ -34,21 +34,21 @@ export default {
       state: {show: false, fieldValue: ''}
     }
   },
-  mounted() {
+  mounted () {
     this.data = data
     // console.log(this.data)
   },
   watch: {
-    '$route'() { // 监听路由是否变化, 解决更新搜索结果后不刷新界面的问题
+    '$route' () { // 监听路由是否变化, 解决更新搜索结果后不刷新界面的问题
       if (this.$route.params.region) {
         this.$router.go(0)
       }
     }
   },
   methods: {
-    onFinish({ selectedOptions }) {
-      this.state.show = false;
-      this.state.fieldValue = selectedOptions.map((option) => option.label).join('/');
+    onFinish ({ selectedOptions }) {
+      this.state.show = false
+      this.state.fieldValue = selectedOptions.map((option) => option.label).join('/')
       // console.log(this.state.fieldValue)
       // console.log(this.selectData)
       var regions = this.state.fieldValue.split('/')
