@@ -70,14 +70,16 @@ def safeLevel(oriRegion, time):
             risks = travelAdvice.getRiskArea()
         elif len(places) == 2:
             risks = travelAdvice.getRiskArea(places[1])
+            print(risks)
         else:
             risks = travelAdvice.getRiskArea(places[1], places[2])
+            print(risks)
         if len(risks) != 0:
             for i in risks:
                 if getattr(i, "level") == 1:
-                    mid.append(getattr(i, "childArea") + getattr(i, "abstract"))
+                    mid.append(getattr(i, "province") + getattr(i, "city") + getattr(i, "childArea") + getattr(i, "abstract"))
                 else:
-                    high.append(getattr(i, "childArea") + getattr(i, "abstract"))
+                    high.append(getattr(i, "province") + getattr(i, "city") + getattr(i, "childArea") + getattr(i, "abstract"))
     return jsonify({
         "str1": str1,
         "mid": mid,
