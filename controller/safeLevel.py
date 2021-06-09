@@ -34,19 +34,19 @@ def safeLevel(oriRegion, time):
     mid = []
     high = []
     if addList is None:
-        str1 = "抱歉，该地区的收据暂未收录。"
+        str1 = "    抱歉，该地区的收据暂未收录。"
     elif len(addList) == 0:
         policyIndex = travelAdvice.getPolicyIndex(region)
         if policyIndex is None:
-            str1 = "该地区十四天内无新增病例，目前疫情态势稳定，出行前请了解目的地的相关政策，并做好防护。"
+            str1 = "    该地区十四天内无新增病例，目前疫情态势稳定，出行前请了解目的地的相关政策，并做好防护。"
         else:
-            str1 = "该地区的政策严格性指数为：" + str(policyIndex) + "，且十四天内无新增病例。目前疫情态势稳定，出行前请了解目的地的相关政策，并做好防护。"
+            str1 = "    该地区的政策严格性指数为：" + str(policyIndex) + "，且十四天内无新增病例。目前疫情态势稳定，出行前请了解目的地的相关政策，并做好防护。"
     else:
         policyIndex = travelAdvice.getPolicyIndex(region)
         if policyIndex is None:
-            str1 = "该地区十四天内有新增病例，新增病例数为："
+            str1 = "    该地区十四天内有新增病例，新增病例数为："
         else:
-            str1 = "该地区的政策严格性指数为:" + str(policyIndex) + "，且十四天内有新增病例，新增病例数为："
+            str1 = "    该地区的政策严格性指数为:" + str(policyIndex) + "，且十四天内有新增病例，新增病例数为："
         for i in addList:
             str1 = str1 + str(i) + "例 "
         str1 = str1 + "。"
@@ -75,9 +75,9 @@ def safeLevel(oriRegion, time):
         if len(risks) != 0:
             for i in risks:
                 if getattr(i, "level") == 1:
-                    mid.append({"area": getattr(i, "childArea"), "abstract": getattr(i, "abstract")})
+                    mid.append(getattr(i, "childArea") + getattr(i, "abstract"))
                 else:
-                    high.append({"area": getattr(i, "childArea"), "abstract": getattr(i, "abstract")})
+                    high.append(getattr(i, "childArea") + getattr(i, "abstract"))
     return jsonify({
         "str1": str1,
         "mid": mid,
