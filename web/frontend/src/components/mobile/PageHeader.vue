@@ -2,7 +2,7 @@
   <van-nav-bar class="mobile-header" id="mobile-header-id">
     <template #left>
       <van-image fit="contain" src='../../../static/image/111.png' class="image-item" id="image-item-id"
-                 @click="goHome()">
+                 @click="goCover()">
         <template v-slot:loading>
           <van-loading type="spinner" size="20"/>
         </template>
@@ -17,7 +17,7 @@
       <van-icon name="cross" size="20" class="icon-item" id="icon-item-id-2" v-show="show_nav===true" @click="showNav"/>
       <van-popup v-model="show_nav" position="top" style="top: 51px; height: 308px" :overlay="false"
                  transition="van-fade" class="popup-item" :close-on-popstate="true" @click="closeNavItself">
-        <van-cell title="国家列表" is-link to="/" class="cell-item"/>
+        <van-cell title="国家列表" is-link to="/Home" class="cell-item"/>
         <van-cell title="疫苗接种" is-link to="/VaccineHome" class="cell-item"/>
         <van-cell title="感染情况" is-link to="/InfectHome" class="cell-item"/>
         <van-cell title="出行建议" is-link to="/TravelAdvice" class="cell-item"/>
@@ -57,37 +57,37 @@ export default {
   components: {
     'search-bar': searchBar
   },
-  data() {
+  data () {
     return {
       show_nav: false,
       show_dialog: false,
       input: ''
     }
   },
-  mounted() {
+  mounted () {
     // this.set_height()
   },
   methods: {
-    showNav() {
+    showNav () {
       if (this.show_nav === false) {
         this.show_nav = true
       } else {
         this.show_nav = false
       }
     },
-    closeNavItself() {
+    closeNavItself () {
       this.show_nav = false
     },
-    showDialog() {
+    showDialog () {
       this.show_dialog = true
     },
-    handleConfirm() {
+    handleConfirm () {
       this.show_dialog = false
     },
-    goHome() {
-      this.$router.push({path: `/Home`})
+    goCover () {
+      this.$router.push({path: `/`})
     },
-    set_height() {
+    set_height () {
       // const header = document.getElementById('mobile-header-id')
       // const searchButton = document.getElementById('search-button-id')
       // const imageIcon = document.getElementById('image-item-id')
@@ -106,7 +106,7 @@ export default {
       // iconMore.style.setProperty('size', 500 + 'px')
       // iconMore.style.setProperty('margin-top', window.screen.height / 40 + 'px')
     },
-    onSearch(val) {
+    onSearch (val) {
       Toast(val)
     }
   }

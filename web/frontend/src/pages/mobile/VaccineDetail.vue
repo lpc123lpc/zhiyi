@@ -13,7 +13,7 @@
                                   v-bind:countryMapVaccineData="countryMapVaccineDataMsg"></vaccine-detail-country-map>
       <mobile-country-vaccine-chart v-bind:country="countryMsg" style="margin-top: 10px"></mobile-country-vaccine-chart>
     </van-cell>
-    <van-button color="#8cc4ff" hairline plain block @click="back" class="button-item" id="button-item-id-1">返回</van-button>
+    <van-button color="#8cc4ff" plain block @click="back" class="button-item" id="button-item-id-1">返回</van-button>
   </div>
 </template>
 
@@ -73,5 +73,7 @@ export default {
 <style scoped>
 .button-item {
   margin-bottom: 10px;
+  font-size: medium;
+  letter-spacing: 2px;
 }
 </style>
