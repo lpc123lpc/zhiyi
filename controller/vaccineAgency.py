@@ -20,6 +20,6 @@ def getVaccineAgency(oriRegion):
     data = []
     for i in vacAgencys:
         data.append({"name": delWithNone(getattr(i, "name")),
-                     "addr": delWithNone(getattr(i, "addr")),
+                     "address": delWithNone(getattr(i, "addr")),
                      "tel": delWithNone(getattr(i, "tel"))})
     return json.dumps(data)
