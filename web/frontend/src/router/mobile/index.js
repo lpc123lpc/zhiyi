@@ -50,6 +50,11 @@ let router = new Router({
       component: resolve => require(['../../pages/mobile/TravelAdvice'], resolve)
     },
     {
+      path: '/Search/:region',
+      name: 'Search',
+      component: resolve => require(['../../pages/mobile/Search'], resolve)
+    },
+    {
       path: '/NewsInformation',
       name: 'NewsInformation',
       component: resolve => require(['../../pages/mobile/NewsInformation'], resolve)
