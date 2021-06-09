@@ -86,7 +86,7 @@ export default {
         color: ['#0099FF', '#7ae997'],
         legend: {
           data: ['已接种', '每百人接种剂量'],
-          left: '2%',
+          left: 'center',
           orient: 'horizontal',
           top: 40,
           selected: {'已接种': true, '每百人接种剂量': false},

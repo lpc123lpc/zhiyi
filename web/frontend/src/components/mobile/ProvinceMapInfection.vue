@@ -69,7 +69,7 @@ export default {
         },
         legend: {
           data: ['当前确诊', '累计确诊', '累计治愈', '累计死亡'],
-          left: '2%',
+          left: 'center',
           orient: 'horizontal',
           top: 40,
           selected: {'当前确诊': true, '累计确诊': false, '累计治愈': false, '累计死亡': false},
@@ -83,11 +83,11 @@ export default {
         },
         visualMap: {
           show: true,
-          left: '1%',
-          bottom: '1%',
+          left: '0%',
+          bottom: '0%',
           orient: 'vertical',
-          itemHeight: 12,
-          itemWidth: 12,
+          itemHeight: 10,
+          itemWidth: 10,
           textStyle: {
             fontSize: 10
           },
@@ -163,7 +163,7 @@ export default {
       }
       provinceMapInfection.setOption(provinceMapInfection_Option)
       var that = this
-      provinceMapInfection_Option.on('legendselectchanged', function (params) {
+      provinceMapInfection.on('legendselectchanged', function (params) {
         provinceMapInfection_Option.legend.selected = params.selected
         var keys = Object.keys(params.selected)
         for (let i = 0; i < keys.length; i++) {

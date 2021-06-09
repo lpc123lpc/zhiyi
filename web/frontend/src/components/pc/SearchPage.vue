@@ -90,6 +90,7 @@ export default {
     }
   },
   mounted() {
+    console.log(this.$route.query.data)
     this.showVaccineButton()
   },
   methods: {
@@ -118,7 +119,7 @@ export default {
       }
     },
     goTravelAdvice() {
-      this.$router.push({path: `/TravelAdvice/${this.region}`})
+      this.$router.push({path: `/TravelAdvice/${this.region}`, query: {data: this.$route.query.data}})
     },
     showVaccineInstitution() {
       document.getElementById('vaccineInstitution').style.display = 'block'

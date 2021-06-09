@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="image-menu-item" @click="goHome()">
+    <div class="image-menu-item" @click="goCover()">
       <el-image fit="contain" src='../../../static/image/111.png' class="image-item"></el-image>
     </div>
     <el-menu
@@ -60,8 +60,8 @@ export default {
     }
   },
   methods: {
-    goHome () {
-      this.$router.push({path: `/Home`})
+    goCover () {
+      this.$router.push({path: `/`})
     },
     handleSelect (key, keyPath) {
       console.log(key, keyPath)

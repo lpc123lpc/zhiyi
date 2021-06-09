@@ -11,8 +11,9 @@
     <van-cell style="align: center; margin-top: 10px">
       <infect-detail-province-map v-bind:province="provinceMsg"
                                   v-bind:provinceMapInfectionData="provinceMapInfectionDataMsg"></infect-detail-province-map>
+      <mobile-province-infection-chart style="margin-top: 10px"></mobile-province-infection-chart>
     </van-cell>
-    <van-button color="#8cc4ff" hairline plain block @click="back" class="button-item" id="button-item-id-1">返回</van-button>
+    <van-button color="#8cc4ff" plain block @click="back" class="button-item" id="button-item-id-1">返回</van-button>
   </div>
 </template>
 
@@ -20,12 +21,13 @@
 import pageHeader from '../../components/mobile/PageHeader'
 import infectDetailProvinceMap from '../../components/mobile/ProvinceMapInfection.vue'
 import {mixin} from '../../mixins'
-
+import mobileProvinceInfectionChart from '../../components/mobile/ProvinceInfectionChartMobile.vue'
 export default {
   name: 'InfectProvinceDetail',
   components: { // 定义组件
     'page-header': pageHeader,
-    'infect-detail-province-map': infectDetailProvinceMap
+    'infect-detail-province-map': infectDetailProvinceMap,
+    'mobile-province-infection-chart': mobileProvinceInfectionChart
   },
   data () { // 选项 / 数据
     return {
@@ -73,5 +75,10 @@ export default {
   margin-top: 20px;
   margin-left: 330px;
   font-size: 8px;
+}
+.button-item {
+  margin-bottom: 10px;
+  font-size: medium;
+  letter-spacing: 2px;
 }
 </style>

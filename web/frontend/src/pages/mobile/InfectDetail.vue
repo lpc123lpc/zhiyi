@@ -4,11 +4,9 @@
     <van-cell style="align: center; margin-top: 10px">
       <infect-detail-country-map v-bind:country="countryMsg"
                                  v-bind:countryMapInfectionData="countryMapInfectionDataMsg"></infect-detail-country-map>
+      <mobile-country-infection-chart v-bind:country="countryMsg" style="margin-top: 10px"></mobile-country-infection-chart>
     </van-cell>
-    <van-button color="#8cc4ff" hairline plain block @click="back" class="button-item" id="button-item-id-1">返回</van-button>
-    <div>
-      <mobile-country-infection></mobile-country-infection>
-    </div>
+    <van-button color="#8cc4ff" plain block @click="back" class="button-item" id="button-item-id-1">返回</van-button>
   </div>
 </template>
 
@@ -16,14 +14,15 @@
 import pageHeader from '../../components/mobile/PageHeader.vue'
 import infectDetailCountryMap from '../../components/mobile/CountryMapInfection.vue'
 import {mixin} from '../../mixins'
-import MobileCountryInfection from '../../components/mobile/MobileCountryInfection'
-
+import mobileCountryInfection from '../../components/mobile/MobileCountryInfection.vue'
+import mobileCountryInfectionChart from '../../components/mobile/CountryInfectionChartMobile.vue'
 export default {
   name: 'InfectDetail',
   components: {
-    MobileCountryInfection, // 定义组件
     'page-header': pageHeader,
-    'infect-detail-country-map': infectDetailCountryMap
+    'infect-detail-country-map': infectDetailCountryMap,
+    'mobile-country-infection': mobileCountryInfection,
+    'mobile-country-infection-chart': mobileCountryInfectionChart
   },
   mixins: [mixin],
   data () { // 选项 / 数据
@@ -67,5 +66,9 @@ export default {
 </script>
 
 <style scoped>
-
+.button-item {
+  margin-bottom: 10px;
+  font-size: medium;
+  letter-spacing: 2px;
+}
 </style>

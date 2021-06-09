@@ -80,7 +80,7 @@ export default {
         },
         legend: {
           data: ['当前确诊', '累计确诊', '累计治愈', '累计死亡'],
-          left: '2%',
+          left: 'center',
           orient: 'horizontal',
           top: 40,
           selected: {'当前确诊': true, '累计确诊': false, '累计治愈': false, '累计死亡': false},
@@ -94,11 +94,11 @@ export default {
         },
         visualMap: {
           show: true,
-          left: '1%',
-          bottom: '1%',
+          left: '0%',
+          bottom: '0%',
           orient: 'vertical',
-          itemHeight: 12,
-          itemWidth: 12,
+          itemHeight: 10,
+          itemWidth: 10,
           textStyle: {
             fontSize: 12
           },
