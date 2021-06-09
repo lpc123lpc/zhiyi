@@ -1,5 +1,5 @@
 <template>
-  <van-tabs>
+  <van-tabs color="#8cc4ff">
     <van-tab title="疫苗新闻">
       <van-list
       >

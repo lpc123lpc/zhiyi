@@ -1,6 +1,6 @@
 <template>
   <div>
-    <page-header/>
+    <page-header></page-header>
     <search-page
       v-bind:region="this.region"
       v-bind:data="regionInfectDataMsg"
@@ -19,29 +19,22 @@ export default {
     'page-header': pageHeader,
     'search-page': searchPage
   },
-  data() {
+  data () {
     return {
       region: '',
       regionInfectDataMsg: '',
       regionVaccineDataMsg: ''
     }
   },
-  mounted() {
+  mounted () {
     this.region = this.$route.params.region
-    this.set_left()
   },
-  created() {
+  created () {
     this.getRegionInfectDataMsg()
     this.getRegionVaccineDataMsg()
   },
   methods: {
-    set_left() {
-      const elMain = document.getElementById('my-el-main')
-      console.log(elMain.offsetWidth)
-      const searchPage = document.getElementById('search-page-id')
-      searchPage.style.setProperty('margin-left', elMain.offsetWidth / 2 - 637 + 'px')
-    },
-    getRegionInfectDataMsg() {
+    getRegionInfectDataMsg () {
       var that = this
       fetch('http://81.70.134.96:5000/search/' + that.$route.params.region + '/regionInfectDataMsg').then(function (response) {
         response.json().then((data) => {
@@ -50,7 +43,7 @@ export default {
         })
       })
     },
-    getRegionVaccineDataMsg() {
+    getRegionVaccineDataMsg () {
       var that = this
       fetch('http://81.70.134.96:5000/search/' + that.$route.params.region + '/regionVaccineDataMsg').then(function (response) {
         response.json().then((data) => {
