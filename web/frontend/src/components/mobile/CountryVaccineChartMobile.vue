@@ -1,5 +1,5 @@
 <template>
-  <div id="countryDataVacChart" style="width: 100%;height:500px"></div>
+  <div id="countryDataVacChart" ref="countryDataVacChartRef" style="width: 100%;height:500px"></div>
 </template>
 
 <script>
@@ -20,12 +20,11 @@ export default {
   },
   methods: {
     setEchartHeight () {
-      const echartItem = document.getElementById('countryDataInfChart')
+      const echartItem = document.getElementById('countryDataVacChart')
       echartItem.style.setProperty('height', window.screen.width + 'px')
     },
     drawVac () {
-      const echartItem = document.getElementById('countryDataVacChart')
-      let mychart = echarts.init(echartItem)
+      let mychart = echarts.init(this.$refs.countryDataVacChartRef)
       fetch('http://81.70.134.96:5000/countryVacData/' + this.country).then(function (response) {
         response.json().then(function (data) {
           if (JSON.stringify(data) === '{}') {
