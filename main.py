@@ -9,8 +9,11 @@ from spider import spiderBeta
 app = table.app
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 # 初始化数据库，第一次执行完后就可以注释掉
-'''spiderBeta.updateRiskList()
-spiderBeta.updateVaccineInstitutions()'''
+print(1)
+spiderBeta.updateRiskList()
+print(2)
+spiderBeta.updateVaccineInstitutions()
+print(3)
 '''clearTable('chinaInfMessages')
 clearTable('hisInfMessages')
 getGlobalProvinceHisInf()'''
