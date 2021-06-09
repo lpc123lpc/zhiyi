@@ -1,25 +1,22 @@
 <template>
   <van-nav-bar class="mobile-header" id="mobile-header-id">
     <template #left>
-      <van-image fit="contain" src='../../../static/image/111.png' class="image-item" id="image-item-id" @click="goHome()">
+      <van-image fit="contain" src='../../../static/image/111.png' class="image-item" id="image-item-id"
+                 @click="goHome()">
         <template v-slot:loading>
-          <van-loading type="spinner" size="20" />
+          <van-loading type="spinner" size="20"/>
         </template>
       </van-image>
     </template>
     <template #title>
-      <van-search
-        v-model="input"
-        placeholder="请输入搜索关键词"
-        @search="onSearch"
-        class="search-item"
-        id="search-item-id">
-      </van-search>
+      <search-bar style="margin-left: 30px"/>
     </template>
     <template #right>
-      <van-icon name="wap-nav" size="20" class="icon-item" id="icon-item-id-1" v-show="show_nav===false" @click="showNav"/>
+      <van-icon name="wap-nav" size="20" class="icon-item" id="icon-item-id-1" v-show="show_nav===false"
+                @click="showNav"/>
       <van-icon name="cross" size="20" class="icon-item" id="icon-item-id-2" v-show="show_nav===true" @click="showNav"/>
-      <van-popup v-model="show_nav" position="top" style="top: 51px; height: 308px" :overlay="false" transition="van-fade" class="popup-item" :close-on-popstate="true" @click="closeNavItself">
+      <van-popup v-model="show_nav" position="top" style="top: 51px; height: 308px" :overlay="false"
+                 transition="van-fade" class="popup-item" :close-on-popstate="true" @click="closeNavItself">
         <van-cell title="国家列表" is-link to="/" class="cell-item"/>
         <van-cell title="疫苗接种" is-link to="/VaccineHome" class="cell-item"/>
         <van-cell title="感染情况" is-link to="/InfectHome" class="cell-item"/>
@@ -28,10 +25,15 @@
         <van-cell title="反馈&建议" is-link to="/Feedback" class="cell-item"/>
         <van-cell title="数据来源" :clickable="true" @click="showDialog" class="cell-item"/>
       </van-popup>
-      <van-dialog v-model="show_dialog" title="数据来源" confirm-button-text="关闭" confirm-button-color="#8cc4ff" @confirm="handleConfirm" class="dialog-item">
-        <div style="margin-left: 2px; margin-right: 2px; margin-top: 10px; font-size: small; color: #000000">全部数据来源：腾讯新闻、Our World in Data、约翰霍普金斯大学网站</div>
+      <van-dialog v-model="show_dialog" title="数据来源" confirm-button-text="关闭" confirm-button-color="#8cc4ff"
+                  @confirm="handleConfirm" class="dialog-item">
+        <div style="margin-left: 2px; margin-right: 2px; margin-top: 10px; font-size: small; color: #000000">
+          全部数据来源：腾讯新闻、Our World in Data、约翰霍普金斯大学网站
+        </div>
         <van-divider style="color: #8cc4ff"/>
-        <div style="margin-left: 2px; margin-right: 2px; margin-bottom: 10px; font-size: small; color: #000000">每日凌晨3:00进行数据更新，届时带来不便，敬请谅解</div>
+        <div style="margin-left: 2px; margin-right: 2px; margin-bottom: 10px; font-size: small; color: #000000">
+          每日凌晨3:00进行数据更新，届时带来不便，敬请谅解
+        </div>
       </van-dialog>
     </template>
     <!--<mt-field v-model="input" placeholder="请输入内容" slot="right"></mt-field>-->
@@ -41,7 +43,9 @@
 </template>
 
 <script>
-import { Toast } from 'vant'
+import {Toast} from 'vant'
+import searchBar from '../../components/mobile/SearchBar'
+
 export default {
   name: 'PageHeader',
   props: {
@@ -50,37 +54,40 @@ export default {
       default: ''
     }
   },
-  data () {
+  components: {
+    'search-bar': searchBar
+  },
+  data() {
     return {
       show_nav: false,
       show_dialog: false,
       input: ''
     }
   },
-  mounted () {
+  mounted() {
     // this.set_height()
   },
   methods: {
-    showNav () {
+    showNav() {
       if (this.show_nav === false) {
         this.show_nav = true
       } else {
         this.show_nav = false
       }
     },
-    closeNavItself () {
+    closeNavItself() {
       this.show_nav = false
     },
-    showDialog () {
+    showDialog() {
       this.show_dialog = true
     },
-    handleConfirm () {
+    handleConfirm() {
       this.show_dialog = false
     },
-    goHome () {
+    goHome() {
       this.$router.push({path: `/Home`})
     },
-    set_height () {
+    set_height() {
       // const header = document.getElementById('mobile-header-id')
       // const searchButton = document.getElementById('search-button-id')
       // const imageIcon = document.getElementById('image-item-id')
@@ -99,7 +106,7 @@ export default {
       // iconMore.style.setProperty('size', 500 + 'px')
       // iconMore.style.setProperty('margin-top', window.screen.height / 40 + 'px')
     },
-    onSearch (val) {
+    onSearch(val) {
       Toast(val)
     }
   }
@@ -114,32 +121,29 @@ export default {
   border-color: #ffffff #ffffff #e6e6e6 #ffffff;
   border-bottom-width: 2px;
 }
+
 .image-item {
   height: 36px;
   margin-top: -2px;
   width: 66px;
   margin-left: -8px;
 }
-.search-item {
-  margin-right: 10px;
-  height: 36px;
-  margin-top: -1px;
-  width: 200px;
-  margin-left: 20px;
-}
+
 .popup-item {
   border-style: solid;
   border-color: #ffffff #ffffff #e6e6e6 #ffffff;
   border-bottom-width: 1px;
 }
+
 .cell-item {
   text-align: left;
-  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   font-size: medium;
   color: #8cc4ff;
 }
+
 .dialog-item {
-  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   font-size: medium;
   color: #000000;
 }
