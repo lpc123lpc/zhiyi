@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-tabs>
+    <van-tabs color="#8cc4ff">
       <van-tab title="累计确诊">
         <van-list
           v-model="loading"
