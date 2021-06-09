@@ -9,11 +9,11 @@
                 <img :src = item.picUrls style="width: 100%">
               </el-col>
               <el-col span="16" offset="2">
-                <div style="height: 20%">{{item.title}}</div>
-                <div style="height: 60%">{{item.abstracts}}</div>
+                <div class="item-title">{{item.title}}</div>
+                <div class="item-ab">{{item.abstracts}}</div>
                 <div style="height: 20%;width: 100%">
-                  <span style="float:left">{{item.time}}</span>
-                  <span style="float: right">{{item.source}}</span>
+                  <span class="item-time">{{item.time}}</span>
+                  <span class="item-source">{{item.source}}</span>
                 </div>
               </el-col>
             </el-row>
@@ -72,5 +72,11 @@ export default {
 </script>
 
 <style scoped>
+@import "../../assets/css/news.css";
+</style>
 
+<style>
+.el-tabs__item{
+  font-size:18px !important;
+}
 </style>
