@@ -65,20 +65,18 @@ def safeLevel(oriRegion, time):
             str1 = str1 + "该地区目前的风险等级为中，"
         str1 = str1 + "目前有一定风险，建议您如非必要不要前往。出行前请了解目的地的相关政策，并做好防护。"
         places = oriRegion.split("  ")
-        # risks = []
-
+        risks = []
         if places[1] == "中国":
             risks = travelAdvice.getRiskArea()
         elif len(places) == 2 and places[0] == "国内":
             risks = travelAdvice.getRiskArea(places[1])
         elif len(places) == 3 and places[0] == "国内":
             risks = travelAdvice.getRiskArea(places[1], places[2])
-        if len(risks) != 0:
-            for i in risks:
-                if getattr(i, "level") == 1:
-                    mid.append(getattr(i, "province") + getattr(i, "city") + getattr(i, "childArea") + getattr(i, "abstract"))
-                else:
-                    high.append(getattr(i, "province") + getattr(i, "city") + getattr(i, "childArea") + getattr(i, "abstract"))
+        for i in risks:
+            if getattr(i, "level") == 1:
+                mid.append(getattr(i, "province") + getattr(i, "city") + getattr(i, "childArea") + getattr(i, "abstract"))
+            else:
+                high.append(getattr(i, "province") + getattr(i, "city") + getattr(i, "childArea") + getattr(i, "abstract"))
     return jsonify({
         "str1": str1,
         "mid": mid,
