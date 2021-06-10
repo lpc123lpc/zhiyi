@@ -34,12 +34,12 @@
         <div slot="header" class="clearfix" style="font-size: 22px;color: #409eff">出行建议</div>
         <div>{{result.str1}}</div>
         <div v-if="result.mid.length !== 0" style="padding: 20px">
-          <span>中风险地区：</span>
-          <span v-for="(item,index) in result.mid" :key="index">{{item}}</span>
+          <div>中风险地区</div>
+          <div v-for="(item,index) in result.mid" :key="index">{{item}}</div>
         </div>
         <div v-if="result.high.length !== 0" style="padding: 20px">
-          <span>高风险地区：</span>
-          <span v-for="(item,index) in result.high" :key="index">{{item}}</span>
+          <div>高风险地区：</div>
+          <div v-for="(item,index) in result.high" :key="index">{{item}}</div>
         </div>
       </el-card>
     </el-row>
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import data from '../../../static/json/searchData.json'
+import searchData from '../../../static/json/searchData.json'
 export default {
   name: 'TravelAdviceCom',
   data () {
@@ -72,17 +72,24 @@ export default {
       data: [],
       searchRegion: '',
       state: '',
-      result: ''
+      result: {
+        str1: '',
+        mid: [],
+        high: []
+      }
     }
   },
   mounted () {
-    this.data = data
-    if (this.$route.query.data.length !== 0) {
-      var temp = []
-      for (var i = 0; i < this.$route.query.data.length; i++) {
-        temp.push(parseInt(this.$route.query.data[i]))
+    this.data = searchData
+    if (this.$route.query.data !== '') {
+      var tempData = this.$route.query.data
+      if (tempData.length !== 0) {
+        var temp = []
+        for (var i = 0; i < this.$route.query.data.length; i++) {
+          temp.push(parseInt(this.$route.query.data[i]))
+        }
+        this.form.region = temp
       }
-      this.form.region = temp
     }
     this.state = 0
   },
@@ -92,7 +99,7 @@ export default {
       // alert(this.form.region)
       if (this.form.region.length === 0) {
         // do nothing
-      } else if (this.form.time.length === 0) {
+      } else if (this.form.time === '') {
         // do nothing
       } else {
         that.getSearch()

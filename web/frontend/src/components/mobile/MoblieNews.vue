@@ -3,7 +3,7 @@
     <van-tab title="疫苗新闻">
       <van-list
       >
-        <van-cell v-for="(item,index) in infData" :key="index" style="padding: 20px" @click="go(item.urls)">
+        <van-cell v-for="(item,index) in vacData" :key="index" style="padding: 20px" @click="go(item.urls)">
           <template #title>
             <img :src = item.picUrls style="width: 100%">
           </template>
@@ -21,7 +21,7 @@
     <van-tab title="疫情新闻">
       <van-list
       >
-        <van-cell v-for="(item,index) in vacData" :key="index" style="padding: 20px" @click="go(item.urls)">
+        <van-cell v-for="(item,index) in infData" :key="index" style="padding: 20px" @click="go(item.urls)">
           <template #title>
             <img :src = item.picUrls style="width: 100%">
           </template>
