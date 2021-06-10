@@ -103,7 +103,6 @@ export default {
         // do nothing
       } else {
         that.getSearch()
-        alert(that.searchRegion)
         fetch('http://81.70.134.96:5000/travelAdvice', {method: 'POST',
           body: JSON.stringify({
             'region': that.searchRegion,
