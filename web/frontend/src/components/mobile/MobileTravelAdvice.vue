@@ -40,7 +40,7 @@
       </van-popup>
     </div>
     <van-button color="#8cc4ff" plain block @click="onSubmit" class="button-item" id="button-item-id-1">查询</van-button>
-    <van-button color="#8cc4ff" plain block @click="back" v-show="showBack" class="button-item" id="button-item-id-2">返回</van-button>
+    <van-button color="#778899" plain block @click="back" v-show="showBack" class="button-item" id="button-item-id-2">返回</van-button>
    <div v-if="state === 1" style="padding: 20px">
       <div style="margin-top: 30px;font-size: 22px;color: #409eff;text-align: center">出行建议</div>
       <div style="margin-top: 20px">{{result.str1}}</div>
@@ -99,7 +99,7 @@ export default {
     }
   },
   mounted () {
-    this.set_button_length()
+    // this.set_button_length()
     this.data = data
     var temp = this.$route.params.region
     if (temp === "''") {

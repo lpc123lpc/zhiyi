@@ -41,7 +41,7 @@
       ref="buttonItemId1">查看地图
     </van-button>
     <van-button
-      color="#8cc4ff"
+      color="#778899"
       plain block
       @click="goTravelAdvice"
       class="button-item"
