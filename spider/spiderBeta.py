@@ -11,9 +11,29 @@ from database.static.table import *
 from database.static.dao import clearTable
 from spider.xlsxParserClass import xlsxParser
 import pandas as pd
+import re
 
-def getAbsTime(deltaStr:str):
-    pass
+def modifyUpdateTime(timeStr:str):
+    reg1=r"(\d+)分钟前"
+    reg2=r"(\d+)小时前"
+    if len(re.findall(reg1,timeStr))!=0:
+        result=re.findall(reg1,timeStr)
+        #print(result)
+        #hour=int(result[0][0])
+        minute=int(result[0])
+        #print(datetime.datetime.now().strftime("%m-%d %H:%M"))
+        timeResult=datetime.datetime.now()+datetime.timedelta(minutes=(-1*int(minute)))
+        print(timeResult.strftime("%m-%d %H:%M"))
+        return timeResult.strftime("%m-%d %H:%M")
+    elif len(re.findall(reg2,timeStr))!=0:
+        result=re.findall(reg2,timeStr)
+        hour=int(result[0])
+        timeResult=datetime.datetime.now()+datetime.timedelta(hours=(-1*int(hour)))
+        print(timeResult.strftime("%m-%d %H:%M"))
+        return timeResult.strftime("%m-%d %H:%M")
+    else:
+        print(timeStr)
+        return timeStr
 def updateCovidNews():
     headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36'
@@ -55,7 +75,7 @@ def updateCovidNews():
                     dataItem["source"] = source
                 elif sourceInfo["class"][0] == "c-color-gray2":
                     updateTime = sourceInfo.string
-                    dataItem["updateTime"] = updateTime
+                    dataItem["updateTime"] = modifyUpdateTime(updateTime)
             """source=itemSourceTimeBody.find_all("span")[0].string
             dataItem["source"]=source
             updateTime=itemSourceTimeBody.find_all("span")[1].string
@@ -160,7 +180,7 @@ def updateVaccineNews():
                     dataItem["source"] = source
                 elif sourceInfo["class"][0] == "c-color-gray2":
                     updateTime = sourceInfo.string
-                    dataItem["updateTime"] = updateTime
+                    dataItem["updateTime"] = modifyUpdateTime(updateTime)
             """source=itemSourceTimeBody.find_all("span")[0].string
             dataItem["source"]=source
             updateTime=itemSourceTimeBody.find_all("span")[1].string
@@ -763,7 +783,7 @@ def updateVaccineInstitutions():
 
 if __name__ == '__main__':
     pass
-# updateCovidNews()
+#   updateCovidNews()
 # updateVaccineNews()
 # updateRiskList()
 # updateVaccineInstitutions()
