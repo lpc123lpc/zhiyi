@@ -40,7 +40,8 @@
       </van-popup>
     </div>
     <van-button color="#8cc4ff" plain block @click="onSubmit" class="button-item" id="button-item-id-1">查询</van-button>
-    <div v-if="state === 1" style="padding: 20px">
+    <van-button color="#8cc4ff" plain block @click="back" v-show="showBack" class="button-item" id="button-item-id-2">返回</van-button>
+   <div v-if="state === 1" style="padding: 20px">
       <div style="margin-top: 30px;font-size: 22px;color: #409eff;text-align: center">出行建议</div>
       <div style="margin-top: 20px">{{result.str1}}</div>
       <div v-if="result.mid.length !== 0" style="margin-top: 30px">
@@ -93,7 +94,8 @@ export default {
         str1: '',
         mid: [],
         high: []
-      }
+      },
+      showBack: this.$route.params.region !== '\'\''
     }
   },
   mounted () {
@@ -147,26 +149,9 @@ export default {
         })
       }
     },
-    /* handleSelect (val) {
-      var regions = [] // 将级联地区名以'  '连接
-      // console.log(val)
-      // alert(this.$refs['cascader'].getCheckedNodes())
-      alert(this.$refs['cascader'].getCheckedNodes()[0].pathLabels)
-      var node = this.$refs['cascader'].panel.getNodeByValue(val)
-      regions.push(node.label)
-      while (node.parent != null) {
-        node = node.parent
-        regions.push(node.label)
-      }
-      let type = regions.pop()
-      if (type === '国内') regions.push('中国')
-      // 处理最后两个名字相同的情况
-      regions = regions.reverse()
-      if (regions.length > 1 && regions[regions.length - 1] === regions[regions.length - 2]) {
-        regions.pop()
-      }
-      this.searchRegion = regions.join('  ')
-    }, */
+    back() {
+      this.$router.go(-1)
+    },
     getSearch () {
       var regions = this.fieldValue.split('/')
       if (regions.length > 1 && regions[regions.length - 1] === regions[regions.length - 2]) {
@@ -203,9 +188,9 @@ export default {
 
 <style scoped>
 .button-item {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px auto;
   font-size: medium;
   letter-spacing: 2px;
+  width: 90%;
 }
 </style>
