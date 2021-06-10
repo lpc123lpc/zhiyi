@@ -67,7 +67,7 @@ export default {
   data () {
     return {
       form: {
-        region: [],
+        region: '',
         time: ''
       },
       rules: {
@@ -80,7 +80,7 @@ export default {
       },
       minDate: new Date(new Date().getTime() + 24 * 3600 * 1000),
       maxDate: new Date(new Date().getTime() + 15 * 24 * 3600 * 1000),
-      data: '',
+      data: [],
       searchRegion: '',
       show: false,
       fieldValue: '',
@@ -100,20 +100,22 @@ export default {
     this.set_button_length()
     this.data = data
     var temp = this.$route.params.region
-    alert(temp)
-    if (temp === '/"') {
+    if (temp === "''") {
       // do nothing
-    }
-    else if (temp.indexOf('  ') !== -1) {
+    } else if (temp.indexOf('  ') !== -1) {
       var regions = temp.split('  ')
       if (regions[0] === '中国') {
         regions[0] = '国内'
       } else {
+        regions.unshift('国外')
       }
       this.fieldValue = regions.join('/')
-    }
-    else {
-      this.fieldValue = temp
+    } else {
+      if (temp === '中国') {
+        this.fieldValue = '国内' + '/' + '中国'
+      } else {
+        this.fieldValue = '国外' + '/' + temp
+      }
     }
     this.state = 0
   },
@@ -167,9 +169,6 @@ export default {
     }, */
     getSearch () {
       var regions = this.fieldValue.split('/')
-      if (regions[0] === '国内') regions[0] = '中国'
-      else regions = regions.slice(1)
-      // 处理最后两个名字相同的情况
       if (regions.length > 1 && regions[regions.length - 1] === regions[regions.length - 2]) {
         regions.pop()
       }
