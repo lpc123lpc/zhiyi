@@ -45,7 +45,7 @@ export default {
       var provinceMapInfection = echarts.init(document.getElementById('provinceMapInfection'), 'sakura')
       var provinceMapInfection_Option = {
         title: {
-          text: '新冠疫苗感染中国' + this.province + '分布图',
+          text: '新冠疫情感染情况中国' + this.province + '分布图',
           left: 'center',
           top: 0,
           textStyle: {
