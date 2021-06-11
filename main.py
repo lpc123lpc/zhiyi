@@ -12,8 +12,8 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 '''print(1)
 spiderBeta.updateRiskList()
 print(2)'''
-'''spiderBeta.updateVaccineInstitutions()
-print(3)'''
+spiderBeta.updateVaccineInstitutions()
+print(3)
 '''clearTable('chinaInfMessages')
 clearTable('hisInfMessages')
 getGlobalProvinceHisInf()'''

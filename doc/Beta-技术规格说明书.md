@@ -5,9 +5,9 @@
 | 这个作业属于那个课程 | [2021春季学期软件工程（罗杰、任健）](https://edu.cnblogs.com/campus/buaa/BUAA_SE_2021_LR) |
 | 这个作业的要求在哪里 | [团队项目-Beta阶段计划](https://edu.cnblogs.com/campus/buaa/BUAA_SE_2021_LR/homework/12021) |
 | 更新日期             | 2021年5月21日                                                |
-| 描述                 | 接口及数据库的定义待更新                                     |
+| 描述                 | 接口及数据库的定义更新                                       |
 | 更新人               | LQ                                                           |
-| 版本号               | 1.0                                                          |
+| 版本号               | 1.1                                                          |
 
 
 
@@ -129,10 +129,11 @@ Vue框架的优点：
 * 中国各地区感染情况（总览）
 * 意见表
 
-| 属性 | 类型        | 描述         |
-| ---- | ----------- | ------------ |
-| time | DATE()      | 意见接受时间 |
-| text | String(800) | 意见内容     |
+| 属性  | 类型        | 描述         |
+| ----- | ----------- | ------------ |
+| time  | DATE()      | 意见接受时间 |
+| text  | String(800) | 意见内容     |
+| point | INT         | 评分         |
 
 * 地区关系映射表
 
@@ -140,20 +141,54 @@ Vue框架的优点：
 | ---------- | ----------- | ------------ |
 | parentArea | String(100) | 父区域姓名   |
 | childArea  | String(100) | 子区域姓名   |
-| number     | BIGINT      | 子区域总人数 |
+| population | BIGINT      | 子区域总人数 |
+
+### $\beta$阶段新增
+
+* 疫情新闻咨询表
+
+| 属性      | 类型        | 描述     |
+| --------- | ----------- | -------- |
+| time      | String(20)  | 新闻时间 |
+| title     | String(60)  | 新闻标题 |
+| urls      | String(200) | 新闻链接 |
+| source    | String(50)  | 来源     |
+| abstracts | String(200) | 新闻摘要 |
+| picUrls   | String(200) | 图片链接 |
+
+* 疫苗新闻咨询表：属性同上
+
+* 接种机构
+
+| 属性 | 类型        | 描述         |
+| ---- | ----------- | ------------ |
+| city | String(20)  | 城市名       |
+| name | String(100) | 接种机构姓名 |
+| addr | String(100) | 地址         |
+| tel  | String(20)  | 联系电话     |
+
+* 中高风险地区表
+
+| 属性      | 类型        | 描述                           |
+| --------- | ----------- | ------------------------------ |
+| province  | String(20)  | 省份名                         |
+| city      | String(20)  | 城市名                         |
+| childArea | String(20)  | 子区域名                       |
+| level     | Integer     | 风险等级，中风险为1，高风险为2 |
+| abstract  | String(100) | 具体街道等信息                 |
+
+
 
 #### 3.2 接口设计
 
 ##### 前端：
 
-| 请求方法 | 请求路径 | 用途                 |
-| :------: | -------- | :------------------- |
-|   GET    | ---      | 请求某地区的搜索结果 |
-|          |          |                      |
-|          |          |                      |
-|          |          |                      |
-|          |          |                      |
-|          |          |                      |
+| 请求方法 | 请求路径                               | 用途                     |
+| :------: | -------------------------------------- | :----------------------- |
+|   GET    | /news                                  | 请求新闻资讯列表         |
+|   GET    | /search/\<region>/regionInfectDataMsg  | 请求某地区的搜索结果     |
+|   GET    | /search/\<region>/regionVaccineDataMsg | 请求某地区的接种机构列表 |
+|   POST   | /travelAdvice                          | 请求某地区的出行建议     |
 
 ##### 后端：
 
@@ -162,10 +197,9 @@ Vue框架的优点：
 | newsDao.py         | getInfNews(number)       | List\<InfNews>         | 用于返回感染情况相关的新闻资讯，并通过`number`参数控制返回的新闻条数 |
 | newsDao.py         | getVacNews(number)       | List\<VacNews>         | 用于返回疫苗情况相关的新闻资讯，并通过`number`参数控制返回的新闻条数 |
 | vacInstitutions.py | getVacInstitutions(city) | List\<vacInstitutions> | 用于返回`city`对应的接种机构                                 |
-|                    |                          |                        |                                                              |
-|                    |                          |                        |                                                              |
-|                    |                          |                        |                                                              |
-|                    |                          |                        |                                                              |
+| travelAdvice.py    | getRiskArea(*areas)      | List\<area>            | 用于返回`area`对应的中高风险地区                             |
+| travelAdvice.py    | getIfAddInf(region)      | Lis\<int>              | 用于返回`region`对应地区的近十四日新增的情况                 |
+| travelAdvice.py    | getPolicyIndex(region)   | double                 | 用于返回`region`对应地区的政策严格性指数                     |
 
 
 

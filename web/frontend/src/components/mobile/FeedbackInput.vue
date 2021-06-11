@@ -33,7 +33,7 @@ export default {
     }
   },
   mounted () {
-    this.set_button_length()
+    // this.set_button_length()
     // this.set_container_pos()
   },
   methods: {
@@ -104,9 +104,11 @@ export default {
 <style scoped>
 .button-item {
   margin-top: 10px;
-  margin-bottom: 10px;
   font-size: medium;
   letter-spacing: 2px;
+  width: 90%;
+  float:left;
+  left: 5%;
 }
 .container-item {
 
