@@ -9,7 +9,7 @@
           <infect-detail-province-sidebar v-bind:province="provinceMsg"></infect-detail-province-sidebar>
         </el-aside>
         <el-main>
-          <div style="margin-left: 950px; position: absolute">
+          <div style="float: right">
             <el-button type="primary" plain @click="back()">返回</el-button>
           </div>
           <div style="align: center; margin-top: 20px">

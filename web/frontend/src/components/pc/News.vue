@@ -30,9 +30,10 @@
                 <img :src = item.picUrls style="width: 100%">
               </el-col>
               <el-col span="16" offset="2">
-                <div style="height: 20%">{{item.title}}</div>
-                <div style="height: 60%">{{item.abstracts}}</div>
-                <div style="height: 20%">{{item.time}}</div>
+                <div class="item-title">{{item.title}}</div>
+                <div class="item-ab">{{item.abstracts}}</div>
+                <div class="item-time">{{item.time}}</div>
+                <span class="item-source">{{item.source}}</span>
               </el-col>
             </el-row>
           </el-card>

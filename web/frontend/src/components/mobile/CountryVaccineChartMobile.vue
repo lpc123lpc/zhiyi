@@ -21,7 +21,7 @@ export default {
   methods: {
     setEchartHeight () {
       const echartItem = document.getElementById('countryDataVacChart')
-      echartItem.style.setProperty('height', window.screen.width + 'px')
+      echartItem.style.setProperty('height', window.screen.width / 3 * 2 + 'px')
     },
     drawVac () {
       let mychart = echarts.init(this.$refs.countryDataVacChartRef)

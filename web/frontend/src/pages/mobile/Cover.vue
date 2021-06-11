@@ -34,7 +34,7 @@ export default {
     }
   },
   mounted () {
-    this.set_button_length()
+    // this.set_button_length()
     this.set_cover_margin_top()
   }
 }
@@ -42,7 +42,9 @@ export default {
 
 <style scoped>
 .button-item {
+  margin: auto;
   font-size: medium;
   letter-spacing: 2px;
+  width: 90%;
 }
 </style>

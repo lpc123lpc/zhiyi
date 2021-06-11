@@ -9,6 +9,9 @@
           <infect-sidebar v-bind:infect_header_title="'感染情况'"></infect-sidebar>
         </el-aside>
         <el-main id="my-el-main">
+          <div style="float: right" v-show="show">
+            <el-button type="primary" plain @click="back()">返回</el-button>
+          </div>
           <travel-advice-content></travel-advice-content>
         </el-main>
       </el-container>
@@ -28,12 +31,20 @@ export default {
     'infect-sidebar': infectSidebar,
     'travel-advice-content': travelAdviceContent
   },
+  data() {
+    return {
+      show: this.$route.params.region !== '\'\''
+    }
+  },
   methods: {
     set_left () {
       const elMain = document.getElementById('my-el-main')
       // console.log(elMain.offsetWidth)
       const feedBackInput = document.getElementById('feed-back-div')
       feedBackInput.style.setProperty('margin-left', elMain.offsetWidth / 2 - 350 + 'px')
+    },
+    back() {
+      this.$router.go(-1)
     }
   },
   mounted () {
