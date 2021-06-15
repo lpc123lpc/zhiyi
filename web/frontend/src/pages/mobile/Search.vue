@@ -19,22 +19,25 @@ export default {
     'page-header': pageHeader,
     'search-page': searchPage
   },
-  data () {
+  data() {
     return {
       region: '',
-      regionInfectDataMsg: '',
+      regionInfectDataMsg: {
+        infect: {nowConfirm: '', totalConfirm: '', cured: '', dead: '', coverage: ''},
+        vaccine: {vaccined: '', coverage: ''}
+      },
       regionVaccineDataMsg: ''
     }
   },
-  mounted () {
+  mounted() {
     this.region = this.$route.params.region
   },
-  created () {
+  created() {
     this.getRegionInfectDataMsg()
     this.getRegionVaccineDataMsg()
   },
   methods: {
-    getRegionInfectDataMsg () {
+    getRegionInfectDataMsg() {
       var that = this
       fetch('http://81.70.134.96:5000/search/' + that.$route.params.region + '/regionInfectDataMsg').then(function (response) {
         response.json().then((data) => {
@@ -43,7 +46,7 @@ export default {
         })
       })
     },
-    getRegionVaccineDataMsg () {
+    getRegionVaccineDataMsg() {
       var that = this
       fetch('http://81.70.134.96:5000/search/' + that.$route.params.region + '/regionVaccineDataMsg').then(function (response) {
         response.json().then((data) => {

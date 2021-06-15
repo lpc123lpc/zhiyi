@@ -81,7 +81,6 @@ export default {
   },
   mounted () {
     // this.set_button_length()
-    // console.log(this.$route.query.data)
     this.showVaccineInstitution()
   },
   methods: {
@@ -107,7 +106,7 @@ export default {
       }
     },
     goTravelAdvice () {
-      this.$router.push({path: `/TravelAdvice/${this.region}`, query: {data: this.$route.query.data}})
+      this.$router.push({path: `/TravelAdvice/${this.region}`})
     },
     set_button_length () {
       // const button1 = this.getElementById('button-item-id-1')
