@@ -2,6 +2,13 @@ from flask import jsonify
 from database.static import dao
 
 
+def dealWithRate(a):
+    if len(str(a).split(".")[1]) > 5:
+        return round(a, 5)
+    else:
+        return a
+
+
 def getMapVaccine(country):
     a = 1.0
     if country == 'global':
@@ -12,7 +19,7 @@ def getMapVaccine(country):
         return jsonify({})
     for i in data:
         vaccined.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum') / a})
-        coverage.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'vacRate')})
+        coverage.append({"name": getattr(i, 'areaName'), "value": dealWithRate(getattr(i, 'vacRate'))})
     return jsonify({
         "vaccined": vaccined,
         "coverage": coverage
@@ -32,7 +39,7 @@ def getMapInfectionGlobal(country):
         totalConfirm.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalNum') / a})
         cured.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'cured') / a})
         dead.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'totalDead') / a})
-        coverage.append({"name": getattr(i, 'areaName'), "value": getattr(i, 'infRate')})
+        coverage.append({"name": getattr(i, 'areaName'), "value": dealWithRate(getattr(i, 'infRate'))})
     return jsonify({
         "nowConfirm": nowConfirm,
         "totalConfirm": totalConfirm,

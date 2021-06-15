@@ -4,25 +4,34 @@ from controller import map, tables, sidebar, vaccineAgency, search, news, safeLe
 from database.static import dao, table
 from database.static.getInitData import *
 from spider import spiderBeta
+from analysis import allTrain
 
 
 app = table.app
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 # 初始化数据库，第一次执行完后就可以注释掉
+allTrain.train()
 '''print(1)
 spiderBeta.updateRiskList()
 print(2)'''
-spiderBeta.updateVaccineInstitutions()
-print(3)
+'''spiderBeta.updateVaccineInstitutions()
+print(3)'''
+
 '''clearTable('chinaInfMessages')
 clearTable('hisInfMessages')
 getGlobalProvinceHisInf()'''
 '''Init()'''
-'''updateInf()
-updateVac()'''
 '''getArea()
-getChinaHisInf()'''
-'''getGlobalCountryHisInf()'''
+updateInf()
+updateVac()
+getChinaHisInf()
+getGlobalCountryHisInf()
+spiderBeta.updateRiskList()
+spiderBeta.updateCovidNews()
+spiderBeta.updateVaccineNews()
+spiderBeta.updateStringency()
+spiderBeta.updateVaccineInstitutions()'''
+
 
 
 @app.route('/')
