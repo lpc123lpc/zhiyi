@@ -308,7 +308,6 @@ class Spider:
         from database.static.dao import clearTable
         from database.static.dao import updateForeignProvinceInf
         from database.static.getInitData import Init
-        pass
 
     @classmethod
     def updateTencentNews(cls):
@@ -316,6 +315,9 @@ class Spider:
         # 爬取、存入 nowForeignCovidDataUrl，# 感染-海外国家-实时-数据
         # 爬取、存入 nowDomesticCovidDataUrl，#  感染-中国、各省、市-实时-数据
         # cls.importDataBasePackages()
+        from database.static.dao import updateChinaInf
+        from database.static.dao import updateGlobalInf
+        from database.static.dao import clearTable
         clearTable('nowInfMessages')
         updateChinaInf()
         updateGlobalInf()
@@ -325,18 +327,22 @@ class Spider:
     def updateOWID(cls):
         # 爬取、存入 worldVaccDataurl，疫苗-ALL-ALL-数据 的实时数据
         # cls.importDataBasePackages()
+        from database.static.dao import updateVac
+
         updateVac()
         pass
 
     @classmethod
     def updateJHU(cls):
         # cls.importDataBasePackages()
+        from database.static.dao import updateForeignProvinceInf
         updateForeignProvinceInf()
         # 爬取、存入 感染-各国(包括中国)、主要国家的各行政区-实时-数据（判断是否存在）
         pass
 
     @classmethod
     def crawlAndStoreHistory(cls):
+        from database.static.getInitData import Init
         print(time.strftime('%Y-%m-%d,%H:%M:%S', time.localtime(time.time())))
         cls.importDataBasePackages()
         cls.gerUrlsMap()
@@ -350,7 +356,9 @@ class Spider:
 
     @classmethod
     def timelyJob(cls):
+
         # cls.importDataBasePackages()
+
         print(time.strftime('%Y-%m-%d,%H:%M:%S', time.localtime(time.time())))
         cls.updateTencentNews()
         cls.updateOWID()
@@ -387,5 +395,4 @@ if __name__ == '__main__':
     #while True:
     #    schedule.run_pending()
     #Spider.crawlAndStoreHistory()
-    Spider.timelyJob()
-
+    Spider.crawlAndStoreHistory()
