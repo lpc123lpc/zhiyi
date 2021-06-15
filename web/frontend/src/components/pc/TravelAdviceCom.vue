@@ -1,8 +1,8 @@
 <template>
   <div style="width: 100%">
     <el-row type="flex" justify="center" style="margin-top: 10%;width: 100%">
-      <el-form ref="form" :model="form" label-position="left" :rules="rules" style="width: 40%">
-        <el-form-item label="目的地区" prop="region" style="width: 100%" label-width="20%">
+      <el-form ref="form" :model="form" label-position="left" :rules="rules" style="width: 50%">
+        <el-form-item label="目的地区" prop="region" style="width: 100%" label-width="30%">
           <el-cascader prop="region"
                        style="width: 80%"
                        placeholder="请输入/选择地名"
@@ -12,7 +12,7 @@
                        filterable
                        clearable/>
         </el-form-item>
-        <el-form-item label="出行时间" prop="time" style="width: 100%" label-width="20%">
+        <el-form-item label="出行时间" prop="time" style="width: 100%" label-width="30%">
           <el-date-picker style="width: 80%" prop="time"
                           v-model="form.time"
                           value-format="yyyy-MM-dd"

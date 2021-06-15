@@ -2,7 +2,7 @@
   <el-tabs  stretch>
     <el-tab-pane label="疫苗新闻">
       <ul class="infinite-list" style="overflow:auto;list-style-type:none">
-        <li v-for="(item,index) in vacData" :key="index" class="infinite-list-item" style="height: 30%;padding: 1%">
+        <li v-for="(item,index) in vacData" :key="index" class="infinite-list-item" style="padding: 1%;overflow: auto">
           <el-card @click.native="go(item.urls)" style="height: 100%">
             <el-row  type="flex">
               <el-col :span='6'>
@@ -11,7 +11,7 @@
               <el-col :span="16" :offset="2">
                 <div class="item-title">{{item.title}}</div>
                 <div class="item-ab">{{item.abstracts}}</div>
-                <div style="height: 20%;width: 100%">
+                <div style="height: 10%;width: 100%">
                   <span class="item-time">{{item.time}}</span>
                   <span class="item-source">{{item.source}}</span>
                 </div>
@@ -23,7 +23,7 @@
     </el-tab-pane>
     <el-tab-pane label="疫情新闻">
       <ul class="infinite-list"  style="overflow:auto;list-style-type:none">
-        <li v-for="(item,index) in infData" :key="index" class="infinite-list-item" style="height: 30%;padding: 1%">
+        <li v-for="(item,index) in infData" :key="index" class="infinite-list-item" style="padding: 1%;overflow: auto">
           <el-card @click.native="go(item.urls)" style="height: 100%">
             <el-row  type="flex">
               <el-col :span="6">
@@ -32,8 +32,10 @@
               <el-col :span="16" :offset="2">
                 <div class="item-title">{{item.title}}</div>
                 <div class="item-ab">{{item.abstracts}}</div>
-                <div class="item-time">{{item.time}}</div>
-                <span class="item-source">{{item.source}}</span>
+                <div style="height: 10%;width: 100%">
+                  <span class="item-time">{{item.time}}</span>
+                  <span class="item-source">{{item.source}}</span>
+                </div>
               </el-col>
             </el-row>
           </el-card>

@@ -42,4 +42,4 @@ def getCountryHisTest():
 #db.create_all()
 #getNewArea()
 
-print(getPolicyIndex('广州'))
+getTrainCsv()

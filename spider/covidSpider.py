@@ -318,7 +318,6 @@ class Spider:
         from database.static.dao import updateChinaInf
         from database.static.dao import updateGlobalInf
         from database.static.dao import clearTable
-        clearTable('nowInfMessages')
         updateChinaInf()
         updateGlobalInf()
         pass
@@ -362,6 +361,8 @@ class Spider:
         print(time.strftime('%Y-%m-%d,%H:%M:%S', time.localtime(time.time())))
         cls.updateTencentNews()
         cls.updateOWID()
+        from database.static.dao import getCountryInfoJson
+        getCountryInfoJson()
         cls.updateJHU()
         print(time.strftime('%Y-%m-%d,%H:%M:%S', time.localtime(time.time())))
 

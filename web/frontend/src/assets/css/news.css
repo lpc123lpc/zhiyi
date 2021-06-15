@@ -1,5 +1,5 @@
 .item-title {
-  height: 20%;
+  height: 30%;
   font-size: 20px;
 }
 
@@ -9,11 +9,13 @@
 }
 
 .item-time {
+  margin-bottom: 0;
   float: left;
   color: dimgrey;
 }
 
 .item-source {
+  margin-bottom: 0;
   float: right;
   color: dimgrey;
 }

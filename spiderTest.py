@@ -5,7 +5,8 @@ from spider.covidSpider import Spider
 """
 if __name__ == '__main__':
 	#spiderBeta.updateVaccineInstitutions()
-	spiderBeta.updateCovidNews()
+	#piderBeta.updateCovidNews()
+	Spider.timelyJob()
 	#spiderBeta.updateVaccineNews()
 	#spiderBeta.updateRiskList()
 	#spiderBeta.updateVaccineInstitutions()

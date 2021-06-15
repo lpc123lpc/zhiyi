@@ -30,7 +30,7 @@ export default {
       isDisabled: false,
       content: '提交',
       ruleForm: {
-        value: '',
+        value: 0,
         desc: ''
       },
       rules: {
