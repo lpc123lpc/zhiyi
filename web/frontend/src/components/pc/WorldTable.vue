@@ -1,10 +1,7 @@
 <template>
     <div id = 'WorldTable'>
-      <el-row type="flex">
-        <el-col span="4" offset="10">
-          <span style="font-size: 25px">全球概要数据</span>
-        </el-col>
-      </el-row>
+      <div style="font-size: 25px;text-align: center">全球概要数据
+      </div>
       <el-table v-loading="loading"
                 :data="searchItem"
                 empty-text=""

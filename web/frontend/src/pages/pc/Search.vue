@@ -58,7 +58,7 @@ export default {
   },
   mounted () {
     this.region = this.$route.params.region
-    this.set_left()
+    // this.set_left()
   },
   created () {
     this.getRegionInfectDataMsg()
