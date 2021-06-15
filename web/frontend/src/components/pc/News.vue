@@ -11,7 +11,7 @@
               <el-col :span="16" :offset="2">
                 <div class="item-title">{{item.title}}</div>
                 <div class="item-ab">{{item.abstracts}}</div>
-                <div style="height: 20%;width: 100%">
+                <div style="height: 10%;width: 100%">
                   <span class="item-time">{{item.time}}</span>
                   <span class="item-source">{{item.source}}</span>
                 </div>
@@ -31,9 +31,11 @@
               </el-col>
               <el-col :span="16" :offset="2">
                 <div class="item-title">{{item.title}}</div>
-                <div class="item-ab" style="padding-top: 10px">{{item.abstracts}}</div>
-                <div class="item-time">{{item.time}}</div>
-                <span class="item-source">{{item.source}}</span>
+                <div class="item-ab">{{item.abstracts}}</div>
+                <div style="height: 10%;width: 100%">
+                  <span class="item-time">{{item.time}}</span>
+                  <span class="item-source">{{item.source}}</span>
+                </div>
               </el-col>
             </el-row>
           </el-card>

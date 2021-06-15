@@ -9,13 +9,13 @@
 }
 
 .item-time {
-  margin-top: 10px;
+  margin-bottom: 0;
   float: left;
   color: dimgrey;
 }
 
 .item-source {
-  margin-top: 10px;
+  margin-bottom: 0;
   float: right;
   color: dimgrey;
 }
