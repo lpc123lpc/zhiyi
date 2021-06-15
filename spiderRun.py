@@ -6,9 +6,14 @@ def updateDaily():
 	可以设为定时任务
 	:return:
 	"""
+	#Spider.importDataBasePackages()
+
 	Spider.timelyJob()
 	spiderBeta.updateRiskList()
 	spiderBeta.updateCovidNews()
 	spiderBeta.updateVaccineNews()
 	spiderBeta.updateStringency()
-	# spiderBeta.updateVaccineInstitutions()
+	spiderBeta.updateVaccineInstitutions()
+if __name__ == '__main__':
+	#Spider.crawlAndStoreHistory()
+	updateDaily()
