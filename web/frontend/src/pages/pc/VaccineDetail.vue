@@ -18,7 +18,7 @@
           </div>
           <scroll-to-bottom
             v-bind:is-bottom="false"
-            style="position: absolute; margin-left: 1050px; margin-top: -25px"
+            style="position: relative; float: right; bottom: 50px"
           ></scroll-to-bottom>
         </el-main>
       </el-container>
