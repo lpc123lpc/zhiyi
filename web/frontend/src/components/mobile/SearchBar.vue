@@ -60,7 +60,7 @@ export default {
       }
       this.searchRegion = regions.join('  ')
       // console.log(this.searchRegion)
-      this.$router.push({path: `/Search/${this.searchRegion}`, query: {data: this.selectData}})
+      this.$router.push({path: `/Search/${this.searchRegion}`})
     }
   }
 }

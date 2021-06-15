@@ -1,24 +1,5 @@
 <template>
-  <!--  <el-container>-->
-  <!--  <el-header></el-header>-->
-  <!--  <el-main>-->
-  <!--    <div class="block" style="text-align: center">-->
-  <!--      <el-image src='../../../static/image/Cover.png'></el-image>-->
-  <!--    </div>-->
-  <!--    <div style="text-align: center">-->
-  <!--      <el-button type="primary" @click="goHome()" plain style="height: 80px;width: 300px;font-size: 30px">开始</el-button>-->
-  <!--    </div>-->
-  <!--  </el-main>-->
-  <!--  <el-footer>-->
-  <!--    <div style="text-align: center">-->
-  <!--      <el-link type="info" href="https://beian.miit.gov.cn/">京ICP备2021014159号</el-link>-->
-  <!--    </div>-->
-  <!--  </el-footer>-->
-  <!--</el-container>-->
   <div>
-    <!--    <div class="image-menu-item">-->
-    <!--      <el-image src='../../../static/image/Cover.png'></el-image>-->
-    <!--    </div>-->
     <el-row style="margin-bottom: 60px">
       <el-col :span="2">
         <img src='../../../static/image/top-icon.jpg' style="height: 100px"/>
@@ -28,7 +9,7 @@
       </el-col>
     </el-row>
     <el-carousel
-      :interval="2000"
+      :interval="1500"
       type="card"
       class="carousel">
       <el-carousel-item v-for="(item, index) in swiperList" :key="index" class="el-carousel__item">

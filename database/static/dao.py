@@ -198,7 +198,7 @@ def getCountryInfoJson():
 
     jsonList = sorted(jsonList, key=lambda dic: dic['confirmed'], reverse=True)
 
-    fp = open('./countryInfo.json', 'w')
+    fp = open('database/static/countryInfo.json', 'w')
     fp.write(json.dumps(jsonList, ensure_ascii=False))
     fp.close()
 
@@ -259,7 +259,7 @@ def updateGlobalInf():
 
 def updateForeignProvinceInf():
     y, t, uy, ut = Spider.getData(7)
-    worldMappingPath = './world-mapping.json'
+    worldMappingPath = 'database/static/world-mapping.json'
     with open(worldMappingPath, mode='r', encoding='utf-8') as f:
         worldMapping = json.load(f)
         globalProvinces = Spider.getCSVDictReader(y)
@@ -366,7 +366,7 @@ def updateVac():
     vacMessage = Spider.getData(0)
     lastName = ""
     i = 0
-    worldMappingPath = './world-mapping.json'
+    worldMappingPath = 'database/static/world-mapping.json'
     with open(worldMappingPath, mode='r', encoding='utf-8') as f:
         worldMapping = json.load(f)
         v1 = None

@@ -16,7 +16,7 @@
       <van-icon name="arrow-down" style="margin-bottom: 5px"/>
       <div class="infect-sum">累计治愈</div>
       <div class="infect-sum">{{ infect_cure }}</div>
-      <div class="infect-sum-add">NaN</div>
+      <div class="infect-sum-add">-</div>
     </van-grid-item>
   </van-grid>
 </template>

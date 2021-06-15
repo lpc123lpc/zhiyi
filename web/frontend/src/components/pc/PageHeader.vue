@@ -103,6 +103,7 @@ export default {
   width: 20px;
   height: 20px;
   margin-top: 20px;
+  margin-left: 2%;
   fill: #56aafdc4;
   overflow: hidden;
   outline: none
@@ -110,7 +111,7 @@ export default {
 
 .input-container {
   /*position: absolute;*/
-  width: 300px;
+  width: 30%;
   margin-top: 10px;
   float: right;
 }
@@ -122,9 +123,9 @@ export default {
 }
 
 .nav-menu-item {
-  width: 130px;
-  margin-left: 10px;
-  margin-right: 10px;
+  width: 7%;
+  margin-left: 1%;
+  margin-right: 1%;
   text-align: center;
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   font-size: medium;

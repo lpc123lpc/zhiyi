@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="width: 100%">
     <el-cascader
       placeholder="请输入/选择地名"
       ref="cascader"
@@ -7,12 +7,13 @@
       v-model="selectData"
       @change="handleSelect"
       filterable
-      clearable/>
+      clearable
+      style="width: 75%"/>
     <el-button
       class="button"
       slot="append"
       type="primary" plain
-      icon="el-icon-search"
+      icon="el-icon-search el-icon--center"
       @click="goSearch()"
     ></el-button>
   </div>
@@ -65,6 +66,14 @@ export default {
       // console.log(this.searchRegion)
     },
     goSearch () {
+      if (this.searchRegion === '') {
+        this.$message({
+          message: '请选择或输入地区名',
+          type: 'warning',
+          position: 'top-right'
+        });
+        return
+      }
       this.$router.push({path: `/Search/${this.searchRegion}`, query: {data: this.selectData}})
     }
   }
@@ -73,7 +82,8 @@ export default {
 
 <style scoped>
 .button {
-  padding: 9.4px 20px;
-  font-size: 17px;
+  font-size: 100%;
+  width: 20%;
+  text-align: center;
 }
 </style>

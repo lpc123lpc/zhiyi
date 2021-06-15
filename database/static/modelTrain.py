@@ -98,7 +98,7 @@ def getAreaMapping():
         dirc[num] = a.childArea
         num += 1
 
-    return
+    return dirc
 
 
 def getAreaJson():

@@ -91,7 +91,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$route.query.data)
+    // console.log(this.$route.query.data)
     this.showVaccineButton()
   },
   methods: {

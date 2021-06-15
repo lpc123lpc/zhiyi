@@ -30,15 +30,15 @@
       </el-form>
     </el-row>
     <el-row type="flex" justify="center">
-      <el-card class="box-card" v-if="state===1" style="text-align: center;width: 50%;">
-        <div slot="header" class="clearfix" style="font-size: 22px;color: #409eff">出行建议</div>
+      <el-card class="box-card" v-if="state===1" style="width: 50%;">
+        <div slot="header" class="clearfix" style="font-size: 22px;color: #409eff;text-align: center">出行建议</div>
         <div>{{result.str1}}</div>
         <div v-if="result.mid.length !== 0" style="padding: 20px">
-          <div>中风险地区</div>
+          <div style="font-size: 22px;color: #f56723;text-align: center">中风险地区</div>
           <div v-for="(item,index) in result.mid" :key="index">{{item}}</div>
         </div>
         <div v-if="result.high.length !== 0" style="padding: 20px">
-          <div>高风险地区：</div>
+          <div style="font-size: 22px;color: red;text-align: center">高风险地区：</div>
           <div v-for="(item,index) in result.high" :key="index">{{item}}</div>
         </div>
       </el-card>
@@ -83,7 +83,7 @@ export default {
     this.data = searchData
     if (this.$route.query.data !== '') {
       var tempData = this.$route.query.data
-      if (tempData.length !== 0) {
+      if (tempData) {
         var temp = []
         for (var i = 0; i < this.$route.query.data.length; i++) {
           temp.push(parseInt(this.$route.query.data[i]))

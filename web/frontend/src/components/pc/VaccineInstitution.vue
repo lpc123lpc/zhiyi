@@ -36,25 +36,25 @@ export default {
   props: [
     'data'
   ],
-  data () {
+  data() {
     return {
-      count: Math.min(this.data.length, 10),
+      count: '',
       loading: false,
       show: true
     }
   },
-  mounted() {
-    // console.log(this.data.slice(0, this.count))
-    this.showNoDataHint()
-  },
-  created() {
-    this.showNoDataHint()
+  watch: {
+    data() {
+      // console.log(this.data)
+      this.count = Math.min(this.data.length, 10)
+      this.showNoDataHint()
+    }
   },
   computed: {
-    noMore () {
+    noMore() {
       return this.count >= this.data.length
     },
-    disabled () {
+    disabled() {
       return this.loading || this.noMore
     }
   },
@@ -63,7 +63,7 @@ export default {
       if (this.data.length === 0) this.show = true
       else this.show = false
     },
-    load () {
+    load() {
       this.loading = true
       setTimeout(() => {
         if (this.count + 10 > this.data.length) {

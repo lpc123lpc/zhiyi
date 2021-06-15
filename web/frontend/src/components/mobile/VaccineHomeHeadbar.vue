@@ -10,7 +10,7 @@
       <van-icon name="arrow-down" style="margin-bottom: 5px"/>
       <div class="infect-sum">每百人接种</div>
       <div class="infect-sum">{{ vaccine_cover }} 剂</div>
-      <div class="infect-sum-add">NaN</div>
+      <div class="infect-sum-add">-</div>
     </van-grid-item>
   </van-grid>
 </template>
