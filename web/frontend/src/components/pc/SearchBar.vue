@@ -66,6 +66,14 @@ export default {
       // console.log(this.searchRegion)
     },
     goSearch () {
+      if (this.searchRegion === '') {
+        this.$message({
+          message: '请选择或输入地区名',
+          type: 'warning',
+          position: 'top-right'
+        });
+        return
+      }
       this.$router.push({path: `/Search/${this.searchRegion}`, query: {data: this.selectData}})
     }
   }
@@ -74,7 +82,6 @@ export default {
 
 <style scoped>
 .button {
-  padding: 9.4px 20px;
   font-size: 100%;
   width: 20%;
   text-align: center;

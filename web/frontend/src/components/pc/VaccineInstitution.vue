@@ -45,7 +45,7 @@ export default {
   },
   watch: {
     data() {
-      console.log(this.data)
+      // console.log(this.data)
       this.count = Math.min(this.data.length, 10)
       this.showNoDataHint()
     }
