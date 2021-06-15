@@ -5,9 +5,9 @@ import pandas as pd
 
 
 def train():
-    pathHead = "../database/static/trainCsv/"
+    pathHead = "database/static/trainCsv/"
     pathTail = ".csv"
-    targetPathHead = '../saved_model/'
+    targetPathHead = 'saved_model/'
     targetPathTail = '.pkl'
 
     for i in range(1, 1049):
