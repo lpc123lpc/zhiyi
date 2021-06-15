@@ -34,7 +34,7 @@ def getArea():
 
     yUrl, tUrl, yUSUrl, dUSUrl = Spider.getData(7)
     glolist, uslist = Spider.getData(6)
-    worldMappingPath = 'world-mapping.json'
+    worldMappingPath = 'database/static/world-mapping.json'
     with open(worldMappingPath, mode='r', encoding='utf-8') as f:
         worldMapping = json.load(f)
         globalProvinces = Spider.getCSVDictReader(yUrl)
@@ -63,7 +63,7 @@ def getArea():
 def getNewArea():
     clearTable('areas')
     try:
-        with open('areas.sql', encoding='utf-8', mode='r') as f:
+        with open('database/static/areas.sql', encoding='utf-8', mode='r') as f:
             # 读取整个sql文件，以分号切割。[:-1]删除最后一个元素，也就是空字符串
             sql_list = f.read().split(';')[:-1]
             for x in sql_list:
@@ -92,7 +92,7 @@ def getNewArea():
 def getHisVac():
     clearTable('hisVacMessages')
     vacMessage = Spider.getData(0)
-    worldMappingPath = './world-mapping.json'
+    worldMappingPath = 'database/static/world-mapping.json'
     with open(worldMappingPath, mode='r', encoding='utf-8') as f:
         worldMapping = json.load(f)
         lastname = ''
