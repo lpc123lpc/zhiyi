@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="width: 100%">
     <el-cascader
       placeholder="请输入/选择地名"
       ref="cascader"
@@ -7,12 +7,13 @@
       v-model="selectData"
       @change="handleSelect"
       filterable
-      clearable/>
+      clearable
+      style="width: 75%"/>
     <el-button
       class="button"
       slot="append"
       type="primary" plain
-      icon="el-icon-search"
+      icon="el-icon-search el-icon--center"
       @click="goSearch()"
     ></el-button>
   </div>
@@ -74,6 +75,8 @@ export default {
 <style scoped>
 .button {
   padding: 9.4px 20px;
-  font-size: 17px;
+  font-size: 100%;
+  width: 20%;
+  text-align: center;
 }
 </style>
