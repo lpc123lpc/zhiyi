@@ -3,7 +3,8 @@ from database.static import dao
 
 
 def dealWithRate(a):
-    if len(str(a).split(".")[1]) > 5:
+    b = str(a).split(".")
+    if len(b[len(b)-1]) > 5:
         return round(a, 5)
     else:
         return a
