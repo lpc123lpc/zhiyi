@@ -21,6 +21,13 @@
 
 .el-carousel__item {
   /*display: flex;*/
+  /*padding: 5px;*/
+  border:1px solid dimgrey;
+  -moz-box-shadow:3px 3px 4px dimgrey;
+  -webkit-box-shadow:3px 3px 4px dimgrey;
+  box-shadow:3px 3px 4px dimgrey;
+  background:#fff;
+  filter:progid:DXImageTransform.Microsoft.Shadow(Strength=4,Direction=135,Color='#000000');
 }
 
 .el-carousel__item img {
