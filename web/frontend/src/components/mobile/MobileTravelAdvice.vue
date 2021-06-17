@@ -46,7 +46,11 @@
       <div style="margin-top: 20px">{{result.str1}}</div>
       <div v-if="result.mid.length !== 0" style="margin-top: 30px">
         <div style="font-size: 22px;color: #f56723;text-align: center">中风险地区</div>
-        <div style="margin-top: 10px">{{result.mid}}</div>
+        <div style="margin-top: 10px">
+          <van-list>
+            <van-cell v-for="(item,index) in result.mid" :key="index" :title="item"></van-cell>
+          </van-list>
+        </div>
       </div>
       <div v-if="result.high.length !== 0" style="margin-top: 30px">
           <div style="font-size: 22px;color: red;text-align: center">高风险地区</div>
@@ -149,7 +153,7 @@ export default {
         })
       }
     },
-    back() {
+    back () {
       this.$router.go(-1)
     },
     getSearch () {
