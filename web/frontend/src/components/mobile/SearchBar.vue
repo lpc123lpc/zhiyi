@@ -29,7 +29,7 @@ export default {
   data () {
     return {
       data: '',
-      selectData: '',
+      selectData: [],
       searchRegion: '',
       state: {show: false, fieldValue: ''}
     }
